@@ -34,6 +34,7 @@ Mesures de qualité :
 |Convergence forte|$I\kern-.9ex P(\lim \limits_{n\rightarrow \infty} \hat \theta_n =\theta)=1$|
 |Efficacité|$Var(\hat{\theta})=E[\hat{\theta}^2]-E[\hat{\theta}]^2$|
 |Robustesse|Sensibilité aux *outlayers*|
+
 ### 2) Vers test du $\chi^2$
 [StatQuest channel](https://www.youtube.com/channel/UCtYLUTtgS3k1Fg4y5tAhLbw)
 #### Loi normale
