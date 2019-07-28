@@ -1,7 +1,7 @@
 |||
 |--|--|
-|[Functional Programming](FP.md)||
-|[Machine Learning & Stats](ML.md)||
+|[Functional Programming](FP.md)|Scala, Cats, categories|
+|[Machine Learning & Stats](ML.md)|tests, bias-variance, evaluation|
 |[Object Oriented Programming](OOP.md)|SOLID, design patterns|
 |[Graphs, web, search engines](graph.md)|Graph theorie definitions & theorems, search engines|
 |[Distributed algorithms](da.md)|Leader election & Consensus, synchronous systems|
