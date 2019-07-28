@@ -19,6 +19,7 @@ Based on this idea, Robert C. Martin’s definition of the Dependency Inversion 
 
 1.  High-level modules should not depend on low-level modules. Both should depend on abstractions.
 2.  Abstractions should not depend on details. Details should depend on abstractions.
+
 #### relation between OOP basics & SOLID principles
 -   OOP basics
     -   Encapsulation
@@ -31,9 +32,11 @@ Based on this idea, Robert C. Martin’s definition of the Dependency Inversion 
     -   Liskov Substitution Principle
     -   Interface Segregation Principle
     -   Dependency Inversion Principle)
+
 Different purposes:
 -   **languages or concepts which don't support Encapsulation, Abstraction, Inheritance and Poly _are not object oriented_**. If you do something object oriented you can always apply these OO basics, because they are available. One doesn't call such things principles.
 -   SOLID in return is optional. When developing an OO design _you should strive to be SOLID, by applying the underlying basics_. **Solid only determines how "good" your design is**, not if it is object oriented or not. They are principles.
+
 ### When to transform final categorical attribute into inheritance ?
 When some behaviors are only available based on a spécific attribute value.
 For example:
@@ -42,14 +45,14 @@ This is ok:
 <div class="mermaid">
 graph TB
 H[Human<br/>____________<br/>- final String sexe<br/>____________<br/> - void eatFruit]
-<div>
+</div>
   
 This is NOT ok anymore, because added `giveBirth` method is only available if `Human.sexe.equals("woman")`:
   
 <div class="mermaid">
 graph TB
 H[Human<br/>____________<br/>- sexe: String<br/>____________<br/> - void eatFruit<br/> - Human giveBirth]
-<div>
+</div>
   
 Need to be changed to:
   
@@ -58,10 +61,11 @@ graph BT
 H[Human<br/>____________<br/> - void eatFruit<br/>]
 W[Woman<br/>____________<br/>____________<br/> - Human giveBirth]--extends-->H
 M[Man<br/>____________<br/>]--extends-->H
-<div>
+</div>
   
 #### Encapsulation
 Expose behavior in a public API that do calls to private behaviors implementations & attributes
+
 ### Design patterns notes
 
 |Name|Wiki-like definition|My understanding and notes|links with SOLID's principle|
