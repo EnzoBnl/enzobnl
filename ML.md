@@ -85,7 +85,7 @@ $$
 
 #### ⚠️⚠️⚠️
 Do not use $loss_{L_2}$ nor $loss_{L_1}$ in classification if activation function output can be greater than $1$:
-<img src="https://qph.fs.quoracdn.net/main-qimg-9b7f05954e9318800bb453f10385c9ca"></img>
+<img src="https://qph.fs.quoracdn.net/main-qimg-9b7f05954e9318800bb453f10385c9ca">
 We don't want correctly classified samples with activation function output $>1$ to be involved in weights updates because it might slow the learning.
 
 ## II/ Bias-variance tradeoff
@@ -146,6 +146,7 @@ http://scott.fortmann-roe.com/docs/MeasuringError.html
 |predicted $\setminus$  actual| P | N|
 | P | TP |FP|
 | N | FN |TN|
+
 - Plot parametric courb 
 $$\left\{  
 \begin{array}{l}  
