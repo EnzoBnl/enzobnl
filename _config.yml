@@ -4,4 +4,4 @@ kramdown:
   math_engine: mathjax
   
 title: enzobnl's notes
-description: <a href="http://enzobnl.github.io">HOME</a>
+description: <a href="http://enzobnl.github.io">HOME</a> <a href="notes.html">NOTES</a> <a href="cv.html">CV</a>
