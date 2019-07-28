@@ -55,7 +55,7 @@ C<sub>0</sub>M<sub>1</sub>C<sub>1</sub>...M<sub>r</sub>C<sub>r</sub> où C<sub>r
 - Un problème est un prédicat *P* sur les exécutions
 - Un algorithme résout un problème si toutes les exécutions d'un système donné satisfont *P*
 - Complexité en temps = Complexité en nombre de rounds avant la terminaison
-- Complexité en mémoire/espace = |*States*|
+- Complexité en mémoire/espace = $\vert States \vert$
 - Complexité de communication = Complexité en nombre de messages
 - Toutes les complexités sont à analyser dans le cas le pire
 
@@ -198,6 +198,7 @@ Si leader=inconnu:
 ```
 
 #### Comparatif complexités
+
 | type | id le plus petit | Variante: id le plus grand|
 |--|--|--|
 | temps (rounds)| $O(n.id_{min})$ |$n.id_{max-1}+distance\: entre\:processus_{id_{max}} et\: processus_{id_{max−1}} = O(n.id_{max−1}))$|
@@ -523,10 +524,10 @@ Si deja_vu=false et message m reçu sur le canal p:
 ```
 ### Complexités
 #### Communication:
-$Comp_{messages} = n.E(nombreDeVoisins)=2.|E|$
+$Comp_{messages} = n.E(nombreDeVoisins)=2.\vertE\vert$
 avec $n=nombreDeNœuds$
 
-Dans le cas de l'optimisation *"On ne réponds pas à son père"*, $Comp_{messages}  = 2.|E| - (n-1)$
+Dans le cas de l'optimisation *"On ne réponds pas à son père"*, $Comp_{messages}  = 2.\vertE\vert - (n-1)$
 
 Dans le cas de l'optimisation *"On connait ses fils"*, $Comp_{messages}  = n- 1$
 #### Temps:
