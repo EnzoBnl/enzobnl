@@ -1,3 +1,4 @@
+$$\frac{1}{n}=1$$
 ## Functionnal Programming in Scala Notes
 ### Option[A]
 Alternative FP au `null` de POO.
