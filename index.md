@@ -1,3 +1,3 @@
 
-- [Functional Programming](_FP.md) 
+- [Functional Programming](FP.md) 
 
