@@ -65,11 +65,11 @@ Une chaine (ou un chemin) :
 ### Séparateur (Vertex separator)
 Soit $G = (V, E)$ un graphe. 
 $S\subset V$ est un séparateur de $G$ si :
- $\exist (u,v)\in (V\setminus S)^2$ tel que $u$ et $v$ sont reliés dans $G$ mais ne le sont plus dans  $G' = (V\setminus S, E)$.
+ $\exists (u,v)\in (V\setminus S)^2$ tel que $u$ et $v$ sont reliés dans $G$ mais ne le sont plus dans  $G' = (V\setminus S, E)$.
 ### Isthme (bridge)
 Soit $G = (V, E)$ un graphe. 
 $i\in E$ est un isthme de $G$ si :
- $\exist (u,v)\in V^2$ tel que $u$ et $v$ sont reliés dans $G$ mais ne le sont plus dans  $G' = (V, E\setminus \{i\})$.
+ $\exists (u,v)\in V^2$ tel que $u$ et $v$ sont reliés dans $G$ mais ne le sont plus dans  $G' = (V, E\setminus \{i\})$.
 ### Degré
 Le degré d'un sommets $s$ est le nombre d'arêtes impliquant $s$, les boucles comptant deux fois.
 Si le graphe est orienté, c'est la somme du nombre d'arêtes entrantes et du nombre d'arêtes sortantes.
@@ -81,7 +81,7 @@ Graphe **acyclique orienté** $G=(V,E)$, possédant un sommet racine $r\in V$ te
 ## Theorèmes
 ### Chaîne/Chemin $\implies$ Chaine/Chemin élémentaire
 Soit $G=(V, E)$ un graphe non orienté (*resp. orienté*).
-Soit $a,b\in V$, $\exist w$ une chaine (*resp. chemin*) de $a$ vers $b \implies \exist p$, une chaine (*resp. chemin*) élémentaire de $a$ vers $b$.
+Soit $a,b\in V$, $\exists w$ une chaine (*resp. chemin*) de $a$ vers $b \implies \exists p$, une chaine (*resp. chemin*) élémentaire de $a$ vers $b$.
 ### Transitivité des chemins
 
 Soit $x,y,z \in G$.
@@ -135,9 +135,12 @@ Sa probabilité stationnaire $\pi _i =lim_{n \rightarrow \inf} \frac{1_{X_0=i}+1
 ...
 ### PageRank
 En considérant $G=(V,E)$ avec $V=pages, E=hyperliens \space pondérés$, **le PageRank d'un élément de** $V$ **est la probabilité stationnaire correspondante de la chaine de Markov associée à** $G$, c'est-à-dire un vecteur de Perron-Frobenius de la matrice d'adjacence du graphe du Web.
+
 **La solution analytique étant impossible à calculer** du fait de la taille du graphe et de son évolution (modifications de pages et hyperliens, connexion ou déconnexion de serveur web) un **algorithme d'approximation** est utilisé:
+
 C'est un algo itératif dont la terminaison est assurée par un nombre d'itérations fixé à l'avance ou par l'utilisation d'un seuil $\epsilon$ de variation qui garantie la terminaison grâce au théorème de **convergence des probabilités stationnaires d'une chaine de Markov**.
-Preuve   : ${(1)}$
+
+Preuve   : ${(2)}$
 
 ## Graph of the Web, basic web properties
 
@@ -177,9 +180,9 @@ $P_{deg-in}(i)\propto \frac{1}{i^x}$
 
 **Preuve par récurrence pour les graphes connexes:**
 *Initialisation:*
-Cas du graphe vide : $G_{\empty}=(\empty, \empty)$ possède 0 sommets de degré impair, le théorème est vérifié.
+Cas du graphe vide : $G_{Ø}=(Ø, Ø)$ possède 0 sommets de degré impair, le théorème est vérifié.
 
-Soit $G=(\{a\}, \empty)$. $G$ vérifie le théorème puisqu'il possède 0 sommets de degré impair.
+Soit $G=(\{a\}, Ø)$. $G$ vérifie le théorème puisqu'il possède 0 sommets de degré impair.
 
 *Récurrence :*
 Toute les topologies de graphes connexes sont constructibles à partire de $G$ en ajoutant une arête vers un sommets existant ou vers un sommet à créer.
