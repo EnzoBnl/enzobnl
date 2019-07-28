@@ -284,7 +284,7 @@ States$_i$ & Starts$_i$:
 
 *msgs$_i$*: Si $round < diamètre$, envoyer $u_{max_i}$ à tous les processus *j* voisins
  *trans$_i$*: 
-```fortran
+```
 round:=round+1
 Soit W l ensemble des id reçus dans ce round
 max_id:=MAX({max_id} + W)
