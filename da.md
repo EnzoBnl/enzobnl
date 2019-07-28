@@ -524,10 +524,10 @@ Si deja_vu=false et message m reçu sur le canal p:
 ```
 ### Complexités
 #### Communication:
-$Comp_{messages} = n.E(nombreDeVoisins)=2.\vertE\vert$
+$Comp_{messages} = n.E(nombreDeVoisins)=2.\vert E\vert$
 avec $n=nombreDeNœuds$
 
-Dans le cas de l'optimisation *"On ne réponds pas à son père"*, $Comp_{messages}  = 2.\vertE\vert - (n-1)$
+Dans le cas de l'optimisation *"On ne réponds pas à son père"*, $Comp_{messages}  = 2.\vert E\vert - (n-1)$
 
 Dans le cas de l'optimisation *"On connait ses fils"*, $Comp_{messages}  = n- 1$
 #### Temps:
