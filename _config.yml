@@ -2,3 +2,6 @@ theme: jekyll-theme-slate
 markdown: kramdown
 kramdown:
   math_engine: mathjax
+  
+title: enzobnl's notes
+description: <a href="enzobnl.github.io">HOME</a>
