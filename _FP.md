@@ -1,3 +1,5 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.0.0/mermaid.min.js"></script>
+
 ## Functionnal Programming in Scala Notes
 ### Option[A]
 Alternative FP au `null` de POO.
