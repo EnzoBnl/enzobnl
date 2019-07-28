@@ -1,6 +1,5 @@
 <link rel="icon" type="image/png" href="./imgs/favicon_db.png" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.0.0/mermaid.min.js"></script>
-
 <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
       tex2jax: {
@@ -176,4 +175,3 @@ Area under curve $\in [0,1]$, after normalization.
 #### Bayesian approach
 ## Prép
 ### Kernel trick
-
