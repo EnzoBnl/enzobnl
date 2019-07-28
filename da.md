@@ -286,7 +286,7 @@ States$_i$ & Starts$_i$:
  *trans$_i$*: 
 ```fortran
 round:=round+1
-Soit W l'ensemble des id reçus dans ce round
+Soit W l ensemble des id reçus dans ce round
 max_id:=MAX({max_id} + W)
 Si round:=diametre alors:
     Si max_id=u alors état:=leader
