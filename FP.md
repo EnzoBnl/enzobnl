@@ -57,6 +57,8 @@ Gr[Groupe: Monoide admettant un<br/>élément symétrique pour *<br/>pour chacun
 </div>
 
 $G=Monoide(*,e)$ est un groupe $\Leftrightarrow \forall x\in G,\exist x^{-1}\in G,x*x^{-1}=e$
+$$G=Monoide(*,e)$ est un groupe $\Leftrightarrow \forall x\in G,\exist x^{-1}\in G,x*x^{-1}=e$$
+\(G=Monoide(\*,e)\) est un groupe \(\Leftrightarrow \forall x\in G,\exist x^{-1}\in G,x*x^{-1}=e\)
 
 ## Cats
 ### Semigroup
