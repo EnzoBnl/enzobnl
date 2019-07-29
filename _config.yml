@@ -6,8 +6,8 @@ kramdown:
 title: enzobnl's notes
 
 description: >-
-    <a href="http://enzobnl.github.io" style="color: #f2f2f2">HOME</a> 
-    <a href="notes.html" style="color: #f2f2f2">NOTES</a> 
-    <a href="cv.html" style="color: #f2f2f2">CV</a> 
-    <a href="works.html" style="color: #f2f2f2">WORKS</a>
-
+    <a href="http://enzobnl.github.io" style="color: #f2f2f2">HOME</a> </br>
+    <a href="notes.html" style="color: #f2f2f2">Day notes</a>  </br>
+    <a href="works.html" style="color: #f2f2f2">Works</a> </br>
+    <a href="http://github.com/enzobnl" style="color: #f2f2f2">Repositories</a> </br>
+    <a href="cv.html" style="color: #f2f2f2">CV-Resume</a>
