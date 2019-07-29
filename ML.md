@@ -54,6 +54,7 @@ $z=\frac{x-\mu}{\sigma}$
 Approximation du z-test si on ne connait qu'un échantillon de la population
 #### Test du $\chi^2$
 [CrashCourse channel](https://www.youtube.com/watch?v=7_cs1YlZoug)
+#### Kolmogorov-Smirnov
 ### 3) Loss functions 
 
 Given:
@@ -170,5 +171,11 @@ Area under curve $\in [0,1]$, after normalization.
 ### Hyper params tuning
 #### GridSearch
 #### Bayesian approach
-## Prép
+#### Time series split
+
+||||
+||||
+||||
+
+## Prep
 ### Kernel trick
