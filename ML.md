@@ -168,7 +168,7 @@ Moving $\theta$ in its interval $[a,b]$, here are special cases:
 Area under curve $\in [0,1]$, after normalization.
 ### Crossval
 ### Hyper params tuning
-#### GriSearch
+#### GridSearch
 #### Bayesian approach
 ## Prép
 ### Kernel trick
