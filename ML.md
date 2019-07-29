@@ -51,6 +51,7 @@ Postule l'égalité entre des **statistiques**  de deux échantillons différent
 Peut-on rejeter l'hypothèse nulle ?
 Ils retournent une valeur-p (*p-value*) ou une *critical value* à comparer à des seuils conventionnels pour conclure.
 - Le rejet d'un test peu être rechercher pour s'assurer que les pattern intéressants observés ne sont pas dus au hazard
+
 #### Côte Z (z-score)
 $z=\frac{x-\mu}{\sigma}$
 
