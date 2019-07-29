@@ -200,26 +200,10 @@ git commit --amend -m "New commit message"
 //merge stashed changes with pulled (or just current) state
 git stash apply
 ```
-## Orange
-### Pseudo 13/02
-```
-bash pseudonymiser -cf configfile.txt -q HQ_IST -l WORK/pseudo/logs13021714 -o WORK/pseudo/testres13021714 -src
-```
 
-### proxy :
-```
-set les var d'envi http_proxy et https_proxy vers cntlm : http://127.0.0.1:3128
-et faire tourner cntlm
-```
-### kml_cluster
-```
-yarn jar /opt/application/Khiops/current/bin/KMLCluster.jar scores -cf_hdfs WORK/Pseudo/bench1.conf
-```
 ## Text edition
 ### Pandoc
 ```
 c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex -V fontsize=12pt -V documentclass:book -V papersize:a4paper  -V classoption:openright --chapters --bibliography=papers.bib --csl="csl/nature.csl" title.md summary.md zusammenfassung.md acknowledgements.md toc.md "introduction/intro1.md" "introduction/intro2.md" chapter2_paper.md chapter3_extra_results.md chapter4_generaldiscussion.md appendix.md references.md -o "phdthesis.pdf"
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
-
-
