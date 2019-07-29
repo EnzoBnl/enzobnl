@@ -12,8 +12,11 @@
 *Nombre de permutations de $k$ éléments*.
 
 On a $n$ éléments et $n$ slots **ordonnés** où les placers :
- $12345......n$
- $\_\_\_\_\_......\_$
+
+`12345...n`
+
+`_____...n`
+
 On a $n$ possibilités pour placer le premier, puis $n-1$ pour le second $......$ puis une seule possibilité pour le $n^{ème}$.
 On a donc $n!$ permutations de nos $n$ éléments.
 ### Arrangements
