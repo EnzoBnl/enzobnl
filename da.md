@@ -299,6 +299,7 @@ $Comp_{round} = diametre$
 - Topologie complète (tous les processus sont reliés entre eux)
 - *n* processus, *p<sub>i</sub>*, *i* $\in$ [1, ..., n] 
 - Chaque processus a une valeur initiale $\in$ V , V=ensemble de valeurs fixe
+
 ### Problème d'accord/de consensus
 1. *Agrément*: Deux processus ne se décident pas pour deux valeurs différentes.
 2. *Validité*:  Si tous les processus ont la même valeur initiale *v*, alors *v* est la seule décision possible
