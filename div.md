@@ -24,6 +24,7 @@
 
 ## Latency
 From http://ommil.com/scalax14/#/7/7
+
 |Computer| 	Human Timescale |	Human Analogy|
 |:--:|:--:|:--:|
 |L1 cache reference 	|0.5 secs 	|One heart beat|
