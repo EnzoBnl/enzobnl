@@ -1,1 +1,1 @@
-<img src="https://risibank.fr/cache/stickers/d91/9146-full.png">
+<img src="http://madagascar.fr.dreamworks.com/images/uploads/characters/_1095/mort_hero.jpg">
