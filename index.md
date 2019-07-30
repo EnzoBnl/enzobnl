@@ -1,1 +1,3 @@
+Data engineering, software design, algorithmics, computer science...
+
 <img src="http://madagascar.fr.dreamworks.com/images/uploads/characters/_1095/mort_hero.jpg">
