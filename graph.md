@@ -141,7 +141,7 @@ Sachant que $i$ est le dernier état d'une chaine de Markov, $a_{i,j}$ est la pr
 
 La matrice de transition de la chaine est égale à la *matrice d'adjacence* du graphe de la chaine de Markov :
 
-<div id="mermaid">
+<div class="mermaid">
 graph TB
 1[1] --a<sub>1,1</sub>--> 1
 2[2] --a<sub>2,2</sub>--> 2
@@ -153,7 +153,7 @@ Ce graphe ignore les arêtes qui aurait une probabilité nulle. Il n'est donc pa
 ### Probabilité stationnaire d'une Chaine de Markov
 Soit $X=(X_n)_n \geq 0$ une chaine de Markov.
 
-Sa probabilité stationnaire $\pi_i =lim_{n \rightarrow \inf} \frac{1_{X_0=i}+1_{X_1=i}+...+1_{X_{n-1}=i}}{n}=lim_{n \rightarrow \inf} \frac{S_n(i)}{n}$. C'est la part du temps que le processus passe dans l'état $i$.
+Sa probabilité stationnaire $\pi _ i =lim _ {n \rightarrow \inf} \frac{1 _ {X _ 0=i}+1 _ {X _ 1=i}+...+1 _ {X _ {n-1}=i}}{n}=lim _ {n \rightarrow \inf} \frac{S _ n(i)}{n}$. C'est la part du temps que le processus passe dans l'état $i$.
 ### Théorème de Perron Frobenius
 ...
 ### PageRank
