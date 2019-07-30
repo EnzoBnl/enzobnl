@@ -1,11 +1,11 @@
-|||
+|Theme|Content|
 |--|--|
-|[Functional Programming](FP.html)|Scala, Cats, categories|
-|[Machine Learning & Stats](ML.html)|tests, bias-variance, evaluation|
-|[Object Oriented Programming](OOP.html)|SOLID, design patterns|
-|[Graphs, web, search engines](graph.html)|Graph theorie definitions & theorems, search engines|
 |[Distributed algorithms](da.html)|Leader election & Consensus, synchronous systems|
-|[Programming Languages](pl.html)|Java/Scala/Python|
+|[Object Oriented Programming](OOP.html)|SOLID, design patterns|
+|[Machine Learning & Stats](ML.html)|tests, bias-variance, evaluation|
+|[Graphs theory & web](graph.html)|Definitions & theorems, search engines and web's graph properties|
+|[Functional Programming](FP.html)|Scala & Cats, categories|
 |[Big Data Frameworks](bd.html)|Spark, Elastic Search...|
-|[Div](div.html)|multithreading, computer architecture, network...|
-|[Commands](cmd.html)||
+|[Programming Languages](pl.html)|Coding in Java/Scala/Python|
+|[Other CS notes](div.html)|Multithreading, computer architecture, network...|
+|[Commands cheat sheet](cmd.html)||
