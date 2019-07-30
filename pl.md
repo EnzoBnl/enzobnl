@@ -8,8 +8,6 @@
 
 # Java
 ## Interfaces (java8)
-### extension
-Interface can't implement other interfaces
 ### functional interface, `default` and `static`
 ```java
 @FunctionalInterface
@@ -36,7 +34,7 @@ On interfaces, `static` method can only:
 - `Square.printName();` compiles
 
 Note: both this 2 lines would have compile if `Square ` were an *abstract class*.
-
+### Diamond problem
 
 # Scala
 ## Construcors attributes scope
