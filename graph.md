@@ -60,6 +60,7 @@ Une chaine (ou un chemin) :
 ### Connexité
 - Un graphe $G=(V,E)$ non-orienté (*resp. orienté*) est connexe  $\Leftrightarrow \exists v\in V(G),\forall v'\in V(G),\exists$ une **chaine** (*resp. chemin*) reliant $v$ et $v'$
 - Un graphe $G=(V,E)$ orienté est **fortement** connexe  $\Leftrightarrow \forall v,v'\in V(G),\exists$ un **chemin** allant de $v$ vers $v'$
+
 ### Séparateur (Vertex separator)
 Soit $G = (V, E)$ un graphe. 
 $S\subset V$ est un séparateur de $G$ si :
@@ -108,6 +109,7 @@ C'est un processus stochastique possédant la *propriété de Markov* : La préd
 ### Chaine de Markov
 C'est une réalisation d'un processus de Markov à temps discret ou continu et à espace d'état discret noté $E$: C'est une séquence $X_0, X_1, X_2, ...$ de variables aléatoires $X_n \in E$ étant l'état du processus à l'instant $n$.
 - Propriété d'ergodicité: Les propriétés statistiques du processus sont estimables à partir d'un échantillon suffisamment grand.
+
 ### Matrice de transition d'une chaine de Markov
 $$
 M=\begin{pmatrix}  
@@ -128,7 +130,7 @@ graph TB
 Ce graphe ignore les arêtes qui aurait une probabilité nulle. Il n'est donc pas forcément connexe.
 ### Probabilité stationnaire d'une Chaine de Markov
 Soit $X=(X_n)_n \geq 0$ une chaine de Markov.
-Sa probabilité stationnaire $\pi _i =lim_{n \rightarrow \inf} \frac{1_{X_0=i}+1_{X_1=i}+...+1_{X_{n-1}=i}}{n}=lim_{n \rightarrow \inf} \frac{S_n(i)}{n}$. C'est la part du temps que le processus passe dans l'état $i$.
+Sa probabilité stationnaire $\pi_i =lim_{n \rightarrow \inf} \frac{1_{X_0=i}+1_{X_1=i}+...+1_{X_{n-1}=i}}{n}=lim_{n \rightarrow \inf} \frac{S_n(i)}{n}$. C'est la part du temps que le processus passe dans l'état $i$.
 ### Théorème de Perron Frobenius
 ...
 ### PageRank
@@ -185,7 +187,7 @@ Soit $G=(\{a\}, Ø)$. $G$ vérifie le théorème puisqu'il possède 0 sommets de
 *Récurrence :*
 Toute les topologies de graphes connexes sont constructibles à partire de $G$ en ajoutant une arête vers un sommets existant ou vers un sommet à créer.
 
-Soit $imp(G) =|\{v\in V(G),\space \deg(v)\space impair\}|$ 
+Soit $imp(G) =\vert\{v\in V(G),\space \deg(v)\space impair\}\vert$ 
 
 Étapes de construction possibles pour passer d'un graphe connexe $G_n$ vérifiant "$imp(G_n)$ est pair"  à $G_{n+1}$:
 
