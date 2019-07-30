@@ -3,7 +3,7 @@ markdown: kramdown
 kramdown:
   math_engine: mathjax
   
-title: enzobnl's notes
+title: EnzoBnl's notes
 
 description: >-
     <a href="http://enzobnl.github.io" style="color: #f2f2f2">HOME</a> </br>
