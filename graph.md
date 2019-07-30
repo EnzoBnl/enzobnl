@@ -41,7 +41,7 @@ On veut en choisir $k$ sans remise **ni distinction d'ordre**.
 
 On débute avec le même raisonnement que pour l'arrangement sauf que l'ordre des choix n'importe pas. Nous nous retrouvons avec beaucoup d'ensemble identiques car nous avons pour chaque ensemble toutes ses permutations possibles : il faut diviser le précédent résultat par le nombre d'arrangements d'un ensemble de taille $k$, soit $k!$
 
-On obtient donc ${n \choose k}=\frac{n!}{k!(n-k)!}=\frac{|arrangements(n, k)|}{|permutations(k)|}$
+On obtient donc ${n \choose k}=\frac{n!}{k!(n-k)!}=\frac{\vert arrangements(n, k)\vert }{\vert permutations(k)\vert }$
 
 
 ### Chaine et chemin
@@ -145,7 +145,7 @@ La matrice de transition de la chaine est égale à la *matrice d'adjacence* du 
 graph TB
 1[1] --a<sub>1,1</sub>--> 1
 2[2] --a<sub>2,2</sub>--> 2
-2 --a<sub>2,1</sub></sub>--> 1
+2 --a<sub>2,1</sub>--> 1
 1 --a<sub>1,2</sub>--> 2
 </div>
   
