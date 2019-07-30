@@ -18,21 +18,29 @@ On a $n$ éléments et $n$ slots **ordonnés** où les placers :
 `_____...n`
 
 On a $n$ possibilités pour placer le premier, puis $n-1$ pour le second $......$ puis une seule possibilité pour le $n^{ème}$.
+
 On a donc $n!$ permutations de nos $n$ éléments.
 ### Arrangements
 *Nombre d'arrangements de $k$ éléments dans un ensemble de taille $n$.*
 
 Soit n éléments $12345......n$.
+
 On veut en choisir $k$ sans remise.
-Pour le premier on a le choix entre $n$ éléments, pour le second entre $n-1$ éléments$......$ pour le $k^{ème}$ entre $n-k+1$ éléments.
+
+Pour le premier on a le choix entre $n$ éléments, pour le second entre $n-1$ éléments$......$ pour le $k^{ème}$ 
+entre $n-k+1$ éléments.
+
 Le nombre de scenarios de succession de $k$ choix d'éléments parmi $n$ =  $n(n-1)(n-2)......(n-k+1)=\frac{n!}{(n-k)!}$
+
 ### Coefficient binomial
 *Nombre de sous-ensembles de taille $k$ dans un ensemble de taille $n$.*
 
 Soit n éléments $12345......n$.
+
 On veut en choisir $k$ sans remise **ni distinction d'ordre**.
-On débute avec le même
-asnnemntque pour l'arrangement sauf que l'ordre des choix n'importe pas et nous nous retrouvons avec beaucoup d'ensemble identiques car nous avons  pour chaque ensemble toutes ses permutations possibles : il faut diviser le précédent résultat par le nombre d'arrangements d'un ensemble de taille $k$, soit $k!$
+
+On débute avec le même raisonnement que pour l'arrangement sauf que l'ordre des choix n'importe pas. Nous nous retrouvons avec beaucoup d'ensemble identiques car nous avons pour chaque ensemble toutes ses permutations possibles : il faut diviser le précédent résultat par le nombre d'arrangements d'un ensemble de taille $k$, soit $k!$
+
 On obtient donc ${n \choose k}=\frac{n!}{k!(n-k)!}=\frac{|arrangements(n, k)|}{|permutations(k)|}$
 
 
@@ -41,6 +49,7 @@ On obtient donc ${n \choose k}=\frac{n!}{k!(n-k)!}=\frac{|arrangements(n, k)|}{|
 2. Dans un graphe orienté : Un **chemin** $\mu [x,y]$ d'origine $x$ et d'extrémité $y$ est une suite finie d'arcs consécutifs reliant $x$ à $y$.
 
 Une chaine simple $\mu (x,y)$ est un **cycle**  $\Leftrightarrow x=y$
+
 Un chemin $\mu [x,y]$ est un **circuit**  $\Leftrightarrow x=y$
 
 Une chaine (ou un chemin) :
@@ -63,27 +72,35 @@ Une chaine (ou un chemin) :
 
 ### Séparateur (Vertex separator)
 Soit $G = (V, E)$ un graphe. 
+
 $S\subset V$ est un séparateur de $G$ si :
- $\exists (u,v)\in (V\setminus S)^2$ tel que $u$ et $v$ sont reliés dans $G$ mais ne le sont plus dans  $G' = (V\setminus S, E)$.
+
+$\exists (u,v)\in (V\setminus S)^2$ tel que $u$ et $v$ sont reliés dans $G$ mais ne le sont plus dans  $G' = (V\setminus S, E)$.
 ### Isthme (bridge)
 Soit $G = (V, E)$ un graphe. 
+
 $i\in E$ est un isthme de $G$ si :
- $\exists (u,v)\in V^2$ tel que $u$ et $v$ sont reliés dans $G$ mais ne le sont plus dans  $G' = (V, E\setminus \{i\})$.
+
+$\exists (u,v)\in V^2$ tel que $u$ et $v$ sont reliés dans $G$ mais ne le sont plus dans  $G' = (V, E\setminus \{i\})$.
 ### Degré
 Le degré d'un sommets $s$ est le nombre d'arêtes impliquant $s$, les boucles comptant deux fois.
+
 Si le graphe est orienté, c'est la somme du nombre d'arêtes entrantes et du nombre d'arêtes sortantes.
 ### Arbre (=arbre enraciné)
 Graphe **acyclique orienté** $G=(V,E)$, possédant un sommet racine $r\in V$ tel que $deg_{in}(r) = 0$ et $\forall v \in V\setminus \{r\}, deg_{in}(v) = 1$
 
 - Si $deg_{out}(v) = 0$, $v$ est une **feuille**, sinon c'est un **noeud**.
 - Si $\forall v \in V, deg_{out}(v) \leq 2$, l'arbre est dit **binaire**.
+
 ## Theorèmes
 ### Chaîne/Chemin $\implies$ Chaine/Chemin élémentaire
 Soit $G=(V, E)$ un graphe non orienté (*resp. orienté*).
+
 Soit $a,b\in V$, $\exists w$ une chaine (*resp. chemin*) de $a$ vers $b \implies \exists p$, une chaine (*resp. chemin*) élémentaire de $a$ vers $b$.
 ### Transitivité des chemins
 
 Soit $x,y,z \in G$.
+
 Il existe un chaine (ou chemin) élémentaire de $x$, vers $y$ et un chaine (ou chemin) élémentaire de $y$, vers $z$ $\implies$ Il existe un chaine (ou chemin) élémentaire de $x$, vers $z$
 ### Handshake Theorem
 $\forall G=(V,E),\space \sum\limits_{v \in V(G)}deg(v)=2|E|$
@@ -107,7 +124,9 @@ C'est une évolution, à pas discret ou continu, d'une variable aléatoire.
 ### Processus de Markov
 C'est un processus stochastique possédant la *propriété de Markov* : La prédiction du futur du processus à partir de son présent n'est pas rendue plus précise par la connaissance additionnelle de son passé.
 ### Chaine de Markov
-C'est une réalisation d'un processus de Markov à temps discret ou continu et à espace d'état discret noté $E$: C'est une séquence $X_0, X_1, X_2, ...$ de variables aléatoires $X_n \in E$ étant l'état du processus à l'instant $n$.
+C'est une réalisation d'un processus de Markov à temps discret ou continu et à espace d'état discret noté $E$: 
+
+C'est une séquence $X_0, X_1, X_2, ...$ de variables aléatoires $X_n \in E$ étant l'état du processus à l'instant $n$.
 - Propriété d'ergodicité: Les propriétés statistiques du processus sont estimables à partir d'un échantillon suffisamment grand.
 
 ### Matrice de transition d'une chaine de Markov
@@ -117,19 +136,23 @@ a_{1,1} & a_{1,2} \\
 a_{2,1} & a_{2,2}
 \end{pmatrix}
 $$
+
 Sachant que $i$ est le dernier état d'une chaine de Markov, $a_{i,j}$ est la probabilité que le suivant soit $j$.
 
 La matrice de transition de la chaine est égale à la *matrice d'adjacence* du graphe de la chaine de Markov :
-```mermaid
+
+<div id="mermaid">
 graph TB
-1[1] --a<sub>1,1--> 1
-2[2] --a<sub>2,2--> 2
-2 --a<sub>2,1--> 1
-1 --a<sub>1,2--> 2
-```
+1[1] --a<sub>1,1</sub>--> 1
+2[2] --a<sub>2,2</sub>--> 2
+2 --a<sub>2,1</sub></sub>--> 1
+1 --a<sub>1,2</sub>--> 2
+</div>
+  
 Ce graphe ignore les arêtes qui aurait une probabilité nulle. Il n'est donc pas forcément connexe.
 ### Probabilité stationnaire d'une Chaine de Markov
 Soit $X=(X_n)_n \geq 0$ une chaine de Markov.
+
 Sa probabilité stationnaire $\pi_i =lim_{n \rightarrow \inf} \frac{1_{X_0=i}+1_{X_1=i}+...+1_{X_{n-1}=i}}{n}=lim_{n \rightarrow \inf} \frac{S_n(i)}{n}$. C'est la part du temps que le processus passe dans l'état $i$.
 ### Théorème de Perron Frobenius
 ...
@@ -146,7 +169,9 @@ Preuve   : ${(2)}$
 
 ### Loi de puissance pour le degré entrant
 Soit $P_{deg-in}(i)$ probabilité qu'un noeud ait un degré entrant $i$.
+
 Soit $x>1$
+
 $P_{deg-in}(i)\propto \frac{1}{i^x}$
 
 ### Taille du web
@@ -185,6 +210,7 @@ Cas du graphe vide : $G_{Ø}=(Ø, Ø)$ possède 0 sommets de degré impair, le t
 Soit $G=(\{a\}, Ø)$. $G$ vérifie le théorème puisqu'il possède 0 sommets de degré impair.
 
 *Récurrence :*
+
 Toute les topologies de graphes connexes sont constructibles à partire de $G$ en ajoutant une arête vers un sommets existant ou vers un sommet à créer.
 
 Soit $imp(G) =\vert\{v\in V(G),\space \deg(v)\space impair\}\vert$ 
