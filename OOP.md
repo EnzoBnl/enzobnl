@@ -60,7 +60,7 @@ M[Man<br/>____________<br/>]--extends-->H
   
 #### Encapsulation
 Expose behavior in a public API that do calls to private behaviors implementations & attributes
-#### Composition over inveritance
+#### Composition over inheritance
 *"Inheritance is not for code reuse, inheritance is not for sharing behavior"*: Whenever you factorize some behavior but there is no **IS-A** relation, you must use composition instead of inheritance.
 *Help: Decorator Pattern, Bridge Pattern, Dependency Injection*.
 ### Design patterns notes
