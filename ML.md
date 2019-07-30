@@ -172,10 +172,16 @@ Area under curve $\in [0,1]$, after normalization.
 #### GridSearch
 #### Bayesian approach
 #### Time series split
+To ensure an unbiased split:
+- in a dataset where records are individuals: You just have to shuffle the entire dataset,
+- in a temporal dataset where records are events associated to individuals, you have to order it by timestamp and create 2 record groups $A$ and $B$, $A\cap B=Ø$.
 
-||||
-||||
-||||
+||individuals A|individuals B|
+|:-:|:-:|:-:|
+|Most old events|Used for train||
+|Most recent events||Used for test|
+
+The split train-validation inside outer train set must follow the same logic.
 
 ## Prep
 ### Kernel trick
