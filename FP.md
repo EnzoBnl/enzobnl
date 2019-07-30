@@ -5,39 +5,8 @@
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 <script>document.body.style.background = "#f2f2f2";</script>
 <!--NOTE HEAD END-->
-## Functionnal Programming in Scala Notes
-### Option[A]
-Alternative FP au `null` de POO.
-Two subtypes:
-- `val o = Some(v)`:
-```scala
-final case class Some[+A](val x : A) extends scala.Option[A]
-```
-- `val o = None`:
-```scala
-case object None extends scala.Option[scala.Nothing]
-```
-For any `o: Option[T]`, the first common supertype to `o` and `None` is `T`.
-
-### Implicit conversions
-This
-```scala
-((i: Int) => i)("1")
-```
-gives
-```
-type mismatch;
- found   : String("1")
- required: Int
-```
-but this compiles just fine:
-```scala
-implicit def StringToInt(s: String) = Integer.parseInt(s)
-((i: Int) => i)("1")
-```
-
-## Notions 
-### Strucutres algébriques
+# Functionnal Programming Notes (Scala)
+## Strucutres algébriques
 <div class="mermaid">
 graph TB
 Ma --> DeGr
@@ -89,4 +58,37 @@ class C[F[T]](f: F[T])
 To name you're force to add it as type parameter too. This compiles:
 ```scala
 class C[T, F[T]](f: F[T])
+```
+
+## Monads Examples
+### Option[A]
+Alternative to OOP's `null`.
+Two subtypes:
+- `val o = Some(v)`:
+```scala
+final case class Some[+A](val x : A) extends scala.Option[A]
+```
+- `val o = None`:
+```scala
+case object None extends scala.Option[scala.Nothing]
+```
+For any `o: Option[T]`, the first common supertype to `o` and `None` is `T`.
+
+
+## Implicits
+### Implicit conversions
+This
+```scala
+((i: Int) => i)("1")
+```
+gives
+```
+type mismatch;
+ found   : String("1")
+ required: Int
+```
+but this compiles just fine:
+```scala
+implicit def StringToInt(s: String) = Integer.parseInt(s)
+((i: Int) => i)("1")
 ```
