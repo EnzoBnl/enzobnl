@@ -33,7 +33,7 @@ On interfaces, `static` method can only:
 - `sq.printName();` does not compile
 - `Square.printName();` compiles
 
-Note: both this 2 lines would have compile if `Square ` were an *abstract class*.
+Note: both this 2 lines would have compiled if `Square ` were an *abstract class*.
 ### Diamond problem
 
 # Scala
@@ -272,5 +272,3 @@ str
 repr
 ```
 --> str is dominant over repr for prints, but cell always output last expression repr
-
-
