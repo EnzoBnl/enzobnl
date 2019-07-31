@@ -37,6 +37,10 @@ Based on this idea, Robert C. Martin’s definition of the Dependency Inversion 
 Expose behavior in a public API that do calls to private behaviors implementations & attributes
 
 ### Best practices
+#### Avoid fields direct use
+*"You should not need to know if you are manipulating a field or a method"*
+
+Direct access to a field `member` within a class must be avoided and you must prefer access it via getter/setter or other sort of private wrapping method `accessMember()`. This way if you further decide to replace the fields `member` by a method `member()`, the code changes implied by this change will only affect `accessMember()`.
 #### Composition over inheritance
 *"Inheritance is not for code reuse, inheritance is not for sharing behavior"*: Whenever you would have factorized some behavior with inheritance, if you can replace the **IS-A** relation by a **WITH-A** relation, you must use composition instead of inheritance.
 
