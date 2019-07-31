@@ -18,11 +18,11 @@
 ### Secondary
 1. a 3rd language: Scala (functional prog) or Kotlin(android) or C++(games) or ...
 2. Some more low level knowledge: C, JVM
-3. APIs building: RESTful, Flask, HTTP
+3. Web APIs building: RESTful principles...
 4. Master 1 to 3 specialized frameworks: Node.js, React, Spark, Kubernetes, Unity...
 5. Practice with CI/CD & cloud
 
-## Latency
+## Memories accessing latencies
 From http://ommil.com/scalax14/#/7/7
 
 |Computer| 	Human Timescale |	Human Analogy|
