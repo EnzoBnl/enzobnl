@@ -86,7 +86,7 @@ Pour tout processus *i*:
 - msgs<sub>i</sub> (lien<sub>+</sub>) = msg: le processus *i* génère un message avec le contenu *msg* sur le lien<sub>+</sub>
 
 *trans*$_i$:
-```fortran
+```    
 msg := null
 v := message reçu
 Si u=/=null, on regarde v:
@@ -114,16 +114,22 @@ Autre version (utilisée pour les calculs de complexité dans la partie suivante
 |communication (messages)|~$n\dfrac{n+1}{2}$, soit $O(n²)$: cas où les ids sont ordonnés par ordre décroissants|~$2n$, soit $O(n)$: ids ordonnés par ordre croissant|
 
 Indication de preuve de correction:
+
 Lèmme 1.1: Un processus *i<sub>max</sub>* (*i* est l'indice, pas l'id) avec id maximum, noté u<sub>max</sub>, passe son `état:=leader` à la fin du n<sup>ème</sup> round
+
 Lèmme 1.2: $\forall$r tq 0 $\leq$ r $\leq$ n-1, après *r* rounds, msg<sub>(i<sub>max</sub> + r) mod n</sub> = u<sub>max</sub>, par récurrence sur *r*
+
 Lèmme 2.1: $\forall$ processus *i* tq *i* $\neq$ *i<sub>max</sub>*, l'action `état:=leader` n'est jamais effectuée
+
 Lèmme 2.2: $\exists$ un processus *j* $\in$ [i+1, i<sub>max</sub>], tq au round (*j* - *i*) mod n, msg<sub>j</sub> $\neq$ u<sub>i</sub>
 
 ### Théorème
 Dans un anneau de taille n $>$ 1, si tous les processus sont identiques (même code, même nom) il n'existe pas un algorithme d'élection de leader même si *n* est connu et si l'anneau est bidirectionnel.
 
 *Preuve*: Par l'absurde: Supposons qu'un tel algorithme existe. Considérons leur exécution: C<sub>0</sub>M<sub>1</sub>C<sub>1</sub>...
+
 Tous les processus sont initialisés avec le même état *s<sub>0</sub>*.
+
 Alors: à chaque round *r*: tous les processus prennent un nouvel état identique. Donc si au round *n* un leader a été élu, c'est que tous les processus sont leader, ce qui est interdit par l'énoncer du problème, donc l'algorithme résolvant le problème ne le résout pas: preuve par l'absurde qu'un tel algorithme n'existe pas !
 
 ### 1.1.2. Algorithme TS (Time Slice)
@@ -152,7 +158,7 @@ Pour tout processus *i*:
 - msgs<sub>i</sub> (lien<sub>+</sub>) = msg: le processus *i* génère un message avec le contenu *msg* sur le lien<sub>+</sub>
 
 *trans*$_i$:
-```fortran
+```    
 msg:=null
 round:=round+1
 Si round=n:
@@ -175,7 +181,7 @@ Attributs supplémentaires/modifiés dans *States*<sub>i</sub>:
 - msg: $M$$\cup$ $\{null, ping\}$, initialisé à $null$
 
 *trans*$_i$:
-```fortran
+```    
 msg:=null
 Si leader=inconnu:
     round:=round+1
@@ -212,8 +218,10 @@ Si leader=inconnu:
 
 #### Fonctionnement
 L'ensemble des messages contient les triplets composés d'un *id* $\in$ UID, d'un flag $\in$ {out, in}, et d'un entier positif *k* $\in \mathbb{N}$<sup>+</sup> qui est le compteur de sauts.
+
 Un message $\in$ UID x {out, in} x $\mathbb{N}$<sup>+</sup>
 $\forall$ processus *i*: 
+
 States<sub>i</sub> & Starts<sub>i</sub> :
 
 - u: UID, `u:=id` de *i*
@@ -224,7 +232,7 @@ States<sub>i</sub> & Starts<sub>i</sub> :
 
 __msgs<sub>i</sub>__: renvoie *msg<sub>+</sub>* sur lien<sub>+</sub> et *msg<sub>-</sub>* sur lien<sub>-</sub>.
 __trans<sub>i</sub>__: 
-```fortran
+```    
 msg_plus:=null; msg_moins:=null
 Si le message reçu est (v, out, h) sur lien_moins alors:
     cas v>u et h>1: msg_plus:=(v, out, h-1)
@@ -249,10 +257,11 @@ Si le message reçu est (u, in, 1) sur les deux liens alors:
 #### Complexité de l'algorithme HS 
 ##### En communication
 Le processus *i* passe à la phase *l* ssi dans la phase précédente l-1 il n'y a pas de processus avec un id plus grand que *id<sub>i</sub>* parmis les processus à une distance $d = 2^{l-1}$ de *i*.
+
 Au plus $\lfloor\dfrac{n}{2^{l-1}+1}\rfloor$ processus passent à la phase *l*.
+
 Ils envoient au plus $2.2.2^{l}\lfloor\dfrac{n}{2^{l-1}+1}\rfloor = O(n)$ messages durant cette étape
-Le nombre de phases est $O(log(n))$
-$\Rightarrow$ complexité en messages = $O(n.log(n))$
+Le nombre de phases est $O(log(n))$ $\Rightarrow$ complexité en messages = $O(n.log(n))$
 
 ##### En temps
 $O(n.log(n))$ très grossièrement.
@@ -340,8 +349,11 @@ Le problème se résout grâce à l'hypothèse f $<$ n (cf suite)
 
 #### 2.1.1. Algorithme de FloodSet
 Pour chaque processus *i*:
+
 Les éléments de *M* (ensemble de messages possibles) sont des ensembles de valeur dans *U* (ensemble des valeurs initiales)
+
 $M = \mathbb{P}(U)$
+
 States$_i$ & Starts$_i$:
 
 - $v_0 \in U$, identique pour tout les processus
@@ -351,7 +363,7 @@ States$_i$ & Starts$_i$:
 
 *msgs$_i$*: Si *rounds* $\leq$ *f* alors envoie *W* à tout les autres processus, sinon leur envoie *null*
 *trans$_i$*: 
-```fortran
+```    
 rounds:=round+1
 Soit Wj le message qui arrive du voisin j
 Pour tout voisin j:
@@ -382,8 +394,11 @@ $Comp_{bits\:transmis} \leq n^3bf =  O(fn^3)$
 #### 2.1.3. Algorithme de FloodSet optimisé
 
 Pour chaque processus *i*:
+
 Les éléments de *M* (ensemble de messages possibles) sont des ensembles de valeur dans *U* (ensemble des valeurs initiales)
+
 $M = \mathbb{P}(U)$
+
 States$_i$ & Starts$_i$:
 
 - $v_0 \in U$, identique pour tout les processus
@@ -396,7 +411,7 @@ States$_i$ & Starts$_i$:
 
 *msgs$_i$*: *Envoyer msg à tous les voisins*
 *trans$_i$*: 
-```fortran
+```    
 msg:=null
 rounds:=round+1
 Soit wj le message qui arrive du voisin j
@@ -415,6 +430,7 @@ Sinon si |W|>1 et done=false:
     msg:=v, tq v appartient à W et v=/=w
     
 ```
+
 L'idée est que la première fois où un processus reçoit une valeur différente de la sienne, il avertisse les *n* autres processus de cette valeur. Il n’envoie qu'une seule valeur (et pas un set) et cela, une unique fois (et pas à chaque round).
 
 ##### Comparatif de complexités
@@ -428,8 +444,10 @@ L'idée est que la première fois où un processus reçoit une valeur différent
 ### 2.2. Consensus avec des défaillances Byzantines
 #### Définition
 Un processus présentant une **défaillance byzantin** est un processus que l'on considère libre d'adopter un comportement non conforme.
-Les défaillances Byzantines sont plus générales que les défaillances d'arrêt
-Une résolution avec défaillances Byzantines résout n'importe quel problème de défaillances d'arrêt __dans les mêmes conditions__
+
+Les défaillances Byzantines sont plus générales que les défaillances d'arrêt.
+
+Une résolution avec défaillances Byzantines résout n'importe quel problème de défaillances d'arrêt __dans les mêmes conditions__.
 
 #### Problème
 1. *Agrément*: Deux processus __non-défaillants__ ne se décident pas pour deux valeurs différentes.
@@ -452,7 +470,7 @@ States & Starts:
 
 *msgs$_i$*: envoyer $v_i$ à tous les processus, y compris *i*
  *trans$_i$*: 
-```fortran
+```    
 Si n messages reçus alors:  !y compris le message de i vers i
     Calculer la valeur majoritaire mi (la plus petite en cas d'=)
     vi:=mi
@@ -516,7 +534,7 @@ States$_i$ & Starts$_i$:
 
 *msgs$_i$*: envoyer $msg_i$ à tous les processus *j* voisins
  *trans$_i$*: 
-```fortran
+```    
 msg:=null
 Si deja_vu=false et message m reçu sur le canal p:
     msg:=m
