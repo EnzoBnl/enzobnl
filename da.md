@@ -60,12 +60,16 @@ C<sub>0</sub>M<sub>1</sub>C<sub>1</sub>...M<sub>r</sub>C<sub>r</sub> où C<sub>r
 1. Anneau unidirectionnel SYNCHRONISÉ
 2. Chaque processus a un identificateur unique (de l'ensemble UID de tous les identificateurs possibles)
 3. L'anneau est orienté: Chaque processus connait le lien suivant dans le sens des aiguilles d'une montre, noté $lien_+$, et le lien inverse noté $lien_-$
+
 #### Problème d'élection de leader
-Supposons que chaque processus *i* a une variable nommée *état* tq,
- *état* $\in$ {leader, inconnu}
- A la terminaison de l'exécution d'un algorithme résolvant le problème, il faut qu'exactement 1 processus ait sa variable *état* à la valeur *leader*.
- Variante *(a)* du problème: Tout les processus sauf 1 seul se rendent compte qu'ils ne sont pas leader
-  Variante *(b)* du problème: Pendant toute l'exécution il y a au plus un leader
+Supposons que chaque processus *i* a une variable nommée *état* tq, *état* $\in$ {leader, inconnu}.
+
+A la terminaison de l'exécution d'un algorithme résolvant le problème, il faut qu'exactement 1 processus ait sa variable *état* à la valeur *leader*.
+
+Variante *(a)* du problème: Tout les processus sauf 1 seul se rendent compte qu'ils ne sont pas leader
+
+Variante *(b)* du problème: Pendant toute l'exécution il y a au plus un leader
+  
 ### 1.1.1. Algorithme LCR (Lelann-Chang-Roberts)
 *Alphabet*: *M* = UID = ensemble des id possibles
 
@@ -290,6 +294,7 @@ Sinon état:=non_leader
 #### Complexités
 ##### Communication
 $Comp_{messages} = diametre.2.|E|$
+
 avec $E$ = nombre d'arêtes
 ##### Temps
 $Comp_{round} = diametre$
