@@ -106,8 +106,7 @@ Il existe un chaine (ou chemin) élémentaire de $x$, vers $y$ et un chaine (ou 
 $\forall G=(V,E),\space \sum\limits_{v \in V(G)}deg(v)=2|E|$
 
 ### Sommets de degré impair
-$\forall G=(V,E),\space| $$\{$$v \in V,\space deg(v)\space est \space impair$$\}$$|\space est \space pair$
-
+$\forall G=(V,E),\space|$  $\{$ $v \in V,\space deg(v)\space est \space impair$ $\}$ $|\space est \space pair$
 
 Preuve   : ${(1)}$
 ### Chemin dans un arbre
