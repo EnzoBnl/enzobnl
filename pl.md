@@ -41,12 +41,14 @@ Note: both this 2 lines would have compiled if `Square ` were an *abstract class
 ```scala
 (case) class C(... a: Int)
 ```
+
 |Visibility |	Accessor? |	Mutator?|
 |:--:|:--:|:--:|
 |var |	Yes |	Yes|
 |val| 	Yes |	No|
 |Default visibility (no var or val) 	|No for classes, Yes for case classes| 	No|
 |Adding the private keyword to var or val |	No |	No|
+
 ## Equals
 `==` is infix alias for `equals(other: Any): Boolean` method
 ```scala
@@ -116,6 +118,7 @@ ac
 - AnyVal passed to function as argument *x*: *x* is a val containing the value (in bytecode it's a primitive) of the AnyVal object.
 - AnyRef passed to function as argument *x*: *x* is a val containing the reference to the AnyRef object.
 - AnyVal or AnyRef catched by a closure through variable *a*: the closure is directly linked to the variable of the outer scope if it is reachable. 
+
 NOTE: for the last case, if the variable is disapearing from scope, last reference contained in the variable is used (this last reference is not a copy of the object and can be operated on by another owner of the same ref):
 
 ```scala
@@ -144,8 +147,7 @@ Returns
 3
 34
 ```
-### Closures and spark:
-Impossible to make it work because referencies copied are living in driver and unreachable by executors in cluster mode (can work on localmode). Use [accumulators](https://spark.apache.org/docs/latest/rdd-programming-guide.html#accumulators) for this use cases to be rubust to deployment.
+
 ## (Idem for Java, Python) String equality
 String **literals** *value equality* is the same as *reference equality* because string literals are interned by compiler for memory (shared space) and comparison time (need only location comparison instead of comparing every char) optimisation
 ## Implicit conversions
