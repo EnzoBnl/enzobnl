@@ -8,6 +8,14 @@
 <!--NOTE HEAD END-->
 
 ## OOP
+### Vocabulary
+#### Association/Aggregation/Composition relation
+When an object of class *A* holds a reference to another object of class *B*, we say that the relation is:
+- an **association** if *B* also holds a (not pointless) reference  to *A* (A=Wife, B=Husband)
+- an **aggregation** if *B* has its own purpose outside *A* context (A=SoccerTeam, B=GoalKeeper).
+- else we call it a **composition** (A=Body, B=Leg).
+
+This split is sometimes really arbitrary and discussable: A=Car, B=Engine.
 ### relation between OOP basics & SOLID principles
 -   OOP basics
     -   Encapsulation
