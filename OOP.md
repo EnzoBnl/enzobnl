@@ -31,6 +31,7 @@ Based on this idea, Robert C. Martin’s definition of the Dependency Inversion 
 
 1.  High-level modules should not depend on low-level modules. Both should depend on abstractions.
 2.  Abstractions should not depend on details. Details should depend on abstractions.
+
 ### OOP basics
 
 #### Encapsulation
@@ -42,7 +43,9 @@ Expose behavior in a public API that do calls to private behaviors implementatio
 
 Direct access to a field `member` within a class must be avoided and you must prefer access it via getter/setter or other sort of private wrapping method `accessMember()`. This way if you further decide to replace the fields `member` by a method `member()`, the code changes implied by this change will only affect `accessMember()`.
 #### Composition over inheritance
-*"Inheritance is not for code reuse, inheritance is not for sharing behavior"*: Whenever you would have factorized some behavior with inheritance, if you can replace the **IS-A** relation by a **WITH-A** relation, you must use composition instead of inheritance.
+*"Inheritance is not for code reuse, inheritance is not for sharing behavior"*
+
+Whenever you would have factorized some behavior with inheritance, if you can replace the **IS-A** relation by a **WITH-A** relation, you must use composition instead of inheritance.
 
 *Help: Decorator Pattern, Bridge Pattern, Dependency Injection*.
 
