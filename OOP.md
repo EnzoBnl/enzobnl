@@ -10,7 +10,8 @@
 ## OOP
 ### Vocabulary
 #### Associations: Dependency-Aggregation-Composition
-<img width="600px" src="./figs/associations-uml.png">
+
+![](./figs/associations-uml.png)
 
 Note for *Ambiguous, Aggregation and Composition associations*: 
 - **Navigation**: Pointing from *A* to *B* with an arrow head means that you can **navigate** from *A* to *B* (here `wife.getHusband()` & `husband.getWife()`).
