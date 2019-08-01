@@ -9,7 +9,7 @@
 
 ## OOP
 ### Vocabulary
-#### Dependency/Association/Aggregation/Composition relationship
+#### Associations: Dependency-Aggregation-Composition
 <img width="600px" src="./figs/UML_arrows.png">
 
 Note for *Ambiguous, Aggregation and Composition associations*: 
