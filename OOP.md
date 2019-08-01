@@ -9,12 +9,13 @@
 
 ## OOP
 ### Vocabulary
-#### Association/Aggregation/Composition relation
-When an object of class *A* holds a reference to another object of class *B*, we say that the relation is:
-- an **association** if *B* also holds a (not pointless) reference  to *A* (A=Wife, B=Husband) 
-
-![](https://cdn.visual-paradigm.com/guide/uml/uml-aggregation-vs-composition/01-uml-association.png)
-- an **aggregation** if *B* has its own purpose outside *A* context (A=SoccerTeam, B=GoalKeeper).
+#### Association/Aggregation/Composition relationship
+When an object of class *A* holds a reference to another object of class *B*, we say that the relationship is:
+- an **association** if there is no **HAS-A** relationship between *A* and *B*:
+  - *symetric* if *B* also holds a (not pointless) reference  to *A* (A=Wife, B=Husband) 
+  ![](https://cdn.visual-paradigm.com/guide/uml/uml-aggregation-vs-composition/01-uml-association.png)
+  - else *asymetric* (add an arrow head)
+- else an **aggregation** if *B* has its own purpose outside *A* context (A=SoccerTeam, B=GoalKeeper).
 
 ![](https://cdn.visual-paradigm.com/guide/uml/uml-aggregation-vs-composition/02-uml-aggregation.png)
 - else we call it a **composition** (A=Body, B=Leg).
