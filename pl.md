@@ -253,10 +253,12 @@ import threading
 class CustomThread(threading.Thread):
 	shared_lock = threading.Lock()
 	def run(self):
-    	# not_critical things
+    	# do not critical things
         
         with lock:
-        	# critical things
+        	# lock taken, do critical things
+        
+        # lock released, do not critical things
 ```
 
 ## for-else, break, continue
