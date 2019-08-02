@@ -251,11 +251,13 @@ Mainly there is:
 ```python
 import threading
 class CustomThread(threading.Thread):
+	# static class field
 	shared_lock = threading.Lock()
+    
 	def run(self):
     	# do not critical things
         
-        with lock:
+        with self.shared_lock:
         	# lock taken, do critical things
         
         # lock released, do not critical things
