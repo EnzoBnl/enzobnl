@@ -239,6 +239,26 @@ In general, there is no reason to use `classOf[T].isInstance(x)` if you know rig
 
 
 # Python
+## multithreading 
+Mainly there is:
+- a concurrency lib: `threading` (only one interpreter)
+- a true parallel lib: `multiprocessing`
+
+## `threading` lib
+### Critical section
+*ex: accessing or updating a shared state*
+
+```python
+import threading
+class CustomThread(threading.Thread):
+	shared_lock = threading.Lock()
+	def run(self):
+    	# not_critical things
+        
+        with lock:
+        	# critical things
+```
+
 ## for-else, break, continue
 **break**: end loop
 **for ...: ... else:...** : else block is only executed if *break* not called
