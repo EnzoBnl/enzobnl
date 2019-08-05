@@ -6,6 +6,21 @@
 <script>document.body.style.background = "#f2f2f2";</script>
 <!--NOTE HEAD END-->
 ## Spark
+### Architectures
+1 cluster Node = multiple worker nodes
+
+1 worker node = multiple executors
+
+1 executor = 
+- java application (=1 JVM)
+- multiple threads
+
+1 job = multiple stages
+
+1 applications =
+- multiple spark jobs
+- 1 worker by node
+
 ### Usefull confs:
 ```scala
 spark.conf.set("spark.sql.shuffle.partitions", "5") // default = 200
