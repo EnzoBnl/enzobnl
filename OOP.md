@@ -9,6 +9,13 @@
 
 ## OOP
 ### Vocabulary
+#### FR/EN
+
+|EN|FR|
+|--|--|
+|override|redéfinir/spécialiser|
+|overload|surcharger|
+
 #### Associations: Dependency-Aggregation-Composition
 
 ![](./figs/associations-uml.png)
