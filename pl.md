@@ -244,8 +244,8 @@ Mainly there is:
 - a concurrency lib: `threading` (only one interpreter)
 - a true parallel lib: `multiprocessing`
 
-## `threading` lib
-### Critical section
+### `threading` lib
+#### Critical section
 *ex: accessing or updating a shared state*
 
 ```python
@@ -298,3 +298,10 @@ str
 repr
 ```
 --> str is dominant over repr for prints, but cell always output last expression repr
+
+### Usefull imports for OOP
+```python
+from overrides import overrides  # decorator '@overrides' 
+from abc import ABC, abstractmethod  #  'class C(ABC)' is abstract and decorator '@abstractmethod' usable.
+```
+
