@@ -265,8 +265,11 @@ class CustomThread(threading.Thread):
 
 ## for-else, break, continue
 **break**: end loop
+
 **for ...: ... else:...** : else block is only executed if *break* not called
+
 **continue**: ignore rest of the loop's block and jump to next loop iteration
+
 ### repr, str
 In notebook cell
 ```python
@@ -304,4 +307,3 @@ repr
 from overrides import overrides  # decorator '@overrides' 
 from abc import ABC, abstractmethod  #  'class C(ABC)' is abstract and decorator '@abstractmethod' usable.
 ```
-
