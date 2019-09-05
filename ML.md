@@ -132,8 +132,7 @@ scm.Plot(title="Bias-variance tradeoff", borders=[0.3,2, -1,5])\
      y=lambda i, x: scm.derivate(lambda z: 1/z**2 + z**2 + 0.5, x[i]), 
      marker="-", label="d(Error)")
 ```
-## Ensembling
-### Bagging
+
 ## Evaluation, Model selection
 http://scott.fortmann-roe.com/docs/MeasuringError.html
 ### R²
@@ -189,3 +188,16 @@ The split train-validation inside outer train set must follow the same logic.
 
 ## Prep
 ### Kernel trick
+
+# Tour of algorithms
+## Naive Bayes Classifier
+## Classification And Regression Tree
+## Ensembling
+### Bagging
+### Random forest
+### Boosting
+## Regularized Regressions
+### RIDGE
+### LASSO
+### MARS
+## Support Vector Machine
