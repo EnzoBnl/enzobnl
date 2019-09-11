@@ -7,7 +7,7 @@
 <script>document.body.style.background = "#f2f2f2";</script>
 <!--NOTE HEAD END-->
 
-<h1><div align="center"><a href="./0_3.html">&rarr;</a></div></h1>
+<h1><div align="center"><a href="./0_2.html">&larr;</a> <a href="./0_3.html">&rarr;</a></div></h1>
 
 
 <br/>
@@ -34,4 +34,4 @@
 <center>University tutor: Fatiha Zaïdi</center>
 
 
-<h1><div align="center"><a href="./0_2.html">&rarr;</a></div></h1>
+<h1><div align="center"><a href="./0_2.html">&larr;</a> <a href="./0_3.html">&rarr;</a></div></h1>
