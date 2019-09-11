@@ -239,10 +239,37 @@ In general, there is no reason to use `classOf[T].isInstance(x)` if you know rig
 
 
 # Python
+## multithreading 
+Mainly there is:
+- a concurrency lib: `threading` (only one interpreter)
+- a true parallel lib: `multiprocessing`
+
+### `threading` lib
+#### Critical section
+*ex: accessing or updating a shared state*
+
+```python
+import threading
+class CustomThread(threading.Thread):
+	# static class field
+	shared_lock = threading.Lock()
+    
+	def run(self):
+    	# do not critical things
+        
+        with self.shared_lock:
+        	# lock taken, do critical things
+        
+        # lock released, do not critical things
+```
+
 ## for-else, break, continue
 **break**: end loop
+
 **for ...: ... else:...** : else block is only executed if *break* not called
+
 **continue**: ignore rest of the loop's block and jump to next loop iteration
+
 ### repr, str
 In notebook cell
 ```python
@@ -274,3 +301,9 @@ str
 repr
 ```
 --> str is dominant over repr for prints, but cell always output last expression repr
+
+### Usefull imports for OOP
+```python
+from overrides import overrides  # decorator '@overrides' 
+from abc import ABC, abstractmethod  #  'class C(ABC)' is abstract and decorator '@abstractmethod' usable.
+```
