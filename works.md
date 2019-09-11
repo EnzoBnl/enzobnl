@@ -8,6 +8,6 @@
 
 |Year|Degree|Link|
 |:--:|:--:|:--:|
-|2019|**Master 2** (in apprenticeship): _“Computer Science for Data Science”_ |Master's Thesis: [_Cluster wide caching of Spark SQL's deterministic UDFs using Ignite-powered scalable memoization_](http://enzobnl.github.io/0_1.md)|
-|2018|**Master 1** (in apprenticeship): _“Computer Science for Data Science”_  |Report of apprenticeship activity: [_Outils Data : Comment améliorer leur accessibilité pour les populariser ?_](http://enzobnl.github.io/M1Report/memoire_m1_enzobnl.pdf) (fr)|
+|2019|**Master 2** (in apprenticeship): _“Computer Science for Data Science”_ |Master's Thesis: [_Cluster wide caching of Spark SQL's deterministic UDFs using Ignite-powered scalable memoization_](./0_1.html)|
+|2018|**Master 1** (in apprenticeship): _“Computer Science for Data Science”_  |Report of apprenticeship activity: [_Outils Data : Comment améliorer leur accessibilité pour les populariser ?_](./M1Report/memoire_m1_enzobnl.pdf) (fr)|
 |2016|**Bachelor** (L3): _“Fundamental Physics”_|Internship report: [_Modélisation numérique de la trajectoire de particules dans une cavité de la surface glacée d’un grain de poussière d’un Nuage Moléculaire_](https://github.com/EnzoBnl/Sticky/blob/master/doc/internship_report_2016_enzo_bonnal.pdf) (fr)|
