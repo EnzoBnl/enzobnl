@@ -51,6 +51,7 @@ Etape d'un test d'hypothèse:
 1. Faire une supposition initiale
 2. Collecter des données
 3. Collecter des preuves pour rejeter ou pas la supposition
+
 #### Côte Z (z-score)
 $z=\frac{x-\mu}{\sigma}$
 
@@ -59,6 +60,7 @@ Approximation du z-test si on ne connait qu'un échantillon de la population
 #### Test du $\chi^2$
 [CrashCourse channel](https://www.youtube.com/watch?v=7_cs1YlZoug)
 #### Kolmogorov-Smirnov
+#### Wilcoxon
 ### 3) Loss functions 
 
 Given:
