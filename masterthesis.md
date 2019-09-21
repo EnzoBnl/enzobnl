@@ -30,8 +30,6 @@
 <br/>
 <center>Apprenticeship company: Orange</center>
 <center>Tutor: Bruno Kauffmann</center>
-<br/>
-<center>University tutor: Fatiha Zaïdi</center>
 
 
 <h1><div align="center"><a href="./0_2.html">&larr;</a> <a href="./0_3.html">&rarr;</a></div></h1>
