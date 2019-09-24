@@ -85,6 +85,8 @@ ls -la fileOrDir
 // mount read-only
 sudo mount -o ro /dev/nvme0n1p5 /media/enzobnl/sdd
 sudo unmount /media/enzobnl/sdd
+// Fix broken installs
+sudo apt-get --fix-broken install
 ```
 ### CMD removes :
 ```bash
