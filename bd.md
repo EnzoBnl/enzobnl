@@ -5,21 +5,30 @@
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 <script>document.body.style.background = "#f2f2f2";</script>
 <!--NOTE HEAD END-->
+
 ## Spark
-### Architectures
-1 cluster Node = multiple worker nodes
+### Architecture insights
+1 cluster Node $\rightarraow$ is composed of several worker nodes
 
-1 worker node = multiple executors
+1 worker node $\rightarraow$ launches 1 or several executors
 
-1 executor = 
-- java application (=1 JVM)
-- multiple threads
+1 executor $\rightarraow$
+- is a java application (=1 JVM)
+- may start several threads
 
-1 job = multiple stages
+1 executor's thread $\rightarraow$
+- runs several tasks
 
-1 applications =
-- multiple spark jobs
-- 1 worker by node
+1 task $\rightarraow$ acts on 1 RDD's partition
+
+1 job $\rightarraow$ is composed of multiple stages
+
+1 stage $\rightarraow$ is a collection of tasks
+
+1 applications $\rightarraow$
+- runs several spark jobs
+- launch 1 dedicated worker by node
+
 
 ### Usefull confs:
 ```scala
