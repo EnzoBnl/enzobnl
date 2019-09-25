@@ -152,3 +152,8 @@ Impossible to make it work because referencies copied are living in driver and u
 |Node|Node|
 |Index Shards|DB Partitions|
 |Shards' Replicas|Partitions' Replicas|
+
+## GCP
+### BigQuery vs BigTable
+*BigQuery* excels for OLAP (OnLine Analytical Processing): scalable and efficient analytic querying on unchanging data (or just appending data).
+*BigTable* excels for OLTP (OnLine Transaction Processing): scalable and efficient read and write
