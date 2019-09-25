@@ -87,7 +87,9 @@ sudo mount -o ro /dev/nvme0n1p5 /media/enzobnl/sdd
 sudo unmount /media/enzobnl/sdd
 // Fix broken installs
 sudo apt-get --fix-broken install
-// You can make the appImage executable as follows:
+// update paths
+source ~/.bashrc
+// You can make a file executable as follows:
 chmod a+x exampleName.AppImage
 ```
 ### CMD removes :
