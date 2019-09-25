@@ -8,24 +8,24 @@
 
 ## Spark
 ### Architecture insights
-1 cluster Node $\rightarraow$ is composed of several worker nodes
+1 cluster Node $\rightarrow$ is composed of several worker nodes
 
-1 worker node $\rightarraow$ launches 1 or several executors
+1 worker node $\rightarrow$ launches 1 or several executors
 
-1 executor $\rightarraow$
+1 executor $\rightarrow$
 - is a java application (=1 JVM)
 - may start several threads
 
-1 executor's thread $\rightarraow$
+1 executor's thread $\rightarrow$
 - runs several tasks
 
-1 task $\rightarraow$ acts on 1 RDD's partition
+1 task $\rightarrow$ acts on 1 RDD's partition
 
-1 job $\rightarraow$ is composed of multiple stages
+1 job $\rightarrow$ is composed of multiple stages
 
-1 stage $\rightarraow$ is a collection of tasks
+1 stage $\rightarrow$ is a collection of tasks
 
-1 applications $\rightarraow$
+1 applications $\rightarrow$
 - runs several spark jobs
 - launch 1 dedicated worker by node
 
