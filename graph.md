@@ -174,6 +174,8 @@ Soit $x>1$
 
 $P_{deg-in}(i)\propto \frac{1}{i^x}$
 
+According to *Graph structure in the Web* by Andrei Broder et al. , x=2.1
+
 ### Taille du web
 - en 2008, 1.3 trilliard de pages dont 1 trilliard dans web invisible (= web non référencé = deep web)
 
