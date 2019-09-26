@@ -228,7 +228,6 @@ The difference is in which libraries are used. In order to use OS stuff (I/O for
 - *There's no difference in the binary code, opcodes are the same. The difference is in the syntax of the mnemonic form, i.e. mov %eax,%ebx (AT&T) and mov ebx,eax (Intel) have the same binary*
 
 ## Asymptotic analysis
-Often used for Complexities.
 
 $f(n)=O(g(n))\iff \exist n_o \in N, \exist c\in R, \forall n>n_o,\vert\frac{f(n)}{g(n)}\vert<=c$
 
