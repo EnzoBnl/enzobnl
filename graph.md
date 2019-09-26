@@ -161,7 +161,29 @@ En considérant $G=(V,E)$ avec $V=pages, E=hyperliens \space pondérés$, **le P
 
 **La solution analytique étant impossible à calculer** du fait de la taille du graphe et de son évolution (modifications de pages et hyperliens, connexion ou déconnexion de serveur web) un **algorithme d'approximation** est utilisé:
 
-C'est un algo itératif dont la terminaison est assurée par un nombre d'itérations fixé à l'avance ou par l'utilisation d'un seuil $\epsilon$ de variation qui garantie la terminaison grâce au théorème de **convergence des probabilités stationnaires d'une chaine de Markov**.
+C'est un algo itératif dont la terminaison est assurée par un nombre d'itérations fixé à l'avance ou par l'utilisation d'un seuil $\epsilon$ de variation qui garantie la terminaison.
+
+l'algorithme de Google ne converge pas exactement vers les probabilités stationnaires de la chaine de markov d'un surfeur aléatoire sur le web.
+
+```python
+    
+N = 1000
+d = 0.85
+def pr(edges):
+    prs = {e: 1 for e in edges.keys()}
+    edges_list = edges.keys()[:]
+    for _ in range(N - 1):
+        random.shuffle(edges_list)
+        for edge in edges_list:
+            prs[edge] = (1 - d) + d*(sum([prs[e]/len(edges[e]) for e in edges.keys() if edge in edges[e] and deg_out(e, edges) != 0]))
+    return {e: pr/len(prs) for e, pr in prs.items()}
+
+print(pr({
+    1: [2],
+    2: [1],
+    
+}))
+```
 
 Preuve   : ${(2)}$
 
