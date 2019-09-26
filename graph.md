@@ -167,7 +167,7 @@ l'algorithme de Google ne converge pas exactement vers les probabilités station
 
 ```python
     
-N = 1000
+N = ...
 d = 0.85
 def pr(edges):
     prs = {e: 1 for e in edges.keys()}
@@ -175,13 +175,14 @@ def pr(edges):
     for _ in range(N - 1):
         random.shuffle(edges_list)
         for edge in edges_list:
-            prs[edge] = (1 - d) + d*(sum([prs[e]/len(edges[e]) for e in edges.keys() if edge in edges[e] and deg_out(e, edges) != 0]))
-    return {e: pr/len(prs) for e, pr in prs.items()}
+            prs[edge] = (1 - d) + d*(sum([prs[e]/len(edges[e]) for e in edges.keys() if edge in edges[e] and len(edges[e]) != 0]))
+    return {e: pr for e, pr in prs.items()}
 
 print(pr({
-    1: [2],
-    2: [1],
-    
+    1: [2, 3],
+    2: [3],
+    3: [1],
+    4: [3]
 }))
 ```
 
