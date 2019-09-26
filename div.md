@@ -229,15 +229,14 @@ The difference is in which libraries are used. In order to use OS stuff (I/O for
 
 ## Asymptotic analysis
 
-$f(n)=O(g(n))\iff \exist n_o \in N, \exist c\in R, \forall n>n_o,\vert\frac{f(n)}{g(n)}\vert<=c$
+$f(n)=O(g(n))\iff \exist n_o \in \N, \exist c\in \R, \forall n>n_o,\vert\frac{f(n)}{g(n)}\vert<=c$
 
-$f(n)=o(g(n))\iff \forall \epsilon \in R, \exist n_o \in N,  \forall n>n_o,\vert\frac{f(n)}{g(n)}\vert<=\epsilon$
+$f(n)=o(g(n))\iff \forall \epsilon \in \R, \exist n_o \in \N,  \forall n>n_o,\vert\frac{f(n)}{g(n)}\vert<=\epsilon$
 
-$f(n)=\Omega(g(n))\iff \exist n_o \in N, \exist c\in R, \forall n>n_o,\vert\frac{f(n)}{g(n)}\vert>=c$
+$f(n)=\Omega(g(n))\iff \exist n_o \in \N, \exist c\in \R, \forall n>n_o,\vert\frac{f(n)}{g(n)}\vert>=c$
 
-$f(n)=\omega(g(n))\iff \forall \Delta \in R, \exist n_o \in N,  \forall n>n_o,\vert\frac{f(n)}{g(n)}\vert>=\Delta$
+$f(n)=\omega(g(n))\iff \forall \Delta \in \R, \exist n_o \in \N,  \forall n>n_o,\vert\frac{f(n)}{g(n)}\vert>=\Delta$
 
-$f(n)=\Theta(g(n))\iff \exist n_o \in N, \exist c\in R, \forall n>n_o,\frac{f(n)}{g(n)}=c$
+$f(n)=\Theta(g(n))\iff \exist n_o \in \N, \exist c\in \R, \forall n>n_o,\frac{f(n)}{g(n)}=c$
 
-$f(n)\sim g(n)\iff \forall \epsilon \in R, \exist n_o \in N,  \forall n>n_o,\frac{f(n)}{g(n)}-1<=\epsilon$
-
+$f(n)\sim g(n)\iff \forall \epsilon \in \R, \exist n_o \in \N,  \forall n>n_o,\frac{f(n)}{g(n)}-1<=\epsilon$
