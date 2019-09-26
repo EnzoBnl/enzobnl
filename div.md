@@ -226,3 +226,19 @@ Atlassian has some excellent [documentation on merging vs. rebasing](https://www
 The difference is in which libraries are used. In order to use OS stuff (I/O for example) you must link against the operating system's libraries. Unsurprisingly, Windows system libraries are not available on a Linux machine (unless you have Wine of course) and vice-versa.*
 
 - *There's no difference in the binary code, opcodes are the same. The difference is in the syntax of the mnemonic form, i.e. mov %eax,%ebx (AT&T) and mov ebx,eax (Intel) have the same binary*
+
+## Asymptotic analysis
+Often used for Complexities.
+
+$f(n)=O(g(n))\iff \exist n_o \in N, \exist c\in R, \forall n>n_o,\vert\frac{f(n)}{g(n)}\vert<=c$
+
+$f(n)=o(g(n))\iff \forall \epsilon \in R, \exist n_o \in N,  \forall n>n_o,\vert\frac{f(n)}{g(n)}\vert<=\epsilon$
+
+$f(n)=\Omega(g(n))\iff \exist n_o \in N, \exist c\in R, \forall n>n_o,\vert\frac{f(n)}{g(n)}\vert>=c$
+
+$f(n)=\omega(g(n))\iff \forall \Delta \in R, \exist n_o \in N,  \forall n>n_o,\vert\frac{f(n)}{g(n)}\vert>=\Delta$
+
+$f(n)=\Theta(g(n))\iff \exist n_o \in N, \exist c\in R, \forall n>n_o,\frac{f(n)}{g(n)}=c$
+
+$f(n)\sim g(n)\iff \forall \epsilon \in R, \exist n_o \in N,  \forall n>n_o,\frac{f(n)}{g(n)}-1<=\epsilon$
+
