@@ -172,11 +172,11 @@ d = 0.85
 def pr(edges):
     prs = {e: 1 for e in edges.keys()}
     edges_list = edges.keys()[:]
-    for _ in range(N - 1):
+    for _ in range(N):
         random.shuffle(edges_list)
         for edge in edges_list:
-            prs[edge] = (1 - d) + d*(sum([prs[e]/len(edges[e]) for e in edges.keys() if edge in edges[e] and len(edges[e]) != 0]))
-    return {e: pr for e, pr in prs.items()}
+            prs[edge] = (1 - d) + d*(sum([prs[e]/len(edges[e]) for e in edges.keys() if edge in edges[e]]))
+    return prs
 
 print(pr({
     1: [2, 3],
