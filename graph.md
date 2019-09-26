@@ -168,7 +168,7 @@ l'algorithme de Google ne converge pas exactement vers les probabilités station
 ```python
     
 N = ...
-d = 0.85
+d = 0.85  # damping factor 
 def pr(edges):
     prs = {e: 1 for e in edges.keys()}
     edges_list = edges.keys()[:]
