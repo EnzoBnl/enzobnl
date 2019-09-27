@@ -159,7 +159,7 @@ Sa probabilité stationnaire $\pi _ i =lim _ {n \rightarrow \inf} \frac{1 _ {X _
 ### PageRank
 En considérant $G=(V,E)$ avec $V=pages, E=hyperliens \space pondérés$, **le PageRank d'un élément de** $V$ **est la probabilité stationnaire correspondante de la chaine de Markov associée à** $G$, c'est-à-dire un vecteur de Perron-Frobenius de la matrice d'adjacence du graphe du Web.
 
-**La solution analytique étant impossible à calculer** du fait de la taille du graphe et de son évolution (modifications de pages et hyperliens, connexion ou déconnexion de serveur web) un **algorithme d'approximation** est utilisé:
+**La solution analytique étant impossible à calculer** du fait de la taille du graphe et de son évolution (modifications de pages et hyperliens, connexion ou déconnexion de serveur web) un [**algorithme d'approximation**](https://www.cs.princeton.edu/~chazelle/courses/BIB/pagerank.htm) est utilisé: 
 
 C'est un algo itératif dont la terminaison est assurée par un nombre d'itérations fixé à l'avance ou par l'utilisation d'un seuil $\epsilon$ de variation qui garantie la terminaison.
 
