@@ -107,6 +107,8 @@ This index don't holds any data directly.
 It help the `SparkSession` to remember not to clear the resulting `RDD[InternalRow]` of plans registered as "to cache" after their next execution.
 
 #### `DataFrame` vs other `Dataset[<not Row>]` steps of rows processing
+Short: DataFrame less secure but a bit faster.
+
 Let's compare processing steps of the `GeneratedIteratorForCodegenStage1` class that you can view by calling `.queryExecution.debug.codegen()` on a `DataFrame`
 
 The semantic is:
