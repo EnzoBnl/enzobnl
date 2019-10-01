@@ -95,6 +95,7 @@ When a dataset is cached using `def cache(): this.type = persist()` it is basica
    * @group basic
    * @since 1.6.0
    */
+  def cache(): this.type = persist()
 ```
 
 `sparkSession.sharedState.cacheManager.cacheQuery` stores plan and other information of the df to cache in an `IndexedSeq` of instances of:
