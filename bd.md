@@ -196,6 +196,70 @@ val ds = spark.read
       .filter((extendedUser: (Int, String, String, String)) => extendedUser._4.startsWith("a"))
 ```
 
+Steps:
+1. Get input `Iterator` during init: `public void init(int index, scala.collection.Iterator[] inputs)`. An `UnsafeRowWriter` is also instanciated with 4 fields:
+
+```scala
+filter_mutableStateArray_0[1] = new org.apache.spark.sql.catalyst.expressions.codegen.UnsafeRowWriter(4, 96)
+```
+
+2. `protected void processNext()` method is used to launch processing. It iterates through the input iterator, casting each element into an`InternalRow`.
+
+```scala
+InternalRow scan_row_0 = (InternalRow) scan_mutableStateArray_0[0].next();
+```
+
+3. It instanciates Java objects from the needed fields. There is no deserialization thanks to `UnsafeRow` in-place accessors implementation. Here it gets pseudo:
+
+```scala
+boolean scan_isNull_1 = scan_row_0.isNullAt(1);
+UTF8String scan_value_1 = scan_isNull_1 ? null : (scan_row_0.getUTF8String(1));
+```
+
+4. If the pseudo column is not null, it computes the new feature using substring
+
+```scala
+if (!(!scan_isNull_1)) continue;
+UTF8String filter_value_3 = scan_value_1.substringSQL(2, 2147483647);
+```
+
+5. Apply the filter with a direct call to `.startsWith` and if the result is negative, it skips the current record. `references` is an `Object[]` that holds udfs, and constants parameterizing the processing. `references[2]` holds the string `"a"`.
+
+```scala
+// references[2] holds the string "a"
+boolean filter_value_2 = filter_value_3.startsWith(((UTF8String) references[2]));
+if (!filter_value_2) continue;
+```
+
+6. Even if the new feature has already been computed for filtering purpose, it is computed another time for the new column itself. The other needed fields for output (id and name) are scanned.
+
+```scala
+boolean scan_isNull_0 = scan_row_0.isNullAt(0);
+int scan_value_0 = scan_isNull_0 ? -1 : (scan_row_0.getInt(0));
+
+boolean scan_isNull_2 = scan_row_0.isNullAt(2);
+UTF8String scan_value_2 = scan_isNull_2 ? null : (scan_row_0.getUTF8String(2));
+
+UTF8String project_value_3 = null;
+project_value_3 = scan_value_1.substringSQL(2, 2147483647);
+```
+
+7. The final fields are written with the pattern:
+
+```scala
+if (false) {
+  filter_mutableStateArray_0[1].setNullAt(3);
+} else {
+  filter_mutableStateArray_0[1].write(3, project_value_3);
+}
+```
+
+8. The `UnsafeRow` is builded and appended to a `LinkedList<InternalRow>` (attribute defined in the subclass`BufferedRowIterator`)
+
+```scala
+append((filter_mutableStateArray_0[1].getRow()));
+```
+
 #### `df.rdd` vs `df.queryExecution.toRdd()`
 [Jacek Laskowski's post on SO](https://stackoverflow.com/questions/44708629/is-dataset-rdd-an-action-or-transformation)
 
