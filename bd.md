@@ -300,7 +300,7 @@ append((project_mutableStateArray_0[7].getRow()));
 [Jacek Laskowski's post on SO](https://stackoverflow.com/questions/44708629/is-dataset-rdd-an-action-or-transformation)
 
 ##### `.rdd`
-It deserialize `InternalRow`s and put back data on-heap 
+It deserializes `InternalRow`s and put back data on-heap. It's still lazy: the need of deserialization is recorded but not triggered.
 It's a transformation that returns `RDD[T]`.
 If it's called on a `DataFrame = Dataset[Row]`, it returns `RDD[Row]`.
 ```scala
