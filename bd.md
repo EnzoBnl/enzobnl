@@ -133,6 +133,7 @@ SELECT __func__ OVER (PARTITION BY partitionCol ORDER BY orderCol __frame_type__
 ```
 
 **\_\_func\_\_**: Raking/Analytic/Aggregation function
+
 **\_\_frame_type\_\_**:  **ROW** (*start* and *end* are then index and offsets: `ROWS BETWEEN UNBOUNDED PRECEDING AND 10 FOLLOWING`,  the frame contains every records from the begining of the partition to the ten next records after current one) or **RANGE** (*start* and *end* are then values in *orderCol* unit : `RANGE BETWEEN 13000 PRECEDING AND CURRENT ROW FOLLOWING`, given that *ORDER BY* has been performed on column **price** and that *current_p* is the price of the current record, the frame contains all the records that have a value of **price** *p* that is between *current_p -13000* and *current_p*)
 
 ### Closures and spark:
