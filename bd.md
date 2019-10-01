@@ -50,23 +50,67 @@ StructField("indices", ArrayType(IntegerType, containsNull = false), nullable = 
 StructField("values", ArrayType(DoubleType, containsNull = false), nullable = true)))  
 }
 ```
-### Dataset 
-- DataFrame is now (2.4.0) alias for Dataset[Row].
-- Spark SQL first realease: Spark 1.0.0 (May 30, 2014)
+### DataFrame
+
+- Spark SQL first realease: Spark 1.0.0 (May 30, 2014) (see [Spark SQL's paper](https://dl.acm.org/citation.cfm?id=2742797) by Michael Armbrust)
  
-#### Format
+#### Memory format during processing
 https://spoddutur.github.io/spark-notes/deep_dive_into_storage_formats.html
 
-- 1.0.0 to 1.3.X: it was RDD (see spark [fundamental paper](http://people.csail.mit.edu/matei/papers/2012/nsdi_spark.pdf) by Matei Zaharia)  of Java Objects
--  Since 1.4.0 (June 11, 2015) it is Datasets (see [Spark SQL's paper](https://dl.acm.org/citation.cfm?id=2742797) by Michael Armbrust) : RDD of `InternalRow`s that are **Binary Row-Based Format** known as **Tungsten Row Format** stored **OFF-HEAP**. **In place elements access** avoid deserialization ! So *faster and lighter*. [UnsafeRow](https://jaceklaskowski.gitbooks.io/mastering-spark-sql/spark-sql-UnsafeRow.html) is the basic implementation of [InternalRow](https://jaceklaskowski.gitbooks.io/mastering-spark-sql/spark-sql-InternalRow.html) (see jaceklaskowski links for each)
-in spark.sql.execution.QueryExecution:
+- 1.0.0: There was no "DataFrame" but only `SchemaRDD`. It was a `RDD` of Java Objects on-heap (see spark [fundamental paper](http://people.csail.mit.edu/matei/papers/2012/nsdi_spark.pdf) by Matei Zaharia).
+- 1.3.0: `DataFrame` is born and is still and RDD of on-heap objects. `SchemaRDD` became an alias for smooth deprecation purpose.
+```scala
+@deprecated("use DataFrame", "1.3.0")
+  type SchemaRDD = DataFrame
+```
+-  Since 1.4.0 (June 11, 2015) it is `RDD` of `InternalRow`s that are **Binary Row-Based Format** known as **Tungsten Row Format**. `InternalRow`s:
+  - allows **in-place elements access** that avoid serialization/deserialization --> just a little little bit slower than `RDD`s for element access but very very faster when it comes to shuffles.
+  - store their data **off-heap** --> divide by 4 memory footprint compared to RDDs of Java objects.
+  - [UnsafeRow](https://jaceklaskowski.gitbooks.io/mastering-spark-sql/spark-sql-UnsafeRow.html) is the basic implementation of [InternalRow](https://jaceklaskowski.gitbooks.io/mastering-spark-sql/spark-sql-InternalRow.html) (see descriptions of Jacek Laskowski's *Mastering Spark SQL* links for each)
+
+- 1.6.0: `Dataset` is created as a separated class. There is conversions between `Dataset`s and `DataFrame`s. 
+- Since 2.0.0, `DataFrame` is merged with `Dataset` and remains just an alias `type DataFrame = Dataset[Row]`.
+
+#### Memory contoguousity (TODO validate)
+There is only a contiguousity of the `UnsafeRow`s' memory because an `RDD[UnsafeRow]` is a collection of `UnsafeRow`s' referencies that lives somewhere on-heap. This causes many CPU's caches defaults, each new record to process causing one new default.
+
+#### Memory format when cached
+When a dataset is cached using `def cache(): this.type = persist()` it is basically `persit`ed with default storageLevel which is `MEMORY_AND_DISK`:
 
 ```scala
-/** Internal version of the RDD. Avoids copies and has no schema */  
-lazy val toRdd: RDD[InternalRow] = executedPlan.execute()
+/**
+   * Persist this Dataset with the default storage level (`MEMORY_AND_DISK`).
+   *
+   * @group basic
+   * @since 1.6.0
+   */
+  def persist(): this.type = {
+    sparkSession.sharedState.cacheManager.cacheQuery(this)
+    this
+  }
+
+  /**
+   * Persist this Dataset with the default storage level (`MEMORY_AND_DISK`).
+   *
+   * @group basic
+   * @since 1.6.0
+   */
 ```
-#### `df.rdd`/`df.queryExecution.toRdd()`
-[Jacek post](https://stackoverflow.com/questions/44708629/is-dataset-rdd-an-action-or-transformation)
+
+`sparkSession.sharedState.cacheManager.cacheQuery` stores plan and other information of the df to cache in an `IndexedSeq` of instances of:
+```scala
+/** Holds a cached logical plan and its data */
+case class CachedData(plan: LogicalPlan, cachedRepresentation: InMemoryRelation)
+```
+
+This index don't holds any data directly.
+It help the `SparkSession` to remember not to clear the resulting `RDD[InternalRow]` of plans registered as "to cache" after their next execution.
+
+#### `DataFrame` vs other `Dataset[<not Row>]` steps of rows processing
+
+#### `df.rdd` vs `df.queryExecution.toRdd()`
+[Jacek Laskowski's post on SO](https://stackoverflow.com/questions/44708629/is-dataset-rdd-an-action-or-transformation)
+
 ##### `.rdd`
 It deserialize `InternalRow`s and put back data on-heap 
 It's a transformation that returns `RDD[T]`.
@@ -90,6 +134,7 @@ df.rdd
 .map((row: Row) => Row.fromSeq(Seq(row.getAs[Long]("i")+10, row.getAs[Long]("i")-10)))  
 .collect()
 ```
+
 ##### `.queryExecution.toRdd()`
 It is used by `.rdd`.
 If you stuck to this step, you keep your rows `InternalRow`s off-heap.
@@ -108,7 +153,7 @@ df.queryExecution.toRdd()
 ```
 - *Seems to be faster than dataframe for simple map ???*
 
-#### in memory contoguousity
+
 
 #### OOP design
 It's an unclear design
@@ -119,13 +164,6 @@ val df2 = df1.select(...).withColumn(...).where(...)
 The ready to be built *SparkPlan* will never be accessed by user and it will be build when it's execution is ran !
 
 $^{(1)}$: This violation can be avoided for single Builders by using generics/type parameterized builder class, each methods of the class returning parameterized type instead of simply base class with `return this`.
-
-#### Caching
-Caching can be partial ! 
-Here a subpart of the plan of df will be cached
-```python
-df = spark.createDataFrame([(1,2), (1,2)]).toDF("a", "b").cache().selectExpr("f(a)").show()
-```
 
 ### SQL window function
 ``` SQL
