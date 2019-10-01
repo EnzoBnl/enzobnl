@@ -63,11 +63,11 @@ https://spoddutur.github.io/spark-notes/deep_dive_into_storage_formats.html
 @deprecated("use DataFrame", "1.3.0")
   type SchemaRDD = DataFrame
 ```
--  Since 1.4.0 (June 11, 2015) it is `RDD` of `InternalRow`s that are **Binary Row-Based Format** known as **Tungsten Row Format**. `InternalRow`s:
+- Since 1.4.0 (June 11, 2015) it is `RDD` of `InternalRow`s that are **Binary Row-Based Format** known as **Tungsten Row Format**. `InternalRow`s:
   - allows **in-place elements access** that avoid serialization/deserialization --> just a little little bit slower than `RDD`s for element access but very very faster when it comes to shuffles.
   - store their data **off-heap** --> divide by 4 memory footprint compared to RDDs of Java objects.
   - [UnsafeRow](https://jaceklaskowski.gitbooks.io/mastering-spark-sql/spark-sql-UnsafeRow.html) is the basic implementation of [InternalRow](https://jaceklaskowski.gitbooks.io/mastering-spark-sql/spark-sql-InternalRow.html) (see descriptions of Jacek Laskowski's *Mastering Spark SQL* links for each)
-
+  
 - 1.6.0: `Dataset` is created as a separated class. There is conversions between `Dataset`s and `DataFrame`s. 
 - Since 2.0.0, `DataFrame` is merged with `Dataset` and remains just an alias `type DataFrame = Dataset[Row]`.
 
@@ -107,6 +107,94 @@ This index don't holds any data directly.
 It help the `SparkSession` to remember not to clear the resulting `RDD[InternalRow]` of plans registered as "to cache" after their next execution.
 
 #### `DataFrame` vs other `Dataset[<not Row>]` steps of rows processing
+Let's compare processing steps of the `GeneratedIteratorForCodegenStage1` class that you can view by calling `.queryExecution.debug.codegen()` on a `DataFrame`
+
+The semantic is:
+1. **load a csv** with three column: an Integer id, a String pseudo and a String name.
+2. create a new feature containing a substring of the pseudo
+3. apply a filter on the new feature
+
+##### DataFrame
+```scala
+val df = spark.read
+      .format("csv")
+      .option("header", "false")
+      .option("delimiter", ",")
+      .schema(StructType(Seq(
+        StructField("id", IntegerType, true),
+        StructField("pseudo", StringType, true),
+        StructField("name", StringType, true))))
+      .load("/bla/bla/bla.csv")
+      .toDF("id", "pseudo", "name")
+      .selectExpr("*", "substr(pseudo, 2) AS sub")
+      .filter("sub LIKE 'a%' ")
+```
+
+Steps:
+1. Get input `Iterator` during init: `public void init(int index, scala.collection.Iterator[] inputs)`. An `UnsafeRowWriter` is also instanciated with 4 fields:
+```scala
+filter_mutableStateArray_0[1] = new org.apache.spark.sql.catalyst.expressions.codegen.UnsafeRowWriter(4, 96)
+```
+2. `protected void processNext()` method is used to launch processing. It iterates through the input iterator, casting each element into an`InternalRow`.
+```scala
+InternalRow scan_row_0 = (InternalRow) scan_mutableStateArray_0[0].next();
+```
+3. It instanciates Java objects from the needed fields. There is no deserialization thanks to `UnsafeRow` in-place accessors implementation. Here it gets pseudo:
+```scala
+boolean scan_isNull_1 = scan_row_0.isNullAt(1);
+UTF8String scan_value_1 = scan_isNull_1 ? null : (scan_row_0.getUTF8String(1));
+```
+4. If the pseudo column is not null, it computes the new feature using substring
+```scala
+if (!(!scan_isNull_1)) continue;
+UTF8String filter_value_3 = scan_value_1.substringSQL(2, 2147483647);
+```
+5. Apply the filter with a direct call to `.startsWith` and if the result is negative, it skips the current record. `references` is an `Object[]` that holds udfs, and constants parameterizing the processing. `references[2]` holds the string `"a"`.
+```scala
+// references[2] holds the string "a"
+boolean filter_value_2 = filter_value_3.startsWith(((UTF8String) references[2]));
+if (!filter_value_2) continue;
+```
+6. Even if the new feature has already been computed for filtering purpose, it is computed another time for the new column itself. The other needed fields for output (id and name) are scanned.
+```scala
+boolean scan_isNull_0 = scan_row_0.isNullAt(0);
+int scan_value_0 = scan_isNull_0 ? -1 : (scan_row_0.getInt(0));
+
+boolean scan_isNull_2 = scan_row_0.isNullAt(2);
+UTF8String scan_value_2 = scan_isNull_2 ? null : (scan_row_0.getUTF8String(2));
+
+UTF8String project_value_3 = null;
+project_value_3 = scan_value_1.substringSQL(2, 2147483647);
+```
+7. The final fields are written with the pattern:
+```scala
+if (false) {
+  filter_mutableStateArray_0[1].setNullAt(3);
+} else {
+  filter_mutableStateArray_0[1].write(3, project_value_3);
+}
+```
+8. The `UnsafeRow` is builded and appended to a `LinkedList<InternalRow>` (attribute defined in the subclass`BufferedRowIterator`)
+```scala
+append((filter_mutableStateArray_0[1].getRow()));
+```
+
+##### Dataset
+```scala
+val ds = spark.read
+      .format("csv")
+      .option("header", "false")
+      .option("delimiter", ",")
+      .schema(StructType(Seq(
+        StructField("id", IntegerType, true),
+        StructField("pseudo", StringType, true),
+        StructField("name", StringType, true))))
+      .load("/home/enzo/Data/sofia-air-quality-dataset/2019-05_bme280sof.csv")
+      .toDF("id", "pseudo", "name")
+      .as[User]
+      .map((user: User) => if(user.name != null)(user.id, user.name, user.pseudo, user.name.substring(1)) else (user.id, user.name, user.pseudo, ""))
+      .filter((extendedUser: (Int, String, String, String)) => extendedUser._4.startsWith("a"))
+```
 
 #### `df.rdd` vs `df.queryExecution.toRdd()`
 [Jacek Laskowski's post on SO](https://stackoverflow.com/questions/44708629/is-dataset-rdd-an-action-or-transformation)
