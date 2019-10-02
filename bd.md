@@ -32,7 +32,7 @@
 
 ### Usefull confs:
 ```scala
-spark.conf.set("spark.sql.shuffle.partitions", "5") // default = 200
+SparkSession.builder.config("spark.default.parallelism", "12") // default = 200
 ```
 ### Vector Type
 `org.apache.spark.ml.linalg.Vector`
