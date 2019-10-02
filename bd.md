@@ -57,7 +57,7 @@ StructField("values", ArrayType(DoubleType, containsNull = false), nullable = tr
 #### Memory format during processing
 https://spoddutur.github.io/spark-notes/deep_dive_into_storage_formats.html
 
-- 1.0.0: There was no "DataFrame" but only `SchemaRDD`. It was a `RDD` of Java Objects on-heap (see spark [fundamental paper](http://people.csail.mit.edu/matei/papers/2012/nsdi_spark.pdf) by Matei Zaharia).
+- 1.0.0: There was no "DataFrame" but only `SchemaRDD`. It was a `RDD` of Java Objects on-heap (see spark [Spark's RDDs paper](http://people.csail.mit.edu/matei/papers/2012/nsdi_spark.pdf) by Matei Zaharia, 2011).
 - 1.3.0: `DataFrame` is born and is still and RDD of on-heap objects. `SchemaRDD` became an alias for smooth deprecation purpose.
 ```scala
 @deprecated("use DataFrame", "1.3.0")
@@ -384,6 +384,3 @@ Impossible to make it work because referencies copied are living in driver and u
 ### BigQuery vs BigTable
 *BigQuery* excels for OLAP (OnLine Analytical Processing): scalable and efficient analytic querying on unchanging data (or just appending data).
 *BigTable* excels for OLTP (OnLine Transaction Processing): scalable and efficient read and write
-
-
-
