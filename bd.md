@@ -133,6 +133,8 @@ val df = spark.read
       .filter("sub LIKE 'a%' ")
 ```
 
+[SEE SQL DAG](https://raw.githubusercontent.com/EnzoBnl/enzobnl.github.io/master/figs/DFSQLdiag.png)
+
 Steps (~80 lines of generated code):
 - Get input `Iterator` during init: `public void init(int index, scala.collection.Iterator[] inputs)`. An `UnsafeRowWriter` is also instanciated with 4 fields:
 
@@ -213,6 +215,9 @@ val ds = spark.read
       .map((user: User) => if(user.name != null)(user.id, user.name, user.pseudo, user.name.substring(1)) else (user.id, user.name, user.pseudo, ""))
       .filter((extendedUser: (Int, String, String, String)) => extendedUser._4.startsWith("a"))
 ```
+
+[SEE SQL DAG](https://raw.githubusercontent.com/EnzoBnl/enzobnl.github.io/master/figs/DSSQLdiag.png)
+
 Steps (~300 lines of generated code):
 - Get input `Iterator` during init: `public void init(int index, scala.collection.Iterator[] inputs)`. An `UnsafeRowWriter` is also instanciated with 4 fields:
 
