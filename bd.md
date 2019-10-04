@@ -108,6 +108,16 @@ This index don't holds any data directly.
 It help the `SparkSession` to remember not to clear the resulting `RDD[InternalRow]` of plans registered as "to cache" after their next execution.
 
 `unpersist()` is not lazy, it directly remove the dataframe cached data.
+
+Caching operations are not purely functional:
+```scala
+df2 = df.cache()
+```
+=
+```scala
+df.cache()
+df2 = df
+```
 #### `DataFrame` vs other `Dataset[<not Row>]` steps of rows processing
 Short: DataFrame less secure but a bit faster.
 
