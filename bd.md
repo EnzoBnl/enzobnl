@@ -7,27 +7,34 @@
 <!--NOTE HEAD END-->
 
 ## Spark
-### Architecture insights
-1 cluster Node $\rightarrow$ is composed of several worker nodes
+### Architecture vocabulary
 
-1 worker node $\rightarrow$ launches 1 or several executors
+1 **cluster node** $\rightarrow$ is composed of several worker nodes
 
-1 executor $\rightarrow$
+1 **worker node** $\rightarrow$ 
+- launches 1 or several executors
+- is dedicated exclusively to its parent application
+
+1 **executor** $\rightarrow$
 - is a java application (=1 JVM)
 - may start several threads
 
-1 executor's thread $\rightarrow$
+1 **executor's thread** $\rightarrow$
 - runs several tasks
 
-1 task $\rightarrow$ acts on 1 RDD's partition
-
-1 job $\rightarrow$ is composed of multiple stages
-
-1 stage $\rightarrow$ is a collection of tasks
-
-1 applications $\rightarrow$
+1 **applications** $\rightarrow$
 - runs several spark jobs
-- launch 1 dedicated worker by node
+- launch 1 worker by node by cluster node
+
+1 **job** $\rightarrow$ is a DAG of stages
+
+1 **stage** $\rightarrow$ is a DAG of steps
+
+1 **step** $\rightarrow$ runs as a collection of parallel tasks
+
+1 **task** $\rightarrow$ acts on 1 RDD's partition
+
+*DAG = Directed Acyclic Graph. They are used by spark to represent Jobs' stages or Stages' steps*
 
 
 ### Usefull confs:
