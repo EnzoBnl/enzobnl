@@ -236,6 +236,24 @@ That is because primitive value types are boxed when upcasted to `Any` (or `AnyV
 
 In general, there is no reason to use `classOf[T].isInstance(x)` if you know right then what `T` is. If you have a generic type, and you want to "pass around" a way to test whether a value is of that class (would pass the `isInstanceOf` test), you can use a `scala.reflect.ClassTag` instead. `ClassTag`s are a bit like `Class`es, except they know about Scala boxing and a few other things. (I can elaborate on `ClassTag`s if required, but you should find info about them elsewhere.)
 
+## Self-Type
+```scala
+case class Word(letters: String)
+
+trait Splittable {
+  this: Word =>  
+  // all the `Word` trait or class attributes and methods are accessible 
+  // through `this` even if `Splittable` does not iherit from `Word`
+  def split(by: String): Seq[String] = this.letters.split(by).toSeq
+}
+
+val word = new Word("Hello World!") with Splittable
+
+println(word.split(" "))  // prints "ArraySeq(Hello, World!)"
+```
+Here the trait `Splittable` **is forced to be mixed with** `Word`.
+`Splittable`'s purpose is reduced to the extension of a `Word`'s behavior.
+Allows to implement a nice *Decorator Pattern* in a functional style.
 
 
 # Python
