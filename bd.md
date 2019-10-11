@@ -28,7 +28,7 @@
 
 1 **job** $\rightarrow$ is a DAG of stages
 
-1 **stage** $\rightarrow$ is a DAG of steps
+1 **stage** $\rightarrow$ is a DAG of steps ending with a shuffle/exchange
 
 1 **step** $\rightarrow$ runs as a collection of parallel tasks
 
