@@ -91,6 +91,8 @@ sudo apt-get --fix-broken install
 source ~/.bashrc
 // You can make a file executable as follows:
 chmod a+x exampleName.AppImage
+// get historic back after reset and clear
+[shortcut] Ctrl + L
 ```
 ### CMD removes :
 ```bash
