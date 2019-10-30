@@ -404,6 +404,9 @@ Impossible to make it work because referencies copied are living in driver and u
 |Shards' Replicas|Partitions' Replicas|
 
 ## GCP
+- install gcloud SDK
+`curl https://dl.google.com/dl/cloudsdk/release/install_google_cloud_sdk.bash | bash`
+
 ### BigQuery vs BigTable
 *BigQuery* excels for OLAP (OnLine Analytical Processing): scalable and efficient analytic querying on unchanging data (or just appending data).
 *BigTable* excels for OLTP (OnLine Transaction Processing): scalable and efficient read and write
