@@ -395,9 +395,12 @@ Impossible to make it work because referencies copied are living in driver and u
 <project>
     [...]
     <repositories>  
-    <repository> <id>spark-repo</id>  
- <url>http://dl.bintray.com/spark-packages/maven/</url>  
- </repository> </repositories>  
+        <repository>
+            <id>spark-packages</id>
+            <url>http://dl.bintray.com/spark-packages/maven/</url>  
+        </repository>
+    </repositories>  
+    [...]
 </project>
 ```
 
@@ -424,5 +427,5 @@ Impossible to make it work because referencies copied are living in driver and u
 *BigQuery* excels for OLAP (OnLine Analytical Processing): scalable and efficient analytic querying on unchanging data (or just appending data).
 *BigTable* excels for OLTP (OnLine Transaction Processing): scalable and efficient read and write
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ0MDMxOTg1NF19
+eyJoaXN0b3J5IjpbLTE3NjI1MzA0NTVdfQ==
 -->
