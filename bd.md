@@ -388,6 +388,19 @@ SELECT __func__ OVER (PARTITION BY partitionCol ORDER BY orderCol __frame_type__
 ### Closures and spark:
 Impossible to make it work because referencies copied are living in driver and unreachable by executors in cluster mode (can work on localmode). Use [accumulators](https://spark.apache.org/docs/latest/rdd-programming-guide.html#accumulators) for this use cases to be rubust to deployment.
 
+### Include a dependency from spark-package in maven's pom.xml
+
+- add the repository
+```xml
+<project>
+    [...]
+    <repositories>  
+    <repository> <id>spark-repo</id>  
+ <url>http://dl.bintray.com/spark-packages/maven/</url>  
+ </repository> </repositories>  
+</project>
+```
+
 ## ElasticSearch
 ### Parallels with distributed relationnal databases
 1h # Elasticsearch Tutorial & Getting Started (course preview) https://www.youtube.com/watch?v=ksTTlXNLick
@@ -410,3 +423,6 @@ Impossible to make it work because referencies copied are living in driver and u
 ### BigQuery vs BigTable
 *BigQuery* excels for OLAP (OnLine Analytical Processing): scalable and efficient analytic querying on unchanging data (or just appending data).
 *BigTable* excels for OLTP (OnLine Transaction Processing): scalable and efficient read and write
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTQ0MDMxOTg1NF19
+-->
