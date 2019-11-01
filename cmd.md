@@ -74,8 +74,8 @@ STRING="Hello World"
 echo $STRING
 // make file executable
 $ chmod +x hello_world.sh 
-// chmod
-chmod u=rwx,g=rx,o=r myfile
+// chmod recursively on folder
+chmod u=rwx,g=rx,o=r /.../folder/ --recursive
 // tar extract tgz
 tar -xvzf /path/to/yourfile.tgz
 // env var tmp
@@ -218,5 +218,5 @@ c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex 
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMzA3NzAzOTddfQ==
+eyJoaXN0b3J5IjpbNTk3MDY1MDcyLC0xMDMwNzcwMzk3XX0=
 -->
