@@ -74,6 +74,8 @@ STRING="Hello World"
 echo $STRING
 // make file executable
 $ chmod +x hello_world.sh 
+// chmod
+chmod u=rwx,g=rx,o=r myfile
 // tar extract tgz
 tar -xvzf /path/to/yourfile.tgz
 // env var tmp
@@ -215,3 +217,6 @@ git stash apply
 c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex -V fontsize=12pt -V documentclass:book -V papersize:a4paper  -V classoption:openright --chapters --bibliography=papers.bib --csl="csl/nature.csl" title.md summary.md zusammenfassung.md acknowledgements.md toc.md "introduction/intro1.md" "introduction/intro2.md" chapter2_paper.md chapter3_extra_results.md chapter4_generaldiscussion.md appendix.md references.md -o "phdthesis.pdf"
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTEwMzA3NzAzOTddfQ==
+-->
