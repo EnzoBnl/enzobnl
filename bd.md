@@ -373,9 +373,9 @@ df.queryExecution.toRdd()
 
 
 #### OOP design
-`Dataset` can be viewed as a **functional builder** for a `LogicalPlan`, implemented as a fluent API friendly to SQL users.
+`Dataset` can be viewed as a **functional builder** for a `LogicalPlan`, implemented as a **fluent API** friendly to SQL users.
 ```scala
-val df2 = df1.select(...).withColumn(...).where(...)
+val df2 = df1.join(...).select(...).where(...).orderBy(...).show()
 ```
 
 `Dataset` class makes use of **Delegation Pattern** in many places, to delegate work to its underlying `RDD`, e.g. `Dataset.reduce` :
@@ -392,7 +392,9 @@ SELECT __func__ OVER (PARTITION BY partitionCol ORDER BY orderCol __frame_type__
 
 **\_\_func\_\_**: Raking/Analytic/Aggregation function
 
-**\_\_frame_type\_\_**:  **ROW** (*start* and *end* are then index and offsets: `ROWS BETWEEN UNBOUNDED PRECEDING AND 10 FOLLOWING`,  the frame contains every records from the begining of the partition to the ten next records after current one) or **RANGE** (*start* and *end* are then values in *orderCol* unit : `RANGE BETWEEN 13000 PRECEDING AND CURRENT ROW FOLLOWING`, given that *ORDER BY* has been performed on column **price** and that *current_p* is the price of the current record, the frame contains all the records that have a value of **price** *p* that is between *current_p -13000* and *current_p*)
+**\_\_frame_type\_\_**:  
+- **ROW** (*start* and *end* are then index and offsets: `ROWS BETWEEN UNBOUNDED PRECEDING AND 10 FOLLOWING`,  the frame contains every records from the begining of the partition to the ten next records after current one) 
+- **RANGE** (*start* and *end* are then values in *orderCol* unit : `RANGE BETWEEN 13000 PRECEDING AND CURRENT ROW FOLLOWING`, given that *ORDER BY* has been performed on column **price** and that *current_p* is the price of the current record, the frame contains all the records that have a value of **price** *p* that is between *current_p -13000* and *current_p*)
 
 ### Closures and spark:
 Impossible to make it work because referencies copied are living in driver and unreachable by executors in cluster mode (can work on localmode). Use [accumulators](https://spark.apache.org/docs/latest/rdd-programming-guide.html#accumulators) for this use cases to be rubust to deployment.
@@ -436,6 +438,6 @@ Impossible to make it work because referencies copied are living in driver and u
 *BigQuery* excels for OLAP (OnLine Analytical Processing): scalable and efficient analytic querying on unchanging data (or just appending data).
 *BigTable* excels for OLTP (OnLine Transaction Processing): scalable and efficient read and write
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NTc1ODEzODksLTc1NTExMzM1MSwtMT
-c2MjUzMDQ1NV19
+eyJoaXN0b3J5IjpbNDUyMjM5Nzk0LC03NTUxMTMzNTEsLTE3Nj
+I1MzA0NTVdfQ==
 -->
