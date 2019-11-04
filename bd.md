@@ -80,11 +80,6 @@ https://spoddutur.github.io/spark-notes/deep_dive_into_storage_formats.html
 - 1.6.0: `Dataset` is created as a separated class. There is conversions between `Dataset`s and `DataFrame`s. 
 - Since 2.0.0, `DataFrame` is merged with `Dataset` and remains just an alias `type DataFrame = Dataset[Row]`.
 
-#### is a DataFrame sorted ?
-use `df.queryExecution.sparkPlan.outputOrdering` that returns a sequence of `org.apache.spark.sql.catalyst.expressions.SortOrder`s.
-```scala
-val dfIsSorted = !df.sort().queryExecution.sparkPlan.outputOrdering.isEmpty
-```
 
 #### contoguousity (TODO validate)
 There is only a contiguousity of the `UnsafeRow`s' memory because an `RDD[UnsafeRow]` is a collection of `UnsafeRow`s' referencies that lives somewhere on-heap. This causes many CPU's caches defaults, each new record to process causing one new default.
@@ -141,7 +136,12 @@ is equivalent to
 df.cache()
 df2 = df
 ```
-#### `DataFrame` vs other `Dataset[<not Row>]` steps of rows processing
+#### is a DataFrame sorted ?
+use `df.queryExecution.sparkPlan.outputOrdering` that returns a sequence of `org.apache.spark.sql.catalyst.expressions.SortOrder`s.
+```scala
+val dfIsSorted = !df.sort().queryExecution.sparkPlan.outputOrdering.isEmpty
+```
+### `DataFrame` vs other `Dataset[<not Row>]` steps of rows processing
 Short: DataFrame less secure but a bit faster.
 
 Let's compare processing steps of the `GeneratedIteratorForCodegenStage1` class that you can view by calling `.queryExecution.debug.codegen()` on a `DataFrame`
@@ -151,7 +151,7 @@ The semantic is:
 2. create a new feature containing a substring of the pseudo
 3. apply a filter on the new feature
 
-##### DataFrame
+#### DataFrame ...
 ```scala
 val df = spark.read
       .format("csv")
@@ -233,7 +233,7 @@ if (false) {
 append((filter_mutableStateArray_0[1].getRow()));
 ```
 
-##### Dataset
+#### ... vs Dataset
 ```scala
 val ds = spark.read
       .format("csv")
@@ -335,7 +335,7 @@ append((project_mutableStateArray_0[7].getRow()));
 
 [Full code available here](https://gist.github.com/EnzoBnl/37e07e9cf7bce440734c7d33304257f0)
 
-#### Conversion to RDD: `df.rdd` vs `df.queryExecution.toRdd()`
+### Conversion to RDD: `df.rdd` vs `df.queryExecution.toRdd()`
 [Jacek Laskowski's post on SO](https://stackoverflow.com/questions/44708629/is-dataset-rdd-an-action-or-transformation)
 
 1. `.rdd`
@@ -380,7 +380,7 @@ df.queryExecution.toRdd
 .map((row: InternalRow) => InternalRow.fromSeq(Seq(row.getLong(0)+10, row.getLong(0)-10)))  
 ```
 
-#### OOP design
+### OOP design
 `Dataset` can be viewed as a **functional builder** for a `LogicalPlan`, implemented as a **fluent API** friendly to SQL users.
 ```scala
 val df2 = df1.join(...).select(...).where(...).orderBy(...).show()
@@ -393,7 +393,8 @@ def reduce(func: (T, T) => T): T = withNewRDDExecutionId {
 }
 ```
 
-## SQL window function syntax (not Spa
+## SQL window function syntax 
+(not Spark specific)
 ``` SQL
 SELECT 
   some_col,
@@ -466,7 +467,7 @@ Use [accumulators](https://spark.apache.org/docs/latest/rdd-programming-guide.ht
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg0NDU0MywtNjE0OTQ2MjUsMTAyMjU4MT
-YwNCwxODM0NTAwNzEzLDE0MTY3NDAyMTEsMTExOTI4NjcwNiwt
-NzU1MTEzMzUxLC0xNzYyNTMwNDU1XX0=
+eyJoaXN0b3J5IjpbMTc1MjQ4NjA0NywtNjE0OTQ2MjUsMTAyMj
+U4MTYwNCwxODM0NTAwNzEzLDE0MTY3NDAyMTEsMTExOTI4Njcw
+NiwtNzU1MTEzMzUxLC0xNzYyNTMwNDU1XX0=
 -->
