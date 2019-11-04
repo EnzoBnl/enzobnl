@@ -411,15 +411,17 @@ SELECT
 - **ROW** (*start* and *end* are then index and offsets: `ROWS BETWEEN UNBOUNDED PRECEDING AND 10 FOLLOWING`,  the frame contains every records from the begining of the partition to the ten next records after current one) 
 - **RANGE** (*start* and *end* are then values in *orderCol* unit : `RANGE BETWEEN 13000 PRECEDING AND CURRENT ROW FOLLOWING`, given that *ORDER BY* has been performed on column **price** and that *current_p* is the price of the current record, the frame contains all the records that have a value of **price** *p* that is between *current_p -13000* and *current_p*)
 
-## Closures usage
-The following will only do what is expected if you run Spark in local mode:
+## Closures
+The following will compile and run fine but it will only do what is expected if you run Spark in local mode:
 ```scala
 val rdd: RDD[String] = ???  
 val startingWithA = mutable.Set[String]()  
 rdd.foreach((a: String) => if (a.toLowerCase().startsWith("a")) startingWithA += a)
 println(s"rdd contains ${startingWithA.size} records starting with 'a'")
 ```
-because `startingWithA` will not be shared among JVMs in cluster mode references copied are living in driver's JVM and thus are unreachable by executors (Note that . Use [accumulators](https://spark.apache.org/docs/latest/rdd-programming-guide.html#accumulators) for this use cases to be rubust to deployment.
+because `startingWithA` will not be shared among JVMs in cluster mode. 
+
+Use [accumulators](https://spark.apache.org/docs/latest/rdd-programming-guide.html#accumulators) instead.
 
 ## Include a dependency from spark-package in maven's pom.xml
 
@@ -463,7 +465,7 @@ because `startingWithA` will not be shared among JVMs in cluster mode references
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYyMzg3MzY5MiwtNjE0OTQ2MjUsMTAyMj
+eyJoaXN0b3J5IjpbLTc5NzM5Mjk5MCwtNjE0OTQ2MjUsMTAyMj
 U4MTYwNCwxODM0NTAwNzEzLDE0MTY3NDAyMTEsMTExOTI4Njcw
 NiwtNzU1MTEzMzUxLC0xNzYyNTMwNDU1XX0=
 -->
