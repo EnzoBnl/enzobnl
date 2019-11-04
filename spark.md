@@ -1,3 +1,4 @@
+
 <!--NOTE HEAD START-->
 <link rel="icon" type="image/png" href="./imgs/favicon_db.png" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.0.0/mermaid.min.js"></script>
@@ -582,7 +583,7 @@ def collect(): Array[T] = withScope {
 ### Join algorithms families
 
 - **Nested loop**: For each row in table A, loop on table B's rows to find matches
-$O(|edges| * |vertices|)$
+$O($\vert edges \vert$ * $\vert vertices \vert$)$
 ```python
 for e in edges:
     for v in vertices:
@@ -591,12 +592,12 @@ for e in edges:
 ```
 
 - **Hash join**: Create a join_key -> row hashmap for the smallest table. Loop on the biggest table and search for matches in the hashmap.
-$O(|vertices| + |edges|)$, only equi joins, additional O(|vertices|) space complexity
+$O($\vert vertices \vert$ + $\vert edges \vert$)$, only equi joins, additional O($\vert vertices \vert$) space complexity
 
 ```python
-vertices_map = {v.join_key: v for v in vertices}  # O(|vertices|)
+vertices_map = {v.join_key: v for v in vertices}  # O($\vert vertices \vert$)
 
-for e in edges:  # O(|edges|)
+for e in edges:  # O($\vert edges \vert$)
     v = vertices_map.get(e.join_key, None)  # considered O(1)
     if v is not None:
         yield e + v
@@ -604,13 +605,13 @@ for e in edges:  # O(|edges|)
 
 - **Sort-merge join**: Sort tables and iterate on both of them in the same move in one loop
 
-$O(|vertices|*log(|vertices|) + |edges|*log(|edges|))$ , adaptable to handle not only equi joins
+$O($\vert vertices \vert$*log($\vert vertices \vert$) + $\vert edges \vert$*log($\vert edges \vert$))$ , adaptable to handle not only equi joins
 
 ```python
-vertices.sort(lambda v: v.join_key)  # O(|vertices|*log(|vertices|)
-edges.sort(lambda e: e.join_key)  # O(|edges|*log(|edges|)
+vertices.sort(lambda v: v.join_key)  # O($\vert vertices \vert$*log($\vert vertices \vert$)
+edges.sort(lambda e: e.join_key)  # O($\vert edges \vert$*log($\vert edges \vert$)
 i, j = 0, 0
-while(i < len(vertices) and j < len(edges)):  # O(|vertices| + |edges|)
+while(i < len(vertices) and j < len(edges)):  # O($\vert vertices \vert$ + $\vert edges \vert$)
     if vertices[i].join_key < edges[i].join_key and i < len(vertices):
         i += 1
     elif vertices[i].join_key == edges[i].join_key:
@@ -701,10 +702,10 @@ But, as every page points back to the home, the hash partitioning on `edges.dst`
 SELECT * FROM edges JOIN vertices ON edges.dst = vertices.id
 ```
 
-The avg n°record_by_partition = |edges|/n°partitions 
+The avg n°record_by_partition = $\vert edges \vert$/n°partitions 
 We have actually a skew problem if 
-|vertices|>>|edges|/n°partitions  
-i.e. n°partitions >> |edges|/|vertices| 
+$\vert vertices \vert$>>$\vert edges \vert$/n°partitions  
+i.e. n°partitions >> $\vert edges \vert$/$\vert vertices \vert$ 
 i.e. **n°partitions >> avg_n°links_by_page**
 - This limits to the horizontal scaling potential
 
@@ -922,5 +923,5 @@ I don't think this one is started. The design doc is not out yet.
 - [Coursera](https://www.coursera.org/lecture/big-data-analysis/joins-Nz9XW)
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM3MDY1MzYxOCwtMzYxNzA0MzE4XX0=
+eyJoaXN0b3J5IjpbMTk5MzcwMjkyMCwtMzYxNzA0MzE4XX0=
 -->
