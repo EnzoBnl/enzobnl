@@ -97,7 +97,7 @@ implicit def StringToInt(s: String) = Integer.parseInt(s)
 Suppose we want to be able to call `.show()` on a `DeltaTable` (optionally refer to see [delta.io](delta.io)) that has not such a method. 
 
 Two approaches in OOP:
-In OOP might try to achieve this with a classic Decorator pattern:
+1. Try to achieve this with a classic Decorator pattern:
 ```scala
 class ShowableDeltaTable(deltaTable: DeltaTable) extends DeltaTable{  
   def show() = {  
@@ -111,7 +111,9 @@ class ShowableDeltaTable(deltaTable: DeltaTable) extends DeltaTable{
 ```
 - Delegation pattern, in OOP and DataFrame
 - 
-This would be a mess. Other approach is simple inheritance:
+- This would be a mess. 
+
+2. Simple inheritance:
 ```scala
 class ShowableDeltaTable(deltaTable: DeltaTable) extends DeltaTable{  
   def show() = {  
@@ -123,21 +125,21 @@ class ShowableDeltaTable(deltaTable: DeltaTable) extends DeltaTable{
 ```
 - With this solution the methods returning a `DeltaTable` like `def as(alias: String): DeltaTable` are problematic in that they make us lose our `ShowableDeltaTable` type.
 
-Actually both Decorator and inheritance does not compile since DeltaTable's constructor is private.
+Actually both Decorator and inheritance **does not compil**e since DeltaTable's constructor is private.
 
-Here come the saver that address all the previous issues in term of readability:
+So here come the saver that address all the previous issues in term of readability:
 
 ```scala
 implicit class ShowableDeltaTable(deltaTable: DeltaTable){  
   def show() = deltaTable.toDF.show()  
-} 
+}  
 ```
 
-that allow the following to compile:
+that make `
 ```scala
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM5NjU1NTA2NywxMDAwNTQ0NzM3LC04ND
-E5ODI2OThdfQ==
+eyJoaXN0b3J5IjpbLTIxMzM1NTgyMDQsMTAwMDU0NDczNywtOD
+QxOTgyNjk4XX0=
 -->
