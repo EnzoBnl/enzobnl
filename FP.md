@@ -100,12 +100,12 @@ class ShowableDeltaTable(deltaTable: DeltaTable) extends DeltaTable{
   def show() = {  
     deltaTable.toDF.show()  
   }  
-  // And many delegations
-  override def [...]
-  override def [...]
-  override def [...]
+  // And many delegations to bypass DeltaTable behaviors calls to `this.deltaTable`
+  override def [...] = this.deltaTable.[...]
+  override def [...] = this.deltaTable.[...]
+  override def [...] = this.deltaTable.[...]
 }
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkwNzgzOTk5OCwtODQxOTgyNjk4XX0=
+eyJoaXN0b3J5IjpbLTE2Njg4ODM2NjUsLTg0MTk4MjY5OF19
 -->
