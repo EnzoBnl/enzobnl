@@ -124,7 +124,13 @@ class ShowableDeltaTable(deltaTable: DeltaTable) extends DeltaTable{
 
 Actually both Decorator and inheritance does not compile since DeltaTable's constructor is private.
 
-Here come the saver that address all the previous issues in term of lisibility 
+Here come the saver that address all the previous issues in term of readability:
+
+```scala
+implicit class ShowableDeltaTable(deltaTable: DeltaTable){  
+  def show() = deltaTable.toDF.show()  
+} 
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM2MDY4OTcxOSwtODQxOTgyNjk4XX0=
+eyJoaXN0b3J5IjpbLTIwOTgzNDY1NDMsLTg0MTk4MjY5OF19
 -->
