@@ -21,7 +21,6 @@
 | **stage** | is a DAG of steps whose roots and leafs are shuffles or I/Os|
 | **step** | runs as a collection of tasks|
 | **task** | operate on 1 RDD's partition |
-|  |  |
 
 *DAG = Directed Acyclic Graph. They are used by spark to represent Jobs' stages or Stages' steps*
 
@@ -911,6 +910,6 @@ I don't think this one is started. The design doc is not out yet.
 - [Coursera](https://www.coursera.org/lecture/big-data-analysis/joins-Nz9XW)
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzQ3MDM2ODkwLDE5OTM3MDI5MjAsLTM2MT
-cwNDMxOF19
+eyJoaXN0b3J5IjpbLTE5NzcyNjg0NDIsNzQ3MDM2ODkwLDE5OT
+M3MDI5MjAsLTM2MTcwNDMxOF19
 -->
