@@ -1,4 +1,10 @@
-
+<!--NOTE HEAD START-->
+<link rel="icon" type="image/png" href="./imgs/favicon_db.png" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.0.0/mermaid.min.js"></script>
+<script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {skipTags: ['script', 'noscript','style', 'textarea', 'pre'],inlineMath: [['$','$']]}});</script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+<script>document.body.style.background = "#f2f2f2";</script>
+<!--NOTE HEAD END-->
 
 # Spark
 ## Architecture vocabulary
@@ -859,6 +865,20 @@ edges.repartition(10, col("src")).withColumnRenamed("src", "id").groupBy("id").c
             +- *(1) FileScan csv [src#98L] ...
 ```
 
+## ouverture: Adaptative Execution (AE)
+https://docs.google.com/document/d/1mpVjvQZRAkD-Ggy6-hcjXtBPiQoVbZGe3dLnAKgtJ4k/edit
+https://software.intel.com/en-us/articles/spark-sql-adaptive-execution-at-100-tb
+apache/spark master branch is about to be released in the next months as Spark 3.0.0.
+AE open since 1.6 has been merged 15/Jun/19. (Lead by # Carson Wang from Intel)
+https://issues.apache.org/jira/browse/SPARK-9850?jql=text%20~%20%22adaptative%20execution%22
+> a. dynamic parallelism  
+I believe [Carson Wang](https://issues.apache.org/jira/secure/ViewProfile.jspa?name=carsonwang) is working on it. He will create a new ticket when the PR is ready.
+
+> b. sort merge join to broadcast hash join or shuffle hash join  
+It's included in the current framework
+
+> c. skew handling.  
+I don't think this one is started. The design doc is not out yet.
 
 
 
@@ -874,5 +894,5 @@ edges.repartition(10, col("src")).withColumnRenamed("src", "id").groupBy("id").c
 - [Coursera](https://www.coursera.org/lecture/big-data-analysis/joins-Nz9XW)
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MjgxMjcxMzhdfQ==
+eyJoaXN0b3J5IjpbLTk0NTM2Njg5MF19
 -->
