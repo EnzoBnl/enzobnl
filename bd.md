@@ -374,15 +374,11 @@ df.queryExecution.toRdd()
 
 #### OOP design
 `Dataset` can be viewed as a **functional builder** for a `LogicalPlan`, implemented as a fluent API friendly to SQL users.
-
 ```scala
 val df2 = df1.select(...).withColumn(...).where(...)
 ```
 
-
-The ready to be built *SparkPlan* will never be accessed by user and it will be build when it's execution is ran !
-
-$^{(1)}$: This violation can be avoided for single Builders by using generics/type parameterized builder class, each methods of the class returning parameterized type instead of simply base class with `return this`.
+`Dataset` class makes use of many 
 
 ### SQL window function
 ``` SQL
@@ -435,6 +431,6 @@ Impossible to make it work because referencies copied are living in driver and u
 *BigQuery* excels for OLAP (OnLine Analytical Processing): scalable and efficient analytic querying on unchanging data (or just appending data).
 *BigTable* excels for OLTP (OnLine Transaction Processing): scalable and efficient read and write
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MDExMDc4MywtNzU1MTEzMzUxLC0xNz
-YyNTMwNDU1XX0=
+eyJoaXN0b3J5IjpbMTA2NzI5MjgwLC03NTUxMTMzNTEsLTE3Nj
+I1MzA0NTVdfQ==
 -->
