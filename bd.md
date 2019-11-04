@@ -412,12 +412,14 @@ SELECT
 - **RANGE** (*start* and *end* are then values in *orderCol* unit : `RANGE BETWEEN 13000 PRECEDING AND CURRENT ROW FOLLOWING`, given that *ORDER BY* has been performed on column **price** and that *current_p* is the price of the current record, the frame contains all the records that have a value of **price** *p* that is between *current_p -13000* and *current_p*)
 
 ## Closures usage
-It's impossible to do something like:
+The following will only do what is expected if you run Spark in local mode:
 ```scala
-val startingWithA = mutable.Set()
-rdd.foreach((a: String) => if (a.lower().startswith("a"))
+val rdd: RDD[String] = ???  
+val startingWithA = mutable.Set[String]()  
+rdd.foreach((a: String) => if (a.toLowerCase().startsWith("a")) startingWithA += a)
+println()
 ```
-Impossible to make it work because references copied are living in driver's JVM and thus are unreachable by executors (Note that . Use [accumulators](https://spark.apache.org/docs/latest/rdd-programming-guide.html#accumulators) for this use cases to be rubust to deployment.
+because startingWithA will not be shared among JVMs in cluster mode references copied are living in driver's JVM and thus are unreachable by executors (Note that . Use [accumulators](https://spark.apache.org/docs/latest/rdd-programming-guide.html#accumulators) for this use cases to be rubust to deployment.
 
 ## Include a dependency from spark-package in maven's pom.xml
 
@@ -461,7 +463,7 @@ Impossible to make it work because references copied are living in driver's JVM 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYxNDk0NjI1LDEwMjI1ODE2MDQsMTgzND
-UwMDcxMywxNDE2NzQwMjExLDExMTkyODY3MDYsLTc1NTExMzM1
-MSwtMTc2MjUzMDQ1NV19
+eyJoaXN0b3J5IjpbNzE5NjIwNDcsLTYxNDk0NjI1LDEwMjI1OD
+E2MDQsMTgzNDUwMDcxMywxNDE2NzQwMjExLDExMTkyODY3MDYs
+LTc1NTExMzM1MSwtMTc2MjUzMDQ1NV19
 -->
