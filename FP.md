@@ -111,10 +111,16 @@ class ShowableDeltaTable(deltaTable: DeltaTable) extends DeltaTable{
 - Delegation pattern, in OOP and DataFrame
 - 
 This would be a mess. Other approach is simple inheritance:
-
-- Problem: the "fluent API" method
+```scala
+class ShowableDeltaTable(deltaTable: DeltaTable) extends DeltaTable{  
+  def show() = {  
+    this.toDF.show()  
+  }  
+}
+```
+- The methods returning a DeltaTable like `def as(alias: String): DeltaTable` are problematic in that they make us lose our 
 
 Actually both Decorator and inheritance does not compile since DeltaTable's constructor is private, making it 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTQ1NzY2NDY5LC04NDE5ODI2OThdfQ==
+eyJoaXN0b3J5IjpbLTIwMzMwODI4NSwtODQxOTgyNjk4XX0=
 -->
