@@ -378,7 +378,7 @@ df.queryExecution.toRdd()
 val df2 = df1.select(...).withColumn(...).where(...)
 ```
 
-`Dataset` class makes use of many 
+`Dataset` class makes use of Delegation Pattern in many places, to delegate work to its underlying 
 
 ### SQL window function
 ``` SQL
@@ -431,6 +431,6 @@ Impossible to make it work because referencies copied are living in driver and u
 *BigQuery* excels for OLAP (OnLine Analytical Processing): scalable and efficient analytic querying on unchanging data (or just appending data).
 *BigTable* excels for OLTP (OnLine Transaction Processing): scalable and efficient read and write
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA2NzI5MjgwLC03NTUxMTMzNTEsLTE3Nj
-I1MzA0NTVdfQ==
+eyJoaXN0b3J5IjpbLTQyNDMyOTA1NCwtNzU1MTEzMzUxLC0xNz
+YyNTMwNDU1XX0=
 -->
