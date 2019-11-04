@@ -6,10 +6,10 @@
 |[Graphs theory & web](graph.html)|Definitions & theorems, search engines and web's graph properties|
 |[Functional Programming](FP.html)|Scala & Cats, categories|
 |[Big Data Frameworks](bd.html)|Elastic Search, Delta Lake, BigTable|
-|[Programming Languages](pl.html)|Coding in Java/Scala/Python|
+|[Development](pl.html)|Coding in Java/Scala/Python|
 |[Distributed algorithms](da.html)|Leader election & Consensus, synchronous systems|
 |[Other CS notes](div.html)|Multi-threading, computer architecture, network...|
-|[Commands cheat sheet](cmd.html)|Notes |
+|[Commands cheat sheet](cmd.html)|To write down some useful CLI stuff|
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcwODM2MzIwNl19
+eyJoaXN0b3J5IjpbMTIwNzI5MTgyMF19
 -->
