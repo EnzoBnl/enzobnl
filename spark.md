@@ -401,6 +401,7 @@ val startingWithA = mutable.Set[String]()
 rdd.foreach((a: String) => if (a.toLowerCase().startsWith("a")) startingWithA += a)
 println(s"rdd contains ${startingWithA.size} records starting with 'a'")
 ```
+
 because `startingWithA` will not be shared among JVMs in cluster mode.
 Actually in non local modes (both client and master), it will print `rdd contains 0 records starting with 'a'` because the `mutable.Set[String]()` instance called for its size information lives inside the driver process JVM heap and is not populated by executors threads that live in other JVMs (the executors ones).
 
@@ -459,8 +460,8 @@ Main partitioning
 
 Always partition on Long or Int, hash/encrypt string key if necessary.
 
-#### Materialize partitions:
-FIXME: wtf all this,
+#### Materialize partitions
+// FIXME
 RDD: 
 ```scala
 val rdd: RDD[T] = ...
@@ -496,6 +497,7 @@ is up to 30% faster than
 ```scala
 spark.range(100000).foreachPartition(p => ())}  
 ```
+
 ### Repartitioning  (SQL & Core)
 #### coalesce
 Try to minimize the data that need to be shuffled by merging partitions on the same executors in priority -> fast but may lead inequal partition 
@@ -518,7 +520,6 @@ val spark = SparkSession
   [...]
   .getOrCreate
 ```
-
 
 ### Data structures ()
 
@@ -896,5 +897,5 @@ I don't think this one is started. The design doc is not out yet.
 - [Coursera](https://www.coursera.org/lecture/big-data-analysis/joins-Nz9XW)
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMDk3NjkwMDJdfQ==
+eyJoaXN0b3J5IjpbODI0MTgwMzIwXX0=
 -->
