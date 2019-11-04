@@ -90,7 +90,6 @@ val dfIsSorted = !df.sort().queryExecution.sparkPlan.outputOrdering.isEmpty
 There is only a contiguousity of the `UnsafeRow`s' memory because an `RDD[UnsafeRow]` is a collection of `UnsafeRow`s' referencies that lives somewhere on-heap. This causes many CPU's caches defaults, each new record to process causing one new default.
 
 #### Caching
-Caching is shared among `LogicalPlan`s that result in
 
 When a dataset is cached using `def cache(): this.type = persist()` it is basically `persit`ed with default storageLevel which is `MEMORY_AND_DISK`:
 
@@ -124,13 +123,20 @@ case class CachedData(plan: LogicalPlan, cachedRepresentation: InMemoryRelation)
 This index don't holds any data directly.
 It help the `SparkSession` to remember not to clear the resulting `RDD[InternalRow]` of plans registered as "to cache" after their next execution.
 
-`unpersist()` is not lazy, it directly remove the dataframe cached data.
+- Caching is shared among `LogicalPlan`s with same result, in `CacheManager`:
+```scala
+def lookupCachedData(plan: LogicalPlan): Option[CachedData] = readLock {  
+  cachedData.asScala.find(cd => plan.sameResult(cd.plan))  
+}
+```
 
-Caching operations are not purely functional:
+- `unpersist()` is not lazy, it directly remove the dataframe cached data.
+
+- Caching operations are not purely functional:
 ```scala
 df2 = df.cache()
 ```
-=
+is equivalent to
 ```scala
 df.cache()
 df2 = df
@@ -447,6 +453,6 @@ Impossible to make it work because referencies copied are living in driver and u
 *BigQuery* excels for OLAP (OnLine Analytical Processing): scalable and efficient analytic querying on unchanging data (or just appending data).
 *BigTable* excels for OLTP (OnLine Transaction Processing): scalable and efficient read and write
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzM4ODEyMDQxLDE0MTY3NDAyMTEsMTExOT
-I4NjcwNiwtNzU1MTEzMzUxLC0xNzYyNTMwNDU1XX0=
+eyJoaXN0b3J5IjpbLTI2NTUxMDExOSwxNDE2NzQwMjExLDExMT
+kyODY3MDYsLTc1NTExMzM1MSwtMTc2MjUzMDQ1NV19
 -->
