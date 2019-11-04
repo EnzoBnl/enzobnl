@@ -91,7 +91,7 @@ There is only a contiguousity of the `UnsafeRow`s' memory because an `RDD[Unsafe
 
 #### Caching
 
-When a dataset is cached using `def cache(): this.type = persist()` it is basically `persit`ed with default storageLevel which is `MEMORY_AND_DISK`:
+- When a dataset is cached using `def cache(): this.type = persist()` it is basically `persit`ed with default storageLevel which is `MEMORY_AND_DISK`:
 
 ```scala
 /**
@@ -114,7 +114,7 @@ When a dataset is cached using `def cache(): this.type = persist()` it is basica
   def cache(): this.type = persist()
 ```
 
-`sparkSession.sharedState.cacheManager.cacheQuery` stores plan and other information of the df to cache in an `IndexedSeq` of instances of:
+- `sparkSession.sharedState.cacheManager.cacheQuery` stores plan and other information of the df to cache in an `IndexedSeq` of instances of: 
 ```scala
 /** Holds a cached logical plan and its data */
 case class CachedData(plan: LogicalPlan, cachedRepresentation: InMemoryRelation)
@@ -453,6 +453,6 @@ Impossible to make it work because referencies copied are living in driver and u
 *BigQuery* excels for OLAP (OnLine Analytical Processing): scalable and efficient analytic querying on unchanging data (or just appending data).
 *BigTable* excels for OLTP (OnLine Transaction Processing): scalable and efficient read and write
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI2NTUxMDExOSwxNDE2NzQwMjExLDExMT
+eyJoaXN0b3J5IjpbMTgzNDUwMDcxMywxNDE2NzQwMjExLDExMT
 kyODY3MDYsLTc1NTExMzM1MSwtMTc2MjUzMDQ1NV19
 -->
