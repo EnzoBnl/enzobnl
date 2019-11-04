@@ -96,8 +96,16 @@ implicit def StringToInt(s: String) = Integer.parseInt(s)
 #### Implicit conversions as an alternative for OOP's Decorator patterns
 Suppose we want to be able to call `.show()` on a `DeltaTable` (see [delta.io](delta.io)) that has not such a method. In OOP we would have done this with a classic Decorator pattern like this:
 ```scala
-
+class ShowableDeltaTable(deltaTable: DeltaTable) extends DeltaTable{  
+  def show() = {  
+    deltaTable.toDF.show()  
+  }  
+  // And many delegations
+  override def [...]
+  override def [...]
+  override def [...]
+}
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg0MTk4MjY5OF19
+eyJoaXN0b3J5IjpbLTkwNzgzOTk5OCwtODQxOTgyNjk4XX0=
 -->
