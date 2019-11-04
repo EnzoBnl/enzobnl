@@ -411,10 +411,10 @@ SELECT
 - **ROW** (*start* and *end* are then index and offsets: `ROWS BETWEEN UNBOUNDED PRECEDING AND 10 FOLLOWING`,  the frame contains every records from the begining of the partition to the ten next records after current one) 
 - **RANGE** (*start* and *end* are then values in *orderCol* unit : `RANGE BETWEEN 13000 PRECEDING AND CURRENT ROW FOLLOWING`, given that *ORDER BY* has been performed on column **price** and that *current_p* is the price of the current record, the frame contains all the records that have a value of **price** *p* that is between *current_p -13000* and *current_p*)
 
-### Closures and spark:
-Impossible to make it work because referencies copied are living in driver and unreachable by executors in cluster mode (can work on localmode). Use [accumulators](https://spark.apache.org/docs/latest/rdd-programming-guide.html#accumulators) for this use cases to be rubust to deployment.
+## Closures usage
+Impossible to make it work because references copied are living in driver node and unreachable by executors in cluster mode (can work on localmode). Use [accumulators](https://spark.apache.org/docs/latest/rdd-programming-guide.html#accumulators) for this use cases to be rubust to deployment.
 
-### Include a dependency from spark-package in maven's pom.xml
+## Include a dependency from spark-package in maven's pom.xml
 
 - add the repository
 ```xml
@@ -430,8 +430,9 @@ Impossible to make it work because referencies copied are living in driver and u
 </project>
 ```
 
-## ElasticSearch
-### Parallels with distributed relationnal databases
+# Delta Lake
+# ElasticSearch
+## Parallels with distributed relationnal databases
 1h # Elasticsearch Tutorial & Getting Started (course preview) https://www.youtube.com/watch?v=ksTTlXNLick
 
 |E| RDB |
@@ -445,14 +446,17 @@ Impossible to make it work because referencies copied are living in driver and u
 |Index Shards|DB Partitions|
 |Shards' Replicas|Partitions' Replicas|
 
-## GCP
+# GCP
 - install gcloud SDK
 `curl https://dl.google.com/dl/cloudsdk/release/install_google_cloud_sdk.bash | bash`
 
-### BigQuery vs BigTable
+## BigQuery vs BigTable
 *BigQuery* excels for OLAP (OnLine Analytical Processing): scalable and efficient analytic querying on unchanging data (or just appending data).
 *BigTable* excels for OLTP (OnLine Transaction Processing): scalable and efficient read and write
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgzNDUwMDcxMywxNDE2NzQwMjExLDExMT
-kyODY3MDYsLTc1NTExMzM1MSwtMTc2MjUzMDQ1NV19
+eyJoaXN0b3J5IjpbNDUxNjE4MDUxLDE4MzQ1MDA3MTMsMTQxNj
+c0MDIxMSwxMTE5Mjg2NzA2LC03NTUxMTMzNTEsLTE3NjI1MzA0
+NTVdfQ==
 -->
