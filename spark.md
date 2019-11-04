@@ -17,17 +17,11 @@
 |**executor**| is a java application & may start several threads |
 | **executor's thread** | runs several job's tasks sequentially|
 | **applications** | runs several spark jobs & launches 1 worker by node by cluster node |
-| **job** | is a collection of stages organized in Directed Acyclic Graph  |
+| **job** | is a collection of stages organized in Directed Acyclic Graph (DAG) |
+| **stage** | is a DAG of steps starting and ending with a shuffle or I/O|
 |  |  |
 |  |  |
 |  |  |
-|  |  |
-
-1 **applications** $\rightarrow$
-- runs several spark jobs
-- launch 1 worker by node by cluster node
-
-1 **job** $\rightarrow$ is a DAG of stages
 
 1 **stage** $\rightarrow$ is a DAG of steps ending with a shuffle/exchange
 
@@ -923,6 +917,6 @@ I don't think this one is started. The design doc is not out yet.
 - [Coursera](https://www.coursera.org/lecture/big-data-analysis/joins-Nz9XW)
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTkwMTcxMzM3LDE5OTM3MDI5MjAsLTM2MT
-cwNDMxOF19
+eyJoaXN0b3J5IjpbMTI2NTkzNDEzMywxOTkzNzAyOTIwLC0zNj
+E3MDQzMThdfQ==
 -->
