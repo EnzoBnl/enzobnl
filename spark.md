@@ -37,27 +37,6 @@
 *DAG = Directed Acyclic Graph. They are used by spark to represent Jobs' stages or Stages' steps*
 
 
-## Usefull confs:
-```scala
-SparkSession.builder.config("spark.default.parallelism", "12") // default = 200
-```
-
-## Vector Type
-`org.apache.spark.ml.linalg.Vector`
-has the following spark sql type (note that values are in `ArrayType`):
-```scala
-private[this] val _sqlType = {  
-// type: 0 = sparse, 1 = dense  
-// We only use "values" for dense vectors, and "size", "indices", and "values" for sparse  
-// vectors. The "values" field is nullable because we might want to add binary vectors later,  
-// which uses "size" and "indices", but not "values".  
-StructType(Seq(  
-StructField("type", ByteType, nullable = false),  
-StructField("size", IntegerType, nullable = true),  
-StructField("indices", ArrayType(IntegerType, containsNull = false), nullable = true),  
-StructField("values", ArrayType(DoubleType, containsNull = false), nullable = true)))  
-}
-```
 ## DataFrame
 
 - Spark SQL first realease: Spark 1.0.0 (May 30, 2014) (see [Spark SQL's paper](https://dl.acm.org/citation.cfm?id=2742797) by Michael Armbrust)
@@ -442,6 +421,27 @@ Use [accumulators](https://spark.apache.org/docs/latest/rdd-programming-guide.ht
 ```
 Partitioning & graphs in Spark
 
+## Usefull confs:
+```scala
+SparkSession.builder.config("spark.default.parallelism", "12") // default = 200
+```
+
+## Vector Type
+`org.apache.spark.ml.linalg.Vector`
+has the following spark sql type (note that values are in `ArrayType`):
+```scala
+private[this] val _sqlType = {  
+// type: 0 = sparse, 1 = dense  
+// We only use "values" for dense vectors, and "size", "indices", and "values" for sparse  
+// vectors. The "values" field is nullable because we might want to add binary vectors later,  
+// which uses "size" and "indices", but not "values".  
+StructType(Seq(  
+StructField("type", ByteType, nullable = false),  
+StructField("size", IntegerType, nullable = true),  
+StructField("indices", ArrayType(IntegerType, containsNull = false), nullable = true),  
+StructField("values", ArrayType(DoubleType, containsNull = false), nullable = true)))  
+}
+```
 
 ## Partitions in Spark
 
@@ -894,5 +894,5 @@ I don't think this one is started. The design doc is not out yet.
 - [Coursera](https://www.coursera.org/lecture/big-data-analysis/joins-Nz9XW)
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk0NTM2Njg5MF19
+eyJoaXN0b3J5IjpbMTUxMTEyNDExOF19
 -->
