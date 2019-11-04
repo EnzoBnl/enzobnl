@@ -94,7 +94,7 @@ implicit def StringToInt(s: String) = Integer.parseInt(s)
 ```
 
 #### Decorator Pattern with implicit class
-Suppose we want to be able to call `.show()` on a `DeltaTable` (see [delta.io](delta.io)) that has not such a method. In OOP might try to achieve this with a classic Decorator pattern like this:
+Suppose we want to be able to call `.show()` on a `DeltaTable` (see [delta.io](delta.io)) that has not such a method. In OOP might try to achieve this with a classic Decorator pattern:
 ```scala
 class ShowableDeltaTable(deltaTable: DeltaTable) extends DeltaTable{  
   def show() = {  
@@ -106,8 +106,10 @@ class ShowableDeltaTable(deltaTable: DeltaTable) extends DeltaTable{
   override def [...] = this.deltaTable.[...]
 }
 ```
+- Delegation pattern, in OOP and DataFrame
+This would be a mess. Cleaner approach is simple 
 
-This would be a mess. This would also This can also be impossible to implement if 
+Actually it's impossible since 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNDU0MjIwMjMsLTg0MTk4MjY5OF19
+eyJoaXN0b3J5IjpbMTU2MTExMzk2OSwtODQxOTgyNjk4XX0=
 -->
