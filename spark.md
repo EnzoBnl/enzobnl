@@ -689,13 +689,13 @@ We always have a website with:
 - n°links_by_page is evenly distributed (~200 by page): no risk that a few partitions containing the most outlinking pages causes a skewing.
 - avg_n°links_by_page << n°pages: this is another condition for reduction of the partitions' size variance.
 
-The following query won't cause skew problems, partition receiving quite evenly |edges|/n°partitions records each,
+The following query won't cause skew problems, partition receiving quite evenly $\vert edges\vert$/n°partitions records each,
 
 ```sql
 SELECT * FROM edges JOIN vertices ON edges.src = vertices.id
 ```
 
-But, as every page points back to the home, the hash partitioning on `edges.dst` may lead to a big skewing: the partition containing the home key will at least contains |vertices| records.
+But, as every page points back to the home, the hash partitioning on `edges.dst` may lead to a big skewing: the partition containing the home key will at least contains $\vert vertices \vert$ records.
 
 ```sql
 SELECT * FROM edges JOIN vertices ON edges.dst = vertices.id
@@ -922,5 +922,5 @@ I don't think this one is started. The design doc is not out yet.
 - [Coursera](https://www.coursera.org/lecture/big-data-analysis/joins-Nz9XW)
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMTU5ODcwMjgsLTM2MTcwNDMxOF19
+eyJoaXN0b3J5IjpbMTM3MDY1MzYxOCwtMzYxNzA0MzE4XX0=
 -->
