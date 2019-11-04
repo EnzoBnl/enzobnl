@@ -122,7 +122,9 @@ class ShowableDeltaTable(deltaTable: DeltaTable) extends DeltaTable{
 ```
 - With this solution the methods returning a `DeltaTable` like `def as(alias: String): DeltaTable` are problematic in that they make us lose our `ShowableDeltaTable` type.
 
-Actually both Decorator and inheritance does not compile since DeltaTable's constructor is private, making it 
+Actually both Decorator and inheritance does not compile since DeltaTable's constructor is private.
+
+Here come the saver that address all the previous issues in term of lisibility 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNzkzNzg3MDUsLTg0MTk4MjY5OF19
+eyJoaXN0b3J5IjpbMTM2MDY4OTcxOSwtODQxOTgyNjk4XX0=
 -->
