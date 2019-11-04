@@ -328,7 +328,7 @@ append((project_mutableStateArray_0[7].getRow()));
 #### Conversion to RDD: `df.rdd` vs `df.queryExecution.toRdd()`
 [Jacek Laskowski's post on SO](https://stackoverflow.com/questions/44708629/is-dataset-rdd-an-action-or-transformation)
 
-- `.rdd`
+1. `.rdd`
 It deserializes `InternalRow`s and put back data on-heap. It's still lazy: the need of deserialization is recorded but not triggered.
 It's a transformation that returns `RDD[T]`.
 If it's called on a `DataFrame = Dataset[Row]`, it returns `RDD[Row]`.
@@ -345,14 +345,14 @@ class Dataset[T] private[sql](
 	  }  
 	}
 ```
-use:
+usage:
 ```scala
 df.rdd
 .map((row: Row) => Row.fromSeq(Seq(row.getAs[Long]("i")+10, row.getAs[Long]("i")-10)))  
 .collect()
 ```
 
-- `.queryExecution.toRdd()`
+2. `.queryExecution.toRdd()`
 
 It is used by `.rdd`.
 If you stuck to this step, you keep your rows `InternalRow`s off-heap.
@@ -364,9 +364,9 @@ class QueryExecution(
     [...]
         lazy val toRdd: RDD[InternalRow] = executedPlan.execute()
 ```
-use:
+usage:
 ```scala
-df.queryExecution.toRdd()
+df.queryExecution.toRdd
 .map((row: InternalRow) => InternalRow.fromSeq(Seq(row.getLong(0)+10, row.getLong(0)-10)))  
 ```
 - *Seems to be faster than dataframe for simple map ???*
@@ -446,6 +446,6 @@ Impossible to make it work because referencies copied are living in driver and u
 *BigQuery* excels for OLAP (OnLine Analytical Processing): scalable and efficient analytic querying on unchanging data (or just appending data).
 *BigTable* excels for OLTP (OnLine Transaction Processing): scalable and efficient read and write
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM4NjgyNTEzMCwtNzU1MTEzMzUxLC0xNz
+eyJoaXN0b3J5IjpbMTExOTI4NjcwNiwtNzU1MTEzMzUxLC0xNz
 YyNTMwNDU1XX0=
 -->
