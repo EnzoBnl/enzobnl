@@ -109,8 +109,7 @@ class ShowableDeltaTable(deltaTable: DeltaTable) extends DeltaTable{
   override def [...] = this.deltaTable.[...]
 }
 ```
-- Delegation pattern, in OOP and DataFrame
-- 
+
 - This would be a mess. 
 
 2. Simple inheritance:
@@ -131,15 +130,17 @@ So here come the saver that address all the previous issues in term of readabili
 
 ```scala
 implicit class ShowableDeltaTable(deltaTable: DeltaTable){  
-  def show() = deltaTable.toDF.show()  
+  def show() = deltaTable.toDF.show()  // Delegation pattern
 }  
 ```
 
-that make `
+that make any instance of DeltaTable *showable*:
 ```scala
+deltaTable.show()  
+deltaTable.as("alias").show()
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMzM1NTgyMDQsMTAwMDU0NDczNywtOD
-QxOTgyNjk4XX0=
+eyJoaXN0b3J5IjpbMjA0Njc4MTU2OSwxMDAwNTQ0NzM3LC04ND
+E5ODI2OThdfQ==
 -->
