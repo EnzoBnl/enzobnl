@@ -412,7 +412,11 @@ SELECT
 - **RANGE** (*start* and *end* are then values in *orderCol* unit : `RANGE BETWEEN 13000 PRECEDING AND CURRENT ROW FOLLOWING`, given that *ORDER BY* has been performed on column **price** and that *current_p* is the price of the current record, the frame contains all the records that have a value of **price** *p* that is between *current_p -13000* and *current_p*)
 
 ## Closures usage
-
+It's impossible to do something like:
+```scala
+val startingWithA = mutable.Set()
+rdd.map((a: String) => )
+```
 Impossible to make it work because references copied are living in driver's JVM and thus are unreachable by executors (Note that . Use [accumulators](https://spark.apache.org/docs/latest/rdd-programming-guide.html#accumulators) for this use cases to be rubust to deployment.
 
 ## Include a dependency from spark-package in maven's pom.xml
@@ -457,7 +461,7 @@ Impossible to make it work because references copied are living in driver's JVM 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA5ODQwNTc3OCwxMDIyNTgxNjA0LDE4Mz
+eyJoaXN0b3J5IjpbMTY3MDg5MzUyMiwxMDIyNTgxNjA0LDE4Mz
 Q1MDA3MTMsMTQxNjc0MDIxMSwxMTE5Mjg2NzA2LC03NTUxMTMz
 NTEsLTE3NjI1MzA0NTVdfQ==
 -->
