@@ -369,9 +369,6 @@ usage:
 df.queryExecution.toRdd
 .map((row: InternalRow) => InternalRow.fromSeq(Seq(row.getLong(0)+10, row.getLong(0)-10)))  
 ```
-- *Seems to be faster than dataframe for simple map ???*
-
-
 
 #### OOP design
 `Dataset` can be viewed as a **functional builder** for a `LogicalPlan`, implemented as a **fluent API** friendly to SQL users.
@@ -446,6 +443,6 @@ Impossible to make it work because referencies copied are living in driver and u
 *BigQuery* excels for OLAP (OnLine Analytical Processing): scalable and efficient analytic querying on unchanging data (or just appending data).
 *BigTable* excels for OLTP (OnLine Transaction Processing): scalable and efficient read and write
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTExOTI4NjcwNiwtNzU1MTEzMzUxLC0xNz
-YyNTMwNDU1XX0=
+eyJoaXN0b3J5IjpbMTQxNjc0MDIxMSwxMTE5Mjg2NzA2LC03NT
+UxMTMzNTEsLTE3NjI1MzA0NTVdfQ==
 -->
