@@ -16,7 +16,7 @@
 | **worker node** | launches 1 or several executors & is dedicated exclusively to its parent application |
 |**executor**| is a java application & may start several threads |
 | **executor's thread** | runs several job's tasks sequentially|
-| **applications** | runs several spark jobs & launches 1 worker by node by cluster node |
+| **applications** | runs several spark jobs & launches 1 worker by cluster node |
 | **job** | is a collection of stages organized in DAG |
 | **stage** | is a DAG of steps whose roots and leafs are shuffles or I/Os|
 | **step** | runs as a collection of tasks|
