@@ -567,6 +567,7 @@ def collect(): Array[T] = withScope {
   Array.concat(results: _*)  
 }
 ```
+
 *Note*: the `toArray` is free because after `getByteArrayRdd`, the partition is an iterator of only one element which is a tuple `(number_of_rows, optimized_byte_array)`.
 - Hash joins are relying on `BytesToBytesMap`, "An append-only hash map where keys and values are contiguous regions of bytes."
 
@@ -584,6 +585,7 @@ for e in edges:
 
 - **Hash join**: Create a join_key -> row hashmap for the smallest table. Loop on the biggest table and search for matches in the hashmap.
 $O(|vertices| + |edges|)$, only equi joins, additional O(|vertices|) space complexity
+
 ```python
 vertices_map = {v.join_key: v for v in vertices}  # O(|vertices|)
 
@@ -596,6 +598,7 @@ for e in edges:  # O(|edges|)
 - **Sort-merge join**: Sort tables and iterate on both of them in the same move in one loop
 
 $O(|vertices|*log(|vertices|) + |edges|*log(|edges|))$ , adaptable to handle not only equi joins
+
 ```python
 vertices.sort(lambda v: v.join_key)  # O(|vertices|*log(|vertices|)
 edges.sort(lambda e: e.join_key)  # O(|edges|*log(|edges|)
@@ -657,6 +660,7 @@ That means that [JoinSelection](https://jaceklaskowski.gitbooks.io/mastering-spa
 #### Deal with skewed data  (SQL & Core)
 
 When loaded, data is evenly partitioned by default. The danger comes when queries involves `HashPartioner`.
+
 ```scala
 val df = spark.read  
   .format("csv")  
@@ -679,6 +683,7 @@ We always have a website with:
 - avg_n°links_by_page << n°pages: this is another condition for reduction of the partitions' size variance.
 
 The following query won't cause skew problems, partition receiving quite evenly |edges|/n°partitions records each,
+
 ```sql
 SELECT * FROM edges JOIN vertices ON edges.src = vertices.id
 ```
@@ -688,6 +693,7 @@ But, as every page points back to the home, the hash partitioning on `edges.dst`
 ```sql
 SELECT * FROM edges JOIN vertices ON edges.dst = vertices.id
 ```
+
 The avg n°record_by_partition = |edges|/n°partitions 
 We have actually a skew problem if 
 |vertices|>>|edges|/n°partitions  
@@ -700,11 +706,13 @@ i.e. **n°partitions >> avg_n°links_by_page**
 If the skewed big table is joined with a relatively, try to repartition evenly (RoundRobinPartitioning, `repartition(n)`) and use a broadcast join if spark does not managed to do it itself (tune threshold `"spark.sql.autoBroadcastJoinThreshold"` to the desired size in Bytes. 
 ##### 2-steps join
 Trick: (`<hubs>` = `(home_id)` but can contains other hubs)
+
 ```sql
 SELECT *
 FROM edges JOIN vertices ON edges.dst = vertices.id 
 WHERE edges.dst NOT IN (<hubs>);
 ```
+
 ```scala
 val hashJoin = edges
   .join(
@@ -714,13 +722,14 @@ val hashJoin = edges
   .where(not(edges("dst").isin(<hubs>)))
 ```
 
-
 So second query will be converted to a broadcast join (=replicated join=Map-side join):
+
 ```sql
 SELECT *
 FROM edges JOIN vertices ON edges.dst = vertices.id 
 WHERE edges.dst IN (<hubs>);
 ```
+
 ```scala
 val broadcastJoin = edges
   .join(
@@ -730,8 +739,8 @@ val broadcastJoin = edges
   .where(edges("dst").isin(<hubs>))
 ```
 
-
 The partial results of the two queries can then be merged to get the final results.
+
 ```scala
 val df = hashJoin.union(broadcastJoin)  // by position
 val df = hashJoin.unionByName(broadcastJoin)  // by name 
@@ -749,12 +758,15 @@ Null values in key column are not participating in the join, but still, as they 
 - major: this forces one task to fetch many record over network to build the partition.
 
 [Fix](https://stackoverflow.com/a/43394695/6580080): 
+
 ```scala
 df.withColumn("key", expr("ifnull(key, int(-round(rand()*100000)))"))
 ```
+
 (simplified in the case there is no key < 0)
 
 - filter: 
+
 ```scala
 val data = ...
 val notJoinable = data.filter('keyToJoin.isNull)
@@ -774,6 +786,7 @@ For `groupBy` on `edges.dst`, all's right because only the pre-aggregates (`part
 ```sql
 SELECT src, count(*) FROM edges GROUP BY src
 ```
+
 ```
 == Physical Plan ==
 *(2) HashAggregate(keys=[src#4L], functions=[count(1)])
@@ -897,5 +910,5 @@ I don't think this one is started. The design doc is not out yet.
 - [Coursera](https://www.coursera.org/lecture/big-data-analysis/joins-Nz9XW)
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODI0MTgwMzIwXX0=
+eyJoaXN0b3J5IjpbNTU1OTgwOTIyXX0=
 -->
