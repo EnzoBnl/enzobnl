@@ -387,7 +387,14 @@ def reduce(func: (T, T) => T): T = withNewRDDExecutionId {
 
 ### SQL window function
 ``` SQL
-SELECT __func__ OVER (PARTITION BY partitionCol ORDER BY orderCol __frame_type__ BETWEEN start AND end)`
+SELECT 
+  some_col,
+  __func__ OVER (
+    PARTITION BY partitionCol 
+    ORDER BY orderCol __frame_type__ 
+    BETWEEN start AND end
+  )
+  FROM ...
 ```
 
 **\_\_func\_\_**: Raking/Analytic/Aggregation function
@@ -438,6 +445,6 @@ Impossible to make it work because referencies copied are living in driver and u
 *BigQuery* excels for OLAP (OnLine Analytical Processing): scalable and efficient analytic querying on unchanging data (or just appending data).
 *BigTable* excels for OLTP (OnLine Transaction Processing): scalable and efficient read and write
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDUyMjM5Nzk0LC03NTUxMTMzNTEsLTE3Nj
-I1MzA0NTVdfQ==
+eyJoaXN0b3J5IjpbLTQ3MDM0MTE1MywtNzU1MTEzMzUxLC0xNz
+YyNTMwNDU1XX0=
 -->
