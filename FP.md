@@ -131,6 +131,11 @@ implicit class ShowableDeltaTable(deltaTable: DeltaTable){
   def show() = deltaTable.toDF.show()  
 } 
 ```
+
+that allow the following to compile:
+```scala
+
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwOTgzNDY1NDMsLTg0MTk4MjY5OF19
+eyJoaXN0b3J5IjpbMTAwMDU0NDczNywtODQxOTgyNjk4XX0=
 -->
