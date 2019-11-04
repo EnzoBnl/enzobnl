@@ -79,12 +79,11 @@ https://spoddutur.github.io/spark-notes/deep_dive_into_storage_formats.html
 - Since 2.0.0, `DataFrame` is merged with `Dataset` and remains just an alias `type DataFrame = Dataset[Row]`.
 
 #### is a DataFrame sorted ?
-use `df.queryExecution.sparkPlan.outputOrdering` that returns a 
+use `df.queryExecution.sparkPlan.outputOrdering` that returns a sequence of `org.apache.spark.sql.catalyst.expressions.SortOrder`s.
 ```scala
-df.sort().queryExecution.sparkPlan.outputOrdering.isEmpty
+val dfIsSorted = !df.sort().queryExecution.sparkPlan.outputOrdering.isEmpty
 ```
-is `false`
-org.apache.spark.sql.catalyst.expressions
+
 #### Memory contoguousity (TODO validate)
 There is only a contiguousity of the `UnsafeRow`s' memory because an `RDD[UnsafeRow]` is a collection of `UnsafeRow`s' referencies that lives somewhere on-heap. This causes many CPU's caches defaults, each new record to process causing one new default.
 
@@ -434,5 +433,5 @@ Impossible to make it work because referencies copied are living in driver and u
 *BigQuery* excels for OLAP (OnLine Analytical Processing): scalable and efficient analytic querying on unchanging data (or just appending data).
 *BigTable* excels for OLTP (OnLine Transaction Processing): scalable and efficient read and write
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQwMTM3ODc1OSwtMTc2MjUzMDQ1NV19
+eyJoaXN0b3J5IjpbLTc1NTExMzM1MSwtMTc2MjUzMDQ1NV19
 -->
