@@ -93,9 +93,10 @@ implicit def StringToInt(s: String) = Integer.parseInt(s)
 ((i: Int) => i)("1")
 ```
 
-#### Decorator Pattern with implicit class
-Suppose we want to be able to call `.show()` on a `DeltaTable` (see [delta.io](delta.io)) that has not such a method. 
+#### Use Case: Decorator Pattern with implicit class
+Suppose we want to be able to call `.show()` on a `DeltaTable` (optionally refer to see [delta.io](delta.io)) that has not such a method. 
 
+Two approaches in OOP:
 In OOP might try to achieve this with a classic Decorator pattern:
 ```scala
 class ShowableDeltaTable(deltaTable: DeltaTable) extends DeltaTable{  
@@ -137,5 +138,6 @@ that allow the following to compile:
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAwMDU0NDczNywtODQxOTgyNjk4XX0=
+eyJoaXN0b3J5IjpbLTM5NjU1NTA2NywxMDAwNTQ0NzM3LC04ND
+E5ODI2OThdfQ==
 -->
