@@ -18,9 +18,9 @@
 | **executor's thread** | runs several job's tasks sequentially|
 | **applications** | runs several spark jobs & launches 1 worker by node by cluster node |
 | **job** | is a collection of stages organized in Directed Acyclic Graph (DAG) |
-| **stage** | is a DAG of steps starting and ending with a shuffle or I/O|
-|  |  |
-|  |  |
+| **stage** | is a DAG of steps whose roots and leafs are shuffles or I/Os|
+| **step** | runs as a collection of tasks|
+| **task** | operate on 1 RDD's partition |
 |  |  |
 
 1 **stage** $\rightarrow$ is a DAG of steps ending with a shuffle/exchange
@@ -917,6 +917,6 @@ I don't think this one is started. The design doc is not out yet.
 - [Coursera](https://www.coursera.org/lecture/big-data-analysis/joins-Nz9XW)
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI2NTkzNDEzMywxOTkzNzAyOTIwLC0zNj
-E3MDQzMThdfQ==
+eyJoaXN0b3J5IjpbOTc5MzI4NzgwLDE5OTM3MDI5MjAsLTM2MT
+cwNDMxOF19
 -->
