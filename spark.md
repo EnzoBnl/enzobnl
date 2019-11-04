@@ -96,9 +96,9 @@ There is only a contiguousity of the `UnsafeRow`s' memory because an `RDD[Unsafe
 /** Holds a cached logical plan and its data */
 case class CachedData(plan: LogicalPlan, cachedRepresentation: InMemoryRelation)
 ```
-
 This index don't holds any data directly.
-It help the `SparkSession` to remember not to clear the resulting `RDD[InternalRow]` of plans registered as "to cache" after their next execution.
+
+- Cached RDD are materialized as `RDD[CachedBatch]` that are optionally compressed columnar RDD
 
 - Caching is shared among `LogicalPlan`s with same result, in `CacheManager`:
 
@@ -922,5 +922,5 @@ I don't think this one is started. The design doc is not out yet.
 - [Coursera](https://www.coursera.org/lecture/big-data-analysis/joins-Nz9XW)
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM2MTcwNDMxOF19
+eyJoaXN0b3J5IjpbMTQ3MTk2MDk2MSwtMzYxNzA0MzE4XX0=
 -->
