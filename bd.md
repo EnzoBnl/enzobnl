@@ -419,8 +419,8 @@ val startingWithA = mutable.Set[String]()
 rdd.foreach((a: String) => if (a.toLowerCase().startsWith("a")) startingWithA += a)
 println(s"rdd contains ${startingWithA.size} records starting with 'a'")
 ```
-because `startingWithA` will not be shared among JVMs in cluster mode. 
-In client mode it will print 
+because `startingWithA` will not be shared among JVMs in cluster mode.
+In non local modes (
 
 Use [accumulators](https://spark.apache.org/docs/latest/rdd-programming-guide.html#accumulators) instead.
 
@@ -466,7 +466,7 @@ Use [accumulators](https://spark.apache.org/docs/latest/rdd-programming-guide.ht
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYzNzAwNzIzNSwtNjE0OTQ2MjUsMTAyMj
-U4MTYwNCwxODM0NTAwNzEzLDE0MTY3NDAyMTEsMTExOTI4Njcw
-NiwtNzU1MTEzMzUxLC0xNzYyNTMwNDU1XX0=
+eyJoaXN0b3J5IjpbMTYxNjIxNjc3LC02MTQ5NDYyNSwxMDIyNT
+gxNjA0LDE4MzQ1MDA3MTMsMTQxNjc0MDIxMSwxMTE5Mjg2NzA2
+LC03NTUxMTMzNTEsLTE3NjI1MzA0NTVdfQ==
 -->
