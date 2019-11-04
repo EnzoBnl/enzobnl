@@ -12,29 +12,16 @@
 
 |Component|Behavior|
 |--|--|
+| **cluster node** | is composed of several worker nodes |
+| **worker node** | launches 1 or several executors & is dedicated exclusively to its parent application |
+|**executor**| is a java application & may start several threads |
+| **executor's thread** | runs several job's tasks sequentially|
 |  |  |
 |  |  |
 |  |  |
 |  |  |
 |  |  |
 |  |  |
-|  |  |
-|  |  |
-|  |  |
-|  |  |
-
-1 **cluster node** $\rightarrow$ is composed of several worker nodes
-
-1 **worker node** $\rightarrow$ 
-- launches 1 or several executors
-- is dedicated exclusively to its parent application
-
-1 **executor** $\rightarrow$
-- is a java application (=1 JVM)
-- may start several threads
-
-1 **executor's thread** $\rightarrow$
-- runs several tasks
 
 1 **applications** $\rightarrow$
 - runs several spark jobs
@@ -936,6 +923,6 @@ I don't think this one is started. The design doc is not out yet.
 - [Coursera](https://www.coursera.org/lecture/big-data-analysis/joins-Nz9XW)
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU4ODU3Nzk4NSwxOTkzNzAyOTIwLC0zNj
-E3MDQzMThdfQ==
+eyJoaXN0b3J5IjpbNzE1NzIyMDA5LDE5OTM3MDI5MjAsLTM2MT
+cwNDMxOF19
 -->
