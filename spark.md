@@ -10,6 +10,19 @@
 # Spark
 ## Architecture vocabulary
 
+|Component|Behavior|
+|--|--|
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+|  |  |
+
 1 **cluster node** $\rightarrow$ is composed of several worker nodes
 
 1 **worker node** $\rightarrow$ 
@@ -923,5 +936,6 @@ I don't think this one is started. The design doc is not out yet.
 - [Coursera](https://www.coursera.org/lecture/big-data-analysis/joins-Nz9XW)
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk5MzcwMjkyMCwtMzYxNzA0MzE4XX0=
+eyJoaXN0b3J5IjpbLTU4ODU3Nzk4NSwxOTkzNzAyOTIwLC0zNj
+E3MDQzMThdfQ==
 -->
