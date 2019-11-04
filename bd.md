@@ -417,9 +417,9 @@ The following will only do what is expected if you run Spark in local mode:
 val rdd: RDD[String] = ???  
 val startingWithA = mutable.Set[String]()  
 rdd.foreach((a: String) => if (a.toLowerCase().startsWith("a")) startingWithA += a)
-println()
+println(s"rdd contains ${startingWithA.size} records starting with 'a'")
 ```
-because startingWithA will not be shared among JVMs in cluster mode references copied are living in driver's JVM and thus are unreachable by executors (Note that . Use [accumulators](https://spark.apache.org/docs/latest/rdd-programming-guide.html#accumulators) for this use cases to be rubust to deployment.
+because `startingWithA` will not be shared among JVMs in cluster mode references copied are living in driver's JVM and thus are unreachable by executors (Note that . Use [accumulators](https://spark.apache.org/docs/latest/rdd-programming-guide.html#accumulators) for this use cases to be rubust to deployment.
 
 ## Include a dependency from spark-package in maven's pom.xml
 
@@ -463,7 +463,7 @@ because startingWithA will not be shared among JVMs in cluster mode references c
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzE5NjIwNDcsLTYxNDk0NjI1LDEwMjI1OD
-E2MDQsMTgzNDUwMDcxMywxNDE2NzQwMjExLDExMTkyODY3MDYs
-LTc1NTExMzM1MSwtMTc2MjUzMDQ1NV19
+eyJoaXN0b3J5IjpbLTYyMzg3MzY5MiwtNjE0OTQ2MjUsMTAyMj
+U4MTYwNCwxODM0NTAwNzEzLDE0MTY3NDAyMTEsMTExOTI4Njcw
+NiwtNzU1MTEzMzUxLC0xNzYyNTMwNDU1XX0=
 -->
