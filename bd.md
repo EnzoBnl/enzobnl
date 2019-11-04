@@ -420,6 +420,7 @@ rdd.foreach((a: String) => if (a.toLowerCase().startsWith("a")) startingWithA +=
 println(s"rdd contains ${startingWithA.size} records starting with 'a'")
 ```
 because `startingWithA` will not be shared among JVMs in cluster mode. 
+In client mode it will print 
 
 Use [accumulators](https://spark.apache.org/docs/latest/rdd-programming-guide.html#accumulators) instead.
 
@@ -465,7 +466,7 @@ Use [accumulators](https://spark.apache.org/docs/latest/rdd-programming-guide.ht
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc5NzM5Mjk5MCwtNjE0OTQ2MjUsMTAyMj
+eyJoaXN0b3J5IjpbMTYzNzAwNzIzNSwtNjE0OTQ2MjUsMTAyMj
 U4MTYwNCwxODM0NTAwNzEzLDE0MTY3NDAyMTEsMTExOTI4Njcw
 NiwtNzU1MTEzMzUxLC0xNzYyNTMwNDU1XX0=
 -->
