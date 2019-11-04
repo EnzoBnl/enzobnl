@@ -6,8 +6,8 @@
 <script>document.body.style.background = "#f2f2f2";</script>
 <!--NOTE HEAD END-->
 
-## Spark
-### Architecture vocabulary
+# Spark
+## Architecture vocabulary
 
 1 **cluster node** $\rightarrow$ is composed of several worker nodes
 
@@ -37,11 +37,12 @@
 *DAG = Directed Acyclic Graph. They are used by spark to represent Jobs' stages or Stages' steps*
 
 
-### Usefull confs:
+## Usefull confs:
 ```scala
 SparkSession.builder.config("spark.default.parallelism", "12") // default = 200
 ```
-### Vector Type
+
+## Vector Type
 `org.apache.spark.ml.linalg.Vector`
 has the following spark sql type (note that values are in `ArrayType`):
 ```scala
@@ -57,11 +58,12 @@ StructField("indices", ArrayType(IntegerType, containsNull = false), nullable = 
 StructField("values", ArrayType(DoubleType, containsNull = false), nullable = true)))  
 }
 ```
-### DataFrame
+## DataFrame
 
 - Spark SQL first realease: Spark 1.0.0 (May 30, 2014) (see [Spark SQL's paper](https://dl.acm.org/citation.cfm?id=2742797) by Michael Armbrust)
  
-#### Memory format during processing
+### Memory format 
+#### during processing
 https://spoddutur.github.io/spark-notes/deep_dive_into_storage_formats.html
 
 - 1.0.0: There was no "DataFrame" but only `SchemaRDD`. It was a `RDD` of Java Objects on-heap (see spark [Spark's RDDs paper](http://people.csail.mit.edu/matei/papers/2012/nsdi_spark.pdf) by Matei Zaharia, 2011).
@@ -84,10 +86,12 @@ use `df.queryExecution.sparkPlan.outputOrdering` that returns a sequence of `org
 val dfIsSorted = !df.sort().queryExecution.sparkPlan.outputOrdering.isEmpty
 ```
 
-#### Memory contoguousity (TODO validate)
+#### contoguousity (TODO validate)
 There is only a contiguousity of the `UnsafeRow`s' memory because an `RDD[UnsafeRow]` is a collection of `UnsafeRow`s' referencies that lives somewhere on-heap. This causes many CPU's caches defaults, each new record to process causing one new default.
 
-#### Memory format when cached
+#### Caching
+Caching is shared among `LogicalPlan`s that result in
+
 When a dataset is cached using `def cache(): this.type = persist()` it is basically `persit`ed with default storageLevel which is `MEMORY_AND_DISK`:
 
 ```scala
@@ -443,6 +447,6 @@ Impossible to make it work because referencies copied are living in driver and u
 *BigQuery* excels for OLAP (OnLine Analytical Processing): scalable and efficient analytic querying on unchanging data (or just appending data).
 *BigTable* excels for OLTP (OnLine Transaction Processing): scalable and efficient read and write
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQxNjc0MDIxMSwxMTE5Mjg2NzA2LC03NT
-UxMTMzNTEsLTE3NjI1MzA0NTVdfQ==
+eyJoaXN0b3J5IjpbMzM4ODEyMDQxLDE0MTY3NDAyMTEsMTExOT
+I4NjcwNiwtNzU1MTEzMzUxLC0xNzYyNTMwNDU1XX0=
 -->
