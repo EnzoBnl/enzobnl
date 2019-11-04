@@ -94,9 +94,10 @@ implicit def StringToInt(s: String) = Integer.parseInt(s)
 ```
 
 #### Implicit conversions as Decorator patterns
-implicit class ShowableDeltaTable(deltaTable: DeltaTable){  
-  def show() = deltaTable.toDF.show()  
-}
+Suppose we want to be able to call `.show()` on a `DeltaTable` (see [delta.io](delta.io)) that has not such a method. In OOP we would have done a 
+```scala
+
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM5NDg5NjM1Ml19
+eyJoaXN0b3J5IjpbLTE2MzkxMzIyOTddfQ==
 -->
