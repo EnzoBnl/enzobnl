@@ -109,7 +109,7 @@ class ShowableDeltaTable(deltaTable: DeltaTable) extends DeltaTable{
 - Delegation pattern, in OOP and DataFrame
 This would be a mess. Cleaner approach is simple 
 
-Actually it's impossible since 
+Actually both Decorator and inheritance does not compile since DeltaTable's constructor is private, making it 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU2MTExMzk2OSwtODQxOTgyNjk4XX0=
+eyJoaXN0b3J5IjpbNTM2NTQ5ODUwLC04NDE5ODI2OThdfQ==
 -->
