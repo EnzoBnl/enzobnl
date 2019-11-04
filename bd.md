@@ -373,7 +373,7 @@ df.queryExecution.toRdd()
 
 
 #### OOP design
-`Dataset` can be viewed as a **functional builder** for a SparkPlan, implemented as a fluent API friendly to SQL users.
+`Dataset` can be viewed as a **functional builder** for a `SparkPlan`, implemented as a fluent API friendly to SQL users.
 
 ```scala
 val df2 = df1.select(...).withColumn(...).where(...)
@@ -433,6 +433,6 @@ Impossible to make it work because referencies copied are living in driver and u
 *BigQuery* excels for OLAP (OnLine Analytical Processing): scalable and efficient analytic querying on unchanging data (or just appending data).
 *BigTable* excels for OLTP (OnLine Transaction Processing): scalable and efficient read and write
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAxNDk3OTQ4NSwtNzU1MTEzMzUxLC0xNz
-YyNTMwNDU1XX0=
+eyJoaXN0b3J5IjpbNjQyOTQyOTkzLC03NTUxMTMzNTEsLTE3Nj
+I1MzA0NTVdfQ==
 -->
