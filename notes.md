@@ -10,6 +10,4 @@
 |[Distributed algorithms](da.html)|Leader election & Consensus, synchronous systems|
 |[Other CS notes](div.html)|Multi-threading, computer architecture, network...|
 |[Commands cheat sheet](cmd.html)|To write down some useful CLI stuff|
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIwNzI5MTgyMF19
--->
+
