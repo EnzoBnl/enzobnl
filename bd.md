@@ -415,7 +415,7 @@ SELECT
 It's impossible to do something like:
 ```scala
 val startingWithA = mutable.Set()
-rdd.map((a: String) => )
+rdd.foreach((a: String) => if (a.lower().startswith("a"))
 ```
 Impossible to make it work because references copied are living in driver's JVM and thus are unreachable by executors (Note that . Use [accumulators](https://spark.apache.org/docs/latest/rdd-programming-guide.html#accumulators) for this use cases to be rubust to deployment.
 
@@ -461,7 +461,7 @@ Impossible to make it work because references copied are living in driver's JVM 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY3MDg5MzUyMiwxMDIyNTgxNjA0LDE4Mz
-Q1MDA3MTMsMTQxNjc0MDIxMSwxMTE5Mjg2NzA2LC03NTUxMTMz
-NTEsLTE3NjI1MzA0NTVdfQ==
+eyJoaXN0b3J5IjpbLTYxNDk0NjI1LDEwMjI1ODE2MDQsMTgzND
+UwMDcxMywxNDE2NzQwMjExLDExMTkyODY3MDYsLTc1NTExMzM1
+MSwtMTc2MjUzMDQ1NV19
 -->
