@@ -116,11 +116,13 @@ class ShowableDeltaTable(deltaTable: DeltaTable) extends DeltaTable{
   def show() = {  
     this.toDF.show()  
   }  
+  // And many method delegating to `this.deltaTable` the calls to DeltaTable's methods that return a DeltaTable.
+  def as(alias: String): DeltaTable = new ShowableDeltaTable(df.as(alias), deltaLog)
 }
 ```
-- The methods returning a DeltaTable like `def as(alias: String): DeltaTable` are problematic in that they make us lose our 
+- With this solution the methods returning a `DeltaTable` like `def as(alias: String): DeltaTable` are problematic in that they make us lose our `ShowableDeltaTable` type.
 
 Actually both Decorator and inheritance does not compile since DeltaTable's constructor is private, making it 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMzMwODI4NSwtODQxOTgyNjk4XX0=
+eyJoaXN0b3J5IjpbLTExNzkzNzg3MDUsLTg0MTk4MjY5OF19
 -->
