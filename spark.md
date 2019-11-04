@@ -47,10 +47,12 @@ https://spoddutur.github.io/spark-notes/deep_dive_into_storage_formats.html
 
 - 1.0.0: There was no "DataFrame" but only `SchemaRDD`. It was a `RDD` of Java Objects on-heap (see spark [Spark's RDDs paper](http://people.csail.mit.edu/matei/papers/2012/nsdi_spark.pdf) by Matei Zaharia, 2011).
 - 1.3.0: `DataFrame` is born and is still and RDD of on-heap objects. `SchemaRDD` became an alias for smooth deprecation purpose.
+
 ```scala
 @deprecated("use DataFrame", "1.3.0")
   type SchemaRDD = DataFrame
 ```
+
 - Since 1.4.0 (June 11, 2015) it is `RDD` of `InternalRow`s that are **Binary Row-Based Format** known as **Tungsten Row Format**. `InternalRow`s:
   - allows **in-place elements access** that avoid serialization/deserialization --> just a little little bit slower than `RDD`s for element access but very very faster when it comes to shuffles.
   - store their data **off-heap** --> divide by 4 memory footprint compared to RDDs of Java objects.
@@ -89,6 +91,7 @@ There is only a contiguousity of the `UnsafeRow`s' memory because an `RDD[Unsafe
 ```
 
 - `sparkSession.sharedState.cacheManager.cacheQuery` stores plan and other information of the df to cache in an `IndexedSeq` of instances of: 
+
 ```scala
 /** Holds a cached logical plan and its data */
 case class CachedData(plan: LogicalPlan, cachedRepresentation: InMemoryRelation)
@@ -98,6 +101,7 @@ This index don't holds any data directly.
 It help the `SparkSession` to remember not to clear the resulting `RDD[InternalRow]` of plans registered as "to cache" after their next execution.
 
 - Caching is shared among `LogicalPlan`s with same result, in `CacheManager`:
+
 ```scala
 def lookupCachedData(plan: LogicalPlan): Option[CachedData] = readLock {  
   cachedData.asScala.find(cd => plan.sameResult(cd.plan))  
@@ -107,10 +111,13 @@ def lookupCachedData(plan: LogicalPlan): Option[CachedData] = readLock {
 - `unpersist()` is not lazy, it directly remove the dataframe cached data.
 
 - Caching operations are not purely functional:
+
 ```scala
 df2 = df.cache()
 ```
+
 is equivalent to
+
 ```scala
 df.cache()
 df2 = df
@@ -118,6 +125,7 @@ df2 = df
 
 #### is a DataFrame sorted ?
 use `df.queryExecution.sparkPlan.outputOrdering` that returns a sequence of `org.apache.spark.sql.catalyst.expressions.SortOrder`s.
+
 ```scala
 val dfIsSorted = !df.sort().queryExecution.sparkPlan.outputOrdering.isEmpty
 ```
@@ -794,6 +802,7 @@ SELECT src, count(*) FROM edges GROUP BY src
    +- *(1) HashAggregate(keys=[src#4L], functions=[partial_count(1)])
       +- *(1) InMemoryTableScan [src#4L]
 ```
+
 (* means WholeStageCodegen used)
 
 ### Sort  (SQL & Core)
@@ -809,6 +818,7 @@ The result of sort step is sorted partitions that does not overlap.
 ```sql
 SELECT src, count(*) as c FROM edges GROUP BY src ORDER BY c
 ```
+
 ```
 == Physical Plan ==
 *(3) Sort [c#18L DESC NULLS LAST], true, 0
@@ -837,6 +847,7 @@ See `BypassMergeSortShuffleWriter` which relies on `DiskBlockObjectWriter` & `Bl
 
 #### Exchanges planning (SQL)
 Exchange are carefully optimized done only if necessary:
+
 ```scala
 spark.conf.set("spark.sql.autoBroadcastJoinThreshold", 1)  
 val sch = StructType(Seq(StructField("id", LongType), StructField("v", LongType)))
@@ -862,6 +873,7 @@ df1.join(df2.repartition(col("id")).groupBy("id").count(), df1("id") === df2("id
 ```
 
 /!\ Unecessary exchange is triggered when renaming columns:
+
 ```scala
 edges.repartition(10, col("src")).groupBy("src").count().explain()  
 edges.repartition(10, col("src")).withColumnRenamed("src", "id").groupBy("id").count().explain()  
@@ -910,5 +922,5 @@ I don't think this one is started. The design doc is not out yet.
 - [Coursera](https://www.coursera.org/lecture/big-data-analysis/joins-Nz9XW)
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTU1OTgwOTIyXX0=
+eyJoaXN0b3J5IjpbLTM2MTcwNDMxOF19
 -->
