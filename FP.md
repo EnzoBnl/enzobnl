@@ -92,3 +92,11 @@ but this compiles just fine:
 implicit def StringToInt(s: String) = Integer.parseInt(s)
 ((i: Int) => i)("1")
 ```
+
+#### Implicit conversions as Decorator patterns
+implicit class ShowableDeltaTable(deltaTable: DeltaTable){  
+  def show() = deltaTable.toDF.show()  
+}
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMTM5NDg5NjM1Ml19
+-->
