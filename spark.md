@@ -10,29 +10,23 @@
 # Spark
 ## Architecture vocabulary
 
-|Component|Behavior|
+|Component|Desc|
 |--|--|
 | **cluster node** | is composed of several worker nodes |
 | **worker node** | launches 1 or several executors & is dedicated exclusively to its parent application |
 |**executor**| is a java application & may start several threads |
 | **executor's thread** | runs several job's tasks sequentially|
 | **applications** | runs several spark jobs & launches 1 worker by node by cluster node |
-| **job** | is a collection of stages organized in Directed Acyclic Graph (DAG) |
+| **job** | is a collection of stages organized in DAG |
 | **stage** | is a DAG of steps whose roots and leafs are shuffles or I/Os|
 | **step** | runs as a collection of tasks|
 | **task** | operate on 1 RDD's partition |
 |  |  |
 
-1 **stage** $\rightarrow$ is a DAG of steps ending with a shuffle/exchange
-
-1 **step** $\rightarrow$ runs as a collection of parallel tasks
-
-1 **task** $\rightarrow$ acts on 1 RDD's partition
-
 *DAG = Directed Acyclic Graph. They are used by spark to represent Jobs' stages or Stages' steps*
 
 
-## DataFrame
+## Spark SQL's Datasets & DataFrames
 
 - Spark SQL first realease: Spark 1.0.0 (May 30, 2014) (see [Spark SQL's paper](https://dl.acm.org/citation.cfm?id=2742797) by Michael Armbrust)
  
@@ -917,6 +911,6 @@ I don't think this one is started. The design doc is not out yet.
 - [Coursera](https://www.coursera.org/lecture/big-data-analysis/joins-Nz9XW)
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTc5MzI4NzgwLDE5OTM3MDI5MjAsLTM2MT
+eyJoaXN0b3J5IjpbNzQ3MDM2ODkwLDE5OTM3MDI5MjAsLTM2MT
 cwNDMxOF19
 -->
