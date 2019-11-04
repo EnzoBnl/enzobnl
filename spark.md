@@ -893,11 +893,12 @@ edges.repartition(10, col("src")).withColumnRenamed("src", "id").groupBy("id").c
 ```
 
 ## ouverture: Adaptative Execution (AE)
-https://docs.google.com/document/d/1mpVjvQZRAkD-Ggy6-hcjXtBPiQoVbZGe3dLnAKgtJ4k/edit
-https://software.intel.com/en-us/articles/spark-sql-adaptive-execution-at-100-tb
+[JIRA](https://issues.apache.org/jira/browse/SPARK-9850?jql=text%20~%20%22adaptative%20execution%22)
+[JIRA issue's Google Doc](https://docs.google.com/document/d/1mpVjvQZRAkD-Ggy6-hcjXtBPiQoVbZGe3dLnAKgtJ4k/edit)
+[Intel doc](https://software.intel.com/en-us/articles/spark-sql-adaptive-execution-at-100-tb)
 apache/spark master branch is about to be released in the next months as Spark 3.0.0.
 AE open since 1.6 has been merged 15/Jun/19. (Lead by # Carson Wang from Intel)
-https://issues.apache.org/jira/browse/SPARK-9850?jql=text%20~%20%22adaptative%20execution%22
+
 > a. dynamic parallelism  
 I believe [Carson Wang](https://issues.apache.org/jira/secure/ViewProfile.jspa?name=carsonwang) is working on it. He will create a new ticket when the PR is ready.
 
@@ -921,5 +922,5 @@ I don't think this one is started. The design doc is not out yet.
 - [Coursera](https://www.coursera.org/lecture/big-data-analysis/joins-Nz9XW)
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyODM5OTA1MDcsLTM2MTcwNDMxOF19
+eyJoaXN0b3J5IjpbLTEzMTU5ODcwMjgsLTM2MTcwNDMxOF19
 -->
