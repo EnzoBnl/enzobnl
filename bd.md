@@ -420,7 +420,7 @@ rdd.foreach((a: String) => if (a.toLowerCase().startsWith("a")) startingWithA +=
 println(s"rdd contains ${startingWithA.size} records starting with 'a'")
 ```
 because `startingWithA` will not be shared among JVMs in cluster mode.
-In non local modes (
+Actually in non local modes (both client and master), it will print 0 because the mutable.Set[String]() instance called for its size information lives inside the 
 
 Use [accumulators](https://spark.apache.org/docs/latest/rdd-programming-guide.html#accumulators) instead.
 
@@ -466,7 +466,7 @@ Use [accumulators](https://spark.apache.org/docs/latest/rdd-programming-guide.ht
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYxNjIxNjc3LC02MTQ5NDYyNSwxMDIyNT
-gxNjA0LDE4MzQ1MDA3MTMsMTQxNjc0MDIxMSwxMTE5Mjg2NzA2
-LC03NTUxMTMzNTEsLTE3NjI1MzA0NTVdfQ==
+eyJoaXN0b3J5IjpbLTIxMjQxMTc2MzEsLTYxNDk0NjI1LDEwMj
+I1ODE2MDQsMTgzNDUwMDcxMywxNDE2NzQwMjExLDExMTkyODY3
+MDYsLTc1NTExMzM1MSwtMTc2MjUzMDQ1NV19
 -->
