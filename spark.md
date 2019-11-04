@@ -115,11 +115,13 @@ is equivalent to
 df.cache()
 df2 = df
 ```
+
 #### is a DataFrame sorted ?
 use `df.queryExecution.sparkPlan.outputOrdering` that returns a sequence of `org.apache.spark.sql.catalyst.expressions.SortOrder`s.
 ```scala
 val dfIsSorted = !df.sort().queryExecution.sparkPlan.outputOrdering.isEmpty
 ```
+
 ### `DataFrame` vs other `Dataset[<not Row>]` steps of rows processing
 Short: DataFrame less secure but a bit faster.
 
@@ -894,5 +896,5 @@ I don't think this one is started. The design doc is not out yet.
 - [Coursera](https://www.coursera.org/lecture/big-data-analysis/joins-Nz9XW)
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUxMTEyNDExOF19
+eyJoaXN0b3J5IjpbLTExMDk3NjkwMDJdfQ==
 -->
