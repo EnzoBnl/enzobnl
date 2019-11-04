@@ -374,7 +374,7 @@ df.queryExecution.toRdd()
 
 #### OOP design
 It's an unclear design
-For me Dataset is a **builder** for a *SparkPlan* (decoupling of parameterization needed for building from created SparkPlan)  using an **immutable** (because a new sparkplan is created to go with a new dataframe at each modification: never "`return this;`") **Fluent Interface** :chaining methods possibility WITHOUT returning `this.type`,returning DataFrame for "select" for example & therefor violating OCP from SOLID principles$^{(1)}$, + meaning in the use of this chaining, not only keystrokes saving, also create pseudo sentences)
+For me Dataset is a **functional builder** for a *SparkPlan*.
 ```scala
 val df2 = df1.select(...).withColumn(...).where(...)
 ```
@@ -433,5 +433,6 @@ Impossible to make it work because referencies copied are living in driver and u
 *BigQuery* excels for OLAP (OnLine Analytical Processing): scalable and efficient analytic querying on unchanging data (or just appending data).
 *BigTable* excels for OLTP (OnLine Transaction Processing): scalable and efficient read and write
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc1NTExMzM1MSwtMTc2MjUzMDQ1NV19
+eyJoaXN0b3J5IjpbLTIxMTQ5NTkxNDYsLTc1NTExMzM1MSwtMT
+c2MjUzMDQ1NV19
 -->
