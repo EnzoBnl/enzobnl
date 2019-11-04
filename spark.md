@@ -16,8 +16,8 @@
 | **worker node** | launches 1 or several executors & is dedicated exclusively to its parent application |
 |**executor**| is a java application & may start several threads |
 | **executor's thread** | runs several job's tasks sequentially|
-|  |  |
-|  |  |
+| **applications** | runs several spark jobs & launches 1 worker by node by cluster node |
+| **job** | is a collection of stages organized in Directed Acyclic Graph  |
 |  |  |
 |  |  |
 |  |  |
@@ -923,6 +923,6 @@ I don't think this one is started. The design doc is not out yet.
 - [Coursera](https://www.coursera.org/lecture/big-data-analysis/joins-Nz9XW)
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzE1NzIyMDA5LDE5OTM3MDI5MjAsLTM2MT
+eyJoaXN0b3J5IjpbNTkwMTcxMzM3LDE5OTM3MDI5MjAsLTM2MT
 cwNDMxOF19
 -->
