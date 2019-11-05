@@ -8,14 +8,14 @@
 
 # Hadoop's MapReduce
 
-1 On mapper node:
+- On mapper node:
   1. *RECORD READER*
   2. *MAPPER*
   3. *PARTITIONER*
-  4. *SORT* 
+  4. *SORT*
   5. *COMBINER*
-2 SHUFFLE
-- On reduce nodes 
+- Shuffle
+- On reduce nodes:
   1. *FETCH*
   2. *MERGE/SORT*
   3. *REDUCE*
@@ -48,7 +48,8 @@
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUzOTk5OTg4LDE3NTI0ODYwNDcsLTYxND
-k0NjI1LDEwMjI1ODE2MDQsMTgzNDUwMDcxMywxNDE2NzQwMjEx
-LDExMTkyODY3MDYsLTc1NTExMzM1MSwtMTc2MjUzMDQ1NV19
+eyJoaXN0b3J5IjpbLTExMjcyODkyOTEsMTc1MjQ4NjA0NywtNj
+E0OTQ2MjUsMTAyMjU4MTYwNCwxODM0NTAwNzEzLDE0MTY3NDAy
+MTEsMTExOTI4NjcwNiwtNzU1MTEzMzUxLC0xNzYyNTMwNDU1XX
+0=
 -->
