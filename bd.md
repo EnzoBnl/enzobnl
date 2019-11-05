@@ -8,17 +8,21 @@
 
 # Hadoop's MapReduce
 
+Steps of a job containing a Mapper and a Reducer
+
 - On mapper node:
   1. *RECORD READER*
-  2. *MAPPER*
+  2. *MAP*
   3. *PARTITIONER*
   4. *SORT*
-  5. *COMBINER*
+  5. **COMBINER*
 - Shuffle
 - On reduce nodes:
   1. *FETCH*
   2. *MERGE/SORT*
   3. *REDUCE*
+
+*: optional
 
 
 # Delta Lake
@@ -48,8 +52,7 @@
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMjcyODkyOTEsMTc1MjQ4NjA0NywtNj
-E0OTQ2MjUsMTAyMjU4MTYwNCwxODM0NTAwNzEzLDE0MTY3NDAy
-MTEsMTExOTI4NjcwNiwtNzU1MTEzMzUxLC0xNzYyNTMwNDU1XX
-0=
+eyJoaXN0b3J5IjpbMjkwNzgyNDEwLDE3NTI0ODYwNDcsLTYxND
+k0NjI1LDEwMjI1ODE2MDQsMTgzNDUwMDcxMywxNDE2NzQwMjEx
+LDExMTkyODY3MDYsLTc1NTExMzM1MSwtMTc2MjUzMDQ1NV19
 -->
