@@ -6,6 +6,7 @@
 <script>document.body.style.background = "#f2f2f2";</script>
 <!--NOTE HEAD END-->
 
+# Map
 # Delta Lake
 # ElasticSearch
 ## Parallels with distributed relationnal databases
@@ -33,8 +34,7 @@
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzOTA3MjM0OCwxNzUyNDg2MDQ3LC02MT
-Q5NDYyNSwxMDIyNTgxNjA0LDE4MzQ1MDA3MTMsMTQxNjc0MDIx
-MSwxMTE5Mjg2NzA2LC03NTUxMTMzNTEsLTE3NjI1MzA0NTVdfQ
-==
+eyJoaXN0b3J5IjpbMzQwOTAxNTUsMTc1MjQ4NjA0NywtNjE0OT
+Q2MjUsMTAyMjU4MTYwNCwxODM0NTAwNzEzLDE0MTY3NDAyMTEs
+MTExOTI4NjcwNiwtNzU1MTEzMzUxLC0xNzYyNTMwNDU1XX0=
 -->
