@@ -6,7 +6,53 @@
 <script>document.body.style.background = "#f2f2f2";</script>
 <!--NOTE HEAD END-->
 
-# Map
+# Hadoop's MapReduce
+ORDER PARTITIONER -> COMBINER
+
+In Hadoop- The definitive guide 3rd edition, page 209, we have below words:
+
+Before it writes to disk, the thread first divides the data into partitions
+
+corresponding to the reducers that they will ultimately be sent to. Within each
+
+partition, the background thread performs an in-memory sort by key, and if
+
+there is a combiner function, it is run on the output of the sort. Running
+
+the combiner function makes for a more compact map output, so there is less
+
+data to write to local disk and to transfer to the reducer.
+
+Each time the memory buffer reaches the spill threshold, a new spill file is created,
+
+so after the map task has written its last output record, there could be several spill
+
+files. Before the task is finished, the spill files are merged into a single
+
+partitioned and sorted output file. The configuration property io.sort.factor
+
+controls the maximum number of streams to merge at once; the default is 10.
+
+If there are at least three spill files (set by the min.num.spills.for.combine
+
+property), the combiner is run again before the output file is written. Recall
+
+that combiners may be run repeatedly over th einput without affecting the final
+
+result. If there are only one or two spills, the potential reduction in map
+
+output size is not worth the overhead in invoking the combiner, so it is not run
+
+again for this map output.So combiner is run during merge spilled file.
+
+1. On mapper node:
+   a. RECORD READER 
+   2. MAPPER 
+  c. PARTITIONER 
+  d. SORT -> COMBINER) -> SHUFFLE -> ONREDUCENODES(Fetches -> Merges/Sort ->Reduce)
+2. z
+*
+
 # Delta Lake
 # ElasticSearch
 ## Parallels with distributed relationnal databases
@@ -34,7 +80,8 @@
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzQwOTAxNTUsMTc1MjQ4NjA0NywtNjE0OT
-Q2MjUsMTAyMjU4MTYwNCwxODM0NTAwNzEzLDE0MTY3NDAyMTEs
-MTExOTI4NjcwNiwtNzU1MTEzMzUxLC0xNzYyNTMwNDU1XX0=
+eyJoaXN0b3J5IjpbLTI2MzA3MjY3NCwxNzUyNDg2MDQ3LC02MT
+Q5NDYyNSwxMDIyNTgxNjA0LDE4MzQ1MDA3MTMsMTQxNjc0MDIx
+MSwxMTE5Mjg2NzA2LC03NTUxMTMzNTEsLTE3NjI1MzA0NTVdfQ
+==
 -->
