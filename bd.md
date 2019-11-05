@@ -17,45 +17,21 @@ corresponding to the reducers that they will ultimately be sent to. Within each
 
 partition, the background thread performs an in-memory sort by key, and if
 
-there is a combiner function, it is run on the output of the sort. Running
-
-the combiner function makes for a more compact map output, so there is less
-
-data to write to local disk and to transfer to the reducer.
-
-Each time the memory buffer reaches the spill threshold, a new spill file is created,
-
-so after the map task has written its last output record, there could be several spill
-
-files. Before the task is finished, the spill files are merged into a single
-
-partitioned and sorted output file. The configuration property io.sort.factor
-
-controls the maximum number of streams to merge at once; the default is 10.
-
-If there are at least three spill files (set by the min.num.spills.for.combine
-
-property), the combiner is run again before the output file is written. Recall
-
-that combiners may be run repeatedly over th einput without affecting the final
-
-result. If there are only one or two spills, the potential reduction in map
-
-output size is not worth the overhead in invoking the combiner, so it is not run
-
-again for this map output.So combiner is run during merge spilled file.
+there is a combiner function, it is run on the output of the sort. Running the combiner function makes for a more compact map output, so there is less data to write to local disk and to transfer to the reducer.
+Each time the memory buffer reaches the spill threshold, a new spill file is created, so after the map task has written its last output record, there could be several spill files. Before the task is finished, the spill files are merged into a single partitioned and sorted output file. The configuration property io.sort.factor controls the maximum number of streams to merge at once; the default is 10.
+If there are at least three spill files (set by the min.num.spills.for.combine property), the combiner is run again before the output file is written. Recall that combiners may be run repeatedly over th einput without affecting the final result. If there are only one or two spills, the potential reduction in map output size is not worth the overhead in invoking the combiner, so it is not run again for this map output.So combiner is run during merge spilled file.
 
 - On mapper node:
-  1. *RECORD READER *
+  1. *RECORD READER*
   2. *MAPPER*
   3. *PARTITIONER*
-  4. SORT 
-  5. COMBINER
+  4. *SORT* 
+  5. *COMBINER*
 - SHUFFLE
 - On reduce nodes 
-  1. FETCH
-  2. MERGE/SORT
-  3. REDUCE
+  1. *FETCH*
+  2. *MERGE/SORT*
+  3. *REDUCE*
 
 
 # Delta Lake
@@ -85,8 +61,8 @@ again for this map output.So combiner is run during merge spilled file.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NzU2MTg4MSwxNzUyNDg2MDQ3LC02MT
-Q5NDYyNSwxMDIyNTgxNjA0LDE4MzQ1MDA3MTMsMTQxNjc0MDIx
-MSwxMTE5Mjg2NzA2LC03NTUxMTMzNTEsLTE3NjI1MzA0NTVdfQ
-==
+eyJoaXN0b3J5IjpbLTEwODAwNDA0OTcsMTc1MjQ4NjA0NywtNj
+E0OTQ2MjUsMTAyMjU4MTYwNCwxODM0NTAwNzEzLDE0MTY3NDAy
+MTEsMTExOTI4NjcwNiwtNzU1MTEzMzUxLC0xNzYyNTMwNDU1XX
+0=
 -->
