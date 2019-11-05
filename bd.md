@@ -12,17 +12,18 @@ Steps of a job containing a Mapper and a Reducer
 
 - On mapper node:
   1. *RECORD READER*
-  2. *MAP*
+  2. *MAPPER*
   3. *PARTITIONER*
-  4. *SORT*
+  4. *Sort*
   5. **COMBINER*
-- Shuffle
+- *Shuffle*
 - On reduce nodes:
-  1. *FETCH*
-  2. *MERGE/SORT*
-  3. *REDUCE*
+  1. *Fetch*
+  2. *Merge/Sort*
+  3. *REDUCER*
 
 *: optional
+*UPPER CASE*: hook classes
 
 
 # Delta Lake
@@ -52,7 +53,8 @@ Steps of a job containing a Mapper and a Reducer
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjkwNzgyNDEwLDE3NTI0ODYwNDcsLTYxND
-k0NjI1LDEwMjI1ODE2MDQsMTgzNDUwMDcxMywxNDE2NzQwMjEx
-LDExMTkyODY3MDYsLTc1NTExMzM1MSwtMTc2MjUzMDQ1NV19
+eyJoaXN0b3J5IjpbMTY3Nzk3NDUxNiwxNzUyNDg2MDQ3LC02MT
+Q5NDYyNSwxMDIyNTgxNjA0LDE4MzQ1MDA3MTMsMTQxNjc0MDIx
+MSwxMTE5Mjg2NzA2LC03NTUxMTMzNTEsLTE3NjI1MzA0NTVdfQ
+==
 -->
