@@ -613,6 +613,8 @@ while(i < len(vertices) and j < len(edges)):  # O($\vert vertices \vert$ + $\ver
 https://github.com/vaquarkhan/Apache-Kafka-poc-and-notes/wiki/Apache-Spark-Join-guidelines-and-Performance-tuning
 https://databricks.com/session/optimizing-apache-spark-sql-joins
 
+Following DAGs are extracts from Jacek Laskowski's Internals of Apache spark
+
 Main types:
 - **Broadcasts**: base paper: *"cost-based optimization is only used to select join algorithms: for relations that are known to be small, Spark SQL uses a broadcast join, using a peer-to-peer broadcast facility available in Spark. (Table sizes are estimated if the table is cached in memory or comes from an external file, or if it is the result of a subquery with a LIMIT)"*
   (see `org.apache.spark.sql.execution.exchange.BroadcastExchangeExec`)
@@ -910,6 +912,6 @@ I don't think this one is started. The design doc is not out yet.
 - [Coursera](https://www.coursera.org/lecture/big-data-analysis/joins-Nz9XW)
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NzcyNjg0NDIsNzQ3MDM2ODkwLDE5OT
-M3MDI5MjAsLTM2MTcwNDMxOF19
+eyJoaXN0b3J5IjpbLTE4NDY3OTExOTUsLTE5NzcyNjg0NDIsNz
+Q3MDM2ODkwLDE5OTM3MDI5MjAsLTM2MTcwNDMxOF19
 -->
