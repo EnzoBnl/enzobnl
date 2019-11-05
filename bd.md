@@ -45,13 +45,18 @@ output size is not worth the overhead in invoking the combiner, so it is not run
 
 again for this map output.So combiner is run during merge spilled file.
 
-1. On mapper node:
-   a. RECORD READER 
-   2. MAPPER 
-  c. PARTITIONER 
-  d. SORT -> COMBINER) -> SHUFFLE -> ONREDUCENODES(Fetches -> Merges/Sort ->Reduce)
-2. z
-*
+- On mapper node:
+  1. *RECORD READER *
+  2. *MAPPER*
+  3. *PARTITIONER*
+  4. SORT 
+  5. COMBINER
+- SHUFFLE
+- On reduce nodes 
+  1. FETCH
+  2. MERGE/SORT
+  3. REDUCE
+
 
 # Delta Lake
 # ElasticSearch
@@ -80,7 +85,7 @@ again for this map output.So combiner is run during merge spilled file.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI2MzA3MjY3NCwxNzUyNDg2MDQ3LC02MT
+eyJoaXN0b3J5IjpbLTE4NzU2MTg4MSwxNzUyNDg2MDQ3LC02MT
 Q5NDYyNSwxMDIyNTgxNjA0LDE4MzQ1MDA3MTMsMTQxNjc0MDIx
 MSwxMTE5Mjg2NzA2LC03NTUxMTMzNTEsLTE3NjI1MzA0NTVdfQ
 ==
