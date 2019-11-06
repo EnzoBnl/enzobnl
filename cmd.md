@@ -95,6 +95,8 @@ source ~/.bashrc
 chmod a+x exampleName.AppImage
 // get historic back after reset and clear
 [shortcut] Ctrl + L
+// create a symlinl (symbolic link)
+sudo ln -s origin target
 ```
 ### CMD removes :
 ```bash
@@ -218,5 +220,6 @@ c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex 
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTk3MDY1MDcyLC0xMDMwNzcwMzk3XX0=
+eyJoaXN0b3J5IjpbLTEzNTgzMzkxNTAsNTk3MDY1MDcyLC0xMD
+MwNzcwMzk3XX0=
 -->
