@@ -7,7 +7,6 @@
 <!--NOTE HEAD END-->
 
 
-
 # Hadoop's MapReduce
 
 Steps of a job containing a Mapper and a Reducer
@@ -54,8 +53,8 @@ Steps of a job containing a Mapper and a Reducer
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTI5MTY5MDA1LC0xODcxNDU2ODc5LDE3NT
-I0ODYwNDcsLTYxNDk0NjI1LDEwMjI1ODE2MDQsMTgzNDUwMDcx
-MywxNDE2NzQwMjExLDExMTkyODY3MDYsLTc1NTExMzM1MSwtMT
-c2MjUzMDQ1NV19
+eyJoaXN0b3J5IjpbMTIxMjA0NDIyMywtMTg3MTQ1Njg3OSwxNz
+UyNDg2MDQ3LC02MTQ5NDYyNSwxMDIyNTgxNjA0LDE4MzQ1MDA3
+MTMsMTQxNjc0MDIxMSwxMTE5Mjg2NzA2LC03NTUxMTMzNTEsLT
+E3NjI1MzA0NTVdfQ==
 -->
