@@ -6,6 +6,12 @@
 <script>document.body.style.background = "#f2f2f2";</script>
 <!--NOTE HEAD END-->
 
+# Theorem
+
+# Data storages policies
+## ACID
+## BASE
+##
 
 # Hadoop's MapReduce
 
@@ -53,7 +59,7 @@ Steps of a job containing a Mapper and a Reducer
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIxMjA0NDIyMywtMTg3MTQ1Njg3OSwxNz
+eyJoaXN0b3J5IjpbLTIxMzMzMzc5NSwtMTg3MTQ1Njg3OSwxNz
 UyNDg2MDQ3LC02MTQ5NDYyNSwxMDIyNTgxNjA0LDE4MzQ1MDA3
 MTMsMTQxNjc0MDIxMSwxMTE5Mjg2NzA2LC03NTUxMTMzNTEsLT
 E3NjI1MzA0NTVdfQ==
