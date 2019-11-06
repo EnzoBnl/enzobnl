@@ -6,12 +6,16 @@
 <script>document.body.style.background = "#f2f2f2";</script>
 <!--NOTE HEAD END-->
 
-# PACELC Theorem
+# Theory
+## PACELC theorem
 Abadi's *"Consistency Tradeoffs in Modern Distributed Database System Design"*, 2012.
 
 P = (network) Partitioning = A sub-part of the nodes become unreachable.
-A = Availability = Requests are newer answered with an error
+
+A = Availability = Requests are newer answered with an error.
+
 C = Consistency = Requests get the latest version of what they ask for or an error.
+
 L = Latency = Requests get fast their result in its currently available state.
 
 **Theorem**: In case of *network Partition*, the system remains *Available* **OR** *Consistent*, else it ensures *low Latency* **OR** *Consistency*
@@ -74,9 +78,9 @@ Steps of a job containing a Mapper and a Reducer
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NTk1NDIxNjMsMTc0MzE2OTAwNCwtNz
-M5ODUyOTM1LDIwMTkzMDQ4OTcsLTE4NzE0NTY4NzksMTc1MjQ4
-NjA0NywtNjE0OTQ2MjUsMTAyMjU4MTYwNCwxODM0NTAwNzEzLD
-E0MTY3NDAyMTEsMTExOTI4NjcwNiwtNzU1MTEzMzUxLC0xNzYy
-NTMwNDU1XX0=
+eyJoaXN0b3J5IjpbLTUzOTgzNjUzOCwtMTg1OTU0MjE2MywxNz
+QzMTY5MDA0LC03Mzk4NTI5MzUsMjAxOTMwNDg5NywtMTg3MTQ1
+Njg3OSwxNzUyNDg2MDQ3LC02MTQ5NDYyNSwxMDIyNTgxNjA0LD
+E4MzQ1MDA3MTMsMTQxNjc0MDIxMSwxMTE5Mjg2NzA2LC03NTUx
+MTMzNTEsLTE3NjI1MzA0NTVdfQ==
 -->
