@@ -12,7 +12,7 @@ Abadi's *"Consistency Tradeoffs in Modern Distributed Database System Design"*, 
 P = (network) Partitioning = A sub-part of the nodes become unreachable.
 A = Availability = Requests are newer answered with an error
 C = Consistency = Requests get the latest version of what they ask for or an error.
-L = Latency = Requests get fast the result *as it is* .
+L = Latency = Requests get fast their result in its currently available state.
 
 **Theorem**: In case of *network Partition*, the system remains *Available* **OR** *Consistent*, else it ensures *low Latency* **OR** *Consistency*
 
@@ -74,9 +74,9 @@ Steps of a job containing a Mapper and a Reducer
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY2NDE4NDIwMiwxNzQzMTY5MDA0LC03Mz
-k4NTI5MzUsMjAxOTMwNDg5NywtMTg3MTQ1Njg3OSwxNzUyNDg2
-MDQ3LC02MTQ5NDYyNSwxMDIyNTgxNjA0LDE4MzQ1MDA3MTMsMT
-QxNjc0MDIxMSwxMTE5Mjg2NzA2LC03NTUxMTMzNTEsLTE3NjI1
-MzA0NTVdfQ==
+eyJoaXN0b3J5IjpbLTE4NTk1NDIxNjMsMTc0MzE2OTAwNCwtNz
+M5ODUyOTM1LDIwMTkzMDQ4OTcsLTE4NzE0NTY4NzksMTc1MjQ4
+NjA0NywtNjE0OTQ2MjUsMTAyMjU4MTYwNCwxODM0NTAwNzEzLD
+E0MTY3NDAyMTEsMTExOTI4NjcwNiwtNzU1MTEzMzUxLC0xNzYy
+NTMwNDU1XX0=
 -->
