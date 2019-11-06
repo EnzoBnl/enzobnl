@@ -10,10 +10,10 @@
 
 ACID: PC/EC
 
-|X|PC|
-|--|--|
-|  |  |
-
+||PC|PA|
+|--|--|--|
+|EC|  ||
+|EL|  |[DynamoDB](https://en.wikipedia.org/wiki/Amazon_DynamoDB "Amazon DynamoDB"), [Cassandra](https://en.wikipedia.org/wiki/Apache_Cassandra "Apache Cassandra"), [Riak](https://en.wikipedia.org/wiki/Riak "Riak"), [Cosmos DB](https://en.wikipedia.org/wiki/Cosmos_DB "Cosmos DB")|
 
 
 # Hadoop's MapReduce
@@ -62,8 +62,8 @@ Steps of a job containing a Mapper and a Reducer
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUyMTY4NDY0NCwtMTg3MTQ1Njg3OSwxNz
-UyNDg2MDQ3LC02MTQ5NDYyNSwxMDIyNTgxNjA0LDE4MzQ1MDA3
-MTMsMTQxNjc0MDIxMSwxMTE5Mjg2NzA2LC03NTUxMTMzNTEsLT
-E3NjI1MzA0NTVdfQ==
+eyJoaXN0b3J5IjpbLTE4MzU0NDI4MjAsLTE4NzE0NTY4NzksMT
+c1MjQ4NjA0NywtNjE0OTQ2MjUsMTAyMjU4MTYwNCwxODM0NTAw
+NzEzLDE0MTY3NDAyMTEsMTExOTI4NjcwNiwtNzU1MTEzMzUxLC
+0xNzYyNTMwNDU1XX0=
 -->
