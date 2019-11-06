@@ -10,11 +10,9 @@
 Abadi's *"Consistency Tradeoffs in Modern Distributed Database System Design"*, 2012.
 
 P = Partition Tolerance: A sub-part of the nodes become unreachable.
-A = Availab
+A = Availability
 
-- in case of P: Partition Tolerance
-  - A: Availability
-  - C: Consistency
+- in case of *partition*, the system remains *available* **OR** (exclusive or) *consistent*. In 
 - E: Else
   - Latency
   - Consistency
@@ -76,7 +74,7 @@ Steps of a job containing a Mapper and a Reducer
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk2MTk3MjQyNiwtNzM5ODUyOTM1LDIwMT
+eyJoaXN0b3J5IjpbLTMwOTU3NzMyOSwtNzM5ODUyOTM1LDIwMT
 kzMDQ4OTcsLTE4NzE0NTY4NzksMTc1MjQ4NjA0NywtNjE0OTQ2
 MjUsMTAyMjU4MTYwNCwxODM0NTAwNzEzLDE0MTY3NDAyMTEsMT
 ExOTI4NjcwNiwtNzU1MTEzMzUxLC0xNzYyNTMwNDU1XX0=
