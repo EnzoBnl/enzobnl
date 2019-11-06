@@ -7,14 +7,11 @@
 <!--NOTE HEAD END-->
 
 # PACELC Theorem
-Abadi's *"Consistency Tradeoffs in Modern Distributed Database System Design"*:
-
- 
-ACID: PC/EC
+Abadi's *"Consistency Tradeoffs in Modern Distributed Database System Design"*, 2012.
 
 ||PC|PA|
 |--|--|--|
-|EC|  ||
+|EC|Fully ACID systems: [VoltDB](https://en.wikipedia.org/wiki/VoltDB "VoltDB")/H-Store, Megastore and [MySQL Cluster](https://en.wikipedia.org/wiki/MySQL_Cluster "MySQL Cluster")||
 |EL|  |[DynamoDB](https://en.wikipedia.org/wiki/Amazon_DynamoDB "Amazon DynamoDB"), [Cassandra](https://en.wikipedia.org/wiki/Apache_Cassandra "Apache Cassandra"), [Riak](https://en.wikipedia.org/wiki/Riak "Riak"), [Cosmos DB](https://en.wikipedia.org/wiki/Cosmos_DB "Cosmos DB")|
 
 
@@ -64,7 +61,7 @@ Steps of a job containing a Mapper and a Reducer
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTYzMTg0NTY0LC0xODcxNDU2ODc5LDE3NT
+eyJoaXN0b3J5IjpbODc1MTg0NTYyLC0xODcxNDU2ODc5LDE3NT
 I0ODYwNDcsLTYxNDk0NjI1LDEwMjI1ODE2MDQsMTgzNDUwMDcx
 MywxNDE2NzQwMjExLDExMTkyODY3MDYsLTc1NTExMzM1MSwtMT
 c2MjUzMDQ1NV19
