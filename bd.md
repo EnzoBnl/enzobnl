@@ -7,7 +7,9 @@
 <!--NOTE HEAD END-->
 
 # PACELC Theorem
+Abadi's *"Consistency Tradeoffs in Modern Distributed Database System Design"*:
 
+ 
 ACID: PC/EC
 
 ||PC|PA|
@@ -62,8 +64,8 @@ Steps of a job containing a Mapper and a Reducer
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MzU0NDI4MjAsLTE4NzE0NTY4NzksMT
-c1MjQ4NjA0NywtNjE0OTQ2MjUsMTAyMjU4MTYwNCwxODM0NTAw
-NzEzLDE0MTY3NDAyMTEsMTExOTI4NjcwNiwtNzU1MTEzMzUxLC
-0xNzYyNTMwNDU1XX0=
+eyJoaXN0b3J5IjpbOTYzMTg0NTY0LC0xODcxNDU2ODc5LDE3NT
+I0ODYwNDcsLTYxNDk0NjI1LDEwMjI1ODE2MDQsMTgzNDUwMDcx
+MywxNDE2NzQwMjExLDExMTkyODY3MDYsLTc1NTExMzM1MSwtMT
+c2MjUzMDQ1NV19
 -->
