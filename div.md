@@ -21,7 +21,7 @@
 3. Web APIs building: RESTful principles...
 4. Master 1 to 3 specialized frameworks: Node.js, React, Spark, Kubernetes, Unity...
 5. Practice with CI/CD & cloud
-6. 
+
 ## Asymptotic analysis
 
 $f(n)=O(g(n))\iff \exists n_o \in N, \exists c\in R, \forall n>n_o,\vert\frac{f(n)}{g(n)}\vert<=c$
@@ -245,5 +245,5 @@ The difference is in which libraries are used. In order to use OS stuff (I/O for
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY1ODI2MTg0MF19
+eyJoaXN0b3J5IjpbMjcxNjE3ODI2XX0=
 -->
