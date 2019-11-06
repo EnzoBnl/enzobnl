@@ -6,6 +6,8 @@
 <script>document.body.style.background = "#f2f2f2";</script>
 <!--NOTE HEAD END-->
 
+
+
 # Hadoop's MapReduce
 
 Steps of a job containing a Mapper and a Reducer
@@ -52,8 +54,8 @@ Steps of a job containing a Mapper and a Reducer
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NzE0NTY4NzksMTc1MjQ4NjA0NywtNj
-E0OTQ2MjUsMTAyMjU4MTYwNCwxODM0NTAwNzEzLDE0MTY3NDAy
-MTEsMTExOTI4NjcwNiwtNzU1MTEzMzUxLC0xNzYyNTMwNDU1XX
-0=
+eyJoaXN0b3J5IjpbOTI5MTY5MDA1LC0xODcxNDU2ODc5LDE3NT
+I0ODYwNDcsLTYxNDk0NjI1LDEwMjI1ODE2MDQsMTgzNDUwMDcx
+MywxNDE2NzQwMjExLDExMTkyODY3MDYsLTc1NTExMzM1MSwtMT
+c2MjUzMDQ1NV19
 -->
