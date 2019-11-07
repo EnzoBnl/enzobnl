@@ -44,16 +44,16 @@ Execution steps of a MapReduce job containing 1 Mapper and 1 Reducer
      - maps through records
      - produces 0 to *n* output record(s) for each input record
   3. **Partitioner**: 
-     - organizes mapper output's records into partitions
+     - organizes mapper output's records into partitions, based on their *key*
      - each partition is intended to be fetched by a single and different reducer node.
-  4. *Sort*: Sort records on *key* within each partitions.
+  4. *Sort*: Sort records on *key* within each partitions
   5. (optional) ***"Combiner"*** **Reducer**: an intermediate reducer called on each mapper node. 
      - within each sorted partition, for each different key, combiner produces an output record having the same type as Mapper ones
      - combiner reduces the size of partitions and save network bandwidth
 - Reduce phase on reduce nodes:
   1. *Fetch*: Each reducer node gather its partitions (written by map phase to HDFS), mainly through network connections.
   2. *Sort-Merge*: Merge pre-sorted partition chunks into a final sorted reducer input partition.
-  3. **Reducer**: Efficiently produce reduce output record for each *key*, thanks to its sorted input records.
+  3. **Reducer**: Produce reduce output record for each *key*. It leverages that its input is sorted.
 
 
 Note: steps **in bold** rely on *hook classes* exposed to the user for extension.
@@ -84,10 +84,10 @@ Note: steps **in bold** rely on *hook classes* exposed to the user for extension
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA3MTAxNDA2MSwyMDkzMjM1NTg4LDE4MT
-EzMTExOTYsLTUzOTgzNjUzOCwtMTg1OTU0MjE2MywxNzQzMTY5
-MDA0LC03Mzk4NTI5MzUsMjAxOTMwNDg5NywtMTg3MTQ1Njg3OS
-wxNzUyNDg2MDQ3LC02MTQ5NDYyNSwxMDIyNTgxNjA0LDE4MzQ1
-MDA3MTMsMTQxNjc0MDIxMSwxMTE5Mjg2NzA2LC03NTUxMTMzNT
-EsLTE3NjI1MzA0NTVdfQ==
+eyJoaXN0b3J5IjpbLTE2OTYwNjM1NDYsMjA5MzIzNTU4OCwxOD
+ExMzExMTk2LC01Mzk4MzY1MzgsLTE4NTk1NDIxNjMsMTc0MzE2
+OTAwNCwtNzM5ODUyOTM1LDIwMTkzMDQ4OTcsLTE4NzE0NTY4Nz
+ksMTc1MjQ4NjA0NywtNjE0OTQ2MjUsMTAyMjU4MTYwNCwxODM0
+NTAwNzEzLDE0MTY3NDAyMTEsMTExOTI4NjcwNiwtNzU1MTEzMz
+UxLC0xNzYyNTMwNDU1XX0=
 -->
