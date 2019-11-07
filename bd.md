@@ -32,17 +32,17 @@ A transaction is a sequence of database operations that satisfies the following 
 
 # Hadoop's MapReduce
 
-teps of a MapReduce job containing 1 Mapper and 1 Reducer
+Execution steps of a MapReduce job containing 1 Mapper and 1 Reducer
 
-- On mapper node:
+- Map phase on mapper nodes:
   1. **RecordReader**
   2. **Mapper**
   3. **Partitioner**
   4. *Sort*
   5. (optional) **Combiner**: 
-- On reduce nodes:
-  1. *Fetch*
-  2. *Merge/Sort*
+- Reduce phase on reduce nodes:
+  1. *Fetch*: Access to Map phase output 
+  2. *Sort-Merge*
   3. **Reducer**
 
 
@@ -74,7 +74,7 @@ teps of a MapReduce job containing 1 Mapper and 1 Reducer
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAzOTk3NTEyLC01Mzk4MzY1MzgsLTE4NT
+eyJoaXN0b3J5IjpbNTc2MDIwMzg3LC01Mzk4MzY1MzgsLTE4NT
 k1NDIxNjMsMTc0MzE2OTAwNCwtNzM5ODUyOTM1LDIwMTkzMDQ4
 OTcsLTE4NzE0NTY4NzksMTc1MjQ4NjA0NywtNjE0OTQ2MjUsMT
 AyMjU4MTYwNCwxODM0NTAwNzEzLDE0MTY3NDAyMTEsMTExOTI4
