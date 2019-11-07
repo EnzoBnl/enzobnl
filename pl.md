@@ -12,13 +12,13 @@
 ```java
 @FunctionalInterface
 interface Square{
-  String name = "greatSquare";
+  String NAME = "greatSquare";
   int calculate(int x);
   default int calculateFromString(String s){
     return this.calculate(Integer.parseInt(s));
   }
   static void printName(){
-    System.out.println("I'm Square interface named" + Square.name);
+    System.out.println("I'm Square interface named" + Square.NAME);
   }
 }
 ```
@@ -39,8 +39,8 @@ Note: both this 2 lines would have compiled if `Square ` were an *abstract class
 
 #### interface attribute
 Attributes cannot receive any modifier and are by default `public static final`. Like for methods, staticity in interface attribute means that it cannot be reached from an instance:
-- `sq.name;` does not compile
-- `Square.printName();` compiles
+- `sq.NAME;` does not compile
+- `Square.NAME;` compiles
 
 ### Diamond problem
 
@@ -334,5 +334,5 @@ from overrides import overrides  # decorator '@overrides'
 from abc import ABC, abstractmethod  #  'class C(ABC)' is abstract and decorator '@abstractmethod' usable.
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MTA5NDU2MDRdfQ==
+eyJoaXN0b3J5IjpbLTE4MDIxNjgyXX0=
 -->
