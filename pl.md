@@ -34,7 +34,7 @@ In fact `@FunctionalInterface` is here to guarantee that the functional interfac
  [(post)](https://stackoverflow.com/a/19998827/6580080)
  
 - When doubting, use interface with defaults method in priority, because it has more constraints leading to more compiler optimizations
-- 
+- Interfaces with default methods can be used as block o *Scala Mixins*
 
 ### `static` methods
 On interfaces, `static` method can only:
@@ -340,6 +340,6 @@ from overrides import overrides  # decorator '@overrides'
 from abc import ABC, abstractmethod  #  'class C(ABC)' is abstract and decorator '@abstractmethod' usable.
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MzMzNDA3ODIsLTE1OTI5ODM0NjMsLT
-E4MDIxNjgyXX0=
+eyJoaXN0b3J5IjpbLTk1MTAxNDQwMSwtMTU5Mjk4MzQ2MywtMT
+gwMjE2ODJdfQ==
 -->
