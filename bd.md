@@ -31,9 +31,7 @@ A transaction is a sequence of database operations that satisfies the following 
 - **[Durability]** A transaction is ***durable*** in that once it it fully committed, it will remain committed even in case of system failures (power off, network partitioning...).
 
 # Hadoop's MapReduce
-// TODO reference HDFS Writes
-
-Execution steps of a MapReduce job containing 1 Mapper and 1 Reducer
+Execution steps of a MapReduce job containing 1 Mapper and 1 Reducer (steps **in bold** rely on *hook classes* exposed to the user for extension):
 
 - Map phase on mapper nodes:
   1. **RecordReader**: 
@@ -44,7 +42,7 @@ Execution steps of a MapReduce job containing 1 Mapper and 1 Reducer
      - maps through records
      - produces 0 to *n* output record(s) for each input record
   3. **Partitioner**: 
-     - organizes mapper output's records into partitions, based on their *key*
+     - organizes mapper output's records into partitions, based on their *keys*.
      - each partition is intended to be fetched by a single and different reducer node.
   4. *Sort*: Sort records on *key* within each partitions
   5. (optional) ***"Combiner"*** **Reducer**: an intermediate reducer called on each mapper node. 
@@ -54,9 +52,6 @@ Execution steps of a MapReduce job containing 1 Mapper and 1 Reducer
   1. *Fetch*: Each reducer node gather its partitions (written by map phase to HDFS), mainly through network connections.
   2. *Sort-Merge*: Merge pre-sorted partition chunks into a final sorted reducer input partition.
   3. **Reducer**: Produce reduce output record for each *key*. It leverages that its input is sorted.
-
-
-Note: steps **in bold** rely on *hook classes* exposed to the user for extension.
 
 # ElasticSearch
 ## Parallels with distributed relationnal databases
@@ -84,7 +79,7 @@ Note: steps **in bold** rely on *hook classes* exposed to the user for extension
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2OTYwNjM1NDYsMjA5MzIzNTU4OCwxOD
+eyJoaXN0b3J5IjpbLTEwNjY2ODAwODgsMjA5MzIzNTU4OCwxOD
 ExMzExMTk2LC01Mzk4MzY1MzgsLTE4NTk1NDIxNjMsMTc0MzE2
 OTAwNCwtNzM5ODUyOTM1LDIwMTkzMDQ4OTcsLTE4NzE0NTY4Nz
 ksMTc1MjQ4NjA0NywtNjE0OTQ2MjUsMTAyMjU4MTYwNCwxODM0
