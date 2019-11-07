@@ -8,10 +8,11 @@
 
 # Java
 ## Interfaces (java8)
-### functional interface, `default` and `static`
+### functional interface, `default`, `static`, attribute
 ```java
 @FunctionalInterface
 interface Square{
+  String name = "greatSquare";
   int calculate(int x);
   default int calculateFromString(String s){
     return this.calculate(Integer.parseInt(s));
@@ -25,6 +26,7 @@ allows to get a concrete implementation of Square interface by implementing its 
 ```java
 Square sq = (int x) -> x*x;
 ```
+
 In fact `@FunctionalInterface` is here to guarantee that the functional interface **has only one abstract method**.
 #### default vs abstract method in abstract classes ? [(post)](https://stackoverflow.com/a/19998827/6580080)
 Use interface whenever you can, it's like a **DIP** applied to library writing instead of client writing.
@@ -34,6 +36,9 @@ On interfaces, `static` method can only:
 - `Square.printName();` compiles
 
 Note: both this 2 lines would have compiled if `Square ` were an *abstract class*.
+
+#### interface's attribute
+
 ### Diamond problem
 
 # Scala
@@ -325,3 +330,6 @@ repr
 from overrides import overrides  # decorator '@overrides' 
 from abc import ABC, abstractmethod  #  'class C(ABC)' is abstract and decorator '@abstractmethod' usable.
 ```
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMTc5MTM2NjE3Nl19
+-->
