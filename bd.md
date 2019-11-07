@@ -51,12 +51,12 @@ Execution steps of a MapReduce job containing 1 Mapper and 1 Reducer
      - within each sorted partition, for each different key, combiner produces an output record having the same type as Mapper ones
      - combiner reduces the size of partitions and save network bandwidth
 - Reduce phase on reduce nodes:
-  1. *Fetch*: Each reducer node gather its partitions,  mainly through network connections.
+  1. *Fetch*: Each reducer node gather its partitions from HDFS,  mainly through network connections.
   2. *Sort-Merge*: Gather its inputMerge sorted partitions coming
   3. **Reducer**: Leverage the previous sortings (on mappers and during merge on reducer) to efficiently output a record for each different key
 
 
-Note: steps **in bold** rely on "hook classes" that are exposed to the user for extension.
+Note: steps **in bold** rely on *hook classes* exposed to the user for extension.
 
 # ElasticSearch
 ## Parallels with distributed relationnal databases
@@ -84,10 +84,10 @@ Note: steps **in bold** rely on "hook classes" that are exposed to the user for 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0ODU3MjAwLDIwOTMyMzU1ODgsMTgxMT
-MxMTE5NiwtNTM5ODM2NTM4LC0xODU5NTQyMTYzLDE3NDMxNjkw
-MDQsLTczOTg1MjkzNSwyMDE5MzA0ODk3LC0xODcxNDU2ODc5LD
-E3NTI0ODYwNDcsLTYxNDk0NjI1LDEwMjI1ODE2MDQsMTgzNDUw
-MDcxMywxNDE2NzQwMjExLDExMTkyODY3MDYsLTc1NTExMzM1MS
-wtMTc2MjUzMDQ1NV19
+eyJoaXN0b3J5IjpbLTUyMjMzNTAzOCwyMDkzMjM1NTg4LDE4MT
+EzMTExOTYsLTUzOTgzNjUzOCwtMTg1OTU0MjE2MywxNzQzMTY5
+MDA0LC03Mzk4NTI5MzUsMjAxOTMwNDg5NywtMTg3MTQ1Njg3OS
+wxNzUyNDg2MDQ3LC02MTQ5NDYyNSwxMDIyNTgxNjA0LDE4MzQ1
+MDA3MTMsMTQxNjc0MDIxMSwxMTE5Mjg2NzA2LC03NTUxMTMzNT
+EsLTE3NjI1MzA0NTVdfQ==
 -->
