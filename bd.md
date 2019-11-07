@@ -38,7 +38,7 @@ Execution steps of a MapReduce job containing 1 Mapper and 1 Reducer
   1. **RecordReader**: 
      - reads the input file's blocks from HDFS
      - divides them in *key->value* units called records
-     - each block's records will be passed to a mapper
+     - each block's records will be passed to the same mapper
   2. **Mapper**: There is by default as many mappers as input file's blocks.
      - maps through records
      - produces 0 to *n* output record(s) for each input record
@@ -47,7 +47,7 @@ Execution steps of a MapReduce job containing 1 Mapper and 1 Reducer
      - each partition is intended to be fetched by a single and different reducer node.
   4. *Sort*: Sort records on *key* within each partitions.
   5. (optional) ***"Combiner"*** **Reducer**: an intermediate reducer called on each mapper node. 
-     - within each sorted partition, for each different key, combiner produces a combiner output record having the same type as Mapper ones
+     - within each sorted partition, for each different key, combiner produces an output record having the same type as Mapper ones
      - combiner reduces the size of partitions and save network bandwidth
 - Reduce phase on reduce nodes:
   1. *Fetch*: Access (mainly through network connection) to Map phase output written on HDFS.
@@ -83,10 +83,10 @@ Execution steps of a MapReduce job containing 1 Mapper and 1 Reducer
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA5MzIzNTU4OCwxODExMzExMTk2LC01Mz
-k4MzY1MzgsLTE4NTk1NDIxNjMsMTc0MzE2OTAwNCwtNzM5ODUy
-OTM1LDIwMTkzMDQ4OTcsLTE4NzE0NTY4NzksMTc1MjQ4NjA0Ny
-wtNjE0OTQ2MjUsMTAyMjU4MTYwNCwxODM0NTAwNzEzLDE0MTY3
-NDAyMTEsMTExOTI4NjcwNiwtNzU1MTEzMzUxLC0xNzYyNTMwND
-U1XX0=
+eyJoaXN0b3J5IjpbNTUzNDE4OTAzLDIwOTMyMzU1ODgsMTgxMT
+MxMTE5NiwtNTM5ODM2NTM4LC0xODU5NTQyMTYzLDE3NDMxNjkw
+MDQsLTczOTg1MjkzNSwyMDE5MzA0ODk3LC0xODcxNDU2ODc5LD
+E3NTI0ODYwNDcsLTYxNDk0NjI1LDEwMjI1ODE2MDQsMTgzNDUw
+MDcxMywxNDE2NzQwMjExLDExMTkyODY3MDYsLTc1NTExMzM1MS
+wtMTc2MjUzMDQ1NV19
 -->
