@@ -14,7 +14,7 @@ Abadi's *"Consistency Tradeoffs in Modern Distributed Database System Design"*, 
 
 - P = (network) Partitioning = A sub-part of the nodes become unreachable.
 - A = Availability = Requests are newer answered with an error.
-- C = Consistency = Requests get the latest version of what they ask for or an error.
+- C = Consistency = Requests get the latest version of what they ask for or an error/timeout.
 - E = Else
 - L = Latency = Requests get fast their result in its currently available state.
 
@@ -82,10 +82,10 @@ Execution steps of a MapReduce job containing 1 Mapper and 1 Reducer (steps **in
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjU2MTc5OTU2LC0xMDY2NjgwMDg4LDIwOT
-MyMzU1ODgsMTgxMTMxMTE5NiwtNTM5ODM2NTM4LC0xODU5NTQy
-MTYzLDE3NDMxNjkwMDQsLTczOTg1MjkzNSwyMDE5MzA0ODk3LC
-0xODcxNDU2ODc5LDE3NTI0ODYwNDcsLTYxNDk0NjI1LDEwMjI1
-ODE2MDQsMTgzNDUwMDcxMywxNDE2NzQwMjExLDExMTkyODY3MD
-YsLTc1NTExMzM1MSwtMTc2MjUzMDQ1NV19
+eyJoaXN0b3J5IjpbLTE2MTc2OTc1OCwtMTA2NjY4MDA4OCwyMD
+kzMjM1NTg4LDE4MTEzMTExOTYsLTUzOTgzNjUzOCwtMTg1OTU0
+MjE2MywxNzQzMTY5MDA0LC03Mzk4NTI5MzUsMjAxOTMwNDg5Ny
+wtMTg3MTQ1Njg3OSwxNzUyNDg2MDQ3LC02MTQ5NDYyNSwxMDIy
+NTgxNjA0LDE4MzQ1MDA3MTMsMTQxNjc0MDIxMSwxMTE5Mjg2Nz
+A2LC03NTUxMTMzNTEsLTE3NjI1MzA0NTVdfQ==
 -->
