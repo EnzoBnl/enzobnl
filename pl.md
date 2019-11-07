@@ -8,7 +8,7 @@
 
 # Java
 ## Java 8: Interfaces
-### functional interface, `default`, `static`, attribute
+We will take the following interface as an example for this section:
 ```java
 @FunctionalInterface
 interface Square{
@@ -22,13 +22,16 @@ interface Square{
   }
 }
 ```
-allows to get a concrete implementation of Square interface by implementing its `calculate `abstract method like follow:
+### functional interface
+`Square` definition allows to get a concrete implementation of Square interface by implementing its `calculate `abstract method like follow:
 ```java
 Square sq = (int x) -> x*x;
 ```
 
 In fact `@FunctionalInterface` is here to guarantee that the functional interface **has only one abstract method**.
-#### default vs abstract method in abstract classes ? [(post)](https://stackoverflow.com/a/19998827/6580080)
+
+### `default` method in interface vs abstract method in abstract classes ?
+ [(post)](https://stackoverflow.com/a/19998827/6580080)
 Use interface whenever you can, it's like a **DIP** applied to library writing instead of client writing.
 #### static
 On interfaces, `static` method can only:
@@ -334,6 +337,6 @@ from overrides import overrides  # decorator '@overrides'
 from abc import ABC, abstractmethod  #  'class C(ABC)' is abstract and decorator '@abstractmethod' usable.
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc3NDQzMjYyMCwtMTU5Mjk4MzQ2MywtMT
-gwMjE2ODJdfQ==
+eyJoaXN0b3J5IjpbLTEwNzkzOTg4NjQsLTE1OTI5ODM0NjMsLT
+E4MDIxNjgyXX0=
 -->
