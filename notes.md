@@ -1,3 +1,7 @@
+>  I write to discover what I know.
+>  
+— Flannery O'Connor
+
 |Theme|Content|
 |--|--|
 |[Apache Spark](spark.html)|Internals|
@@ -12,5 +16,5 @@
 |[Commands cheat sheet](cmd.html)|To write down some useful CLI stuff|
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzkxNzU1MjIxXX0=
+eyJoaXN0b3J5IjpbMTAxMzIxMjI1NywzOTE3NTUyMjFdfQ==
 -->
