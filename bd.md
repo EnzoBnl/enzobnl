@@ -24,6 +24,7 @@ Abadi's *"Consistency Tradeoffs in Modern Distributed Database System Design"*, 
 |**EL**| PNUTS |[DynamoDB](https://en.wikipedia.org/wiki/Amazon_DynamoDB "Amazon DynamoDB"), [Cassandra](https://en.wikipedia.org/wiki/Apache_Cassandra "Apache Cassandra"), [Riak](https://en.wikipedia.org/wiki/Riak "Riak"), [Cosmos DB](https://en.wikipedia.org/wiki/Cosmos_DB "Cosmos DB")|
 
 PACeLC is an extension of the CAP theorem.
+
 ## ACID DataBase properties (in short)
 A transaction is a sequence of database operations that satisfies the following rules:
 - **[Atomicity]** A transaction is managed as a ***atomic*** unit that can be fully roll-backed if it fails.
@@ -58,10 +59,11 @@ Execution steps of a MapReduce job containing 1 Mapper and 1 Reducer (steps **in
   3. **Reducer**: Produce reduce output record for each *key*. It leverages that its input is sorted.
 
 ## ElasticSearch
+[1h Elasticsearch Tutorial & Getting Started](https://www.youtube.com/watch?v=ksTTlXNLick)
 ### Parallels with distributed relationnal databases
-1h # Elasticsearch Tutorial & Getting Started (course preview) https://www.youtube.com/watch?v=ksTTlXNLick
 
-|E| RDB |
+
+|Elastic Search| Relational DataBase |
 |--|--|
 | Cluster | DataBase Engine |
 |Index|Database|
@@ -83,11 +85,11 @@ Execution steps of a MapReduce job containing 1 Mapper and 1 Reducer (steps **in
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MTY3MTA1MDEsLTE0Mzc2MTIzOTcsLT
-EwNjY2ODAwODgsMjA5MzIzNTU4OCwxODExMzExMTk2LC01Mzk4
-MzY1MzgsLTE4NTk1NDIxNjMsMTc0MzE2OTAwNCwtNzM5ODUyOT
-M1LDIwMTkzMDQ4OTcsLTE4NzE0NTY4NzksMTc1MjQ4NjA0Nywt
-NjE0OTQ2MjUsMTAyMjU4MTYwNCwxODM0NTAwNzEzLDE0MTY3ND
-AyMTEsMTExOTI4NjcwNiwtNzU1MTEzMzUxLC0xNzYyNTMwNDU1
-XX0=
+eyJoaXN0b3J5IjpbMTEyODE5NjM5NywtMTQzNzYxMjM5NywtMT
+A2NjY4MDA4OCwyMDkzMjM1NTg4LDE4MTEzMTExOTYsLTUzOTgz
+NjUzOCwtMTg1OTU0MjE2MywxNzQzMTY5MDA0LC03Mzk4NTI5Mz
+UsMjAxOTMwNDg5NywtMTg3MTQ1Njg3OSwxNzUyNDg2MDQ3LC02
+MTQ5NDYyNSwxMDIyNTgxNjA0LDE4MzQ1MDA3MTMsMTQxNjc0MD
+IxMSwxMTE5Mjg2NzA2LC03NTUxMTMzNTEsLTE3NjI1MzA0NTVd
+fQ==
 -->
