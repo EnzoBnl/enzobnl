@@ -47,7 +47,8 @@ Execution steps of a MapReduce job containing 1 Mapper and 1 Reducer
      - each partition is intended to be fetched by a single and different reducer node.
   4. *Sort*: Sort records on *key* within each partitions.
   5. (optional) ***"Combiner"*** **Reducer**: an intermediate reducer called on each mapper node. 
-     - Within each sorted partition, for each different key, combiner produces a combiner output of the saCombiner reduces the size of partitions and save network bandwidth. 
+     - within each sorted partition, for each different key, combiner produces a combiner output record having the same type as Mapper ones
+     - combiner reduces the size of partitions and save network bandwidth
 - Reduce phase on reduce nodes:
   1. *Fetch*: Access (mainly through network connection) to Map phase output written on HDFS.
   2. *Sort-Merge*: Merge sorted files
@@ -82,7 +83,7 @@ Execution steps of a MapReduce job containing 1 Mapper and 1 Reducer
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU3ODcwNDg4OCwxODExMzExMTk2LC01Mz
+eyJoaXN0b3J5IjpbMjA5MzIzNTU4OCwxODExMzExMTk2LC01Mz
 k4MzY1MzgsLTE4NTk1NDIxNjMsMTc0MzE2OTAwNCwtNzM5ODUy
 OTM1LDIwMTkzMDQ4OTcsLTE4NzE0NTY4NzksMTc1MjQ4NjA0Ny
 wtNjE0OTQ2MjUsMTAyMjU4MTYwNCwxODM0NTAwNzEzLDE0MTY3
