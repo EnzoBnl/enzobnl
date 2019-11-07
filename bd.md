@@ -6,7 +6,7 @@
 <script>document.body.style.background = "#f2f2f2";</script>
 <!--NOTE HEAD END-->
 
-# Theory
+# Theorems and definitions
 ## PACeLC theorem
 Abadi's *"Consistency Tradeoffs in Modern Distributed Database System Design"*, 2012.
 
@@ -23,14 +23,14 @@ Abadi's *"Consistency Tradeoffs in Modern Distributed Database System Design"*, 
 |**EC**|[MongoDB](https://en.wikipedia.org/wiki/MongoDB), BigTable/HBase and fully ACID$^{[1]}$ systems: [VoltDB](https://en.wikipedia.org/wiki/VoltDB "VoltDB")/H-Store, Megastore, [MySQL Cluster](https://en.wikipedia.org/wiki/MySQL_Cluster "MySQL Cluster")|Most in-memory datagrids (Apache Ignite, Hazelcast IMDG)|
 |**EL**| PNUTS |[DynamoDB](https://en.wikipedia.org/wiki/Amazon_DynamoDB "Amazon DynamoDB"), [Cassandra](https://en.wikipedia.org/wiki/Apache_Cassandra "Apache Cassandra"), [Riak](https://en.wikipedia.org/wiki/Riak "Riak"), [Cosmos DB](https://en.wikipedia.org/wiki/Cosmos_DB "Cosmos DB")|
 
-## ACID DataBase properties in short
+## ACID DataBase properties (in short)
 A transaction is a sequence of database operations that satisfies the following rules:
 - **[Atomicity]** A transaction is managed as a ***atomic*** unit that can be fully roll-backed if it fails.
 - **[Consistency]** A transaction is ***consistent*** in that it cannot be committed if it violates database system rules.
 - **[Isolation]** Independent transactions are ***isolated*** in that running them concurrently or sequentially leads to the same database system state.
 - **[Durability]** A transaction is ***durable*** in that once it it fully committed, it will remain committed even in case of system failures (power off, network partitioning...).
 
-# Frameworks
+# Frameworks' notes
 ## Spark
 [See dedicated notes](https://enzobnl.github.io/spark.html)
 ## Hadoop's MapReduce
@@ -82,7 +82,7 @@ Execution steps of a MapReduce job containing 1 Mapper and 1 Reducer (steps **in
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjcwODM2OTEyLC0xMDY2NjgwMDg4LDIwOT
+eyJoaXN0b3J5IjpbNjU2MTc5OTU2LC0xMDY2NjgwMDg4LDIwOT
 MyMzU1ODgsMTgxMTMxMTE5NiwtNTM5ODM2NTM4LC0xODU5NTQy
 MTYzLDE3NDMxNjkwMDQsLTczOTg1MjkzNSwyMDE5MzA0ODk3LC
 0xODcxNDU2ODc5LDE3NTI0ODYwNDcsLTYxNDk0NjI1LDEwMjI1
