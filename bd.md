@@ -35,11 +35,14 @@ A transaction is a sequence of database operations that satisfies the following 
 Execution steps of a MapReduce job containing 1 Mapper and 1 Reducer
 
 - Map phase on mapper nodes:
-  1. **RecordReader**: Read the file's blocks from HDFS and divide them in *key->value* units called records. Each file block will be passed to a mapper.
-  2. **Mapper**: map through records and produce 0 to *n* output records for each.
-  3. **Partitioner**: Organize mapper output's records into partitions, each partition is intended to be fetched by a single and different reducer node.
-  4. *Sort*: Sort records within partitions on key.
-  5. (optional) ***"Combiner"*** **Reducer**: an intermediate reducer called on each mapper node. Combiner output's type is the same as Mapper one. Combiner reduces the size of partitions and save network bandwidth. 
+  1. **RecordReader**: 
+     - Read the input file's blocks from HDFS
+     - Divide them in *key->value* units called records
+     - Each block's records will be passed to a mapper.
+  3. **Mapper**: maps through records and produce 0 to *n* output records for each.
+  4. **Partitioner**: Organize mapper output's records into partitions, each partition is intended to be fetched by a single and different reducer node.
+  5. *Sort*: Sort records within partitions on key.
+  6. (optional) ***"Combiner"*** **Reducer**: an intermediate reducer called on each mapper node. Combiner output's type is the same as Mapper one. Combiner reduces the size of partitions and save network bandwidth. 
 - Reduce phase on reduce nodes:
   1. *Fetch*: Access (mainly through network connection) to Map phase output written on HDFS.
   2. *Sort-Merge*: Merge sorted files
@@ -74,10 +77,10 @@ Execution steps of a MapReduce job containing 1 Mapper and 1 Reducer
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NzQ5NTUyNzcsMTgxMTMxMTE5NiwtNT
-M5ODM2NTM4LC0xODU5NTQyMTYzLDE3NDMxNjkwMDQsLTczOTg1
-MjkzNSwyMDE5MzA0ODk3LC0xODcxNDU2ODc5LDE3NTI0ODYwND
-csLTYxNDk0NjI1LDEwMjI1ODE2MDQsMTgzNDUwMDcxMywxNDE2
-NzQwMjExLDExMTkyODY3MDYsLTc1NTExMzM1MSwtMTc2MjUzMD
-Q1NV19
+eyJoaXN0b3J5IjpbNzE3NzYwMTgyLDE4MTEzMTExOTYsLTUzOT
+gzNjUzOCwtMTg1OTU0MjE2MywxNzQzMTY5MDA0LC03Mzk4NTI5
+MzUsMjAxOTMwNDg5NywtMTg3MTQ1Njg3OSwxNzUyNDg2MDQ3LC
+02MTQ5NDYyNSwxMDIyNTgxNjA0LDE4MzQ1MDA3MTMsMTQxNjc0
+MDIxMSwxMTE5Mjg2NzA2LC03NTUxMTMzNTEsLTE3NjI1MzA0NT
+VdfQ==
 -->
