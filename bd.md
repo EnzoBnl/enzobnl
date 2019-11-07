@@ -35,18 +35,16 @@ A transaction is a sequence of database operations that satisfies the following 
 Steps of a job containing a Mapper and a Reducer
 
 - On mapper node:
-  1. *RECORD READER*
-  2. *MAPPER*
-  3. *PARTITIONER*
+  1. **RecordReader**
+  2. **Mapper**
+  3. *Partitioner*
   4. *Sort*
-  5. **COMBINER*: 
+  5. *COMBINER*: 
 - On reduce nodes:
   1. *Fetch*
   2. *Merge/Sort*
   3. *REDUCER*
 
-*: optional
-*UPPER CASE*: steps relying on a "hook class"
 
 
 # ElasticSearch
@@ -75,7 +73,7 @@ Steps of a job containing a Mapper and a Reducer
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEwMjkwNjA2MSwtNTM5ODM2NTM4LC0xOD
+eyJoaXN0b3J5IjpbMTI4NTEyMjkyMywtNTM5ODM2NTM4LC0xOD
 U5NTQyMTYzLDE3NDMxNjkwMDQsLTczOTg1MjkzNSwyMDE5MzA0
 ODk3LC0xODcxNDU2ODc5LDE3NTI0ODYwNDcsLTYxNDk0NjI1LD
 EwMjI1ODE2MDQsMTgzNDUwMDcxMywxNDE2NzQwMjExLDExMTky
