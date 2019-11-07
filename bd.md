@@ -53,7 +53,7 @@ Execution steps of a MapReduce job containing 1 Mapper and 1 Reducer
 - Reduce phase on reduce nodes:
   1. *Fetch*: Each reducer node gather its partitions (written by map phase to HDFS), mainly through network connections.
   2. *Sort-Merge*: Merge pre-sorted partition chunks into a final sorted reducer input partition.
-  3. **Reducer**: Efficiently thanks to its sorted input records
+  3. **Reducer**: Efficiently produce reduce output record for each *key*, thanks to its sorted input records.
 
 
 Note: steps **in bold** rely on *hook classes* exposed to the user for extension.
@@ -84,7 +84,7 @@ Note: steps **in bold** rely on *hook classes* exposed to the user for extension
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NDMyMzM4NCwyMDkzMjM1NTg4LDE4MT
+eyJoaXN0b3J5IjpbMTA3MTAxNDA2MSwyMDkzMjM1NTg4LDE4MT
 EzMTExOTYsLTUzOTgzNjUzOCwtMTg1OTU0MjE2MywxNzQzMTY5
 MDA0LC03Mzk4NTI5MzUsMjAxOTMwNDg5NywtMTg3MTQ1Njg3OS
 wxNzUyNDg2MDQ3LC02MTQ5NDYyNSwxMDIyNTgxNjA0LDE4MzQ1
