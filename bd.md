@@ -32,7 +32,7 @@ A transaction is a sequence of database operations that satisfies following rule
 - **[Atomicity]** A transaction is managed as a ***atomic*** unit that can be fully roll-backed if it fails.
 - **[Consistency]** A transaction is ***consistent*** in that it cannot violate database system rules.
 - **[Isolation]** Independent transactions are ***isolated*** so that running them concurrently or sequentially leads to the same db system state.
-- **[Durability]** 
+- **[Durability]** A transaction is ***durable*** in that once it it fully committed, it will remain committed even in case of system failures (power off, network partitioning...).
 
 # Hadoop's MapReduce
 
@@ -79,9 +79,9 @@ Steps of a job containing a Mapper and a Reducer
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MzUxNDY2NDEsLTUzOTgzNjUzOCwtMT
-g1OTU0MjE2MywxNzQzMTY5MDA0LC03Mzk4NTI5MzUsMjAxOTMw
-NDg5NywtMTg3MTQ1Njg3OSwxNzUyNDg2MDQ3LC02MTQ5NDYyNS
-wxMDIyNTgxNjA0LDE4MzQ1MDA3MTMsMTQxNjc0MDIxMSwxMTE5
-Mjg2NzA2LC03NTUxMTMzNTEsLTE3NjI1MzA0NTVdfQ==
+eyJoaXN0b3J5IjpbOTc4NDM1OTA4LC01Mzk4MzY1MzgsLTE4NT
+k1NDIxNjMsMTc0MzE2OTAwNCwtNzM5ODUyOTM1LDIwMTkzMDQ4
+OTcsLTE4NzE0NTY4NzksMTc1MjQ4NjA0NywtNjE0OTQ2MjUsMT
+AyMjU4MTYwNCwxODM0NTAwNzEzLDE0MTY3NDAyMTEsMTExOTI4
+NjcwNiwtNzU1MTEzMzUxLC0xNzYyNTMwNDU1XX0=
 -->
