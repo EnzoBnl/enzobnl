@@ -13,10 +13,10 @@ Abadi's *"Consistency Tradeoffs in Modern Distributed Database System Design"*, 
 **Theorem**: In case of network **P**artition, the system remains **A**vailable *or* **C**onsistent, **e**lse it ensures low **L**atency *or* **C**onsistency
 
 - P = (network) Partitioning = A sub-part of the nodes become unreachable.
-- A = Availability = Requests are newer answered with an error.
-- C = Consistency = Requests get the latest version of what they ask for or an error/timeout.
+- A = Availability = Requests are never answered with an error.
+- C = Consistency = A request result is either up-to-date or an error.
 - E = Else
-- L = Latency = A request get a result in its fastest available state.
+- L = Latency = A request get its result in its more fastly accessible state.
 
 ||PC|PA|
 |--|--|--|
@@ -82,10 +82,11 @@ Execution steps of a MapReduce job containing 1 Mapper and 1 Reducer (steps **in
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0Mzc2MTIzOTcsLTEwNjY2ODAwODgsMj
-A5MzIzNTU4OCwxODExMzExMTk2LC01Mzk4MzY1MzgsLTE4NTk1
-NDIxNjMsMTc0MzE2OTAwNCwtNzM5ODUyOTM1LDIwMTkzMDQ4OT
-csLTE4NzE0NTY4NzksMTc1MjQ4NjA0NywtNjE0OTQ2MjUsMTAy
-MjU4MTYwNCwxODM0NTAwNzEzLDE0MTY3NDAyMTEsMTExOTI4Nj
-cwNiwtNzU1MTEzMzUxLC0xNzYyNTMwNDU1XX0=
+eyJoaXN0b3J5IjpbLTQ4OTQ0MjU4MywtMTQzNzYxMjM5NywtMT
+A2NjY4MDA4OCwyMDkzMjM1NTg4LDE4MTEzMTExOTYsLTUzOTgz
+NjUzOCwtMTg1OTU0MjE2MywxNzQzMTY5MDA0LC03Mzk4NTI5Mz
+UsMjAxOTMwNDg5NywtMTg3MTQ1Njg3OSwxNzUyNDg2MDQ3LC02
+MTQ5NDYyNSwxMDIyNTgxNjA0LDE4MzQ1MDA3MTMsMTQxNjc0MD
+IxMSwxMTE5Mjg2NzA2LC03NTUxMTMzNTEsLTE3NjI1MzA0NTVd
+fQ==
 -->
