@@ -36,8 +36,28 @@ In fact `@FunctionalInterface` is here to guarantee that the functional interfac
 - When doubting, use interface with defaults method in priority, because it has more constraints leading to more compiler optimizations
 - Interfaces with default methods can be used as block of behaviors that can enrich a class, because one can only extend one (abstract) class but implement as many interfaces as needed ! Usage can be made in the style of *Scala Mixins*:
 
+```java
+interface Printer {  
+  default void print(String content) {  
+    System.out.println(content);  
+  }  
+}  
+  
+interface Named {  
+  default String getName() {  
+    return this.toString();  
+  }  
+}  
+  
+class NamePrinter implements Named, Printer {  
+  void printName() {  
+    this.print(this.getName());  
+  }  
+}
+```
+
 ### `static` methods
-On interfaces, `static` method can only:
+Unlike in (abstract) classes interfaces `static` method cannot be accessed through instances:
 - `sq.printName();` does not compile
 - `Square.printName();` compiles
 
@@ -340,6 +360,6 @@ from overrides import overrides  # decorator '@overrides'
 from abc import ABC, abstractmethod  #  'class C(ABC)' is abstract and decorator '@abstractmethod' usable.
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU1MjUyNjE4OCwtMTU5Mjk4MzQ2MywtMT
-gwMjE2ODJdfQ==
+eyJoaXN0b3J5IjpbMTM1MTg3NTA1MCwtNTUyNTI2MTg4LC0xNT
+kyOTgzNDYzLC0xODAyMTY4Ml19
 -->
