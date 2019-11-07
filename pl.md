@@ -38,7 +38,7 @@ On interfaces, `static` method can only:
 Note: both this 2 lines would have compiled if `Square ` were an *abstract class*.
 
 #### interface attribute
-Attributes cannot receive any modifier and are by default `public static final`. Like for methods, staticity in interface attribute means that it cannot be reached from an instance:
+Attributes cannot receive any modifier and are by default `public static final`. Like for methods, *staticity* in interface attribute implies that it cannot be reached from an instance:
 - `sq.NAME;` does not compile
 - `Square.NAME;` compiles
 
@@ -334,5 +334,5 @@ from overrides import overrides  # decorator '@overrides'
 from abc import ABC, abstractmethod  #  'class C(ABC)' is abstract and decorator '@abstractmethod' usable.
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MDIxNjgyXX0=
+eyJoaXN0b3J5IjpbLTE1OTI5ODM0NjMsLTE4MDIxNjgyXX0=
 -->
