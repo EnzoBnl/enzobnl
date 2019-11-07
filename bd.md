@@ -13,7 +13,7 @@ Abadi's *"Consistency Tradeoffs in Modern Distributed Database System Design"*, 
 **Theorem**: In case of network **P**artition, the system remains **A**vailable *or* **C**onsistent, **e**lse it ensures low **L**atency *or* **C**onsistency
 
 - P = (network) Partitioning = A sub-part of the nodes become unreachable.
-- A = Availability = Requests are never answered with an error.
+- A = Availability = Requests try to return the more recent available state of the result.
 - C = Consistency = A request result is either up-to-date or an error.
 - E = Else
 - L = Latency = A request get its result in its more fastly accessible state.
@@ -23,6 +23,7 @@ Abadi's *"Consistency Tradeoffs in Modern Distributed Database System Design"*, 
 |**EC**|[MongoDB](https://en.wikipedia.org/wiki/MongoDB), BigTable/HBase and fully ACID$^{[1]}$ systems: [VoltDB](https://en.wikipedia.org/wiki/VoltDB "VoltDB")/H-Store, Megastore, [MySQL Cluster](https://en.wikipedia.org/wiki/MySQL_Cluster "MySQL Cluster")|Most in-memory datagrids (Apache Ignite, Hazelcast IMDG)|
 |**EL**| PNUTS |[DynamoDB](https://en.wikipedia.org/wiki/Amazon_DynamoDB "Amazon DynamoDB"), [Cassandra](https://en.wikipedia.org/wiki/Apache_Cassandra "Apache Cassandra"), [Riak](https://en.wikipedia.org/wiki/Riak "Riak"), [Cosmos DB](https://en.wikipedia.org/wiki/Cosmos_DB "Cosmos DB")|
 
+PACeLC is an extension of the CAP theorem.
 ## ACID DataBase properties (in short)
 A transaction is a sequence of database operations that satisfies the following rules:
 - **[Atomicity]** A transaction is managed as a ***atomic*** unit that can be fully roll-backed if it fails.
@@ -82,11 +83,11 @@ Execution steps of a MapReduce job containing 1 Mapper and 1 Reducer (steps **in
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ4OTQ0MjU4MywtMTQzNzYxMjM5NywtMT
-A2NjY4MDA4OCwyMDkzMjM1NTg4LDE4MTEzMTExOTYsLTUzOTgz
-NjUzOCwtMTg1OTU0MjE2MywxNzQzMTY5MDA0LC03Mzk4NTI5Mz
-UsMjAxOTMwNDg5NywtMTg3MTQ1Njg3OSwxNzUyNDg2MDQ3LC02
-MTQ5NDYyNSwxMDIyNTgxNjA0LDE4MzQ1MDA3MTMsMTQxNjc0MD
-IxMSwxMTE5Mjg2NzA2LC03NTUxMTMzNTEsLTE3NjI1MzA0NTVd
-fQ==
+eyJoaXN0b3J5IjpbLTE3MTY3MTA1MDEsLTE0Mzc2MTIzOTcsLT
+EwNjY2ODAwODgsMjA5MzIzNTU4OCwxODExMzExMTk2LC01Mzk4
+MzY1MzgsLTE4NTk1NDIxNjMsMTc0MzE2OTAwNCwtNzM5ODUyOT
+M1LDIwMTkzMDQ4OTcsLTE4NzE0NTY4NzksMTc1MjQ4NjA0Nywt
+NjE0OTQ2MjUsMTAyMjU4MTYwNCwxODM0NTAwNzEzLDE0MTY3ND
+AyMTEsMTExOTI4NjcwNiwtNzU1MTEzMzUxLC0xNzYyNTMwNDU1
+XX0=
 -->
