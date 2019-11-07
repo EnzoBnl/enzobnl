@@ -41,8 +41,8 @@ Execution steps of a MapReduce job containing 1 Mapper and 1 Reducer
   4. *Sort*
   5. (optional) **Combiner**: 
 - Reduce phase on reduce nodes:
-  1. *Fetch*: Access to Map phase output 
-  2. *Sort-Merge*
+  1. *Fetch*: Access (mainly through network connection) to Map phase output written on HDFS.
+  2. *Sort-Merge*: Merge sorted file 
   3. **Reducer**
 
 
@@ -74,9 +74,9 @@ Execution steps of a MapReduce job containing 1 Mapper and 1 Reducer
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTc2MDIwMzg3LC01Mzk4MzY1MzgsLTE4NT
-k1NDIxNjMsMTc0MzE2OTAwNCwtNzM5ODUyOTM1LDIwMTkzMDQ4
-OTcsLTE4NzE0NTY4NzksMTc1MjQ4NjA0NywtNjE0OTQ2MjUsMT
-AyMjU4MTYwNCwxODM0NTAwNzEzLDE0MTY3NDAyMTEsMTExOTI4
-NjcwNiwtNzU1MTEzMzUxLC0xNzYyNTMwNDU1XX0=
+eyJoaXN0b3J5IjpbLTE1NTQ3MzMwMzUsLTUzOTgzNjUzOCwtMT
+g1OTU0MjE2MywxNzQzMTY5MDA0LC03Mzk4NTI5MzUsMjAxOTMw
+NDg5NywtMTg3MTQ1Njg3OSwxNzUyNDg2MDQ3LC02MTQ5NDYyNS
+wxMDIyNTgxNjA0LDE4MzQ1MDA3MTMsMTQxNjc0MDIxMSwxMTE5
+Mjg2NzA2LC03NTUxMTMzNTEsLTE3NjI1MzA0NTVdfQ==
 -->
