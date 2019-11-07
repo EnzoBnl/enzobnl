@@ -28,9 +28,9 @@ L = Latency = Requests get fast their result in its currently available state.
 |**EL**| PNUTS |[DynamoDB](https://en.wikipedia.org/wiki/Amazon_DynamoDB "Amazon DynamoDB"), [Cassandra](https://en.wikipedia.org/wiki/Apache_Cassandra "Apache Cassandra"), [Riak](https://en.wikipedia.org/wiki/Riak "Riak"), [Cosmos DB](https://en.wikipedia.org/wiki/Cosmos_DB "Cosmos DB")|
 
 # ACID
-- Atomicity: a transaction is managed as a unit that can be rollbacked completely if they fail.
-- Consistency: transactions cannot violate db system  rules
-- Isolation: independent transaction can be run sequentially or concurrently. They are isolated if both the two approaches lead to the same db system state.
+- Atomicity: a transaction is managed as a unit that can be fully roll-backed if it fails.
+- Consistency: transactions cannot violate db system rules.
+- Isolation: Running independent transactions concurrently leads to the same db system  and both approaches lead to the same db system state.
 - Durability
 
 # Hadoop's MapReduce
@@ -78,9 +78,9 @@ Steps of a job containing a Mapper and a Reducer
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNjcyMDQ4ODYsLTUzOTgzNjUzOCwtMT
-g1OTU0MjE2MywxNzQzMTY5MDA0LC03Mzk4NTI5MzUsMjAxOTMw
-NDg5NywtMTg3MTQ1Njg3OSwxNzUyNDg2MDQ3LC02MTQ5NDYyNS
-wxMDIyNTgxNjA0LDE4MzQ1MDA3MTMsMTQxNjc0MDIxMSwxMTE5
-Mjg2NzA2LC03NTUxMTMzNTEsLTE3NjI1MzA0NTVdfQ==
+eyJoaXN0b3J5IjpbLTIyNjcxOTYwMCwtNTM5ODM2NTM4LC0xOD
+U5NTQyMTYzLDE3NDMxNjkwMDQsLTczOTg1MjkzNSwyMDE5MzA0
+ODk3LC0xODcxNDU2ODc5LDE3NTI0ODYwNDcsLTYxNDk0NjI1LD
+EwMjI1ODE2MDQsMTgzNDUwMDcxMywxNDE2NzQwMjExLDExMTky
+ODY3MDYsLTc1NTExMzM1MSwtMTc2MjUzMDQ1NV19
 -->
