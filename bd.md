@@ -37,12 +37,12 @@ Execution steps of a MapReduce job containing 1 Mapper and 1 Reducer
 - Map phase on mapper nodes:
   1. **RecordReader**
   2. **Mapper**
-  3. **Partitioner**
-  4. *Sort*
+  3. **Partitioner**: Divide mapper output into partitions, each partition will be fetched by a single and direducer.
+  4. *Sort*: Sort records within partitions
   5. (optional) **Combiner**: 
 - Reduce phase on reduce nodes:
   1. *Fetch*: Access (mainly through network connection) to Map phase output written on HDFS.
-  2. *Sort-Merge*: Merge sorted file 
+  2. *Sort-Merge*: Merge sorted files
   3. **Reducer**
 
 
@@ -74,7 +74,7 @@ Execution steps of a MapReduce job containing 1 Mapper and 1 Reducer
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NTQ3MzMwMzUsLTUzOTgzNjUzOCwtMT
+eyJoaXN0b3J5IjpbLTEwOTcyNjk1NzUsLTUzOTgzNjUzOCwtMT
 g1OTU0MjE2MywxNzQzMTY5MDA0LC03Mzk4NTI5MzUsMjAxOTMw
 NDg5NywtMTg3MTQ1Njg3OSwxNzUyNDg2MDQ3LC02MTQ5NDYyNS
 wxMDIyNTgxNjA0LDE4MzQ1MDA3MTMsMTQxNjc0MDIxMSwxMTE5
