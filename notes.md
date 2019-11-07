@@ -1,3 +1,9 @@
+>  I write to discover what I know.
+— Flannery O'Connor
+
+— [Jacek Laskowski](https://jaceklaskowski.gitbooks.io/mastering-spark-sql/)
+_______________
+
 |Theme|Content|
 |--|--|
 |[Apache Spark](spark.html)|Internals|
@@ -11,11 +17,7 @@
 |[Other CS notes](div.html)|Multi-threading, computer architecture, network...|
 |[Commands cheat sheet](cmd.html)|To write down some useful CLI stuff|
 
->  I write to discover what I know.
-— Flannery O'Connor
-
-— [Jacek Laskowski](https://jaceklaskowski.gitbooks.io/mastering-spark-sql/)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc2NDAxMTIwMCwzOTE3NTUyMjFdfQ==
+eyJoaXN0b3J5IjpbNTMwMDEzMTksMzkxNzU1MjIxXX0=
 -->
