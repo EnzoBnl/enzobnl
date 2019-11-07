@@ -35,15 +35,15 @@ A transaction is a sequence of database operations that satisfies the following 
 Execution steps of a MapReduce job containing 1 Mapper and 1 Reducer
 
 - Map phase on mapper nodes:
-  1. **RecordReader**: Read the file from HDFS and divide it in units called records. Each file block will be passed
-  2. **Mapper**: map through RecordReader 
+  1. **RecordReader**: Read the file's blocks from HDFS and divide them in units called records. Each file block will be passed to a mapper.
+  2. **Mapper**: map through records and produce 0 to *n* output records for each.
   3. **Partitioner**: Organize mapper output's records into partitions, each partition is intended to be fetched by a single and different reducer node.
-  4. *Sort*: Sort records within partitions
+  4. *Sort*: Sort records within partitions.
   5. (optional) ***"Combiner"*** **Reducer**: an intermediate reducer called on each mapper node. Combiner output's type is the same as Mapper one. Combiner reduces the size of partitions and save network bandwidth. 
 - Reduce phase on reduce nodes:
   1. *Fetch*: Access (mainly through network connection) to Map phase output written on HDFS.
   2. *Sort-Merge*: Merge sorted files
-  3. **Reducer**
+  3. **Reducer**: Leverage
 
 
 **bold** steps relying on a "hook class" that are exposed to the user for extension.
@@ -74,9 +74,10 @@ Execution steps of a MapReduce job containing 1 Mapper and 1 Reducer
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgxMTMxMTE5NiwtNTM5ODM2NTM4LC0xOD
-U5NTQyMTYzLDE3NDMxNjkwMDQsLTczOTg1MjkzNSwyMDE5MzA0
-ODk3LC0xODcxNDU2ODc5LDE3NTI0ODYwNDcsLTYxNDk0NjI1LD
-EwMjI1ODE2MDQsMTgzNDUwMDcxMywxNDE2NzQwMjExLDExMTky
-ODY3MDYsLTc1NTExMzM1MSwtMTc2MjUzMDQ1NV19
+eyJoaXN0b3J5IjpbMTY1MzQ0NTI4MiwxODExMzExMTk2LC01Mz
+k4MzY1MzgsLTE4NTk1NDIxNjMsMTc0MzE2OTAwNCwtNzM5ODUy
+OTM1LDIwMTkzMDQ4OTcsLTE4NzE0NTY4NzksMTc1MjQ4NjA0Ny
+wtNjE0OTQ2MjUsMTAyMjU4MTYwNCwxODM0NTAwNzEzLDE0MTY3
+NDAyMTEsMTExOTI4NjcwNiwtNzU1MTEzMzUxLC0xNzYyNTMwND
+U1XX0=
 -->
