@@ -32,20 +32,21 @@ A transaction is a sequence of database operations that satisfies the following 
 
 # Hadoop's MapReduce
 
-Steps of a job containing a Mapper and a Reducer
+teps of a MapReduce job containing 1 Mapper and 1 Reducer
 
 - On mapper node:
   1. **RecordReader**
   2. **Mapper**
-  3. *Partitioner*
+  3. **Partitioner**
   4. *Sort*
-  5. *COMBINER*: 
+  5. (optional) **Combiner**: 
 - On reduce nodes:
   1. *Fetch*
   2. *Merge/Sort*
-  3. *REDUCER*
+  3. **Reducer**
 
 
+**bold** steps relying on a "hook class" that are exposed to the user for extension.
 
 # ElasticSearch
 ## Parallels with distributed relationnal databases
@@ -73,9 +74,9 @@ Steps of a job containing a Mapper and a Reducer
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI4NTEyMjkyMywtNTM5ODM2NTM4LC0xOD
-U5NTQyMTYzLDE3NDMxNjkwMDQsLTczOTg1MjkzNSwyMDE5MzA0
-ODk3LC0xODcxNDU2ODc5LDE3NTI0ODYwNDcsLTYxNDk0NjI1LD
-EwMjI1ODE2MDQsMTgzNDUwMDcxMywxNDE2NzQwMjExLDExMTky
-ODY3MDYsLTc1NTExMzM1MSwtMTc2MjUzMDQ1NV19
+eyJoaXN0b3J5IjpbMTAzOTk3NTEyLC01Mzk4MzY1MzgsLTE4NT
+k1NDIxNjMsMTc0MzE2OTAwNCwtNzM5ODUyOTM1LDIwMTkzMDQ4
+OTcsLTE4NzE0NTY4NzksMTc1MjQ4NjA0NywtNjE0OTQ2MjUsMT
+AyMjU4MTYwNCwxODM0NTAwNzEzLDE0MTY3NDAyMTEsMTExOTI4
+NjcwNiwtNzU1MTEzMzUxLC0xNzYyNTMwNDU1XX0=
 -->
