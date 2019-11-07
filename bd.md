@@ -31,6 +31,7 @@ A transaction is a sequence of database operations that satisfies the following 
 - **[Durability]** A transaction is ***durable*** in that once it it fully committed, it will remain committed even in case of system failures (power off, network partitioning...).
 
 # Hadoop's MapReduce
+// TODO reference HDFS Writes
 
 Execution steps of a MapReduce job containing 1 Mapper and 1 Reducer
 
@@ -55,7 +56,7 @@ Execution steps of a MapReduce job containing 1 Mapper and 1 Reducer
   3. **Reducer**: Leverage the previous sortings (on mappers and during merge on reducer) to efficiently output a record for each different key
 
 
-**bold** steps relying on a "hook class" that are exposed to the user for extension.
+Note: steps **in bold** rely on "hook classes" that are exposed to the user for extension.
 
 # ElasticSearch
 ## Parallels with distributed relationnal databases
@@ -83,7 +84,7 @@ Execution steps of a MapReduce job containing 1 Mapper and 1 Reducer
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzk3MTg1Nzk2LDIwOTMyMzU1ODgsMTgxMT
+eyJoaXN0b3J5IjpbLTE0ODU3MjAwLDIwOTMyMzU1ODgsMTgxMT
 MxMTE5NiwtNTM5ODM2NTM4LC0xODU5NTQyMTYzLDE3NDMxNjkw
 MDQsLTczOTg1MjkzNSwyMDE5MzA0ODk3LC0xODcxNDU2ODc5LD
 E3NTI0ODYwNDcsLTYxNDk0NjI1LDEwMjI1ODE2MDQsMTgzNDUw
