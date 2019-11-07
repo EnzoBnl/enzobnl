@@ -32,8 +32,11 @@ In fact `@FunctionalInterface` is here to guarantee that the functional interfac
 
 ### `default` method in interface vs abstract method in abstract classes ?
  [(post)](https://stackoverflow.com/a/19998827/6580080)
-Use interface whenever you can, it's like a **DIP** applied to library writing instead of client writing.
-#### static
+ 
+- When doubting, use interface with defaults method in priority, because it has more constraints leading to more compiler optimizations
+- 
+
+### `static` methods
 On interfaces, `static` method can only:
 - `sq.printName();` does not compile
 - `Square.printName();` compiles
@@ -337,6 +340,6 @@ from overrides import overrides  # decorator '@overrides'
 from abc import ABC, abstractmethod  #  'class C(ABC)' is abstract and decorator '@abstractmethod' usable.
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNzkzOTg4NjQsLTE1OTI5ODM0NjMsLT
+eyJoaXN0b3J5IjpbLTE4MzMzNDA3ODIsLTE1OTI5ODM0NjMsLT
 E4MDIxNjgyXX0=
 -->
