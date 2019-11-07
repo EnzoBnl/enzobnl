@@ -7,7 +7,7 @@
 <!--NOTE HEAD END-->
 
 # Java
-## Interfaces (java8)
+## Java 8: Interfaces
 ### functional interface, `default`, `static`, attribute
 ```java
 @FunctionalInterface
@@ -334,5 +334,6 @@ from overrides import overrides  # decorator '@overrides'
 from abc import ABC, abstractmethod  #  'class C(ABC)' is abstract and decorator '@abstractmethod' usable.
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1OTI5ODM0NjMsLTE4MDIxNjgyXX0=
+eyJoaXN0b3J5IjpbLTc3NDQzMjYyMCwtMTU5Mjk4MzQ2MywtMT
+gwMjE2ODJdfQ==
 -->
