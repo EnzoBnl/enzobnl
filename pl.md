@@ -57,11 +57,9 @@ class NamePrinter implements Named, Printer {
 ```
 
 ### `static` methods
-Unlike in (abstract) classes interfaces `static` method cannot be accessed through instances:
+Unlike for (abstract) classes,  `static` method in interfaces cannot be accessed through instances:
 - `sq.printName();` does not compile
 - `Square.printName();` compiles
-
-Note: both this 2 lines would have compiled if `Square ` were an *abstract class*.
 
 #### interface attribute
 Attributes cannot receive any modifier and are by default `public static final`. Like for methods, *staticity* in interface attribute implies that it cannot be reached from an instance:
@@ -360,6 +358,6 @@ from overrides import overrides  # decorator '@overrides'
 from abc import ABC, abstractmethod  #  'class C(ABC)' is abstract and decorator '@abstractmethod' usable.
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM1MTg3NTA1MCwtNTUyNTI2MTg4LC0xNT
-kyOTgzNDYzLC0xODAyMTY4Ml19
+eyJoaXN0b3J5IjpbLTExMTY1NDgwMDksLTU1MjUyNjE4OCwtMT
+U5Mjk4MzQ2MywtMTgwMjE2ODJdfQ==
 -->
