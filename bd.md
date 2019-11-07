@@ -50,8 +50,8 @@ Execution steps of a MapReduce job containing 1 Mapper and 1 Reducer
      - within each sorted partition, for each different key, combiner produces an output record having the same type as Mapper ones
      - combiner reduces the size of partitions and save network bandwidth
 - Reduce phase on reduce nodes:
-  1. *Fetch*: Access (mainly through network connection) to Map phase output written on HDFS.
-  2. *Sort-Merge*: Merge sorted files
+  1. *Fetch*: Each reducer node accesses to its dedicated partitions,  mainly through network connections
+  2. *Sort-Merge*: Merge sorted partitions coming
   3. **Reducer**: Leverage the previous sortings (on mappers and during merge on reducer) to efficiently output a record for each different key
 
 
@@ -83,10 +83,10 @@ Execution steps of a MapReduce job containing 1 Mapper and 1 Reducer
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTUzNDE4OTAzLDIwOTMyMzU1ODgsMTgxMT
-MxMTE5NiwtNTM5ODM2NTM4LC0xODU5NTQyMTYzLDE3NDMxNjkw
-MDQsLTczOTg1MjkzNSwyMDE5MzA0ODk3LC0xODcxNDU2ODc5LD
-E3NTI0ODYwNDcsLTYxNDk0NjI1LDEwMjI1ODE2MDQsMTgzNDUw
-MDcxMywxNDE2NzQwMjExLDExMTkyODY3MDYsLTc1NTExMzM1MS
-wtMTc2MjUzMDQ1NV19
+eyJoaXN0b3J5IjpbMTkzMjc1MzY2NCwyMDkzMjM1NTg4LDE4MT
+EzMTExOTYsLTUzOTgzNjUzOCwtMTg1OTU0MjE2MywxNzQzMTY5
+MDA0LC03Mzk4NTI5MzUsMjAxOTMwNDg5NywtMTg3MTQ1Njg3OS
+wxNzUyNDg2MDQ3LC02MTQ5NDYyNSwxMDIyNTgxNjA0LDE4MzQ1
+MDA3MTMsMTQxNjc0MDIxMSwxMTE5Mjg2NzA2LC03NTUxMTMzNT
+EsLTE3NjI1MzA0NTVdfQ==
 -->
