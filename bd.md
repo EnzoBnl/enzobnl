@@ -16,7 +16,7 @@ Abadi's *"Consistency Tradeoffs in Modern Distributed Database System Design"*, 
 - A = Availability = Requests are newer answered with an error.
 - C = Consistency = Requests get the latest version of what they ask for or an error/timeout.
 - E = Else
-- L = Latency = Requests get fast their result in its currently available state.
+- L = Latency = A request get a result in its fastest available state.
 
 ||PC|PA|
 |--|--|--|
@@ -82,10 +82,10 @@ Execution steps of a MapReduce job containing 1 Mapper and 1 Reducer (steps **in
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MTc2OTc1OCwtMTA2NjY4MDA4OCwyMD
-kzMjM1NTg4LDE4MTEzMTExOTYsLTUzOTgzNjUzOCwtMTg1OTU0
-MjE2MywxNzQzMTY5MDA0LC03Mzk4NTI5MzUsMjAxOTMwNDg5Ny
-wtMTg3MTQ1Njg3OSwxNzUyNDg2MDQ3LC02MTQ5NDYyNSwxMDIy
-NTgxNjA0LDE4MzQ1MDA3MTMsMTQxNjc0MDIxMSwxMTE5Mjg2Nz
-A2LC03NTUxMTMzNTEsLTE3NjI1MzA0NTVdfQ==
+eyJoaXN0b3J5IjpbLTE0Mzc2MTIzOTcsLTEwNjY2ODAwODgsMj
+A5MzIzNTU4OCwxODExMzExMTk2LC01Mzk4MzY1MzgsLTE4NTk1
+NDIxNjMsMTc0MzE2OTAwNCwtNzM5ODUyOTM1LDIwMTkzMDQ4OT
+csLTE4NzE0NTY4NzksMTc1MjQ4NjA0NywtNjE0OTQ2MjUsMTAy
+MjU4MTYwNCwxODM0NTAwNzEzLDE0MTY3NDAyMTEsMTExOTI4Nj
+cwNiwtNzU1MTEzMzUxLC0xNzYyNTMwNDU1XX0=
 -->
