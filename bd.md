@@ -29,8 +29,8 @@ L = Latency = Requests get fast their result in its currently available state.
 
 # ACID
 - Atomicity
-- Consistency
-- Isolation
+- Consistency: transactions are consistent if they can only brin
+- Isolation: independent transaction can be run sequentially or concurrently. They are isolated if both the two approaches lead to the same database state.
 - Durability
 
 # Hadoop's MapReduce
@@ -78,9 +78,9 @@ Steps of a job containing a Mapper and a Reducer
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUzOTgzNjUzOCwtMTg1OTU0MjE2MywxNz
-QzMTY5MDA0LC03Mzk4NTI5MzUsMjAxOTMwNDg5NywtMTg3MTQ1
-Njg3OSwxNzUyNDg2MDQ3LC02MTQ5NDYyNSwxMDIyNTgxNjA0LD
-E4MzQ1MDA3MTMsMTQxNjc0MDIxMSwxMTE5Mjg2NzA2LC03NTUx
-MTMzNTEsLTE3NjI1MzA0NTVdfQ==
+eyJoaXN0b3J5IjpbLTY3MTA0ODEyNCwtNTM5ODM2NTM4LC0xOD
+U5NTQyMTYzLDE3NDMxNjkwMDQsLTczOTg1MjkzNSwyMDE5MzA0
+ODk3LC0xODcxNDU2ODc5LDE3NTI0ODYwNDcsLTYxNDk0NjI1LD
+EwMjI1ODE2MDQsMTgzNDUwMDcxMywxNDE2NzQwMjExLDExMTky
+ODY3MDYsLTc1NTExMzM1MSwtMTc2MjUzMDQ1NV19
 -->
