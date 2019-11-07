@@ -1,6 +1,6 @@
 >  I write to discover what I know.
->  
-— Flannery O'Connor
+
+— Flannery O'Connor (discovered by the
 
 |Theme|Content|
 |--|--|
@@ -16,5 +16,5 @@
 |[Commands cheat sheet](cmd.html)|To write down some useful CLI stuff|
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAxMzIxMjI1NywzOTE3NTUyMjFdfQ==
+eyJoaXN0b3J5IjpbMTc5ODI3ODExOSwzOTE3NTUyMjFdfQ==
 -->
