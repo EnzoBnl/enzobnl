@@ -28,10 +28,10 @@ L = Latency = Requests get fast their result in its currently available state.
 |**EL**| PNUTS |[DynamoDB](https://en.wikipedia.org/wiki/Amazon_DynamoDB "Amazon DynamoDB"), [Cassandra](https://en.wikipedia.org/wiki/Apache_Cassandra "Apache Cassandra"), [Riak](https://en.wikipedia.org/wiki/Riak "Riak"), [Cosmos DB](https://en.wikipedia.org/wiki/Cosmos_DB "Cosmos DB")|
 
 # ACID DataBase properties in short
-A sequence of database operations is called a transaction if:
-- [Atomicity] A transaction is managed as a unit that can be fully roll-backed if it fails.
-- [Consistency] A transaction cannot violate database system rules.
-- [Isolation] Running independent transactions concurrently or sequentially leads to the same db system state.
+A transaction is a sequence of database operations that satisfies following rules:
+- **[Atomicity]** A transaction is managed as a *atomic* unit that can be fully roll-backed if it fails.
+- **[Consistency]** A transaction is concannot violate database system rules.
+- **[Isolation]** Running independent transactions concurrently or sequentially leads to the same db system state.
 - [Durability] 
 
 # Hadoop's MapReduce
@@ -79,9 +79,9 @@ Steps of a job containing a Mapper and a Reducer
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM0NDI4MTcxLC01Mzk4MzY1MzgsLTE4NT
-k1NDIxNjMsMTc0MzE2OTAwNCwtNzM5ODUyOTM1LDIwMTkzMDQ4
-OTcsLTE4NzE0NTY4NzksMTc1MjQ4NjA0NywtNjE0OTQ2MjUsMT
-AyMjU4MTYwNCwxODM0NTAwNzEzLDE0MTY3NDAyMTEsMTExOTI4
-NjcwNiwtNzU1MTEzMzUxLC0xNzYyNTMwNDU1XX0=
+eyJoaXN0b3J5IjpbLTY4ODkxOTM1MiwtNTM5ODM2NTM4LC0xOD
+U5NTQyMTYzLDE3NDMxNjkwMDQsLTczOTg1MjkzNSwyMDE5MzA0
+ODk3LC0xODcxNDU2ODc5LDE3NTI0ODYwNDcsLTYxNDk0NjI1LD
+EwMjI1ODE2MDQsMTgzNDUwMDcxMywxNDE2NzQwMjExLDExMTky
+ODY3MDYsLTc1NTExMzM1MSwtMTc2MjUzMDQ1NV19
 -->
