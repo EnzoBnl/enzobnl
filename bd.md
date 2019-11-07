@@ -7,10 +7,10 @@
 <!--NOTE HEAD END-->
 
 # Theory
-## PACELC theorem
+## PACeLC theorem
 Abadi's *"Consistency Tradeoffs in Modern Distributed Database System Design"*, 2012.
 
-**Theorem**: In case of *network* **P***artition*, the system remains **A***vailable* **OR** *Consistent*, else it ensures *low Latency* **OR** *Consistency*
+**Theorem**: In case of network **P**artition, the system remains **A**vailable *or* **C**onsistent, **e**lse it ensures low **L**atency *or* **C**onsistency
 
 - P = (network) Partitioning = A sub-part of the nodes become unreachable.
 - A = Availability = Requests are newer answered with an error.
@@ -27,7 +27,7 @@ Abadi's *"Consistency Tradeoffs in Modern Distributed Database System Design"*, 
 A transaction is a sequence of database operations that satisfies the following rules:
 - **[Atomicity]** A transaction is managed as a ***atomic*** unit that can be fully roll-backed if it fails.
 - **[Consistency]** A transaction is ***consistent*** in that it cannot be committed if it violates database system rules.
-- **[Isolation]** Independent transactions are ***isolated*** in that running them concurrently or sequentially leads to the same db system state.
+- **[Isolation]** Independent transactions are ***isolated*** in that running them concurrently or sequentially leads to the same database system state.
 - **[Durability]** A transaction is ***durable*** in that once it it fully committed, it will remain committed even in case of system failures (power off, network partitioning...).
 
 # Hadoop's MapReduce
@@ -75,7 +75,7 @@ Steps of a job containing a Mapper and a Reducer
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMDI3OTA5MCwtNTM5ODM2NTM4LC0xOD
+eyJoaXN0b3J5IjpbMjEwMjkwNjA2MSwtNTM5ODM2NTM4LC0xOD
 U5NTQyMTYzLDE3NDMxNjkwMDQsLTczOTg1MjkzNSwyMDE5MzA0
 ODk3LC0xODcxNDU2ODc5LDE3NTI0ODYwNDcsLTYxNDk0NjI1LD
 EwMjI1ODE2MDQsMTgzNDUwMDcxMywxNDE2NzQwMjExLDExMTky
