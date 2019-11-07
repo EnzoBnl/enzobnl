@@ -65,14 +65,14 @@ Execution steps of a MapReduce job containing 1 Mapper and 1 Reducer (steps **in
 
 |Elastic Search| Relational DataBase |
 |--|--|
-| Cluster | DataBase Engine |
+| Cluster | DataBase engine & servers |
 |Index|Database|
 |Type|Table|
 |Document|Record|
-|Properties|Columns|
+|Property|Column|
 |Node|Node|
-|Index Shards|DB Partitions|
-|Shards' Replicas|Partitions' Replicas|
+|Index Shard|DB Partition|
+|Shard's Replica|Partition's Replica|
 
 ## Google Cloud Platform's tools
 - install gcloud SDK
@@ -85,7 +85,7 @@ Execution steps of a MapReduce job containing 1 Mapper and 1 Reducer (steps **in
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEyODE5NjM5NywtMTQzNzYxMjM5NywtMT
+eyJoaXN0b3J5IjpbMTc1OTEyMzkzNiwtMTQzNzYxMjM5NywtMT
 A2NjY4MDA4OCwyMDkzMjM1NTg4LDE4MTEzMTExOTYsLTUzOTgz
 NjUzOCwtMTg1OTU0MjE2MywxNzQzMTY5MDA0LC03Mzk4NTI5Mz
 UsMjAxOTMwNDg5NywtMTg3MTQ1Njg3OSwxNzUyNDg2MDQ3LC02
