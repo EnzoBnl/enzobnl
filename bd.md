@@ -79,13 +79,13 @@ Execution steps of a MapReduce job containing 1 Mapper and 1 Reducer (steps **in
 `curl https://dl.google.com/dl/cloudsdk/release/install_google_cloud_sdk.bash | bash`
 
 ### BigQuery vs BigTable
-*BigQuery* excels for OLAP (OnLine Analytical Processing): scalable and efficient analytic querying on unchanging data (or just appending data).
-*BigTable* excels for OLTP (OnLine Transaction Processing): scalable and efficient read and write
+- *BigQuery* excels for OLAP (OnLine Analytical Processing): scalable and efficient analytic querying on unchanging data (or just appending data).
+- *BigTable* excels for OLTP (OnLine Transaction Processing): scalable and efficient read and write
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc1OTEyMzkzNiwtMTQzNzYxMjM5NywtMT
+eyJoaXN0b3J5IjpbLTEyNzQ5NjYzNCwtMTQzNzYxMjM5NywtMT
 A2NjY4MDA4OCwyMDkzMjM1NTg4LDE4MTEzMTExOTYsLTUzOTgz
 NjUzOCwtMTg1OTU0MjE2MywxNzQzMTY5MDA0LC03Mzk4NTI5Mz
 UsMjAxOTMwNDg5NywtMTg3MTQ1Njg3OSwxNzUyNDg2MDQ3LC02
