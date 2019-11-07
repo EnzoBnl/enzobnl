@@ -23,14 +23,17 @@ Abadi's *"Consistency Tradeoffs in Modern Distributed Database System Design"*, 
 |**EC**|[MongoDB](https://en.wikipedia.org/wiki/MongoDB), BigTable/HBase and fully ACID$^{[1]}$ systems: [VoltDB](https://en.wikipedia.org/wiki/VoltDB "VoltDB")/H-Store, Megastore, [MySQL Cluster](https://en.wikipedia.org/wiki/MySQL_Cluster "MySQL Cluster")|Most in-memory datagrids (Apache Ignite, Hazelcast IMDG)|
 |**EL**| PNUTS |[DynamoDB](https://en.wikipedia.org/wiki/Amazon_DynamoDB "Amazon DynamoDB"), [Cassandra](https://en.wikipedia.org/wiki/Apache_Cassandra "Apache Cassandra"), [Riak](https://en.wikipedia.org/wiki/Riak "Riak"), [Cosmos DB](https://en.wikipedia.org/wiki/Cosmos_DB "Cosmos DB")|
 
-# ACID DataBase properties in short
+## ACID DataBase properties in short
 A transaction is a sequence of database operations that satisfies the following rules:
 - **[Atomicity]** A transaction is managed as a ***atomic*** unit that can be fully roll-backed if it fails.
 - **[Consistency]** A transaction is ***consistent*** in that it cannot be committed if it violates database system rules.
 - **[Isolation]** Independent transactions are ***isolated*** in that running them concurrently or sequentially leads to the same database system state.
 - **[Durability]** A transaction is ***durable*** in that once it it fully committed, it will remain committed even in case of system failures (power off, network partitioning...).
 
-# Hadoop's MapReduce
+# Frameworks
+## Spark
+[See dedicated notes](https://enzobnl.github.io/spark.html)
+## Hadoop's MapReduce
 Execution steps of a MapReduce job containing 1 Mapper and 1 Reducer (steps **in bold** rely on *hook classes* exposed to the user for extension):
 
 - Map phase on mapper nodes:
@@ -53,8 +56,8 @@ Execution steps of a MapReduce job containing 1 Mapper and 1 Reducer (steps **in
   2. *Sort-Merge*: Merge pre-sorted partition chunks into a final sorted reducer input partition.
   3. **Reducer**: Produce reduce output record for each *key*. It leverages that its input is sorted.
 
-# ElasticSearch
-## Parallels with distributed relationnal databases
+## ElasticSearch
+### Parallels with distributed relationnal databases
 1h # Elasticsearch Tutorial & Getting Started (course preview) https://www.youtube.com/watch?v=ksTTlXNLick
 
 |E| RDB |
@@ -68,21 +71,21 @@ Execution steps of a MapReduce job containing 1 Mapper and 1 Reducer (steps **in
 |Index Shards|DB Partitions|
 |Shards' Replicas|Partitions' Replicas|
 
-# GCP
+## Google Cloud Platform's tools
 - install gcloud SDK
 `curl https://dl.google.com/dl/cloudsdk/release/install_google_cloud_sdk.bash | bash`
 
-## BigQuery vs BigTable
+### BigQuery vs BigTable
 *BigQuery* excels for OLAP (OnLine Analytical Processing): scalable and efficient analytic querying on unchanging data (or just appending data).
 *BigTable* excels for OLTP (OnLine Transaction Processing): scalable and efficient read and write
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNjY2ODAwODgsMjA5MzIzNTU4OCwxOD
-ExMzExMTk2LC01Mzk4MzY1MzgsLTE4NTk1NDIxNjMsMTc0MzE2
-OTAwNCwtNzM5ODUyOTM1LDIwMTkzMDQ4OTcsLTE4NzE0NTY4Nz
-ksMTc1MjQ4NjA0NywtNjE0OTQ2MjUsMTAyMjU4MTYwNCwxODM0
-NTAwNzEzLDE0MTY3NDAyMTEsMTExOTI4NjcwNiwtNzU1MTEzMz
-UxLC0xNzYyNTMwNDU1XX0=
+eyJoaXN0b3J5IjpbNjcwODM2OTEyLC0xMDY2NjgwMDg4LDIwOT
+MyMzU1ODgsMTgxMTMxMTE5NiwtNTM5ODM2NTM4LC0xODU5NTQy
+MTYzLDE3NDMxNjkwMDQsLTczOTg1MjkzNSwyMDE5MzA0ODk3LC
+0xODcxNDU2ODc5LDE3NTI0ODYwNDcsLTYxNDk0NjI1LDEwMjI1
+ODE2MDQsMTgzNDUwMDcxMywxNDE2NzQwMjExLDExMTkyODY3MD
+YsLTc1NTExMzM1MSwtMTc2MjUzMDQ1NV19
 -->
