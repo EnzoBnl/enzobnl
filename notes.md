@@ -2,7 +2,6 @@
 — Flannery O'Connor
 
 — [Jacek Laskowski](https://jaceklaskowski.gitbooks.io/mastering-spark-sql/)
-_______________
 
 |Theme|Content|
 |--|--|
@@ -19,5 +18,6 @@ _______________
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTMwMDEzMTksMzkxNzU1MjIxXX0=
+eyJoaXN0b3J5IjpbMzA5MDI0OTUyLDUzMDAxMzE5LDM5MTc1NT
+IyMV19
 -->
