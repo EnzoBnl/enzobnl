@@ -69,7 +69,7 @@ Attributes cannot receive any modifier and are by default `public static final`.
 ### Diamond problem
 
 # Scala
-## Construcors attributes scope
+## Constructors parameters scope
 ```scala
 (case) class C(... a: Int)
 ```
@@ -358,6 +358,6 @@ from overrides import overrides  # decorator '@overrides'
 from abc import ABC, abstractmethod  #  'class C(ABC)' is abstract and decorator '@abstractmethod' usable.
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMTY1NDgwMDksLTU1MjUyNjE4OCwtMT
-U5Mjk4MzQ2MywtMTgwMjE2ODJdfQ==
+eyJoaXN0b3J5IjpbMzk3NjUwNjg0LC0xMTE2NTQ4MDA5LC01NT
+I1MjYxODgsLTE1OTI5ODM0NjMsLTE4MDIxNjgyXX0=
 -->
