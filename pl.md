@@ -61,8 +61,8 @@ Unlike for (abstract) classes,  `static` method in interfaces cannot be accessed
 - `sq.printName();` does not compile
 - `Square.printName();` compiles
 
-#### interface attribute
-Attributes cannot receive any modifier and are by default `public static final`. Like for methods, *staticity* in interface attribute implies that it cannot be reached from an instance:
+### interface attributes
+Interface attributes cannot receive any modifier and are by default `public static final`. Like for methods, *staticity* in interface attribute implies that it cannot be reached from an instance:
 - `sq.NAME;` does not compile
 - `Square.NAME;` compiles
 
@@ -358,6 +358,6 @@ from overrides import overrides  # decorator '@overrides'
 from abc import ABC, abstractmethod  #  'class C(ABC)' is abstract and decorator '@abstractmethod' usable.
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzk3NjUwNjg0LC0xMTE2NTQ4MDA5LC01NT
-I1MjYxODgsLTE1OTI5ODM0NjMsLTE4MDIxNjgyXX0=
+eyJoaXN0b3J5IjpbLTE1MzI2OTc5NjksLTExMTY1NDgwMDksLT
+U1MjUyNjE4OCwtMTU5Mjk4MzQ2MywtMTgwMjE2ODJdfQ==
 -->
