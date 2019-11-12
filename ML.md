@@ -138,7 +138,6 @@ scm.Plot(title="Bias-variance tradeoff", borders=[0.3,2, -1,5])\
 ## Evaluation, Model selection
 http://scott.fortmann-roe.com/docs/MeasuringError.html
 ### R²
-### Pr
 ### ROC receiver operating characteristic
 - For a classifier
 - Need its implementation to let you access some sort of score instead of flat class prediction (it's always doable if you have access to sources).
@@ -173,6 +172,8 @@ Moving $\theta$ in its interval $[a,b]$, here are special cases:
 
 ### AUC
 Area under curve $\in [0,1]$, after normalization.
+### Accuracy
+$=\frac{TP+TN}{}$
 ### Crossval
 ### Hyper params tuning
 #### GridSearch
@@ -205,5 +206,5 @@ The split train-validation inside outer train set must follow the same logic.
 ### MARS
 ## Support Vector Machine
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDUxNjYzMTldfQ==
+eyJoaXN0b3J5IjpbMTE1MTk4ODU1Nl19
 -->
