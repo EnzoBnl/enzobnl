@@ -138,6 +138,7 @@ scm.Plot(title="Bias-variance tradeoff", borders=[0.3,2, -1,5])\
 ## Evaluation, Model selection
 http://scott.fortmann-roe.com/docs/MeasuringError.html
 ### R²
+### Pr
 ### ROC receiver operating characteristic
 - For a classifier
 - Need its implementation to let you access some sort of score instead of flat class prediction (it's always doable if you have access to sources).
@@ -203,3 +204,6 @@ The split train-validation inside outer train set must follow the same logic.
 ### LASSO
 ### MARS
 ## Support Vector Machine
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbNDUxNjYzMTldfQ==
+-->
