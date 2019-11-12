@@ -173,7 +173,7 @@ Moving $\theta$ in its interval $[a,b]$, here are special cases:
 ### AUC
 Area under curve $\in [0,1]$, after normalization.
 ### Accuracy
-$=\frac{TP+TN}{TP+TN+FP+FN}=\frac{\vert right \space guesses\vert }{\vert guesses\vert }$
+$=\frac{TP+TN}{TP+TN+FP+FN}=\frac{\vert right $
 ### Precision
 $=\frac{TP}{TP+FP}=\frac{\vert reached\space targets\vert }{\vert tries\vert }$
 ### Recall
