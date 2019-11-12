@@ -174,6 +174,10 @@ Moving $\theta$ in its interval $[a,b]$, here are special cases:
 Area under curve $\in [0,1]$, after normalization.
 ### Accuracy
 $=\frac{TP+TN}{TP+TN+FP+FN}$
+### Precision
+$=\frac{TP}{TP+FP}$
+### Recall
+$=\frac{TP}{TP+FN}$
 ### Crossval
 ### Hyper params tuning
 #### GridSearch
@@ -206,5 +210,5 @@ The split train-validation inside outer train set must follow the same logic.
 ### MARS
 ## Support Vector Machine
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU2MDQwNzg5OV19
+eyJoaXN0b3J5IjpbLTE0MjExMjM1NDAsMTU2MDQwNzg5OV19
 -->
