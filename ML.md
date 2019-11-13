@@ -177,7 +177,7 @@ $=\frac{TP+TN}{TP+TN+FP+FN}=\frac{\vert right \space guesses\vert}{\vert tries\v
 ### Precision
 $=\frac{TP}{TP+FP}=\frac{\vert reached\space targets\vert }{\vert positive \space marked \space targets\vert }$
 ### Recall
-$=\frac{TP}{TP+FN}=\frac{\vert reached\space targets\vert }{\vert targets\vert }$
+$=\frac{TP}{TP+FN}=\frac{\vert reached\space targets\vert }{\vert actual \space positive \space targets\vert }$
 ### Crossval
 ### Hyper params tuning
 #### GridSearch
@@ -210,6 +210,6 @@ The split train-validation inside outer train set must follow the same logic.
 ### MARS
 ## Support Vector Machine
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNDcxMjgxODQsLTEwNTgxMjg1MCwtMT
+eyJoaXN0b3J5IjpbLTE4OTYzNjIzMTcsLTEwNTgxMjg1MCwtMT
 Q1NjE1MDQ3NSwxNTYwNDA3ODk5XX0=
 -->
