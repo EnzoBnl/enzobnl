@@ -173,9 +173,9 @@ Moving $\theta$ in its interval $[a,b]$, here are special cases:
 ### AUC
 Area under curve $\in [0,1]$, after normalization.
 ### Accuracy
-$=\frac{TP+TN}{TP+TN+FP+FN}=\frac{\vert right \space guesses\vert}{\vert \vert}$
+$=\frac{TP+TN}{TP+TN+FP+FN}=\frac{\vert right \space guesses\vert}{\vert tries\vert}$
 ### Precision
-$=\frac{TP}{TP+FP}=\frac{\vert reached\space targets\vert }{\vert tries\vert }$
+$=\frac{TP}{TP+FP}=\frac{\vert reached\space targets\vert }{\vert positive \space marked \space targets\vert }$
 ### Recall
 $=\frac{TP}{TP+FN}=\frac{\vert reached\space targets\vert }{\vert targets\vert }$
 ### Crossval
@@ -210,6 +210,6 @@ The split train-validation inside outer train set must follow the same logic.
 ### MARS
 ## Support Vector Machine
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA0NzcyNTUwNSwtMTA1ODEyODUwLC0xND
-U2MTUwNDc1LDE1NjA0MDc4OTldfQ==
+eyJoaXN0b3J5IjpbLTIwNDcxMjgxODQsLTEwNTgxMjg1MCwtMT
+Q1NjE1MDQ3NSwxNTYwNDA3ODk5XX0=
 -->
