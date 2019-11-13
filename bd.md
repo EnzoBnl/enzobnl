@@ -82,14 +82,19 @@ Execution steps of a MapReduce job containing 1 Mapper and 1 Reducer (steps **in
 - *BigQuery* excels for OLAP (OnLine Analytical Processing): scalable and efficient analytic querying on unchanging data (or just appending data).
 - *BigTable* excels for OLTP (OnLine Transaction Processing): scalable and efficient read and write
 
-
+## Delta Lake
+### DeltaLog & ACID guarantees
+#### Atomicity
+#### Consistency
+#### Isolation
+#### Durability
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNzQ5NjYzNCwtMTQzNzYxMjM5NywtMT
-A2NjY4MDA4OCwyMDkzMjM1NTg4LDE4MTEzMTExOTYsLTUzOTgz
-NjUzOCwtMTg1OTU0MjE2MywxNzQzMTY5MDA0LC03Mzk4NTI5Mz
-UsMjAxOTMwNDg5NywtMTg3MTQ1Njg3OSwxNzUyNDg2MDQ3LC02
-MTQ5NDYyNSwxMDIyNTgxNjA0LDE4MzQ1MDA3MTMsMTQxNjc0MD
-IxMSwxMTE5Mjg2NzA2LC03NTUxMTMzNTEsLTE3NjI1MzA0NTVd
-fQ==
+eyJoaXN0b3J5IjpbLTE5NzA3MzU0MDQsLTEyNzQ5NjYzNCwtMT
+QzNzYxMjM5NywtMTA2NjY4MDA4OCwyMDkzMjM1NTg4LDE4MTEz
+MTExOTYsLTUzOTgzNjUzOCwtMTg1OTU0MjE2MywxNzQzMTY5MD
+A0LC03Mzk4NTI5MzUsMjAxOTMwNDg5NywtMTg3MTQ1Njg3OSwx
+NzUyNDg2MDQ3LC02MTQ5NDYyNSwxMDIyNTgxNjA0LDE4MzQ1MD
+A3MTMsMTQxNjc0MDIxMSwxMTE5Mjg2NzA2LC03NTUxMTMzNTEs
+LTE3NjI1MzA0NTVdfQ==
 -->
