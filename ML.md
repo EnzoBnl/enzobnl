@@ -178,9 +178,13 @@ $scored\space universe = test\space records$
 $=\frac{TP+TN}{\vert scored\space universe \vert}=\frac{\vert right \space guesses\vert}{\vert scored\space universe\vert}$
 
 ### Precision
+$scored\space universe = test\space records$
+
 $=\frac{TP}{TP+FP}=\frac{\vert reached\space targets\vert }{\vert positive \space marked \space targets\vert }$
+
 ### Recall
 $=\frac{TP}{TP+FN}=\frac{\vert reached\space targets\vert }{\vert actual \space positive \space targets\vert }$
+
 ### Crossval
 ### Hyper params tuning
 #### GridSearch
@@ -213,6 +217,6 @@ The split train-validation inside outer train set must follow the same logic.
 ### MARS
 ## Support Vector Machine
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjU5MDQzNTMxLC0xODk2MzYyMzE3LC0xMD
-U4MTI4NTAsLTE0NTYxNTA0NzUsMTU2MDQwNzg5OV19
+eyJoaXN0b3J5IjpbLTUzMTI2MjU4NSwtMTg5NjM2MjMxNywtMT
+A1ODEyODUwLC0xNDU2MTUwNDc1LDE1NjA0MDc4OTldfQ==
 -->
