@@ -11,12 +11,12 @@ What you can find here:
 
 What you can find outside:
 
-<a href=""><img src="https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg" height="20px"></img> My profile on LinkedIn</a>
+<a href=""><img src="https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg" height="20px"></img> My LinkedIn</a> profile
 
-<a href=""><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" height="20px"></img></a> My personal projects' repositories on <a href="">my GitHub</a>
+<a href=""><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" height="20px"></img> My GitHub</a> personal repositories
 
-<a href=""><img src="https://cdn.sstatic.net/Sites/stackoverflow/company/img/logos/so/so-icon.png?v=c78bd457575a" height="20px"></img> My StackOverflow</a>
+<a href=""><img src="https://cdn.sstatic.net/Sites/stackoverflow/company/img/logos/so/so-icon.png?v=c78bd457575a" height="20px"></img> My StackOverflow</a> answers and questions
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ2NDA4NTA5NywxNTM4OTAzMzAzLC01Mj
+eyJoaXN0b3J5IjpbMTM0MDY2ODQyOCwxNTM4OTAzMzAzLC01Mj
 A4NjIzNTZdfQ==
 -->
