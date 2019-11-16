@@ -1,7 +1,6 @@
 >  I write to discover what I know.
-— Flannery O'Connor
 
-— [Jacek Laskowski](https://jaceklaskowski.gitbooks.io/mastering-spark-sql/)
+— Flannery O'Connor
 
 |Theme|Content|
 |--|--|
@@ -20,6 +19,6 @@
 
 |
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTczMDU2ODU3OSwzMDkwMjQ5NTIsNTMwMD
-EzMTksMzkxNzU1MjIxXX0=
+eyJoaXN0b3J5IjpbLTE0MDQzNjQ3NjgsMzA5MDI0OTUyLDUzMD
+AxMzE5LDM5MTc1NTIyMV19
 -->
