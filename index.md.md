@@ -19,11 +19,13 @@ ___
 
 — Flannery O'Connor
 
+> “Les ops et les devs: Chacun considère que le boulot des autres c’est la dernière des saloperies imaginées”_
+
 >  Operate! Operate! Still time to operate!
 
 — Mad Dok Grotsnik
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExODQ0NzE5MzgsNDAzNzIzNTM4LDE1Mz
-g5MDMzMDMsLTUyMDg2MjM1Nl19
+eyJoaXN0b3J5IjpbLTY5OTM2NDY0Niw0MDM3MjM1MzgsMTUzOD
+kwMzMwMywtNTIwODYyMzU2XX0=
 -->
