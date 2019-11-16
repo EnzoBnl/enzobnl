@@ -8,7 +8,8 @@
 
 # Java
 ## Java 8: Interfaces
-We will take the following interface as an example for this section:
+We will take the following interface as an example for this section: (java8)
+### functional interface, `default` and `static`
 ```java
 @FunctionalInterface
 interface Square{
@@ -23,14 +24,18 @@ interface Square{
 }
 ```
 ### functional interface
-`Square` definition allows to get a concrete implementation of Square interface by implementing its `calculate `abstract method like follow:
+`Square` definition ");
+  }
+}
+```
+allows to get a concrete implementation of Square interface by implementing its `calculate `abstract method like follow:
 ```java
 Square sq = (int x) -> x*x;
 ```
 
 In fact `@FunctionalInterface` is here to guarantee that the functional interface **has only one abstract method**.
 
-### `default` method in interface vs abstract method in abstract classes ?
+#### `default` method in interface vs abstract method in abstract classes ?
  [(post)](https://stackoverflow.com/a/19998827/6580080)
  
 - When doubting, use interface with defaults method in priority, because it has more constraints leading to more compiler optimizations
@@ -56,8 +61,10 @@ class NamePrinter implements Named, Printer {
 }
 ```
 
-### `static` methods
-Unlike for (abstract) classes,  `static` method in interfaces cannot be accessed through instances:
+Use interface whenever you can, it's like a **DIP** applied to library writing instead of client writing.
+#### `static` methods
+Unlike for (abstract) class
+On interfaces,  `static` method in interfaces cannot be accessed through instancescan only:
 - `sq.printName();` does not compile
 - `Square.printName();` compiles
 
@@ -65,11 +72,11 @@ Unlike for (abstract) classes,  `static` method in interfaces cannot be accessed
 Interface attributes cannot receive any modifier and are by default `public static final`. Like for methods, *staticity* in interface attribute implies that it cannot be reached from an instance:
 - `sq.NAME;` does not compile
 - `Square.NAME;` compiles
-
+Note: both this 2 lines would have compiled if `Square ` were an *abstract class*.
 ### Diamond problem
 
 # Scala
-## Constructors parameters scope
+## Constructors parameattributers scope
 ```scala
 (case) class C(... a: Int)
 ```
@@ -358,6 +365,7 @@ from overrides import overrides  # decorator '@overrides'
 from abc import ABC, abstractmethod  #  'class C(ABC)' is abstract and decorator '@abstractmethod' usable.
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MzI2OTc5NjksLTExMTY1NDgwMDksLT
-U1MjUyNjE4OCwtMTU5Mjk4MzQ2MywtMTgwMjE2ODJdfQ==
+eyJoaXN0b3J5IjpbMTk4NTEzNTMxLC0xNTMyNjk3OTY5LC0xMT
+E2NTQ4MDA5LC01NTI1MjYxODgsLTE1OTI5ODM0NjMsLTE4MDIx
+NjgyXX0=
 -->
