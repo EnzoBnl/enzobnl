@@ -1,6 +1,9 @@
->  I write to discover what I know.
-
+ritten with [StackEdit](https://stackedit.io/).
+>
+  I write to discover what I know.
 — Flannery O'Connor
+
+— [Jacek Laskowski](https://jaceklaskowski.gitbooks.io/mastering-spark-sql/)
 
 |Theme|Content|
 |--|--|
@@ -19,6 +22,6 @@
 
 |
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MDQzNjQ3NjgsMzA5MDI0OTUyLDUzMD
-AxMzE5LDM5MTc1NTIyMV19
+eyJoaXN0b3J5IjpbNDU5MzA1NTcyLDMwOTAyNDk1Miw1MzAwMT
+MxOSwzOTE3NTUyMjFdfQ==
 -->
