@@ -6,7 +6,7 @@
 <script>document.body.style.background = "#f2f2f2";</script>
 <!--NOTE HEAD END-->
 
-|Year|Degree|Work|
+|Year|Degree|WorLink|
 |:--:|:--:|:--:|
 |2019|**Master 2** (in apprenticeship): _“Computer Science for Data Science”_ |Master's Thesis: [_Cluster wide caching of Spark SQL's deterministic UDFs using Ignite-powered scalable memoization_](./masterthesis.html) (en)|
 |2018|**Master 1** (in apprenticeship): _“Computer Science for Data Science”_  |Report of apprenticeship activity: [_Outils Data : Comment améliorer leur accessibilité pour les populariser ?_](./M1Report/memoire_m1_enzobnl.pdf) (fr)|
@@ -14,6 +14,6 @@
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM2MDIwNjg3NCwyMDI0MTc2MTM4LDEzNT
-gxMTIyNDNdfQ==
+eyJoaXN0b3J5IjpbMjkyOTQxNTEsLTM2MDIwNjg3NCwyMDI0MT
+c2MTM4LDEzNTgxMTIyNDNdfQ==
 -->
