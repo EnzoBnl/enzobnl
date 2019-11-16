@@ -19,11 +19,13 @@ ___
 
 — Flannery O'Connor
 
->  I write to discover what I know.
+>  Mad Dok [Grotsnik](https://wh40k.lexicanum.com/wiki/Grotsnik "Grotsnik")
+
+_**Operate! Operate! Still time to operate!**_
 
 — Flannery O'Connor
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDAzNzIzNTM4LDE1Mzg5MDMzMDMsLTUyMD
-g2MjM1Nl19
+eyJoaXN0b3J5IjpbNzAyNDkyNjU3LDQwMzcyMzUzOCwxNTM4OT
+AzMzAzLC01MjA4NjIzNTZdfQ==
 -->
