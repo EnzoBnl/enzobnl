@@ -1,4 +1,4 @@
-## Notes
+## <img src="https://cdn.pixabay.com/photo/2012/04/16/11/48/note-35638_960_720.png" height="25px"> Notes
 
 |Note theme|Content overview|
 |--|--|
@@ -19,6 +19,6 @@ ___
 – Flannery O'Connor
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1ODk3ODExOSwtMTY0OTg0MDc2LDM5MT
-c1NTIyMSwzMDkwMjQ5NTIsNTMwMDEzMTldfQ==
+eyJoaXN0b3J5IjpbLTIwMDAyODcwNDEsLTE2NDk4NDA3NiwzOT
+E3NTUyMjEsMzA5MDI0OTUyLDUzMDAxMzE5XX0=
 -->
