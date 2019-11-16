@@ -21,15 +21,19 @@ ___
 
 > Les ops et les devs: chacun considère que le boulot des autres c'est la dernière des saloperies imaginées
 
-—  
+— 
 
+> c'est celui qui a le meilleur algo qui pète le marché
 
+> à cause de ça le serveur se fait dégommer la tronche pendant deux heures
+
+—
 
 >  Operate! Operate! Still time to operate!
 
 — Mad Dok Grotsnik
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgxOTAwNzE5NCw0MDM3MjM1MzgsMTUzOD
+eyJoaXN0b3J5IjpbLTUzNDE4OTUwNyw0MDM3MjM1MzgsMTUzOD
 kwMzMwMywtNTIwODYyMzU2XX0=
 -->
