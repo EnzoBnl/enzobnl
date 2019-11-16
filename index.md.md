@@ -19,21 +19,16 @@ ___
 
 — Flannery O'Connor
 
-> Les ops et les devs: chacun considère que le boulot des autres c'est la dernière des saloperies imaginées
+> ~~Les ops et les devs: chacun considère que le boulot des autres c'est la dernière des saloperies imaginées~~
 
-— Cloud teacher
+— ~~Cloud teacher~~
 
-> c'est celui qui a le meilleur algo qui pète le marché
+> ~~c'est celui qui a le meilleur algo qui pète le marché~~
 
-> à cause de ça le serveur se fait dégommer la tronche pendant deux heures
+> ~~à cause de ça le serveur se fait dégommer la tronche pendant deux heures~~
 
-— Security teacher
-
->  Operate! Operate! Still time to operate!
-
-— Mad Dok Grotsnik
-
+~~— Security teacher~~
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE3NDU2NjU3MCwtNTM0MTg5NTA3LDQwMz
-cyMzUzOCwxNTM4OTAzMzAzLC01MjA4NjIzNTZdfQ==
+eyJoaXN0b3J5IjpbNzE0NTA0MjM0LC01MzQxODk1MDcsNDAzNz
+IzNTM4LDE1Mzg5MDMzMDMsLTUyMDg2MjM1Nl19
 -->
