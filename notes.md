@@ -1,4 +1,4 @@
-|Theme|Content|
+|Note theme|Content overview|
 |--|--|
 |[Apache Spark](spark.html)|Internals|
 |[Object Oriented Programming](OOP.html)|SOLID, design patterns|
@@ -11,7 +11,10 @@
 |[Other CS notes](div.html)|Multi-threading, computer architecture, network...|
 |[Commands cheat sheet](cmd.html)|To write down some useful CLI stuff|
 
+___
+> I write to discover what I **know**.(https://www.goodreads.com/quotes/150203-i-write-to-discover-what-i-know)
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzkxNzU1MjIxLDMwOTAyNDk1Miw1MzAwMT
-MxOSwzOTE3NTUyMjFdfQ==
+eyJoaXN0b3J5IjpbLTE2ODUzMzgzODYsMzkxNzU1MjIxLDMwOT
+AyNDk1Miw1MzAwMTMxOV19
 -->
