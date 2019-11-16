@@ -19,13 +19,13 @@ ___
 
 — Flannery O'Connor
 
-> “Les ops et les devs: Chacun considère que le boulot des autres c’est la dernière des saloperies imaginées”_
+> The ops and the devs: Everyone considers that the work of the others is the worst crap imaginable (Original: les ops et les devs: chacun considère que le boulot des autres c'est la dernière des saloperies imaginées)
 
 >  Operate! Operate! Still time to operate!
 
 — Mad Dok Grotsnik
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY5OTM2NDY0Niw0MDM3MjM1MzgsMTUzOD
+eyJoaXN0b3J5IjpbMTAxOTg3MDUzNyw0MDM3MjM1MzgsMTUzOD
 kwMzMwMywtNTIwODYyMzU2XX0=
 -->
