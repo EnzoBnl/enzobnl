@@ -21,19 +21,19 @@ ___
 
 > Les ops et les devs: chacun considère que le boulot des autres c'est la dernière des saloperies imaginées
 
-— 
+— Cloud teacher
 
 > c'est celui qui a le meilleur algo qui pète le marché
 
 > à cause de ça le serveur se fait dégommer la tronche pendant deux heures
 
-—
+— Security teacher
 
 >  Operate! Operate! Still time to operate!
 
 — Mad Dok Grotsnik
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUzNDE4OTUwNyw0MDM3MjM1MzgsMTUzOD
-kwMzMwMywtNTIwODYyMzU2XX0=
+eyJoaXN0b3J5IjpbMTE3NDU2NjU3MCwtNTM0MTg5NTA3LDQwMz
+cyMzUzOCwxNTM4OTAzMzAzLC01MjA4NjIzNTZdfQ==
 -->
