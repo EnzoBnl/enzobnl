@@ -19,8 +19,11 @@ ___
 
 — Flannery O'Connor
 
+>  I write to discover what I know.
+
+— Flannery O'Connor
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUyOTM3MTY2LDE1Mzg5MDMzMDMsLTUyMD
+eyJoaXN0b3J5IjpbNDAzNzIzNTM4LDE1Mzg5MDMzMDMsLTUyMD
 g2MjM1Nl19
 -->
