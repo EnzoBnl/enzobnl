@@ -5,19 +5,21 @@
 
 |Theme|Content|
 |--|--|
-|[Apache Spark](spark.html)|Internals|
+|[Apache Spark](spark.html)|Internals|Theme|Content|
+|--|--|
 |[Object Oriented Programming](OOP.html)|SOLID, design patterns|
 |[Machine Learning & Stats](ML.html)|Definitions, test statistics, bias-variance, methodology, algorithms|
 |[Graphs theory & web](graph.html)|Definitions & theorems, search engines and web's graph properties|
 |[Functional Programming](FP.html)|Scala & Cats, categories|
-|[Big Data Systems](bd.html)|Frameworks & theory|
-|[Development](pl.html)|Coding in Java/Scala/Python|
+|[Big Data SystemFrameworks](bd.html)|Frameworks & theory|
+|[DevelopmentSpark, Elastic Search...|
+|[Programming Languages](pl.html)|Coding in Java/Scala/Python|
 |[Distributed algorithms](da.html)|Leader election & Consensus, synchronous systems|
 |[Other CS notes](div.html)|Multi-threading, computer architecture, network...|
 |[Commands cheat sheet](cmd.html)|To write down some useful CLI stuff|
 
-
+|
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzA5MDI0OTUyLDUzMDAxMzE5LDM5MTc1NT
-IyMV19
+eyJoaXN0b3J5IjpbLTczMDU2ODU3OSwzMDkwMjQ5NTIsNTMwMD
+EzMTksMzkxNzU1MjIxXX0=
 -->
