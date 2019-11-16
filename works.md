@@ -1,12 +1,4 @@
-<!--NOTE HEAD START-->
-<link rel="icon" type="image/png" href="./imgs/favicon_db.png" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.0.0/mermaid.min.js"></script>
-<script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {skipTags: ['script', 'noscript','style', 'textarea', 'pre'],inlineMath: [['$','$']]}});</script>
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
-<script>document.body.style.background = "#f2f2f2";</script>
-<!--NOTE HEAD END-->
-
-## Works
+## <img src="http://pngimg.com/uploads/book/book_PNG51027.png" height="23px"> Works
 
 |Year|Degree|Link|
 |:--:|:--:|:--:|
@@ -16,5 +8,5 @@
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTU5Mzg1MDVdfQ==
+eyJoaXN0b3J5IjpbLTEzMDgxOTQzNF19
 -->
