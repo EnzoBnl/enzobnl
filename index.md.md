@@ -19,13 +19,11 @@ ___
 
 — Flannery O'Connor
 
->  Mad Dok [Grotsnik](https://wh40k.lexicanum.com/wiki/Grotsnik "Grotsnik")
+>  Operate! Operate! Still time to operate!
 
-_**Operate! Operate! Still time to operate!**_
-
-— Flannery O'Connor
+— Mad Dok Grotsnik
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzAyNDkyNjU3LDQwMzcyMzUzOCwxNTM4OT
-AzMzAzLC01MjA4NjIzNTZdfQ==
+eyJoaXN0b3J5IjpbLTExODQ0NzE5MzgsNDAzNzIzNTM4LDE1Mz
+g5MDMzMDMsLTUyMDg2MjM1Nl19
 -->
