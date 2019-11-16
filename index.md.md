@@ -1,8 +1,5 @@
->  I write to discover what I know.
+### *Hello world !*
 
-— Flannery O'Connor
-
-___
 What you can find here:
 
 <img src="http://pngimg.com/uploads/book/book_PNG51027.png" height="20px"></img> [Works](works.html) like internship reports and master thesis
@@ -16,7 +13,14 @@ What you can find outside:
 <a href=""><img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" height="20px"></img> My GitHub</a> personal repositories
 
 <a href=""><img src="https://cdn.sstatic.net/Sites/stackoverflow/company/img/logos/so/so-icon.png?v=c78bd457575a" height="20px"></img> My StackOverflow</a> answers and questions
+
+___
+>  I write to discover what I know.
+
+— Flannery O'Connor
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM0MDY2ODQyOCwxNTM4OTAzMzAzLC01Mj
-A4NjIzNTZdfQ==
+eyJoaXN0b3J5IjpbLTUyOTM3MTY2LDE1Mzg5MDMzMDMsLTUyMD
+g2MjM1Nl19
 -->
