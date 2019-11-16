@@ -12,9 +12,11 @@
 |[Commands cheat sheet](cmd.html)|To write down some useful CLI stuff|
 
 ___
-> I write to discover what I **know**.(https://www.goodreads.com/quotes/150203-i-write-to-discover-what-i-know)
+> I write to discover what I know.
+
+– Flannery O'Connor
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2ODUzMzgzODYsMzkxNzU1MjIxLDMwOT
-AyNDk1Miw1MzAwMTMxOV19
+eyJoaXN0b3J5IjpbLTE2NDk4NDA3NiwzOTE3NTUyMjEsMzA5MD
+I0OTUyLDUzMDAxMzE5XX0=
 -->
