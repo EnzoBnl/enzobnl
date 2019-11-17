@@ -91,19 +91,21 @@ Deltalog = *Delta Lake* transaction log.
 - *Delta Lake* breaks down every operation performed by auser into *commits*, themselves composed of *actions*.
 - **Atomicity of commits** is guaranteed by the fact that a commit is recorded in the deltalog **only once each action composing it have successfully completed**, else it is reverted.
 #### Consistency
-- The consistency of the `DeltaTable`s is guaranteed by their strong schema checking.
+The consistency of the `DeltaTable`s is guaranteed by their strong schema checking.
+
 #### Isolation
 Concurrency of commits is managed to ensure their isolation. An optimistic concurrency control is applied:
 - When a commit execution starts, the thread snapshots the current deltalog.
 - When the commit actions have completed, the thread checks if the deltalog has been updated by another one in the meantime:
   - If not it records the commit in the deltalog
-  - Else it updates its DeltaTable view and attempt again to commit, after a step of reprocessing if needed.
+  - Else it updates its `DeltaTable` view and attempt again to record the commit, after a step of reprocessing if needed.
+  
 #### Durability
-- Durability is guaranteed by the fact that commits involving `DeltaTable`s' data mutation need to finish to write or delete the underlying parquet files on the filesystem to be considered completed.
+Durability is guaranteed by the fact that commits involving `DeltaTable`s' data mutation need to finish to write or delete the underlying parquet files on the filesystem to be considered completed.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNDkzNDY2NTYsLTE5NzA3MzU0MDQsLT
+eyJoaXN0b3J5IjpbLTEyMDQ4NzE0OTYsLTE5NzA3MzU0MDQsLT
 EyNzQ5NjYzNCwtMTQzNzYxMjM5NywtMTA2NjY4MDA4OCwyMDkz
 MjM1NTg4LDE4MTEzMTExOTYsLTUzOTgzNjUzOCwtMTg1OTU0Mj
 E2MywxNzQzMTY5MDA0LC03Mzk4NTI5MzUsMjAxOTMwNDg5Nywt
