@@ -86,16 +86,17 @@ Execution steps of a MapReduce job containing 1 Mapper and 1 Reducer (steps **in
 ### DeltaLog & ACID guarantees
 Deltalog = *Delta Lake* transaction log.
 
-[DataBricks' blog: Diving Into Delta Lake: Unpacking The Transaction Log](https://databricks.com/blog/2019/08/21/diving-into-delta-lake-unpacking-the-transaction-log.html)
+[DataBricks' blog, Diving Into Delta Lake: Unpacking The Transaction Log](https://databricks.com/blog/2019/08/21/diving-into-delta-lake-unpacking-the-transaction-log.html)
 #### Atomicity
-- *Delta Lake* breaks down every operation performed by user into *commits*, themselves composed of *actions*.
-- **Atomicity of commits** is reached because a commit is recorded in the deltalog **only once each action composing it have successfully completed**, else it is reverted.
+- *Delta Lake* breaks down every operation performed by auser into *commits*, themselves composed of *actions*.
+- **Atomicity of commits** is guaranteed by the fact that a commit is recorded in the deltalog **only once each action composing it have successfully completed**, else it is reverted.
 #### Consistency
+- The consistency of the DeltaTables is ensured 
 #### Isolation
 #### Durability
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ1Nzg0NzM4NiwtMTk3MDczNTQwNCwtMT
+eyJoaXN0b3J5IjpbMTI4MzA4ODEzMSwtMTk3MDczNTQwNCwtMT
 I3NDk2NjM0LC0xNDM3NjEyMzk3LC0xMDY2NjgwMDg4LDIwOTMy
 MzU1ODgsMTgxMTMxMTE5NiwtNTM5ODM2NTM4LC0xODU5NTQyMT
 YzLDE3NDMxNjkwMDQsLTczOTg1MjkzNSwyMDE5MzA0ODk3LC0x
