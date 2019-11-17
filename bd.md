@@ -95,19 +95,19 @@ Deltalog = *Delta Lake* transaction log.
 #### Isolation
 Concurrency of commits is managed to ensure their isolation. An optimistic concurrency control is applied:
 - When a commit execution starts, the thread snapshots the current deltalog.
-- When the commit actihas completed, it checks if the deltalog has been updated by another thread:
-  - If not it records its commit
-  - else it updates its DeltaTable view and attempt again to commit, after a step of reprocessing if needed.
+- When the commit actions have completed, the thread checks if the deltalog has been updated by another one in the meantime:
+  - If not it records the commit in the deltalog
+  - Else it updates its DeltaTable view and attempt again to commit, after a step of reprocessing if needed.
 #### Durability
 - Durability is guaranteed by the fact that commits involving `DeltaTable`s' data mutation need to finish to write or delete the underlying parquet files on the filesystem to be considered completed.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg2MjY0MDg5LC0xOTcwNzM1NDA0LC0xMj
-c0OTY2MzQsLTE0Mzc2MTIzOTcsLTEwNjY2ODAwODgsMjA5MzIz
-NTU4OCwxODExMzExMTk2LC01Mzk4MzY1MzgsLTE4NTk1NDIxNj
-MsMTc0MzE2OTAwNCwtNzM5ODUyOTM1LDIwMTkzMDQ4OTcsLTE4
-NzE0NTY4NzksMTc1MjQ4NjA0NywtNjE0OTQ2MjUsMTAyMjU4MT
-YwNCwxODM0NTAwNzEzLDE0MTY3NDAyMTEsMTExOTI4NjcwNiwt
-NzU1MTEzMzUxXX0=
+eyJoaXN0b3J5IjpbLTEwNDkzNDY2NTYsLTE5NzA3MzU0MDQsLT
+EyNzQ5NjYzNCwtMTQzNzYxMjM5NywtMTA2NjY4MDA4OCwyMDkz
+MjM1NTg4LDE4MTEzMTExOTYsLTUzOTgzNjUzOCwtMTg1OTU0Mj
+E2MywxNzQzMTY5MDA0LC03Mzk4NTI5MzUsMjAxOTMwNDg5Nywt
+MTg3MTQ1Njg3OSwxNzUyNDg2MDQ3LC02MTQ5NDYyNSwxMDIyNT
+gxNjA0LDE4MzQ1MDA3MTMsMTQxNjc0MDIxMSwxMTE5Mjg2NzA2
+LC03NTUxMTMzNTFdfQ==
 -->
