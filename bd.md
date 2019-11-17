@@ -101,15 +101,15 @@ Concurrency of commits is managed to ensure their isolation. An optimistic concu
   - Else it updates its `DeltaTable` view and attempt again to record the commit, after a step of reprocessing if needed.
   
 #### Durability
-Durability is guaranteed by the fact that commits involving `DeltaTable`s' data mutation need to finish to write or delete the underlying parquet files on the filesystem to be considered completed.
+Commits involving `DeltaTable`s' data mutation need to finish their writes or deletions on underlying *Parquet* files on the filesystem to be considered as successfully completed.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMDQ4NzE0OTYsLTE5NzA3MzU0MDQsLT
-EyNzQ5NjYzNCwtMTQzNzYxMjM5NywtMTA2NjY4MDA4OCwyMDkz
-MjM1NTg4LDE4MTEzMTExOTYsLTUzOTgzNjUzOCwtMTg1OTU0Mj
-E2MywxNzQzMTY5MDA0LC03Mzk4NTI5MzUsMjAxOTMwNDg5Nywt
-MTg3MTQ1Njg3OSwxNzUyNDg2MDQ3LC02MTQ5NDYyNSwxMDIyNT
-gxNjA0LDE4MzQ1MDA3MTMsMTQxNjc0MDIxMSwxMTE5Mjg2NzA2
-LC03NTUxMTMzNTFdfQ==
+eyJoaXN0b3J5IjpbMTIyNzIzMTI3MSwtMTk3MDczNTQwNCwtMT
+I3NDk2NjM0LC0xNDM3NjEyMzk3LC0xMDY2NjgwMDg4LDIwOTMy
+MzU1ODgsMTgxMTMxMTE5NiwtNTM5ODM2NTM4LC0xODU5NTQyMT
+YzLDE3NDMxNjkwMDQsLTczOTg1MjkzNSwyMDE5MzA0ODk3LC0x
+ODcxNDU2ODc5LDE3NTI0ODYwNDcsLTYxNDk0NjI1LDEwMjI1OD
+E2MDQsMTgzNDUwMDcxMywxNDE2NzQwMjExLDExMTkyODY3MDYs
+LTc1NTExMzM1MV19
 -->
