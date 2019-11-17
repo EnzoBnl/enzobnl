@@ -94,10 +94,10 @@ Deltalog = *Delta Lake* transaction log.
 - The consistency of the `DeltaTable`s is guaranteed by their strong schema checking.
 #### Isolation
 #### Durability
-- Commits involving data modification are considered completed only after they 
+- Durability is guaranteed by theommits involving data modification are considered completed only after they have finished to write or to delete the underlying parquet files on file system.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjEwMDkxODA0LC0xOTcwNzM1NDA0LC0xMj
+eyJoaXN0b3J5IjpbODQwMTE5Nzc4LC0xOTcwNzM1NDA0LC0xMj
 c0OTY2MzQsLTE0Mzc2MTIzOTcsLTEwNjY2ODAwODgsMjA5MzIz
 NTU4OCwxODExMzExMTk2LC01Mzk4MzY1MzgsLTE4NTk1NDIxNj
 MsMTc0MzE2OTAwNCwtNzM5ODUyOTM1LDIwMTkzMDQ4OTcsLTE4
