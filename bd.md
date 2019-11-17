@@ -94,14 +94,14 @@ Deltalog = *Delta Lake* transaction log.
 - The consistency of the `DeltaTable`s is guaranteed by their strong schema checking.
 #### Isolation
 #### Durability
-- Durability is guaranteed by theommits involving data modification are considered completed only after they have finished to write or to delete the underlying parquet files on file system.
+- Durability is guaranteed by the fact that commits involving `DeltaTable`s' data mutation need tofinish to write or delete the underlying parquet files on the filesystem to be considered completed.shed to write or to delete the underlying parquet files on file system.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODQwMTE5Nzc4LC0xOTcwNzM1NDA0LC0xMj
-c0OTY2MzQsLTE0Mzc2MTIzOTcsLTEwNjY2ODAwODgsMjA5MzIz
-NTU4OCwxODExMzExMTk2LC01Mzk4MzY1MzgsLTE4NTk1NDIxNj
-MsMTc0MzE2OTAwNCwtNzM5ODUyOTM1LDIwMTkzMDQ4OTcsLTE4
-NzE0NTY4NzksMTc1MjQ4NjA0NywtNjE0OTQ2MjUsMTAyMjU4MT
-YwNCwxODM0NTAwNzEzLDE0MTY3NDAyMTEsMTExOTI4NjcwNiwt
-NzU1MTEzMzUxXX0=
+eyJoaXN0b3J5IjpbLTcwMzIxMTE1OSwtMTk3MDczNTQwNCwtMT
+I3NDk2NjM0LC0xNDM3NjEyMzk3LC0xMDY2NjgwMDg4LDIwOTMy
+MzU1ODgsMTgxMTMxMTE5NiwtNTM5ODM2NTM4LC0xODU5NTQyMT
+YzLDE3NDMxNjkwMDQsLTczOTg1MjkzNSwyMDE5MzA0ODk3LC0x
+ODcxNDU2ODc5LDE3NTI0ODYwNDcsLTYxNDk0NjI1LDEwMjI1OD
+E2MDQsMTgzNDUwMDcxMywxNDE2NzQwMjExLDExMTkyODY3MDYs
+LTc1NTExMzM1MV19
 -->
