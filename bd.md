@@ -93,15 +93,17 @@ Deltalog = *Delta Lake* transaction log.
 #### Consistency
 - The consistency of the `DeltaTable`s is guaranteed by their strong schema checking.
 #### Isolation
-Concurrency of commits is managed to ensure theirOptimistic concurrency control ensures the isolation of the commits:
-- When a commit execution starts, it snapshot the current deltalog.
-- When it has completed, it check if the deltalog has been updated by another thread. If not it writes its commit, else it updates its DeltaTable view and attempt again to commit, after a step of reprocessing if needed.
+Concurrency of commits is managed to ensure their isolation. An optimistic concurrency control is applied:
+- When a commit execution starts, the thread snapshots the current deltalog.
+- When the commit actihas completed, it checks if the deltalog has been updated by another thread:
+  - If not it records its commit
+  - else it updates its DeltaTable view and attempt again to commit, after a step of reprocessing if needed.
 #### Durability
 - Durability is guaranteed by the fact that commits involving `DeltaTable`s' data mutation need to finish to write or delete the underlying parquet files on the filesystem to be considered completed.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzYzNjcwMjQxLC0xOTcwNzM1NDA0LC0xMj
+eyJoaXN0b3J5IjpbMTg2MjY0MDg5LC0xOTcwNzM1NDA0LC0xMj
 c0OTY2MzQsLTE0Mzc2MTIzOTcsLTEwNjY2ODAwODgsMjA5MzIz
 NTU4OCwxODExMzExMTk2LC01Mzk4MzY1MzgsLTE4NTk1NDIxNj
 MsMTc0MzE2OTAwNCwtNzM5ODUyOTM1LDIwMTkzMDQ4OTcsLTE4
