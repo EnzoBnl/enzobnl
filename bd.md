@@ -85,17 +85,18 @@ Execution steps of a MapReduce job containing 1 Mapper and 1 Reducer (steps **in
 ## Delta Lake
 ### DeltaLog & ACID guarantees
 #### Atomicity
-Delta lake breaks down every user operation into actions
+- Delta lake breaks down every user operation into commits, themselves composed of actions.
+- The tra
 #### Consistency
 #### Isolation
 #### Durability
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMTQ2NzA5MjcsLTE5NzA3MzU0MDQsLT
-EyNzQ5NjYzNCwtMTQzNzYxMjM5NywtMTA2NjY4MDA4OCwyMDkz
-MjM1NTg4LDE4MTEzMTExOTYsLTUzOTgzNjUzOCwtMTg1OTU0Mj
-E2MywxNzQzMTY5MDA0LC03Mzk4NTI5MzUsMjAxOTMwNDg5Nywt
-MTg3MTQ1Njg3OSwxNzUyNDg2MDQ3LC02MTQ5NDYyNSwxMDIyNT
-gxNjA0LDE4MzQ1MDA3MTMsMTQxNjc0MDIxMSwxMTE5Mjg2NzA2
-LC03NTUxMTMzNTFdfQ==
+eyJoaXN0b3J5IjpbMjc0NjE1MDQwLC0xOTcwNzM1NDA0LC0xMj
+c0OTY2MzQsLTE0Mzc2MTIzOTcsLTEwNjY2ODAwODgsMjA5MzIz
+NTU4OCwxODExMzExMTk2LC01Mzk4MzY1MzgsLTE4NTk1NDIxNj
+MsMTc0MzE2OTAwNCwtNzM5ODUyOTM1LDIwMTkzMDQ4OTcsLTE4
+NzE0NTY4NzksMTc1MjQ4NjA0NywtNjE0OTQ2MjUsMTAyMjU4MT
+YwNCwxODM0NTAwNzEzLDE0MTY3NDAyMTEsMTExOTI4NjcwNiwt
+NzU1MTEzMzUxXX0=
 -->
