@@ -87,13 +87,13 @@ Execution steps of a MapReduce job containing 1 Mapper and 1 Reducer (steps **in
 Deltalog = *Delta Lake* transaction log
 #### Atomicity
 - *Delta Lake* breaks down every user operation into *commits*, themselves composed of *actions*.
-- Once every actions of a commit have successfully completed, the commit is 
+- Atomicity of commits is reached because a commit is only reco nce every actions of a commit have successfully completed, the commit is recorded in the deltalog, so that everything that figures in the deltalog has
 #### Consistency
 #### Isolation
 #### Durability
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjE0NDc5OTk4MCwtMTk3MDczNTQwNCwtMT
+eyJoaXN0b3J5IjpbMTYzOTQxMzczMiwtMTk3MDczNTQwNCwtMT
 I3NDk2NjM0LC0xNDM3NjEyMzk3LC0xMDY2NjgwMDg4LDIwOTMy
 MzU1ODgsMTgxMTMxMTE5NiwtNTM5ODM2NTM4LC0xODU5NTQyMT
 YzLDE3NDMxNjkwMDQsLTczOTg1MjkzNSwyMDE5MzA0ODk3LC0x
