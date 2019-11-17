@@ -88,25 +88,25 @@ Deltalog = *Delta Lake* transaction log.
 
 [DataBricks' blog, Diving Into Delta Lake: Unpacking The Transaction Log](https://databricks.com/blog/2019/08/21/diving-into-delta-lake-unpacking-the-transaction-log.html)
 #### Atomicity
-- *Delta Lake* breaks down every operation performed by auser into *commits*, themselves composed of *actions*.
-- **Atomicity of commits** is guaranteed by the fact that a commit is recorded in the deltalog **only once each action composing it have successfully completed**, else it is reverted.
+- *Delta Lake* breaks down every operation performed by an user into *commits*, themselves composed of *actions*.
+- **Atomicity** of commits is guaranteed by the fact that a commit is recorded in the deltalog only once each action composing it have successfully completed, else it is reverted.
 
 #### Consistency
-The consistency of the `DeltaTable`s is guaranteed by their strong schema checking.
+The **consistency** of the `DeltaTable`s is guaranteed by their strong schema checking.
 
 #### Isolation
-Concurrency of commits is managed to ensure their isolation. An optimistic concurrency control is applied:
+Concurrency of commits is managed to ensure their **isolation**. An optimistic concurrency control is applied:
 - When a commit execution starts, the thread snapshots the current deltalog.
 - When the commit actions have completed, the thread checks if the *Deltalog* has been updated by another one in the meantime:
   - If not it records the commit in the deltalog
   - Else it updates its `DeltaTable` view and attempt again to record the commit, after a step of reprocessing if needed.
   
 #### Durability
-Commits involving `DeltaTable`s' data mutation need to finish their writes or deletions on underlying *Parquet* files on the filesystem to be considered as successfully completed.
+Commits involving `DeltaTable`s' data mutation need to finish their writes or deletions on underlying *Parquet* files on the filesystem to be considered as successfully completed, making them **durable**.
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTE4MzQzNTY1LC0xOTcwNzM1NDA0LC0xMj
+eyJoaXN0b3J5IjpbNzAxMjkwMDU3LC0xOTcwNzM1NDA0LC0xMj
 c0OTY2MzQsLTE0Mzc2MTIzOTcsLTEwNjY2ODAwODgsMjA5MzIz
 NTU4OCwxODExMzExMTk2LC01Mzk4MzY1MzgsLTE4NTk1NDIxNj
 MsMTc0MzE2OTAwNCwtNzM5ODUyOTM1LDIwMTkzMDQ4OTcsLTE4
