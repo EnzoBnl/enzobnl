@@ -89,7 +89,7 @@ Deltalog = *Delta Lake* transaction log.
 [DataBricks' blog, Diving Into Delta Lake: Unpacking The Transaction Log](https://databricks.com/blog/2019/08/21/diving-into-delta-lake-unpacking-the-transaction-log.html)
 #### Atomicity
 - *Delta Lake* breaks down every operation performed by an user into *commits*, themselves composed of *actions*.
-- **Atomicity** of commits is guaranteed by the fact that a commit is recorded in the deltalog only once each action composing it have successfully completed, else it is reverted.
+- A commit is recorded in the deltalog only once each of its actions has successfully completed, else it is reverted.
 
 #### Consistency
 The **consistency** of the `DeltaTable`s is guaranteed by their strong schema checking.
@@ -106,11 +106,11 @@ Commits involving `DeltaTable`s' data mutation need to finish their writes or de
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzAxMjkwMDU3LC0xOTcwNzM1NDA0LC0xMj
-c0OTY2MzQsLTE0Mzc2MTIzOTcsLTEwNjY2ODAwODgsMjA5MzIz
-NTU4OCwxODExMzExMTk2LC01Mzk4MzY1MzgsLTE4NTk1NDIxNj
-MsMTc0MzE2OTAwNCwtNzM5ODUyOTM1LDIwMTkzMDQ4OTcsLTE4
-NzE0NTY4NzksMTc1MjQ4NjA0NywtNjE0OTQ2MjUsMTAyMjU4MT
-YwNCwxODM0NTAwNzEzLDE0MTY3NDAyMTEsMTExOTI4NjcwNiwt
-NzU1MTEzMzUxXX0=
+eyJoaXN0b3J5IjpbNDM1MDMxODgsLTE5NzA3MzU0MDQsLTEyNz
+Q5NjYzNCwtMTQzNzYxMjM5NywtMTA2NjY4MDA4OCwyMDkzMjM1
+NTg4LDE4MTEzMTExOTYsLTUzOTgzNjUzOCwtMTg1OTU0MjE2My
+wxNzQzMTY5MDA0LC03Mzk4NTI5MzUsMjAxOTMwNDg5NywtMTg3
+MTQ1Njg3OSwxNzUyNDg2MDQ3LC02MTQ5NDYyNSwxMDIyNTgxNj
+A0LDE4MzQ1MDA3MTMsMTQxNjc0MDIxMSwxMTE5Mjg2NzA2LC03
+NTUxMTMzNTFdfQ==
 -->
