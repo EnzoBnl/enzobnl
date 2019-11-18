@@ -1,4 +1,4 @@
-## <img src="http://pngimg.com/uploads/book/book_PNG51027.png" height="23px"> Works
+## <img src="https://pngimg.com/uploads/book/book_PNG51027.png" height="23px"> Works
 
 |Year|Degree|Link|
 |:--:|:--:|:--:|
@@ -8,5 +8,5 @@
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMDgxOTQzNF19
+eyJoaXN0b3J5IjpbLTE2MDk3MTAzODcsLTEzMDgxOTQzNF19
 -->
