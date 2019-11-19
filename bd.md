@@ -84,33 +84,41 @@ Execution steps of a MapReduce job containing 1 Mapper and 1 Reducer (steps **in
 
 ## Delta Lake
 ### DeltaLog & ACID guarantees
-Deltalog = *Delta Lake* transaction log.
 
-[DataBricks' blog, Diving Into Delta Lake: Unpacking The Transaction Log](https://databricks.com/blog/2019/08/21/diving-into-delta-lake-unpacking-the-transaction-log.html)
-#### Atomicity
+#### 0) the DeltaLog
+**Deltalog** = *Delta Lake*'s transaction log. 
+
+The deltalog is a collection of ordered json files. It acts as a single source of truth giving to users access to the last version of a `DeltaTable`'s state.
+
+#### 1) Atomicity
 - *Delta Lake* breaks down every operation performed by an user into *commits*, themselves composed of *actions*.
 - A commit is recorded in the deltalog only once each of its actions has successfully completed (else it is reverted and restarted or an error is thrown), ensuring its **atomicity**.
 
-#### Consistency
-The **consistency** of the `DeltaTable`s is guaranteed by their strong schema checking.
+#### 2) Consistency
+The **consistency** of a `DeltaTable` is guaranteed by their strong schema checking.
 
-#### Isolation
+#### 3) Isolation
 Concurrency of commits is managed to ensure their **isolation**. An optimistic concurrency control is applied:
+
 - When a commit execution starts, the thread snapshots the current deltalog.
 - When the commit actions have completed, the thread checks if the *Deltalog* has been updated by another one in the meantime:
   - If not it records the commit in the deltalog
-  - Else it updates its `DeltaTable` view and attempt again to record the commit, after a step of reprocessing if needed.
+  - Else it updates its `DeltaTable` view and attempts again to register the commit, after a step of reprocessing if needed.
   
-#### Durability
-Commits involving `DeltaTable`s' data mutation need to finish their writes or deletions on underlying *Parquet* files on the filesystem to be considered as successfully completed, making them **durable**.
+#### 4) Durability
+Commits containing actions that mutate the `DeltaTable`'s data need to finish their writes/deletions on underlying *Parquet* files (stored on the filesystem) to be considered as successfully completed, making them **durable**.
+___
+Further readings: 
 
+[*Diving Into Delta Lake: Unpacking The Transaction Log*](https://databricks.com/blog/2019/08/21/diving-into-delta-lake-unpacking-the-transaction-log.html)
 
+[ACID properties](https://en.wikipedia.org/wiki/ACID)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNTcwMDUzMCwtMTk3MDczNTQwNCwtMT
-I3NDk2NjM0LC0xNDM3NjEyMzk3LC0xMDY2NjgwMDg4LDIwOTMy
-MzU1ODgsMTgxMTMxMTE5NiwtNTM5ODM2NTM4LC0xODU5NTQyMT
-YzLDE3NDMxNjkwMDQsLTczOTg1MjkzNSwyMDE5MzA0ODk3LC0x
-ODcxNDU2ODc5LDE3NTI0ODYwNDcsLTYxNDk0NjI1LDEwMjI1OD
-E2MDQsMTgzNDUwMDcxMywxNDE2NzQwMjExLDExMTkyODY3MDYs
-LTc1NTExMzM1MV19
+eyJoaXN0b3J5IjpbMTE5MTY3Mjg4NSwtMTI1NzAwNTMwLC0xOT
+cwNzM1NDA0LC0xMjc0OTY2MzQsLTE0Mzc2MTIzOTcsLTEwNjY2
+ODAwODgsMjA5MzIzNTU4OCwxODExMzExMTk2LC01Mzk4MzY1Mz
+gsLTE4NTk1NDIxNjMsMTc0MzE2OTAwNCwtNzM5ODUyOTM1LDIw
+MTkzMDQ4OTcsLTE4NzE0NTY4NzksMTc1MjQ4NjA0NywtNjE0OT
+Q2MjUsMTAyMjU4MTYwNCwxODM0NTAwNzEzLDE0MTY3NDAyMTEs
+MTExOTI4NjcwNl19
 -->
