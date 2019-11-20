@@ -242,20 +242,7 @@ The difference is in which libraries are used. In order to use OS stuff (I/O for
 
 - *There's no difference in the binary code, opcodes are the same. The difference is in the syntax of the mnemonic form, i.e. mov %eax,%ebx (AT&T) and mov ebx,eax (Intel) have the same binary*
 
-
-## Asymptotic analysis
-
-$f(n)=O(g(n))\iff \exists n_o \in N, \exists c\in R, \forall n>n_o,\vert\frac{f(n)}{g(n)}\vert<=c$
-
-$f(n)=o(g(n))\iff \forall \epsilon \in R, \exists n_o \in N,  \forall n>n_o,\vert\frac{f(n)}{g(n)}\vert<=\epsilon$
-
-$f(n)=\Omega(g(n))\iff \exists n_o \in N, \exists c\in R, \forall n>n_o,\vert\frac{f(n)}{g(n)}\vert>=c$
-
-$f(n)=\omega(g(n))\iff \forall \Delta \in R, \exists n_o \in N,  \forall n>n_o,\vert\frac{f(n)}{g(n)}\vert>=\Delta$
-
-$f(n)=\Theta(g(n))\iff \exists n_o \in N, \exists c\in R, \forall n>n_o,\frac{f(n)}{g(n)}=c$
-
-$f(n)\sim g(n)\iff \forall \epsilon \in R, \exists n_o \in N,  \forall n>n_o,\frac{f(n)}{g(n)}-1<=\epsilon$
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5ODE2MjI3NzMsMjcxNjE3ODI2XX0=
+eyJoaXN0b3J5IjpbLTIwMzc5MDk4NzksLTE5ODE2MjI3NzMsMj
+cxNjE3ODI2XX0=
 -->
