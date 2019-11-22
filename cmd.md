@@ -97,6 +97,8 @@ chmod a+x exampleName.AppImage
 [shortcut] Ctrl + L
 // create a symlinl (symbolic link)
 sudo ln -s origin target
+// ssh bridge
+ssh -L local_host_port:host_url:hostport <host_url>
 ```
 ### CMD removes :
 ```bash
@@ -220,6 +222,6 @@ c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex 
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNTgzMzkxNTAsNTk3MDY1MDcyLC0xMD
-MwNzcwMzk3XX0=
+eyJoaXN0b3J5IjpbLTE4NjQ4NTYzNjksLTEzNTgzMzkxNTAsNT
+k3MDY1MDcyLC0xMDMwNzcwMzk3XX0=
 -->
