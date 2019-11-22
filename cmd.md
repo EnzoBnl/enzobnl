@@ -97,8 +97,8 @@ chmod a+x exampleName.AppImage
 [shortcut] Ctrl + L
 // create a symlinl (symbolic link)
 sudo ln -s origin target
-// ssh bridge
-ssh -L local_host_port:host_url:hostport <host_url>
+// ssh bridge: maps port 9000 of 10.240.0.44 accessed through <host_url> to localhost:9000
+ssh -L 9000:10.240.0.44:9000 <host_url>
 ```
 ### CMD removes :
 ```bash
@@ -222,6 +222,6 @@ c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex 
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NjQ4NTYzNjksLTEzNTgzMzkxNTAsNT
-k3MDY1MDcyLC0xMDMwNzcwMzk3XX0=
+eyJoaXN0b3J5IjpbLTg3NDk3ODUyOSwtMTM1ODMzOTE1MCw1OT
+cwNjUwNzIsLTEwMzA3NzAzOTddfQ==
 -->
