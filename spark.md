@@ -61,7 +61,7 @@ There is only a contiguousity of the `UnsafeRow`s' memory because an `RDD[Unsafe
 | `Dataset.persist` |`MEMORY_AND_DISK`|
 
 
-- When a dataset is cached using `def cache(): this.type = persist()` it is basically `persit`ed with default storageLevel which is `MEMORY_AND_DISK`:
+- When a dataset is cached using `def cache(): this.type = persist()` it is basically persisted with default `storageLevel` which is `MEMORY_AND_DISK`:
 
 ```scala
 /**
@@ -919,6 +919,7 @@ I don't think this one is started. The design doc is not out yet.
 - [Coursera](https://www.coursera.org/lecture/big-data-analysis/joins-Nz9XW)
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3OTU1OTI4MzQsLTE5NzcyNjg0NDIsNz
-Q3MDM2ODkwLDE5OTM3MDI5MjAsLTM2MTcwNDMxOF19
+eyJoaXN0b3J5IjpbLTIxMjAyNDcxMDksLTE3OTU1OTI4MzQsLT
+E5NzcyNjg0NDIsNzQ3MDM2ODkwLDE5OTM3MDI5MjAsLTM2MTcw
+NDMxOF19
 -->
