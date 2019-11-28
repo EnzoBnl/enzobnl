@@ -533,7 +533,7 @@ sc.textFile("hdfs://.../file.txt").repartition(x)
 ```
 because the former will delegate the repartitioning to Hadoop's `TextInputFormat`.
 
-### Data structures ()
+### Data structures
 
 SQL & RDD:
 join are materialized as `ZippedPartitionsRDD2` whose memory format depends on the provided `var f: (Iterator[A], Iterator[B]) => Iterator[V]`
@@ -932,7 +932,7 @@ I don't think this one is started. The design doc is not out yet.
 - [Big Data analysis Coursera](https://www.coursera.org/lecture/big-data-analysis/joins-Nz9XW)
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTkwNDE3ODYzLDE0NDU1NzQwNDcsNDE2OD
+eyJoaXN0b3J5IjpbNTU2ODA0NDc0LDE0NDU1NzQwNDcsNDE2OD
 A1Mzk4LC0yMTIwMjQ3MTA5LC0xNzk1NTkyODM0LC0xOTc3MjY4
 NDQyLDc0NzAzNjg5MCwxOTkzNzAyOTIwLC0zNjE3MDQzMThdfQ
 ==
