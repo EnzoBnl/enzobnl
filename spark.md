@@ -523,15 +523,15 @@ val spark = SparkSession
   .getOrCreate
 ```
 
-#### Note about repartitioning at read time
+#### Pushing the repartitioning to HDFS source
 ```scala
-sc.textFile("hdfs://.../file.txt", 400)
+sc.textFile("hdfs://.../file.txt", x)
 ```
 can lead to a faster execution than
 ```scala
-sc.textFile("hdfs://.../file.txt").repartition(400)
+sc.textFile("hdfs://.../file.txt").repartition(x)
 ```
-`Bwhere 400 is the number of partitions. This case partitioning in 400 splits would be done by the Hadoop TextInputFormat
+because the former will delegate the repartitioning to Hadoop's `TextInputFormat`.
 
 ### Data structures ()
 
@@ -932,8 +932,8 @@ I don't think this one is started. The design doc is not out yet.
 - [Big Data analysis Coursera](https://www.coursera.org/lecture/big-data-analysis/joins-Nz9XW)
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk1NTMxMTYyMSwxNDQ1NTc0MDQ3LDQxNj
-gwNTM5OCwtMjEyMDI0NzEwOSwtMTc5NTU5MjgzNCwtMTk3NzI2
-ODQ0Miw3NDcwMzY4OTAsMTk5MzcwMjkyMCwtMzYxNzA0MzE4XX
-0=
+eyJoaXN0b3J5IjpbNTkwNDE3ODYzLDE0NDU1NzQwNDcsNDE2OD
+A1Mzk4LC0yMTIwMjQ3MTA5LC0xNzk1NTkyODM0LC0xOTc3MjY4
+NDQyLDc0NzAzNjg5MCwxOTkzNzAyOTIwLC0zNjE3MDQzMThdfQ
+==
 -->
