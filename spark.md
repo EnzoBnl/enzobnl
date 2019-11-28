@@ -909,10 +909,11 @@ I don't think this one is started. The design doc is not out yet.
 
 
 ## References
-- [Spark's RDDs paper](http://people.csail.mit.edu/matei/papers/2012/nsdi_spark.pdf) by Matei Zaharia, 2011
+- [2011 *Resilient Distributed Datasets: A Fault-Tolerant Abstraction for In-Memory Cluster Computing*](http://people.csail.mit.edu/matei/papers/2012/nsdi_spark.pdf), Zaharia Chowdhury Das Dave Ma McCauley Franklin Shenker Stoica
 - 2013 *GraphX: A Resilient Distributed Graph System on Spark*, Reynold S Xin Joseph E Gonzalez Michael J Franklin Ion Stoica
+- 2013 *Shark: SQL and Rich Analytics at Scale*, Reynold S. Xin, Josh Rosen, Matei Zaharia Michael J. Franklin Scott Shenker Ion Stoica
 - 2014 *GraphX: Graph Processing in a  Distributed Dataflow Framework*, J E. Gonzalez R S. Xin A Dave, D Crankshaw  M J. Franklin I Stoica
-- Spark SQL paper
+- 2015 *Spark SQL: Relational Data Processing in Spark*, Michael Armbrust Reynold S. Xin
 - [Map-side join in Hive](https://cwiki.apache.org/confluence/display/Hive/Skewed+Join+Optimization)
 - [Skewed dataset join in Spark](https://stackoverflow.com/questions/40373577/skewed-dataset-join-in-spark)
 - [Mastering Spark SQL](https://jaceklaskowski.gitbooks.io/mastering-spark-sql/)
@@ -920,7 +921,7 @@ I don't think this one is started. The design doc is not out yet.
 - [Coursera](https://www.coursera.org/lecture/big-data-analysis/joins-Nz9XW)
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEwNjQzOTc2MCwtMjEyMDI0NzEwOSwtMT
+eyJoaXN0b3J5IjpbLTg0Mzk1Nzg3MywtMjEyMDI0NzEwOSwtMT
 c5NTU5MjgzNCwtMTk3NzI2ODQ0Miw3NDcwMzY4OTAsMTk5Mzcw
 MjkyMCwtMzYxNzA0MzE4XX0=
 -->
