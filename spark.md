@@ -889,7 +889,7 @@ edges.repartition(10, col("src")).withColumnRenamed("src", "id").groupBy("id").c
             +- *(1) FileScan csv [src#98L] ...
 ```
 
-## ouverture: Adaptative Execution (AE)
+## ouverture: Adaptative Execution (AE) in 3.0.0
 [JIRA](https://issues.apache.org/jira/browse/SPARK-9850?jql=text%20~%20%22adaptative%20execution%22)
 [JIRA issue's Google Doc](https://docs.google.com/document/d/1mpVjvQZRAkD-Ggy6-hcjXtBPiQoVbZGe3dLnAKgtJ4k/edit)
 [Intel doc](https://software.intel.com/en-us/articles/spark-sql-adaptive-execution-at-100-tb)
@@ -906,22 +906,23 @@ It's included in the current framework
 I don't think this one is started. The design doc is not out yet.
 
 
-
-
 ## References
+### Papers
 - [2011 *Resilient Distributed Datasets: A Fault-Tolerant Abstraction for In-Memory Cluster Computing*](http://people.csail.mit.edu/matei/papers/2012/nsdi_spark.pdf), Zaharia Chowdhury Das Dave Ma McCauley Franklin Shenker Stoica
 - 2013 *GraphX: A Resilient Distributed Graph System on Spark*, Reynold S Xin Joseph E Gonzalez Michael J Franklin Ion Stoica
 - 2013 *Shark: SQL and Rich Analytics at Scale*, Reynold S. Xin, Josh Rosen, Matei Zaharia Michael J. Franklin Scott Shenker Ion Stoica
 - 2014 *GraphX: Graph Processing in a  Distributed Dataflow Framework*, J E. Gonzalez R S. Xin A Dave, D Crankshaw  M J. Franklin I Stoica
 - 2015 *Spark SQL: Relational Data Processing in Spark*, Michael Armbrust Reynold S. Xin
+
+### Other sources
 - [Map-side join in Hive](https://cwiki.apache.org/confluence/display/Hive/Skewed+Join+Optimization)
 - [Skewed dataset join in Spark](https://stackoverflow.com/questions/40373577/skewed-dataset-join-in-spark)
 - [Mastering Spark SQL](https://jaceklaskowski.gitbooks.io/mastering-spark-sql/)
 - [Partitioning with Spark GraphFrames](https://stackoverflow.com/questions/41351802/partitioning-with-spark-graphframes/41353889#41353889)
-- [Coursera](https://www.coursera.org/lecture/big-data-analysis/joins-Nz9XW)
+- [Big Data analysis Coursera](https://www.coursera.org/lecture/big-data-analysis/joins-Nz9XW)
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg0Mzk1Nzg3MywtMjEyMDI0NzEwOSwtMT
-c5NTU5MjgzNCwtMTk3NzI2ODQ0Miw3NDcwMzY4OTAsMTk5Mzcw
-MjkyMCwtMzYxNzA0MzE4XX0=
+eyJoaXN0b3J5IjpbNDE2ODA1Mzk4LC0yMTIwMjQ3MTA5LC0xNz
+k1NTkyODM0LC0xOTc3MjY4NDQyLDc0NzAzNjg5MCwxOTkzNzAy
+OTIwLC0zNjE3MDQzMThdfQ==
 -->
