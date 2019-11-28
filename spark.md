@@ -33,7 +33,7 @@
 #### during processing
 https://spoddutur.github.io/spark-notes/deep_dive_into_storage_formats.html
 
-- 1.0.0 (May 26, 2014): There was no "DataFrame" but only `SchemaRDD`. It was a `RDD` of Java Objects on-heap (see spark [Spark's RDDs paper](http://people.csail.mit.edu/matei/papers/2012/nsdi_spark.pdf) by Matei Zaharia, 2011).
+- 1.0.0 (May 26, 2014): There was no "DataFrame" but only `SchemaRDD`. It was a `RDD` of Java Objects on-heap.
 - 1.3.0 (Mar 6, 2015): `DataFrame` is born and is still and RDD of on-heap objects. `SchemaRDD` became an alias for smooth deprecation purpose.
 
 ```scala
@@ -909,9 +909,10 @@ I don't think this one is started. The design doc is not out yet.
 
 
 ## References
-- spark/graphx and graphframes sources
+- [Spark's RDDs paper](http://people.csail.mit.edu/matei/papers/2012/nsdi_spark.pdf) by Matei Zaharia, 2011
+- 2013 *GraphX: A Resilient Distributed Graph System on Spark*, Reynold S Xin Joseph E Gonzalez Michael J Franklin Ion Stoica
+- 2014 *GraphX: Graph Processing in a  Distributed Dataflow Framework*, J E. Gonzalez R S. Xin A Dave, D Crankshaw  M J. Franklin I Stoica
 - Spark SQL paper
-- GraphX 2013/2014 papers
 - [Map-side join in Hive](https://cwiki.apache.org/confluence/display/Hive/Skewed+Join+Optimization)
 - [Skewed dataset join in Spark](https://stackoverflow.com/questions/40373577/skewed-dataset-join-in-spark)
 - [Mastering Spark SQL](https://jaceklaskowski.gitbooks.io/mastering-spark-sql/)
@@ -919,7 +920,7 @@ I don't think this one is started. The design doc is not out yet.
 - [Coursera](https://www.coursera.org/lecture/big-data-analysis/joins-Nz9XW)
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUxNjE4MTIxMSwtMjEyMDI0NzEwOSwtMT
+eyJoaXN0b3J5IjpbMjEwNjQzOTc2MCwtMjEyMDI0NzEwOSwtMT
 c5NTU5MjgzNCwtMTk3NzI2ODQ0Miw3NDcwMzY4OTAsMTk5Mzcw
 MjkyMCwtMzYxNzA0MzE4XX0=
 -->
