@@ -27,13 +27,13 @@
 
 ## Spark SQL's Datasets & DataFrames
 
-- Spark SQL first realease: Spark 1.0.0 (May 30, 2014) (see [Spark SQL's paper](https://dl.acm.org/citation.cfm?id=2742797) by Michael Armbrust)
+- Spark SQL first realease: Spark 1.0.0 (May 26, 2014) (see [Spark SQL's paper](https://dl.acm.org/citation.cfm?id=2742797) by Michael Armbrust)
  
 ### Memory format 
 #### during processing
 https://spoddutur.github.io/spark-notes/deep_dive_into_storage_formats.html
 
-- before 1.3.0 (first github release is v0. on Feb 7, 2013): There was no "DataFrame" but only `SchemaRDD`. It was a `RDD` of Java Objects on-heap.
+- 1.0.0 (May 26, 2014): There was no "DataFrame" but only `SchemaRDD`. It was a `RDD` of full on-heap Java Objects.
 - 1.3.0 (Mar 6, 2015): `DataFrame` is born and is still and RDD of on-heap objects. `SchemaRDD` became an alias for smooth deprecation purpose.
 
 ```scala
@@ -922,7 +922,7 @@ I don't think this one is started. The design doc is not out yet.
 - [Big Data analysis Coursera](https://www.coursera.org/lecture/big-data-analysis/joins-Nz9XW)
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU0Mjg4Njk2Myw0MTY4MDUzOTgsLTIxMj
+eyJoaXN0b3J5IjpbLTQzNTc3NDQ4NCw0MTY4MDUzOTgsLTIxMj
 AyNDcxMDksLTE3OTU1OTI4MzQsLTE5NzcyNjg0NDIsNzQ3MDM2
 ODkwLDE5OTM3MDI5MjAsLTM2MTcwNDMxOF19
 -->
