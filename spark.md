@@ -72,6 +72,9 @@ buffering intermediate data when performing shuffles,joins, sorts and aggregatio
   - torrent broadcasts
   - sending large task results
 
+The execution can borrow storage region
+If storage needs to use part of its region borrowed space, some execution data is spill. 
+
 Execution and storage share one unified region
 - When memory pressure arises, cached blocks are evicted.
 - Execution memory spills only if there is still not enough space after evicting storage memory
@@ -992,11 +995,11 @@ I don't think this one is started. The design doc is not out yet.
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjQxNjk0NTQwLDg4Njg2NDk3NiwtMzI2ND
-A1MjIsMTgwMTI4MDg3OCwxMTkzNTg5OTUwLDE5MTExNDU1NjUs
-ODExNTk4NjUwLDk0MDk5NTE2MywxMDMwNzAwODMsNTcyMjQ0Nj
-EwLDEwNzU5NjA1OTcsMTgwNTUxNjMzMiw1NTY4MDQ0NzQsMTQ0
-NTU3NDA0Nyw0MTY4MDUzOTgsLTIxMjAyNDcxMDksLTE3OTU1OT
-I4MzQsLTE5NzcyNjg0NDIsNzQ3MDM2ODkwLDE5OTM3MDI5MjBd
+eyJoaXN0b3J5IjpbLTM0MzIyNjQzOCwyNDE2OTQ1NDAsODg2OD
+Y0OTc2LC0zMjY0MDUyMiwxODAxMjgwODc4LDExOTM1ODk5NTAs
+MTkxMTE0NTU2NSw4MTE1OTg2NTAsOTQwOTk1MTYzLDEwMzA3MD
+A4Myw1NzIyNDQ2MTAsMTA3NTk2MDU5NywxODA1NTE2MzMyLDU1
+NjgwNDQ3NCwxNDQ1NTc0MDQ3LDQxNjgwNTM5OCwtMjEyMDI0Nz
+EwOSwtMTc5NTU5MjgzNCwtMTk3NzI2ODQ0Miw3NDcwMzY4OTBd
 fQ==
 -->
