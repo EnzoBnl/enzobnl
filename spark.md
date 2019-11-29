@@ -34,15 +34,18 @@ Section based on the pull request document [Unified Memory Management in Spark 1
 
 #### On-heap execution Space
 The **On-heap executor space** is divided in 2 regions:
-- **Execution region**: buffering intermediate data when performing shuffles,joins, sorts and aggregations
+- **Execution region**: 
+buffering intermediate data when performing shuffles,joins, sorts and aggregations
+
 - **Storage region**: 
   - caching data blocks to optimize for future accesses 
   - torrent broadcasts
   - sending large task results
 
 
-(B) Evict cached blocks, static storage reservation. ​This is like design (A) but with areserved storage region that execution memory cannot borrow from. Cached blocks areevicted only if actual storage exceeds this region. The size of the reserved region isconfigured through ​spark.memory.storageFraction (default 0.0)​ and fixed for theduration of the application.(C) Evict cached blocks, dynamic storage reservation. ​This is like design (B), except thestorage space is not statically reserved, but dynamically allocated. This difference is thatexecution can borrow as much of the storage space as is available. ​This is the chosendesign.
-TODO: resume [source](https://www.linuxprobe.com/wp-content/uploads/2017/04/unified-memory-management-spark-10000.pdf)
+(B) Evict cached blocks, static storage reservation. ​This is like design (A) but with areserved storage region that execution memory cannot borrow from. Cached blocks areevicted only if actual storage exceeds this region. The size of the reserved region isconfigured through ​spark.memory.storageFraction (default 0.0)​ and fixed for theduration of the application.
+(C) Evict cached blocks, dynamic storage reservation. ​This is like design (B), except thestorage space is not statically reserved, but dynamically allocated. This difference is thatexecution can borrow as much of the storage space as is available. ​This is the chosendesign.
+
 
 Unrolling
 
@@ -980,10 +983,11 @@ I don't think this one is started. The design doc is not out yet.
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMyNjQwNTIyLDE4MDEyODA4NzgsMTE5Mz
-U4OTk1MCwxOTExMTQ1NTY1LDgxMTU5ODY1MCw5NDA5OTUxNjMs
-MTAzMDcwMDgzLDU3MjI0NDYxMCwxMDc1OTYwNTk3LDE4MDU1MT
-YzMzIsNTU2ODA0NDc0LDE0NDU1NzQwNDcsNDE2ODA1Mzk4LC0y
-MTIwMjQ3MTA5LC0xNzk1NTkyODM0LC0xOTc3MjY4NDQyLDc0Nz
-AzNjg5MCwxOTkzNzAyOTIwLC0zNjE3MDQzMThdfQ==
+eyJoaXN0b3J5IjpbODg2ODY0OTc2LC0zMjY0MDUyMiwxODAxMj
+gwODc4LDExOTM1ODk5NTAsMTkxMTE0NTU2NSw4MTE1OTg2NTAs
+OTQwOTk1MTYzLDEwMzA3MDA4Myw1NzIyNDQ2MTAsMTA3NTk2MD
+U5NywxODA1NTE2MzMyLDU1NjgwNDQ3NCwxNDQ1NTc0MDQ3LDQx
+NjgwNTM5OCwtMjEyMDI0NzEwOSwtMTc5NTU5MjgzNCwtMTk3Nz
+I2ODQ0Miw3NDcwMzY4OTAsMTk5MzcwMjkyMCwtMzYxNzA0MzE4
+XX0=
 -->
