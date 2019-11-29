@@ -905,7 +905,7 @@ The `ShuffleManager.getReader: ShuffleReader` allows to fetch `org.apache.spark.
 See `BypassMergeSortShuffleWriter` which relies on `DiskBlockObjectWriter` & `BlockManager`
 
 ### Exchanges planning (SQL)
-Exchange are carefully optimized done only if necessary:
+Exchange are carefully optimized by Catalyst and are ordered to be as cheap as pos:
 
 ```scala
 spark.conf.set("spark.sql.autoBroadcastJoinThreshold", 1)  
@@ -994,10 +994,11 @@ I don't think this one is started. The design doc is not out yet.
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjQ5MTExNDY0LDEyMDMwNTQ4MDEsMTEwMT
-k5OTAxNSwxNDQxMjQ1OSwtMTgzNDU1NzIwNSwxNjYwMDI1NjYs
-MTM4NTQ5NDg5MSwyNDE2OTQ1NDAsODg2ODY0OTc2LC0zMjY0MD
-UyMiwxODAxMjgwODc4LDExOTM1ODk5NTAsMTkxMTE0NTU2NSw4
-MTE1OTg2NTAsOTQwOTk1MTYzLDEwMzA3MDA4Myw1NzIyNDQ2MT
-AsMTA3NTk2MDU5NywxODA1NTE2MzMyLDU1NjgwNDQ3NF19
+eyJoaXN0b3J5IjpbLTIxMDQ1MjQ4NzEsMTIwMzA1NDgwMSwxMT
+AxOTk5MDE1LDE0NDEyNDU5LC0xODM0NTU3MjA1LDE2NjAwMjU2
+NiwxMzg1NDk0ODkxLDI0MTY5NDU0MCw4ODY4NjQ5NzYsLTMyNj
+QwNTIyLDE4MDEyODA4NzgsMTE5MzU4OTk1MCwxOTExMTQ1NTY1
+LDgxMTU5ODY1MCw5NDA5OTUxNjMsMTAzMDcwMDgzLDU3MjI0ND
+YxMCwxMDc1OTYwNTk3LDE4MDU1MTYzMzIsNTU2ODA0NDc0XX0=
+
 -->
