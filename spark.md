@@ -79,26 +79,9 @@ Understand execution and storage regions behaviors in *unified memory management
    - else: excess data is spilled to disk
 2. if storage needs to use some space:
    - if its region space is not filled: it uses it
-   - else if some of its region space has been borrowed by: it borrows it and uses it
-   - else: excess data is spilled to disk
-3. The execution can borrow available storage region space if needed.
-4. If storage needs to take back some of its space borrowed by execution, a spill to disk of execution data is triggered.
-5. If storage region is filled, but more memory is needed, cached blocks are evicted (LRU) 
+   - else if some of its region space has been borrowed by execution: it takes it back by triggering a spill to disk of some execution data, and uses it.
+   - else: excess cached blocks are evicted (Least Recently Used policy)
 
-Execution and storage share one unified region
-- When memory pressure arises, cached blocks are evicted.
-- Execution memory spills only if there is still not enough space after evicting storage memory
-- Cached blocks are evicted only if actual storage exceeds this region. 
-- the storage space is not statically reserved, but dynamically allocated. 
-- execution can borrow as much of the storage space as is available. 
-- 
-(B) Evict cached blocks, static storage reservation. ​This is like design (A) but with 
-- a reserved storage region that execution memory cannot borrow from
-
-- The size of the reserved region is configured through ​spark.memory.storageFraction (default 0.0)​ 
-- The size of the reserved region is fixed for the duration of the application.
-- 
-(C) Evict cached blocks, dynamic storage reservation. ​This is like design (B), except 
 
 
 ### Memory format (during processing) evolution  SQL)
@@ -1005,11 +988,11 @@ I don't think this one is started. The design doc is not out yet.
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMwNzYyNzcwMSwyNDE2OTQ1NDAsODg2OD
-Y0OTc2LC0zMjY0MDUyMiwxODAxMjgwODc4LDExOTM1ODk5NTAs
-MTkxMTE0NTU2NSw4MTE1OTg2NTAsOTQwOTk1MTYzLDEwMzA3MD
-A4Myw1NzIyNDQ2MTAsMTA3NTk2MDU5NywxODA1NTE2MzMyLDU1
-NjgwNDQ3NCwxNDQ1NTc0MDQ3LDQxNjgwNTM5OCwtMjEyMDI0Nz
-EwOSwtMTc5NTU5MjgzNCwtMTk3NzI2ODQ0Miw3NDcwMzY4OTBd
-fQ==
+eyJoaXN0b3J5IjpbLTE4MDMwOTI0NDcsMjQxNjk0NTQwLDg4Nj
+g2NDk3NiwtMzI2NDA1MjIsMTgwMTI4MDg3OCwxMTkzNTg5OTUw
+LDE5MTExNDU1NjUsODExNTk4NjUwLDk0MDk5NTE2MywxMDMwNz
+AwODMsNTcyMjQ0NjEwLDEwNzU5NjA1OTcsMTgwNTUxNjMzMiw1
+NTY4MDQ0NzQsMTQ0NTU3NDA0Nyw0MTY4MDUzOTgsLTIxMjAyND
+cxMDksLTE3OTU1OTI4MzQsLTE5NzcyNjg0NDIsNzQ3MDM2ODkw
+XX0=
 -->
