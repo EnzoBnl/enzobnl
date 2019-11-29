@@ -983,12 +983,13 @@ I don't think this one is started. The design doc is not out yet.
 - [Big Data analysis Coursera](https://www.coursera.org/lecture/big-data-analysis/joins-Nz9XW)
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYwMjkwNzEzOSwxNjYwMDI1NjYsMTM4NT
-Q5NDg5MSwyNDE2OTQ1NDAsODg2ODY0OTc2LC0zMjY0MDUyMiwx
-ODAxMjgwODc4LDExOTM1ODk5NTAsMTkxMTE0NTU2NSw4MTE1OT
-g2NTAsOTQwOTk1MTYzLDEwMzA3MDA4Myw1NzIyNDQ2MTAsMTA3
-NTk2MDU5NywxODA1NTE2MzMyLDU1NjgwNDQ3NCwxNDQ1NTc0MD
-Q3LDQxNjgwNTM5OCwtMjEyMDI0NzEwOSwtMTc5NTU5MjgzNF19
 
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbLTE4MzQ1NTcyMDUsMTY2MDAyNTY2LDEzOD
+U0OTQ4OTEsMjQxNjk0NTQwLDg4Njg2NDk3NiwtMzI2NDA1MjIs
+MTgwMTI4MDg3OCwxMTkzNTg5OTUwLDE5MTExNDU1NjUsODExNT
+k4NjUwLDk0MDk5NTE2MywxMDMwNzAwODMsNTcyMjQ0NjEwLDEw
+NzU5NjA1OTcsMTgwNTUxNjMzMiw1NTY4MDQ0NzQsMTQ0NTU3ND
+A0Nyw0MTY4MDUzOTgsLTIxMjAyNDcxMDksLTE3OTU1OTI4MzRd
+fQ==
 -->
