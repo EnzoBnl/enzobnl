@@ -30,8 +30,13 @@
 - Spark SQL first realease: Spark 1.0.0 (May 26, 2014) (see [Spark SQL's paper](https://dl.acm.org/citation.cfm?id=2742797) by Michael Armbrust)
  
 ### Unified Memory Management (1.6+)
+park.memory.fraction (default 0.75):​ fraction of the heap space used forexecution and storage. The lower this is, the more frequently spills and cached dataeviction occur. The purpose of this config is to set aside memory for internal metadata,user data structures, and imprecise size estimation in the case of sparse, unusually largerecords.●spark.memory.storageFraction (default 0.5): ​The size of the storage regionwithin the space set aside by ​spark.memory.fraction​. Cached data may only beevicted if total storage exceeds this region.
+
+
 (B) Evict cached blocks, static storage reservation. ​This is like design (A) but with areserved storage region that execution memory cannot borrow from. Cached blocks areevicted only if actual storage exceeds this region. The size of the reserved region isconfigured through ​spark.memory.storageFraction (default 0.0)​ and fixed for theduration of the application.(C) Evict cached blocks, dynamic storage reservation. ​This is like design (B), except thestorage space is not statically reserved, but dynamically allocated. This difference is thatexecution can borrow as much of the storage space as is available. ​This is the chosendesign.
 TODO: resume [source](https://www.linuxprobe.com/wp-content/uploads/2017/04/unified-memory-management-spark-10000.pdf)
+
+Unrolling
 
 ```mermaid
 graph TB
@@ -942,7 +947,7 @@ I don't think this one is started. The design doc is not out yet.
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUzOTkwNzEyNyw1NzIyNDQ2MTAsMTA3NT
+eyJoaXN0b3J5IjpbLTQ2Mzk0Nzc2Niw1NzIyNDQ2MTAsMTA3NT
 k2MDU5NywxODA1NTE2MzMyLDU1NjgwNDQ3NCwxNDQ1NTc0MDQ3
 LDQxNjgwNTM5OCwtMjEyMDI0NzEwOSwtMTc5NTU5MjgzNCwtMT
 k3NzI2ODQ0Miw3NDcwMzY4OTAsMTk5MzcwMjkyMCwtMzYxNzA0
