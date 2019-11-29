@@ -42,14 +42,15 @@ TODO: resume [source](https://www.linuxprobe.com/wp-content/uploads/2017/04/unif
 Unrolling
 
 ```mermaid
-graph LR
+graph TB
 0[on-heap execution & storage region]
 1[on-heap space]
 2[off-heap space]
 3[on-heap execution region]
 4[on-heap storage region]
-5[on-heap other*]
-1 -- -->0
+5[on-heap internal metadata,<br/>user data structures<br/> and imprecise size estimation]
+1 --spark.memory.fraction-->0
+1 --1-spark.memory.fraction-->5
 0 -- spark.memory.storageFraction--> 4
 0 --1 - spark.memory.storageFraction--> 3
 ```
@@ -959,7 +960,7 @@ I don't think this one is started. The design doc is not out yet.
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc3Mzc3NDk5NCw5NDA5OTUxNjMsMTAzMD
+eyJoaXN0b3J5IjpbMTIxOTQzNjQ1Nyw5NDA5OTUxNjMsMTAzMD
 cwMDgzLDU3MjI0NDYxMCwxMDc1OTYwNTk3LDE4MDU1MTYzMzIs
 NTU2ODA0NDc0LDE0NDU1NzQwNDcsNDE2ODA1Mzk4LC0yMTIwMj
 Q3MTA5LC0xNzk1NTkyODM0LC0xOTc3MjY4NDQyLDc0NzAzNjg5
