@@ -899,7 +899,7 @@ https://0x0fff.com/spark-architecture-shuffle/
 
 ### Actors involved in shuffle (FIXME)
 - `ShuffleManager` is trait that is instantiated on driver (register shuffles) and executors (ask to write or read data over connections with other executors). 
-Even if the design make shuffle managers implementations pluggable, there is only one implementation remaining, the other being only remaining implementation is `SortShuffleManager`. 
+Even if the design make shuffle managers implementations pluggable, there is only one implementation remaining, the other being dropped because they lacked of either reliability in case of node restart (memory-based shuffle managers like the one proposed with first graphx release) or experiencing speed performance issues (hash shuffle manager). The only remaining implementation is `SortShuffleManager`, here is the doc
 
 - The `ShuffleManager.getReader: ShuffleReader` allows to fetch `org.apache.spark.sql.execution.ShuffledRowRDD extends RDD[InternalRow]` which *"is a specialized version of `org.apache.spark.rdd.ShuffledRDD` that is optimized for shuffling rows instead of Java key-value pairs"*.
 See `BypassMergeSortShuffleWriter` which relies on `DiskBlockObjectWriter` & `BlockManager`
@@ -997,11 +997,10 @@ I don't think this one is started. The design doc is not out yet.
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NjgzMDk0NzIsMTIwMzA1NDgwMSwxMT
-AxOTk5MDE1LDE0NDEyNDU5LC0xODM0NTU3MjA1LDE2NjAwMjU2
-NiwxMzg1NDk0ODkxLDI0MTY5NDU0MCw4ODY4NjQ5NzYsLTMyNj
-QwNTIyLDE4MDEyODA4NzgsMTE5MzU4OTk1MCwxOTExMTQ1NTY1
-LDgxMTU5ODY1MCw5NDA5OTUxNjMsMTAzMDcwMDgzLDU3MjI0ND
-YxMCwxMDc1OTYwNTk3LDE4MDU1MTYzMzIsNTU2ODA0NDc0XX0=
-
+eyJoaXN0b3J5IjpbNzAxNDUxMjAzLDEyMDMwNTQ4MDEsMTEwMT
+k5OTAxNSwxNDQxMjQ1OSwtMTgzNDU1NzIwNSwxNjYwMDI1NjYs
+MTM4NTQ5NDg5MSwyNDE2OTQ1NDAsODg2ODY0OTc2LC0zMjY0MD
+UyMiwxODAxMjgwODc4LDExOTM1ODk5NTAsMTkxMTE0NTU2NSw4
+MTE1OTg2NTAsOTQwOTk1MTYzLDEwMzA3MDA4Myw1NzIyNDQ2MT
+AsMTA3NTk2MDU5NywxODA1NTE2MzMyLDU1NjgwNDQ3NF19
 -->
