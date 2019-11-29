@@ -30,7 +30,7 @@
 - Spark SQL first realease: Spark 1.0.0 (May 26, 2014) (see [Spark SQL's paper](https://dl.acm.org/citation.cfm?id=2742797) by Michael Armbrust)
  
 ### Unified Memory Management (1.6+)
-TODO with [source](https://www.linuxprobe.com/wp-content/uploads/2017/04/unified-memory-management-spark-10000.pdf)
+TODO: resume [source](https://www.linuxprobe.com/wp-content/uploads/2017/04/unified-memory-management-spark-10000.pdf)
 ### Memory format (during processing) evolution  SQL)
 https://spoddutur.github.io/spark-notes/deep_dive_into_storage_formats.html
 
@@ -935,8 +935,8 @@ I don't think this one is started. The design doc is not out yet.
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA3NTk2MDU5NywxODA1NTE2MzMyLDU1Nj
-gwNDQ3NCwxNDQ1NTc0MDQ3LDQxNjgwNTM5OCwtMjEyMDI0NzEw
-OSwtMTc5NTU5MjgzNCwtMTk3NzI2ODQ0Miw3NDcwMzY4OTAsMT
-k5MzcwMjkyMCwtMzYxNzA0MzE4XX0=
+eyJoaXN0b3J5IjpbLTQ3NDUwNDcxOCwxMDc1OTYwNTk3LDE4MD
+U1MTYzMzIsNTU2ODA0NDc0LDE0NDU1NzQwNDcsNDE2ODA1Mzk4
+LC0yMTIwMjQ3MTA5LC0xNzk1NTkyODM0LC0xOTc3MjY4NDQyLD
+c0NzAzNjg5MCwxOTkzNzAyOTIwLC0zNjE3MDQzMThdfQ==
 -->
