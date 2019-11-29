@@ -32,16 +32,13 @@
 ### Unified Memory Management (1.6+)
 Section based on the pull request document [Unified Memory Management in Spark 1.6](https://www.linuxprobe.com/wp-content/uploads/2017/04/unified-memory-management-spark-10000.pdf) by Andrew Or and Josh Rosen
 
+#### On-heap execution Space
 The **On-heap executor space** is divided in 2 regions:
-- **Execution region**: "buffering intermediate data when performing shuffles,joins, sorts and aggregations"
+- **Execution region**: buffering intermediate data when performing shuffles,joins, sorts and aggregations
 - **Storage region**: 
   - caching data blocks to optimize for future accesses 
-  - torrent broadcasts and sending large task results"
-
-Execution. ​This region is used for buffering intermediate data when performing shuffles,joins, sorts and aggregations. The size of this region is configured throughspark.shuffle.memoryFraction (default 0.2)​.Storage.​ This region is mainly for caching data blocks to optimize for future accesses, but isalso used for torrent broadcasts and sending large task results. The size of this region isconfigured through ​spark.storage.memoryFraction (default 0.6)​
-
-
-park.memory.fraction (default 0.75):​ fraction of the heap space used forexecution and storage. The lower this is, the more frequently spills and cached dataeviction occur. The purpose of this config is to set aside memory for internal metadata,user data structures, and imprecise size estimation in the case of sparse, unusually largerecords.●spark.memory.storageFraction (default 0.5): ​The size of the storage regionwithin the space set aside by ​spark.memory.fraction​. Cached data may only beevicted if total storage exceeds this region.
+  - torrent broadcasts
+  - sending large task results
 
 
 (B) Evict cached blocks, static storage reservation. ​This is like design (A) but with areserved storage region that execution memory cannot borrow from. Cached blocks areevicted only if actual storage exceeds this region. The size of the reserved region isconfigured through ​spark.memory.storageFraction (default 0.0)​ and fixed for theduration of the application.(C) Evict cached blocks, dynamic storage reservation. ​This is like design (B), except thestorage space is not statically reserved, but dynamically allocated. This difference is thatexecution can borrow as much of the storage space as is available. ​This is the chosendesign.
@@ -56,7 +53,7 @@ graph TB
 -4[executor memory]
 -3[off-heap overheads:<br/>-VM overheads<br/>-interned strings<br/>-other native overheads]
 -2[For other executors or unused]
--1[Machine memory]
+-1[Worker node's memory]
 0[on-heap execution & storage region]
 1[on-heap executor space]
 2[off-heap executor space]
@@ -983,7 +980,7 @@ I don't think this one is started. The design doc is not out yet.
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDQ0Nzg5NDMzLDE4MDEyODA4NzgsMTE5Mz
+eyJoaXN0b3J5IjpbLTMyNjQwNTIyLDE4MDEyODA4NzgsMTE5Mz
 U4OTk1MCwxOTExMTQ1NTY1LDgxMTU5ODY1MCw5NDA5OTUxNjMs
 MTAzMDcwMDgzLDU3MjI0NDYxMCwxMDc1OTYwNTk3LDE4MDU1MT
 YzMzIsNTU2ODA0NDc0LDE0NDU1NzQwNDcsNDE2ODA1Mzk4LC0y
