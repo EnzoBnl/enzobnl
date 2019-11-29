@@ -26,8 +26,9 @@
 
  
 ## Unified Memory Management (1.6+)
-Section based on:
--  the pull request document [Unified Memory Management in Spark 1.6](https://www.linuxprobe.com/wp-content/uploads/2017/04/unified-memory-management-spark-10000.pdf) by Andrew Or and Josh Rosen and blog article [Apache Spark and off-heap memory](https://www.waitingforcode.com/apache-spark/apache-spark-off-heap-memory/read) by Bartosz Konieczny.
+Useful sources:
+-  pull request document [Unified Memory Management in Spark 1.6](https://www.linuxprobe.com/wp-content/uploads/2017/04/unified-memory-management-spark-10000.pdf) by Andrew Or and Josh Rosen
+-  blog article [Apache Spark and off-heap memory](https://www.waitingforcode.com/apache-spark/apache-spark-off-heap-memory/read) by Bartosz Konieczny.
 
 ### Repartition of a machine's memory allocation to a Spark executor
 
@@ -993,11 +994,10 @@ I don't think this one is started. The design doc is not out yet.
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ1NjM0MTI0OSwxMjAzMDU0ODAxLDExMD
-E5OTkwMTUsMTQ0MTI0NTksLTE4MzQ1NTcyMDUsMTY2MDAyNTY2
-LDEzODU0OTQ4OTEsMjQxNjk0NTQwLDg4Njg2NDk3NiwtMzI2ND
-A1MjIsMTgwMTI4MDg3OCwxMTkzNTg5OTUwLDE5MTExNDU1NjUs
-ODExNTk4NjUwLDk0MDk5NTE2MywxMDMwNzAwODMsNTcyMjQ0Nj
-EwLDEwNzU5NjA1OTcsMTgwNTUxNjMzMiw1NTY4MDQ0NzRdfQ==
-
+eyJoaXN0b3J5IjpbOTIxMDI4MjQ3LDEyMDMwNTQ4MDEsMTEwMT
+k5OTAxNSwxNDQxMjQ1OSwtMTgzNDU1NzIwNSwxNjYwMDI1NjYs
+MTM4NTQ5NDg5MSwyNDE2OTQ1NDAsODg2ODY0OTc2LC0zMjY0MD
+UyMiwxODAxMjgwODc4LDExOTM1ODk5NTAsMTkxMTE0NTU2NSw4
+MTE1OTg2NTAsOTQwOTk1MTYzLDEwMzA3MDA4Myw1NzIyNDQ2MT
+AsMTA3NTk2MDU5NywxODA1NTE2MzMyLDU1NjgwNDQ3NF19
 -->
