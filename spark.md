@@ -444,10 +444,10 @@ StructField("values", ArrayType(DoubleType, containsNull = false), nullable = tr
 }
 ```
 
-## Partitions in Spark
+# Partitions in Spark
 
-### Partitioning (SQL & Core)
-#### Partitioner
+## Partitioning (SQL & Core)
+### Partitioner
 SQL:
 Main partitioning
 - `HashPartitioning`: on `keys` uses *Murmur Hash 3* (fast non-cryptographic hashing, easy to reverse) (while `PairRDD`s ' `partitionBy(hashPartitioner)` uses `.hashCode()`)
@@ -458,7 +458,7 @@ Main partitioning
 
 Always partition on Long or Int, hash/encrypt string key if necessary.
 
-#### Materialize partitions
+### Materialize partitions
 // FIXME
 RDD: 
 ```scala
@@ -496,19 +496,19 @@ is up to 30% faster than
 spark.range(100000).foreachPartition(p => ())}  
 ```
 
-### Repartitioning  (SQL & Core)
-#### coalesce
+## Repartitioning  (SQL & Core)
+### coalesce
 Try to minimize the data that need to be shuffled by merging partitions on the same executors in priority -> fast but may lead inequal partition 
-#### repartition
+### repartition
 If column not given: round robin
 else: hashpartitioning
 
 if numpartition not given: reads  `"spark.sql.shuffle.partitions"`
 
-#### repartitionByRange
+### repartitionByRange
 repartition by range, forced to pass columns.
 
-#### N°partitions heuristic
+### N°partitions heuristic
 Really optimized runtime with n°partitions (= number max of parallel tasks) = 4 or 5 times n°available threads
 ```scala
 val spark = SparkSession  
@@ -519,7 +519,7 @@ val spark = SparkSession
   .getOrCreate
 ```
 
-#### Pushing the repartitioning to HDFS source
+### Pushing the repartitioning to HDFS source
 ```scala
 sc.textFile("hdfs://.../file.txt", x)
 ```
@@ -529,7 +529,7 @@ sc.textFile("hdfs://.../file.txt").repartition(x)
 ```
 because the former will delegate the repartitioning to Hadoop's `TextInputFormat`.
 
-### Data structures
+## Data structures
 
 SQL & RDD:
 join are materialized as `ZippedPartitionsRDD2` whose memory format depends on the provided `var f: (Iterator[A], Iterator[B]) => Iterator[V]`
@@ -579,7 +579,7 @@ def collect(): Array[T] = withScope {
 *Note*: the `toArray` is free because after `getByteArrayRdd`, the partition is an iterator of only one element which is a tuple `(number_of_rows, optimized_byte_array)`.
 - Hash joins are relying on `BytesToBytesMap`, "An append-only hash map where keys and values are contiguous regions of bytes."
 
-### Join
+## Join
 ### Join algorithms families
 
 - **Nested loop**: For each row in table A, loop on table B's rows to find matches
@@ -622,7 +622,7 @@ while(i < len(vertices) and j < len(edges)):  # O($\vert vertices \vert$ + $\ver
         j += 1
 ```
 
-#### Joins in Spark  (SQL)
+### Joins in Spark  (SQL)
 https://github.com/vaquarkhan/Apache-Kafka-poc-and-notes/wiki/Apache-Spark-Join-guidelines-and-Performance-tuning
 https://databricks.com/session/optimizing-apache-spark-sql-joins
 
@@ -667,7 +667,7 @@ uses `+- BroadcastExchange IdentityBroadcastMode` pass the partitions as they ar
 
 That means that [JoinSelection](https://jaceklaskowski.gitbooks.io/mastering-spark-sql/spark-sql-SparkStrategy-JoinSelection.html) execution planning strategy (and so Spark Planner) prefers sort merge join over [shuffled hash join](https://jaceklaskowski.gitbooks.io/mastering-spark-sql/spark-sql-SparkPlan-ShuffledHashJoinExec.html).
 
-#### Deal with skewed data  (SQL & Core)
+### Deal with skewed data  (SQL & Core)
 
 When loaded, data is evenly partitioned by default. The danger comes when queries involves `HashPartioner`.
 
@@ -712,9 +712,9 @@ i.e. **n°partitions >> avg_n°links_by_page**
 - This limits to the horizontal scaling potential
 
 **Skew is problematic because a partition is processed only by one task at a time: The few tasks assigned to process the huge partitions will delay the end of the step, majority of the CPUs waiting for these few thread to end**
-##### convert to Broadcast join
+#### convert to Broadcast join
 If the skewed big table is joined with a relatively, try to repartition evenly (RoundRobinPartitioning, `repartition(n)`) and use a broadcast join if spark does not managed to do it itself (tune threshold `"spark.sql.autoBroadcastJoinThreshold"` to the desired size in Bytes. 
-##### 2-steps join
+#### 2-steps join
 Trick: (`<hubs>` = `(home_id)` but can contains other hubs)
 
 ```sql
@@ -756,10 +756,10 @@ val df = hashJoin.union(broadcastJoin)  // by position
 val df = hashJoin.unionByName(broadcastJoin)  // by name 
 ```
 
-#####  Duplicating little table
+####  Duplicating little table
 implem here for RDDs: https://github.com/tresata/spark-skewjoin
 
-##### nulls skew
+#### nulls skew
 - dispatching
 https://stackoverflow.com/a/43394695/6580080
 Skew may happen when key column contains many null values.
@@ -784,13 +784,13 @@ val joinable = data.filter('keyToJoin.isNotNull)
 joinable.join(...) union notJoinable
 ```
 
-#### multi-join prepartitioning trick @ LinkedIn
+### multi-join prepartitioning trick @ LinkedIn
 TODO https://fr.slideshare.net/databricks/improving-spark-sql-at-linkedin
 TODO: Matrix multiplicityhttps://engineering.linkedin.com/blog/2017/06/managing--exploding--big-data
 
 ### TODO: Range Joins
 
-### GroupBy  (SQL & Core)
+## GroupBy  (SQL & Core)
 For `groupBy` on `edges.dst`, all's right because only the pre-aggregates (`partial_count(1)`, 1 row per distinct page id in each partition) are exchanged through cluster: This is equivalent to the `rdd.reduce`, `rdd.reduceByKey`, `rdd.aggregateByKey`, `combineByKey`  and not like `rdd.groupByKey` or `rdd.groupBy` which does not perform pre-aggregation and send everything over the network...
 
 ```sql
@@ -807,7 +807,7 @@ SELECT src, count(*) FROM edges GROUP BY src
 
 (* means WholeStageCodegen used)
 
-### Sort  (SQL & Core)
+## Sort  (SQL & Core)
 
 An `orderBy` starts with a step of exchange relying on `RangePartitioner` that "partitions sortable records by range into **roughly equal ranges**. The ranges are determined by sampling the content of the RDD passed in." (scaladoc)
 
@@ -831,7 +831,7 @@ SELECT src, count(*) as c FROM edges GROUP BY src ORDER BY c
             +- *(1) InMemoryTableScan [src#4L]
 ```
 
-### Exchange/Shuffle (SQL & Core)
+## Exchange/Shuffle (SQL & Core)
 
 http://hydronitrogen.com/apache-spark-shuffles-explained-in-depth.html
 https://0x0fff.com/spark-architecture-shuffle/
@@ -928,7 +928,7 @@ I don't think this one is started. The design doc is not out yet.
 - [Big Data analysis Coursera](https://www.coursera.org/lecture/big-data-analysis/joins-Nz9XW)
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg4NDkwNTAwMSw1NTY4MDQ0NzQsMTQ0NT
+eyJoaXN0b3J5IjpbLTk1NzAyMTExNSw1NTY4MDQ0NzQsMTQ0NT
 U3NDA0Nyw0MTY4MDUzOTgsLTIxMjAyNDcxMDksLTE3OTU1OTI4
 MzQsLTE5NzcyNjg0NDIsNzQ3MDM2ODkwLDE5OTM3MDI5MjAsLT
 M2MTcwNDMxOF19
