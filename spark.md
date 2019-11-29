@@ -46,10 +46,12 @@ graph LR
 1[on-heap space]
 2[off-heap space]
 3[on-heap execution region]
-4[on-heap execution region]
+4[on-heap storage region]
 5[on-heap other*]
-1 --spark.memory.fraction-->
+1 --spark.memory.fraction * spark.memory.storageFraction--> 4
+1 --spark.memory.fraction * 1 - spark.memory.storageFraction--> 3
 ```
+***other**: *internal metadata, user data structures, and imprecise size estimation in the case of sparse, unusually largerecords*
 
 ### Memory format (during processing) evolution  SQL)
 https://spoddutur.github.io/spark-notes/deep_dive_into_storage_formats.html
@@ -955,7 +957,7 @@ I don't think this one is started. The design doc is not out yet.
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQxODU0NzA5OCw5NDA5OTUxNjMsMTAzMD
+eyJoaXN0b3J5IjpbMTc3OTI2NTEyNiw5NDA5OTUxNjMsMTAzMD
 cwMDgzLDU3MjI0NDYxMCwxMDc1OTYwNTk3LDE4MDU1MTYzMzIs
 NTU2ODA0NDc0LDE0NDU1NzQwNDcsNDE2ODA1Mzk4LC0yMTIwMj
 Q3MTA5LC0xNzk1NTkyODM0LC0xOTc3MjY4NDQyLDc0NzAzNjg5
