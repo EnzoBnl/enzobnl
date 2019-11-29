@@ -24,17 +24,11 @@
 
 *DAG = Directed Acyclic Graph. They are used by spark to represent Jobs' stages or Stages' steps*
 
-
-## Spark SQL's Datasets & DataFrames
-
-- Spark SQL first realease: Spark 1.0.0 (May 26, 2014) (see [Spark SQL's paper](https://dl.acm.org/citation.cfm?id=2742797) by Michael Armbrust)
  
-### Unified Memory Management (1.6+)
+## Unified Memory Management (1.6+)
 Section based on the pull request document [Unified Memory Management in Spark 1.6](https://www.linuxprobe.com/wp-content/uploads/2017/04/unified-memory-management-spark-10000.pdf) by Andrew Or and Josh Rosen
 
-Unrolling
-
-#### Repartition of a machine's memory allocation to a Spark executor
+### Repartition of a machine's memory allocation to a Spark executor
 
 ```mermaid
 graph TB
@@ -62,7 +56,7 @@ graph TB
 2 -- spark.memory.storageFraction--> 44
 2 --1 - spark.memory.storageFraction--> 33
 ```
-#### On-heap execution Space
+### On-heap executor space
 The **On-heap executor space** is divided in 2 regions:
 - **Execution region**: 
 buffering intermediate data when performing shuffles,joins, sorts and aggregations
@@ -83,8 +77,7 @@ Understand execution and storage regions behaviors in *unified memory management
    - else: excess cached blocks are evicted (Least Recently Used policy)
 
 
-
-### Memory format (during processing) evolution  SQL)
+## Memory format (during processing) evolution  (SQL)
 https://spoddutur.github.io/spark-notes/deep_dive_into_storage_formats.html
 
 - 1.0.0 (May 26, 2014): There was no "DataFrame" but only `SchemaRDD`. It was a `RDD` of fully on-heap Java Objects.
@@ -988,11 +981,11 @@ I don't think this one is started. The design doc is not out yet.
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MDMwOTI0NDcsMjQxNjk0NTQwLDg4Nj
-g2NDk3NiwtMzI2NDA1MjIsMTgwMTI4MDg3OCwxMTkzNTg5OTUw
-LDE5MTExNDU1NjUsODExNTk4NjUwLDk0MDk5NTE2MywxMDMwNz
-AwODMsNTcyMjQ0NjEwLDEwNzU5NjA1OTcsMTgwNTUxNjMzMiw1
-NTY4MDQ0NzQsMTQ0NTU3NDA0Nyw0MTY4MDUzOTgsLTIxMjAyND
-cxMDksLTE3OTU1OTI4MzQsLTE5NzcyNjg0NDIsNzQ3MDM2ODkw
-XX0=
+eyJoaXN0b3J5IjpbMTYzOTI2Mjg5NiwyNDE2OTQ1NDAsODg2OD
+Y0OTc2LC0zMjY0MDUyMiwxODAxMjgwODc4LDExOTM1ODk5NTAs
+MTkxMTE0NTU2NSw4MTE1OTg2NTAsOTQwOTk1MTYzLDEwMzA3MD
+A4Myw1NzIyNDQ2MTAsMTA3NTk2MDU5NywxODA1NTE2MzMyLDU1
+NjgwNDQ3NCwxNDQ1NTc0MDQ3LDQxNjgwNTM5OCwtMjEyMDI0Nz
+EwOSwtMTc5NTU5MjgzNCwtMTk3NzI2ODQ0Miw3NDcwMzY4OTBd
+fQ==
 -->
