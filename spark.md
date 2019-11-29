@@ -30,7 +30,7 @@
 - Spark SQL first realease: Spark 1.0.0 (May 26, 2014) (see [Spark SQL's paper](https://dl.acm.org/citation.cfm?id=2742797) by Michael Armbrust)
  
 ### Unified Memory Management (1.6+)
-Section based on [Unified Memory Management in Spark 1.6 by Andrew Or and Josh Rosen](https://www.linuxprobe.com/wp-content/uploads/2017/04/unified-memory-management-spark-10000.pdf)
+Section based on the pull request document [Unified Memory Management in Spark 1.6](https://www.linuxprobe.com/wp-content/uploads/2017/04/unified-memory-management-spark-10000.pdf) by Andrew Or and Josh Rosen
 
 **On-heap executor space** is divided in 2 regions:
 - **Execution region**: "buffering intermediate data when performing shuffles,joins, sorts and aggregations"
@@ -980,10 +980,10 @@ I don't think this one is started. The design doc is not out yet.
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NzY2ODA1MzgsMTE5MzU4OTk1MCwxOT
-ExMTQ1NTY1LDgxMTU5ODY1MCw5NDA5OTUxNjMsMTAzMDcwMDgz
-LDU3MjI0NDYxMCwxMDc1OTYwNTk3LDE4MDU1MTYzMzIsNTU2OD
-A0NDc0LDE0NDU1NzQwNDcsNDE2ODA1Mzk4LC0yMTIwMjQ3MTA5
-LC0xNzk1NTkyODM0LC0xOTc3MjY4NDQyLDc0NzAzNjg5MCwxOT
-kzNzAyOTIwLC0zNjE3MDQzMThdfQ==
+eyJoaXN0b3J5IjpbMTgwMTI4MDg3OCwxMTkzNTg5OTUwLDE5MT
+ExNDU1NjUsODExNTk4NjUwLDk0MDk5NTE2MywxMDMwNzAwODMs
+NTcyMjQ0NjEwLDEwNzU5NjA1OTcsMTgwNTUxNjMzMiw1NTY4MD
+Q0NzQsMTQ0NTU3NDA0Nyw0MTY4MDUzOTgsLTIxMjAyNDcxMDks
+LTE3OTU1OTI4MzQsLTE5NzcyNjg0NDIsNzQ3MDM2ODkwLDE5OT
+M3MDI5MjAsLTM2MTcwNDMxOF19
 -->
