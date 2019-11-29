@@ -41,7 +41,7 @@ TODO: resume [source](https://www.linuxprobe.com/wp-content/uploads/2017/04/unif
 
 Unrolling
 
-#### Schema
+#### Repartition of a machine's memory allocation to a Spark executor
 
 ```mermaid
 graph TB
@@ -972,7 +972,7 @@ I don't think this one is started. The design doc is not out yet.
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1OTQ2ODk1MSw4MTE1OTg2NTAsOTQwOT
+eyJoaXN0b3J5IjpbMTkxMTE0NTU2NSw4MTE1OTg2NTAsOTQwOT
 k1MTYzLDEwMzA3MDA4Myw1NzIyNDQ2MTAsMTA3NTk2MDU5Nywx
 ODA1NTE2MzMyLDU1NjgwNDQ3NCwxNDQ1NTc0MDQ3LDQxNjgwNT
 M5OCwtMjEyMDI0NzEwOSwtMTc5NTU5MjgzNCwtMTk3NzI2ODQ0
