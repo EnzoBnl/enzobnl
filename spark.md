@@ -30,6 +30,9 @@
 - Spark SQL first realease: Spark 1.0.0 (May 26, 2014) (see [Spark SQL's paper](https://dl.acm.org/citation.cfm?id=2742797) by Michael Armbrust)
  
 ### Unified Memory Management (1.6+)
+Execution. ​This region is used for buffering intermediate data when performing shuffles,joins, sorts and aggregations. The size of this region is configured throughspark.shuffle.memoryFraction (default 0.2)​.Storage.​ This region is mainly for caching data blocks to optimize for future accesses, but isalso used for torrent broadcasts and sending large task results. The size of this region isconfigured through ​spark.storage.memoryFraction (default 0.6)​
+
+
 park.memory.fraction (default 0.75):​ fraction of the heap space used forexecution and storage. The lower this is, the more frequently spills and cached dataeviction occur. The purpose of this config is to set aside memory for internal metadata,user data structures, and imprecise size estimation in the case of sparse, unusually largerecords.●spark.memory.storageFraction (default 0.5): ​The size of the storage regionwithin the space set aside by ​spark.memory.fraction​. Cached data may only beevicted if total storage exceeds this region.
 
 
@@ -947,9 +950,9 @@ I don't think this one is started. The design doc is not out yet.
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ2Mzk0Nzc2Niw1NzIyNDQ2MTAsMTA3NT
-k2MDU5NywxODA1NTE2MzMyLDU1NjgwNDQ3NCwxNDQ1NTc0MDQ3
-LDQxNjgwNTM5OCwtMjEyMDI0NzEwOSwtMTc5NTU5MjgzNCwtMT
-k3NzI2ODQ0Miw3NDcwMzY4OTAsMTk5MzcwMjkyMCwtMzYxNzA0
-MzE4XX0=
+eyJoaXN0b3J5IjpbMTAzMDcwMDgzLDU3MjI0NDYxMCwxMDc1OT
+YwNTk3LDE4MDU1MTYzMzIsNTU2ODA0NDc0LDE0NDU1NzQwNDcs
+NDE2ODA1Mzk4LC0yMTIwMjQ3MTA5LC0xNzk1NTkyODM0LC0xOT
+c3MjY4NDQyLDc0NzAzNjg5MCwxOTkzNzAyOTIwLC0zNjE3MDQz
+MThdfQ==
 -->
