@@ -45,6 +45,7 @@ Unrolling
 
 ```mermaid
 graph TB
+-4[executor memory]
 -3[VM overheads,<br/> interned strings,<br/>other native overheads]
 -2[For other executors or unused]
 -1[Machine memory]
@@ -58,7 +59,8 @@ graph TB
 5[on-heap internal metadata,<br/>user data structures<br/> and imprecise size estimation <br/>in the case of unusually largerecords]
 -1 --> -2
 -1--spark.memory.offHeap.size/total bytes-->2
--1--spark.executor.memory/total JVM format-->1
+-1--spark.executor.memory/total JVM format-->-4
+-4 --> 0
 1 --spark.memory.fraction-->0
 1 --1-spark.memory.fraction-->5
 0 -- spark.memory.storageFraction--> 4
@@ -973,7 +975,7 @@ I don't think this one is started. The design doc is not out yet.
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUyODcyOTk4NCwxOTExMTQ1NTY1LDgxMT
+eyJoaXN0b3J5IjpbMTE5MzU4OTk1MCwxOTExMTQ1NTY1LDgxMT
 U5ODY1MCw5NDA5OTUxNjMsMTAzMDcwMDgzLDU3MjI0NDYxMCwx
 MDc1OTYwNTk3LDE4MDU1MTYzMzIsNTU2ODA0NDc0LDE0NDU1Nz
 QwNDcsNDE2ODA1Mzk4LC0yMTIwMjQ3MTA5LC0xNzk1NTkyODM0
