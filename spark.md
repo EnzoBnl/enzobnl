@@ -966,6 +966,10 @@ It's included in the current framework
 > c. skew handling.  
 I don't think this one is started. The design doc is not out yet.
 
+# Awesome external projects
+- [JohnSnowLabs](https://github.com/JohnSnowLabs)/**[spark-nlp](https://github.com/JohnSnowLabs/spark-nlp)**
+- [salesforce](https://github.com/salesforce)/**[TransmogrifAI](https://github.com/salesforce/TransmogrifAI)**
+
 
 # References
 ### Papers
@@ -985,11 +989,10 @@ I don't think this one is started. The design doc is not out yet.
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ0MTI0NTksLTE4MzQ1NTcyMDUsMTY2MD
-AyNTY2LDEzODU0OTQ4OTEsMjQxNjk0NTQwLDg4Njg2NDk3Niwt
-MzI2NDA1MjIsMTgwMTI4MDg3OCwxMTkzNTg5OTUwLDE5MTExND
-U1NjUsODExNTk4NjUwLDk0MDk5NTE2MywxMDMwNzAwODMsNTcy
-MjQ0NjEwLDEwNzU5NjA1OTcsMTgwNTUxNjMzMiw1NTY4MDQ0Nz
-QsMTQ0NTU3NDA0Nyw0MTY4MDUzOTgsLTIxMjAyNDcxMDldfQ==
-
+eyJoaXN0b3J5IjpbMjExNDkxMDQ5OSwxNDQxMjQ1OSwtMTgzND
+U1NzIwNSwxNjYwMDI1NjYsMTM4NTQ5NDg5MSwyNDE2OTQ1NDAs
+ODg2ODY0OTc2LC0zMjY0MDUyMiwxODAxMjgwODc4LDExOTM1OD
+k5NTAsMTkxMTE0NTU2NSw4MTE1OTg2NTAsOTQwOTk1MTYzLDEw
+MzA3MDA4Myw1NzIyNDQ2MTAsMTA3NTk2MDU5NywxODA1NTE2Mz
+MyLDU1NjgwNDQ3NCwxNDQ1NTc0MDQ3LDQxNjgwNTM5OF19
 -->
