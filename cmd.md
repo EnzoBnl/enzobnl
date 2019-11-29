@@ -99,6 +99,8 @@ chmod a+x exampleName.AppImage
 sudo ln -s origin target
 // ssh bridge: maps port 9000 of 10.240.0.44 accessed through <host_url> to localhost:9000
 ssh -L 9000:10.240.0.44:9000 <host_url>
+// put a directories's jars in classpath var, in ~/.bashrc
+export CLASSPATH="/home/enzo/Prog/lib/jar/*"
 ```
 ### CMD removes :
 ```bash
@@ -222,6 +224,6 @@ c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex 
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg3NDk3ODUyOSwtMTM1ODMzOTE1MCw1OT
-cwNjUwNzIsLTEwMzA3NzAzOTddfQ==
+eyJoaXN0b3J5IjpbLTg2NzE2ODc1MSwtODc0OTc4NTI5LC0xMz
+U4MzM5MTUwLDU5NzA2NTA3MiwtMTAzMDc3MDM5N119
 -->
