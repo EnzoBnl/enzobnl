@@ -893,13 +893,13 @@ SELECT src, count(*) as c FROM edges GROUP BY src ORDER BY c
 http://hydronitrogen.com/apache-spark-shuffles-explained-in-depth.html
 https://0x0fff.com/spark-architecture-shuffle/
 
-*Shuffle in short: When exchange is needed, local partitions output are written to disk, and a shuffle manager is notified that the chunk is ready to be fetched by other executors.*
+*Shuffle in short: When exchange is needed, local partitions output are written to disk* [**local file system**]*, and a shuffle manager is notified that the chunk is ready to be fetched by other executors.*
 
 *Spill in short: Spill means that RDD's data is serialized and written to disk when it does not fit anymore in memory. Not linked directly to shuffle (? FIXME)* 
 
 ### Actors involved in shuffle (FIXME)
 - `ShuffleManager` is trait that is instantiated on driver (register shuffles) and executors (ask to write or read data over connections with other executors). 
-The default current implementation is [`SortShuffleManager`](https://github.com/apache/spark/blob/master/core/src/main/scala/org/apache/spark/shuffle/sort/SortShuffleManager.scala). Memory-based shuffle managers proposed with first graphx release has been abandoned because it lacks in reliability and do not gain much in speed because disk based shuffles leverage hyper fast data transfers using 
+The default current implementation is [`SortShuffleManager`](https://github.com/apache/spark/blob/master/core/src/main/scala/org/apache/spark/shuffle/sort/SortShuffleManager.scala). Memory-based shuffle managers proposed with first graphx release has been abandoned because it lacks in reliability and do not gain much in speed because disk based shuffles leverage hyper fast data transfers with `java.nio.channels.FileChannel.transferTo(...)`. SSDs storage usage adds also a great speed up.
 
 - The `ShuffleManager.getReader: ShuffleReader` allows to fetch `org.apache.spark.sql.execution.ShuffledRowRDD extends RDD[InternalRow]` which *"is a specialized version of `org.apache.spark.rdd.ShuffledRDD` that is optimized for shuffling rows instead of Java key-value pairs"*.
 See `BypassMergeSortShuffleWriter` which relies on `DiskBlockObjectWriter` & `BlockManager`
@@ -997,11 +997,10 @@ I don't think this one is started. The design doc is not out yet.
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIxOTgzNTI1NSw5ODE4MDI1MjQsMTIwMz
-A1NDgwMSwxMTAxOTk5MDE1LDE0NDEyNDU5LC0xODM0NTU3MjA1
-LDE2NjAwMjU2NiwxMzg1NDk0ODkxLDI0MTY5NDU0MCw4ODY4Nj
-Q5NzYsLTMyNjQwNTIyLDE4MDEyODA4NzgsMTE5MzU4OTk1MCwx
-OTExMTQ1NTY1LDgxMTU5ODY1MCw5NDA5OTUxNjMsMTAzMDcwMD
-gzLDU3MjI0NDYxMCwxMDc1OTYwNTk3LDE4MDU1MTYzMzJdfQ==
-
+eyJoaXN0b3J5IjpbNjAyNzA3ODc1LDk4MTgwMjUyNCwxMjAzMD
+U0ODAxLDExMDE5OTkwMTUsMTQ0MTI0NTksLTE4MzQ1NTcyMDUs
+MTY2MDAyNTY2LDEzODU0OTQ4OTEsMjQxNjk0NTQwLDg4Njg2ND
+k3NiwtMzI2NDA1MjIsMTgwMTI4MDg3OCwxMTkzNTg5OTUwLDE5
+MTExNDU1NjUsODExNTk4NjUwLDk0MDk5NTE2MywxMDMwNzAwOD
+MsNTcyMjQ0NjEwLDEwNzU5NjA1OTcsMTgwNTUxNjMzMl19
 -->
