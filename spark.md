@@ -168,10 +168,11 @@ df2 = df
 use `df.queryExecution.sparkPlan.outputOrdering` that returns a sequence of `org.apache.spark.sql.catalyst.expressions.SortOrder`s.
 
 ```scala
-val dfIsSorted = !df.sort().queryExecution.sparkPlan.outputOrdering.isEmpty
+def isSorted(df: Dataset[_]): Boolean =
+  !df.sort().queryExecution.sparkPlan.outputOrdering.isEmpty
 ```
 
-## `DataFrame` vs other `Dataset[<not Row>]` steps of rows processing
+## `DataFrame` vs `Dataset[<not Row>]` row processing steps
 Short: DataFrame less secure but a bit faster.
 
 Let's compare processing steps of the `GeneratedIteratorForCodegenStage1` class that you can view by calling `.queryExecution.debug.codegen()` on a `DataFrame`
@@ -181,7 +182,7 @@ The semantic is:
 2. create a new feature containing a substring of the pseudo
 3. apply a filter on the new feature
 
-### DataFrame's WholeStageCodegen...
+### DataFrame's WholeStageCodegen execution...
 ```scala
 val df = spark.read
       .format("csv")
@@ -263,7 +264,7 @@ if (false) {
 append((filter_mutableStateArray_0[1].getRow()));
 ```
 
-### ... vs Dataset
+### ... vs Dataset's WholeStageCodegen execution
 ```scala
 val ds = spark.read
       .format("csv")
@@ -981,7 +982,7 @@ I don't think this one is started. The design doc is not out yet.
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk2Mzk1NDE3MSwyNDE2OTQ1NDAsODg2OD
+eyJoaXN0b3J5IjpbMTM4NTQ5NDg5MSwyNDE2OTQ1NDAsODg2OD
 Y0OTc2LC0zMjY0MDUyMiwxODAxMjgwODc4LDExOTM1ODk5NTAs
 MTkxMTE0NTU2NSw4MTE1OTg2NTAsOTQwOTk1MTYzLDEwMzA3MD
 A4Myw1NzIyNDQ2MTAsMTA3NTk2MDU5NywxODA1NTE2MzMyLDU1
