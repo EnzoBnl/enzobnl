@@ -967,8 +967,9 @@ It's included in the current framework
 I don't think this one is started. The design doc is not out yet.
 
 # Awesome external projects
-- [JohnSnowLabs](https://github.com/JohnSnowLabs)/**[spark-nlp](https://github.com/JohnSnowLabs/spark-nlp)**
-- [salesforce](https://github.com/salesforce)/**[TransmogrifAI](https://github.com/salesforce/TransmogrifAI)**
+- Uppon Spark ML:
+  - [JohnSnowLabs](https://github.com/JohnSnowLabs)/**[spark-nlp](https://github.com/JohnSnowLabs/spark-nlp)**: Natural language processing complete toolbox from lemmatization and POS tagging to BERT embedding.
+  - [salesforce](https://github.com/salesforce)/**[TransmogrifAI](https://github.com/salesforce/TransmogrifAI)**: Auto ML solution (no Deep Lea
 
 
 # References
@@ -989,10 +990,11 @@ I don't think this one is started. The design doc is not out yet.
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjExNDkxMDQ5OSwxNDQxMjQ1OSwtMTgzND
-U1NzIwNSwxNjYwMDI1NjYsMTM4NTQ5NDg5MSwyNDE2OTQ1NDAs
-ODg2ODY0OTc2LC0zMjY0MDUyMiwxODAxMjgwODc4LDExOTM1OD
-k5NTAsMTkxMTE0NTU2NSw4MTE1OTg2NTAsOTQwOTk1MTYzLDEw
-MzA3MDA4Myw1NzIyNDQ2MTAsMTA3NTk2MDU5NywxODA1NTE2Mz
-MyLDU1NjgwNDQ3NCwxNDQ1NTc0MDQ3LDQxNjgwNTM5OF19
+eyJoaXN0b3J5IjpbLTE5OTk1Nzg3NjcsMTQ0MTI0NTksLTE4Mz
+Q1NTcyMDUsMTY2MDAyNTY2LDEzODU0OTQ4OTEsMjQxNjk0NTQw
+LDg4Njg2NDk3NiwtMzI2NDA1MjIsMTgwMTI4MDg3OCwxMTkzNT
+g5OTUwLDE5MTExNDU1NjUsODExNTk4NjUwLDk0MDk5NTE2Mywx
+MDMwNzAwODMsNTcyMjQ0NjEwLDEwNzU5NjA1OTcsMTgwNTUxNj
+MzMiw1NTY4MDQ0NzQsMTQ0NTU3NDA0Nyw0MTY4MDUzOThdfQ==
+
 -->
