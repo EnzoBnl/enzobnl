@@ -376,7 +376,7 @@ def reduce(func: (T, T) => T): T = withNewRDDExecutionId {
 }
 ```
 
-## SQL window function syntax 
+### SQL window function syntax 
 (not Spark specific)
 ``` SQL
 SELECT 
@@ -394,6 +394,25 @@ SELECT
 **\_\_frame_type\_\_**:  
 - **ROW** (*start* and *end* are then index and offsets: `ROWS BETWEEN UNBOUNDED PRECEDING AND 10 FOLLOWING`,  the frame contains every records from the begining of the partition to the ten next records after current one) 
 - **RANGE** (*start* and *end* are then values in *orderCol* unit : `RANGE BETWEEN 13000 PRECEDING AND CURRENT ROW FOLLOWING`, given that *ORDER BY* has been performed on column **price** and that *current_p* is the price of the current record, the frame contains all the records that have a value of **price** *p* that is between *current_p -13000* and *current_p*)
+
+
+### Vector Type
+`org.apache.spark.ml.linalg.Vector`
+has the following spark sql type (note that values are in `ArrayType`):
+```scala
+private[this] val _sqlType = {  
+// type: 0 = sparse, 1 = dense  
+// We only use "values" for dense vectors, and "size", "indices", and "values" for sparse  
+// vectors. The "values" field is nullable because we might want to add binary vectors later,  
+// which uses "size" and "indices", but not "values".  
+StructType(Seq(  
+StructField("type", ByteType, nullable = false),  
+StructField("size", IntegerType, nullable = true),  
+StructField("indices", ArrayType(IntegerType, containsNull = false), nullable = true),  
+StructField("values", ArrayType(DoubleType, containsNull = false), nullable = true)))  
+}
+```
+
 
 ## Closures
 The following will compile and run fine but it will only do what is expected if you run Spark in local mode:
@@ -427,22 +446,7 @@ Use [accumulators](https://spark.apache.org/docs/latest/rdd-programming-guide.ht
 Partitioning & graphs in Spark
 
 
-## Vector Type
-`org.apache.spark.ml.linalg.Vector`
-has the following spark sql type (note that values are in `ArrayType`):
-```scala
-private[this] val _sqlType = {  
-// type: 0 = sparse, 1 = dense  
-// We only use "values" for dense vectors, and "size", "indices", and "values" for sparse  
-// vectors. The "values" field is nullable because we might want to add binary vectors later,  
-// which uses "size" and "indices", but not "values".  
-StructType(Seq(  
-StructField("type", ByteType, nullable = false),  
-StructField("size", IntegerType, nullable = true),  
-StructField("indices", ArrayType(IntegerType, containsNull = false), nullable = true),  
-StructField("values", ArrayType(DoubleType, containsNull = false), nullable = true)))  
-}
-```
+
 
 # Partitions in Spark
 
@@ -928,8 +932,8 @@ I don't think this one is started. The design doc is not out yet.
 - [Big Data analysis Coursera](https://www.coursera.org/lecture/big-data-analysis/joins-Nz9XW)
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU3MjYwNjQsNTU2ODA0NDc0LDE0NDU1Nz
-QwNDcsNDE2ODA1Mzk4LC0yMTIwMjQ3MTA5LC0xNzk1NTkyODM0
-LC0xOTc3MjY4NDQyLDc0NzAzNjg5MCwxOTkzNzAyOTIwLC0zNj
-E3MDQzMThdfQ==
+eyJoaXN0b3J5IjpbMTgwNTUxNjMzMiw1NTY4MDQ0NzQsMTQ0NT
+U3NDA0Nyw0MTY4MDUzOTgsLTIxMjAyNDcxMDksLTE3OTU1OTI4
+MzQsLTE5NzcyNjg0NDIsNzQ3MDM2ODkwLDE5OTM3MDI5MjAsLT
+M2MTcwNDMxOF19
 -->
