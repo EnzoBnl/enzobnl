@@ -43,7 +43,7 @@ Unrolling
 
 ```mermaid
 graph TB
-1[heap space]
+1[on-heap space]
 ```
 
 ### Memory format (during processing) evolution  SQL)
@@ -950,9 +950,9 @@ I don't think this one is started. The design doc is not out yet.
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAzMDcwMDgzLDU3MjI0NDYxMCwxMDc1OT
-YwNTk3LDE4MDU1MTYzMzIsNTU2ODA0NDc0LDE0NDU1NzQwNDcs
-NDE2ODA1Mzk4LC0yMTIwMjQ3MTA5LC0xNzk1NTkyODM0LC0xOT
-c3MjY4NDQyLDc0NzAzNjg5MCwxOTkzNzAyOTIwLC0zNjE3MDQz
-MThdfQ==
+eyJoaXN0b3J5IjpbOTQwOTk1MTYzLDEwMzA3MDA4Myw1NzIyND
+Q2MTAsMTA3NTk2MDU5NywxODA1NTE2MzMyLDU1NjgwNDQ3NCwx
+NDQ1NTc0MDQ3LDQxNjgwNTM5OCwtMjEyMDI0NzEwOSwtMTc5NT
+U5MjgzNCwtMTk3NzI2ODQ0Miw3NDcwMzY4OTAsMTk5MzcwMjky
+MCwtMzYxNzA0MzE4XX0=
 -->
