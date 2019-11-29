@@ -30,6 +30,9 @@
 - Spark SQL first realease: Spark 1.0.0 (May 26, 2014) (see [Spark SQL's paper](https://dl.acm.org/citation.cfm?id=2742797) by Michael Armbrust)
  
 ### Unified Memory Management (1.6+)
+
+**On-heap executor **
+
 Execution. ​This region is used for buffering intermediate data when performing shuffles,joins, sorts and aggregations. The size of this region is configured throughspark.shuffle.memoryFraction (default 0.2)​.Storage.​ This region is mainly for caching data blocks to optimize for future accesses, but isalso used for torrent broadcasts and sending large task results. The size of this region isconfigured through ​spark.storage.memoryFraction (default 0.6)​
 
 
@@ -46,7 +49,7 @@ Unrolling
 ```mermaid
 graph TB
 -4[executor memory]
--3[off-heap overheads:<br/>VM overheads,<br/> interned strings,<br/>other native overheads]
+-3[off-heap overheads:<br/>-VM overheads<br/>-interned strings<br/>-other native overheads]
 -2[For other executors or unused]
 -1[Machine memory]
 0[on-heap execution & storage region]
@@ -56,7 +59,7 @@ graph TB
 4[on-heap storage region]
 33[off-heap execution region]
 44[off-heap storage region]
-5[on-heap internal metadata,<br/>user data structures<br/> and imprecise size estimation <br/>in the case of unusually largerecords]
+5[-on-heap internal metadata<br/>-user data structures<br/>-and imprecise size estimation<br/>-in the case of unusually largerecords]
 -1 --> -2
 -1--spark.memory.offHeap.size/total bytes-->2
 -1--spark.executor.memory/total JVM format-->-4
@@ -70,7 +73,6 @@ graph TB
 2 --1 - spark.memory.storageFraction--> 33
 ```
 
-***other**: *internal metadata, user data structures, and imprecise size estimation in the case of sparse, unusually largerecords*
 
 ### Memory format (during processing) evolution  SQL)
 https://spoddutur.github.io/spark-notes/deep_dive_into_storage_formats.html
@@ -976,10 +978,10 @@ I don't think this one is started. The design doc is not out yet.
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM4OTUyNzI4MiwxMTkzNTg5OTUwLDE5MT
-ExNDU1NjUsODExNTk4NjUwLDk0MDk5NTE2MywxMDMwNzAwODMs
-NTcyMjQ0NjEwLDEwNzU5NjA1OTcsMTgwNTUxNjMzMiw1NTY4MD
-Q0NzQsMTQ0NTU3NDA0Nyw0MTY4MDUzOTgsLTIxMjAyNDcxMDks
-LTE3OTU1OTI4MzQsLTE5NzcyNjg0NDIsNzQ3MDM2ODkwLDE5OT
-M3MDI5MjAsLTM2MTcwNDMxOF19
+eyJoaXN0b3J5IjpbLTIwMDI2MDEzNjEsMTE5MzU4OTk1MCwxOT
+ExMTQ1NTY1LDgxMTU5ODY1MCw5NDA5OTUxNjMsMTAzMDcwMDgz
+LDU3MjI0NDYxMCwxMDc1OTYwNTk3LDE4MDU1MTYzMzIsNTU2OD
+A0NDc0LDE0NDU1NzQwNDcsNDE2ODA1Mzk4LC0yMTIwMjQ3MTA5
+LC0xNzk1NTkyODM0LC0xOTc3MjY4NDQyLDc0NzAzNjg5MCwxOT
+kzNzAyOTIwLC0zNjE3MDQzMThdfQ==
 -->
