@@ -48,7 +48,7 @@ graph TB
 2[off-heap space]
 3[on-heap execution region]
 4[on-heap storage region]
-5[on-heap internal metadata,<br/>user data structures<br/> and imprecise size estimation]
+5[on-heap internal metadata,<br/>user data structures<br/> and imprecise size estimation <br/>in the case of unusually largerecords]
 1 --spark.memory.fraction-->0
 1 --1-spark.memory.fraction-->5
 0 -- spark.memory.storageFraction--> 4
@@ -960,9 +960,9 @@ I don't think this one is started. The design doc is not out yet.
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIxOTQzNjQ1Nyw5NDA5OTUxNjMsMTAzMD
-cwMDgzLDU3MjI0NDYxMCwxMDc1OTYwNTk3LDE4MDU1MTYzMzIs
-NTU2ODA0NDc0LDE0NDU1NzQwNDcsNDE2ODA1Mzk4LC0yMTIwMj
-Q3MTA5LC0xNzk1NTkyODM0LC0xOTc3MjY4NDQyLDc0NzAzNjg5
-MCwxOTkzNzAyOTIwLC0zNjE3MDQzMThdfQ==
+eyJoaXN0b3J5IjpbODExNTk4NjUwLDk0MDk5NTE2MywxMDMwNz
+AwODMsNTcyMjQ0NjEwLDEwNzU5NjA1OTcsMTgwNTUxNjMzMiw1
+NTY4MDQ0NzQsMTQ0NTU3NDA0Nyw0MTY4MDUzOTgsLTIxMjAyND
+cxMDksLTE3OTU1OTI4MzQsLTE5NzcyNjg0NDIsNzQ3MDM2ODkw
+LDE5OTM3MDI5MjAsLTM2MTcwNDMxOF19
 -->
