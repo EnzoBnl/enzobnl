@@ -29,8 +29,8 @@
 
 - Spark SQL first realease: Spark 1.0.0 (May 26, 2014) (see [Spark SQL's paper](https://dl.acm.org/citation.cfm?id=2742797) by Michael Armbrust)
  
-### Memory format 
-#### during processing
+### 
+#### DataFrameMemory format (during processing) evolution
 https://spoddutur.github.io/spark-notes/deep_dive_into_storage_formats.html
 
 - 1.0.0 (May 26, 2014): There was no "DataFrame" but only `SchemaRDD`. It was a `RDD` of fully on-heap Java Objects.
@@ -50,10 +50,10 @@ https://spoddutur.github.io/spark-notes/deep_dive_into_storage_formats.html
 - Since 2.0.0 (Jul 19, 2016), `DataFrame` is merged with `Dataset` and remains just an alias `type DataFrame = Dataset[Row]`.
 
 
-#### contoguousity (TODO validate)
+#### contoguousity (TODO validate) (SQL)
 There is only a contiguousity of the `UnsafeRow`s' memory because an `RDD[UnsafeRow]` is a collection of `UnsafeRow`s' referencies that lives somewhere on-heap. This causes many CPU's caches defaults, each new record to process causing one new default.
 
-#### Caching
+#### Caching (SQL)
 
 |  |default storage level|
 |--|--|
@@ -932,8 +932,8 @@ I don't think this one is started. The design doc is not out yet.
 - [Big Data analysis Coursera](https://www.coursera.org/lecture/big-data-analysis/joins-Nz9XW)
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgwNTUxNjMzMiw1NTY4MDQ0NzQsMTQ0NT
-U3NDA0Nyw0MTY4MDUzOTgsLTIxMjAyNDcxMDksLTE3OTU1OTI4
-MzQsLTE5NzcyNjg0NDIsNzQ3MDM2ODkwLDE5OTM3MDI5MjAsLT
-M2MTcwNDMxOF19
+eyJoaXN0b3J5IjpbLTEwNDQ3NTA1MTMsMTgwNTUxNjMzMiw1NT
+Y4MDQ0NzQsMTQ0NTU3NDA0Nyw0MTY4MDUzOTgsLTIxMjAyNDcx
+MDksLTE3OTU1OTI4MzQsLTE5NzcyNjg0NDIsNzQ3MDM2ODkwLD
+E5OTM3MDI5MjAsLTM2MTcwNDMxOF19
 -->
