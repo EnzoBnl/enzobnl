@@ -43,6 +43,7 @@ Unrolling
 
 ```mermaid
 graph TB
+-1[
 0[on-heap execution & storage region]
 1[on-heap space]
 2[off-heap space]
@@ -960,9 +961,9 @@ I don't think this one is started. The design doc is not out yet.
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODExNTk4NjUwLDk0MDk5NTE2MywxMDMwNz
-AwODMsNTcyMjQ0NjEwLDEwNzU5NjA1OTcsMTgwNTUxNjMzMiw1
-NTY4MDQ0NzQsMTQ0NTU3NDA0Nyw0MTY4MDUzOTgsLTIxMjAyND
-cxMDksLTE3OTU1OTI4MzQsLTE5NzcyNjg0NDIsNzQ3MDM2ODkw
-LDE5OTM3MDI5MjAsLTM2MTcwNDMxOF19
+eyJoaXN0b3J5IjpbLTM1NTEwNTM0MSw4MTE1OTg2NTAsOTQwOT
+k1MTYzLDEwMzA3MDA4Myw1NzIyNDQ2MTAsMTA3NTk2MDU5Nywx
+ODA1NTE2MzMyLDU1NjgwNDQ3NCwxNDQ1NTc0MDQ3LDQxNjgwNT
+M5OCwtMjEyMDI0NzEwOSwtMTc5NTU5MjgzNCwtMTk3NzI2ODQ0
+Miw3NDcwMzY4OTAsMTk5MzcwMjkyMCwtMzYxNzA0MzE4XX0=
 -->
