@@ -72,11 +72,11 @@ buffering intermediate data when performing shuffles,joins, sorts and aggregatio
 1. if execution needs to use some space:
    - if its region space is not filled: it uses it
    - else if there is available unused space in storage region: it borrows it and uses it
-   - else: excess data is spilled to disk
+   - else: excess data is spilled to disk and it uses freed space
 2. if storage needs to use some space:
    - if its region space is not filled: it uses it
    - else if some of its region space has been borrowed by execution: it takes it back by triggering a spill to disk of some execution data, and uses it.
-   - else: excess cached blocks are evicted (Least Recently Used policy)
+   - else: excess cached blocks are evicted (Least Recently Used policy) and it uses freed space
 
 
 ## Memory format (during processing) evolution  (SQL)
@@ -985,11 +985,11 @@ I don't think this one is started. The design doc is not out yet.
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MzQ1NTcyMDUsMTY2MDAyNTY2LDEzOD
-U0OTQ4OTEsMjQxNjk0NTQwLDg4Njg2NDk3NiwtMzI2NDA1MjIs
-MTgwMTI4MDg3OCwxMTkzNTg5OTUwLDE5MTExNDU1NjUsODExNT
-k4NjUwLDk0MDk5NTE2MywxMDMwNzAwODMsNTcyMjQ0NjEwLDEw
-NzU5NjA1OTcsMTgwNTUxNjMzMiw1NTY4MDQ0NzQsMTQ0NTU3ND
-A0Nyw0MTY4MDUzOTgsLTIxMjAyNDcxMDksLTE3OTU1OTI4MzRd
-fQ==
+eyJoaXN0b3J5IjpbMTQ0MTI0NTksLTE4MzQ1NTcyMDUsMTY2MD
+AyNTY2LDEzODU0OTQ4OTEsMjQxNjk0NTQwLDg4Njg2NDk3Niwt
+MzI2NDA1MjIsMTgwMTI4MDg3OCwxMTkzNTg5OTUwLDE5MTExND
+U1NjUsODExNTk4NjUwLDk0MDk5NTE2MywxMDMwNzAwODMsNTcy
+MjQ0NjEwLDEwNzU5NjA1OTcsMTgwNTUxNjMzMiw1NTY4MDQ0Nz
+QsMTQ0NTU3NDA0Nyw0MTY4MDUzOTgsLTIxMjAyNDcxMDldfQ==
+
 -->
