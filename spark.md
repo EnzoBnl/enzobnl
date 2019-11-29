@@ -30,7 +30,7 @@ Section based on the pull request document [Unified Memory Management in Spark 1
 
 ### Repartition of a machine's memory allocation to a Spark executor
 
-```mermaid
+<div class="mermaid">
 graph TB
 -4[executor memory]
 -3[off-heap overheads:<br/>-VM overheads<br/>-interned strings<br/>-other native overheads]
@@ -55,7 +55,8 @@ graph TB
 0 --1 - spark.memory.storageFraction--> 3
 2 -- spark.memory.storageFraction--> 44
 2 --1 - spark.memory.storageFraction--> 33
-```
+</div>
+
 ### On-heap executor space
 The **On-heap executor space** is divided in 2 regions:
 - **Execution region**: 
@@ -982,11 +983,11 @@ I don't think this one is started. The design doc is not out yet.
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY2MDAyNTY2LDEzODU0OTQ4OTEsMjQxNj
-k0NTQwLDg4Njg2NDk3NiwtMzI2NDA1MjIsMTgwMTI4MDg3OCwx
-MTkzNTg5OTUwLDE5MTExNDU1NjUsODExNTk4NjUwLDk0MDk5NT
-E2MywxMDMwNzAwODMsNTcyMjQ0NjEwLDEwNzU5NjA1OTcsMTgw
-NTUxNjMzMiw1NTY4MDQ0NzQsMTQ0NTU3NDA0Nyw0MTY4MDUzOT
-gsLTIxMjAyNDcxMDksLTE3OTU1OTI4MzQsLTE5NzcyNjg0NDJd
+eyJoaXN0b3J5IjpbLTE2MDc2NDUzOTgsMTY2MDAyNTY2LDEzOD
+U0OTQ4OTEsMjQxNjk0NTQwLDg4Njg2NDk3NiwtMzI2NDA1MjIs
+MTgwMTI4MDg3OCwxMTkzNTg5OTUwLDE5MTExNDU1NjUsODExNT
+k4NjUwLDk0MDk5NTE2MywxMDMwNzAwODMsNTcyMjQ0NjEwLDEw
+NzU5NjA1OTcsMTgwNTUxNjMzMiw1NTY4MDQ0NzQsMTQ0NTU3ND
+A0Nyw0MTY4MDUzOTgsLTIxMjAyNDcxMDksLTE3OTU1OTI4MzRd
 fQ==
 -->
