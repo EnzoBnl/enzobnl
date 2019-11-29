@@ -840,14 +840,14 @@ https://0x0fff.com/spark-architecture-shuffle/
 
 *Spill in short: Spill means that RDD's data is serialized and written to disk when it does not fit anymore in memory. Not linked directly to shuffle (? FIXME)* 
 
-#### Actors involved in shuffle (FIX ME)
+### Actors involved in shuffle (FIX ME)
 `ShuffleManager` is class that is instanciated on driver (register shuffles) and executors (ask to write or read data over connections with other executors). 
 
 The `ShuffleManager.getReader: ShuffleReader` allows to fetch `org.apache.spark.sql.execution.ShuffledRowRDD extends RDD[InternalRow]` which "is a specialized version of `org.apache.spark.rdd.ShuffledRDD` that is optimized for shuffling rows instead of Java key-value pairs."
 
 See `BypassMergeSortShuffleWriter` which relies on `DiskBlockObjectWriter` & `BlockManager`
 
-#### Exchanges planning (SQL)
+### Exchanges planning (SQL)
 Exchange are carefully optimized done only if necessary:
 
 ```scala
@@ -912,7 +912,7 @@ It's included in the current framework
 I don't think this one is started. The design doc is not out yet.
 
 
-## References
+# References
 ### Papers
 - [2011 *Resilient Distributed Datasets: A Fault-Tolerant Abstraction for In-Memory Cluster Computing*](http://people.csail.mit.edu/matei/papers/2012/nsdi_spark.pdf), Zaharia Chowdhury Das Dave Ma McCauley Franklin Shenker Stoica
 - 2013 *GraphX: A Resilient Distributed Graph System on Spark*, Reynold S Xin Joseph E Gonzalez Michael J Franklin Ion Stoica
@@ -928,8 +928,8 @@ I don't think this one is started. The design doc is not out yet.
 - [Big Data analysis Coursera](https://www.coursera.org/lecture/big-data-analysis/joins-Nz9XW)
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk1NzAyMTExNSw1NTY4MDQ0NzQsMTQ0NT
-U3NDA0Nyw0MTY4MDUzOTgsLTIxMjAyNDcxMDksLTE3OTU1OTI4
-MzQsLTE5NzcyNjg0NDIsNzQ3MDM2ODkwLDE5OTM3MDI5MjAsLT
-M2MTcwNDMxOF19
+eyJoaXN0b3J5IjpbLTU3MjYwNjQsNTU2ODA0NDc0LDE0NDU1Nz
+QwNDcsNDE2ODA1Mzk4LC0yMTIwMjQ3MTA5LC0xNzk1NTkyODM0
+LC0xOTc3MjY4NDQyLDc0NzAzNjg5MCwxOTkzNzAyOTIwLC0zNj
+E3MDQzMThdfQ==
 -->
