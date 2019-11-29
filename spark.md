@@ -45,6 +45,7 @@ Unrolling
 
 ```mermaid
 graph TB
+-3[VM overheads,<br/> interned strings,<br/>other native overheads]
 -2[For other executors or unused]
 -1[Machine memory]
 0[on-heap execution & storage region]
@@ -972,9 +973,10 @@ I don't think this one is started. The design doc is not out yet.
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkxMTE0NTU2NSw4MTE1OTg2NTAsOTQwOT
-k1MTYzLDEwMzA3MDA4Myw1NzIyNDQ2MTAsMTA3NTk2MDU5Nywx
-ODA1NTE2MzMyLDU1NjgwNDQ3NCwxNDQ1NTc0MDQ3LDQxNjgwNT
-M5OCwtMjEyMDI0NzEwOSwtMTc5NTU5MjgzNCwtMTk3NzI2ODQ0
-Miw3NDcwMzY4OTAsMTk5MzcwMjkyMCwtMzYxNzA0MzE4XX0=
+eyJoaXN0b3J5IjpbMTUyODcyOTk4NCwxOTExMTQ1NTY1LDgxMT
+U5ODY1MCw5NDA5OTUxNjMsMTAzMDcwMDgzLDU3MjI0NDYxMCwx
+MDc1OTYwNTk3LDE4MDU1MTYzMzIsNTU2ODA0NDc0LDE0NDU1Nz
+QwNDcsNDE2ODA1Mzk4LC0yMTIwMjQ3MTA5LC0xNzk1NTkyODM0
+LC0xOTc3MjY4NDQyLDc0NzAzNjg5MCwxOTkzNzAyOTIwLC0zNj
+E3MDQzMThdfQ==
 -->
