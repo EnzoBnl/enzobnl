@@ -31,8 +31,6 @@ Section based on the pull request document [Unified Memory Management in Spark 1
 ### Repartition of a machine's memory allocation to a Spark executor
 
 <div class="mermaid">
-
-```mermaid
 graph TB
 -4[executor memory]
 -3[off-heap overheads:<br/>-VM overheads<br/>-interned strings<br/>-other native overheads]
@@ -45,7 +43,7 @@ graph TB
 4[on-heap storage region]
 33[off-heap execution region]
 44[off-heap storage region]
-5[-on-heap internal metadata<br/>-user data structures<br/>-and imprecise size estimation<br/>-in the case of unusually largerecords]
+5[Highly unmanaged:<br/>-on-heap internal metadata<br/>-user data structures<br/>-and imprecise size estimation<br/>-in the case of unusually largerecords]
 -1 --> -2
 -1--spark.memory.offHeap.size/total bytes-->2
 -1--spark.executor.memory/total JVM format-->-4
@@ -57,7 +55,6 @@ graph TB
 0 --1 - spark.memory.storageFraction--> 3
 2 -- spark.memory.storageFraction--> 44
 2 --1 - spark.memory.storageFraction--> 33
-```
 </div>
 
 ### On-heap executor space
@@ -995,7 +992,7 @@ I don't think this one is started. The design doc is not out yet.
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTczODIyODc1MiwxMTAxOTk5MDE1LDE0ND
+eyJoaXN0b3J5IjpbMTIwMzA1NDgwMSwxMTAxOTk5MDE1LDE0ND
 EyNDU5LC0xODM0NTU3MjA1LDE2NjAwMjU2NiwxMzg1NDk0ODkx
 LDI0MTY5NDU0MCw4ODY4NjQ5NzYsLTMyNjQwNTIyLDE4MDEyOD
 A4NzgsMTE5MzU4OTk1MCwxOTExMTQ1NTY1LDgxMTU5ODY1MCw5
