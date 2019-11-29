@@ -74,7 +74,9 @@ buffering intermediate data when performing shuffles,joins, sorts and aggregatio
 
 Understand execution and storage regions behaviors in *unified memory management*:
 1. if execution need to use some space:
-   - if  
+   - if its region space is not filled: it uses it
+   - else if there is available unused space in storage region: it borrows it and uses it
+   - else: data is spilled to disk
 3. The execution can borrow available storage region space if needed.
 4. If storage needs to take back some of its space borrowed by execution, a spill to disk of execution data is triggered.
 5. If storage region is filled, but more memory is needed, cached blocks are evicted (LRU) 
@@ -999,7 +1001,7 @@ I don't think this one is started. The design doc is not out yet.
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzA0MDM2MTM2LDI0MTY5NDU0MCw4ODY4Nj
+eyJoaXN0b3J5IjpbMzI1OTM1NDUyLDI0MTY5NDU0MCw4ODY4Nj
 Q5NzYsLTMyNjQwNTIyLDE4MDEyODA4NzgsMTE5MzU4OTk1MCwx
 OTExMTQ1NTY1LDgxMTU5ODY1MCw5NDA5OTUxNjMsMTAzMDcwMD
 gzLDU3MjI0NDYxMCwxMDc1OTYwNTk3LDE4MDU1MTYzMzIsNTU2
