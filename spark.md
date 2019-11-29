@@ -72,10 +72,19 @@ buffering intermediate data when performing shuffles,joins, sorts and aggregatio
   - torrent broadcasts
   - sending large task results
 
-Execution and storage share one unified region.When memory pressure arises, cached blocks are evicted. Execution memory spills only ifthere is still not enough space after evicting storage memory
+Execution and storage share one unified region
+- When memory pressure arises, cached blocks are evicted.
+- Execution memory spills only if there is still not enough space after evicting storage memory
 
-(B) Evict cached blocks, static storage reservation. ​This is like design (A) but with a reserved storage region that execution memory cannot borrow from. Cached blocks are evicted only if actual storage exceeds this region. The size of the reserved region is configured through ​spark.memory.storageFraction (default 0.0)​ and fixed for theduration of the application.
-(C) Evict cached blocks, dynamic storage reservation. ​This is like design (B), except thestorage space is not statically reserved, but dynamically allocated. This difference is thatexecution can borrow as much of the storage space as is available. ​This is the chosendesign.
+(B) Evict cached blocks, static storage reservation. ​This is like design (A) but with 
+- a reserved storage region that execution memory cannot borrow from
+- Cached blocks are evicted only if actual storage exceeds this region. 
+- The size of the reserved region is configured through ​spark.memory.storageFraction (default 0.0)​ 
+- The size of the reserved region is fixed for the duration of the application.
+- 
+(C) Evict cached blocks, dynamic storage reservation. ​This is like design (B), except 
+- the storage space is not statically reserved, but dynamically allocated. This difference is
+-  - execution can borrow as much of the storage space as is available. ​This is the chosendesign.
 
 ### Memory format (during processing) evolution  SQL)
 https://spoddutur.github.io/spark-notes/deep_dive_into_storage_formats.html
@@ -981,11 +990,11 @@ I don't think this one is started. The design doc is not out yet.
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTIzODc2MDYzLDg4Njg2NDk3NiwtMzI2ND
-A1MjIsMTgwMTI4MDg3OCwxMTkzNTg5OTUwLDE5MTExNDU1NjUs
-ODExNTk4NjUwLDk0MDk5NTE2MywxMDMwNzAwODMsNTcyMjQ0Nj
-EwLDEwNzU5NjA1OTcsMTgwNTUxNjMzMiw1NTY4MDQ0NzQsMTQ0
-NTU3NDA0Nyw0MTY4MDUzOTgsLTIxMjAyNDcxMDksLTE3OTU1OT
-I4MzQsLTE5NzcyNjg0NDIsNzQ3MDM2ODkwLDE5OTM3MDI5MjBd
-fQ==
+eyJoaXN0b3J5IjpbLTE2NTQ2ODU4MjksODg2ODY0OTc2LC0zMj
+Y0MDUyMiwxODAxMjgwODc4LDExOTM1ODk5NTAsMTkxMTE0NTU2
+NSw4MTE1OTg2NTAsOTQwOTk1MTYzLDEwMzA3MDA4Myw1NzIyND
+Q2MTAsMTA3NTk2MDU5NywxODA1NTE2MzMyLDU1NjgwNDQ3NCwx
+NDQ1NTc0MDQ3LDQxNjgwNTM5OCwtMjEyMDI0NzEwOSwtMTc5NT
+U5MjgzNCwtMTk3NzI2ODQ0Miw3NDcwMzY4OTAsMTk5MzcwMjky
+MF19
 -->
