@@ -100,7 +100,7 @@ https://spoddutur.github.io/spark-notes/deep_dive_into_storage_formats.html
 ### contoguousity (TODO validate) (SQL)
 There is only a contiguousity of the `UnsafeRow`s' memory because an `RDD[UnsafeRow]` is a collection of `UnsafeRow`s' referencies that lives somewhere on-heap. This causes many CPU's caches defaults, each new record to process causing one new default.
 
-### Caching (SQL)
+## Caching (SQL)
 
 |  |default storage level|
 |--|--|
@@ -164,14 +164,14 @@ df.cache()
 df2 = df
 ```
 
-### is a DataFrame sorted ?
+## is a DataFrame sorted ?
 use `df.queryExecution.sparkPlan.outputOrdering` that returns a sequence of `org.apache.spark.sql.catalyst.expressions.SortOrder`s.
 
 ```scala
 val dfIsSorted = !df.sort().queryExecution.sparkPlan.outputOrdering.isEmpty
 ```
 
-### `DataFrame` vs other `Dataset[<not Row>]` steps of rows processing
+## `DataFrame` vs other `Dataset[<not Row>]` steps of rows processing
 Short: DataFrame less secure but a bit faster.
 
 Let's compare processing steps of the `GeneratedIteratorForCodegenStage1` class that you can view by calling `.queryExecution.debug.codegen()` on a `DataFrame`
@@ -181,7 +181,7 @@ The semantic is:
 2. create a new feature containing a substring of the pseudo
 3. apply a filter on the new feature
 
-#### DataFrame ...
+### DataFrame's WholeStageCodegen...
 ```scala
 val df = spark.read
       .format("csv")
@@ -263,7 +263,7 @@ if (false) {
 append((filter_mutableStateArray_0[1].getRow()));
 ```
 
-#### ... vs Dataset
+### ... vs Dataset
 ```scala
 val ds = spark.read
       .format("csv")
@@ -365,7 +365,7 @@ append((project_mutableStateArray_0[7].getRow()));
 
 [Full code available here](https://gist.github.com/EnzoBnl/37e07e9cf7bce440734c7d33304257f0)
 
-### Conversion to RDD: `df.rdd` vs `df.queryExecution.toRdd()`
+## Conversion to RDD: `df.rdd` vs `df.queryExecution.toRdd()`
 [Jacek Laskowski's post on SO](https://stackoverflow.com/questions/44708629/is-dataset-rdd-an-action-or-transformation)
 
 1. `.rdd`
@@ -410,7 +410,7 @@ df.queryExecution.toRdd
 .map((row: InternalRow) => InternalRow.fromSeq(Seq(row.getLong(0)+10, row.getLong(0)-10)))  
 ```
 
-### OOP design
+## Dataset's OOP design
 `Dataset` can be viewed as a **functional builder** for a `LogicalPlan`, implemented as a **fluent API** friendly to SQL users.
 ```scala
 val df2 = df1.join(...).select(...).where(...).orderBy(...).show()
@@ -423,7 +423,7 @@ def reduce(func: (T, T) => T): T = withNewRDDExecutionId {
 }
 ```
 
-### SQL window function syntax 
+## SQL window function syntax 
 (not Spark specific)
 ``` SQL
 SELECT 
@@ -443,7 +443,7 @@ SELECT
 - **RANGE** (*start* and *end* are then values in *orderCol* unit : `RANGE BETWEEN 13000 PRECEDING AND CURRENT ROW FOLLOWING`, given that *ORDER BY* has been performed on column **price** and that *current_p* is the price of the current record, the frame contains all the records that have a value of **price** *p* that is between *current_p -13000* and *current_p*)
 
 
-### Vector Type
+## Vector Type
 `org.apache.spark.ml.linalg.Vector`
 has the following spark sql type (note that values are in `ArrayType`):
 ```scala
@@ -981,7 +981,7 @@ I don't think this one is started. The design doc is not out yet.
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYzOTI2Mjg5NiwyNDE2OTQ1NDAsODg2OD
+eyJoaXN0b3J5IjpbLTk2Mzk1NDE3MSwyNDE2OTQ1NDAsODg2OD
 Y0OTc2LC0zMjY0MDUyMiwxODAxMjgwODc4LDExOTM1ODk5NTAs
 MTkxMTE0NTU2NSw4MTE1OTg2NTAsOTQwOTk1MTYzLDEwMzA3MD
 A4Myw1NzIyNDQ2MTAsMTA3NTk2MDU5NywxODA1NTE2MzMyLDU1
