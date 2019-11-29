@@ -42,12 +42,13 @@ TODO: resume [source](https://www.linuxprobe.com/wp-content/uploads/2017/04/unif
 Unrolling
 
 ```mermaid
-graph TB
+graph LR
 1[on-heap space]
 2[off-heap space]
 3[on-heap execution region]
 4[on-heap execution region]
-3[on-heap execution region]
+5[on-heap other*]
+1 --spark.memory.fraction-->
 ```
 
 ### Memory format (during processing) evolution  SQL)
@@ -954,9 +955,9 @@ I don't think this one is started. The design doc is not out yet.
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAyNjIyNDA5LDk0MDk5NTE2MywxMDMwNz
-AwODMsNTcyMjQ0NjEwLDEwNzU5NjA1OTcsMTgwNTUxNjMzMiw1
-NTY4MDQ0NzQsMTQ0NTU3NDA0Nyw0MTY4MDUzOTgsLTIxMjAyND
-cxMDksLTE3OTU1OTI4MzQsLTE5NzcyNjg0NDIsNzQ3MDM2ODkw
-LDE5OTM3MDI5MjAsLTM2MTcwNDMxOF19
+eyJoaXN0b3J5IjpbLTQxODU0NzA5OCw5NDA5OTUxNjMsMTAzMD
+cwMDgzLDU3MjI0NDYxMCwxMDc1OTYwNTk3LDE4MDU1MTYzMzIs
+NTU2ODA0NDc0LDE0NDU1NzQwNDcsNDE2ODA1Mzk4LC0yMTIwMj
+Q3MTA5LC0xNzk1NTkyODM0LC0xOTc3MjY4NDQyLDc0NzAzNjg5
+MCwxOTkzNzAyOTIwLC0zNjE3MDQzMThdfQ==
 -->
