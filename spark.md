@@ -165,7 +165,7 @@ df2 = df
 ```
 
 ## is a DataFrame sorted ?
-use `df.queryExecution.sparkPlan.outputOrdering` that returns a sequence of `org.apache.spark.sql.catalyst.expressions.SortOrder`s.
+One can use `df.queryExecution.sparkPlan.outputOrdering` that returns a sequence of `org.apache.spark.sql.catalyst.expressions.SortOrder`s to retrieve this information:
 
 ```scala
 def isSorted(df: Dataset[_]): Boolean =
@@ -982,11 +982,11 @@ I don't think this one is started. The design doc is not out yet.
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM4NTQ5NDg5MSwyNDE2OTQ1NDAsODg2OD
-Y0OTc2LC0zMjY0MDUyMiwxODAxMjgwODc4LDExOTM1ODk5NTAs
-MTkxMTE0NTU2NSw4MTE1OTg2NTAsOTQwOTk1MTYzLDEwMzA3MD
-A4Myw1NzIyNDQ2MTAsMTA3NTk2MDU5NywxODA1NTE2MzMyLDU1
-NjgwNDQ3NCwxNDQ1NTc0MDQ3LDQxNjgwNTM5OCwtMjEyMDI0Nz
-EwOSwtMTc5NTU5MjgzNCwtMTk3NzI2ODQ0Miw3NDcwMzY4OTBd
+eyJoaXN0b3J5IjpbMTY2MDAyNTY2LDEzODU0OTQ4OTEsMjQxNj
+k0NTQwLDg4Njg2NDk3NiwtMzI2NDA1MjIsMTgwMTI4MDg3OCwx
+MTkzNTg5OTUwLDE5MTExNDU1NjUsODExNTk4NjUwLDk0MDk5NT
+E2MywxMDMwNzAwODMsNTcyMjQ0NjEwLDEwNzU5NjA1OTcsMTgw
+NTUxNjMzMiw1NTY4MDQ0NzQsMTQ0NTU3NDA0Nyw0MTY4MDUzOT
+gsLTIxMjAyNDcxMDksLTE3OTU1OTI4MzQsLTE5NzcyNjg0NDJd
 fQ==
 -->
