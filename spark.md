@@ -72,10 +72,12 @@ buffering intermediate data when performing shuffles,joins, sorts and aggregatio
   - torrent broadcasts
   - sending large task results
 
-There is mainly 3 behaviors to know to understand execution and storage regions behaviors in *unified memory management*:
-1. The execution can borrow available storage region space if needed.
-2. If storage needs to take back some of its space borrowed by execution, some execution data is spilled to disk.
-3. If storage region is filled, but more memory is needed, cached blocks are evicted (LRU) 
+Understand execution and storage regions behaviors in *unified memory management*:
+1. if execution need to use some space:
+   - if  
+3. The execution can borrow available storage region space if needed.
+4. If storage needs to take back some of its space borrowed by execution, a spill to disk of execution data is triggered.
+5. If storage region is filled, but more memory is needed, cached blocks are evicted (LRU) 
 
 Execution and storage share one unified region
 - When memory pressure arises, cached blocks are evicted.
@@ -997,7 +999,7 @@ I don't think this one is started. The design doc is not out yet.
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTYxMTUxMjEzLDI0MTY5NDU0MCw4ODY4Nj
+eyJoaXN0b3J5IjpbNzA0MDM2MTM2LDI0MTY5NDU0MCw4ODY4Nj
 Q5NzYsLTMyNjQwNTIyLDE4MDEyODA4NzgsMTE5MzU4OTk1MCwx
 OTExMTQ1NTY1LDgxMTU5ODY1MCw5NDA5OTUxNjMsMTAzMDcwMD
 gzLDU3MjI0NDYxMCwxMDc1OTYwNTk3LDE4MDU1MTYzMzIsNTU2
