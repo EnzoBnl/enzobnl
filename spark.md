@@ -32,8 +32,11 @@
 ### Unified Memory Management (1.6+)
 Section based on the pull request document [Unified Memory Management in Spark 1.6](https://www.linuxprobe.com/wp-content/uploads/2017/04/unified-memory-management-spark-10000.pdf) by Andrew Or and Josh Rosen
 
-**On-heap executor space** is divided in 2 regions:
+The **On-heap executor space** is divided in 2 regions:
 - **Execution region**: "buffering intermediate data when performing shuffles,joins, sorts and aggregations"
+- **Storage region**: 
+  - caching data blocks to optimize for future accesses 
+  - torrent broadcasts and sending large task results"
 
 Execution. ​This region is used for buffering intermediate data when performing shuffles,joins, sorts and aggregations. The size of this region is configured throughspark.shuffle.memoryFraction (default 0.2)​.Storage.​ This region is mainly for caching data blocks to optimize for future accesses, but isalso used for torrent broadcasts and sending large task results. The size of this region isconfigured through ​spark.storage.memoryFraction (default 0.6)​
 
@@ -980,10 +983,10 @@ I don't think this one is started. The design doc is not out yet.
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgwMTI4MDg3OCwxMTkzNTg5OTUwLDE5MT
-ExNDU1NjUsODExNTk4NjUwLDk0MDk5NTE2MywxMDMwNzAwODMs
-NTcyMjQ0NjEwLDEwNzU5NjA1OTcsMTgwNTUxNjMzMiw1NTY4MD
-Q0NzQsMTQ0NTU3NDA0Nyw0MTY4MDUzOTgsLTIxMjAyNDcxMDks
-LTE3OTU1OTI4MzQsLTE5NzcyNjg0NDIsNzQ3MDM2ODkwLDE5OT
-M3MDI5MjAsLTM2MTcwNDMxOF19
+eyJoaXN0b3J5IjpbNDQ0Nzg5NDMzLDE4MDEyODA4NzgsMTE5Mz
+U4OTk1MCwxOTExMTQ1NTY1LDgxMTU5ODY1MCw5NDA5OTUxNjMs
+MTAzMDcwMDgzLDU3MjI0NDYxMCwxMDc1OTYwNTk3LDE4MDU1MT
+YzMzIsNTU2ODA0NDc0LDE0NDU1NzQwNDcsNDE2ODA1Mzk4LC0y
+MTIwMjQ3MTA5LC0xNzk1NTkyODM0LC0xOTc3MjY4NDQyLDc0Nz
+AzNjg5MCwxOTkzNzAyOTIwLC0zNjE3MDQzMThdfQ==
 -->
