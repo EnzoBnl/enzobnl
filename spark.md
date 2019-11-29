@@ -29,8 +29,9 @@
 
 - Spark SQL first realease: Spark 1.0.0 (May 26, 2014) (see [Spark SQL's paper](https://dl.acm.org/citation.cfm?id=2742797) by Michael Armbrust)
  
-### 
-#### DataFrameMemory format (during processing) evolution
+### Unified Memory Management (1.6+)
+TODO with [source](https://www.linuxprobe.com/wp-content/uploads/2017/04/unified-memory-management-spark-10000.pdf)
+### Memory format (during processing) evolution  SQL)
 https://spoddutur.github.io/spark-notes/deep_dive_into_storage_formats.html
 
 - 1.0.0 (May 26, 2014): There was no "DataFrame" but only `SchemaRDD`. It was a `RDD` of fully on-heap Java Objects.
@@ -50,10 +51,10 @@ https://spoddutur.github.io/spark-notes/deep_dive_into_storage_formats.html
 - Since 2.0.0 (Jul 19, 2016), `DataFrame` is merged with `Dataset` and remains just an alias `type DataFrame = Dataset[Row]`.
 
 
-#### contoguousity (TODO validate) (SQL)
+### contoguousity (TODO validate) (SQL)
 There is only a contiguousity of the `UnsafeRow`s' memory because an `RDD[UnsafeRow]` is a collection of `UnsafeRow`s' referencies that lives somewhere on-heap. This causes many CPU's caches defaults, each new record to process causing one new default.
 
-#### Caching (SQL)
+### Caching (SQL)
 
 |  |default storage level|
 |--|--|
@@ -117,7 +118,7 @@ df.cache()
 df2 = df
 ```
 
-#### is a DataFrame sorted ?
+### is a DataFrame sorted ?
 use `df.queryExecution.sparkPlan.outputOrdering` that returns a sequence of `org.apache.spark.sql.catalyst.expressions.SortOrder`s.
 
 ```scala
@@ -792,7 +793,8 @@ joinable.join(...) union notJoinable
 TODO https://fr.slideshare.net/databricks/improving-spark-sql-at-linkedin
 TODO: Matrix multiplicityhttps://engineering.linkedin.com/blog/2017/06/managing--exploding--big-data
 
-### TODO: Range Joins
+### Range Joins
+TODO
 
 ## GroupBy  (SQL & Core)
 For `groupBy` on `edges.dst`, all's right because only the pre-aggregates (`partial_count(1)`, 1 row per distinct page id in each partition) are exchanged through cluster: This is equivalent to the `rdd.reduce`, `rdd.reduceByKey`, `rdd.aggregateByKey`, `combineByKey`  and not like `rdd.groupByKey` or `rdd.groupBy` which does not perform pre-aggregation and send everything over the network...
@@ -932,8 +934,8 @@ I don't think this one is started. The design doc is not out yet.
 - [Big Data analysis Coursera](https://www.coursera.org/lecture/big-data-analysis/joins-Nz9XW)
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNDQ3NTA1MTMsMTgwNTUxNjMzMiw1NT
-Y4MDQ0NzQsMTQ0NTU3NDA0Nyw0MTY4MDUzOTgsLTIxMjAyNDcx
-MDksLTE3OTU1OTI4MzQsLTE5NzcyNjg0NDIsNzQ3MDM2ODkwLD
-E5OTM3MDI5MjAsLTM2MTcwNDMxOF19
+eyJoaXN0b3J5IjpbLTI4NzAwNzc5LDE4MDU1MTYzMzIsNTU2OD
+A0NDc0LDE0NDU1NzQwNDcsNDE2ODA1Mzk4LC0yMTIwMjQ3MTA5
+LC0xNzk1NTkyODM0LC0xOTc3MjY4NDQyLDc0NzAzNjg5MCwxOT
+kzNzAyOTIwLC0zNjE3MDQzMThdfQ==
 -->
