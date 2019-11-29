@@ -60,7 +60,7 @@ graph TB
 -1 --> -2
 -1--spark.memory.offHeap.size/total bytes-->2
 -1--spark.executor.memory/total JVM format-->-4
--4 --> 0
+
 1 --spark.memory.fraction-->0
 1 --1-spark.memory.fraction-->5
 0 -- spark.memory.storageFraction--> 4
@@ -975,10 +975,10 @@ I don't think this one is started. The design doc is not out yet.
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE5MzU4OTk1MCwxOTExMTQ1NTY1LDgxMT
-U5ODY1MCw5NDA5OTUxNjMsMTAzMDcwMDgzLDU3MjI0NDYxMCwx
-MDc1OTYwNTk3LDE4MDU1MTYzMzIsNTU2ODA0NDc0LDE0NDU1Nz
-QwNDcsNDE2ODA1Mzk4LC0yMTIwMjQ3MTA5LC0xNzk1NTkyODM0
-LC0xOTc3MjY4NDQyLDc0NzAzNjg5MCwxOTkzNzAyOTIwLC0zNj
-E3MDQzMThdfQ==
+eyJoaXN0b3J5IjpbMjAzODQzNDMxMywxMTkzNTg5OTUwLDE5MT
+ExNDU1NjUsODExNTk4NjUwLDk0MDk5NTE2MywxMDMwNzAwODMs
+NTcyMjQ0NjEwLDEwNzU5NjA1OTcsMTgwNTUxNjMzMiw1NTY4MD
+Q0NzQsMTQ0NTU3NDA0Nyw0MTY4MDUzOTgsLTIxMjAyNDcxMDks
+LTE3OTU1OTI4MzQsLTE5NzcyNjg0NDIsNzQ3MDM2ODkwLDE5OT
+M3MDI5MjAsLTM2MTcwNDMxOF19
 -->
