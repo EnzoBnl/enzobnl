@@ -933,8 +933,9 @@ I don't think this one is started. The design doc is not out yet.
 - [Partitioning with Spark GraphFrames](https://stackoverflow.com/questions/41351802/partitioning-with-spark-graphframes/41353889#41353889)
 - [Big Data analysis Coursera](https://www.coursera.org/lecture/big-data-analysis/joins-Nz9XW)
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
+- [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM4MTIxNjQ4OSwxODA1NTE2MzMyLDU1Nj
+eyJoaXN0b3J5IjpbMTA3NTk2MDU5NywxODA1NTE2MzMyLDU1Nj
 gwNDQ3NCwxNDQ1NTc0MDQ3LDQxNjgwNTM5OCwtMjEyMDI0NzEw
 OSwtMTc5NTU5MjgzNCwtMTk3NzI2ODQ0Miw3NDcwMzY4OTAsMT
 k5MzcwMjkyMCwtMzYxNzA0MzE4XX0=
