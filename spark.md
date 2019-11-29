@@ -31,6 +31,12 @@
  
 ### Unified Memory Management (1.6+)
 TODO: resume [source](https://www.linuxprobe.com/wp-content/uploads/2017/04/unified-memory-management-spark-10000.pdf)
+
+```mermaid
+graph TB
+1[heap space]
+```
+
 ### Memory format (during processing) evolution  SQL)
 https://spoddutur.github.io/spark-notes/deep_dive_into_storage_formats.html
 
@@ -935,8 +941,8 @@ I don't think this one is started. The design doc is not out yet.
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ3NDUwNDcxOCwxMDc1OTYwNTk3LDE4MD
-U1MTYzMzIsNTU2ODA0NDc0LDE0NDU1NzQwNDcsNDE2ODA1Mzk4
-LC0yMTIwMjQ3MTA5LC0xNzk1NTkyODM0LC0xOTc3MjY4NDQyLD
-c0NzAzNjg5MCwxOTkzNzAyOTIwLC0zNjE3MDQzMThdfQ==
+eyJoaXN0b3J5IjpbNTcyMjQ0NjEwLDEwNzU5NjA1OTcsMTgwNT
+UxNjMzMiw1NTY4MDQ0NzQsMTQ0NTU3NDA0Nyw0MTY4MDUzOTgs
+LTIxMjAyNDcxMDksLTE3OTU1OTI4MzQsLTE5NzcyNjg0NDIsNz
+Q3MDM2ODkwLDE5OTM3MDI5MjAsLTM2MTcwNDMxOF19
 -->
