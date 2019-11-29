@@ -43,13 +43,16 @@ Unrolling
 
 ```mermaid
 graph TB
--1[
+-1[Machine memory]
 0[on-heap execution & storage region]
 1[on-heap space]
 2[off-heap space]
 3[on-heap execution region]
 4[on-heap storage region]
+33[off-heap execution region]
+44[off-heap storage region]
 5[on-heap internal metadata,<br/>user data structures<br/> and imprecise size estimation <br/>in the case of unusually largerecords]
+-1-- -->2
 1 --spark.memory.fraction-->0
 1 --1-spark.memory.fraction-->5
 0 -- spark.memory.storageFraction--> 4
@@ -961,7 +964,7 @@ I don't think this one is started. The design doc is not out yet.
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM1NTEwNTM0MSw4MTE1OTg2NTAsOTQwOT
+eyJoaXN0b3J5IjpbMTUyNzI0Mzg4NSw4MTE1OTg2NTAsOTQwOT
 k1MTYzLDEwMzA3MDA4Myw1NzIyNDQ2MTAsMTA3NTk2MDU5Nywx
 ODA1NTE2MzMyLDU1NjgwNDQ3NCwxNDQ1NTc0MDQ3LDQxNjgwNT
 M5OCwtMjEyMDI0NzEwOSwtMTc5NTU5MjgzNCwtMTk3NzI2ODQ0
