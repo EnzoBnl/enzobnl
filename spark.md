@@ -899,7 +899,7 @@ https://0x0fff.com/spark-architecture-shuffle/
 
 ### Actors involved in shuffle (FIXME)
 - `ShuffleManager` is trait that is instantiated on driver (register shuffles) and executors (ask to write or read data over connections with other executors). 
-Memory-based shuffle managers proposed with first graphx release has been abandoned. The default current implementation is [`SortShuffleManager`].
+The default current implementation is [`SortShuffleManager`](https://github.com/apache/spark/blob/master/core/src/main/scala/org/apache/spark/shuffle/sort/SortShuffleManager.scala). Memory-based shuffle managers proposed with first graphx release has been abandoned because it lacks in reliability and do not gain much in speed because disk based shuffles leverage hyper fast data transfers using 
 
 - The `ShuffleManager.getReader: ShuffleReader` allows to fetch `org.apache.spark.sql.execution.ShuffledRowRDD extends RDD[InternalRow]` which *"is a specialized version of `org.apache.spark.rdd.ShuffledRDD` that is optimized for shuffling rows instead of Java key-value pairs"*.
 See `BypassMergeSortShuffleWriter` which relies on `DiskBlockObjectWriter` & `BlockManager`
@@ -997,11 +997,11 @@ I don't think this one is started. The design doc is not out yet.
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNzAwMDMyNTcsOTgxODAyNTI0LDEyMD
-MwNTQ4MDEsMTEwMTk5OTAxNSwxNDQxMjQ1OSwtMTgzNDU1NzIw
-NSwxNjYwMDI1NjYsMTM4NTQ5NDg5MSwyNDE2OTQ1NDAsODg2OD
-Y0OTc2LC0zMjY0MDUyMiwxODAxMjgwODc4LDExOTM1ODk5NTAs
-MTkxMTE0NTU2NSw4MTE1OTg2NTAsOTQwOTk1MTYzLDEwMzA3MD
-A4Myw1NzIyNDQ2MTAsMTA3NTk2MDU5NywxODA1NTE2MzMyXX0=
+eyJoaXN0b3J5IjpbMTIxOTgzNTI1NSw5ODE4MDI1MjQsMTIwMz
+A1NDgwMSwxMTAxOTk5MDE1LDE0NDEyNDU5LC0xODM0NTU3MjA1
+LDE2NjAwMjU2NiwxMzg1NDk0ODkxLDI0MTY5NDU0MCw4ODY4Nj
+Q5NzYsLTMyNjQwNTIyLDE4MDEyODA4NzgsMTE5MzU4OTk1MCwx
+OTExMTQ1NTY1LDgxMTU5ODY1MCw5NDA5OTUxNjMsMTAzMDcwMD
+gzLDU3MjI0NDYxMCwxMDc1OTYwNTk3LDE4MDU1MTYzMzJdfQ==
 
 -->
