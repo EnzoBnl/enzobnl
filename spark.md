@@ -898,10 +898,10 @@ https://0x0fff.com/spark-architecture-shuffle/
 *Spill in short: Spill means that RDD's data is serialized and written to disk when it does not fit anymore in memory. Not linked directly to shuffle (? FIXME)* 
 
 ### Actors involved in shuffle (FIXME)
-`ShuffleManager` is class that is instantiated on driver (register shuffles) and executors (ask to write or read data over connections with other executors). 
+- `ShuffleManager` is trait that is instantiated on driver (register shuffles) and executors (ask to write or read data over connections with other executors). 
+The only remaining implementation is 
 
-The `ShuffleManager.getReader: ShuffleReader` allows to fetch `org.apache.spark.sql.execution.ShuffledRowRDD extends RDD[InternalRow]` which "is a specialized version of `org.apache.spark.rdd.ShuffledRDD` that is optimized for shuffling rows instead of Java key-value pairs."
-
+- The `ShuffleManager.getReader: ShuffleReader` allows to fetch `org.apache.spark.sql.execution.ShuffledRowRDD extends RDD[InternalRow]` which *"is a specialized version of `org.apache.spark.rdd.ShuffledRDD` that is optimized for shuffling rows instead of Java key-value pairs"*.
 See `BypassMergeSortShuffleWriter` which relies on `DiskBlockObjectWriter` & `BlockManager`
 
 ### Exchanges planning (SQL)
@@ -997,7 +997,7 @@ I don't think this one is started. The design doc is not out yet.
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYwMTMyNDA5OSwxMjAzMDU0ODAxLDExMD
+eyJoaXN0b3J5IjpbLTE5MjQ1Mjk3NCwxMjAzMDU0ODAxLDExMD
 E5OTkwMTUsMTQ0MTI0NTksLTE4MzQ1NTcyMDUsMTY2MDAyNTY2
 LDEzODU0OTQ4OTEsMjQxNjk0NTQwLDg4Njg2NDk3NiwtMzI2ND
 A1MjIsMTgwMTI4MDg3OCwxMTkzNTg5OTUwLDE5MTExNDU1NjUs
