@@ -899,7 +899,7 @@ https://0x0fff.com/spark-architecture-shuffle/
 
 ### Actors involved in shuffle (FIXME)
 - `ShuffleManager` is trait that is instantiated on driver (register shuffles) and executors (ask to write or read data over connections with other executors). 
-The only remaining implementation is 
+Even if the design make shuffle managers implementations pluggable, there is only one implementation remaining, the other being only remaining implementation is `SortShuffleManager`. 
 
 - The `ShuffleManager.getReader: ShuffleReader` allows to fetch `org.apache.spark.sql.execution.ShuffledRowRDD extends RDD[InternalRow]` which *"is a specialized version of `org.apache.spark.rdd.ShuffledRDD` that is optimized for shuffling rows instead of Java key-value pairs"*.
 See `BypassMergeSortShuffleWriter` which relies on `DiskBlockObjectWriter` & `BlockManager`
@@ -997,11 +997,11 @@ I don't think this one is started. The design doc is not out yet.
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MjQ1Mjk3NCwxMjAzMDU0ODAxLDExMD
-E5OTkwMTUsMTQ0MTI0NTksLTE4MzQ1NTcyMDUsMTY2MDAyNTY2
-LDEzODU0OTQ4OTEsMjQxNjk0NTQwLDg4Njg2NDk3NiwtMzI2ND
-A1MjIsMTgwMTI4MDg3OCwxMTkzNTg5OTUwLDE5MTExNDU1NjUs
-ODExNTk4NjUwLDk0MDk5NTE2MywxMDMwNzAwODMsNTcyMjQ0Nj
-EwLDEwNzU5NjA1OTcsMTgwNTUxNjMzMiw1NTY4MDQ0NzRdfQ==
+eyJoaXN0b3J5IjpbLTE2NjgzMDk0NzIsMTIwMzA1NDgwMSwxMT
+AxOTk5MDE1LDE0NDEyNDU5LC0xODM0NTU3MjA1LDE2NjAwMjU2
+NiwxMzg1NDk0ODkxLDI0MTY5NDU0MCw4ODY4NjQ5NzYsLTMyNj
+QwNTIyLDE4MDEyODA4NzgsMTE5MzU4OTk1MCwxOTExMTQ1NTY1
+LDgxMTU5ODY1MCw5NDA5OTUxNjMsMTAzMDcwMDgzLDU3MjI0ND
+YxMCwxMDc1OTYwNTk3LDE4MDU1MTYzMzIsNTU2ODA0NDc0XX0=
 
 -->
