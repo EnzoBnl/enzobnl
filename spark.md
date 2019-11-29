@@ -905,7 +905,9 @@ The `ShuffleManager.getReader: ShuffleReader` allows to fetch `org.apache.spark.
 See `BypassMergeSortShuffleWriter` which relies on `DiskBlockObjectWriter` & `BlockManager`
 
 ### Exchanges planning (SQL)
-Exchange are carefully optimized by Catalyst and are ordered to be as cheap as pos:
+Exchange are carefully optimized by Catalyst and are ordered to be as cheap as possible.
+
+For example:
 
 ```scala
 spark.conf.set("spark.sql.autoBroadcastJoinThreshold", 1)  
@@ -931,7 +933,7 @@ df1.join(df2.repartition(col("id")).groupBy("id").count(), df1("id") === df2("id
             +- *(3) FileScan parquet [id#4L] ...
 ```
 
-/!\ Unecessary exchange is triggered when renaming columns:
+**/!\\** Unecessary exchange is triggered when renaming columns:
 
 ```scala
 edges.repartition(10, col("src")).groupBy("src").count().explain()  
@@ -952,7 +954,8 @@ edges.repartition(10, col("src")).withColumnRenamed("src", "id").groupBy("id").c
             +- *(1) FileScan csv [src#98L] ...
 ```
 
-## ouverture: Adaptative Execution (AE) in 3.0.0
+## Coming soon
+###  Adaptative Execution (AE) in 3.0.0
 [JIRA](https://issues.apache.org/jira/browse/SPARK-9850?jql=text%20~%20%22adaptative%20execution%22)
 [JIRA issue's Google Doc](https://docs.google.com/document/d/1mpVjvQZRAkD-Ggy6-hcjXtBPiQoVbZGe3dLnAKgtJ4k/edit)
 [Intel doc](https://software.intel.com/en-us/articles/spark-sql-adaptive-execution-at-100-tb)
@@ -994,11 +997,11 @@ I don't think this one is started. The design doc is not out yet.
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMDQ1MjQ4NzEsMTIwMzA1NDgwMSwxMT
-AxOTk5MDE1LDE0NDEyNDU5LC0xODM0NTU3MjA1LDE2NjAwMjU2
-NiwxMzg1NDk0ODkxLDI0MTY5NDU0MCw4ODY4NjQ5NzYsLTMyNj
-QwNTIyLDE4MDEyODA4NzgsMTE5MzU4OTk1MCwxOTExMTQ1NTY1
-LDgxMTU5ODY1MCw5NDA5OTUxNjMsMTAzMDcwMDgzLDU3MjI0ND
-YxMCwxMDc1OTYwNTk3LDE4MDU1MTYzMzIsNTU2ODA0NDc0XX0=
+eyJoaXN0b3J5IjpbMTYwMTMyNDA5OSwxMjAzMDU0ODAxLDExMD
+E5OTkwMTUsMTQ0MTI0NTksLTE4MzQ1NTcyMDUsMTY2MDAyNTY2
+LDEzODU0OTQ4OTEsMjQxNjk0NTQwLDg4Njg2NDk3NiwtMzI2ND
+A1MjIsMTgwMTI4MDg3OCwxMTkzNTg5OTUwLDE5MTExNDU1NjUs
+ODExNTk4NjUwLDk0MDk5NTE2MywxMDMwNzAwODMsNTcyMjQ0Nj
+EwLDEwNzU5NjA1OTcsMTgwNTUxNjMzMiw1NTY4MDQ0NzRdfQ==
 
 -->
