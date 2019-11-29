@@ -426,10 +426,6 @@ Use [accumulators](https://spark.apache.org/docs/latest/rdd-programming-guide.ht
 ```
 Partitioning & graphs in Spark
 
-## Usefull confs:
-```scala
-SparkSession.builder.config("spark.default.parallelism", "12") // default = 200
-```
 
 ## Vector Type
 `org.apache.spark.ml.linalg.Vector`
@@ -932,8 +928,8 @@ I don't think this one is started. The design doc is not out yet.
 - [Big Data analysis Coursera](https://www.coursera.org/lecture/big-data-analysis/joins-Nz9XW)
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTU2ODA0NDc0LDE0NDU1NzQwNDcsNDE2OD
-A1Mzk4LC0yMTIwMjQ3MTA5LC0xNzk1NTkyODM0LC0xOTc3MjY4
-NDQyLDc0NzAzNjg5MCwxOTkzNzAyOTIwLC0zNjE3MDQzMThdfQ
-==
+eyJoaXN0b3J5IjpbMTg4NDkwNTAwMSw1NTY4MDQ0NzQsMTQ0NT
+U3NDA0Nyw0MTY4MDUzOTgsLTIxMjAyNDcxMDksLTE3OTU1OTI4
+MzQsLTE5NzcyNjg0NDIsNzQ3MDM2ODkwLDE5OTM3MDI5MjAsLT
+M2MTcwNDMxOF19
 -->
