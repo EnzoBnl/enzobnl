@@ -78,7 +78,7 @@ buffering intermediate data when performing shuffles, joins, sorts and aggregati
 2. if storage needs to use some space (i.e. storage level of a data needed to be cached starts with `MEMORY_`):
    - if its region space is not filled: it uses it
    - else if some of its region space has been borrowed by execution: it takes it back by triggering a spill to disk of some execution data, and uses it.
-   - else: excess cached blocks are evicted (Least Recently Used policy) and it uses freed space
+   - else: excess cached blocks are evicted with Least Recently Used policy)(simply removed if `MEMORY_ONLY` but spilled to disk if `MEMORY_AND_DISK`) and it uses freed space
 
 
 ## Memory format (during processing) evolution  (SQL)
@@ -999,7 +999,7 @@ I don't think this one is started. The design doc is not out yet.
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAzODA4MjcyNCwtMTMyMDcwMTExMCw2MD
+eyJoaXN0b3J5IjpbLTY2MzEzNTM3MiwtMTMyMDcwMTExMCw2MD
 I3MDc4NzUsOTgxODAyNTI0LDEyMDMwNTQ4MDEsMTEwMTk5OTAx
 NSwxNDQxMjQ1OSwtMTgzNDU1NzIwNSwxNjYwMDI1NjYsMTM4NT
 Q5NDg5MSwyNDE2OTQ1NDAsODg2ODY0OTc2LC0zMjY0MDUyMiwx
