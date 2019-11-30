@@ -895,7 +895,7 @@ http://hydronitrogen.com/apache-spark-shuffles-explained-in-depth.html
 https://0x0fff.com/spark-architecture-shuffle/
 
 
-Shuffle in short: When exchange is needed, local partitions map output are packed in memory and spilled to diskare written to disk [**local file system**], and a shuffle manager is notified that the chunk is ready to be fetched by other executors.
+Shuffle in short: When exchange is needed, local partitions map output are packed in execution memory region and spilled to local file system by batch when memory become saturated. are written to disk [**local file system**], and a shuffle manager is notified that the chunk is ready to be fetched by other executors.
 
 ### Actors involved in shuffle (FIXME)
 - `ShuffleManager` is trait that is instantiated on driver (register shuffles) and executors (ask to write or read data over connections with other executors). 
@@ -997,7 +997,7 @@ I don't think this one is started. The design doc is not out yet.
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNjExMjc0MTcsMTI4MDY4NzM2MSwtMT
+eyJoaXN0b3J5IjpbLTE5MTczMTc3MTgsMTI4MDY4NzM2MSwtMT
 MyMDcwMTExMCw2MDI3MDc4NzUsOTgxODAyNTI0LDEyMDMwNTQ4
 MDEsMTEwMTk5OTAxNSwxNDQxMjQ1OSwtMTgzNDU1NzIwNSwxNj
 YwMDI1NjYsMTM4NTQ5NDg5MSwyNDE2OTQ1NDAsODg2ODY0OTc2
