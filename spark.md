@@ -907,6 +907,8 @@ The default current implementation is [`SortShuffleManager`](https://github.com/
 - The `ShuffleManager.getReader: ShuffleReader` allows to fetch `org.apache.spark.sql.execution.ShuffledRowRDD extends RDD[InternalRow]` which *"is a specialized version of `org.apache.spark.rdd.ShuffledRDD` that is optimized for shuffling rows instead of Java key-value pairs"*.
 See `BypassMergeSortShuffleWriter` which relies on `DiskBlockObjectWriter` & `BlockManager`
 
+- an `ExternalShuffleService` is a server that serves the map output files to guarantee their availability
+
 ### Exchanges planning (SQL)
 Exchange are carefully optimized by Catalyst and are ordered to be as cheap as possible.
 
@@ -1000,11 +1002,11 @@ I don't think this one is started. The design doc is not out yet.
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUwNTYzNDM3MywxMjgwNjg3MzYxLC0xMz
-IwNzAxMTEwLDYwMjcwNzg3NSw5ODE4MDI1MjQsMTIwMzA1NDgw
-MSwxMTAxOTk5MDE1LDE0NDEyNDU5LC0xODM0NTU3MjA1LDE2Nj
-AwMjU2NiwxMzg1NDk0ODkxLDI0MTY5NDU0MCw4ODY4NjQ5NzYs
-LTMyNjQwNTIyLDE4MDEyODA4NzgsMTE5MzU4OTk1MCwxOTExMT
-Q1NTY1LDgxMTU5ODY1MCw5NDA5OTUxNjMsMTAzMDcwMDgzXX0=
+eyJoaXN0b3J5IjpbMTcxODQyODU2MCwtNTA1NjM0MzczLDEyOD
+A2ODczNjEsLTEzMjA3MDExMTAsNjAyNzA3ODc1LDk4MTgwMjUy
+NCwxMjAzMDU0ODAxLDExMDE5OTkwMTUsMTQ0MTI0NTksLTE4Mz
+Q1NTcyMDUsMTY2MDAyNTY2LDEzODU0OTQ4OTEsMjQxNjk0NTQw
+LDg4Njg2NDk3NiwtMzI2NDA1MjIsMTgwMTI4MDg3OCwxMTkzNT
+g5OTUwLDE5MTExNDU1NjUsODExNTk4NjUwLDk0MDk5NTE2M119
 
 -->
