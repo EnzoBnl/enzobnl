@@ -62,7 +62,7 @@ graph TB
 ### On-heap executor space
 The **On-heap executor space** is divided in 2 regions:
 - **Execution region**: 
-buffering intermediate data when performing shuffles,joins, sorts and aggregations
+buffering intermediate data when performing shuffles, joins, sorts and aggregations
 
 - **Storage region**: 
   - caching data blocks to optimize for future accesses 
@@ -84,8 +84,8 @@ buffering intermediate data when performing shuffles,joins, sorts and aggregatio
 ## Memory format (during processing) evolution  (SQL)
 https://spoddutur.github.io/spark-notes/deep_dive_into_storage_formats.html
 
-- 1.0.0 (May 26, 2014): There was no "DataFrame" but only `SchemaRDD`. It was a `RDD` of fully on-heap Java Objects.
-- 1.3.0 (Mar 6, 2015): `DataFrame` is born and is still and RDD of on-heap objects. `SchemaRDD` became an alias for smooth deprecation purpose.
+- 1.0.0 (May 26, 2014): There was no "DataFrame" but only `SchemaRDD`. It was a `RDD` of fully deserialized Java Objects.
+- 1.3.0 (Mar 6, 2015): `DataFrame` is born and is still and RDD of  objects. `SchemaRDD` became an alias for smooth deprecation purpose.
 
 ```scala
 @deprecated("use DataFrame", "1.3.0")
@@ -893,9 +893,9 @@ SELECT src, count(*) as c FROM edges GROUP BY src ORDER BY c
 http://hydronitrogen.com/apache-spark-shuffles-explained-in-depth.html
 https://0x0fff.com/spark-architecture-shuffle/
 
-*Shuffle in short: When exchange is needed, local partitions output are written to disk* [**local file system**]*, and a shuffle manager is notified that the chunk is ready to be fetched by other executors.*
+Shuffle in short: When exchange is needed, local partitions output are written to disk [**local file system**], and a shuffle manager is notified that the chunk is ready to be fetched by other executors.
 
-*Spill in short: Spill means that RDD's data is serialized and written to disk when it does not fit anymore in memory. Not linked directly to shuffle (? FIXME)* 
+Spill in short: Spill means that RDD's data is serialized and written to disk when it does not fit anymore in memory. Not linked directly to shuffle (? FIXME)
 
 ### Actors involved in shuffle (FIXME)
 - `ShuffleManager` is trait that is instantiated on driver (register shuffles) and executors (ask to write or read data over connections with other executors). 
@@ -997,10 +997,10 @@ I don't think this one is started. The design doc is not out yet.
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjAyNzA3ODc1LDk4MTgwMjUyNCwxMjAzMD
-U0ODAxLDExMDE5OTkwMTUsMTQ0MTI0NTksLTE4MzQ1NTcyMDUs
-MTY2MDAyNTY2LDEzODU0OTQ4OTEsMjQxNjk0NTQwLDg4Njg2ND
-k3NiwtMzI2NDA1MjIsMTgwMTI4MDg3OCwxMTkzNTg5OTUwLDE5
-MTExNDU1NjUsODExNTk4NjUwLDk0MDk5NTE2MywxMDMwNzAwOD
-MsNTcyMjQ0NjEwLDEwNzU5NjA1OTcsMTgwNTUxNjMzMl19
+eyJoaXN0b3J5IjpbMTI0MDcwNzI4OCw2MDI3MDc4NzUsOTgxOD
+AyNTI0LDEyMDMwNTQ4MDEsMTEwMTk5OTAxNSwxNDQxMjQ1OSwt
+MTgzNDU1NzIwNSwxNjYwMDI1NjYsMTM4NTQ5NDg5MSwyNDE2OT
+Q1NDAsODg2ODY0OTc2LC0zMjY0MDUyMiwxODAxMjgwODc4LDEx
+OTM1ODk5NTAsMTkxMTE0NTU2NSw4MTE1OTg2NTAsOTQwOTk1MT
+YzLDEwMzA3MDA4Myw1NzIyNDQ2MTAsMTA3NTk2MDU5N119
 -->
