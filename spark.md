@@ -894,6 +894,7 @@ SELECT src, count(*) as c FROM edges GROUP BY src ORDER BY c
 http://hydronitrogen.com/apache-spark-shuffles-explained-in-depth.html
 https://0x0fff.com/spark-architecture-shuffle/
 
+
 Shuffle in short: When exchange is needed, local partitions output are written to disk [**local file system**], and a shuffle manager is notified that the chunk is ready to be fetched by other executors.
 
 Spill in short: Spill means that RDD's data is serialized and written to disk when it does not fit anymore in memory. Not linked directly to shuffle (? FIXME)
@@ -998,11 +999,10 @@ I don't think this one is started. The design doc is not out yet.
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMjA3MDExMTAsNjAyNzA3ODc1LDk4MT
-gwMjUyNCwxMjAzMDU0ODAxLDExMDE5OTkwMTUsMTQ0MTI0NTks
-LTE4MzQ1NTcyMDUsMTY2MDAyNTY2LDEzODU0OTQ4OTEsMjQxNj
-k0NTQwLDg4Njg2NDk3NiwtMzI2NDA1MjIsMTgwMTI4MDg3OCwx
-MTkzNTg5OTUwLDE5MTExNDU1NjUsODExNTk4NjUwLDk0MDk5NT
-E2MywxMDMwNzAwODMsNTcyMjQ0NjEwLDEwNzU5NjA1OTddfQ==
-
+eyJoaXN0b3J5IjpbOTkxOTQxNDAsLTEzMjA3MDExMTAsNjAyNz
+A3ODc1LDk4MTgwMjUyNCwxMjAzMDU0ODAxLDExMDE5OTkwMTUs
+MTQ0MTI0NTksLTE4MzQ1NTcyMDUsMTY2MDAyNTY2LDEzODU0OT
+Q4OTEsMjQxNjk0NTQwLDg4Njg2NDk3NiwtMzI2NDA1MjIsMTgw
+MTI4MDg3OCwxMTkzNTg5OTUwLDE5MTExNDU1NjUsODExNTk4Nj
+UwLDk0MDk5NTE2MywxMDMwNzAwODMsNTcyMjQ0NjEwXX0=
 -->
