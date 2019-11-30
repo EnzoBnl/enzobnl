@@ -895,7 +895,10 @@ http://hydronitrogen.com/apache-spark-shuffles-explained-in-depth.html
 https://0x0fff.com/spark-architecture-shuffle/
 
 
-Shuffle in short: When exchange is needed, local partitions map output are packed in execution memory region and spilled to local file system by batch when memory become saturated, the spill append an outout in the same fand a shuffle manager is notified that the chunk is ready to be fetched by other executors.
+Shuffle in short: 
+- local partitions map output are packed in execution memory region and spilled to local file system by batch when memory become saturated
+- outputs targetting the same partition are spilled to an unique file
+- when a file corresponding to a given partition id has been written completely on map side, the shuffle manager states that the chunk is ready to be fetched by reduce side tasks.
 
 ### Actors involved in shuffle (FIXME)
 - `ShuffleManager` is trait that is instantiated on driver (register shuffles) and executors (ask to write or read data over connections with other executors). 
