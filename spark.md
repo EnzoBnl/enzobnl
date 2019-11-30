@@ -85,7 +85,7 @@ buffering intermediate data when performing shuffles, joins, sorts and aggregati
 https://spoddutur.github.io/spark-notes/deep_dive_into_storage_formats.html
 
 - 1.0.0 (May 26, 2014): There was no "DataFrame" but only `SchemaRDD`. It was a `RDD` of fully deserialized Java Objects.
-- 1.3.0 (Mar 6, 2015): `DataFrame` is born and is still and RDD of  objects. `SchemaRDD` became an alias for smooth deprecation purpose.
+- 1.3.0 (Mar 6, 2015): `DataFrame` is born and is still and RDD of deserialized objects. `SchemaRDD` became an alias for smooth deprecation purpose.
 
 ```scala
 @deprecated("use DataFrame", "1.3.0")
@@ -94,7 +94,8 @@ https://spoddutur.github.io/spark-notes/deep_dive_into_storage_formats.html
 
 - Since 1.4.0 (June 11, 2015) it is `RDD` of `InternalRow`s that are **Binary Row-Based Format** known as **Tungsten Row Format**. `InternalRow`s:
   - allows **in-place elements access** that avoid serialization/deserialization --> just a little little bit slower than `RDD`s for element access but very very faster when it comes to shuffles.
-  - store their data **off-heap** --> divide by 4 memory footprint compared to RDDs of Java objects.
+  - store their data very efficiently: divide by 4 memory footprint compared to RDDs of Java objects. 
+  - Leverage greatly the activation of the off-heap memory usage by not requiring 
   - [UnsafeRow](https://jaceklaskowski.gitbooks.io/mastering-spark-sql/spark-sql-UnsafeRow.html) is the basic implementation of [InternalRow](https://jaceklaskowski.gitbooks.io/mastering-spark-sql/spark-sql-InternalRow.html) (see descriptions of Jacek Laskowski's *Mastering Spark SQL* links for each)
   
 - 1.6.0 (Dec 22, 2015): `Dataset` is created as a separated class. There is conversions between `Dataset`s and `DataFrame`s. 
@@ -997,10 +998,10 @@ I don't think this one is started. The design doc is not out yet.
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI0MDcwNzI4OCw2MDI3MDc4NzUsOTgxOD
-AyNTI0LDEyMDMwNTQ4MDEsMTEwMTk5OTAxNSwxNDQxMjQ1OSwt
-MTgzNDU1NzIwNSwxNjYwMDI1NjYsMTM4NTQ5NDg5MSwyNDE2OT
-Q1NDAsODg2ODY0OTc2LC0zMjY0MDUyMiwxODAxMjgwODc4LDEx
-OTM1ODk5NTAsMTkxMTE0NTU2NSw4MTE1OTg2NTAsOTQwOTk1MT
-YzLDEwMzA3MDA4Myw1NzIyNDQ2MTAsMTA3NTk2MDU5N119
+eyJoaXN0b3J5IjpbMzM0Nzc4NzY2LDYwMjcwNzg3NSw5ODE4MD
+I1MjQsMTIwMzA1NDgwMSwxMTAxOTk5MDE1LDE0NDEyNDU5LC0x
+ODM0NTU3MjA1LDE2NjAwMjU2NiwxMzg1NDk0ODkxLDI0MTY5ND
+U0MCw4ODY4NjQ5NzYsLTMyNjQwNTIyLDE4MDEyODA4NzgsMTE5
+MzU4OTk1MCwxOTExMTQ1NTY1LDgxMTU5ODY1MCw5NDA5OTUxNj
+MsMTAzMDcwMDgzLDU3MjI0NDYxMCwxMDc1OTYwNTk3XX0=
 -->
