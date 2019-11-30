@@ -71,7 +71,7 @@ buffering intermediate data when performing shuffles, joins, sorts and aggregati
 
 ### Execution and storage regions behaviors in *unified memory management*
 
-1. if execution needs to use some space:
+1. if execution needs to use some space (i.e. storage level of a data needed to be cached starts with `MEMORY_:
    - if its region space is not filled: it uses it
    - else if there is available unused space in storage region: it borrows it and uses it
    - else: excess data is spilled to disk and it uses freed space
@@ -999,10 +999,11 @@ I don't think this one is started. The design doc is not out yet.
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTkxOTQxNDAsLTEzMjA3MDExMTAsNjAyNz
-A3ODc1LDk4MTgwMjUyNCwxMjAzMDU0ODAxLDExMDE5OTkwMTUs
-MTQ0MTI0NTksLTE4MzQ1NTcyMDUsMTY2MDAyNTY2LDEzODU0OT
-Q4OTEsMjQxNjk0NTQwLDg4Njg2NDk3NiwtMzI2NDA1MjIsMTgw
-MTI4MDg3OCwxMTkzNTg5OTUwLDE5MTExNDU1NjUsODExNTk4Nj
-UwLDk0MDk5NTE2MywxMDMwNzAwODMsNTcyMjQ0NjEwXX0=
+eyJoaXN0b3J5IjpbMTQ1MTY2NjAyNSwtMTMyMDcwMTExMCw2MD
+I3MDc4NzUsOTgxODAyNTI0LDEyMDMwNTQ4MDEsMTEwMTk5OTAx
+NSwxNDQxMjQ1OSwtMTgzNDU1NzIwNSwxNjYwMDI1NjYsMTM4NT
+Q5NDg5MSwyNDE2OTQ1NDAsODg2ODY0OTc2LC0zMjY0MDUyMiwx
+ODAxMjgwODc4LDExOTM1ODk5NTAsMTkxMTE0NTU2NSw4MTE1OT
+g2NTAsOTQwOTk1MTYzLDEwMzA3MDA4Myw1NzIyNDQ2MTBdfQ==
+
 -->
