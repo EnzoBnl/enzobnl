@@ -24,6 +24,22 @@
 
 *DAG = Directed Acyclic Graph. They are used by spark to represent Jobs' stages or Stages' steps*
 
+ ## APIs
+ Although the term **A**pplication **P**rogramming **I**nterface is mostly used for the element exposing the services of a web server, it has a more general meaning. 
+
+For frameworks as extended as *Spark*, **it names specific ways of interacting with the library** available for the user.
+
+*Spark* features different *APIs* with different purposes, which serve as front-facing interfaces masking more complex underlying or structural code ([*Facade Pattern*](https://en.wikipedia.org/wiki/Facade_pattern)):
+Even if every *spark job* runs *RDD-based* pipelines, *Spark* offers different ways to construct a *job*:
+
+- **Core API** (Spark Core): user manipulates directly the RDDs, it is the low level API
+- **Dataset API** (Spark SQL): User manipulates high level typed objects
+- **DataFrame API** (Spark SQL): User manipulates high level untyped objects
+- **SQL API** (Spark SQL): User: User writes SQL query strings
+
+(3 last APIs leverage a descriptive programming model and the structuration of the manipulated data to produce optimized Spark jobs)
+
+Note: By convention, when talking about Dataset API, we talk about manipulation of `Dataset[T]` objects with T different from `Row`. The manipulation of `Dataset[Row]` objects is called DataFrame API (as `DataFrame` is a type alias for `Dataset[Row]`).
  
 ## Unified Memory Management (1.6+)
 Useful sources:
@@ -1004,11 +1020,11 @@ I don't think this one is started. The design doc is not out yet.
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NjUwMjAxMjUsODU4MzcxODksLTE1Nj
-YxMzI2NzEsLTUwNTYzNDM3MywxMjgwNjg3MzYxLC0xMzIwNzAx
-MTEwLDYwMjcwNzg3NSw5ODE4MDI1MjQsMTIwMzA1NDgwMSwxMT
-AxOTk5MDE1LDE0NDEyNDU5LC0xODM0NTU3MjA1LDE2NjAwMjU2
-NiwxMzg1NDk0ODkxLDI0MTY5NDU0MCw4ODY4NjQ5NzYsLTMyNj
-QwNTIyLDE4MDEyODA4NzgsMTE5MzU4OTk1MCwxOTExMTQ1NTY1
-XX0=
+eyJoaXN0b3J5IjpbLTE0OTY2NzAzNDcsLTE3NjUwMjAxMjUsOD
+U4MzcxODksLTE1NjYxMzI2NzEsLTUwNTYzNDM3MywxMjgwNjg3
+MzYxLC0xMzIwNzAxMTEwLDYwMjcwNzg3NSw5ODE4MDI1MjQsMT
+IwMzA1NDgwMSwxMTAxOTk5MDE1LDE0NDEyNDU5LC0xODM0NTU3
+MjA1LDE2NjAwMjU2NiwxMzg1NDk0ODkxLDI0MTY5NDU0MCw4OD
+Y4NjQ5NzYsLTMyNjQwNTIyLDE4MDEyODA4NzgsMTE5MzU4OTk1
+MF19
 -->
