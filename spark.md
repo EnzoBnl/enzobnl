@@ -612,7 +612,13 @@ because the former will delegate the repartitioning to Hadoop's `TextInputFormat
 
 ### `DataFrameWriter`s' partitioning
 
-`DataFrameWriter.partitionBy(colNames: String*)` allows you to partition 
+`DataFrameWriter.partitionBy(colNames: String*)` allows you to partition job output on the file system. For example 
+
+```scala
+```
+peopleDF.write.format("parquet").partitionBy("age", "lastname").save("/path/people.parquet")
+```
+```
 
 ## Data structures
 
@@ -1031,7 +1037,7 @@ I don't think this one is started. The design doc is not out yet.
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc0MTMwNzI0MSw3MDk0NzkyNDcsMTYyND
+eyJoaXN0b3J5IjpbMTkwMzU4ODMwNyw3MDk0NzkyNDcsMTYyND
 kxMjk0OSwxNTg0MjQ4NzgwLC0xNTM1NTQyODIwLC0xNDk2Njcw
 MzQ3LC0xNzY1MDIwMTI1LDg1ODM3MTg5LC0xNTY2MTMyNjcxLC
 01MDU2MzQzNzMsMTI4MDY4NzM2MSwtMTMyMDcwMTExMCw2MDI3
