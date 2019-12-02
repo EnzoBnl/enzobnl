@@ -51,19 +51,26 @@ Useful sources:
 
 <div class="mermaid">
 
-```mermaid
+
+`spark.executor.memoryOverhead`
+
+```mermaid 
 graph TB
+
+-1[Worker node's memory]
+
+2[off-heap space shared among<br/>worker's executors]
+33[off-heap execution region]
+44[off-heap storage region]
+
 -4[executor memory]
 -3[off-heap overheads:<br/>-VM overheads<br/>-interned strings<br/>-other native overheads]
 -2[For other executors or unused]
--1[Worker node's memory]
 0[on-heap execution & storage region]
 1[on-heap executor space]
-2[off-heap executor space]
 3[on-heap execution region]
 4[on-heap storage region]
-33[off-heap execution region]
-44[off-heap storage region]
+
 5[Highly unmanaged:<br/>-on-heap internal metadata<br/>-user data structures<br/>-and imprecise size estimation<br/>-in the case of unusually largerecords]
 -1 --> -2
 -1--spark.memory.offHeap.size/total bytes-->2
@@ -1023,11 +1030,11 @@ I don't think this one is started. The design doc is not out yet.
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MzU1NDI4MjAsLTE0OTY2NzAzNDcsLT
-E3NjUwMjAxMjUsODU4MzcxODksLTE1NjYxMzI2NzEsLTUwNTYz
-NDM3MywxMjgwNjg3MzYxLC0xMzIwNzAxMTEwLDYwMjcwNzg3NS
-w5ODE4MDI1MjQsMTIwMzA1NDgwMSwxMTAxOTk5MDE1LDE0NDEy
-NDU5LC0xODM0NTU3MjA1LDE2NjAwMjU2NiwxMzg1NDk0ODkxLD
-I0MTY5NDU0MCw4ODY4NjQ5NzYsLTMyNjQwNTIyLDE4MDEyODA4
-NzhdfQ==
+eyJoaXN0b3J5IjpbLTE0MTIwNDI4MTYsLTE1MzU1NDI4MjAsLT
+E0OTY2NzAzNDcsLTE3NjUwMjAxMjUsODU4MzcxODksLTE1NjYx
+MzI2NzEsLTUwNTYzNDM3MywxMjgwNjg3MzYxLC0xMzIwNzAxMT
+EwLDYwMjcwNzg3NSw5ODE4MDI1MjQsMTIwMzA1NDgwMSwxMTAx
+OTk5MDE1LDE0NDEyNDU5LC0xODM0NTU3MjA1LDE2NjAwMjU2Ni
+wxMzg1NDk0ODkxLDI0MTY5NDU0MCw4ODY4NjQ5NzYsLTMyNjQw
+NTIyXX0=
 -->
