@@ -169,6 +169,8 @@ df.cache()
 df2 = df
 ```
 
+- cached blocks of data are not replicated by deneither in memory nor on local file system)can be replicated twice instead of not repli
+
 ## is a DataFrame sorted ?
 One can use `df.queryExecution.sparkPlan.outputOrdering` that returns a sequence of `org.apache.spark.sql.catalyst.expressions.SortOrder`s to retrieve this information:
 
@@ -1002,11 +1004,11 @@ I don't think this one is started. The design doc is not out yet.
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTg2MjI4NjYzLC0xNTY2MTMyNjcxLC01MD
-U2MzQzNzMsMTI4MDY4NzM2MSwtMTMyMDcwMTExMCw2MDI3MDc4
-NzUsOTgxODAyNTI0LDEyMDMwNTQ4MDEsMTEwMTk5OTAxNSwxND
-QxMjQ1OSwtMTgzNDU1NzIwNSwxNjYwMDI1NjYsMTM4NTQ5NDg5
-MSwyNDE2OTQ1NDAsODg2ODY0OTc2LC0zMjY0MDUyMiwxODAxMj
-gwODc4LDExOTM1ODk5NTAsMTkxMTE0NTU2NSw4MTE1OTg2NTBd
-fQ==
+eyJoaXN0b3J5IjpbMTExNDQ4OSwtMTU2NjEzMjY3MSwtNTA1Nj
+M0MzczLDEyODA2ODczNjEsLTEzMjA3MDExMTAsNjAyNzA3ODc1
+LDk4MTgwMjUyNCwxMjAzMDU0ODAxLDExMDE5OTkwMTUsMTQ0MT
+I0NTksLTE4MzQ1NTcyMDUsMTY2MDAyNTY2LDEzODU0OTQ4OTEs
+MjQxNjk0NTQwLDg4Njg2NDk3NiwtMzI2NDA1MjIsMTgwMTI4MD
+g3OCwxMTkzNTg5OTUwLDE5MTExNDU1NjUsODExNTk4NjUwXX0=
+
 -->
