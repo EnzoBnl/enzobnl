@@ -50,8 +50,6 @@ Useful sources:
 ### Allocation of the memory of a worker *W* to a given executor *E*
 
 <div class="mermaid">
-
-```mermaid 
 graph LR
 
 -1[Worker W's memory]
@@ -80,7 +78,7 @@ graph LR
 0 --1 - spark.memory.storageFraction--> 3
 2 -- spark.memory.storageFraction--> 44
 2 --1 - spark.memory.storageFraction--> 33
-```
+
 </div>
 
 ### On-heap executor space
@@ -1028,11 +1026,11 @@ I don't think this one is started. The design doc is not out yet.
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU4NDI0ODc4MCwtMTUzNTU0MjgyMCwtMT
-Q5NjY3MDM0NywtMTc2NTAyMDEyNSw4NTgzNzE4OSwtMTU2NjEz
-MjY3MSwtNTA1NjM0MzczLDEyODA2ODczNjEsLTEzMjA3MDExMT
-AsNjAyNzA3ODc1LDk4MTgwMjUyNCwxMjAzMDU0ODAxLDExMDE5
-OTkwMTUsMTQ0MTI0NTksLTE4MzQ1NTcyMDUsMTY2MDAyNTY2LD
-EzODU0OTQ4OTEsMjQxNjk0NTQwLDg4Njg2NDk3NiwtMzI2NDA1
-MjJdfQ==
+eyJoaXN0b3J5IjpbMTYyNDkxMjk0OSwxNTg0MjQ4NzgwLC0xNT
+M1NTQyODIwLC0xNDk2NjcwMzQ3LC0xNzY1MDIwMTI1LDg1ODM3
+MTg5LC0xNTY2MTMyNjcxLC01MDU2MzQzNzMsMTI4MDY4NzM2MS
+wtMTMyMDcwMTExMCw2MDI3MDc4NzUsOTgxODAyNTI0LDEyMDMw
+NTQ4MDEsMTEwMTk5OTAxNSwxNDQxMjQ1OSwtMTgzNDU1NzIwNS
+wxNjYwMDI1NjYsMTM4NTQ5NDg5MSwyNDE2OTQ1NDAsODg2ODY0
+OTc2XX0=
 -->
