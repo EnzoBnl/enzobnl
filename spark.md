@@ -687,7 +687,7 @@ def collect(): Array[T] = withScope {
 ### Join algorithms families
 
 - **Nested loop**: For each row in table A, loop on table B's rows to find matches
-$O($\vert edges \vert$ * $\vert vertices \vert$)$
+$O(\vert edges \vert * \vert vertices \vert)$
 ```python
 for e in edges:
     for v in vertices:
@@ -696,7 +696,7 @@ for e in edges:
 ```
 
 - **Hash join**: Create a join_key -> row hashmap for the smallest table. Loop on the biggest table and search for matches in the hashmap.
-$O(\vert vertices \vert$ + $\vert edges \vert)$, only equi joins, additional $O(\vert vertices \vert)$ space complexity
+$O(\vert vertices \vert + \vert edges \vert)$, only equi joins, additional $O(\vert vertices \vert)$ space complexity
 
 ```python
 vertices_map = {v.join_key: v for v in vertices}  # O($\vert vertices \vert$)
@@ -709,7 +709,7 @@ for e in edges:  # O($\vert edges \vert$)
 
 - **Sort-merge join**: Sort tables and iterate on both of them in the same move in one loop
 
-$O($\vert vertices \vert$*log($\vert vertices \vert$) + $\vert edges \vert$*log($\vert edges \vert$))$ , adaptable to handle not only equi joins
+$O(\vert vertices \vert*log(\vert vertices \vert) + \vert edges \vert*log(\vert edges \vert))$ , adaptable to handle not only equi joins
 
 ```python
 vertices.sort(lambda v: v.join_key)  # O($\vert vertices \vert$*log($\vert vertices \vert$)
@@ -1050,11 +1050,11 @@ I don't think this one is started. The design doc is not out yet.
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTM2OTMxOTk5LC0xODI5NzYxMjczLC0xMz
-U2NzYwNDUxLDcwOTQ3OTI0NywxNjI0OTEyOTQ5LDE1ODQyNDg3
-ODAsLTE1MzU1NDI4MjAsLTE0OTY2NzAzNDcsLTE3NjUwMjAxMj
-UsODU4MzcxODksLTE1NjYxMzI2NzEsLTUwNTYzNDM3MywxMjgw
-Njg3MzYxLC0xMzIwNzAxMTEwLDYwMjcwNzg3NSw5ODE4MDI1Mj
-QsMTIwMzA1NDgwMSwxMTAxOTk5MDE1LDE0NDEyNDU5LC0xODM0
-NTU3MjA1XX0=
+eyJoaXN0b3J5IjpbLTE4MzAxODUzNzcsLTE4Mjk3NjEyNzMsLT
+EzNTY3NjA0NTEsNzA5NDc5MjQ3LDE2MjQ5MTI5NDksMTU4NDI0
+ODc4MCwtMTUzNTU0MjgyMCwtMTQ5NjY3MDM0NywtMTc2NTAyMD
+EyNSw4NTgzNzE4OSwtMTU2NjEzMjY3MSwtNTA1NjM0MzczLDEy
+ODA2ODczNjEsLTEzMjA3MDExMTAsNjAyNzA3ODc1LDk4MTgwMj
+UyNCwxMjAzMDU0ODAxLDExMDE5OTkwMTUsMTQ0MTI0NTksLTE4
+MzQ1NTcyMDVdfQ==
 -->
