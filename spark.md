@@ -46,9 +46,11 @@ Useful sources:
 -  pull request document [Unified Memory Management in Spark 1.6](https://www.linuxprobe.com/wp-content/uploads/2017/04/unified-memory-management-spark-10000.pdf) by Andrew Or and Josh Rosen
 -  blog article [Apache Spark and off-heap memory](https://www.waitingforcode.com/apache-spark/apache-spark-off-heap-memory/read) by Bartosz Konieczny.
 
-### Repartition of a machine's memory allocation to a Spark executor
+### Repartition of a machine's memory allocation to a Spark executor *E*
 
 <div class="mermaid">
+
+```mermaid
 graph TB
 -4[executor memory]
 -3[off-heap overheads:<br/>-VM overheads<br/>-interned strings<br/>-other native overheads]
@@ -1020,11 +1022,11 @@ I don't think this one is started. The design doc is not out yet.
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0OTY2NzAzNDcsLTE3NjUwMjAxMjUsOD
-U4MzcxODksLTE1NjYxMzI2NzEsLTUwNTYzNDM3MywxMjgwNjg3
-MzYxLC0xMzIwNzAxMTEwLDYwMjcwNzg3NSw5ODE4MDI1MjQsMT
-IwMzA1NDgwMSwxMTAxOTk5MDE1LDE0NDEyNDU5LC0xODM0NTU3
-MjA1LDE2NjAwMjU2NiwxMzg1NDk0ODkxLDI0MTY5NDU0MCw4OD
-Y4NjQ5NzYsLTMyNjQwNTIyLDE4MDEyODA4NzgsMTE5MzU4OTk1
-MF19
+eyJoaXN0b3J5IjpbMTk2MTEyNzg3LC0xNDk2NjcwMzQ3LC0xNz
+Y1MDIwMTI1LDg1ODM3MTg5LC0xNTY2MTMyNjcxLC01MDU2MzQz
+NzMsMTI4MDY4NzM2MSwtMTMyMDcwMTExMCw2MDI3MDc4NzUsOT
+gxODAyNTI0LDEyMDMwNTQ4MDEsMTEwMTk5OTAxNSwxNDQxMjQ1
+OSwtMTgzNDU1NzIwNSwxNjYwMDI1NjYsMTM4NTQ5NDg5MSwyND
+E2OTQ1NDAsODg2ODY0OTc2LC0zMjY0MDUyMiwxODAxMjgwODc4
+XX0=
 -->
