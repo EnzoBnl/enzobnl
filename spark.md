@@ -59,13 +59,15 @@ graph TB
 
 -1[Worker node's memory]
 
+-3[off-heap overheads:<br/>-VM overheads<br/>-interned strings<br/>-other native overheads]
+
+-2[For other executors or unused]
+
 2[off-heap space shared among<br/>worker's executors]
 33[off-heap execution region]
 44[off-heap storage region]
 
 -4[executor memory]
--3[off-heap overheads:<br/>-VM overheads<br/>-interned strings<br/>-other native overheads]
--2[For other executors or unused]
 0[on-heap execution & storage region]
 1[on-heap executor space]
 3[on-heap execution region]
@@ -75,8 +77,7 @@ graph TB
 -1 --> -2
 -1--spark.memory.offHeap.size bytes-->2
 -1--spark.executor.memory JVM string format-->-4
--4 --1 - spark.executor.memoryOverhead -->1
--4 -- spark.executor.memoryOverhead -->-3
+-1 -- spark.executor.memoryOverhead bytes-->-3
 1 --spark.memory.fraction-->0
 1 --1-spark.memory.fraction-->5
 0 -- spark.memory.storageFraction--> 4
@@ -1030,11 +1031,11 @@ I don't think this one is started. The design doc is not out yet.
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcyMjEyOTgwNSwtMTUzNTU0MjgyMCwtMT
-Q5NjY3MDM0NywtMTc2NTAyMDEyNSw4NTgzNzE4OSwtMTU2NjEz
-MjY3MSwtNTA1NjM0MzczLDEyODA2ODczNjEsLTEzMjA3MDExMT
-AsNjAyNzA3ODc1LDk4MTgwMjUyNCwxMjAzMDU0ODAxLDExMDE5
-OTkwMTUsMTQ0MTI0NTksLTE4MzQ1NTcyMDUsMTY2MDAyNTY2LD
-EzODU0OTQ4OTEsMjQxNjk0NTQwLDg4Njg2NDk3NiwtMzI2NDA1
-MjJdfQ==
+eyJoaXN0b3J5IjpbMzYwNjA1NTUyLC0xNTM1NTQyODIwLC0xND
+k2NjcwMzQ3LC0xNzY1MDIwMTI1LDg1ODM3MTg5LC0xNTY2MTMy
+NjcxLC01MDU2MzQzNzMsMTI4MDY4NzM2MSwtMTMyMDcwMTExMC
+w2MDI3MDc4NzUsOTgxODAyNTI0LDEyMDMwNTQ4MDEsMTEwMTk5
+OTAxNSwxNDQxMjQ1OSwtMTgzNDU1NzIwNSwxNjYwMDI1NjYsMT
+M4NTQ5NDg5MSwyNDE2OTQ1NDAsODg2ODY0OTc2LC0zMjY0MDUy
+Ml19
 -->
