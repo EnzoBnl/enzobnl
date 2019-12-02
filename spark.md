@@ -56,7 +56,7 @@ graph TB
 
 -1[Worker W's memory]
 
--3[off-heap overhead space for E:<br/>-VM overheads<br/>-interned strings<br/>-other native overheads]
+-3[off-heap overhead space for E:<br/>VM overheads, interned strings, other native overheads]
 
 -2[... for other on-heap memory or off-heap overhead of W's executors]
 
@@ -69,7 +69,7 @@ graph TB
 3[on-heap execution region for E]
 4[on-heap storage region for E]
 
-5[Other on-heap space for E:<br/>internal metadata, user data structures<br/>-and imprecise size estimation<br/>-in the case of unusually largerecords]
+5[Other on-heap space for E:<br/>internal metadata, user data structures, handle<br/>of miss-estimated unusually large records]
 -1 --> -2
 -1--spark.memory.offHeap.size bytes-->2
 -1--spark.executor.memory JVM string format-->-4
@@ -1028,11 +1028,11 @@ I don't think this one is started. The design doc is not out yet.
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTM2MzgzNDcsLTE1MzU1NDI4MjAsLTE0OT
-Y2NzAzNDcsLTE3NjUwMjAxMjUsODU4MzcxODksLTE1NjYxMzI2
-NzEsLTUwNTYzNDM3MywxMjgwNjg3MzYxLC0xMzIwNzAxMTEwLD
-YwMjcwNzg3NSw5ODE4MDI1MjQsMTIwMzA1NDgwMSwxMTAxOTk5
-MDE1LDE0NDEyNDU5LC0xODM0NTU3MjA1LDE2NjAwMjU2NiwxMz
-g1NDk0ODkxLDI0MTY5NDU0MCw4ODY4NjQ5NzYsLTMyNjQwNTIy
-XX0=
+eyJoaXN0b3J5IjpbLTEwOTgxODYxNjQsLTE1MzU1NDI4MjAsLT
+E0OTY2NzAzNDcsLTE3NjUwMjAxMjUsODU4MzcxODksLTE1NjYx
+MzI2NzEsLTUwNTYzNDM3MywxMjgwNjg3MzYxLC0xMzIwNzAxMT
+EwLDYwMjcwNzg3NSw5ODE4MDI1MjQsMTIwMzA1NDgwMSwxMTAx
+OTk5MDE1LDE0NDEyNDU5LC0xODM0NTU3MjA1LDE2NjAwMjU2Ni
+wxMzg1NDk0ODkxLDI0MTY5NDU0MCw4ODY4NjQ5NzYsLTMyNjQw
+NTIyXX0=
 -->
