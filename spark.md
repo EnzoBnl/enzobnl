@@ -56,9 +56,9 @@ graph TB
 
 -1[Worker W's memory]
 
--3[off-heap overheads space for E:<br/>-VM overheads<br/>-interned strings<br/>-other native overheads]
+-3[off-heap overhead space for E:<br/>-VM overheads<br/>-interned strings<br/>-other native overheads]
 
--2[For other executors or unused]
+-2[... for other on-heap memory or off-heap overhead of W's executors]
 
 2[off-heap space shared among W's executors]
 33[off-heap execution region for W's executors]
@@ -1028,7 +1028,7 @@ I don't think this one is started. The design doc is not out yet.
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg3OTg0MjkwLC0xNTM1NTQyODIwLC0xND
+eyJoaXN0b3J5IjpbOTIxNTg5NDUyLC0xNTM1NTQyODIwLC0xND
 k2NjcwMzQ3LC0xNzY1MDIwMTI1LDg1ODM3MTg5LC0xNTY2MTMy
 NjcxLC01MDU2MzQzNzMsMTI4MDY4NzM2MSwtMTMyMDcwMTExMC
 w2MDI3MDc4NzUsOTgxODAyNTI0LDEyMDMwNTQ4MDEsMTEwMTk5
