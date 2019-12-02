@@ -610,6 +610,10 @@ sc.textFile("hdfs://.../file.txt").repartition(x)
 ```
 because the former will delegate the repartitioning to Hadoop's `TextInputFormat`.
 
+### `DataFrameWriter`s' partitioning
+
+`DataFrameWriter.partitionBy(colNames: String*)` allows you to partition 
+
 ## Data structures
 
 SQL & RDD:
@@ -1027,11 +1031,11 @@ I don't think this one is started. The design doc is not out yet.
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzA5NDc5MjQ3LDE2MjQ5MTI5NDksMTU4ND
-I0ODc4MCwtMTUzNTU0MjgyMCwtMTQ5NjY3MDM0NywtMTc2NTAy
-MDEyNSw4NTgzNzE4OSwtMTU2NjEzMjY3MSwtNTA1NjM0MzczLD
-EyODA2ODczNjEsLTEzMjA3MDExMTAsNjAyNzA3ODc1LDk4MTgw
-MjUyNCwxMjAzMDU0ODAxLDExMDE5OTkwMTUsMTQ0MTI0NTksLT
-E4MzQ1NTcyMDUsMTY2MDAyNTY2LDEzODU0OTQ4OTEsMjQxNjk0
-NTQwXX0=
+eyJoaXN0b3J5IjpbLTc0MTMwNzI0MSw3MDk0NzkyNDcsMTYyND
+kxMjk0OSwxNTg0MjQ4NzgwLC0xNTM1NTQyODIwLC0xNDk2Njcw
+MzQ3LC0xNzY1MDIwMTI1LDg1ODM3MTg5LC0xNTY2MTMyNjcxLC
+01MDU2MzQzNzMsMTI4MDY4NzM2MSwtMTMyMDcwMTExMCw2MDI3
+MDc4NzUsOTgxODAyNTI0LDEyMDMwNTQ4MDEsMTEwMTk5OTAxNS
+wxNDQxMjQ1OSwtMTgzNDU1NzIwNSwxNjYwMDI1NjYsMTM4NTQ5
+NDg5MV19
 -->
