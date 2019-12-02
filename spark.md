@@ -58,11 +58,11 @@ graph LR
 
 -3[off-heap overhead space for E:<br/>-VM overheads<br/>-interned strings<br/>-other native overheads]
 
--2[... for other on-heap memory or off-heap overhead of W's executors]
+-2[... for other on-heap memory or<br/> off-heap overhead of W's executors]
 
-2[off-heap space shared among W's executors]
-33[off-heap execution region for W's executors]
-44[off-heap storage region for W's executors]
+2[off-heap space shared<br/> among W's executors]
+33[off-heap execution <br/>region for W's executors]
+44[off-heap storage <br/>region for W's executors]
 
 -4[on-heap memory for E]
 0[on-heap execution & storage<br/> region for E]
@@ -1028,11 +1028,11 @@ I don't think this one is started. The design doc is not out yet.
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjM0OTgwMjAsLTE1MzU1NDI4MjAsLTE0OT
-Y2NzAzNDcsLTE3NjUwMjAxMjUsODU4MzcxODksLTE1NjYxMzI2
-NzEsLTUwNTYzNDM3MywxMjgwNjg3MzYxLC0xMzIwNzAxMTEwLD
-YwMjcwNzg3NSw5ODE4MDI1MjQsMTIwMzA1NDgwMSwxMTAxOTk5
-MDE1LDE0NDEyNDU5LC0xODM0NTU3MjA1LDE2NjAwMjU2NiwxMz
-g1NDk0ODkxLDI0MTY5NDU0MCw4ODY4NjQ5NzYsLTMyNjQwNTIy
-XX0=
+eyJoaXN0b3J5IjpbMTU4NDI0ODc4MCwtMTUzNTU0MjgyMCwtMT
+Q5NjY3MDM0NywtMTc2NTAyMDEyNSw4NTgzNzE4OSwtMTU2NjEz
+MjY3MSwtNTA1NjM0MzczLDEyODA2ODczNjEsLTEzMjA3MDExMT
+AsNjAyNzA3ODc1LDk4MTgwMjUyNCwxMjAzMDU0ODAxLDExMDE5
+OTkwMTUsMTQ0MTI0NTksLTE4MzQ1NTcyMDUsMTY2MDAyNTY2LD
+EzODU0OTQ4OTEsMjQxNjk0NTQwLDg4Njg2NDk3NiwtMzI2NDA1
+MjJdfQ==
 -->
