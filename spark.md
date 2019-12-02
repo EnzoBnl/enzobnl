@@ -45,6 +45,7 @@ Note: By convention, when talking about Dataset API, we talk about manipulation 
 Useful sources:
 -  pull request document [Unified Memory Management in Spark 1.6](https://www.linuxprobe.com/wp-content/uploads/2017/04/unified-memory-management-spark-10000.pdf) by Andrew Or and Josh Rosen
 -  blog article [Apache Spark and off-heap memory](https://www.waitingforcode.com/apache-spark/apache-spark-off-heap-memory/read) by Bartosz Konieczny.
+- blog article [# Deep Understanding of Spark Memory Management Model](https://www.tutorialdocs.com/article/spark-memory-management.html) by  Alex
 
 ### Repartition of a machine's memory allocation to a Spark executor *E*
 
@@ -1022,11 +1023,11 @@ I don't think this one is started. The design doc is not out yet.
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk2MTEyNzg3LC0xNDk2NjcwMzQ3LC0xNz
-Y1MDIwMTI1LDg1ODM3MTg5LC0xNTY2MTMyNjcxLC01MDU2MzQz
-NzMsMTI4MDY4NzM2MSwtMTMyMDcwMTExMCw2MDI3MDc4NzUsOT
-gxODAyNTI0LDEyMDMwNTQ4MDEsMTEwMTk5OTAxNSwxNDQxMjQ1
-OSwtMTgzNDU1NzIwNSwxNjYwMDI1NjYsMTM4NTQ5NDg5MSwyND
-E2OTQ1NDAsODg2ODY0OTc2LC0zMjY0MDUyMiwxODAxMjgwODc4
-XX0=
+eyJoaXN0b3J5IjpbLTE1MzU1NDI4MjAsLTE0OTY2NzAzNDcsLT
+E3NjUwMjAxMjUsODU4MzcxODksLTE1NjYxMzI2NzEsLTUwNTYz
+NDM3MywxMjgwNjg3MzYxLC0xMzIwNzAxMTEwLDYwMjcwNzg3NS
+w5ODE4MDI1MjQsMTIwMzA1NDgwMSwxMTAxOTk5MDE1LDE0NDEy
+NDU5LC0xODM0NTU3MjA1LDE2NjAwMjU2NiwxMzg1NDk0ODkxLD
+I0MTY5NDU0MCw4ODY4NjQ5NzYsLTMyNjQwNTIyLDE4MDEyODA4
+NzhdfQ==
 -->
