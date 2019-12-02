@@ -73,8 +73,8 @@ graph TB
 
 5[Highly unmanaged:<br/>-on-heap internal metadata<br/>-user data structures<br/>-and imprecise size estimation<br/>-in the case of unusually largerecords]
 -1 --> -2
--1--spark.memory.offHeap.size/total bytes-->2
--1--spark.executor.memory/total JVM format-->-4
+-1--spark.memory.offHeap.size bytes-->2
+-1--spark.executor.memory JVM string format-->-4
 -4 --1 - spark.executor.memoryOverhead -->1
 -4 -- spark.executor.memoryOverhead -->-3
 1 --spark.memory.fraction-->0
@@ -1030,11 +1030,11 @@ I don't think this one is started. The design doc is not out yet.
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MTIwNDI4MTYsLTE1MzU1NDI4MjAsLT
-E0OTY2NzAzNDcsLTE3NjUwMjAxMjUsODU4MzcxODksLTE1NjYx
-MzI2NzEsLTUwNTYzNDM3MywxMjgwNjg3MzYxLC0xMzIwNzAxMT
-EwLDYwMjcwNzg3NSw5ODE4MDI1MjQsMTIwMzA1NDgwMSwxMTAx
-OTk5MDE1LDE0NDEyNDU5LC0xODM0NTU3MjA1LDE2NjAwMjU2Ni
-wxMzg1NDk0ODkxLDI0MTY5NDU0MCw4ODY4NjQ5NzYsLTMyNjQw
-NTIyXX0=
+eyJoaXN0b3J5IjpbLTcyMjEyOTgwNSwtMTUzNTU0MjgyMCwtMT
+Q5NjY3MDM0NywtMTc2NTAyMDEyNSw4NTgzNzE4OSwtMTU2NjEz
+MjY3MSwtNTA1NjM0MzczLDEyODA2ODczNjEsLTEzMjA3MDExMT
+AsNjAyNzA3ODc1LDk4MTgwMjUyNCwxMjAzMDU0ODAxLDExMDE5
+OTkwMTUsMTQ0MTI0NTksLTE4MzQ1NTcyMDUsMTY2MDAyNTY2LD
+EzODU0OTQ4OTEsMjQxNjk0NTQwLDg4Njg2NDk3NiwtMzI2NDA1
+MjJdfQ==
 -->
