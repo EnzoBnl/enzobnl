@@ -24,7 +24,8 @@
 
 *DAG = Directed Acyclic Graph. They are used by spark to represent Jobs' stages or Stages' steps*
 
- ## APIs
+## APIs
+ 
  Although the term **A**pplication **P**rogramming **I**nterface is mostly used for the element exposing the services of a web server, it has a more general meaning. 
 
 For frameworks as extended as *Spark*, **it names specific ways of interacting with the library** available for the user.
@@ -1050,11 +1051,11 @@ I don't think this one is started. The design doc is not out yet.
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MzAxODUzNzcsLTE4Mjk3NjEyNzMsLT
-EzNTY3NjA0NTEsNzA5NDc5MjQ3LDE2MjQ5MTI5NDksMTU4NDI0
-ODc4MCwtMTUzNTU0MjgyMCwtMTQ5NjY3MDM0NywtMTc2NTAyMD
-EyNSw4NTgzNzE4OSwtMTU2NjEzMjY3MSwtNTA1NjM0MzczLDEy
-ODA2ODczNjEsLTEzMjA3MDExMTAsNjAyNzA3ODc1LDk4MTgwMj
-UyNCwxMjAzMDU0ODAxLDExMDE5OTkwMTUsMTQ0MTI0NTksLTE4
-MzQ1NTcyMDVdfQ==
+eyJoaXN0b3J5IjpbLTExMTg5NDg0NSwtMTgzMDE4NTM3NywtMT
+gyOTc2MTI3MywtMTM1Njc2MDQ1MSw3MDk0NzkyNDcsMTYyNDkx
+Mjk0OSwxNTg0MjQ4NzgwLC0xNTM1NTQyODIwLC0xNDk2NjcwMz
+Q3LC0xNzY1MDIwMTI1LDg1ODM3MTg5LC0xNTY2MTMyNjcxLC01
+MDU2MzQzNzMsMTI4MDY4NzM2MSwtMTMyMDcwMTExMCw2MDI3MD
+c4NzUsOTgxODAyNTI0LDEyMDMwNTQ4MDEsMTEwMTk5OTAxNSwx
+NDQxMjQ1OV19
 -->
