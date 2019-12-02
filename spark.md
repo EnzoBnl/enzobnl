@@ -895,10 +895,10 @@ http://hydronitrogen.com/apache-spark-shuffles-explained-in-depth.html
 https://0x0fff.com/spark-architecture-shuffle/
 
 
-Shuffle in short: 
-- local partitions map output are packed in execution memory region and spilled to local file system by batch when memory become saturated
-- outputs targetting the same partition are spilled to an unique file
-- when a file corresponding to a given partition id has been written completely on map side, the shuffle manager states that the chunk is ready to be fetched by reduce side tasks.
+Shuffle: 
+1. local partitions **map output are packed in execution memory** region and **spilled to local file system by batch** when memory become saturated
+2. outputs targetting the **same partition are spilled to an unique file**
+3. when a file corresponding to a given partition id has been written completely on map side, the shuffle manager states that the **chunk is ready to be fetched** by reduce side tasks.
 
 ### Actors involved in shuffle (FIXME)
 - `ShuffleManager` is trait that is instantiated on driver (register shuffles) and executors (ask to write or read data over connections with other executors). 
@@ -1002,11 +1002,11 @@ I don't think this one is started. The design doc is not out yet.
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NjYxMzI2NzEsLTUwNTYzNDM3MywxMj
-gwNjg3MzYxLC0xMzIwNzAxMTEwLDYwMjcwNzg3NSw5ODE4MDI1
-MjQsMTIwMzA1NDgwMSwxMTAxOTk5MDE1LDE0NDEyNDU5LC0xOD
-M0NTU3MjA1LDE2NjAwMjU2NiwxMzg1NDk0ODkxLDI0MTY5NDU0
-MCw4ODY4NjQ5NzYsLTMyNjQwNTIyLDE4MDEyODA4NzgsMTE5Mz
-U4OTk1MCwxOTExMTQ1NTY1LDgxMTU5ODY1MCw5NDA5OTUxNjNd
+eyJoaXN0b3J5IjpbOTg2MjI4NjYzLC0xNTY2MTMyNjcxLC01MD
+U2MzQzNzMsMTI4MDY4NzM2MSwtMTMyMDcwMTExMCw2MDI3MDc4
+NzUsOTgxODAyNTI0LDEyMDMwNTQ4MDEsMTEwMTk5OTAxNSwxND
+QxMjQ1OSwtMTgzNDU1NzIwNSwxNjYwMDI1NjYsMTM4NTQ5NDg5
+MSwyNDE2OTQ1NDAsODg2ODY0OTc2LC0zMjY0MDUyMiwxODAxMj
+gwODc4LDExOTM1ODk5NTAsMTkxMTE0NTU2NSw4MTE1OTg2NTBd
 fQ==
 -->
