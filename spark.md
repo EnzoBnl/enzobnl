@@ -622,7 +622,11 @@ peopleDF
   .save("/path/people.parquet")
 ```
 
-will write files 
+repartitions data with key (age, lastname) and will write files using a folder structure like:
+
+```
+/
+```
 
 ## Data structures
 
@@ -1041,7 +1045,7 @@ I don't think this one is started. The design doc is not out yet.
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY1NzA3NzgyNyw3MDk0NzkyNDcsMTYyND
+eyJoaXN0b3J5IjpbMTc0MDA2OTc0NCw3MDk0NzkyNDcsMTYyND
 kxMjk0OSwxNTg0MjQ4NzgwLC0xNTM1NTQyODIwLC0xNDk2Njcw
 MzQ3LC0xNzY1MDIwMTI1LDg1ODM3MTg5LC0xNTY2MTMyNjcxLC
 01MDU2MzQzNzMsMTI4MDY4NzM2MSwtMTMyMDcwMTExMCw2MDI3
