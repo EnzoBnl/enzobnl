@@ -696,7 +696,7 @@ for e in edges:
 ```
 
 - **Hash join**: Create a join_key -> row hashmap for the smallest table. Loop on the biggest table and search for matches in the hashmap.
-$O($\vert vertices \vert$ + $\vert edges \vert$)$, only equi joins, additional O($\vert vertices \vert$) space complexity
+$O(\vert vertices \vert$ + $\vert edges \vert)$, only equi joins, additional $O(\vert vertices \vert)$ space complexity
 
 ```python
 vertices_map = {v.join_key: v for v in vertices}  # O($\vert vertices \vert$)
@@ -1050,11 +1050,11 @@ I don't think this one is started. The design doc is not out yet.
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4Mjk3NjEyNzMsLTEzNTY3NjA0NTEsNz
-A5NDc5MjQ3LDE2MjQ5MTI5NDksMTU4NDI0ODc4MCwtMTUzNTU0
-MjgyMCwtMTQ5NjY3MDM0NywtMTc2NTAyMDEyNSw4NTgzNzE4OS
-wtMTU2NjEzMjY3MSwtNTA1NjM0MzczLDEyODA2ODczNjEsLTEz
-MjA3MDExMTAsNjAyNzA3ODc1LDk4MTgwMjUyNCwxMjAzMDU0OD
-AxLDExMDE5OTkwMTUsMTQ0MTI0NTksLTE4MzQ1NTcyMDUsMTY2
-MDAyNTY2XX0=
+eyJoaXN0b3J5IjpbNTM2OTMxOTk5LC0xODI5NzYxMjczLC0xMz
+U2NzYwNDUxLDcwOTQ3OTI0NywxNjI0OTEyOTQ5LDE1ODQyNDg3
+ODAsLTE1MzU1NDI4MjAsLTE0OTY2NzAzNDcsLTE3NjUwMjAxMj
+UsODU4MzcxODksLTE1NjYxMzI2NzEsLTUwNTYzNDM3MywxMjgw
+Njg3MzYxLC0xMzIwNzAxMTEwLDYwMjcwNzg3NSw5ODE4MDI1Mj
+QsMTIwMzA1NDgwMSwxMTAxOTk5MDE1LDE0NDEyNDU5LC0xODM0
+NTU3MjA1XX0=
 -->
