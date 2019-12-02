@@ -51,9 +51,6 @@ Useful sources:
 
 <div class="mermaid">
 
-
-`spark.executor.memoryOverhead`
-
 ```mermaid 
 graph TB
 
@@ -67,10 +64,10 @@ graph TB
 33[off-heap execution region]
 44[off-heap storage region]
 
--4[on-heap executor memory]
-0[on-heap execution & storage region]
-3[on-heap execution region]
-4[on-heap storage region]
+-4[on-heap executor E memory]
+0[on-heap execution & storage region of E]
+3[on-heap execution region of E]
+4[on-heap storage region of E]
 
 5[Highly unmanaged:<br/>-on-heap internal metadata<br/>-user data structures<br/>-and imprecise size estimation<br/>-in the case of unusually largerecords]
 -1 --> -2
@@ -83,6 +80,7 @@ graph TB
 0 --1 - spark.memory.storageFraction--> 3
 2 -- spark.memory.storageFraction--> 44
 2 --1 - spark.memory.storageFraction--> 33
+```
 </div>
 
 ### On-heap executor space
@@ -1030,7 +1028,7 @@ I don't think this one is started. The design doc is not out yet.
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYwNjcyNzk5MSwtMTUzNTU0MjgyMCwtMT
+eyJoaXN0b3J5IjpbMTgxMzgzMjc5NSwtMTUzNTU0MjgyMCwtMT
 Q5NjY3MDM0NywtMTc2NTAyMDEyNSw4NTgzNzE4OSwtMTU2NjEz
 MjY3MSwtNTA1NjM0MzczLDEyODA2ODczNjEsLTEzMjA3MDExMT
 AsNjAyNzA3ODc1LDk4MTgwMjUyNCwxMjAzMDU0ODAxLDExMDE5
