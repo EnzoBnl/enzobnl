@@ -914,15 +914,16 @@ SELECT src, count(*) as c FROM edges GROUP BY src ORDER BY c
 ```
 
 ## Exchange/Shuffle (SQL & Core)
-
 http://hydronitrogen.com/apache-spark-shuffles-explained-in-depth.html
 https://0x0fff.com/spark-architecture-shuffle/
+related issues: SPARK-2044 SPARK-3376 SPARK-4550
 
-
-Shuffle: 
+Shuffle execution: 
 1. local partitions **map output are packed in execution memory** region and **spilled to local file system by batch** when memory become saturated
 2. outputs targetting the **same partition are spilled to an unique file**
 3. when a file corresponding to a given partition id has been written completely on map side, the shuffle manager states that the **chunk is ready to be fetched** by reduce side tasks.
+
+
 
 ### Actors involved in shuffle (FIXME)
 - `ShuffleManager` is trait that is instantiated on driver (register shuffles) and executors (ask to write or read data over connections with other executors). 
@@ -1026,11 +1027,11 @@ I don't think this one is started. The design doc is not out yet.
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYyNDkxMjk0OSwxNTg0MjQ4NzgwLC0xNT
-M1NTQyODIwLC0xNDk2NjcwMzQ3LC0xNzY1MDIwMTI1LDg1ODM3
-MTg5LC0xNTY2MTMyNjcxLC01MDU2MzQzNzMsMTI4MDY4NzM2MS
-wtMTMyMDcwMTExMCw2MDI3MDc4NzUsOTgxODAyNTI0LDEyMDMw
-NTQ4MDEsMTEwMTk5OTAxNSwxNDQxMjQ1OSwtMTgzNDU1NzIwNS
-wxNjYwMDI1NjYsMTM4NTQ5NDg5MSwyNDE2OTQ1NDAsODg2ODY0
-OTc2XX0=
+eyJoaXN0b3J5IjpbNzA5NDc5MjQ3LDE2MjQ5MTI5NDksMTU4ND
+I0ODc4MCwtMTUzNTU0MjgyMCwtMTQ5NjY3MDM0NywtMTc2NTAy
+MDEyNSw4NTgzNzE4OSwtMTU2NjEzMjY3MSwtNTA1NjM0MzczLD
+EyODA2ODczNjEsLTEzMjA3MDExMTAsNjAyNzA3ODc1LDk4MTgw
+MjUyNCwxMjAzMDU0ODAxLDExMDE5OTkwMTUsMTQ0MTI0NTksLT
+E4MzQ1NTcyMDUsMTY2MDAyNTY2LDEzODU0OTQ4OTEsMjQxNjk0
+NTQwXX0=
 -->
