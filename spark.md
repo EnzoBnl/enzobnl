@@ -631,7 +631,7 @@ repartitions data with key (age, lastname) and will write files using a folder s
 /50/giselle/
 ```
 
-Note: each leaf folder may contain many partition output files and metadata.
+Note: each leaf folder may contain many partition output and error codes files  (.crc).
 
 ## Data structures
 
@@ -1050,11 +1050,11 @@ I don't think this one is started. The design doc is not out yet.
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNTY3NjA0NTEsNzA5NDc5MjQ3LDE2Mj
-Q5MTI5NDksMTU4NDI0ODc4MCwtMTUzNTU0MjgyMCwtMTQ5NjY3
-MDM0NywtMTc2NTAyMDEyNSw4NTgzNzE4OSwtMTU2NjEzMjY3MS
-wtNTA1NjM0MzczLDEyODA2ODczNjEsLTEzMjA3MDExMTAsNjAy
-NzA3ODc1LDk4MTgwMjUyNCwxMjAzMDU0ODAxLDExMDE5OTkwMT
-UsMTQ0MTI0NTksLTE4MzQ1NTcyMDUsMTY2MDAyNTY2LDEzODU0
-OTQ4OTFdfQ==
+eyJoaXN0b3J5IjpbLTE4Mjk3NjEyNzMsLTEzNTY3NjA0NTEsNz
+A5NDc5MjQ3LDE2MjQ5MTI5NDksMTU4NDI0ODc4MCwtMTUzNTU0
+MjgyMCwtMTQ5NjY3MDM0NywtMTc2NTAyMDEyNSw4NTgzNzE4OS
+wtMTU2NjEzMjY3MSwtNTA1NjM0MzczLDEyODA2ODczNjEsLTEz
+MjA3MDExMTAsNjAyNzA3ODc1LDk4MTgwMjUyNCwxMjAzMDU0OD
+AxLDExMDE5OTkwMTUsMTQ0MTI0NTksLTE4MzQ1NTcyMDUsMTY2
+MDAyNTY2XX0=
 -->
