@@ -169,7 +169,7 @@ df.cache()
 df2 = df
 ```
 
-- cached blocks of data are not replicated by deneither in memory nor on local file system)can be replicated twice instead of not repli
+- cached blocks of data are not replicated by default, neither in memory nor on local file system. You can activate a factor 2 replication by appending a `_2`
 
 ## is a DataFrame sorted ?
 One can use `df.queryExecution.sparkPlan.outputOrdering` that returns a sequence of `org.apache.spark.sql.catalyst.expressions.SortOrder`s to retrieve this information:
@@ -1004,11 +1004,11 @@ I don't think this one is started. The design doc is not out yet.
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTExNDQ4OSwtMTU2NjEzMjY3MSwtNTA1Nj
-M0MzczLDEyODA2ODczNjEsLTEzMjA3MDExMTAsNjAyNzA3ODc1
-LDk4MTgwMjUyNCwxMjAzMDU0ODAxLDExMDE5OTkwMTUsMTQ0MT
-I0NTksLTE4MzQ1NTcyMDUsMTY2MDAyNTY2LDEzODU0OTQ4OTEs
-MjQxNjk0NTQwLDg4Njg2NDk3NiwtMzI2NDA1MjIsMTgwMTI4MD
-g3OCwxMTkzNTg5OTUwLDE5MTExNDU1NjUsODExNTk4NjUwXX0=
+eyJoaXN0b3J5IjpbODU4MzcxODksLTE1NjYxMzI2NzEsLTUwNT
+YzNDM3MywxMjgwNjg3MzYxLC0xMzIwNzAxMTEwLDYwMjcwNzg3
+NSw5ODE4MDI1MjQsMTIwMzA1NDgwMSwxMTAxOTk5MDE1LDE0ND
+EyNDU5LC0xODM0NTU3MjA1LDE2NjAwMjU2NiwxMzg1NDk0ODkx
+LDI0MTY5NDU0MCw4ODY4NjQ5NzYsLTMyNjQwNTIyLDE4MDEyOD
+A4NzgsMTE5MzU4OTk1MCwxOTExMTQ1NTY1LDgxMTU5ODY1MF19
 
 -->
