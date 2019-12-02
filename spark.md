@@ -47,27 +47,27 @@ Useful sources:
 -  blog article [Apache Spark and off-heap memory](https://www.waitingforcode.com/apache-spark/apache-spark-off-heap-memory/read) by Bartosz Konieczny.
 - blog article [# Deep Understanding of Spark Memory Management Model](https://www.tutorialdocs.com/article/spark-memory-management.html) by  Alex
 
-### Repartition of a machine's memory allocation to a Spark executor *E*
+### Allocation of the memory of a worker *W* to a given executor *E*
 
 <div class="mermaid">
 
 ```mermaid 
 graph TB
 
--1[Worker node's memory]
+-1[Worker W's memory]
 
 -3[off-heap overheads space for E:<br/>-VM overheads<br/>-interned strings<br/>-other native overheads]
 
 -2[For other executors or unused]
 
 2[off-heap space shared among<br/>worker's executors]
-33[off-heap execution region]
+33[off-heap execution region for W's executors]
 44[off-heap storage region]
 
 -4[on-heap memory for E]
-0[on-heap execution & storage region of E]
-3[on-heap execution region of E]
-4[on-heap storage region of E]
+0[on-heap execution & storage region for E]
+3[on-heap execution region for E]
+4[on-heap storage region for E]
 
 5[Other highly unmanaged on heap space for E:<br/>-on-heap internal metadata<br/>-user data structures<br/>-and imprecise size estimation<br/>-in the case of unusually largerecords]
 -1 --> -2
@@ -1028,11 +1028,11 @@ I don't think this one is started. The design doc is not out yet.
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTY0NTA3MzYwLC0xNTM1NTQyODIwLC0xND
-k2NjcwMzQ3LC0xNzY1MDIwMTI1LDg1ODM3MTg5LC0xNTY2MTMy
-NjcxLC01MDU2MzQzNzMsMTI4MDY4NzM2MSwtMTMyMDcwMTExMC
-w2MDI3MDc4NzUsOTgxODAyNTI0LDEyMDMwNTQ4MDEsMTEwMTk5
-OTAxNSwxNDQxMjQ1OSwtMTgzNDU1NzIwNSwxNjYwMDI1NjYsMT
-M4NTQ5NDg5MSwyNDE2OTQ1NDAsODg2ODY0OTc2LC0zMjY0MDUy
-Ml19
+eyJoaXN0b3J5IjpbLTE5NzQ4NzA1ODAsLTE1MzU1NDI4MjAsLT
+E0OTY2NzAzNDcsLTE3NjUwMjAxMjUsODU4MzcxODksLTE1NjYx
+MzI2NzEsLTUwNTYzNDM3MywxMjgwNjg3MzYxLC0xMzIwNzAxMT
+EwLDYwMjcwNzg3NSw5ODE4MDI1MjQsMTIwMzA1NDgwMSwxMTAx
+OTk5MDE1LDE0NDEyNDU5LC0xODM0NTU3MjA1LDE2NjAwMjU2Ni
+wxMzg1NDk0ODkxLDI0MTY5NDU0MCw4ODY4NjQ5NzYsLTMyNjQw
+NTIyXX0=
 -->
