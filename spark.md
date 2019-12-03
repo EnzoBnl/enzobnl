@@ -36,7 +36,7 @@ Even if every *spark job* runs *RDD-based* pipelines, *Spark* offers different w
 - **Core API** (Spark Core): user manipulates directly the RDDs, it is the low level API
 - **Dataset API** (Spark SQL): User manipulates high level typed objects
 - **DataFrame API** (Spark SQL): User manipulates high level untyped objects
-- **SQL API** (Spark SQL): User: User writes SQL query strings
+- **SQL API** (Spark SQL): User writes SQL query strings
 
 (3 last APIs leverage a descriptive programming model and the structuration of the manipulated data to produce optimized Spark jobs)
 
@@ -1062,11 +1062,11 @@ I don't think this one is started. The design doc is not out yet.
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzE3NDU3MjE3LDEwODUxMjgwOTIsLTEwNj
-gxNDI1MzEsLTExMTg5NDg0NSwtMTgzMDE4NTM3NywtMTgyOTc2
-MTI3MywtMTM1Njc2MDQ1MSw3MDk0NzkyNDcsMTYyNDkxMjk0OS
-wxNTg0MjQ4NzgwLC0xNTM1NTQyODIwLC0xNDk2NjcwMzQ3LC0x
-NzY1MDIwMTI1LDg1ODM3MTg5LC0xNTY2MTMyNjcxLC01MDU2Mz
-QzNzMsMTI4MDY4NzM2MSwtMTMyMDcwMTExMCw2MDI3MDc4NzUs
-OTgxODAyNTI0XX0=
+eyJoaXN0b3J5IjpbMjEyMzk2MTY1MCw3MTc0NTcyMTcsMTA4NT
+EyODA5MiwtMTA2ODE0MjUzMSwtMTExODk0ODQ1LC0xODMwMTg1
+Mzc3LC0xODI5NzYxMjczLC0xMzU2NzYwNDUxLDcwOTQ3OTI0Ny
+wxNjI0OTEyOTQ5LDE1ODQyNDg3ODAsLTE1MzU1NDI4MjAsLTE0
+OTY2NzAzNDcsLTE3NjUwMjAxMjUsODU4MzcxODksLTE1NjYxMz
+I2NzEsLTUwNTYzNDM3MywxMjgwNjg3MzYxLC0xMzIwNzAxMTEw
+LDYwMjcwNzg3NV19
 -->
