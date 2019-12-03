@@ -632,11 +632,11 @@ repartitions data with key (age, lastname) and will write files using a folder s
 /50/giselle/
 ```
 
-****
+#### Number of splits
 - Keeping the last `adult` DataFrame as an example and given $n$ its number of partitions
 - given `gcd(a, b)` a function taking two integers and returning their **G**reatest **C**ommon **D**ivisor.
 
-Then each leaf folder of the structure will contain $x$ verifying:
+--> Then each leaf folder of the folder structure (e.g. `/18/jean/`) will contain `x` file splits, 
 `x == math.ceil()`
 
 ## Data structures
@@ -1056,11 +1056,11 @@ I don't think this one is started. The design doc is not out yet.
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU5Nzg2NjIxLC0xMDY4MTQyNTMxLC0xMT
-E4OTQ4NDUsLTE4MzAxODUzNzcsLTE4Mjk3NjEyNzMsLTEzNTY3
-NjA0NTEsNzA5NDc5MjQ3LDE2MjQ5MTI5NDksMTU4NDI0ODc4MC
-wtMTUzNTU0MjgyMCwtMTQ5NjY3MDM0NywtMTc2NTAyMDEyNSw4
-NTgzNzE4OSwtMTU2NjEzMjY3MSwtNTA1NjM0MzczLDEyODA2OD
-czNjEsLTEzMjA3MDExMTAsNjAyNzA3ODc1LDk4MTgwMjUyNCwx
-MjAzMDU0ODAxXX0=
+eyJoaXN0b3J5IjpbLTE4MTQ0MjAwMTcsLTEwNjgxNDI1MzEsLT
+ExMTg5NDg0NSwtMTgzMDE4NTM3NywtMTgyOTc2MTI3MywtMTM1
+Njc2MDQ1MSw3MDk0NzkyNDcsMTYyNDkxMjk0OSwxNTg0MjQ4Nz
+gwLC0xNTM1NTQyODIwLC0xNDk2NjcwMzQ3LC0xNzY1MDIwMTI1
+LDg1ODM3MTg5LC0xNTY2MTMyNjcxLC01MDU2MzQzNzMsMTI4MD
+Y4NzM2MSwtMTMyMDcwMTExMCw2MDI3MDc4NzUsOTgxODAyNTI0
+LDEyMDMwNTQ4MDFdfQ==
 -->
