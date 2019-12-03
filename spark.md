@@ -633,11 +633,12 @@ repartitions data with key (age, lastname) and will write files using a folder s
 ```
 
 #### Number of splits
-- Keeping the last `adult` DataFrame as an example and given $n$ its number of partitions
+- Keeping the last `adult` DataFrame as an example and given `n` its number of partitions
 - given `gcd(a, b)` a function taking two integers and returning their **G**reatest **C**ommon **D**ivisor.
+- 
 
---> Then each leaf folder of the folder structure (e.g. `/18/jean/`) will contain `x` file splits, 
-`x == math.ceil()`
+--> Then each leaf folder of the folder structure (e.g. `/18/jean/`) will contain `x` file splits, with:
+`x == if (gcd(x, n) != 1) gcd(x, n) else n`
 
 ## Data structures
 
@@ -1056,7 +1057,7 @@ I don't think this one is started. The design doc is not out yet.
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MTQ0MjAwMTcsLTEwNjgxNDI1MzEsLT
+eyJoaXN0b3J5IjpbLTE4NDg4MDY3NzQsLTEwNjgxNDI1MzEsLT
 ExMTg5NDg0NSwtMTgzMDE4NTM3NywtMTgyOTc2MTI3MywtMTM1
 Njc2MDQ1MSw3MDk0NzkyNDcsMTYyNDkxMjk0OSwxNTg0MjQ4Nz
 gwLC0xNTM1NTQyODIwLC0xNDk2NjcwMzQ3LC0xNzY1MDIwMTI1
