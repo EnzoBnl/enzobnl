@@ -639,8 +639,10 @@ repartitions data with key (age, lastname) and will write files using a folder s
 
 --> Then each leaf folder of the folder structure (e.g. `/18/jean/`) will contain `x` file splits, with:
 ```scala
-val x = if (gcd(x, n) != 1) gcd(x, n) else n
+val x = if (gcd(n_conf, n) != 1) gcd(n_conf, n) else n
 ```
+
+*Note:* if `n` is primal, `x` will always be `n` no matter the value of `n_conf`
 
 ## Data structures
 
@@ -1059,11 +1061,11 @@ I don't think this one is started. The design doc is not out yet.
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI5MjE4OTc0LC0xMDY4MTQyNTMxLC0xMT
-E4OTQ4NDUsLTE4MzAxODUzNzcsLTE4Mjk3NjEyNzMsLTEzNTY3
-NjA0NTEsNzA5NDc5MjQ3LDE2MjQ5MTI5NDksMTU4NDI0ODc4MC
-wtMTUzNTU0MjgyMCwtMTQ5NjY3MDM0NywtMTc2NTAyMDEyNSw4
-NTgzNzE4OSwtMTU2NjEzMjY3MSwtNTA1NjM0MzczLDEyODA2OD
-czNjEsLTEzMjA3MDExMTAsNjAyNzA3ODc1LDk4MTgwMjUyNCwx
-MjAzMDU0ODAxXX0=
+eyJoaXN0b3J5IjpbMTA4NTEyODA5MiwtMTA2ODE0MjUzMSwtMT
+ExODk0ODQ1LC0xODMwMTg1Mzc3LC0xODI5NzYxMjczLC0xMzU2
+NzYwNDUxLDcwOTQ3OTI0NywxNjI0OTEyOTQ5LDE1ODQyNDg3OD
+AsLTE1MzU1NDI4MjAsLTE0OTY2NzAzNDcsLTE3NjUwMjAxMjUs
+ODU4MzcxODksLTE1NjYxMzI2NzEsLTUwNTYzNDM3MywxMjgwNj
+g3MzYxLC0xMzIwNzAxMTEwLDYwMjcwNzg3NSw5ODE4MDI1MjQs
+MTIwMzA1NDgwMV19
 -->
