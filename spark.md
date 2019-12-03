@@ -632,7 +632,10 @@ repartitions data with key (age, lastname) and will write files using a folder s
 /50/giselle/
 ```
 
-Keeping the last `adult` DataFrame as an example and given $n$ its number of partitions, then each leaf folder of the structure will contain $x$ verifying:
+- Keeping the last `adult` DataFrame as an example and given $n$ its number of partitions
+- given `gcm` 
+
+Each leaf folder of the structure will contain $x$ verifying:
 `x == math.ceil()`
 
 ## Data structures
@@ -1052,11 +1055,11 @@ I don't think this one is started. The design doc is not out yet.
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNjgxNDI1MzEsLTExMTg5NDg0NSwtMT
-gzMDE4NTM3NywtMTgyOTc2MTI3MywtMTM1Njc2MDQ1MSw3MDk0
-NzkyNDcsMTYyNDkxMjk0OSwxNTg0MjQ4NzgwLC0xNTM1NTQyOD
-IwLC0xNDk2NjcwMzQ3LC0xNzY1MDIwMTI1LDg1ODM3MTg5LC0x
-NTY2MTMyNjcxLC01MDU2MzQzNzMsMTI4MDY4NzM2MSwtMTMyMD
-cwMTExMCw2MDI3MDc4NzUsOTgxODAyNTI0LDEyMDMwNTQ4MDEs
-MTEwMTk5OTAxNV19
+eyJoaXN0b3J5IjpbLTE1MjE2ODMwMjYsLTEwNjgxNDI1MzEsLT
+ExMTg5NDg0NSwtMTgzMDE4NTM3NywtMTgyOTc2MTI3MywtMTM1
+Njc2MDQ1MSw3MDk0NzkyNDcsMTYyNDkxMjk0OSwxNTg0MjQ4Nz
+gwLC0xNTM1NTQyODIwLC0xNDk2NjcwMzQ3LC0xNzY1MDIwMTI1
+LDg1ODM3MTg5LC0xNTY2MTMyNjcxLC01MDU2MzQzNzMsMTI4MD
+Y4NzM2MSwtMTMyMDcwMTExMCw2MDI3MDc4NzUsOTgxODAyNTI0
+LDEyMDMwNTQ4MDFdfQ==
 -->
