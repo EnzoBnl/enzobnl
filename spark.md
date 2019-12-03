@@ -632,18 +632,19 @@ repartitions data with key (age, lastname) and will write files using a folder s
 /50/giselle/
 ```
 
-#### Number of splits
+TODO: Number of splits
+<!-- #### Number of splits
 - keeping the last `adult` DataFrame as an example and given `n` its number of partitions
 - given `gcd(a, b)` a function taking two integers and returning their **G**reatest **C**ommon **D**ivisor.
 - noting  `n_conf` the value set in `"spark.sql.shuffle.partitions"` 
 
---> Then each leaf folder of the folder structure (e.g. `/18/jean/`) will contain `x` file splits, with:
+-> Then each leaf folder of the folder structure (e.g. `/18/jean/`) will contain `x` file splits, with:
 ```scala
 val x = if (gcd(n_conf, n) != 1) gcd(n_conf, n) else n
 ```
 
 *Note:* if `n` is primal, `x` will always be `n` no matter the value of `n_conf`
-
+-->
 ## Data structures
 
 SQL & RDD:
@@ -1061,11 +1062,11 @@ I don't think this one is started. The design doc is not out yet.
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA4NTEyODA5MiwtMTA2ODE0MjUzMSwtMT
-ExODk0ODQ1LC0xODMwMTg1Mzc3LC0xODI5NzYxMjczLC0xMzU2
-NzYwNDUxLDcwOTQ3OTI0NywxNjI0OTEyOTQ5LDE1ODQyNDg3OD
-AsLTE1MzU1NDI4MjAsLTE0OTY2NzAzNDcsLTE3NjUwMjAxMjUs
-ODU4MzcxODksLTE1NjYxMzI2NzEsLTUwNTYzNDM3MywxMjgwNj
-g3MzYxLC0xMzIwNzAxMTEwLDYwMjcwNzg3NSw5ODE4MDI1MjQs
-MTIwMzA1NDgwMV19
+eyJoaXN0b3J5IjpbNzE3NDU3MjE3LDEwODUxMjgwOTIsLTEwNj
+gxNDI1MzEsLTExMTg5NDg0NSwtMTgzMDE4NTM3NywtMTgyOTc2
+MTI3MywtMTM1Njc2MDQ1MSw3MDk0NzkyNDcsMTYyNDkxMjk0OS
+wxNTg0MjQ4NzgwLC0xNTM1NTQyODIwLC0xNDk2NjcwMzQ3LC0x
+NzY1MDIwMTI1LDg1ODM3MTg5LC0xNTY2MTMyNjcxLC01MDU2Mz
+QzNzMsMTI4MDY4NzM2MSwtMTMyMDcwMTExMCw2MDI3MDc4NzUs
+OTgxODAyNTI0XX0=
 -->
