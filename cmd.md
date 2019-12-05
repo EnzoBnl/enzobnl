@@ -140,7 +140,7 @@ mvn test -Dtest=com....   [-f pom.xml]
 mvn test -Dsuites=com....   [-f pom.xml]
 mvn package -DskipTests=true
 
-sudo mvn install:install-file -Dfile=/path/bla.jar    -DgroupId=com.bla    -DartifactId=bla    -Dversion=X.x    -Dpackaging=jar   -DgeneratePom=true -DlocalRepositoryPath=/root/.m2/repository
+sudo mvn install:install-file -U -Dfile=/path/bla.jar    -DgroupId=com.bla    -DartifactId=bla    -Dversion=X.x    -Dpackaging=jar   -DgeneratePom=true -DlocalRepositoryPath=/root/.m2/repository
 ```
 ### pypi //pip
 ```
@@ -225,7 +225,7 @@ c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex 
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjQxMzYwNDc1LC0xMDc0NTAxNTQwLC04Nj
-cxNjg3NTEsLTg3NDk3ODUyOSwtMTM1ODMzOTE1MCw1OTcwNjUw
-NzIsLTEwMzA3NzAzOTddfQ==
+eyJoaXN0b3J5IjpbLTE5NDAzMDAyOTcsMjQxMzYwNDc1LC0xMD
+c0NTAxNTQwLC04NjcxNjg3NTEsLTg3NDk3ODUyOSwtMTM1ODMz
+OTE1MCw1OTcwNjUwNzIsLTEwMzA3NzAzOTddfQ==
 -->
