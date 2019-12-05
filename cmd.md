@@ -140,8 +140,7 @@ mvn test -Dtest=com....   [-f pom.xml]
 mvn test -Dsuites=com....   [-f pom.xml]
 mvn package -DskipTests=true
 
-sudo mvn install:install-file -Dfile=/path/bla.jar    -DgroupId=com.oncrawl.analysis    -DartifactId=java-crawl-analysis    -Dversion=1.0    -Dpackaging=jar    -DgeneratePom=true -DlocalRepositoryPath=/root/.m2/repository
-
+sudo mvn install:install-file -Dfile=/path/bla.jar    -DgroupId=com.bla    -DartifactId=bla    -Dversion=X.x    -Dpackaging=jar   -DgeneratePom=true -DlocalRepositoryPath=/root/.m2/repository
 ```
 ### pypi //pip
 ```
@@ -226,7 +225,7 @@ c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex 
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgwNTExMzczOSwtMTA3NDUwMTU0MCwtOD
-Y3MTY4NzUxLC04NzQ5Nzg1MjksLTEzNTgzMzkxNTAsNTk3MDY1
-MDcyLC0xMDMwNzcwMzk3XX0=
+eyJoaXN0b3J5IjpbMjQxMzYwNDc1LC0xMDc0NTAxNTQwLC04Nj
+cxNjg3NTEsLTg3NDk3ODUyOSwtMTM1ODMzOTE1MCw1OTcwNjUw
+NzIsLTEwMzA3NzAzOTddfQ==
 -->
