@@ -138,9 +138,9 @@ javac -o ...
 //one java/scala test:
 mvn test -Dtest=com....   [-f pom.xml]
 mvn test -Dsuites=com....   [-f pom.xml]
-mvn package -DskipTests
+mvn package -DskipTests=true
 
-sudo mvn install:install-file    -Dfile=/home/enzo/Prog/lib/jar/java-crawl-analysis.jar    -DgroupId=com.oncrawl.analysis    -DartifactId=java-crawl-analysis    -Dversion=1.0    -Dpackaging=jar    -DgeneratePom=true -DlocalRepositoryPath=/root/.m2/repository
+sudo mvn install:install-file -Dfile=/path/bla.jar    -DgroupId=com.oncrawl.analysis    -DartifactId=java-crawl-analysis    -Dversion=1.0    -Dpackaging=jar    -DgeneratePom=true -DlocalRepositoryPath=/root/.m2/repository
 
 ```
 ### pypi //pip
@@ -226,7 +226,7 @@ c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex 
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNzQ1MDE1NDAsLTg2NzE2ODc1MSwtOD
-c0OTc4NTI5LC0xMzU4MzM5MTUwLDU5NzA2NTA3MiwtMTAzMDc3
-MDM5N119
+eyJoaXN0b3J5IjpbMTgwNTExMzczOSwtMTA3NDUwMTU0MCwtOD
+Y3MTY4NzUxLC04NzQ5Nzg1MjksLTEzNTgzMzkxNTAsNTk3MDY1
+MDcyLC0xMDMwNzcwMzk3XX0=
 -->
