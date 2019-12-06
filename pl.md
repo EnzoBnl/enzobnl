@@ -6,6 +6,9 @@
 <script>document.body.style.background = "#f2f2f2";</script>
 <!--NOTE HEAD END-->
 
+# General
+## Idiomatic coding
+A code snippet is said *idiomatic* if it is written the way the language is intended to be used. Idiomatic 
 # Java
 ## Java 8: Interfaces
 We will take the following interface as an example for this section: (java8)
@@ -365,7 +368,7 @@ from overrides import overrides  # decorator '@overrides'
 from abc import ABC, abstractmethod  #  'class C(ABC)' is abstract and decorator '@abstractmethod' usable.
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk4NTEzNTMxLC0xNTMyNjk3OTY5LC0xMT
-E2NTQ4MDA5LC01NTI1MjYxODgsLTE1OTI5ODM0NjMsLTE4MDIx
-NjgyXX0=
+eyJoaXN0b3J5IjpbMTg4NjE0OTE1NywxOTg1MTM1MzEsLTE1Mz
+I2OTc5NjksLTExMTY1NDgwMDksLTU1MjUyNjE4OCwtMTU5Mjk4
+MzQ2MywtMTgwMjE2ODJdfQ==
 -->
