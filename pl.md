@@ -8,9 +8,11 @@
 
 # General
 ## Idiomatic coding
-A code snippet is said *idiomatic* if it uses its programming language the way the language is intended to be used. Programming using only idioms ensures you a certain level of :
+A code snippet is said *idiomatic* if it uses its programming language the way the language is intended to be used.
+
+Programming using only idioms ensures you a certain level of :
 - **performance**: all the benchmarks are by default based on idiomatic ways to perform tasks using the language.
-- **readability**: code appearance will be familiar to the rest of the community, as the set of idioms represent a standard.
+- **readability**: your code will be more easily intelligible by the rest of the community because the set of idioms represents a standard.
 
 # Java
 ## Java 8: Interfaces
@@ -371,7 +373,7 @@ from overrides import overrides  # decorator '@overrides'
 from abc import ABC, abstractmethod  #  'class C(ABC)' is abstract and decorator '@abstractmethod' usable.
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYzNzAzMjExOSwxOTg1MTM1MzEsLTE1Mz
+eyJoaXN0b3J5IjpbLTgyNjQ3NTI3NCwxOTg1MTM1MzEsLTE1Mz
 I2OTc5NjksLTExMTY1NDgwMDksLTU1MjUyNjE4OCwtMTU5Mjk4
 MzQ2MywtMTgwMjE2ODJdfQ==
 -->
