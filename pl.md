@@ -8,7 +8,7 @@
 
 # General
 ## Idiomatic coding
-A code snippet is said *idiomatic* if it uses its programming language the way the language is intended to be used.
+A code snippet is said *idiomatic* if it uses its programming language **the way the language is intended to be used**.
 
 Programming using only idioms ensures you a certain level of :
 - **performance**: all the benchmarks are by default based on idiomatic ways to perform tasks using the language.
@@ -373,7 +373,7 @@ from overrides import overrides  # decorator '@overrides'
 from abc import ABC, abstractmethod  #  'class C(ABC)' is abstract and decorator '@abstractmethod' usable.
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgyNjQ3NTI3NCwxOTg1MTM1MzEsLTE1Mz
-I2OTc5NjksLTExMTY1NDgwMDksLTU1MjUyNjE4OCwtMTU5Mjk4
-MzQ2MywtMTgwMjE2ODJdfQ==
+eyJoaXN0b3J5IjpbLTkyMzAwMDAxMCwtODI2NDc1Mjc0LDE5OD
+UxMzUzMSwtMTUzMjY5Nzk2OSwtMTExNjU0ODAwOSwtNTUyNTI2
+MTg4LC0xNTkyOTgzNDYzLC0xODAyMTY4Ml19
 -->
