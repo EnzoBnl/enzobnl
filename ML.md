@@ -135,6 +135,9 @@ scm.Plot(title="Bias-variance tradeoff", borders=[0.3,2, -1,5])\
      marker="-", label="d(Error)")
 ```
 
+### Variance & VC capacity
+
+
 ## Evaluation, Model selection
 http://scott.fortmann-roe.com/docs/MeasuringError.html
 ### R²
@@ -215,6 +218,7 @@ The split train-validation inside outer train set must follow the same logic.
 ### MARS
 ## Support Vector Machine
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMTQxMjQxNjUsLTE4OTYzNjIzMTcsLT
-EwNTgxMjg1MCwtMTQ1NjE1MDQ3NSwxNTYwNDA3ODk5XX0=
+eyJoaXN0b3J5IjpbMTYyMjczNDk2MiwtMjExNDEyNDE2NSwtMT
+g5NjM2MjMxNywtMTA1ODEyODUwLC0xNDU2MTUwNDc1LDE1NjA0
+MDc4OTldfQ==
 -->
