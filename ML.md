@@ -135,7 +135,7 @@ scm.Plot(title="Bias-variance tradeoff", borders=[0.3,2, -1,5])\
      marker="-", label="d(Error)")
 ```
 
-### VC Capacity
+### Vapnik–Chervonenkis Capacity
 
 
 ## Evaluation, Model selection
@@ -218,7 +218,7 @@ The split train-validation inside outer train set must follow the same logic.
 ### MARS
 ## Support Vector Machine
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkyNzEyMzY4NywxNjIyNzM0OTYyLC0yMT
+eyJoaXN0b3J5IjpbMTYwMjc1MjMxMSwxNjIyNzM0OTYyLC0yMT
 E0MTI0MTY1LC0xODk2MzYyMzE3LC0xMDU4MTI4NTAsLTE0NTYx
 NTA0NzUsMTU2MDQwNzg5OV19
 -->
