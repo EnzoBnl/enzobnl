@@ -157,6 +157,9 @@ twine upload <package_name>-<version>.tar.gz
 //use:
 pip install <package_name>
 pip install <package_name> --upgrade
+
+// Deep Learning
+pip install tensorflow-gpu
 ```
 ### Eclipse :
 ```
@@ -225,7 +228,8 @@ c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex 
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NDAzMDAyOTcsMjQxMzYwNDc1LC0xMD
-c0NTAxNTQwLC04NjcxNjg3NTEsLTg3NDk3ODUyOSwtMTM1ODMz
-OTE1MCw1OTcwNjUwNzIsLTEwMzA3NzAzOTddfQ==
+eyJoaXN0b3J5IjpbLTc5Njc1NDMwOSwtMTk0MDMwMDI5NywyND
+EzNjA0NzUsLTEwNzQ1MDE1NDAsLTg2NzE2ODc1MSwtODc0OTc4
+NTI5LC0xMzU4MzM5MTUwLDU5NzA2NTA3MiwtMTAzMDc3MDM5N1
+19
 -->
