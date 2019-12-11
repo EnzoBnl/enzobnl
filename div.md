@@ -54,10 +54,10 @@ From http://ommil.com/scalax14/#/7/7
 
 ## MultiThreading
 ### Main memory (RAM) simultaneous access
-[check this great SO response](https://softwareengineering.stackexchange.com/a/278774/341648)
-
 - It is physically impossible for multiple threads to get access the memory (same memory address or not, read or write: it does not matter) at the same time because the *address bus* is a single entry point and thread need to compete to get the claimed access (the *data bus* in the other direction is also a single point). 
-- This bottleneck can be partially bypassed thanks to hardware architectures features coherance bus, CPUs caches, MIMD/SIMD access ...) and make things look like thread get pure parallel access in certain executions, but it is not truly the case.
+- This bottleneck can be partially bypassed thanks to hardware and architectures features (coherance bus, CPUs caches, MIMD/SIMD access ...) and things may look like threads get pure parallel accesses in certain executions, but it is not truly the case.
+
+*more here:* [check this great SO response](https://softwareengineering.stackexchange.com/a/278774/341648)
 
 ### Synchronized block
 ```java
@@ -249,6 +249,6 @@ The difference is in which libraries are used. In order to use OS stuff (I/O for
 - *There's no difference in the binary code, opcodes are the same. The difference is in the syntax of the mnemonic form, i.e. mov %eax,%ebx (AT&T) and mov ebx,eax (Intel) have the same binary*
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MjgzMDkzODMsLTIwMzc5MDk4NzksLT
-E5ODE2MjI3NzMsMjcxNjE3ODI2XX0=
+eyJoaXN0b3J5IjpbMTYxMzEzNjcxMSwtMjAzNzkwOTg3OSwtMT
+k4MTYyMjc3MywyNzE2MTc4MjZdfQ==
 -->
