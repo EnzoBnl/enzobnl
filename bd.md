@@ -75,8 +75,6 @@ Execution steps of a MapReduce job containing 1 Mapper and 1 Reducer (steps **in
 |Shard's Replica|Partition's Replica|
 
 ## Google Cloud Platform's tools
-- install gcloud SDK
-`curl https://dl.google.com/dl/cloudsdk/release/install_google_cloud_sdk.bash | bash`
 
 ### BigQuery vs BigTable
 - *BigQuery* excels for OLAP (OnLine Analytical Processing): scalable and efficient analytic querying on unchanging data (or just appending data).
@@ -114,11 +112,11 @@ Further readings:
 
 [ACID properties](https://en.wikipedia.org/wiki/ACID)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE5MTY3Mjg4NSwtMTI1NzAwNTMwLC0xOT
-cwNzM1NDA0LC0xMjc0OTY2MzQsLTE0Mzc2MTIzOTcsLTEwNjY2
-ODAwODgsMjA5MzIzNTU4OCwxODExMzExMTk2LC01Mzk4MzY1Mz
-gsLTE4NTk1NDIxNjMsMTc0MzE2OTAwNCwtNzM5ODUyOTM1LDIw
-MTkzMDQ4OTcsLTE4NzE0NTY4NzksMTc1MjQ4NjA0NywtNjE0OT
-Q2MjUsMTAyMjU4MTYwNCwxODM0NTAwNzEzLDE0MTY3NDAyMTEs
-MTExOTI4NjcwNl19
+eyJoaXN0b3J5IjpbMTkwNDY3NjgwOCwxMTkxNjcyODg1LC0xMj
+U3MDA1MzAsLTE5NzA3MzU0MDQsLTEyNzQ5NjYzNCwtMTQzNzYx
+MjM5NywtMTA2NjY4MDA4OCwyMDkzMjM1NTg4LDE4MTEzMTExOT
+YsLTUzOTgzNjUzOCwtMTg1OTU0MjE2MywxNzQzMTY5MDA0LC03
+Mzk4NTI5MzUsMjAxOTMwNDg5NywtMTg3MTQ1Njg3OSwxNzUyND
+g2MDQ3LC02MTQ5NDYyNSwxMDIyNTgxNjA0LDE4MzQ1MDA3MTMs
+MTQxNjc0MDIxMV19
 -->
