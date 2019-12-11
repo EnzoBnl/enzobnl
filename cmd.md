@@ -63,9 +63,9 @@ curl https://dl.google.com/dl/cloudsdk/release/install_google_cloud_sdk.bash | b
 # submit spark job
 gcloud dataproc jobs submit spark --cluster=dataproc-xxxxxxx-dev --region=global --class com.xxxxxxx.analysis.testparquetjoin.Main --jars gs://xxxxxxx-dataproc/testparquetjoin/testparquetjoin-0.1-jar-with-dependencies.jar
 # list jobs
-gcloud dataproc jobs list --cluster=dataproc-xxxxxxx-dev
+gcloud dataproc jobs list --cluster=dataproc-xxxxxxx-dev --region=global
 # kill job by id
-gcloud dataproc jobs kill --cluster=dataproc-xxxxxxx-dev
+gcloud dataproc jobs kill --region=global
 ```
 
 
@@ -244,8 +244,8 @@ c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex 
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MTk5MTI2NDQsLTMxNjMzMDY1MiwtMT
-k0MDMwMDI5NywyNDEzNjA0NzUsLTEwNzQ1MDE1NDAsLTg2NzE2
-ODc1MSwtODc0OTc4NTI5LC0xMzU4MzM5MTUwLDU5NzA2NTA3Mi
-wtMTAzMDc3MDM5N119
+eyJoaXN0b3J5IjpbMTEyMTk5MTUzOCwtMzE2MzMwNjUyLC0xOT
+QwMzAwMjk3LDI0MTM2MDQ3NSwtMTA3NDUwMTU0MCwtODY3MTY4
+NzUxLC04NzQ5Nzg1MjksLTEzNTgzMzkxNTAsNTk3MDY1MDcyLC
+0xMDMwNzcwMzk3XX0=
 -->
