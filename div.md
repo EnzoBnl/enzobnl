@@ -7,20 +7,6 @@
 <!--NOTE HEAD END-->
 
 # Diverse n Dev Notes
-## 10 points to study for wise software engineering
-### Main
-1. Java, Python
-2. Software designing: Design patterns, Testing
-3. Data structures: Specificities, complexities, algorithms
-4. Data bases: SQL, noSQL, Big data
-5. Computer Architecture: Latencies, assembler
-
-### Secondary
-1. a 3rd language: Scala (functional prog) or Kotlin(android) or C++(games) or ...
-2. Some more low level knowledge: C, JVM
-3. Web APIs building: RESTful principles...
-4. Master 1 to 3 specialized frameworks: Node.js, React, Spark, Kubernetes, Unity...
-5. Practice with CI/CD & cloud
 
 ## Asymptotic analysis
 
@@ -248,7 +234,21 @@ The difference is in which libraries are used. In order to use OS stuff (I/O for
 
 - *There's no difference in the binary code, opcodes are the same. The difference is in the syntax of the mnemonic form, i.e. mov %eax,%ebx (AT&T) and mov ebx,eax (Intel) have the same binary*
 
+## 10 points to study for wise software engineering
+### Main
+1. Java, Python
+2. Software designing: Design patterns, Testing
+3. Data structures: Specificities, complexities, algorithms
+4. Data bases: SQL, noSQL, Big data
+5. Computer Architecture: Latencies, assembler
+
+### Secondary
+1. a 3rd language: Scala (functional prog) or Kotlin(android) or C++(games) or ...
+2. Some more low level knowledge: C, JVM
+3. Web APIs building: RESTful principles...
+4. Master 1 to 3 specialized frameworks: Node.js, React, Spark, Kubernetes, Unity...
+5. Practice with CI/CD & cloud
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAxODc4MTU0MywxNjEzMTM2NzExLC0yMD
-M3OTA5ODc5LC0xOTgxNjIyNzczLDI3MTYxNzgyNl19
+eyJoaXN0b3J5IjpbMTI2NTI3NjcxLDE2MTMxMzY3MTEsLTIwMz
+c5MDk4NzksLTE5ODE2MjI3NzMsMjcxNjE3ODI2XX0=
 -->
