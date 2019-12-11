@@ -54,7 +54,7 @@ From http://ommil.com/scalax14/#/7/7
 
 ## MultiThreading
 ### Main memory (RAM) simultaneous access
-It is physically impossible that 2 threads access the memory (same memory address or not) in the same time because 
+It is physically impossible that 2 threads access the memory (same memory address or not) in the same time because the *address bus* is a single entry point  (it is also the case of the *data bus* in the other direction). This bottleneck can be partially removed thanks to hardware and s
 ### Synchronized block
 ```java
 synchronized(someObject) {
@@ -245,6 +245,6 @@ The difference is in which libraries are used. In order to use OS stuff (I/O for
 - *There's no difference in the binary code, opcodes are the same. The difference is in the syntax of the mnemonic form, i.e. mov %eax,%ebx (AT&T) and mov ebx,eax (Intel) have the same binary*
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk1NjY3ODYzMywtMjAzNzkwOTg3OSwtMT
-k4MTYyMjc3MywyNzE2MTc4MjZdfQ==
+eyJoaXN0b3J5IjpbMjk0MDg5MjA0LC0yMDM3OTA5ODc5LC0xOT
+gxNjIyNzczLDI3MTYxNzgyNl19
 -->
