@@ -56,7 +56,7 @@ From http://ommil.com/scalax14/#/7/7
 ### Main memory (RAM) simultaneous access
 [check this great SO response](https://softwareengineering.stackexchange.com/a/278774/341648)
 
-It is physically impossible for multiple threads to get access the memory (same memory address or not, read or write: it does not matter) at the same time because the *address bus* is a single entry point and thread need to compete to get the claimed access (it is also the case of the *data bus* in the other direction). This bottleneck can be partially removed thanks to hardware architectures features (SIMD, cores' caches).  
+It is physically impossible for multiple threads to get access the memory (same memory address or not, read or write: it does not matter) at the same time because the *address bus* is a single entry point and thread need to compete to get the claimed access (the *data bus* in the other direction is also a single point). This bottleneck can be partially removed thanks to hardware architectures features (SIMD, cores' caches) and make things look like thread get pure parallel access in certain executions, but it is not truly the case.
 
 ### Synchronized block
 ```java
@@ -248,6 +248,6 @@ The difference is in which libraries are used. In order to use OS stuff (I/O for
 - *There's no difference in the binary code, opcodes are the same. The difference is in the syntax of the mnemonic form, i.e. mov %eax,%ebx (AT&T) and mov ebx,eax (Intel) have the same binary*
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMzMTE3MjQ2MSwtMjAzNzkwOTg3OSwtMT
+eyJoaXN0b3J5IjpbMTQ3MDcxMDA3OCwtMjAzNzkwOTg3OSwtMT
 k4MTYyMjc3MywyNzE2MTc4MjZdfQ==
 -->
