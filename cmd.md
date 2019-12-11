@@ -7,7 +7,7 @@
 <!--NOTE HEAD END-->
 # Syntax reminders
 
-## Hadoop ecosystem
+## Big Data related
 ### Spark / scala
 ```bash
 //Spark-submit
@@ -55,6 +55,16 @@ hdfs dfs -text ./output/part-r-00000
 //consumer:
 ./kafka-console-consumer.bat --bootstrap-server localhost:9092 --property "parse.key=true" --property "key.separator=:" --topic mytopicout
 ```
+
+### GCP
+```bash
+# install SDK
+curl https://dl.google.com/dl/cloudsdk/release/install_google_cloud_sdk.bash | bash
+# submit spark job
+gcloud dataproc jobs submit spark --cluster=dataproc-oncrawl-dev --region=global --class com.oncrawl.analysis.testparquetjoin.Main --jars gs://oncrawl-dataproc/testparquetjoin/testparquetjoin-0.1-jar-with-dependencies.jar
+```
+
+
 ## Terminals
 ### unix
 ```bash
@@ -230,8 +240,8 @@ c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex 
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMxNjMzMDY1MiwtMTk0MDMwMDI5NywyND
-EzNjA0NzUsLTEwNzQ1MDE1NDAsLTg2NzE2ODc1MSwtODc0OTc4
-NTI5LC0xMzU4MzM5MTUwLDU5NzA2NTA3MiwtMTAzMDc3MDM5N1
-19
+eyJoaXN0b3J5IjpbMTY4NjUwMjk3NSwtMzE2MzMwNjUyLC0xOT
+QwMzAwMjk3LDI0MTM2MDQ3NSwtMTA3NDUwMTU0MCwtODY3MTY4
+NzUxLC04NzQ5Nzg1MjksLTEzNTgzMzkxNTAsNTk3MDY1MDcyLC
+0xMDMwNzcwMzk3XX0=
 -->
