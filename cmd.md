@@ -101,6 +101,8 @@ sudo ln -s origin target
 ssh -L 9000:10.240.0.44:9000 <host_url>
 // put a directories's jars in classpath var, in ~/.bashrc
 export CLASSPATH="/home/enzo/Prog/lib/jar/*"
+// log as another user in terminal
+sudo su - username
 ```
 ### CMD removes :
 ```bash
@@ -228,7 +230,7 @@ c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex 
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc5Njc1NDMwOSwtMTk0MDMwMDI5NywyND
+eyJoaXN0b3J5IjpbLTMxNjMzMDY1MiwtMTk0MDMwMDI5NywyND
 EzNjA0NzUsLTEwNzQ1MDE1NDAsLTg2NzE2ODc1MSwtODc0OTc4
 NTI5LC0xMzU4MzM5MTUwLDU5NzA2NTA3MiwtMTAzMDc3MDM5N1
 19
