@@ -146,11 +146,10 @@ http://scott.fortmann-roe.com/docs/MeasuringError.html
 - Need its implementation to let you access some sort of score instead of flat class prediction (it's always doable if you have access to sources).
 - You then **move a threshold** on the entire domain of the score and you can associate to each threshold a confusion matrix showing how well your classifier separate samples.
 
-|  |  ||
+| predicted $\setminus$  actual | P | N |
 |--|--|--|
-|predicted $\setminus$  actual| P | N|
-| P | TP |FP|
-| N | FN |TN|
+| **P** | TP |FP|
+| **N** | FN |TN|
 
 - Plot parametric courb 
 $$\left\{  
@@ -218,8 +217,8 @@ The split train-validation inside outer train set must follow the same logic.
 ### MARS
 ## Support Vector Machine
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MTI3MDM1MTEsMTYxMzM0MzQ0NSwxNj
-AyNzUyMzExLDE2MjI3MzQ5NjIsLTIxMTQxMjQxNjUsLTE4OTYz
-NjIzMTcsLTEwNTgxMjg1MCwtMTQ1NjE1MDQ3NSwxNTYwNDA3OD
-k5XX0=
+eyJoaXN0b3J5IjpbMTM2NjgyMDc1NywtMTUxMjcwMzUxMSwxNj
+EzMzQzNDQ1LDE2MDI3NTIzMTEsMTYyMjczNDk2MiwtMjExNDEy
+NDE2NSwtMTg5NjM2MjMxNywtMTA1ODEyODUwLC0xNDU2MTUwND
+c1LDE1NjA0MDc4OTldfQ==
 -->
