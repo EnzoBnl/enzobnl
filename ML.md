@@ -161,7 +161,8 @@ x = FPR(\theta)
 
 
 Actual positives well classified rate $TPR=\frac{TP}{TP+FN}$
-Actual negatives miss classified rate $FPR=\frac{FP}{FP+TN}$
+
+Actual negatives miss classified rate $FPR=\frac{FP}{FP+TN}=1 - TNR$
 
 We suppose our classifier say $P$ if $score\geq\theta$
 Moving $\theta$ in its interval $[a,b]$, here are special cases:
@@ -217,8 +218,8 @@ The split train-validation inside outer train set must follow the same logic.
 ### MARS
 ## Support Vector Machine
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM2NjgyMDc1NywtMTUxMjcwMzUxMSwxNj
-EzMzQzNDQ1LDE2MDI3NTIzMTEsMTYyMjczNDk2MiwtMjExNDEy
-NDE2NSwtMTg5NjM2MjMxNywtMTA1ODEyODUwLC0xNDU2MTUwND
-c1LDE1NjA0MDc4OTldfQ==
+eyJoaXN0b3J5IjpbMTkzMTA2MzIzMiwxMzY2ODIwNzU3LC0xNT
+EyNzAzNTExLDE2MTMzNDM0NDUsMTYwMjc1MjMxMSwxNjIyNzM0
+OTYyLC0yMTE0MTI0MTY1LC0xODk2MzYyMzE3LC0xMDU4MTI4NT
+AsLTE0NTYxNTA0NzUsMTU2MDQwNzg5OV19
 -->
