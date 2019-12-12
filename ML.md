@@ -149,9 +149,9 @@ http://scott.fortmann-roe.com/docs/MeasuringError.html
 || | |
 |--|--|--|
 || really **P** | really **N** |
-| predicted as **P** | TP |FP|
-| predicted as N** | FN |TN|
-||**P** = TP + FN|N = FP + TN|
+| predicted as **P** | **TP** |**FP**|
+| predicted as **N** | **FN** |**TN**|
+||**P** = TP + FN|**N** = FP + TN|
 
 - Plot parametric courb 
 $$\left\{  
@@ -162,9 +162,9 @@ x = FPR(\theta)
 \right.$$
 
 
-Actual positives well classified rate $TPR=\frac{TP}{TP+FN}$
+Actual positives well classified rate $TPR=\frac{TP}{TP+FN}=\frac{TP}{P}$
 
-Actual negatives miss classified rate $FPR=\frac{FP}{FP+TN}=1 - TNR$
+Actual negatives miss classified rate $FPR=\frac{FP}{FP+TN}=\frac{FP}{N}=1 - TNR$
 
 We suppose our classifier say $P$ if $score\geq\theta$
 Moving $\theta$ in its interval $[a,b]$, here are special cases:
@@ -220,7 +220,7 @@ The split train-validation inside outer train set must follow the same logic.
 ### MARS
 ## Support Vector Machine
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNTQyNzAzMjAsMTcxMDEwNDQyLDE5Mz
+eyJoaXN0b3J5IjpbLTE1NDI0Mzk1MjAsMTcxMDEwNDQyLDE5Mz
 EwNjMyMzIsMTM2NjgyMDc1NywtMTUxMjcwMzUxMSwxNjEzMzQz
 NDQ1LDE2MDI3NTIzMTEsMTYyMjczNDk2MiwtMjExNDEyNDE2NS
 wtMTg5NjM2MjMxNywtMTA1ODEyODUwLC0xNDU2MTUwNDc1LDE1
