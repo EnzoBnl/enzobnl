@@ -180,7 +180,7 @@ When moving $\theta$ in its interval $[a,b]$, here are special cases:
 **A**rea **U**nder **C**urve $\in [0.5 ,1]$.
 ### Accuracy
 
-$=\frac{TP+TN}{P+N}=\frac{\vert right \space guesses\vert}{\vert scored\space records\vert}$
+$=\frac{TP+TN}{P+N}=\frac{\vert right \space guesses\vert}{\vert all\space records\vert}$
 
 ### Precision
 
@@ -221,9 +221,9 @@ The split train-validation inside outer train set must follow the same logic.
 ### MARS
 ## Support Vector Machine
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY2NDQzNjUyMiwxNzEwMTA0NDIsMTkzMT
-A2MzIzMiwxMzY2ODIwNzU3LC0xNTEyNzAzNTExLDE2MTMzNDM0
-NDUsMTYwMjc1MjMxMSwxNjIyNzM0OTYyLC0yMTE0MTI0MTY1LC
-0xODk2MzYyMzE3LC0xMDU4MTI4NTAsLTE0NTYxNTA0NzUsMTU2
-MDQwNzg5OV19
+eyJoaXN0b3J5IjpbLTEyMDE1MTIyNjUsMTcxMDEwNDQyLDE5Mz
+EwNjMyMzIsMTM2NjgyMDc1NywtMTUxMjcwMzUxMSwxNjEzMzQz
+NDQ1LDE2MDI3NTIzMTEsMTYyMjczNDk2MiwtMjExNDEyNDE2NS
+wtMTg5NjM2MjMxNywtMTA1ODEyODUwLC0xNDU2MTUwNDc1LDE1
+NjA0MDc4OTldfQ==
 -->
