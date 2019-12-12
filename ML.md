@@ -187,7 +187,7 @@ $=\frac{TP+TN}{P+N}=\frac{\vert right \space guesses\vert}{\vert all\space recor
 
 ### Precision
 
-$=\frac{TP}{TP+FP}=\frac{\vert reached\space targets\vert }{\vert positive \space marked \space targets\vert }=positive\space predictive\space value\space (PPV)$
+$=\frac{TP}{TP+FP}=\frac{\vert reached\space targets\vert }{\vert records\space predicted\space as\space P\vert }=positive\space predictive\space value\space (PPV)$
 
 ### Recall
 $=\frac{TP}{TP+FN}=\frac{\vert reached\space targets\vert }{\vert actual \space positive \space targets\vert }=TPR=hit\space rate$
@@ -224,9 +224,9 @@ The split train-validation inside outer train set must follow the same logic.
 ### MARS
 ## Support Vector Machine
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkxMjc1ODg5OSwtMTIwMTUxMjI2NSwxNz
-EwMTA0NDIsMTkzMTA2MzIzMiwxMzY2ODIwNzU3LC0xNTEyNzAz
-NTExLDE2MTMzNDM0NDUsMTYwMjc1MjMxMSwxNjIyNzM0OTYyLC
-0yMTE0MTI0MTY1LC0xODk2MzYyMzE3LC0xMDU4MTI4NTAsLTE0
-NTYxNTA0NzUsMTU2MDQwNzg5OV19
+eyJoaXN0b3J5IjpbLTE1OTg5MzA4NTQsLTEyMDE1MTIyNjUsMT
+cxMDEwNDQyLDE5MzEwNjMyMzIsMTM2NjgyMDc1NywtMTUxMjcw
+MzUxMSwxNjEzMzQzNDQ1LDE2MDI3NTIzMTEsMTYyMjczNDk2Mi
+wtMjExNDEyNDE2NSwtMTg5NjM2MjMxNywtMTA1ODEyODUwLC0x
+NDU2MTUwNDc1LDE1NjA0MDc4OTldfQ==
 -->
