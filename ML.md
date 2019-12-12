@@ -162,12 +162,14 @@ x = FPR(\theta)
 \right.$$
 
 
-Actual positives well classified rate $TPR=\frac{TP}{TP+FN}=\frac{TP}{P}$
+Actual positives well classified rate: $TPR=\frac{TP}{TP+FN}=\frac{TP}{P}$
 
-Actual negatives miss classified rate $FPR=\frac{FP}{FP+TN}=\frac{FP}{N}=1 - TNR$
+Actual negatives miss classified rate: $FPR=\frac{FP}{FP+TN}=\frac{FP}{N}=1 - TNR$
 
-We suppose our classifier say $P$ if $score\geq\theta$
-Moving $\theta$ in its interval $[a,b]$, here are special cases:
+We suppose that our classifier predicts $P$ if its output score $\geq\theta$.
+
+Get s
+When moving $\theta$ in its interval $[a,b]$, here are special cases:
  - Common cases to all classifiers:
    - $\theta=a$: all samples are classified positive. Every actual negative are missclassified and every actual positives are well classified, courb is at $(1,1)$.
    - $\theta=b$: all samples are classified negative. No actual negative is missclassified and no actual positives is well classified, courb is at $(0,0)$.
@@ -220,7 +222,7 @@ The split train-validation inside outer train set must follow the same logic.
 ### MARS
 ## Support Vector Machine
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NDI0Mzk1MjAsMTcxMDEwNDQyLDE5Mz
+eyJoaXN0b3J5IjpbLTExMDE4Njk5NzQsMTcxMDEwNDQyLDE5Mz
 EwNjMyMzIsMTM2NjgyMDc1NywtMTUxMjcwMzUxMSwxNjEzMzQz
 NDQ1LDE2MDI3NTIzMTEsMTYyMjczNDk2MiwtMjExNDEyNDE2NS
 wtMTg5NjM2MjMxNywtMTA1ODEyODUwLC0xNDU2MTUwNDc1LDE1
