@@ -174,7 +174,7 @@ Moving $\theta$ in its interval $[a,b]$, here are special cases:
    - Uniform random Classifier: uniform random classifier gives a uniformaly random score $\in [a, b]$ to each sample. So $TPR(\theta)=\frac{\theta}{b-a}$ and $FPR(\theta)=\frac{\theta}{b-a}$, resulting in an identity courb $TPR(FPR)=FPR$.
 
 ### AUC
-Area under curve $\in [0,1]$, after normalization.
+Area under curve $\in [0.5 ,1]$.
 ### Accuracy
 
 $=\frac{TP+TN}{\vert scored\space records \vert}=\frac{\vert right \space guesses\vert}{\vert scored\space records\vert}$
@@ -218,7 +218,8 @@ The split train-validation inside outer train set must follow the same logic.
 ### MARS
 ## Support Vector Machine
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYxMzM0MzQ0NSwxNjAyNzUyMzExLDE2Mj
-I3MzQ5NjIsLTIxMTQxMjQxNjUsLTE4OTYzNjIzMTcsLTEwNTgx
-Mjg1MCwtMTQ1NjE1MDQ3NSwxNTYwNDA3ODk5XX0=
+eyJoaXN0b3J5IjpbLTE1MTI3MDM1MTEsMTYxMzM0MzQ0NSwxNj
+AyNzUyMzExLDE2MjI3MzQ5NjIsLTIxMTQxMjQxNjUsLTE4OTYz
+NjIzMTcsLTEwNTgxMjg1MCwtMTQ1NjE1MDQ3NSwxNTYwNDA3OD
+k5XX0=
 -->
