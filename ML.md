@@ -140,6 +140,9 @@ scm.Plot(title="Bias-variance tradeoff", borders=[0.3,2, -1,5])\
 
 ## Evaluation, Model selection
 http://scott.fortmann-roe.com/docs/MeasuringError.html
+
+more measures summarized at [confusion matrix' wiki](https://en.wikipedia.org/wiki/Confusion_matrix)
+
 ### R²
 ### ROC receiver operating characteristic
 - For a classifier
@@ -221,9 +224,9 @@ The split train-validation inside outer train set must follow the same logic.
 ### MARS
 ## Support Vector Machine
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMDE1MTIyNjUsMTcxMDEwNDQyLDE5Mz
-EwNjMyMzIsMTM2NjgyMDc1NywtMTUxMjcwMzUxMSwxNjEzMzQz
-NDQ1LDE2MDI3NTIzMTEsMTYyMjczNDk2MiwtMjExNDEyNDE2NS
-wtMTg5NjM2MjMxNywtMTA1ODEyODUwLC0xNDU2MTUwNDc1LDE1
-NjA0MDc4OTldfQ==
+eyJoaXN0b3J5IjpbMTkxMjc1ODg5OSwtMTIwMTUxMjI2NSwxNz
+EwMTA0NDIsMTkzMTA2MzIzMiwxMzY2ODIwNzU3LC0xNTEyNzAz
+NTExLDE2MTMzNDM0NDUsMTYwMjc1MjMxMSwxNjIyNzM0OTYyLC
+0yMTE0MTI0MTY1LC0xODk2MzYyMzE3LC0xMDU4MTI4NTAsLTE0
+NTYxNTA0NzUsMTU2MDQwNzg5OV19
 -->
