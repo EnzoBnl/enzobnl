@@ -149,8 +149,9 @@ http://scott.fortmann-roe.com/docs/MeasuringError.html
 || | |
 |--|--|--|
 || really **P** | really **N** |
-| predicted **P** | TP |FP|
-| predicted **N** | FN |TN|
+| predicted as **P** | TP |FP|
+| predicted as N** | FN |TN|
+||**P** = TP + FN|N = FP + TN|
 
 - Plot parametric courb 
 $$\left\{  
@@ -219,7 +220,7 @@ The split train-validation inside outer train set must follow the same logic.
 ### MARS
 ## Support Vector Machine
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4OTQ2OTg4NzIsMTcxMDEwNDQyLDE5Mz
+eyJoaXN0b3J5IjpbLTExNTQyNzAzMjAsMTcxMDEwNDQyLDE5Mz
 EwNjMyMzIsMTM2NjgyMDc1NywtMTUxMjcwMzUxMSwxNjEzMzQz
 NDQ1LDE2MDI3NTIzMTEsMTYyMjczNDk2MiwtMjExNDEyNDE2NS
 wtMTg5NjM2MjMxNywtMTA1ODEyODUwLC0xNDU2MTUwNDc1LDE1
