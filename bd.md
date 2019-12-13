@@ -6,6 +6,7 @@
 <script>document.body.style.background = "#f2f2f2";</script>
 <!--NOTE HEAD END-->
 
+
 # Theorems and definitions
 ## PACeLC theorem
 Abadi's *"Consistency Tradeoffs in Modern Distributed Database System Design"*, 2012.
@@ -111,12 +112,20 @@ Further readings:
 [*Diving Into Delta Lake: Unpacking The Transaction Log*](https://databricks.com/blog/2019/08/21/diving-into-delta-lake-unpacking-the-transaction-log.html)
 
 [ACID properties](https://en.wikipedia.org/wiki/ACID)
+
+# Useful ports
+|  |port|
+|--|--|
+|YARN jobs UI|8088|
+|Spark UI|4040|
+|||
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkwNDY3NjgwOCwxMTkxNjcyODg1LC0xMj
-U3MDA1MzAsLTE5NzA3MzU0MDQsLTEyNzQ5NjYzNCwtMTQzNzYx
-MjM5NywtMTA2NjY4MDA4OCwyMDkzMjM1NTg4LDE4MTEzMTExOT
-YsLTUzOTgzNjUzOCwtMTg1OTU0MjE2MywxNzQzMTY5MDA0LC03
-Mzk4NTI5MzUsMjAxOTMwNDg5NywtMTg3MTQ1Njg3OSwxNzUyND
-g2MDQ3LC02MTQ5NDYyNSwxMDIyNTgxNjA0LDE4MzQ1MDA3MTMs
-MTQxNjc0MDIxMV19
+eyJoaXN0b3J5IjpbMTY3MDUxNjQ0OSwxOTA0Njc2ODA4LDExOT
+E2NzI4ODUsLTEyNTcwMDUzMCwtMTk3MDczNTQwNCwtMTI3NDk2
+NjM0LC0xNDM3NjEyMzk3LC0xMDY2NjgwMDg4LDIwOTMyMzU1OD
+gsMTgxMTMxMTE5NiwtNTM5ODM2NTM4LC0xODU5NTQyMTYzLDE3
+NDMxNjkwMDQsLTczOTg1MjkzNSwyMDE5MzA0ODk3LC0xODcxND
+U2ODc5LDE3NTI0ODYwNDcsLTYxNDk0NjI1LDEwMjI1ODE2MDQs
+MTgzNDUwMDcxM119
 -->
