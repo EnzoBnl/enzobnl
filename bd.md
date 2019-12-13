@@ -114,14 +114,14 @@ Further readings:
 [ACID properties](https://en.wikipedia.org/wiki/ACID)
 
 # Useful ports
-|  |port|
+|service|port|
 |--|--|
 |YARN jobs UI|8088|
 |Spark UI|4040|
-|||
+|Jupyter notebook|8888|
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY3MDUxNjQ0OSwxOTA0Njc2ODA4LDExOT
+eyJoaXN0b3J5IjpbMTQ4MDQ1ODc3NiwxOTA0Njc2ODA4LDExOT
 E2NzI4ODUsLTEyNTcwMDUzMCwtMTk3MDczNTQwNCwtMTI3NDk2
 NjM0LC0xNDM3NjEyMzk3LC0xMDY2NjgwMDg4LDIwOTMyMzU1OD
 gsMTgxMTMxMTE5NiwtNTM5ODM2NTM4LC0xODU5NTQyMTYzLDE3
