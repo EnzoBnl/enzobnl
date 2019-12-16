@@ -223,10 +223,13 @@ The split train-validation inside outer train set must follow the same logic.
 ### LASSO
 ### MARS
 ## Support Vector Machine
+## Neural Networks
+### Initialization
+- The initialization of the network's nodes weights needs to brea
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzM5MDI5NTUzLC0xMjAxNTEyMjY1LDE3MT
-AxMDQ0MiwxOTMxMDYzMjMyLDEzNjY4MjA3NTcsLTE1MTI3MDM1
-MTEsMTYxMzM0MzQ0NSwxNjAyNzUyMzExLDE2MjI3MzQ5NjIsLT
-IxMTQxMjQxNjUsLTE4OTYzNjIzMTcsLTEwNTgxMjg1MCwtMTQ1
-NjE1MDQ3NSwxNTYwNDA3ODk5XX0=
+eyJoaXN0b3J5IjpbLTI1OTY1MDg0NiwzMzkwMjk1NTMsLTEyMD
+E1MTIyNjUsMTcxMDEwNDQyLDE5MzEwNjMyMzIsMTM2NjgyMDc1
+NywtMTUxMjcwMzUxMSwxNjEzMzQzNDQ1LDE2MDI3NTIzMTEsMT
+YyMjczNDk2MiwtMjExNDEyNDE2NSwtMTg5NjM2MjMxNywtMTA1
+ODEyODUwLC0xNDU2MTUwNDc1LDE1NjA0MDc4OTldfQ==
 -->
