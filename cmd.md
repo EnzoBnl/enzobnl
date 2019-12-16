@@ -69,6 +69,8 @@ gcloud dataproc jobs kill --region=global
 # make host resolution made by a server
 ssh -D 1080 <server>
 chromium-browser --proxy-server="socks5://127.0.0.1:1080"
+# rename file on Cloud Storage
+gsutil mv gs://old_name gs://new_name
 ```
 
 
@@ -247,8 +249,8 @@ c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex 
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYwODYwNTcwOCwxMTIxOTkxNTM4LC0zMT
-YzMzA2NTIsLTE5NDAzMDAyOTcsMjQxMzYwNDc1LC0xMDc0NTAx
-NTQwLC04NjcxNjg3NTEsLTg3NDk3ODUyOSwtMTM1ODMzOTE1MC
-w1OTcwNjUwNzIsLTEwMzA3NzAzOTddfQ==
+eyJoaXN0b3J5IjpbLTY5MTI3NDI4MiwtNjA4NjA1NzA4LDExMj
+E5OTE1MzgsLTMxNjMzMDY1MiwtMTk0MDMwMDI5NywyNDEzNjA0
+NzUsLTEwNzQ1MDE1NDAsLTg2NzE2ODc1MSwtODc0OTc4NTI5LC
+0xMzU4MzM5MTUwLDU5NzA2NTA3MiwtMTAzMDc3MDM5N119
 -->
