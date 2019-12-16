@@ -225,9 +225,9 @@ The split train-validation inside outer train set must follow the same logic.
 ## Support Vector Machine
 ## Neural Networks
 ### Initialization
-- As a first step before the training starts, the initialization of the network's nodes weights needs to *break the symmetry*. For example, in a fully connected MLP (Multi Layer Perceptron  having each of its nodes of layer *l* connected to every node of layer *l-1*) the nodes need to differs between each other in term of weight to avoid t
+- As a first step before the training starts, the initialization of the network's nodes weights needs to *break the symmetry*. For example, in a fully connected MLP (Multi Layer Perceptron  having each of its nodes of layer *l* connected to every node of layer *l-1*) the nodes need to differs between each other in term of weights to avoid that the error propagation updates every nodes n the same way, making the network just become a slow Perceptron.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwODM1OTE0NzQsMzM5MDI5NTUzLC0xMj
+eyJoaXN0b3J5IjpbLTE1NjAwNzg0NjgsMzM5MDI5NTUzLC0xMj
 AxNTEyMjY1LDE3MTAxMDQ0MiwxOTMxMDYzMjMyLDEzNjY4MjA3
 NTcsLTE1MTI3MDM1MTEsMTYxMzM0MzQ0NSwxNjAyNzUyMzExLD
 E2MjI3MzQ5NjIsLTIxMTQxMjQxNjUsLTE4OTYzNjIzMTcsLTEw
