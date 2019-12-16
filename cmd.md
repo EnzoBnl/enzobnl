@@ -66,6 +66,9 @@ gcloud dataproc jobs submit spark --cluster=dataproc-xxxxxxx-dev --region=global
 gcloud dataproc jobs list --cluster=dataproc-xxxxxxx-dev --region=global
 # kill job by id
 gcloud dataproc jobs kill --region=global
+# make host resolution made by a server
+ssh -D 1080 <server>
+chromium-browser --proxy-server="socks5://127.0.0.1:1080"
 ```
 
 
@@ -244,8 +247,8 @@ c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex 
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEyMTk5MTUzOCwtMzE2MzMwNjUyLC0xOT
-QwMzAwMjk3LDI0MTM2MDQ3NSwtMTA3NDUwMTU0MCwtODY3MTY4
-NzUxLC04NzQ5Nzg1MjksLTEzNTgzMzkxNTAsNTk3MDY1MDcyLC
-0xMDMwNzcwMzk3XX0=
+eyJoaXN0b3J5IjpbLTYwODYwNTcwOCwxMTIxOTkxNTM4LC0zMT
+YzMzA2NTIsLTE5NDAzMDAyOTcsMjQxMzYwNDc1LC0xMDc0NTAx
+NTQwLC04NjcxNjg3NTEsLTg3NDk3ODUyOSwtMTM1ODMzOTE1MC
+w1OTcwNjUwNzIsLTEwMzA3NzAzOTddfQ==
 -->
