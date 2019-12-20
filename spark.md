@@ -54,7 +54,7 @@ Useful sources:
 <div class="mermaid"
 
 ```mermaid 
-graph LR
+graph TB
 
 -1[Worker W's memory]
 
@@ -1068,11 +1068,11 @@ I don't think this one is started. The design doc is not out yet.
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYwNTE4MTg3MCwtNzg2MDUwNjA2LDIxMj
-M5NjE2NTAsNzE3NDU3MjE3LDEwODUxMjgwOTIsLTEwNjgxNDI1
-MzEsLTExMTg5NDg0NSwtMTgzMDE4NTM3NywtMTgyOTc2MTI3My
-wtMTM1Njc2MDQ1MSw3MDk0NzkyNDcsMTYyNDkxMjk0OSwxNTg0
-MjQ4NzgwLC0xNTM1NTQyODIwLC0xNDk2NjcwMzQ3LC0xNzY1MD
-IwMTI1LDg1ODM3MTg5LC0xNTY2MTMyNjcxLC01MDU2MzQzNzMs
-MTI4MDY4NzM2MV19
+eyJoaXN0b3J5IjpbLTE3MTMzMjU3NjYsLTc4NjA1MDYwNiwyMT
+IzOTYxNjUwLDcxNzQ1NzIxNywxMDg1MTI4MDkyLC0xMDY4MTQy
+NTMxLC0xMTE4OTQ4NDUsLTE4MzAxODUzNzcsLTE4Mjk3NjEyNz
+MsLTEzNTY3NjA0NTEsNzA5NDc5MjQ3LDE2MjQ5MTI5NDksMTU4
+NDI0ODc4MCwtMTUzNTU0MjgyMCwtMTQ5NjY3MDM0NywtMTc2NT
+AyMDEyNSw4NTgzNzE4OSwtMTU2NjEzMjY3MSwtNTA1NjM0Mzcz
+LDEyODA2ODczNjFdfQ==
 -->
