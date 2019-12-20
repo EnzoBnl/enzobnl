@@ -46,7 +46,8 @@ Note: By convention, when talking about Dataset API, we talk about manipulation 
 Useful sources:
 -  pull request document [Unified Memory Management in Spark 1.6](https://www.linuxprobe.com/wp-content/uploads/2017/04/unified-memory-management-spark-10000.pdf) by Andrew Or and Josh Rosen
 -  blog article [Apache Spark and off-heap memory](https://www.waitingforcode.com/apache-spark/apache-spark-off-heap-memory/read) by Bartosz Konieczny.
-- blog article [# Deep Understanding of Spark Memory Management Model](https://www.tutorialdocs.com/article/spark-memory-management.html) by  Alex
+- blog article [Deep Understanding of Spark Memory Management Model](https://www.tutorialdocs.com/article/spark-memory-management.html) by  Alex
+- blog article [How does Facebook tune Apache Spark for Large-Scale Workloads?](https://towardsdatascience.com/how-does-facebook-tune-apache-spark-for-large-scale-workloads-3238ddda0830)
 
 ### Allocation of the memory of a worker *W* to a given executor *E*
 
@@ -66,6 +67,7 @@ graph LR
 44[off-heap storage <br/>region for W's executors]
 
 -4[on-heap memory for E]
+44[Reserved Memory]
 0[on-heap execution & storage<br/> region for E]
 3[on-heap execution<br/> region for E]
 4[on-heap storage<br/> region for E]
@@ -1064,11 +1066,11 @@ I don't think this one is started. The design doc is not out yet.
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExODQ2ODI4MjUsMjEyMzk2MTY1MCw3MT
-c0NTcyMTcsMTA4NTEyODA5MiwtMTA2ODE0MjUzMSwtMTExODk0
-ODQ1LC0xODMwMTg1Mzc3LC0xODI5NzYxMjczLC0xMzU2NzYwND
-UxLDcwOTQ3OTI0NywxNjI0OTEyOTQ5LDE1ODQyNDg3ODAsLTE1
-MzU1NDI4MjAsLTE0OTY2NzAzNDcsLTE3NjUwMjAxMjUsODU4Mz
-cxODksLTE1NjYxMzI2NzEsLTUwNTYzNDM3MywxMjgwNjg3MzYx
-LC0xMzIwNzAxMTEwXX0=
+eyJoaXN0b3J5IjpbMTQxNjU2OTM2NiwyMTIzOTYxNjUwLDcxNz
+Q1NzIxNywxMDg1MTI4MDkyLC0xMDY4MTQyNTMxLC0xMTE4OTQ4
+NDUsLTE4MzAxODUzNzcsLTE4Mjk3NjEyNzMsLTEzNTY3NjA0NT
+EsNzA5NDc5MjQ3LDE2MjQ5MTI5NDksMTU4NDI0ODc4MCwtMTUz
+NTU0MjgyMCwtMTQ5NjY3MDM0NywtMTc2NTAyMDEyNSw4NTgzNz
+E4OSwtMTU2NjEzMjY3MSwtNTA1NjM0MzczLDEyODA2ODczNjEs
+LTEzMjA3MDExMTBdfQ==
 -->
