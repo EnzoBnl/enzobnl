@@ -961,7 +961,7 @@ related issues: SPARK-2044 SPARK-3376 SPARK-4550
 
 Shuffle execution: 
 1. local partitions **map output are packed in execution memory** region and **spilled to local file system by batch** when memory become saturated
-2. outputs targetting the **same partition are spilled to an unique file**
+2. outputs targeting the **same partition are spilled to an unique file**
 3. when a file corresponding to a given partition id has been written completely on map side, the shuffle manager states that the **chunk is ready to be fetched** by reduce side tasks.
 
 
@@ -1068,11 +1068,11 @@ I don't think this one is started. The design doc is not out yet.
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MTMzMjU3NjYsLTc4NjA1MDYwNiwyMT
-IzOTYxNjUwLDcxNzQ1NzIxNywxMDg1MTI4MDkyLC0xMDY4MTQy
-NTMxLC0xMTE4OTQ4NDUsLTE4MzAxODUzNzcsLTE4Mjk3NjEyNz
-MsLTEzNTY3NjA0NTEsNzA5NDc5MjQ3LDE2MjQ5MTI5NDksMTU4
-NDI0ODc4MCwtMTUzNTU0MjgyMCwtMTQ5NjY3MDM0NywtMTc2NT
-AyMDEyNSw4NTgzNzE4OSwtMTU2NjEzMjY3MSwtNTA1NjM0Mzcz
-LDEyODA2ODczNjFdfQ==
+eyJoaXN0b3J5IjpbMTkxNjg4ODIxMCwtMTcxMzMyNTc2NiwtNz
+g2MDUwNjA2LDIxMjM5NjE2NTAsNzE3NDU3MjE3LDEwODUxMjgw
+OTIsLTEwNjgxNDI1MzEsLTExMTg5NDg0NSwtMTgzMDE4NTM3Ny
+wtMTgyOTc2MTI3MywtMTM1Njc2MDQ1MSw3MDk0NzkyNDcsMTYy
+NDkxMjk0OSwxNTg0MjQ4NzgwLC0xNTM1NTQyODIwLC0xNDk2Nj
+cwMzQ3LC0xNzY1MDIwMTI1LDg1ODM3MTg5LC0xNTY2MTMyNjcx
+LC01MDU2MzQzNzNdfQ==
 -->
