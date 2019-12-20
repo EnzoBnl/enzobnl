@@ -119,7 +119,9 @@ ssh -L 9000:10.240.0.44:9000 <host_url>
 export CLASSPATH="/home/enzo/Prog/lib/jar/*"
 // log as another user in terminal
 sudo su - username
-
+# make host resolution made by a server
+ssh -D 1080 <server>
+chromium-browser --proxy-server="socks5://127.0.0.1:1080"
 ```
 ### CMD removes :
 ```bash
@@ -247,9 +249,9 @@ c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex 
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkyOTgyMzg1MCwtNjkxMjc0MjgyLC02MD
-g2MDU3MDgsMTEyMTk5MTUzOCwtMzE2MzMwNjUyLC0xOTQwMzAw
-Mjk3LDI0MTM2MDQ3NSwtMTA3NDUwMTU0MCwtODY3MTY4NzUxLC
-04NzQ5Nzg1MjksLTEzNTgzMzkxNTAsNTk3MDY1MDcyLC0xMDMw
-NzcwMzk3XX0=
+eyJoaXN0b3J5IjpbNjU1NDUzNzIyLC02OTEyNzQyODIsLTYwOD
+YwNTcwOCwxMTIxOTkxNTM4LC0zMTYzMzA2NTIsLTE5NDAzMDAy
+OTcsMjQxMzYwNDc1LC0xMDc0NTAxNTQwLC04NjcxNjg3NTEsLT
+g3NDk3ODUyOSwtMTM1ODMzOTE1MCw1OTcwNjUwNzIsLTEwMzA3
+NzAzOTddfQ==
 -->
