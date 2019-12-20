@@ -70,7 +70,7 @@ graph LR
 3[on-heap execution<br/> region for E]
 4[on-heap storage<br/> region for E]
 
-5[Other on-heap space for E:<br/>-on-heap internal metadata<br/>-user data structures<br/>-handling of miss-estimated<br/>unusually large records]
+5[User Memory for E:<br/>-on-heap internal metadata<br/>-user data structures<br/>-handling of miss-estimated<br/>unusually large records]
 -1 --> -2
 -1--spark.memory.offHeap.size bytes-->2
 -1--spark.executor.memory JVM string format-->-4
@@ -1064,7 +1064,7 @@ I don't think this one is started. The design doc is not out yet.
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMTEwMDY1NjMsMjEyMzk2MTY1MCw3MT
+eyJoaXN0b3J5IjpbLTExODQ2ODI4MjUsMjEyMzk2MTY1MCw3MT
 c0NTcyMTcsMTA4NTEyODA5MiwtMTA2ODE0MjUzMSwtMTExODk0
 ODQ1LC0xODMwMTg1Mzc3LC0xODI5NzYxMjczLC0xMzU2NzYwND
 UxLDcwOTQ3OTI0NywxNjI0OTEyOTQ5LDE1ODQyNDg3ODAsLTE1
