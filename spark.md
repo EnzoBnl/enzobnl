@@ -52,8 +52,7 @@ Useful sources:
 ### Allocation of the memory of a worker *W* to a given executor *E*
 
 <div class="mermaid"
-
-```mermaid 
+ 
 graph TB
 
 -1[Worker W's memory]
@@ -1068,11 +1067,11 @@ I don't think this one is started. The design doc is not out yet.
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzI5NTk4ODAzLDE5MTY4ODgyMTAsLTE3MT
-MzMjU3NjYsLTc4NjA1MDYwNiwyMTIzOTYxNjUwLDcxNzQ1NzIx
-NywxMDg1MTI4MDkyLC0xMDY4MTQyNTMxLC0xMTE4OTQ4NDUsLT
-E4MzAxODUzNzcsLTE4Mjk3NjEyNzMsLTEzNTY3NjA0NTEsNzA5
-NDc5MjQ3LDE2MjQ5MTI5NDksMTU4NDI0ODc4MCwtMTUzNTU0Mj
-gyMCwtMTQ5NjY3MDM0NywtMTc2NTAyMDEyNSw4NTgzNzE4OSwt
-MTU2NjEzMjY3MV19
+eyJoaXN0b3J5IjpbMTMyNjE1NDg2Miw3Mjk1OTg4MDMsMTkxNj
+g4ODIxMCwtMTcxMzMyNTc2NiwtNzg2MDUwNjA2LDIxMjM5NjE2
+NTAsNzE3NDU3MjE3LDEwODUxMjgwOTIsLTEwNjgxNDI1MzEsLT
+ExMTg5NDg0NSwtMTgzMDE4NTM3NywtMTgyOTc2MTI3MywtMTM1
+Njc2MDQ1MSw3MDk0NzkyNDcsMTYyNDkxMjk0OSwxNTg0MjQ4Nz
+gwLC0xNTM1NTQyODIwLC0xNDk2NjcwMzQ3LC0xNzY1MDIwMTI1
+LDg1ODM3MTg5XX0=
 -->
