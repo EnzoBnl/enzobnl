@@ -81,10 +81,10 @@ graph LR
 -1 --"spark.executor.memoryOverhead<br/>(in MiB, default=max(driverMemory * 0.10, 384)"-->-3
 -4 --"(... - 300MB) * spark.memory.fraction<br/>(spark.memory.fraction default=0.6)"-->0
 -4 --"(... - 300MB) * (1-spark.memory.fraction)<br/>(1- spark.memory.fraction default=0.4)"-->5
-0 --"spark.memory.storageFraction<br/>(default=0.5)"--> 4
-0 --"1 - spark.memory.storageFraction<br/>(default=0.5)"--> 3
-2 --"spark.memory.storageFraction<br/>(default=0.5)"--> 44
-2 --"1 - spark.memory.storageFraction<br/>(default=0.5)"--> 33
+0 --"... * spark.memory.storageFraction<br/>(spark.memory.storageFractiondefault=0.5)"--> 4
+0 --"... * (1 - spark.memory.storageFraction)<br/>(1 - spark.memory.storageFraction default=0.5)"--> 3
+2 --"... * spark.memory.storageFraction<br/>(spark.memory.storageFraction default=0.5)"--> 44
+2 --"... * (1 - spark.memory.storageFraction)<br/>(1 - spark.memory.storageFraction default=0.5)"--> 33
 
 </div>
 
@@ -1068,7 +1068,7 @@ I don't think this one is started. The design doc is not out yet.
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUzNDgzMTg2MiwyMTIzOTYxNjUwLDcxNz
+eyJoaXN0b3J5IjpbLTc4NjA1MDYwNiwyMTIzOTYxNjUwLDcxNz
 Q1NzIxNywxMDg1MTI4MDkyLC0xMDY4MTQyNTMxLC0xMTE4OTQ4
 NDUsLTE4MzAxODUzNzcsLTE4Mjk3NjEyNzMsLTEzNTY3NjA0NT
 EsNzA5NDc5MjQ3LDE2MjQ5MTI5NDksMTU4NDI0ODc4MCwtMTUz
