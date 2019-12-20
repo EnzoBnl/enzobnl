@@ -67,12 +67,12 @@ graph LR
 44[off-heap storage <br/>region for W's executors]
 
 -4[on-heap memory for E]
-10[**Reserved Memory** for Spark internal objects]
+10[Reserved Memory for Spark internal objects]
 0[on-heap execution & storage<br/>region for E]
 3[on-heap execution<br/> region for E]
 4[on-heap storage<br/> region for E]
 
-5[**User Memory** for E:<br/>-on-heap internal metadata<br/>-user data structures<br/>-handling of miss-estimated<br/>unusually large records]
+5[User Memory for E:<br/>-on-heap internal metadata<br/>-user data structures<br/>-handling of miss-estimated<br/>unusually large records]
 
 -4 --"300MB"--> 10
 -1 --> -2
@@ -1068,11 +1068,11 @@ I don't think this one is started. The design doc is not out yet.
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc4NjA1MDYwNiwyMTIzOTYxNjUwLDcxNz
-Q1NzIxNywxMDg1MTI4MDkyLC0xMDY4MTQyNTMxLC0xMTE4OTQ4
-NDUsLTE4MzAxODUzNzcsLTE4Mjk3NjEyNzMsLTEzNTY3NjA0NT
-EsNzA5NDc5MjQ3LDE2MjQ5MTI5NDksMTU4NDI0ODc4MCwtMTUz
-NTU0MjgyMCwtMTQ5NjY3MDM0NywtMTc2NTAyMDEyNSw4NTgzNz
-E4OSwtMTU2NjEzMjY3MSwtNTA1NjM0MzczLDEyODA2ODczNjEs
-LTEzMjA3MDExMTBdfQ==
+eyJoaXN0b3J5IjpbMTc5MjMwOTAsLTc4NjA1MDYwNiwyMTIzOT
+YxNjUwLDcxNzQ1NzIxNywxMDg1MTI4MDkyLC0xMDY4MTQyNTMx
+LC0xMTE4OTQ4NDUsLTE4MzAxODUzNzcsLTE4Mjk3NjEyNzMsLT
+EzNTY3NjA0NTEsNzA5NDc5MjQ3LDE2MjQ5MTI5NDksMTU4NDI0
+ODc4MCwtMTUzNTU0MjgyMCwtMTQ5NjY3MDM0NywtMTc2NTAyMD
+EyNSw4NTgzNzE4OSwtMTU2NjEzMjY3MSwtNTA1NjM0MzczLDEy
+ODA2ODczNjFdfQ==
 -->
