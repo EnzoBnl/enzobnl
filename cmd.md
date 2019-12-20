@@ -66,9 +66,6 @@ gcloud dataproc jobs submit spark --cluster=dataproc-xxxxxxx-dev --region=global
 gcloud dataproc jobs list --cluster=dataproc-xxxxxxx-dev --region=global
 # kill job by id
 gcloud dataproc jobs kill --region=global
-# make host resolution made by a server
-ssh -D 1080 <server>
-chromium-browser --proxy-server="socks5://127.0.0.1:1080"
 # rename file on Cloud Storage
 gsutil mv gs://old_name gs://new_name
 ```
@@ -122,6 +119,7 @@ ssh -L 9000:10.240.0.44:9000 <host_url>
 export CLASSPATH="/home/enzo/Prog/lib/jar/*"
 // log as another user in terminal
 sudo su - username
+
 ```
 ### CMD removes :
 ```bash
@@ -249,8 +247,9 @@ c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex 
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY5MTI3NDI4MiwtNjA4NjA1NzA4LDExMj
-E5OTE1MzgsLTMxNjMzMDY1MiwtMTk0MDMwMDI5NywyNDEzNjA0
-NzUsLTEwNzQ1MDE1NDAsLTg2NzE2ODc1MSwtODc0OTc4NTI5LC
-0xMzU4MzM5MTUwLDU5NzA2NTA3MiwtMTAzMDc3MDM5N119
+eyJoaXN0b3J5IjpbMTkyOTgyMzg1MCwtNjkxMjc0MjgyLC02MD
+g2MDU3MDgsMTEyMTk5MTUzOCwtMzE2MzMwNjUyLC0xOTQwMzAw
+Mjk3LDI0MTM2MDQ3NSwtMTA3NDUwMTU0MCwtODY3MTY4NzUxLC
+04NzQ5Nzg1MjksLTEzNTgzMzkxNTAsNTk3MDY1MDcyLC0xMDMw
+NzcwMzk3XX0=
 -->
