@@ -1027,7 +1027,7 @@ edges.repartition(10, col("src")).withColumnRenamed("src", "id").groupBy("id").c
 ## The OMM Zone
 
 
-Spark is designed to deal with any size of input data, even with poorly partitioned one having partition sizes completely exceeding the  
+Spark is designed to deal with any size of input data, even with poorly partitioned one having partition sizes completely exceeding your executors execution memory. Thus you may quite often need to face OutOfMemoryException
 ___
 refs:
 - [SO post by Nikolay Vasiliev](https://stackoverflow.com/a/45570944/6580080)
@@ -1074,11 +1074,11 @@ I don't think this one is started. The design doc is not out yet.
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NzI0MDY2ODQsMTMyNjE1NDg2Miw3Mj
-k1OTg4MDMsMTkxNjg4ODIxMCwtMTcxMzMyNTc2NiwtNzg2MDUw
-NjA2LDIxMjM5NjE2NTAsNzE3NDU3MjE3LDEwODUxMjgwOTIsLT
-EwNjgxNDI1MzEsLTExMTg5NDg0NSwtMTgzMDE4NTM3NywtMTgy
-OTc2MTI3MywtMTM1Njc2MDQ1MSw3MDk0NzkyNDcsMTYyNDkxMj
-k0OSwxNTg0MjQ4NzgwLC0xNTM1NTQyODIwLC0xNDk2NjcwMzQ3
-LC0xNzY1MDIwMTI1XX0=
+eyJoaXN0b3J5IjpbMTA1MDI5MjQxNCwxMzI2MTU0ODYyLDcyOT
+U5ODgwMywxOTE2ODg4MjEwLC0xNzEzMzI1NzY2LC03ODYwNTA2
+MDYsMjEyMzk2MTY1MCw3MTc0NTcyMTcsMTA4NTEyODA5MiwtMT
+A2ODE0MjUzMSwtMTExODk0ODQ1LC0xODMwMTg1Mzc3LC0xODI5
+NzYxMjczLC0xMzU2NzYwNDUxLDcwOTQ3OTI0NywxNjI0OTEyOT
+Q5LDE1ODQyNDg3ODAsLTE1MzU1NDI4MjAsLTE0OTY2NzAzNDcs
+LTE3NjUwMjAxMjVdfQ==
 -->
