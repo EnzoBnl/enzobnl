@@ -58,7 +58,7 @@ graph LR
 
 -1[Worker W's memory]
 
--3[**Memory Buffer**:<br/>off-heap overhead space for E:<br/>-VM overheads<br/>-interned strings<br/>-other native overheads]
+-3[Memory Buffer:<br/>off-heap overhead space for E:<br/>-VM overheads<br/>-interned strings<br/>-other native overheads]
 
 -2[... for other on-heap memory or<br/> off-heap overhead of W's executors]
 
@@ -1068,11 +1068,11 @@ I don't think this one is started. The design doc is not out yet.
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc5MjMwOTAsLTc4NjA1MDYwNiwyMTIzOT
-YxNjUwLDcxNzQ1NzIxNywxMDg1MTI4MDkyLC0xMDY4MTQyNTMx
-LC0xMTE4OTQ4NDUsLTE4MzAxODUzNzcsLTE4Mjk3NjEyNzMsLT
-EzNTY3NjA0NTEsNzA5NDc5MjQ3LDE2MjQ5MTI5NDksMTU4NDI0
-ODc4MCwtMTUzNTU0MjgyMCwtMTQ5NjY3MDM0NywtMTc2NTAyMD
-EyNSw4NTgzNzE4OSwtMTU2NjEzMjY3MSwtNTA1NjM0MzczLDEy
-ODA2ODczNjFdfQ==
+eyJoaXN0b3J5IjpbLTYwNTE4MTg3MCwtNzg2MDUwNjA2LDIxMj
+M5NjE2NTAsNzE3NDU3MjE3LDEwODUxMjgwOTIsLTEwNjgxNDI1
+MzEsLTExMTg5NDg0NSwtMTgzMDE4NTM3NywtMTgyOTc2MTI3My
+wtMTM1Njc2MDQ1MSw3MDk0NzkyNDcsMTYyNDkxMjk0OSwxNTg0
+MjQ4NzgwLC0xNTM1NTQyODIwLC0xNDk2NjcwMzQ3LC0xNzY1MD
+IwMTI1LDg1ODM3MTg5LC0xNTY2MTMyNjcxLC01MDU2MzQzNzMs
+MTI4MDY4NzM2MV19
 -->
