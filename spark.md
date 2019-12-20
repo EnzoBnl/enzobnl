@@ -1028,6 +1028,9 @@ edges.repartition(10, col("src")).withColumnRenamed("src", "id").groupBy("id").c
 
 
 Spark is designed to deal with any size of input data, even with poorly partitioned one having partition sizes completely exceeding your executors execution memory. Thus you may quite often need to face OutOfMemoryException
+
+### Errors and fix
+*java.lang.OutOfMemoryError: GC overhead limit exceeded*
 ___
 refs:
 - [SO post by Nikolay Vasiliev](https://stackoverflow.com/a/45570944/6580080)
@@ -1074,11 +1077,11 @@ I don't think this one is started. The design doc is not out yet.
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA1MDI5MjQxNCwxMzI2MTU0ODYyLDcyOT
-U5ODgwMywxOTE2ODg4MjEwLC0xNzEzMzI1NzY2LC03ODYwNTA2
-MDYsMjEyMzk2MTY1MCw3MTc0NTcyMTcsMTA4NTEyODA5MiwtMT
-A2ODE0MjUzMSwtMTExODk0ODQ1LC0xODMwMTg1Mzc3LC0xODI5
-NzYxMjczLC0xMzU2NzYwNDUxLDcwOTQ3OTI0NywxNjI0OTEyOT
-Q5LDE1ODQyNDg3ODAsLTE1MzU1NDI4MjAsLTE0OTY2NzAzNDcs
-LTE3NjUwMjAxMjVdfQ==
+eyJoaXN0b3J5IjpbOTI1NzM2NDkyLDEzMjYxNTQ4NjIsNzI5NT
+k4ODAzLDE5MTY4ODgyMTAsLTE3MTMzMjU3NjYsLTc4NjA1MDYw
+NiwyMTIzOTYxNjUwLDcxNzQ1NzIxNywxMDg1MTI4MDkyLC0xMD
+Y4MTQyNTMxLC0xMTE4OTQ4NDUsLTE4MzAxODUzNzcsLTE4Mjk3
+NjEyNzMsLTEzNTY3NjA0NTEsNzA5NDc5MjQ3LDE2MjQ5MTI5ND
+ksMTU4NDI0ODc4MCwtMTUzNTU0MjgyMCwtMTQ5NjY3MDM0Nywt
+MTc2NTAyMDEyNV19
 -->
