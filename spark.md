@@ -1027,7 +1027,7 @@ edges.repartition(10, col("src")).withColumnRenamed("src", "id").groupBy("id").c
 ## The OMM Zone
 
 
-Spark is designed to deal with any size of input data, even with poorly partitioned one having partition sizes completely exceeding your executors execution memory. It tries to work in memory but when it become impossible it *spills* data to disk. This is the theory, but in practice you will face evil OOMs: This is because Spark's data are not just RDDs: There are many auxiliary in memory data structures that are used by Spark and that may grow with partitions sizes you may quite often need to face OutOfMemoryException
+Spark is designed to deal with any size of input data, even with one having poor partitioning with sizes completely exceeding your execution memory of your executors: It is an "as possible in-memory" engine that tries to work in memory but when it becomes impossible it *spills* data to disk. This is the theory, but in practice you will face evil OOMs: This is because Spark's data are not just RDDs: There are many auxiliary in memory data structures that are used by Spark and that may grow with partitions sizes, potentially leading to OOMs.
 
 ### Errors and fix
 *java.lang.OutOfMemoryError: GC overhead limit exceeded*
@@ -1078,11 +1078,11 @@ I don't think this one is started. The design doc is not out yet.
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzODEwNTc2MywxMzI2MTU0ODYyLDcyOT
-U5ODgwMywxOTE2ODg4MjEwLC0xNzEzMzI1NzY2LC03ODYwNTA2
-MDYsMjEyMzk2MTY1MCw3MTc0NTcyMTcsMTA4NTEyODA5MiwtMT
-A2ODE0MjUzMSwtMTExODk0ODQ1LC0xODMwMTg1Mzc3LC0xODI5
-NzYxMjczLC0xMzU2NzYwNDUxLDcwOTQ3OTI0NywxNjI0OTEyOT
-Q5LDE1ODQyNDg3ODAsLTE1MzU1NDI4MjAsLTE0OTY2NzAzNDcs
-LTE3NjUwMjAxMjVdfQ==
+eyJoaXN0b3J5IjpbLTE1Mjc0MTI5ODksMTMyNjE1NDg2Miw3Mj
+k1OTg4MDMsMTkxNjg4ODIxMCwtMTcxMzMyNTc2NiwtNzg2MDUw
+NjA2LDIxMjM5NjE2NTAsNzE3NDU3MjE3LDEwODUxMjgwOTIsLT
+EwNjgxNDI1MzEsLTExMTg5NDg0NSwtMTgzMDE4NTM3NywtMTgy
+OTc2MTI3MywtMTM1Njc2MDQ1MSw3MDk0NzkyNDcsMTYyNDkxMj
+k0OSwxNTg0MjQ4NzgwLC0xNTM1NTQyODIwLC0xNDk2NjcwMzQ3
+LC0xNzY1MDIwMTI1XX0=
 -->
