@@ -74,11 +74,11 @@ graph LR
 
 5[**User Memory** for E:<br/>-on-heap internal metadata<br/>-user data structures<br/>-handling of miss-estimated<br/>unusually large records]
 
--4 --300MB--> 10
--1 --> -2
--1--spark.memory.offHeap.size bytes-->2
--1--spark.executor.memory JVM string format-->-4
--1 -- spark.executor.memoryOverhead MiB-->-3
+-4 --"300MB"--> 10
+-1 --". . ."--> -2
+-1--"spark.memory.offHeap.size (in bytes)"-->2
+-1--"spark.executor.memory (JVM string format)"-->-4
+-1 --"spark.executor.memoryOverhead (in MiB)"-->-3
 -4 --spark.memory.fraction-->0
 -4 --1-spark.memory.fraction-->5
 0 -- spark.memory.storageFraction--> 4
@@ -1068,7 +1068,7 @@ I don't think this one is started. The design doc is not out yet.
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU4MDA5Mjk1NiwyMTIzOTYxNjUwLDcxNz
+eyJoaXN0b3J5IjpbLTgyNDAzMDM3NSwyMTIzOTYxNjUwLDcxNz
 Q1NzIxNywxMDg1MTI4MDkyLC0xMDY4MTQyNTMxLC0xMTE4OTQ4
 NDUsLTE4MzAxODUzNzcsLTE4Mjk3NjEyNzMsLTEzNTY3NjA0NT
 EsNzA5NDc5MjQ3LDE2MjQ5MTI5NDksMTU4NDI0ODc4MCwtMTUz
