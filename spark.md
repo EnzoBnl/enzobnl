@@ -78,7 +78,7 @@ graph LR
 -1 --> -2
 -1 --"spark.memory.offHeap.size<br/>(in bytes, default=0)"-->2
 -1--"spark.executor.memory<br/>(JVM string format, default=''1g'')"-->-4
--1 --"... * spark.executor.memoryOverhead<br/>(in MiB, default=max(driverMemory * 0.10, 384)"-->-3
+-1 --"spark.executor.memoryOverhead<br/>(in MiB, default=max(driverMemory * 0.10, 384)"-->-3
 -4 --"(... - 300MB) * spark.memory.fraction<br/>(spark.memory.fraction default=0.6)"-->0
 -4 --"(... - 300MB) * (1-spark.memory.fraction)<br/>(1- spark.memory.fraction default=0.4)"-->5
 0 --"spark.memory.storageFraction<br/>(default=0.5)"--> 4
@@ -1068,11 +1068,11 @@ I don't think this one is started. The design doc is not out yet.
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNjE5MzM4MzgsMjEyMzk2MTY1MCw3MT
-c0NTcyMTcsMTA4NTEyODA5MiwtMTA2ODE0MjUzMSwtMTExODk0
-ODQ1LC0xODMwMTg1Mzc3LC0xODI5NzYxMjczLC0xMzU2NzYwND
-UxLDcwOTQ3OTI0NywxNjI0OTEyOTQ5LDE1ODQyNDg3ODAsLTE1
-MzU1NDI4MjAsLTE0OTY2NzAzNDcsLTE3NjUwMjAxMjUsODU4Mz
-cxODksLTE1NjYxMzI2NzEsLTUwNTYzNDM3MywxMjgwNjg3MzYx
-LC0xMzIwNzAxMTEwXX0=
+eyJoaXN0b3J5IjpbLTUzNDgzMTg2MiwyMTIzOTYxNjUwLDcxNz
+Q1NzIxNywxMDg1MTI4MDkyLC0xMDY4MTQyNTMxLC0xMTE4OTQ4
+NDUsLTE4MzAxODUzNzcsLTE4Mjk3NjEyNzMsLTEzNTY3NjA0NT
+EsNzA5NDc5MjQ3LDE2MjQ5MTI5NDksMTU4NDI0ODc4MCwtMTUz
+NTU0MjgyMCwtMTQ5NjY3MDM0NywtMTc2NTAyMDEyNSw4NTgzNz
+E4OSwtMTU2NjEzMjY3MSwtNTA1NjM0MzczLDEyODA2ODczNjEs
+LTEzMjA3MDExMTBdfQ==
 -->
