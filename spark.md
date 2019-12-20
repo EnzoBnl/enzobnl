@@ -1024,6 +1024,9 @@ edges.repartition(10, col("src")).withColumnRenamed("src", "id").groupBy("id").c
             +- *(1) FileScan csv [src#98L] ...
 ```
 
+## The OMM Zone
+Spark is designed to deal with any size of input data, even with poorly partitioned one having partition sizes compexceeding 
+
 ## Coming soon
 ###  Adaptative Execution (AE) in 3.0.0
 [JIRA](https://issues.apache.org/jira/browse/SPARK-9850?jql=text%20~%20%22adaptative%20execution%22)
@@ -1067,11 +1070,11 @@ I don't think this one is started. The design doc is not out yet.
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMyNjE1NDg2Miw3Mjk1OTg4MDMsMTkxNj
-g4ODIxMCwtMTcxMzMyNTc2NiwtNzg2MDUwNjA2LDIxMjM5NjE2
-NTAsNzE3NDU3MjE3LDEwODUxMjgwOTIsLTEwNjgxNDI1MzEsLT
-ExMTg5NDg0NSwtMTgzMDE4NTM3NywtMTgyOTc2MTI3MywtMTM1
-Njc2MDQ1MSw3MDk0NzkyNDcsMTYyNDkxMjk0OSwxNTg0MjQ4Nz
-gwLC0xNTM1NTQyODIwLC0xNDk2NjcwMzQ3LC0xNzY1MDIwMTI1
-LDg1ODM3MTg5XX0=
+eyJoaXN0b3J5IjpbLTc0NjY3NDY0NywxMzI2MTU0ODYyLDcyOT
+U5ODgwMywxOTE2ODg4MjEwLC0xNzEzMzI1NzY2LC03ODYwNTA2
+MDYsMjEyMzk2MTY1MCw3MTc0NTcyMTcsMTA4NTEyODA5MiwtMT
+A2ODE0MjUzMSwtMTExODk0ODQ1LC0xODMwMTg1Mzc3LC0xODI5
+NzYxMjczLC0xMzU2NzYwNDUxLDcwOTQ3OTI0NywxNjI0OTEyOT
+Q5LDE1ODQyNDg3ODAsLTE1MzU1NDI4MjAsLTE0OTY2NzAzNDcs
+LTE3NjUwMjAxMjVdfQ==
 -->
