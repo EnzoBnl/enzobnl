@@ -651,7 +651,7 @@ val x = if (gcd(n_conf, n) != 1) gcd(n_conf, n) else n
 
 *Note:* if `n` is primal, `x` will always be `n` no matter the value of `n_conf`
 -->
-## Data structures
+## Internal representations
 
 SQL & RDD:
 join are materialized as `ZippedPartitionsRDD2` whose memory format depends on the provided `var f: (Iterator[A], Iterator[B]) => Iterator[V]`
@@ -1068,11 +1068,11 @@ I don't think this one is started. The design doc is not out yet.
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkxNjg4ODIxMCwtMTcxMzMyNTc2NiwtNz
-g2MDUwNjA2LDIxMjM5NjE2NTAsNzE3NDU3MjE3LDEwODUxMjgw
-OTIsLTEwNjgxNDI1MzEsLTExMTg5NDg0NSwtMTgzMDE4NTM3Ny
-wtMTgyOTc2MTI3MywtMTM1Njc2MDQ1MSw3MDk0NzkyNDcsMTYy
-NDkxMjk0OSwxNTg0MjQ4NzgwLC0xNTM1NTQyODIwLC0xNDk2Nj
-cwMzQ3LC0xNzY1MDIwMTI1LDg1ODM3MTg5LC0xNTY2MTMyNjcx
-LC01MDU2MzQzNzNdfQ==
+eyJoaXN0b3J5IjpbNzI5NTk4ODAzLDE5MTY4ODgyMTAsLTE3MT
+MzMjU3NjYsLTc4NjA1MDYwNiwyMTIzOTYxNjUwLDcxNzQ1NzIx
+NywxMDg1MTI4MDkyLC0xMDY4MTQyNTMxLC0xMTE4OTQ4NDUsLT
+E4MzAxODUzNzcsLTE4Mjk3NjEyNzMsLTEzNTY3NjA0NTEsNzA5
+NDc5MjQ3LDE2MjQ5MTI5NDksMTU4NDI0ODc4MCwtMTUzNTU0Mj
+gyMCwtMTQ5NjY3MDM0NywtMTc2NTAyMDEyNSw4NTgzNzE4OSwt
+MTU2NjEzMjY3MV19
 -->
