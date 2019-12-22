@@ -1036,6 +1036,7 @@ Spark is designed to deal with any size of input data, even with one having poor
 ___
 refs:
 - [SO post by Nikolay Vasiliev](https://stackoverflow.com/a/45570944/6580080)
+
 ## Coming soon
 ###  Adaptative Execution (AE) in 3.0.0
 [JIRA](https://issues.apache.org/jira/browse/SPARK-9850?jql=text%20~%20%22adaptative%20execution%22)
