@@ -867,11 +867,13 @@ $\vert vertices \vert$>>$\vert edges \vert$/n°partitions
 i.e. n°partitions >> $\vert edges \vert$/$\vert vertices \vert$ 
 i.e. **n°partitions >> avg_n°links_by_page**
 
-- This limits to the horizontal scaling potential
+- 
 
 
-WHY try to reduce skewing ? 
-**Skew is problematic because a partition is processed only by one task at a time: The few tasks assigned to process the huge partitions will delay the end of the step, majority of the CPUs waiting for these few thread to end**
+**WHY try to reduce skewing ?**
+Because:
+- Skew limits to the horizontal scaling potential
+- A partition is processed only by one task at a time: The few tasks assigned to process the huge partitions will delay the end of the step, majority of the CPUs waiting for these few thread to end
 
 #### Workarounds
 ##### 1) Convert to Broadcast join
@@ -918,10 +920,10 @@ val df = hashJoin.union(broadcastJoin)  // by position
 val df = hashJoin.unionByName(broadcastJoin)  // by name 
 ```
 
-#####  Duplicating little table
+#####  3) Duplicating little table
 implem here for RDDs: https://github.com/tresata/spark-skewjoin
 
-##### nulls skew
+##### 4) fighting the "nulls skew"
 - dispatching
 https://stackoverflow.com/a/43394695/6580080
 Skew may happen when key column contains many null values.
@@ -1134,11 +1136,11 @@ I don't think this one is started. The design doc is not out yet.
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODgyNDIzNzIxLC05NTgwMzgzNiwtMTY3OD
-U3MTg5MiwtMTM1MTAzMTIyNiwtMjE0NTc4ODY5MiwxMzI2MTU0
-ODYyLDcyOTU5ODgwMywxOTE2ODg4MjEwLC0xNzEzMzI1NzY2LC
-03ODYwNTA2MDYsMjEyMzk2MTY1MCw3MTc0NTcyMTcsMTA4NTEy
-ODA5MiwtMTA2ODE0MjUzMSwtMTExODk0ODQ1LC0xODMwMTg1Mz
-c3LC0xODI5NzYxMjczLC0xMzU2NzYwNDUxLDcwOTQ3OTI0Nywx
-NjI0OTEyOTQ5XX0=
+eyJoaXN0b3J5IjpbMTA3NTY1NTExNSwtOTU4MDM4MzYsLTE2Nz
+g1NzE4OTIsLTEzNTEwMzEyMjYsLTIxNDU3ODg2OTIsMTMyNjE1
+NDg2Miw3Mjk1OTg4MDMsMTkxNjg4ODIxMCwtMTcxMzMyNTc2Ni
+wtNzg2MDUwNjA2LDIxMjM5NjE2NTAsNzE3NDU3MjE3LDEwODUx
+MjgwOTIsLTEwNjgxNDI1MzEsLTExMTg5NDg0NSwtMTgzMDE4NT
+M3NywtMTgyOTc2MTI3MywtMTM1Njc2MDQ1MSw3MDk0NzkyNDcs
+MTYyNDkxMjk0OV19
 -->
