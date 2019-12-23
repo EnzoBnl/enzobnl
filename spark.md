@@ -866,12 +866,17 @@ We have actually a skew problem if
 $\vert vertices \vert$>>$\vert edges \vert$/n°partitions  
 i.e. n°partitions >> $\vert edges \vert$/$\vert vertices \vert$ 
 i.e. **n°partitions >> avg_n°links_by_page**
+
 - This limits to the horizontal scaling potential
 
+
+WHY try to reduce skewing ? 
 **Skew is problematic because a partition is processed only by one task at a time: The few tasks assigned to process the huge partitions will delay the end of the step, majority of the CPUs waiting for these few thread to end**
-##### convert to Broadcast join
+
+#### Workarounds
+##### 1) Convert to Broadcast join
 If the skewed big table is joined with a relatively, try to repartition evenly (RoundRobinPartitioning, `repartition(n)`) and use a broadcast join if spark does not managed to do it itself (tune threshold `"spark.sql.autoBroadcastJoinThreshold"` to the desired size in Bytes. 
-##### 2-steps join
+##### 2) The 2-steps join
 Trick: (`<hubs>` = `(home_id)` but can contains other hubs)
 
 ```sql
@@ -1129,11 +1134,11 @@ I don't think this one is started. The design doc is not out yet.
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNTI4MjYwMTksLTk1ODAzODM2LC0xNj
-c4NTcxODkyLC0xMzUxMDMxMjI2LC0yMTQ1Nzg4NjkyLDEzMjYx
-NTQ4NjIsNzI5NTk4ODAzLDE5MTY4ODgyMTAsLTE3MTMzMjU3Nj
-YsLTc4NjA1MDYwNiwyMTIzOTYxNjUwLDcxNzQ1NzIxNywxMDg1
-MTI4MDkyLC0xMDY4MTQyNTMxLC0xMTE4OTQ4NDUsLTE4MzAxOD
-UzNzcsLTE4Mjk3NjEyNzMsLTEzNTY3NjA0NTEsNzA5NDc5MjQ3
-LDE2MjQ5MTI5NDldfQ==
+eyJoaXN0b3J5IjpbODgyNDIzNzIxLC05NTgwMzgzNiwtMTY3OD
+U3MTg5MiwtMTM1MTAzMTIyNiwtMjE0NTc4ODY5MiwxMzI2MTU0
+ODYyLDcyOTU5ODgwMywxOTE2ODg4MjEwLC0xNzEzMzI1NzY2LC
+03ODYwNTA2MDYsMjEyMzk2MTY1MCw3MTc0NTcyMTcsMTA4NTEy
+ODA5MiwtMTA2ODE0MjUzMSwtMTExODk0ODQ1LC0xODMwMTg1Mz
+c3LC0xODI5NzYxMjczLC0xMzU2NzYwNDUxLDcwOTQ3OTI0Nywx
+NjI0OTEyOTQ5XX0=
 -->
