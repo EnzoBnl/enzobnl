@@ -24,6 +24,7 @@
 
 *DAG = Directed Acyclic Graph. They are used by spark to represent Jobs' stages or Stages' steps*
 
+
 ## APIs
  
  Although the term **A**pplication **P**rogramming **I**nterface is mostly used for the element exposing the services of a web server, it has a more general meaning. 
@@ -47,8 +48,10 @@ Useful sources:
 -  pull request document [Unified Memory Management in Spark 1.6](https://www.linuxprobe.com/wp-content/uploads/2017/04/unified-memory-management-spark-10000.pdf) by Andrew Or and Josh Rosen
 -  blog article [Apache Spark and off-heap memory](https://www.waitingforcode.com/apache-spark/apache-spark-off-heap-memory/read) by Bartosz Konieczny.
 - blog article [Deep Understanding of Spark Memory Management Model](https://www.tutorialdocs.com/article/spark-memory-management.html) by  Alex
-- blog article [How does Facebook tune Apache Spark for Large-Scale Workloads?](https://towardsdatascience.com/how-does-facebook-tune-apache-spark-for-large-scale-workloads-3238ddda0830)
+- blog article [How does Facebook tune Apache Spark for Large-Scale Workloads?](https://towardsdatascience.com/how-does-facebook-tune-apache-spark-for-large-scale-workloads-3238ddda0830Spark SQL's Datasets & DataFrames
 
+- Spark SQL first realease: Spark 1.0.0 (May 30, 2014) (see [Spark SQL's paper](https://dl.acm.org/citation.cfm?id=2742797) by Michael Armbrust)
+ 
 ### Allocation of the memory of a worker *W* to a given executor *E*
 
 <div class="mermaid"
@@ -113,7 +116,12 @@ buffering intermediate data when performing shuffles, joins, sorts and aggregati
 https://spoddutur.github.io/spark-notes/deep_dive_into_storage_formats.html
 
 - 1.0.0 (May 26, 2014): There was no "DataFrame" but only `SchemaRDD`. It was a `RDD` of fully deserialized Java Objects.
-- 1.3.0 (Mar 6, 2015): `DataFrame` is born and is still and RDD of deserialized objects. `SchemaRDD` became an alias for smooth deprecation purpose.
+- 1.3.0 (Mar 6, 2015)Memory format 
+#### during processing
+https://spoddutur.github.io/spark-notes/deep_dive_into_storage_formats.html
+
+- 1.0.0: There was no "DataFrame" but only `SchemaRDD`. It was a `RDD` of Java Objects on-heap (see spark [Spark's RDDs paper](http://people.csail.mit.edu/matei/papers/2012/nsdi_spark.pdf) by Matei Zaharia, 2011).
+- 1.3.0: `DataFrame` is born and is still and RDD of deserializedon-heap objects. `SchemaRDD` became an alias for smooth deprecation purpose.
 
 ```scala
 @deprecated("use DataFrame", "1.3.0")
@@ -122,7 +130,7 @@ https://spoddutur.github.io/spark-notes/deep_dive_into_storage_formats.html
 
 - Since 1.4.0 (June 11, 2015) it is `RDD` of `InternalRow`s that are **Binary Row-Based Format** known as **Tungsten Row Format**. `InternalRow`s:
   - allows **in-place elements access** that avoid serialization/deserialization --> just a little little bit slower than `RDD`s for element access but very very faster when it comes to shuffles.
-  - store their data very efficiently: divide by 4 memory footprint compared to RDDs of Java objects. 
+  - store their data very efficiently:**off-heap** --> divide by 4 memory footprint compared to RDDs of Java objects. 
   - Leverage the activation of the off-heap memory usage more than RDDs of deserialized objects by not implying ser/deser overhead.
   - [UnsafeRow](https://jaceklaskowski.gitbooks.io/mastering-spark-sql/spark-sql-UnsafeRow.html) is the basic implementation of [InternalRow](https://jaceklaskowski.gitbooks.io/mastering-spark-sql/spark-sql-InternalRow.html) (see descriptions of Jacek Laskowski's *Mastering Spark SQL* links for each)
   
@@ -130,10 +138,10 @@ https://spoddutur.github.io/spark-notes/deep_dive_into_storage_formats.html
 - Since 2.0.0 (Jul 19, 2016), `DataFrame` is merged with `Dataset` and remains just an alias `type DataFrame = Dataset[Row]`.
 
 
-### contoguousity (TODO validate) (SQL)
+#### contoguousity (TODO validate) (SQL)
 There is only a contiguousity of the `UnsafeRow`s' memory because an `RDD[UnsafeRow]` is a collection of `UnsafeRow`s' referencies that lives somewhere on-heap. This causes many CPU's caches defaults, each new record to process causing one new default.
 
-## Caching (SQL)
+#### Caching (SQL)
 
 |  |default storage level|
 |--|--|
@@ -141,7 +149,7 @@ There is only a contiguousity of the `UnsafeRow`s' memory because an `RDD[Unsafe
 | `Dataset.persist` |`MEMORY_AND_DISK`|
 
 
-- When a dataset is cached using `def cache(): this.type = persist()` it is basically persisted with default `storageLevel` which is `MEMORY_AND_DISK`:
+- When a dataset is cached using `def cache(): this.type = persist()` it is basically `persist`ed with default `storageLevel` which is `MEMORY_AND_DISK`:
 
 ```scala
 /**
@@ -199,15 +207,18 @@ df2 = df
 
 - cached blocks are not replicated by default, neither in memory nor when spilled (which stores on disks using local file system). You can activate a factor 2 replication by appending a `_2` suffix to any storage level constant, for example `MEMORY_AND_DISK_2`.
 
-## is a DataFrame sorted ?
+#### is a DataFrame sorted ?
 One can use `df.queryExecution.sparkPlan.outputOrdering` that returns a sequence of `org.apache.spark.sql.catalyst.expressions.SortOrder`s to retrieve this information:
 
 ```scala
 def isSorted(df: Dataset[_]): Boolean =
-  !df.sort().queryExecution.sparkPlan.outputOrdering.isEmpty
+ .
+
+```scala
+val dfIsSorted = !df.sort().queryExecution.sparkPlan.outputOrdering.isEmpty
 ```
 
-## `DataFrame` vs `Dataset[<not Row>]` row processing steps
+### `DataFrame` vs other `Dataset[<not Row>]` steps of rows processing steps
 Short: DataFrame less secure but a bit faster.
 
 Let's compare processing steps of the `GeneratedIteratorForCodegenStage1` class that you can view by calling `.queryExecution.debug.codegen()` on a `DataFrame`
@@ -217,7 +228,7 @@ The semantic is:
 2. create a new feature containing a substring of the pseudo
 3. apply a filter on the new feature
 
-### DataFrame's WholeStageCodegen execution...
+#### DataFrame's WholeStageCodegen execution ...
 ```scala
 val df = spark.read
       .format("csv")
@@ -299,7 +310,7 @@ if (false) {
 append((filter_mutableStateArray_0[1].getRow()));
 ```
 
-### ... vs Dataset's WholeStageCodegen execution
+#### ... vs Dataset's WholeStageCodegen execution
 ```scala
 val ds = spark.read
       .format("csv")
@@ -401,7 +412,7 @@ append((project_mutableStateArray_0[7].getRow()));
 
 [Full code available here](https://gist.github.com/EnzoBnl/37e07e9cf7bce440734c7d33304257f0)
 
-## Conversion to RDD: `df.rdd` vs `df.queryExecution.toRdd()`
+### Conversion to RDD: `df.rdd` vs `df.queryExecution.toRdd()`
 [Jacek Laskowski's post on SO](https://stackoverflow.com/questions/44708629/is-dataset-rdd-an-action-or-transformation)
 
 1. `.rdd`
@@ -446,7 +457,7 @@ df.queryExecution.toRdd
 .map((row: InternalRow) => InternalRow.fromSeq(Seq(row.getLong(0)+10, row.getLong(0)-10)))  
 ```
 
-## Dataset's OOP design
+## Dataset's# OOP design
 `Dataset` can be viewed as a **functional builder** for a `LogicalPlan`, implemented as a **fluent API** friendly to SQL users.
 ```scala
 val df2 = df1.join(...).select(...).where(...).orderBy(...).show()
@@ -531,10 +542,32 @@ Partitioning & graphs in Spark
 
 
 
-# Partitions in Spark
+## Usefull confs:
+```scala
+SparkSession.builder.config("spark.default.parallelism", "12") // default = 200
+```
 
-## Partitioning (SQL & Core)
-### Partitioner
+## Vector Type
+`org.apache.spark.ml.linalg.Vector`
+has the following spark sql type (note that values are in `ArrayType`):
+```scala
+private[this] val _sqlType = {  
+// type: 0 = sparse, 1 = dense  
+// We only use "values" for dense vectors, and "size", "indices", and "values" for sparse  
+// vectors. The "values" field is nullable because we might want to add binary vectors later,  
+// which uses "size" and "indices", but not "values".  
+StructType(Seq(  
+StructField("type", ByteType, nullable = false),  
+StructField("size", IntegerType, nullable = true),  
+StructField("indices", ArrayType(IntegerType, containsNull = false), nullable = true),  
+StructField("values", ArrayType(DoubleType, containsNull = false), nullable = true)))  
+}
+```
+
+## Partitions in Spark
+
+### Partitioning (SQL & Core)
+#### Partitioner
 SQL:
 Main partitioning
 - `HashPartitioning`: on `keys` uses *Murmur Hash 3* (fast non-cryptographic hashing, easy to reverse) (while `PairRDD`s ' `partitionBy(hashPartitioner)` uses `.hashCode()`)
@@ -545,7 +578,7 @@ Main partitioning
 
 Always partition on Long or Int, hash/encrypt string key if necessary.
 
-### Materialize partitions
+#### Materialize partitions
 // FIXME
 RDD: 
 ```scala
@@ -583,19 +616,19 @@ is up to 30% faster than
 spark.range(100000).foreachPartition(p => ())}  
 ```
 
-## Repartitioning  (SQL & Core)
-### coalesce
+### Repartitioning  (SQL & Core)
+#### coalesce
 Try to minimize the data that need to be shuffled by merging partitions on the same executors in priority -> fast but may lead inequal partition 
-### repartition
+#### repartition
 If column not given: round robin
 else: hashpartitioning
 
 if numpartition not given: reads  `"spark.sql.shuffle.partitions"`
 
-### repartitionByRange
+#### repartitionByRange
 repartition by range, forced to pass columns.
 
-### N°partitions heuristic
+#### N°partitions heuristic
 Really optimized runtime with n°partitions (= number max of parallel tasks) = 4 or 5 times n°available threads
 ```scala
 val spark = SparkSession  
@@ -650,7 +683,7 @@ val x = if (gcd(n_conf, n) != 1) gcd(n_conf, n) else n
 
 *Note:* if `n` is primal, `x` will always be `n` no matter the value of `n_conf`
 -->
-## Internal representations
+## Internal representationsData structures ()
 
 SQL & RDD:
 join are materialized as `ZippedPartitionsRDD2` whose memory format depends on the provided `var f: (Iterator[A], Iterator[B]) => Iterator[V]`
@@ -700,11 +733,11 @@ def collect(): Array[T] = withScope {
 *Note*: the `toArray` is free because after `getByteArrayRdd`, the partition is an iterator of only one element which is a tuple `(number_of_rows, optimized_byte_array)`.
 - Hash joins are relying on `BytesToBytesMap`, "An append-only hash map where keys and values are contiguous regions of bytes."
 
-## Join
+### Join
 ### Join algorithms families
 
 - **Nested loop**: For each row in table A, loop on table B's rows to find matches
-$O(\vert edges \vert * \vert vertices \vert)$
+$O($\vert edges \vert$ * $\vert vertices \vert$)$
 ```python
 for e in edges:
     for v in vertices:
@@ -713,7 +746,7 @@ for e in edges:
 ```
 
 - **Hash join**: Create a join_key -> row hashmap for the smallest table. Loop on the biggest table and search for matches in the hashmap.
-$O(\vert vertices \vert + \vert edges \vert)$, only equi joins, additional $O(\vert vertices \vert)$ space complexity
+$O($\vert vertices \vert$ + $\vert edges \vert$)$, only equi joins, additional $O($\vert vertices \vert)$) space complexity
 
 ```python
 vertices_map = {v.join_key: v for v in vertices}  # O($\vert vertices \vert$)
@@ -726,7 +759,7 @@ for e in edges:  # O($\vert edges \vert$)
 
 - **Sort-merge join**: Sort tables and iterate on both of them in the same move in one loop
 
-$O(\vert vertices \vert*log(\vert vertices \vert) + \vert edges \vert*log(\vert edges \vert))$ , adaptable to handle not only equi joins
+$O($\vert vertices \vert$*log($\vert vertices \vert$) + $\vert edges \vert$*log($\vert edges \vert$))$ , adaptable to handle not only equi joins
 
 ```python
 vertices.sort(lambda v: v.join_key)  # O($\vert vertices \vert$*log($\vert vertices \vert$)
@@ -743,7 +776,7 @@ while(i < len(vertices) and j < len(edges)):  # O($\vert vertices \vert$ + $\ver
         j += 1
 ```
 
-### Joins in Spark  (SQL)
+#### Joins in Spark  (SQL)
 https://github.com/vaquarkhan/Apache-Kafka-poc-and-notes/wiki/Apache-Spark-Join-guidelines-and-Performance-tuning
 https://databricks.com/session/optimizing-apache-spark-sql-joins
 
@@ -788,7 +821,7 @@ uses `+- BroadcastExchange IdentityBroadcastMode` pass the partitions as they ar
 
 That means that [JoinSelection](https://jaceklaskowski.gitbooks.io/mastering-spark-sql/spark-sql-SparkStrategy-JoinSelection.html) execution planning strategy (and so Spark Planner) prefers sort merge join over [shuffled hash join](https://jaceklaskowski.gitbooks.io/mastering-spark-sql/spark-sql-SparkPlan-ShuffledHashJoinExec.html).
 
-### Deal with skewed data  (SQL & Core)
+#### Deal with skewed data  (SQL & Core)
 
 When loaded, data is evenly partitioned by default. The danger comes when queries involves `HashPartioner`.
 
@@ -833,9 +866,9 @@ i.e. **n°partitions >> avg_n°links_by_page**
 - This limits to the horizontal scaling potential
 
 **Skew is problematic because a partition is processed only by one task at a time: The few tasks assigned to process the huge partitions will delay the end of the step, majority of the CPUs waiting for these few thread to end**
-#### convert to Broadcast join
+##### convert to Broadcast join
 If the skewed big table is joined with a relatively, try to repartition evenly (RoundRobinPartitioning, `repartition(n)`) and use a broadcast join if spark does not managed to do it itself (tune threshold `"spark.sql.autoBroadcastJoinThreshold"` to the desired size in Bytes. 
-#### 2-steps join
+##### 2-steps join
 Trick: (`<hubs>` = `(home_id)` but can contains other hubs)
 
 ```sql
@@ -877,10 +910,10 @@ val df = hashJoin.union(broadcastJoin)  // by position
 val df = hashJoin.unionByName(broadcastJoin)  // by name 
 ```
 
-####  Duplicating little table
+#####  Duplicating little table
 implem here for RDDs: https://github.com/tresata/spark-skewjoin
 
-#### nulls skew
+##### nulls skew
 - dispatching
 https://stackoverflow.com/a/43394695/6580080
 Skew may happen when key column contains many null values.
@@ -905,14 +938,14 @@ val joinable = data.filter('keyToJoin.isNotNull)
 joinable.join(...) union notJoinable
 ```
 
-### multi-join prepartitioning trick @ LinkedIn
+#### multi-join prepartitioning trick @ LinkedIn
 TODO https://fr.slideshare.net/databricks/improving-spark-sql-at-linkedin
 TODO: Matrix multiplicityhttps://engineering.linkedin.com/blog/2017/06/managing--exploding--big-data
 
-### Range Joins
+### TODO: Range Joins
 TODO
 
-## GroupBy  (SQL & Core)
+### GroupBy  (SQL & Core)
 For `groupBy` on `edges.dst`, all's right because only the pre-aggregates (`partial_count(1)`, 1 row per distinct page id in each partition) are exchanged through cluster: This is equivalent to the `rdd.reduce`, `rdd.reduceByKey`, `rdd.aggregateByKey`, `combineByKey`  and not like `rdd.groupByKey` or `rdd.groupBy` which does not perform pre-aggregation and send everything over the network...
 
 ```sql
@@ -929,7 +962,7 @@ SELECT src, count(*) FROM edges GROUP BY src
 
 (* means WholeStageCodegen used)
 
-## Sort  (SQL & Core)
+### Sort  (SQL & Core)
 
 An `orderBy` starts with a step of exchange relying on `RangePartitioner` that "partitions sortable records by range into **roughly equal ranges**. The ranges are determined by sampling the content of the RDD passed in." (scaladoc)
 
@@ -953,23 +986,29 @@ SELECT src, count(*) as c FROM edges GROUP BY src ORDER BY c
             +- *(1) InMemoryTableScan [src#4L]
 ```
 
-## Exchange/Shuffle (SQL & Core)
+### Exchange/Shuffle (SQL & Core)
+
 http://hydronitrogen.com/apache-spark-shuffles-explained-in-depth.html
 https://0x0fff.com/spark-architecture-shuffle/
 related issues: SPARK-2044 SPARK-3376 SPARK-4550
 
 Shuffle execution: 
-1. local partitions **map output are packed in execution memory** region and **spilled to local file system by batch** when memory become saturated
+1.
+*Shuffle in short: When exchange is needed, local partitions **map output are packed in execution memory** region and **spilled to local file system by batch** when memory become saturated
 2. outputs targeting the **same partition are spilled to an unique file**
 3. when a file corresponding to a given partition id has been written completely on map side, the shuffle manager states that the **chunk is ready to be fetched** by reduce side tasks.
 
+written to disk, and a shuffle manager is notified that the chunk is ready to be fetched by other executors.*
 
+*Spill in short: Spill means that RDD's data is serialized and written to disk when it does not fit anymore in memory. Not linked directly to shuffle (? FIXME)* 
 
-### Actors involved in shuffle (FIXME)
-- `ShuffleManager` is trait that is instantiated on driver (register shuffles) and executors (ask to write or read data over connections with other executors). 
+#### Actors involved in shuffle (FIX ME)
+- `ShuffleManager` is traitclass that is instantciated on driver (register shuffles) and executors (ask to write or read data over connections with other executors). 
 The default current implementation is [`SortShuffleManager`](https://github.com/apache/spark/blob/master/core/src/main/scala/org/apache/spark/shuffle/sort/SortShuffleManager.scala). Note: Memory-based shuffle managers proposed with first graphx release has been abandoned because it lacks in reliability and do not gain much in speed because disk based shuffles leverage hyper fast data transfers with `java.nio.channels.FileChannel.transferTo(...)`. SSDs storage usage adds also a great speed up.
 
-- The `ShuffleManager.getReader: ShuffleReader` allows to fetch `org.apache.spark.sql.execution.ShuffledRowRDD extends RDD[InternalRow]` which *"is a specialized version of `org.apache.spark.rdd.ShuffledRDD` that is optimized for shuffling rows instead of Java key-value pairs"*.
+- 
+The `ShuffleManager.getReader: ShuffleReader` allows to fetch `org.apache.spark.sql.execution.ShuffledRowRDD extends RDD[InternalRow]` which *"is a specialized version of `org.apache.spark.rdd.ShuffledRDD` that is optimized for shuffling rows instead of Java key-value pairs"*.."
+
 See `BypassMergeSortShuffleWriter` which relies on `DiskBlockObjectWriter` & `BlockManager`
 
 - an `ExternalShuffleService` is a server that serves the map output files to guarantee their availability in case of executor failure, by not making executors directly serve each others.
@@ -977,7 +1016,8 @@ See `BypassMergeSortShuffleWriter` which relies on `DiskBlockObjectWriter` & `Bl
 ### Exchanges planning (SQL)
 Exchange are carefully optimized by Catalyst and are ordered to be as cheap as possible.
 
-For example:
+For example#### Exchanges planning (SQL)
+Exchange are carefully optimized done only if necessary:
 
 ```scala
 spark.conf.set("spark.sql.autoBroadcastJoinThreshold", 1)  
@@ -1038,7 +1078,7 @@ refs:
 - [SO post by Nikolay Vasiliev](https://stackoverflow.com/a/45570944/6580080)
 
 ## Coming soon
-###  Adaptative Execution (AE) in 3.0.0
+### ouverture: Adaptative Execution (AE) in 3.0.0
 [JIRA](https://issues.apache.org/jira/browse/SPARK-9850?jql=text%20~%20%22adaptative%20execution%22)
 [JIRA issue's Google Doc](https://docs.google.com/document/d/1mpVjvQZRAkD-Ggy6-hcjXtBPiQoVbZGe3dLnAKgtJ4k/edit)
 [Intel doc](https://software.intel.com/en-us/articles/spark-sql-adaptive-execution-at-100-tb)
@@ -1070,7 +1110,13 @@ I don't think this one is started. The design doc is not out yet.
 - 2014 *GraphX: Graph Processing in a  Distributed Dataflow Framework*, J E. Gonzalez R S. Xin A Dave, D Crankshaw  M J. Franklin I Stoica
 - 2015 *Spark SQL: Relational Data Processing in Spark*, Michael Armbrust Reynold S. Xin
 
-### Other sources
+### Other source
+
+
+## References
+- spark/graphx and graphframes sources
+- Spark SQL paper
+- GraphX 2013/2014 papers
 - [Map-side join in Hive](https://cwiki.apache.org/confluence/display/Hive/Skewed+Join+Optimization)
 - [Skewed dataset join in Spark](https://stackoverflow.com/questions/40373577/skewed-dataset-join-in-spark)
 - [Mastering Spark SQL](https://jaceklaskowski.gitbooks.io/mastering-spark-sql/)
@@ -1080,11 +1126,11 @@ I don't think this one is started. The design doc is not out yet.
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxNDU3ODg2OTIsMTMyNjE1NDg2Miw3Mj
-k1OTg4MDMsMTkxNjg4ODIxMCwtMTcxMzMyNTc2NiwtNzg2MDUw
-NjA2LDIxMjM5NjE2NTAsNzE3NDU3MjE3LDEwODUxMjgwOTIsLT
-EwNjgxNDI1MzEsLTExMTg5NDg0NSwtMTgzMDE4NTM3NywtMTgy
-OTc2MTI3MywtMTM1Njc2MDQ1MSw3MDk0NzkyNDcsMTYyNDkxMj
-k0OSwxNTg0MjQ4NzgwLC0xNTM1NTQyODIwLC0xNDk2NjcwMzQ3
-LC0xNzY1MDIwMTI1XX0=
+eyJoaXN0b3J5IjpbLTEzNTEwMzEyMjYsLTIxNDU3ODg2OTIsMT
+MyNjE1NDg2Miw3Mjk1OTg4MDMsMTkxNjg4ODIxMCwtMTcxMzMy
+NTc2NiwtNzg2MDUwNjA2LDIxMjM5NjE2NTAsNzE3NDU3MjE3LD
+EwODUxMjgwOTIsLTEwNjgxNDI1MzEsLTExMTg5NDg0NSwtMTgz
+MDE4NTM3NywtMTgyOTc2MTI3MywtMTM1Njc2MDQ1MSw3MDk0Nz
+kyNDcsMTYyNDkxMjk0OSwxNTg0MjQ4NzgwLC0xNTM1NTQyODIw
+LC0xNDk2NjcwMzQ3XX0=
 -->
