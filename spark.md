@@ -794,6 +794,7 @@ Main types:
 Implems:
 - **BroadcastHashJoin**: Only if one table is tiny, avoid shuffling the big table
 <img src="https://jaceklaskowski.gitbooks.io/mastering-spark-sql/images/spark-sql-BroadcastHashJoinExec-webui-query-details.png" width="350"/>
+
 uses `+- BroadcastExchange HashedRelationBroadcastMode` : build a `HashedRelation` ready to be broadcasted
 
 `spark.sql.autoBroadcastJoinThreshold`
@@ -805,6 +806,7 @@ The size of a dataframe is deduced from the `sizeInBytes` of the `LogicalPlan`'s
 
 - **ShuffledHashJoin**: Only if one is enough small to handle partitioned hashmap creation overhead
 <img src="https://jaceklaskowski.gitbooks.io/mastering-spark-sql/images/spark-sql-ShuffledHashJoinExec-webui-query-details.png" width="350"/>
+
 ```scala
 spark.conf.get("spark.sql.join.preferSortMergeJoin")
 ```
@@ -812,9 +814,11 @@ uses `+- Exchange hashpartitioning`
 in each partition a `HashedRelation` is build (relies on `BytesToBytesMap`).
 - **SortMergeJoin**: Fits for 2 even table big sizes, require keys to be orderable
 <img src="https://jaceklaskowski.gitbooks.io/mastering-spark-sql/images/spark-sql-SortMergeJoinExec-webui-query-details.png" width="350"/>
+
 uses `+- Exchange hashpartitioning`
 - **BroadcastNestedLoopJoin**: Only if one table is tiny, and it's not possible to use hashing based **BroadcastHashJoin** (because key is array which is hashed by address, ...)
 <img src="https://jaceklaskowski.gitbooks.io/mastering-spark-sql/images/spark-sql-BroadcastNestedLoopJoinExec-webui-details-for-query.png" width="350"/>
+
 uses `+- BroadcastExchange IdentityBroadcastMode` pass the partitions as they are: optimized array of `UnsafeRow`s' bytes obtained with `getByteArrayRdd().collect()`
 
 [spark.sql.join.preferSortMergeJoin](https://jaceklaskowski.gitbooks.io/mastering-spark-sql/spark-sql-properties.html#spark.sql.join.preferSortMergeJoin) is an internal configuration property and is enabled by default.
@@ -1126,11 +1130,11 @@ I don't think this one is started. The design doc is not out yet.
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2Nzg1NzE4OTIsLTEzNTEwMzEyMjYsLT
-IxNDU3ODg2OTIsMTMyNjE1NDg2Miw3Mjk1OTg4MDMsMTkxNjg4
-ODIxMCwtMTcxMzMyNTc2NiwtNzg2MDUwNjA2LDIxMjM5NjE2NT
-AsNzE3NDU3MjE3LDEwODUxMjgwOTIsLTEwNjgxNDI1MzEsLTEx
-MTg5NDg0NSwtMTgzMDE4NTM3NywtMTgyOTc2MTI3MywtMTM1Nj
-c2MDQ1MSw3MDk0NzkyNDcsMTYyNDkxMjk0OSwxNTg0MjQ4Nzgw
-LC0xNTM1NTQyODIwXX0=
+eyJoaXN0b3J5IjpbLTk1ODAzODM2LC0xNjc4NTcxODkyLC0xMz
+UxMDMxMjI2LC0yMTQ1Nzg4NjkyLDEzMjYxNTQ4NjIsNzI5NTk4
+ODAzLDE5MTY4ODgyMTAsLTE3MTMzMjU3NjYsLTc4NjA1MDYwNi
+wyMTIzOTYxNjUwLDcxNzQ1NzIxNywxMDg1MTI4MDkyLC0xMDY4
+MTQyNTMxLC0xMTE4OTQ4NDUsLTE4MzAxODUzNzcsLTE4Mjk3Nj
+EyNzMsLTEzNTY3NjA0NTEsNzA5NDc5MjQ3LDE2MjQ5MTI5NDks
+MTU4NDI0ODc4MF19
 -->
