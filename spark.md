@@ -1003,21 +1003,23 @@ SELECT src, count(*) as c FROM edges GROUP BY src ORDER BY c
 ### Exchange/Shuffle (SQL & Core)
 
 http://hydronitrogen.com/apache-spark-shuffles-explained-in-depth.html
+
 https://0x0fff.com/spark-architecture-shuffle/
+
 related issues: SPARK-2044 SPARK-3376 SPARK-4550
 
 Shuffle execution: 
-1. When exchange is needed, local partitions **map output are packed in execution memory** region and **spilled to local file system by batch** when memory become saturated
+1. local partitions **map output are packed in execution memory** region and **spilled to local file system by batch** when memory become saturated
 2. outputs targeting the **same partition are spilled to an unique file**
 3. when a file corresponding to a given partition id has been written completely on map side, the shuffle manager states that the **chunk is ready to be fetched** by reduce side tasks.
 
-#### Actors involved in shuffle (FIX ME)
-- `ShuffleManager` is traitclass that is instantciated on driver (register shuffles) and executors (ask to write or read data over connections with other executors). 
+
+
+#### Actors involved in shuffle (FIXME)
+- `ShuffleManager` is trait that is instantiated on driver (register shuffles) and executors (ask to write or read data over connections with other executors). 
 The default current implementation is [`SortShuffleManager`](https://github.com/apache/spark/blob/master/core/src/main/scala/org/apache/spark/shuffle/sort/SortShuffleManager.scala). Note: Memory-based shuffle managers proposed with first graphx release has been abandoned because it lacks in reliability and do not gain much in speed because disk based shuffles leverage hyper fast data transfers with `java.nio.channels.FileChannel.transferTo(...)`. SSDs storage usage adds also a great speed up.
 
-- 
-The `ShuffleManager.getReader: ShuffleReader` allows to fetch `org.apache.spark.sql.execution.ShuffledRowRDD extends RDD[InternalRow]` which *"is a specialized version of `org.apache.spark.rdd.ShuffledRDD` that is optimized for shuffling rows instead of Java key-value pairs"*.."
-
+- The `ShuffleManager.getReader: ShuffleReader` allows to fetch `org.apache.spark.sql.execution.ShuffledRowRDD extends RDD[InternalRow]` which *"is a specialized version of `org.apache.spark.rdd.ShuffledRDD` that is optimized for shuffling rows instead of Java key-value pairs"*.
 See `BypassMergeSortShuffleWriter` which relies on `DiskBlockObjectWriter` & `BlockManager`
 
 - an `ExternalShuffleService` is a server that serves the map output files to guarantee their availability in case of executor failure, by not making executors directly serve each others.
@@ -1025,8 +1027,7 @@ See `BypassMergeSortShuffleWriter` which relies on `DiskBlockObjectWriter` & `Bl
 ### Exchanges planning (SQL)
 Exchange are carefully optimized by Catalyst and are ordered to be as cheap as possible.
 
-For example#### Exchanges planning (SQL)
-Exchange are carefully optimized done only if necessary:
+For example:
 
 ```scala
 spark.conf.set("spark.sql.autoBroadcastJoinThreshold", 1)  
@@ -1081,15 +1082,19 @@ Spark is designed to deal with any size of input data, even with one having poor
 *TODO: Complete me*
 
 *java.lang.OutOfMemoryError: GC overhead limit exceeded*
-- Fixable by
-___
+- Fixable by:
+
+__________________
+
 refs:
 - [SO post by Nikolay Vasiliev](https://stackoverflow.com/a/45570944/6580080)
 
 ## Coming soon
 ### ouverture: Adaptative Execution (AE) in 3.0.0
 [JIRA](https://issues.apache.org/jira/browse/SPARK-9850?jql=text%20~%20%22adaptative%20execution%22)
+
 [JIRA issue's Google Doc](https://docs.google.com/document/d/1mpVjvQZRAkD-Ggy6-hcjXtBPiQoVbZGe3dLnAKgtJ4k/edit)
+
 [Intel doc](https://software.intel.com/en-us/articles/spark-sql-adaptive-execution-at-100-tb)
 apache/spark master branch is about to be released in the next months as Spark 3.0.0.
 AE open since 1.6 has been merged 15/Jun/19. (Lead by # Carson Wang from Intel)
