@@ -861,9 +861,9 @@ But, as every page points back to the home, the hash partitioning on `edges.dst`
 SELECT * FROM edges JOIN vertices ON edges.dst = vertices.id
 ```
 
-The avg n°record_by_partition = $\vert edges \vert$/n°partitions 
+The $avg(n°recordByPartition) = \frac{\vert edges \vert}{n°partitions}$
 We have actually a skew problem if 
-$\vert vertices \vert$>>$\vert edges \vert$/n°partitions  
+$\vert vertices \vert >> avg(n°recordByPartition) = \frac{\vert edges \vert}{n°partitions}$
 i.e. n°partitions >> $\vert edges \vert$/$\vert vertices \vert$ 
 i.e. **n°partitions >> avg_n°links_by_page**
 
@@ -1136,11 +1136,11 @@ I don't think this one is started. The design doc is not out yet.
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMTU0OTgxMjYsLTk1ODAzODM2LC0xNj
-c4NTcxODkyLC0xMzUxMDMxMjI2LC0yMTQ1Nzg4NjkyLDEzMjYx
-NTQ4NjIsNzI5NTk4ODAzLDE5MTY4ODgyMTAsLTE3MTMzMjU3Nj
-YsLTc4NjA1MDYwNiwyMTIzOTYxNjUwLDcxNzQ1NzIxNywxMDg1
-MTI4MDkyLC0xMDY4MTQyNTMxLC0xMTE4OTQ4NDUsLTE4MzAxOD
-UzNzcsLTE4Mjk3NjEyNzMsLTEzNTY3NjA0NTEsNzA5NDc5MjQ3
-LDE2MjQ5MTI5NDldfQ==
+eyJoaXN0b3J5IjpbNzMyNDM3ODksLTk1ODAzODM2LC0xNjc4NT
+cxODkyLC0xMzUxMDMxMjI2LC0yMTQ1Nzg4NjkyLDEzMjYxNTQ4
+NjIsNzI5NTk4ODAzLDE5MTY4ODgyMTAsLTE3MTMzMjU3NjYsLT
+c4NjA1MDYwNiwyMTIzOTYxNjUwLDcxNzQ1NzIxNywxMDg1MTI4
+MDkyLC0xMDY4MTQyNTMxLC0xMTE4OTQ4NDUsLTE4MzAxODUzNz
+csLTE4Mjk3NjEyNzMsLTEzNTY3NjA0NTEsNzA5NDc5MjQ3LDE2
+MjQ5MTI5NDldfQ==
 -->
