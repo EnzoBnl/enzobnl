@@ -54,7 +54,7 @@ Useful sources:
  
 ### Allocation of the memory of a worker *W* to a given executor *E*
 
-<div class="mermaid"
+<div class="mermaid">
  
 graph TB
 
@@ -1126,11 +1126,11 @@ I don't think this one is started. The design doc is not out yet.
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNTEwMzEyMjYsLTIxNDU3ODg2OTIsMT
-MyNjE1NDg2Miw3Mjk1OTg4MDMsMTkxNjg4ODIxMCwtMTcxMzMy
-NTc2NiwtNzg2MDUwNjA2LDIxMjM5NjE2NTAsNzE3NDU3MjE3LD
-EwODUxMjgwOTIsLTEwNjgxNDI1MzEsLTExMTg5NDg0NSwtMTgz
-MDE4NTM3NywtMTgyOTc2MTI3MywtMTM1Njc2MDQ1MSw3MDk0Nz
-kyNDcsMTYyNDkxMjk0OSwxNTg0MjQ4NzgwLC0xNTM1NTQyODIw
-LC0xNDk2NjcwMzQ3XX0=
+eyJoaXN0b3J5IjpbLTE2Nzg1NzE4OTIsLTEzNTEwMzEyMjYsLT
+IxNDU3ODg2OTIsMTMyNjE1NDg2Miw3Mjk1OTg4MDMsMTkxNjg4
+ODIxMCwtMTcxMzMyNTc2NiwtNzg2MDUwNjA2LDIxMjM5NjE2NT
+AsNzE3NDU3MjE3LDEwODUxMjgwOTIsLTEwNjgxNDI1MzEsLTEx
+MTg5NDg0NSwtMTgzMDE4NTM3NywtMTgyOTc2MTI3MywtMTM1Nj
+c2MDQ1MSw3MDk0NzkyNDcsMTYyNDkxMjk0OSwxNTg0MjQ4Nzgw
+LC0xNTM1NTQyODIwXX0=
 -->
