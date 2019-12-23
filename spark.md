@@ -1011,10 +1011,6 @@ Shuffle execution:
 2. outputs targeting the **same partition are spilled to an unique file**
 3. when a file corresponding to a given partition id has been written completely on map side, the shuffle manager states that the **chunk is ready to be fetched** by reduce side tasks.
 
-written to disk, and a shuffle manager is notified that the chunk is ready to be fetched by other executors.*
-
-*Spill in short: Spill means that RDD's data is serialized and written to disk when it does not fit anymore in memory. Not linked directly to shuffle (? FIXME)* 
-
 #### Actors involved in shuffle (FIX ME)
 - `ShuffleManager` is traitclass that is instantciated on driver (register shuffles) and executors (ask to write or read data over connections with other executors). 
 The default current implementation is [`SortShuffleManager`](https://github.com/apache/spark/blob/master/core/src/main/scala/org/apache/spark/shuffle/sort/SortShuffleManager.scala). Note: Memory-based shuffle managers proposed with first graphx release has been abandoned because it lacks in reliability and do not gain much in speed because disk based shuffles leverage hyper fast data transfers with `java.nio.channels.FileChannel.transferTo(...)`. SSDs storage usage adds also a great speed up.
@@ -1139,11 +1135,11 @@ I don't think this one is started. The design doc is not out yet.
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMDA3MzE5NCwtOTU4MDM4MzYsLTE2Nz
-g1NzE4OTIsLTEzNTEwMzEyMjYsLTIxNDU3ODg2OTIsMTMyNjE1
-NDg2Miw3Mjk1OTg4MDMsMTkxNjg4ODIxMCwtMTcxMzMyNTc2Ni
-wtNzg2MDUwNjA2LDIxMjM5NjE2NTAsNzE3NDU3MjE3LDEwODUx
-MjgwOTIsLTEwNjgxNDI1MzEsLTExMTg5NDg0NSwtMTgzMDE4NT
-M3NywtMTgyOTc2MTI3MywtMTM1Njc2MDQ1MSw3MDk0NzkyNDcs
-MTYyNDkxMjk0OV19
+eyJoaXN0b3J5IjpbOTcxOTA3NzYxLC05NTgwMzgzNiwtMTY3OD
+U3MTg5MiwtMTM1MTAzMTIyNiwtMjE0NTc4ODY5MiwxMzI2MTU0
+ODYyLDcyOTU5ODgwMywxOTE2ODg4MjEwLC0xNzEzMzI1NzY2LC
+03ODYwNTA2MDYsMjEyMzk2MTY1MCw3MTc0NTcyMTcsMTA4NTEy
+ODA5MiwtMTA2ODE0MjUzMSwtMTExODk0ODQ1LC0xODMwMTg1Mz
+c3LC0xODI5NzYxMjczLC0xMzU2NzYwNDUxLDcwOTQ3OTI0Nywx
+NjI0OTEyOTQ5XX0=
 -->
