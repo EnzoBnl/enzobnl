@@ -845,8 +845,8 @@ println(partitionSizes.max, partitionSizes.min, partitionSizes.size)  // (36291,
 ##### Use case: web hypertexts links dataset
 
 We almost always have websites with:
-- $n°pages >> n°partitions$: hashes will fill the full integer range $[0, nPartition[$
-- n°links_by_page is evenly distributed (~200 by page): no risk that a few partitions containing the most outlinking pages causes a skewing.
+- $n°pages >> n°partitions$: hashes will fill the full integer range $[0, n°Partition[$
+- $n°linksByPage$ is evenly distributed (value =~ 200): no risk that a few partitions containing the most outlinking pages causes a skewing.
 - avg_n°links_by_page << n°pages: this is another condition for reduction of the partitions' size variance.
 
 The following query won't cause skew problems, partition receiving quite evenly $\vert edges\vert$/n°partitions records each,
@@ -1129,11 +1129,11 @@ I don't think this one is started. The design doc is not out yet.
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjU5Mzk2OTI2LC05NTgwMzgzNiwtMTY3OD
-U3MTg5MiwtMTM1MTAzMTIyNiwtMjE0NTc4ODY5MiwxMzI2MTU0
-ODYyLDcyOTU5ODgwMywxOTE2ODg4MjEwLC0xNzEzMzI1NzY2LC
-03ODYwNTA2MDYsMjEyMzk2MTY1MCw3MTc0NTcyMTcsMTA4NTEy
-ODA5MiwtMTA2ODE0MjUzMSwtMTExODk0ODQ1LC0xODMwMTg1Mz
-c3LC0xODI5NzYxMjczLC0xMzU2NzYwNDUxLDcwOTQ3OTI0Nywx
-NjI0OTEyOTQ5XX0=
+eyJoaXN0b3J5IjpbMjAxNTIzNTY0NCwtOTU4MDM4MzYsLTE2Nz
+g1NzE4OTIsLTEzNTEwMzEyMjYsLTIxNDU3ODg2OTIsMTMyNjE1
+NDg2Miw3Mjk1OTg4MDMsMTkxNjg4ODIxMCwtMTcxMzMyNTc2Ni
+wtNzg2MDUwNjA2LDIxMjM5NjE2NTAsNzE3NDU3MjE3LDEwODUx
+MjgwOTIsLTEwNjgxNDI1MzEsLTExMTg5NDg0NSwtMTgzMDE4NT
+M3NywtMTgyOTc2MTI3MywtMTM1Njc2MDQ1MSw3MDk0NzkyNDcs
+MTYyNDkxMjk0OV19
 -->
