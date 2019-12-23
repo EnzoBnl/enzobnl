@@ -845,7 +845,7 @@ println(partitionSizes.max, partitionSizes.min, partitionSizes.size)  // (36291,
 ##### Use case: web hypertexts links dataset
 
 We almost always have websites with:
-- n°pages >> n°partitions: hashes fill the full range(nPartition))
+- $n°pages >> n°partitions$: hashes will fill the full integer range $[0, nPartition[$
 - n°links_by_page is evenly distributed (~200 by page): no risk that a few partitions containing the most outlinking pages causes a skewing.
 - avg_n°links_by_page << n°pages: this is another condition for reduction of the partitions' size variance.
 
@@ -1129,11 +1129,11 @@ I don't think this one is started. The design doc is not out yet.
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwOTU0MDY1OTQsLTk1ODAzODM2LC0xNj
-c4NTcxODkyLC0xMzUxMDMxMjI2LC0yMTQ1Nzg4NjkyLDEzMjYx
-NTQ4NjIsNzI5NTk4ODAzLDE5MTY4ODgyMTAsLTE3MTMzMjU3Nj
-YsLTc4NjA1MDYwNiwyMTIzOTYxNjUwLDcxNzQ1NzIxNywxMDg1
-MTI4MDkyLC0xMDY4MTQyNTMxLC0xMTE4OTQ4NDUsLTE4MzAxOD
-UzNzcsLTE4Mjk3NjEyNzMsLTEzNTY3NjA0NTEsNzA5NDc5MjQ3
-LDE2MjQ5MTI5NDldfQ==
+eyJoaXN0b3J5IjpbNjU5Mzk2OTI2LC05NTgwMzgzNiwtMTY3OD
+U3MTg5MiwtMTM1MTAzMTIyNiwtMjE0NTc4ODY5MiwxMzI2MTU0
+ODYyLDcyOTU5ODgwMywxOTE2ODg4MjEwLC0xNzEzMzI1NzY2LC
+03ODYwNTA2MDYsMjEyMzk2MTY1MCw3MTc0NTcyMTcsMTA4NTEy
+ODA5MiwtMTA2ODE0MjUzMSwtMTExODk0ODQ1LC0xODMwMTg1Mz
+c3LC0xODI5NzYxMjczLC0xMzU2NzYwNDUxLDcwOTQ3OTI0Nywx
+NjI0OTEyOTQ5XX0=
 -->
