@@ -842,10 +842,9 @@ val partitionSizes = df.repartition(1000, col("dst")).mapPartitions(p => Iterato
 println(partitionSizes.max, partitionSizes.min, partitionSizes.size)  // (36291,116,1000)
 ```
 
-Cause: PowerLaw graph web, applied to particular website ? 
+##### Use case: web hypertexts links dataset
 
-
-We always have a website with:
+We almost always have websites with:
 - n°pages >> n°partitions: hashes fill the full range(nPartition))
 - n°links_by_page is evenly distributed (~200 by page): no risk that a few partitions containing the most outlinking pages causes a skewing.
 - avg_n°links_by_page << n°pages: this is another condition for reduction of the partitions' size variance.
@@ -1130,11 +1129,11 @@ I don't think this one is started. The design doc is not out yet.
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk1ODAzODM2LC0xNjc4NTcxODkyLC0xMz
-UxMDMxMjI2LC0yMTQ1Nzg4NjkyLDEzMjYxNTQ4NjIsNzI5NTk4
-ODAzLDE5MTY4ODgyMTAsLTE3MTMzMjU3NjYsLTc4NjA1MDYwNi
-wyMTIzOTYxNjUwLDcxNzQ1NzIxNywxMDg1MTI4MDkyLC0xMDY4
-MTQyNTMxLC0xMTE4OTQ4NDUsLTE4MzAxODUzNzcsLTE4Mjk3Nj
-EyNzMsLTEzNTY3NjA0NTEsNzA5NDc5MjQ3LDE2MjQ5MTI5NDks
-MTU4NDI0ODc4MF19
+eyJoaXN0b3J5IjpbLTEwOTU0MDY1OTQsLTk1ODAzODM2LC0xNj
+c4NTcxODkyLC0xMzUxMDMxMjI2LC0yMTQ1Nzg4NjkyLDEzMjYx
+NTQ4NjIsNzI5NTk4ODAzLDE5MTY4ODgyMTAsLTE3MTMzMjU3Nj
+YsLTc4NjA1MDYwNiwyMTIzOTYxNjUwLDcxNzQ1NzIxNywxMDg1
+MTI4MDkyLC0xMDY4MTQyNTMxLC0xMTE4OTQ4NDUsLTE4MzAxOD
+UzNzcsLTE4Mjk3NjEyNzMsLTEzNTY3NjA0NTEsNzA5NDc5MjQ3
+LDE2MjQ5MTI5NDldfQ==
 -->
