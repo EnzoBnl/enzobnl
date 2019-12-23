@@ -847,7 +847,7 @@ println(partitionSizes.max, partitionSizes.min, partitionSizes.size)  // (36291,
 We almost always have websites with:
 - $n°pages >> n°partitions$: hashes will fill the full integer range $[0, n°Partition[$
 - $n°linksByPage$ is evenly distributed (value =~ 200): no risk that a few partitions containing the most outlinking pages causes a skewing.
-- avg_n°links_by_page << n°pages: this is another condition for reduction of the partitions' size variance.
+- $avg(n°linksByPage) << n°pages$: this is another condition for reduction of the the variance of the size of partitions (if it was not the case, hash partitioning can be skewed).
 
 The following query won't cause skew problems, partition receiving quite evenly $\vert edges\vert$/n°partitions records each,
 
@@ -1129,11 +1129,11 @@ I don't think this one is started. The design doc is not out yet.
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAxNTIzNTY0NCwtOTU4MDM4MzYsLTE2Nz
-g1NzE4OTIsLTEzNTEwMzEyMjYsLTIxNDU3ODg2OTIsMTMyNjE1
-NDg2Miw3Mjk1OTg4MDMsMTkxNjg4ODIxMCwtMTcxMzMyNTc2Ni
-wtNzg2MDUwNjA2LDIxMjM5NjE2NTAsNzE3NDU3MjE3LDEwODUx
-MjgwOTIsLTEwNjgxNDI1MzEsLTExMTg5NDg0NSwtMTgzMDE4NT
-M3NywtMTgyOTc2MTI3MywtMTM1Njc2MDQ1MSw3MDk0NzkyNDcs
-MTYyNDkxMjk0OV19
+eyJoaXN0b3J5IjpbLTExNTI4MjYwMTksLTk1ODAzODM2LC0xNj
+c4NTcxODkyLC0xMzUxMDMxMjI2LC0yMTQ1Nzg4NjkyLDEzMjYx
+NTQ4NjIsNzI5NTk4ODAzLDE5MTY4ODgyMTAsLTE3MTMzMjU3Nj
+YsLTc4NjA1MDYwNiwyMTIzOTYxNjUwLDcxNzQ1NzIxNywxMDg1
+MTI4MDkyLC0xMDY4MTQyNTMxLC0xMTE4OTQ4NDUsLTE4MzAxOD
+UzNzcsLTE4Mjk3NjEyNzMsLTEzNTY3NjA0NTEsNzA5NDc5MjQ3
+LDE2MjQ5MTI5NDldfQ==
 -->
