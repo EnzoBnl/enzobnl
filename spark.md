@@ -873,7 +873,7 @@ i.e. **n°partitions >> avg_n°links_by_page**
 **WHY try to reduce skewing ?**
 Because:
 - Skew limits to the horizontal scaling potential
-- A partition is processed only by one task at a time: The few tasks assigned to process the huge partitions will delay the end of the step, majority of the CPUs waiting for these few thread to end
+- A partition being processed only by one task at a time, the few tasks assigned to process the huge partitions will delay the end of the step. They will make the majority of the cores just wait for long skewed tasks to end.
 
 #### Workarounds
 ##### 1) Convert to Broadcast join
@@ -1136,7 +1136,7 @@ I don't think this one is started. The design doc is not out yet.
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA3NTY1NTExNSwtOTU4MDM4MzYsLTE2Nz
+eyJoaXN0b3J5IjpbMTcyOTQzMTk4NiwtOTU4MDM4MzYsLTE2Nz
 g1NzE4OTIsLTEzNTEwMzEyMjYsLTIxNDU3ODg2OTIsMTMyNjE1
 NDg2Miw3Mjk1OTg4MDMsMTkxNjg4ODIxMCwtMTcxMzMyNTc2Ni
 wtNzg2MDUwNjA2LDIxMjM5NjE2NTAsNzE3NDU3MjE3LDEwODUx
