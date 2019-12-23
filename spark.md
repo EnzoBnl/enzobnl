@@ -877,7 +877,7 @@ $\iff n°partitions >> avg(n°linksByPage)$
 **WHY try to reduce skewing ?**
 Because:
 - A partition being processed only by one task at a time, the few tasks assigned to process the huge partitions will delay the end of the step. They will make the majority of the cores just wait for long skewed tasks to end.
-- Skew limits to the horizontal scaling potential: It is useless to make smaller partition and get more cluster cores because the huge skewed partitions will not be cut and horizontal scaling will just lead to more cores waisting.
+- Skew limits to the horizontal scaling potential: It is useless to make smaller partition and get more cluster cores because the huge skewed partitions will not be cut and horizontal scaling will just lead to more cores wasting.
 
 #### Workarounds
 ##### 1) Convert to Broadcast join
@@ -1140,11 +1140,11 @@ I don't think this one is started. The design doc is not out yet.
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAwMDI3MTQxMiwtOTU4MDM4MzYsLTE2Nz
-g1NzE4OTIsLTEzNTEwMzEyMjYsLTIxNDU3ODg2OTIsMTMyNjE1
-NDg2Miw3Mjk1OTg4MDMsMTkxNjg4ODIxMCwtMTcxMzMyNTc2Ni
-wtNzg2MDUwNjA2LDIxMjM5NjE2NTAsNzE3NDU3MjE3LDEwODUx
-MjgwOTIsLTEwNjgxNDI1MzEsLTExMTg5NDg0NSwtMTgzMDE4NT
-M3NywtMTgyOTc2MTI3MywtMTM1Njc2MDQ1MSw3MDk0NzkyNDcs
-MTYyNDkxMjk0OV19
+eyJoaXN0b3J5IjpbLTE0OTAxMzk5NDEsLTk1ODAzODM2LC0xNj
+c4NTcxODkyLC0xMzUxMDMxMjI2LC0yMTQ1Nzg4NjkyLDEzMjYx
+NTQ4NjIsNzI5NTk4ODAzLDE5MTY4ODgyMTAsLTE3MTMzMjU3Nj
+YsLTc4NjA1MDYwNiwyMTIzOTYxNjUwLDcxNzQ1NzIxNywxMDg1
+MTI4MDkyLC0xMDY4MTQyNTMxLC0xMTE4OTQ4NDUsLTE4MzAxOD
+UzNzcsLTE4Mjk3NjEyNzMsLTEzNTY3NjA0NTEsNzA5NDc5MjQ3
+LDE2MjQ5MTI5NDldfQ==
 -->
