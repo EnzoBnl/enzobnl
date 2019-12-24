@@ -739,7 +739,7 @@ def collect(): Array[T] = withScope {
 ### 2) Join algorithms families
 
 - **Nested loop**: For each row in table A, loop on table B's rows to find matches
-$O($\vert edges \vert$ * $\vert vertices \vert$)$
+$O(\vert edges \vert . \vert vertices \vert)$
 ```python
 for e in edges:
     for v in vertices:
@@ -748,7 +748,7 @@ for e in edges:
 ```
 
 - **Hash join**: Create a join_key -> row hashmap for the smallest table. Loop on the biggest table and search for matches in the hashmap.
-$O($\vert vertices \vert$ + $\vert edges \vert$)$, only equi joins, additional $O($\vert vertices \vert)$) space complexity
+$O(\vert vertices \vert + \vert edges \vert)$, only equi joins, additional $O(\vert vertices \vert)$ space complexity
 
 ```python
 vertices_map = {v.join_key: v for v in vertices}  # O($\vert vertices \vert$)
@@ -761,7 +761,7 @@ for e in edges:  # O($\vert edges \vert$)
 
 - **Sort-merge join**: Sort tables and iterate on both of them in the same move in one loop
 
-$O(\vert vertices \vert*log(\vert vertices \vert) + \vert edges \vert*log(\vert edges \vert))$ , adaptable to handle not only equi joins
+$O(\vert vertices \vert .log(\vert vertices \vert) + \vert edges \vert .log(\vert edges \vert))$ , adaptable to handle not only equi joins
 
 ```python
 vertices.sort(lambda v: v.join_key)  # O($\vert vertices \vert$*log($\vert vertices \vert$)
@@ -1138,5 +1138,5 @@ _____
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4OTQyMjA0NzVdfQ==
+eyJoaXN0b3J5IjpbMTc5Mzc5MDY1NF19
 -->
