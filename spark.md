@@ -1,4 +1,5 @@
 
+
 <!--NOTE HEAD START-->
 <link rel="icon" type="image/png" href="./imgs/favicon_db.png" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.0.0/mermaid.min.js"></script>
@@ -7,8 +8,8 @@
 <script>document.body.style.background = "#f2f2f2";</script>
 <!--NOTE HEAD END-->
 
-# Spark
-## Architecture vocabulary
+# A/ Spark
+## I/ Architecture vocabulary
 
 |Component|Desc|
 |--|--|
@@ -25,7 +26,7 @@
 *DAG = Directed Acyclic Graph. They are used by spark to represent Jobs' stages or Stages' steps*
 
 
-## APIs
+## II/ APIs
  
  Although the term **A**pplication **P**rogramming **I**nterface is mostly used for the element exposing the services of a web server, it has a more general meaning. 
 
@@ -43,7 +44,7 @@ Even if every *spark job* runs *RDD-based* pipelines, *Spark* offers different w
 
 Note: By convention, when talking about Dataset API, we talk about manipulation of `Dataset[T]` objects with T different from `Row`. The manipulation of `Dataset[Row]` objects is called DataFrame API (as `DataFrame` is a type alias for `Dataset[Row]`).
  
-## Unified Memory Management (1.6+)
+## III/ Unified Memory Management (1.6+)
 Useful sources:
 -  pull request document [Unified Memory Management in Spark 1.6](https://www.linuxprobe.com/wp-content/uploads/2017/04/unified-memory-management-spark-10000.pdf) by Andrew Or and Josh Rosen
 -  blog article [Apache Spark and off-heap memory](https://www.waitingforcode.com/apache-spark/apache-spark-off-heap-memory/read) by Bartosz Konieczny.
@@ -52,7 +53,7 @@ Useful sources:
 
 - Spark SQL first realease: Spark 1.0.0 (May 30, 2014) (see [Spark SQL's paper](https://dl.acm.org/citation.cfm?id=2742797) by Michael Armbrust)
  
-### Allocation of the memory of a worker *W* to a given executor *E*
+### 1) Allocation of the memory of a worker *W* to a given executor *E*
 
 <div class="mermaid">
  
@@ -90,7 +91,7 @@ graph TB
 
 </div>
 
-### On-heap executor space
+### 2) On-heap executor space
 The **On-heap executor space** is divided in 2 regions:
 - **Execution region**: 
 buffering intermediate data when performing shuffles, joins, sorts and aggregations
@@ -100,7 +101,7 @@ buffering intermediate data when performing shuffles, joins, sorts and aggregati
   - torrent broadcasts
   - sending large task results
 
-### Execution and storage regions behaviors in *unified memory management*
+### 3) Execution and storage regions behaviors in *unified memory management*
 
 1. if execution needs to use some space:
    - if its region space is not filled: it uses it
@@ -112,12 +113,12 @@ buffering intermediate data when performing shuffles, joins, sorts and aggregati
    - else: excess cached blocks are evicted (simply removed if `MEMORY_ONLY` but spilled to disk if `MEMORY_AND_DISK`) with Least Recently Used policy and it uses freed space. Note: a block of an RDD cannot be evicted to put another block of the same RDD.
 
 
-## Memory format (during processing) evolution  (SQL)
+## IV/ Memory format (during processing) evolution  (SQL)
 https://spoddutur.github.io/spark-notes/deep_dive_into_storage_formats.html
 
 - 1.0.0 (May 26, 2014): There was no "DataFrame" but only `SchemaRDD`. It was a `RDD` of fully deserialized Java Objects.
 - 1.3.0 (Mar 6, 2015)Memory format 
-#### during processing
+### 1) during processing
 https://spoddutur.github.io/spark-notes/deep_dive_into_storage_formats.html
 
 - 1.0.0: There was no "DataFrame" but only `SchemaRDD`. It was a `RDD` of Java Objects on-heap (see spark [Spark's RDDs paper](http://people.csail.mit.edu/matei/papers/2012/nsdi_spark.pdf) by Matei Zaharia, 2011).
@@ -138,10 +139,10 @@ https://spoddutur.github.io/spark-notes/deep_dive_into_storage_formats.html
 - Since 2.0.0 (Jul 19, 2016), `DataFrame` is merged with `Dataset` and remains just an alias `type DataFrame = Dataset[Row]`.
 
 
-#### contoguousity (TODO validate) (SQL)
+### 2) contoguousity (TODO validate) (SQL)
 There is only a contiguousity of the `UnsafeRow`s' memory because an `RDD[UnsafeRow]` is a collection of `UnsafeRow`s' referencies that lives somewhere on-heap. This causes many CPU's caches defaults, each new record to process causing one new default.
 
-#### Caching (SQL)
+### 3) Caching (SQL)
 
 |  |default storage level|
 |--|--|
@@ -207,7 +208,7 @@ df2 = df
 
 - cached blocks are not replicated by default, neither in memory nor when spilled (which stores on disks using local file system). You can activate a factor 2 replication by appending a `_2` suffix to any storage level constant, for example `MEMORY_AND_DISK_2`.
 
-#### is a DataFrame sorted ?
+### 4) is a DataFrame sorted ?
 One can use `df.queryExecution.sparkPlan.outputOrdering` that returns a sequence of `org.apache.spark.sql.catalyst.expressions.SortOrder`s to retrieve this information:
 
 ```scala
@@ -218,7 +219,7 @@ def isSorted(df: Dataset[_]): Boolean =
 val dfIsSorted = !df.sort().queryExecution.sparkPlan.outputOrdering.isEmpty
 ```
 
-### `DataFrame` vs other `Dataset[<not Row>]` steps of rows processing steps
+## V/ `DataFrame` vs other `Dataset[<not Row>]` steps of rows processing steps
 Short: DataFrame less secure but a bit faster.
 
 Let's compare processing steps of the `GeneratedIteratorForCodegenStage1` class that you can view by calling `.queryExecution.debug.codegen()` on a `DataFrame`
@@ -228,7 +229,7 @@ The semantic is:
 2. create a new feature containing a substring of the pseudo
 3. apply a filter on the new feature
 
-#### DataFrame's WholeStageCodegen execution ...
+### 1) DataFrame's WholeStageCodegen execution ...
 ```scala
 val df = spark.read
       .format("csv")
@@ -310,7 +311,7 @@ if (false) {
 append((filter_mutableStateArray_0[1].getRow()));
 ```
 
-#### ... vs Dataset's WholeStageCodegen execution
+### 2) ... vs Dataset's WholeStageCodegen execution
 ```scala
 val ds = spark.read
       .format("csv")
@@ -412,7 +413,7 @@ append((project_mutableStateArray_0[7].getRow()));
 
 [Full code available here](https://gist.github.com/EnzoBnl/37e07e9cf7bce440734c7d33304257f0)
 
-### Conversion to RDD: `df.rdd` vs `df.queryExecution.toRdd()`
+## VI/ Conversion to RDD: `df.rdd` vs `df.queryExecution.toRdd()`
 [Jacek Laskowski's post on SO](https://stackoverflow.com/questions/44708629/is-dataset-rdd-an-action-or-transformation)
 
 1. `.rdd`
@@ -457,7 +458,7 @@ df.queryExecution.toRdd
 .map((row: InternalRow) => InternalRow.fromSeq(Seq(row.getLong(0)+10, row.getLong(0)-10)))  
 ```
 
-## Dataset's# OOP design
+## VII/ Dataset's OOP design
 `Dataset` can be viewed as a **functional builder** for a `LogicalPlan`, implemented as a **fluent API** friendly to SQL users.
 ```scala
 val df2 = df1.join(...).select(...).where(...).orderBy(...).show()
@@ -470,7 +471,7 @@ def reduce(func: (T, T) => T): T = withNewRDDExecutionId {
 }
 ```
 
-## SQL window function syntax 
+## VIII/ SQL window function syntax 
 (not Spark specific)
 ``` SQL
 SELECT 
@@ -490,7 +491,7 @@ SELECT
 - **RANGE** (*start* and *end* are then values in *orderCol* unit : `RANGE BETWEEN 13000 PRECEDING AND CURRENT ROW FOLLOWING`, given that *ORDER BY* has been performed on column **price** and that *current_p* is the price of the current record, the frame contains all the records that have a value of **price** *p* that is between *current_p -13000* and *current_p*)
 
 
-## Vector Type
+## IX/ Vector Type
 `org.apache.spark.ml.linalg.Vector`
 has the following spark sql type (note that values are in `ArrayType`):
 ```scala
@@ -508,7 +509,7 @@ StructField("values", ArrayType(DoubleType, containsNull = false), nullable = tr
 ```
 
 
-## Closures
+## X/ Closures
 The following will compile and run fine but it will only do what is expected if you run Spark in local mode:
 ```scala
 val rdd: RDD[String] = ???  
@@ -522,7 +523,7 @@ Actually in non local modes (both client and master), it will print `rdd contain
 
 Use [accumulators](https://spark.apache.org/docs/latest/rdd-programming-guide.html#accumulators) instead.
 
-## Include a dependency from spark-package in maven's pom.xml
+## XI/ Include a dependency from spark-package in maven's pom.xml
 
 - add the repository
 ```xml
@@ -542,12 +543,12 @@ Partitioning & graphs in Spark
 
 
 
-## Usefull confs:
+## XII/ Usefull confs:
 ```scala
 SparkSession.builder.config("spark.default.parallelism", "12") // default = 200
 ```
 
-## Vector Type
+## XIII/ Vector Type
 `org.apache.spark.ml.linalg.Vector`
 has the following spark sql type (note that values are in `ArrayType`):
 ```scala
@@ -564,10 +565,10 @@ StructField("values", ArrayType(DoubleType, containsNull = false), nullable = tr
 }
 ```
 
-## Partitions in Spark
+## XIV/ Partitions in Spark
 
-### Partitioning (SQL & Core)
-#### Partitioner
+### 1) Partitioning (SQL & Core)
+#### a) Partitioner
 SQL:
 Main partitioning
 - `HashPartitioning`: on `keys` uses *Murmur Hash 3* (fast non-cryptographic hashing, easy to reverse) (while `PairRDD`s ' `partitionBy(hashPartitioner)` uses `.hashCode()`)
@@ -578,7 +579,7 @@ Main partitioning
 
 Always partition on Long or Int, hash/encrypt string key if necessary.
 
-#### Materialize partitions
+#### b) Materialize partitions
 // FIXME
 RDD: 
 ```scala
@@ -616,19 +617,19 @@ is up to 30% faster than
 spark.range(100000).foreachPartition(p => ())}  
 ```
 
-### Repartitioning  (SQL & Core)
-#### coalesce
+### 2) Repartitioning  (SQL & Core)
+#### a) coalesce
 Try to minimize the data that need to be shuffled by merging partitions on the same executors in priority -> fast but may lead inequal partition 
-#### repartition
+#### b) repartition
 If column not given: round robin
 else: hashpartitioning
 
 if numpartition not given: reads  `"spark.sql.shuffle.partitions"`
 
-#### repartitionByRange
+#### c) repartitionByRange
 repartition by range, forced to pass columns.
 
-#### N°partitions heuristic
+#### d) N°partitions heuristic
 Really optimized runtime with n°partitions (= number max of parallel tasks) = 4 or 5 times n°available threads
 ```scala
 val spark = SparkSession  
@@ -639,7 +640,7 @@ val spark = SparkSession
   .getOrCreate
 ```
 
-### Pushing the repartitioning to HDFS source
+### 3) Pushing the repartitioning to HDFS source
 ```scala
 sc.textFile("hdfs://.../file.txt", x)
 ```
@@ -649,7 +650,7 @@ sc.textFile("hdfs://.../file.txt").repartition(x)
 ```
 because the former will delegate the repartitioning to Hadoop's `TextInputFormat`.
 
-### `DataFrameWriter`s' partitioning
+### 4) `DataFrameWriter`s' partitioning
 
 `DataFrameWriter.partitionBy(colNames: String*)` allows you to partition job output on the file system. For example this
 
@@ -683,7 +684,7 @@ val x = if (gcd(n_conf, n) != 1) gcd(n_conf, n) else n
 
 *Note:* if `n` is primal, `x` will always be `n` no matter the value of `n_conf`
 -->
-## Internal representationsData structures ()
+## XV/ Internal representationsData structures ()
 
 SQL & RDD:
 join are materialized as `ZippedPartitionsRDD2` whose memory format depends on the provided `var f: (Iterator[A], Iterator[B]) => Iterator[V]`
@@ -733,11 +734,11 @@ def collect(): Array[T] = withScope {
 *Note*: the `toArray` is free because after `getByteArrayRdd`, the partition is an iterator of only one element which is a tuple `(number_of_rows, optimized_byte_array)`.
 - Hash joins are relying on `BytesToBytesMap`, "An append-only hash map where keys and values are contiguous regions of bytes."
 
-### Join
-### Join algorithms families
+### 1) Join
+### 2) Join algorithms families
 
 - **Nested loop**: For each row in table A, loop on table B's rows to find matches
-$O($\vert edges \vert$ * $\vert vertices \vert$)$
+$O($ert edges ert$ * $ert vertices ert$)$
 ```python
 for e in edges:
     for v in vertices:
@@ -746,12 +747,12 @@ for e in edges:
 ```
 
 - **Hash join**: Create a join_key -> row hashmap for the smallest table. Loop on the biggest table and search for matches in the hashmap.
-$O($\vert vertices \vert$ + $\vert edges \vert$)$, only equi joins, additional $O($\vert vertices \vert)$) space complexity
+$O($ert vertices ert$ + $ert edges ert$)$, only equi joins, additional $O($ert vertices ert)$) space complexity
 
 ```python
-vertices_map = {v.join_key: v for v in vertices}  # O($\vert vertices \vert$)
+vertices_map = {v.join_key: v for v in vertices}  # O($ert vertices ert$)
 
-for e in edges:  # O($\vert edges \vert$)
+for e in edges:  # O($ert edges ert$)
     v = vertices_map.get(e.join_key, None)  # considered O(1)
     if v is not None:
         yield e + v
@@ -759,13 +760,13 @@ for e in edges:  # O($\vert edges \vert$)
 
 - **Sort-merge join**: Sort tables and iterate on both of them in the same move in one loop
 
-$O($\vert vertices \vert$*log($\vert vertices \vert$) + $\vert edges \vert$*log($\vert edges \vert$))$ , adaptable to handle not only equi joins
+$O($ert vertices ert$*log($ert vertices ert$) + $ert edges ert$*log($ert edges ert$))$ , adaptable to handle not only equi joins
 
 ```python
-vertices.sort(lambda v: v.join_key)  # O($\vert vertices \vert$*log($\vert vertices \vert$)
-edges.sort(lambda e: e.join_key)  # O($\vert edges \vert$*log($\vert edges \vert$)
+vertices.sort(lambda v: v.join_key)  # O($ert vertices ert$*log($ert vertices ert$)
+edges.sort(lambda e: e.join_key)  # O($ert edges ert$*log($ert edges ert$)
 i, j = 0, 0
-while(i < len(vertices) and j < len(edges)):  # O($\vert vertices \vert$ + $\vert edges \vert$)
+while(i < len(vertices) and j < len(edges)):  # O($ert vertices ert$ + $ert edges ert$)
     if vertices[i].join_key < edges[i].join_key and i < len(vertices):
         i += 1
     elif vertices[i].join_key == edges[i].join_key:
@@ -776,7 +777,7 @@ while(i < len(vertices) and j < len(edges)):  # O($\vert vertices \vert$ + $\ver
         j += 1
 ```
 
-#### Joins in Spark  (SQL)
+#### a) Joins in Spark  (SQL)
 https://github.com/vaquarkhan/Apache-Kafka-poc-and-notes/wiki/Apache-Spark-Join-guidelines-and-Performance-tuning
 https://databricks.com/session/optimizing-apache-spark-sql-joins
 
@@ -825,7 +826,7 @@ uses `+- BroadcastExchange IdentityBroadcastMode` pass the partitions as they ar
 
 That means that [JoinSelection](https://jaceklaskowski.gitbooks.io/mastering-spark-sql/spark-sql-SparkStrategy-JoinSelection.html) execution planning strategy (and so Spark Planner) prefers sort merge join over [shuffled hash join](https://jaceklaskowski.gitbooks.io/mastering-spark-sql/spark-sql-SparkPlan-ShuffledHashJoinExec.html).
 
-#### Deal with skewed data  (SQL & Core)
+#### b) Deal with skewed data  (SQL & Core)
 
 When loaded, data is evenly partitioned by default. The danger comes when queries involves `HashPartioner`.
 
@@ -842,20 +843,20 @@ val partitionSizes = df.repartition(1000, col("dst")).mapPartitions(p => Iterato
 println(partitionSizes.max, partitionSizes.min, partitionSizes.size)  // (36291,116,1000)
 ```
 
-##### Use case: web hypertexts links dataset
+##### i) Use case: web hypertexts links dataset
 
 We almost always have websites with:
 - $n°pages >> n°partitions$: hashes will fill the full integer range $[0, n°Partition[$
 - $n°linksByPage$ is evenly distributed (value =~ 200): no risk that a few partitions containing the most outlinking pages causes a skewing.
 - $avg(n°linksByPage) << n°pages$: this is another condition for reduction of the the variance of the size of partitions (if it was not the case, hash partitioning can be skewed).
 
-The following query won't cause skew problems, partition receiving quite evenly $\vert edges\vert$/n°partitions records each,
+The following query won't cause skew problems, partition receiving quite evenly $ert edgesert$/n°partitions records each,
 
 ```sql
 SELECT * FROM edges JOIN vertices ON edges.src = vertices.id
 ```
 
-But, as every page points back to the home, the hash partitioning on `edges.dst` may lead to a big skewing: the partition containing the home key will at least contains $\vert vertices \vert$ records.
+But, as every page points back to the home, the hash partitioning on `edges.dst` may lead to a big skewing: the partition containing the home key will at least contains $ert vertices ert$ records.
 
 ```sql
 SELECT * FROM edges JOIN vertices ON edges.dst = vertices.id
@@ -864,11 +865,11 @@ SELECT * FROM edges JOIN vertices ON edges.dst = vertices.id
 ***Formalization of the skew problem in the context of a link dataset:***
 
 *We have a skew problem*
-$\iff\vert vertices \vert >> avg(n°recordByPartition)$
+$\iffert vertices ert >> avg(n°recordByPartition)$
 
-$\iff \vert vertices \vert >> \frac{\vert edges \vert}{n°partitions}$
+$\iff ert vertices ert >> rac{ert edges ert}{n°partitions}$
 
-$\iff n°partitions >> \frac{\vert edges \vert}{\vert vertices \vert}$ 
+$\iff n°partitions >> rac{ert edges ert}{ert vertices ert}$ 
 
 $\iff n°partitions >> avg(n°linksByPage)$
 
@@ -879,10 +880,10 @@ Because:
 - A partition being processed only by one task at a time, the few tasks assigned to process the huge partitions will delay the end of the step. They will make the majority of the cores just wait for long skewed tasks to end.
 - Skew limits to the horizontal scaling potential: It is useless to make smaller partition and get more cluster cores because the huge skewed partitions will not be cut and horizontal scaling will just lead to more cores wasting.
 
-#### Fighting skew: presentation of some workarounds
-##### 1) Convert to Broadcast join
+#### c) Fighting skew: presentation of some workarounds
+##### i) Convert to Broadcast join
 If the skewed big table is joined with a relatively, try to repartition evenly (RoundRobinPartitioning, `repartition(n)`) and use a broadcast join if spark does not managed to do it itself (tune threshold `"spark.sql.autoBroadcastJoinThreshold"` to the desired size in Bytes. 
-##### 2) The 2-steps join
+##### ii) The 2-steps join
 Trick: (`<hubs>` = `(home_id)` but can contains other hubs)
 
 ```sql
@@ -924,10 +925,10 @@ val df = hashJoin.union(broadcastJoin)  // by position
 val df = hashJoin.unionByName(broadcastJoin)  // by name 
 ```
 
-#####  3) Duplicating little table
+##### iii)  3) Duplicating little table
 implem here for RDDs: https://github.com/tresata/spark-skewjoin
 
-##### 4) fighting the "nulls skew"
+##### iv) fighting the "nulls skew"
 - dispatching
 https://stackoverflow.com/a/43394695/6580080
 Skew may happen when key column contains many null values.
@@ -952,14 +953,14 @@ val joinable = data.filter('keyToJoin.isNotNull)
 joinable.join(...) union notJoinable
 ```
 
-#### multi-join prepartitioning trick @ LinkedIn
+#### d) multi-join prepartitioning trick @ LinkedIn
 TODO https://fr.slideshare.net/databricks/improving-spark-sql-at-linkedin
 TODO: Matrix multiplicityhttps://engineering.linkedin.com/blog/2017/06/managing--exploding--big-data
 
-### TODO: Range Joins
+### 3) TODO: Range Joins
 TODO
 
-### GroupBy  (SQL & Core)
+### 4) GroupBy  (SQL & Core)
 For `groupBy` on `edges.dst`, all's right because only the pre-aggregates (`partial_count(1)`, 1 row per distinct page id in each partition) are exchanged through cluster: This is equivalent to the `rdd.reduce`, `rdd.reduceByKey`, `rdd.aggregateByKey`, `combineByKey`  and not like `rdd.groupByKey` or `rdd.groupBy` which does not perform pre-aggregation and send everything over the network...
 
 ```sql
@@ -976,7 +977,7 @@ SELECT src, count(*) FROM edges GROUP BY src
 
 (* means WholeStageCodegen used)
 
-### Sort  (SQL & Core)
+### 5) Sort  (SQL & Core)
 
 An `orderBy` starts with a step of exchange relying on `RangePartitioner` that "partitions sortable records by range into **roughly equal ranges**. The ranges are determined by sampling the content of the RDD passed in." (scaladoc)
 
@@ -1000,7 +1001,7 @@ SELECT src, count(*) as c FROM edges GROUP BY src ORDER BY c
             +- *(1) InMemoryTableScan [src#4L]
 ```
 
-### Exchange/Shuffle (SQL & Core)
+### 6) Exchange/Shuffle (SQL & Core)
 
 http://hydronitrogen.com/apache-spark-shuffles-explained-in-depth.html
 
@@ -1015,7 +1016,7 @@ Shuffle execution:
 
 
 
-#### Actors involved in shuffle (FIXME)
+#### a) Actors involved in shuffle (FIXME)
 - `ShuffleManager` is trait that is instantiated on driver (register shuffles) and executors (ask to write or read data over connections with other executors). 
 The default current implementation is [`SortShuffleManager`](https://github.com/apache/spark/blob/master/core/src/main/scala/org/apache/spark/shuffle/sort/SortShuffleManager.scala). Note: Memory-based shuffle managers proposed with first graphx release has been abandoned because it lacks in reliability and do not gain much in speed because disk based shuffles leverage hyper fast data transfers with `java.nio.channels.FileChannel.transferTo(...)`. SSDs storage usage adds also a great speed up.
 
@@ -1024,7 +1025,7 @@ See `BypassMergeSortShuffleWriter` which relies on `DiskBlockObjectWriter` & `Bl
 
 - an `ExternalShuffleService` is a server that serves the map output files to guarantee their availability in case of executor failure, by not making executors directly serve each others.
 
-### Exchanges planning (SQL)
+### 7) Exchanges planning (SQL)
 Exchange are carefully optimized by Catalyst and are ordered to be as cheap as possible.
 
 For example:
@@ -1053,7 +1054,7 @@ df1.join(df2.repartition(col("id")).groupBy("id").count(), df1("id") === df2("id
             +- *(3) FileScan parquet [id#4L] ...
 ```
 
-**/!\\** Unecessary exchange is triggered when renaming columns:
+**/!\** Unecessary exchange is triggered when renaming columns:
 
 ```scala
 edges.repartition(10, col("src")).groupBy("src").count().explain()  
@@ -1074,11 +1075,11 @@ edges.repartition(10, col("src")).withColumnRenamed("src", "id").groupBy("id").c
             +- *(1) FileScan csv [src#98L] ...
 ```
 
-## The OMM Zone
+## XVI/ The OMM Zone
 
 Spark is designed to deal with any size of input data, even with one having poor partitioning with sizes completely exceeding your execution memory of your executors: It is an "as possible in-memory" engine that tries to work in memory but when it becomes impossible it *spills* data to disk. This is the theory, but in practice you will face evil OOMs: This is because Spark's data are not just RDDs: There are many auxiliary in memory data structures that are used by Spark and that may grow with partitions sizes, potentially leading to OOMs.
 
-### Errors and fix
+### 1) Errors and fix
 *TODO: Complete me*
 
 *java.lang.OutOfMemoryError: GC overhead limit exceeded*
@@ -1089,8 +1090,8 @@ __________________
 refs:
 - [SO post by Nikolay Vasiliev](https://stackoverflow.com/a/45570944/6580080)
 
-## Coming soon
-### ouverture: Adaptative Execution (AE) in 3.0.0
+## XVII/ Coming soon
+### 1) ouverture: Adaptative Execution (AE) in 3.0.0
 [JIRA](https://issues.apache.org/jira/browse/SPARK-9850?jql=text%20~%20%22adaptative%20execution%22)
 
 [JIRA issue's Google Doc](https://docs.google.com/document/d/1mpVjvQZRAkD-Ggy6-hcjXtBPiQoVbZGe3dLnAKgtJ4k/edit)
@@ -1108,7 +1109,7 @@ It's included in the current framework
 > c. skew handling.  
 I don't think this one is started. The design doc is not out yet.
 
-# Powerful external projects
+# B/ Powerful external projects
 - Uppon Spark ML:
   - [JohnSnowLabs](https://github.com/JohnSnowLabs)/**[spark-nlp](https://github.com/JohnSnowLabs/spark-nlp)**: Natural language processing complete toolbox from lemmatization and POS tagging to BERT embedding.
   - [salesforce](https://github.com/salesforce)/**[TransmogrifAI](https://github.com/salesforce/TransmogrifAI)**: Auto ML  (no Deep Learning) integrating following algorithms under the hood:  
@@ -1116,18 +1117,15 @@ I don't think this one is started. The design doc is not out yet.
     - regression -> `GeneralizedLinearRegression`, `LinearRegression`, `DecisionTrees`, `RandomForest` and `GBTreeRegressor`
 
 
-# References
-### Papers
+# C/ References
 - [2011 *Resilient Distributed Datasets: A Fault-Tolerant Abstraction for In-Memory Cluster Computing*](http://people.csail.mit.edu/matei/papers/2012/nsdi_spark.pdf), Zaharia Chowdhury Das Dave Ma McCauley Franklin Shenker Stoica
 - 2013 *GraphX: A Resilient Distributed Graph System on Spark*, Reynold S Xin Joseph E Gonzalez Michael J Franklin Ion Stoica
 - 2013 *Shark: SQL and Rich Analytics at Scale*, Reynold S. Xin, Josh Rosen, Matei Zaharia Michael J. Franklin Scott Shenker Ion Stoica
 - 2014 *GraphX: Graph Processing in a  Distributed Dataflow Framework*, J E. Gonzalez R S. Xin A Dave, D Crankshaw  M J. Franklin I Stoica
 - 2015 *Spark SQL: Relational Data Processing in Spark*, Michael Armbrust Reynold S. Xin
 
-### Other source
+_____
 
-
-## References
 - spark/graphx and graphframes sources
 - Spark SQL paper
 - GraphX 2013/2014 papers
@@ -1138,13 +1136,3 @@ I don't think this one is started. The design doc is not out yet.
 - [Big Data analysis Coursera](https://www.coursera.org/lecture/big-data-analysis/joins-Nz9XW)
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
-
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbOTcxOTA3NzYxLC05NTgwMzgzNiwtMTY3OD
-U3MTg5MiwtMTM1MTAzMTIyNiwtMjE0NTc4ODY5MiwxMzI2MTU0
-ODYyLDcyOTU5ODgwMywxOTE2ODg4MjEwLC0xNzEzMzI1NzY2LC
-03ODYwNTA2MDYsMjEyMzk2MTY1MCw3MTc0NTcyMTcsMTA4NTEy
-ODA5MiwtMTA2ODE0MjUzMSwtMTExODk0ODQ1LC0xODMwMTg1Mz
-c3LC0xODI5NzYxMjczLC0xMzU2NzYwNDUxLDcwOTQ3OTI0Nywx
-NjI0OTEyOTQ5XX0=
--->
