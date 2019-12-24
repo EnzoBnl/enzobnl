@@ -56,8 +56,9 @@ Useful sources:
  
 ### 1) Allocation of the memory of a worker *W* to a given executor *E*
 
+TODO: fix links text length cut
 <div class="mermaid">
- 
+
 graph TB
 
 -1[Worker W's memory]
@@ -1138,5 +1139,5 @@ _____
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc5Mzc5MDY1NF19
+eyJoaXN0b3J5IjpbNzg3MzExODA1LDE3OTM3OTA2NTRdfQ==
 -->
