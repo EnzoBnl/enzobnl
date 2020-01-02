@@ -108,10 +108,11 @@ buffering intermediate data when performing shuffles, joins, sorts and aggregati
 1. if execution needs to use some space:
    - if its region space is not filled: it uses it
    - else if there is available unused space in storage region: it borrows it and uses it
+   - else if some of its region space has been borrowed by storage: it takes it back by triggering a spill to disk of some blocks data, and uses it.
    - else: excess data is spilled to disk and it uses freed space
 2. if storage needs to use some space (i.e. storage level of a data needed to be cached starts with `MEMORY_`):
    - if its region space is not filled: it uses it
-   - else if some of its region space has been borrowed by execution: it takes it back by triggering a spill to disk of some execution data, and uses it.
+   - else if there is available unused space in storage region: it borrows it and uses it
    - else: excess cached blocks are evicted (simply removed if `MEMORY_ONLY` but spilled to disk if `MEMORY_AND_DISK`) with Least Recently Used policy and it uses freed space. Note: a block of an RDD cannot be evicted to put another block of the same RDD.
 
 
@@ -1132,6 +1133,6 @@ _____
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3ODM4OTkwMDMsNzg3MzExODA1LDE3OT
-M3OTA2NTRdfQ==
+eyJoaXN0b3J5IjpbLTQ4MzAyOTU2NiwtMTc4Mzg5OTAwMyw3OD
+czMTE4MDUsMTc5Mzc5MDY1NF19
 -->
