@@ -528,6 +528,7 @@ Use [accumulators](https://spark.apache.org/docs/latest/rdd-programming-guide.ht
 ## XI/ Include a dependency from spark-package in maven's pom.xml
 
 - add the repository
+- 
 ```xml
 <project>
     [...]
@@ -540,15 +541,9 @@ Use [accumulators](https://spark.apache.org/docs/latest/rdd-programming-guide.ht
     [...]
 </project>
 ```
+
 Partitioning & graphs in Spark
 
-
-
-
-## XII/ Usefull confs:
-```scala
-SparkSession.builder.config("spark.default.parallelism", "12") // default = 200
-```
 
 ## XIII/ Vector Type
 `org.apache.spark.ml.linalg.Vector`
@@ -1139,5 +1134,6 @@ _____
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzg3MzExODA1LDE3OTM3OTA2NTRdfQ==
+eyJoaXN0b3J5IjpbOTU5MDY0ODcwLDc4NzMxMTgwNSwxNzkzNz
+kwNjU0XX0=
 -->
