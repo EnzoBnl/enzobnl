@@ -113,7 +113,9 @@ buffering intermediate data when performing shuffles, joins, sorts and aggregati
 2. if storage needs to use some space (i.e. storage level of a data needed to be cached starts with `MEMORY_`):
    - if its region space is not filled: it uses it
    - else if there is available unused space in execution region: it borrows it and uses it
-   - else: excess cached blocks are evicted (simply removed if `MEMORY_ONLY` but spilled to disk if `MEMORY_AND_DISK`) with Least Recently Used policy and it uses freed space. Note: a block of an RDD cannot be evicted to put another block of the same RDD.
+   - else: excess cached blocks are evicted
+
+*Note*: **Storage region's blocks eviction** means that they are simply removed if `MEMORY_ONLY` but spilled to disk if `MEMORY_AND_DISK`. A Least Recently Used policy Note: a block of an RDD cannot be evicted to put another block of the same RDD.
 
 
 ## IV/ Memory format (during processing) evolution  (SQL)
@@ -1133,6 +1135,6 @@ _____
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIyNjY2ODIwMCwtMTc4Mzg5OTAwMyw3OD
-czMTE4MDUsMTc5Mzc5MDY1NF19
+eyJoaXN0b3J5IjpbMjAyNDI5Mzg3NywxMjI2NjY4MjAwLC0xNz
+gzODk5MDAzLDc4NzMxMTgwNSwxNzkzNzkwNjU0XX0=
 -->
