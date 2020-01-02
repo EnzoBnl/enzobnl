@@ -542,8 +542,6 @@ Use [accumulators](https://spark.apache.org/docs/latest/rdd-programming-guide.ht
 </project>
 ```
 
-Partitioning & graphs in Spark
-
 
 ## XIII/ Vector Type
 `org.apache.spark.ml.linalg.Vector`
@@ -1134,6 +1132,6 @@ _____
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTU5MDY0ODcwLDc4NzMxMTgwNSwxNzkzNz
-kwNjU0XX0=
+eyJoaXN0b3J5IjpbLTE3ODM4OTkwMDMsNzg3MzExODA1LDE3OT
+M3OTA2NTRdfQ==
 -->
