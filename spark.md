@@ -53,6 +53,7 @@ Useful sources:
 - blog article [How does Facebook tune Apache Spark for Large-Scale Workloads?](https://towardsdatascience.com/how-does-facebook-tune-apache-spark-for-large-scale-workloads-3238ddda0830Spark SQL's Datasets & DataFrames
 
 - Spark SQL first realease: Spark 1.0.0 (May 30, 2014) (see [Spark SQL's paper](https://dl.acm.org/citation.cfm?id=2742797) by Michael Armbrust)
+- [*Tuning Spark* doc](https://spark.apache.org/docs/latest/tuning.html#memory-management-overview)
  
 ### 1) Allocation of the memory of a worker *W* to a given executor *E*
 
@@ -1138,6 +1139,7 @@ _____
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk1ODM1NDI3NiwxMjI2NjY4MjAwLC0xNz
-gzODk5MDAzLDc4NzMxMTgwNSwxNzkzNzkwNjU0XX0=
+eyJoaXN0b3J5IjpbMTAyNDQzMTYyOSwtOTU4MzU0Mjc2LDEyMj
+Y2NjgyMDAsLTE3ODM4OTkwMDMsNzg3MzExODA1LDE3OTM3OTA2
+NTRdfQ==
 -->
