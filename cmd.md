@@ -240,12 +240,12 @@ git commit ...etc
 git commit --amend -m "New commit message"
 //merge stashed changes with pulled (or just current) state
 git stash apply
-// roll back to commit X
+// roll back to commit -X
 $ git commit -m "Something terribly misguided"             # (1)
-$ git reset HEAD~                                          # (2)
+$ git reset HEAD~X                                          # (2)
 << edit files as necessary >>                              # (3)
-$ git add ...                                              # (4)
-$ git commit -c X                                  # (5)
+$ git add .                                              # (4)
+$ git commit -c CommitHashThatYouWantTheMessageAndAuthorship                               # (5)
 
 ```
 
@@ -256,9 +256,9 @@ c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex 
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY4MzMxODE5Myw2NTU0NTM3MjIsLTY5MT
-I3NDI4MiwtNjA4NjA1NzA4LDExMjE5OTE1MzgsLTMxNjMzMDY1
-MiwtMTk0MDMwMDI5NywyNDEzNjA0NzUsLTEwNzQ1MDE1NDAsLT
-g2NzE2ODc1MSwtODc0OTc4NTI5LC0xMzU4MzM5MTUwLDU5NzA2
-NTA3MiwtMTAzMDc3MDM5N119
+eyJoaXN0b3J5IjpbLTEwNzQ4ODAxMDUsLTY4MzMxODE5Myw2NT
+U0NTM3MjIsLTY5MTI3NDI4MiwtNjA4NjA1NzA4LDExMjE5OTE1
+MzgsLTMxNjMzMDY1MiwtMTk0MDMwMDI5NywyNDEzNjA0NzUsLT
+EwNzQ1MDE1NDAsLTg2NzE2ODc1MSwtODc0OTc4NTI5LC0xMzU4
+MzM5MTUwLDU5NzA2NTA3MiwtMTAzMDc3MDM5N119
 -->
