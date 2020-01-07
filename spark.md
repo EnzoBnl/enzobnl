@@ -114,6 +114,7 @@ buffering intermediate data when performing shuffles, joins, sorts and aggregati
 2. if storage needs to use some space (i.e. storage level of a data needed to be cached starts with `MEMORY_`):
    - if its region space is not filled: it uses it
    - else if there is available unused space in execution region: it borrows it and uses it
+    - else if some of its region space has been borrowed by execution, it will ***try*** (may not be possible due to implementation complexities) to take it back and use it.
    - else: excess cached blocks are evicted
 
 *Notes on block eviction*: 
@@ -1139,7 +1140,7 @@ _____
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAyNDQzMTYyOSwtOTU4MzU0Mjc2LDEyMj
-Y2NjgyMDAsLTE3ODM4OTkwMDMsNzg3MzExODA1LDE3OTM3OTA2
-NTRdfQ==
+eyJoaXN0b3J5IjpbLTM0NjI0NzY0NywxMDI0NDMxNjI5LC05NT
+gzNTQyNzYsMTIyNjY2ODIwMCwtMTc4Mzg5OTAwMyw3ODczMTE4
+MDUsMTc5Mzc5MDY1NF19
 -->
