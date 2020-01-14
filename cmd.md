@@ -121,7 +121,7 @@ export CLASSPATH="/home/enzo/Prog/lib/jar/*"
 sudo su - username
 # make host resolution made by a server
 ssh -D 1080 <server>
-chromium-browser --proxy-server="socks5://127.0.0.1:1080"
+chromium-browser --proxy-server="socks5://127.0.0.1:1080" --user-data-dir="/home/enzo/chrome-proxy-profile"
 ```
 ### CMD removes :
 ```bash
@@ -256,9 +256,10 @@ c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex 
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNzQ4ODAxMDUsLTY4MzMxODE5Myw2NT
-U0NTM3MjIsLTY5MTI3NDI4MiwtNjA4NjA1NzA4LDExMjE5OTE1
-MzgsLTMxNjMzMDY1MiwtMTk0MDMwMDI5NywyNDEzNjA0NzUsLT
-EwNzQ1MDE1NDAsLTg2NzE2ODc1MSwtODc0OTc4NTI5LC0xMzU4
-MzM5MTUwLDU5NzA2NTA3MiwtMTAzMDc3MDM5N119
+eyJoaXN0b3J5IjpbLTEzNTg5NzM4NDMsLTEwNzQ4ODAxMDUsLT
+Y4MzMxODE5Myw2NTU0NTM3MjIsLTY5MTI3NDI4MiwtNjA4NjA1
+NzA4LDExMjE5OTE1MzgsLTMxNjMzMDY1MiwtMTk0MDMwMDI5Ny
+wyNDEzNjA0NzUsLTEwNzQ1MDE1NDAsLTg2NzE2ODc1MSwtODc0
+OTc4NTI5LC0xMzU4MzM5MTUwLDU5NzA2NTA3MiwtMTAzMDc3MD
+M5N119
 -->
