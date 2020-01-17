@@ -99,7 +99,7 @@ The **On-heap executor space** is divided in 2 regions:
 - **Execution region**: 
 buffering intermediate data when performing shuffles, joins, sorts and aggregations
 
-*Note about OOMs and execution region*: Operators like join or sort produce arrays and maps that grows with partition size (in bytes or in records). Thus it is recommended to have partitioning that split the dataset in chunks of a size that fits in $\frac{executionRegionSize}{`spark.executor.cores`}$
+*Note about OOMs and execution region*: Operators like join or sort produce data structures (arrays, maps) that are optimized but grow with partitions size (in bytes or in records). Thus it is recommended to use a partitioning that split the data in chunks of a size that fits in $\frac{executionRegionSize}{spark.executor.cores}$
 
 - **Storage region**: 
   - caching data blocks to optimize for future accesses 
@@ -1142,7 +1142,7 @@ _____
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMTkzMzYzNzMsLTM0NjI0NzY0NywxMD
-I0NDMxNjI5LC05NTgzNTQyNzYsMTIyNjY2ODIwMCwtMTc4Mzg5
-OTAwMyw3ODczMTE4MDUsMTc5Mzc5MDY1NF19
+eyJoaXN0b3J5IjpbNjMwNjIzMjc3LC0zNDYyNDc2NDcsMTAyND
+QzMTYyOSwtOTU4MzU0Mjc2LDEyMjY2NjgyMDAsLTE3ODM4OTkw
+MDMsNzg3MzExODA1LDE3OTM3OTA2NTRdfQ==
 -->
