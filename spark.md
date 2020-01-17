@@ -143,9 +143,10 @@ https://spoddutur.github.io/spark-notes/deep_dive_into_storage_formats.html
 
 - Since 1.4.0 (June 11, 2015) it is `RDD` of `InternalRow`s that are **Binary Row-Based Format** known as **Tungsten Row Format**. `InternalRow`s:
   - allows **in-place elements access** that avoid serialization/deserialization --> just a little little bit slower than `RDD`s for element access but very very faster when it comes to shuffles.
-  - store their data very efficiently:**off-heap** --> divide by 4 memory footprint compared to RDDs of Java objects. 
+  - store their data very efficiently --> divide by 4 memory footprint compared to RDDs of Java objects. 
   - Leverage the activation of the off-heap memory usage more than RDDs of deserialized objects by not implying ser/deser overhead.
   - [UnsafeRow](https://jaceklaskowski.gitbooks.io/mastering-spark-sql/spark-sql-UnsafeRow.html) is the basic implementation of [InternalRow](https://jaceklaskowski.gitbooks.io/mastering-spark-sql/spark-sql-InternalRow.html) (see descriptions of Jacek Laskowski's *Mastering Spark SQL* links for each)
+  - GC benefit: less long living references: the 
   
 - 1.6.0 (Dec 22, 2015): `Dataset` is created as a separated class. There is conversions between `Dataset`s and `DataFrame`s. 
 - Since 2.0.0 (Jul 19, 2016), `DataFrame` is merged with `Dataset` and remains just an alias `type DataFrame = Dataset[Row]`.
@@ -1142,7 +1143,8 @@ _____
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYyNzUwMzA0NCwtMzQ2MjQ3NjQ3LDEwMj
-Q0MzE2MjksLTk1ODM1NDI3NiwxMjI2NjY4MjAwLC0xNzgzODk5
-MDAzLDc4NzMxMTgwNSwxNzkzNzkwNjU0XX0=
+eyJoaXN0b3J5IjpbMTI2NjQ5MTk1MSwtNjI3NTAzMDQ0LC0zND
+YyNDc2NDcsMTAyNDQzMTYyOSwtOTU4MzU0Mjc2LDEyMjY2Njgy
+MDAsLTE3ODM4OTkwMDMsNzg3MzExODA1LDE3OTM3OTA2NTRdfQ
+==
 -->
