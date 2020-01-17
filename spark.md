@@ -99,6 +99,8 @@ The **On-heap executor space** is divided in 2 regions:
 - **Execution region**: 
 buffering intermediate data when performing shuffles, joins, sorts and aggregations
 
+Note about OOMs: Operators like join or sort produce arrays and maps that grow 
+
 - **Storage region**: 
   - caching data blocks to optimize for future accesses 
   - torrent broadcasts
@@ -1140,7 +1142,7 @@ _____
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM0NjI0NzY0NywxMDI0NDMxNjI5LC05NT
-gzNTQyNzYsMTIyNjY2ODIwMCwtMTc4Mzg5OTAwMyw3ODczMTE4
-MDUsMTc5Mzc5MDY1NF19
+eyJoaXN0b3J5IjpbMTE3NTUwOTQ3OSwtMzQ2MjQ3NjQ3LDEwMj
+Q0MzE2MjksLTk1ODM1NDI3NiwxMjI2NjY4MjAwLC0xNzgzODk5
+MDAzLDc4NzMxMTgwNSwxNzkzNzkwNjU0XX0=
 -->
