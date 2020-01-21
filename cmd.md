@@ -246,7 +246,8 @@ $ git reset HEAD~X                                          # (2)
 << edit files as necessary >>                              # (3)
 $ git add .                                              # (4)
 $ git commit -c CommitHashThatYouWantTheMessageAndAuthorship                               # (5)
-
+# after rebasing, force git pull with stop if someone else pushed on the branch:
+sudo git push origin branch-x --force-with-lease
 ```
 
 ## Text edition
@@ -256,10 +257,10 @@ c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex 
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNTg5NzM4NDMsLTEwNzQ4ODAxMDUsLT
-Y4MzMxODE5Myw2NTU0NTM3MjIsLTY5MTI3NDI4MiwtNjA4NjA1
-NzA4LDExMjE5OTE1MzgsLTMxNjMzMDY1MiwtMTk0MDMwMDI5Ny
-wyNDEzNjA0NzUsLTEwNzQ1MDE1NDAsLTg2NzE2ODc1MSwtODc0
-OTc4NTI5LC0xMzU4MzM5MTUwLDU5NzA2NTA3MiwtMTAzMDc3MD
-M5N119
+eyJoaXN0b3J5IjpbOTY3Nzk0MTgxLC0xMzU4OTczODQzLC0xMD
+c0ODgwMTA1LC02ODMzMTgxOTMsNjU1NDUzNzIyLC02OTEyNzQy
+ODIsLTYwODYwNTcwOCwxMTIxOTkxNTM4LC0zMTYzMzA2NTIsLT
+E5NDAzMDAyOTcsMjQxMzYwNDc1LC0xMDc0NTAxNTQwLC04Njcx
+Njg3NTEsLTg3NDk3ODUyOSwtMTM1ODMzOTE1MCw1OTcwNjUwNz
+IsLTEwMzA3NzAzOTddfQ==
 -->
