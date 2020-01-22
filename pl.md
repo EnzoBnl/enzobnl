@@ -101,8 +101,12 @@ g==f          false: Boolean
 ```
 
 ### `Anyval`'s `equals`
-This is a special case where `==` and `equals` are not equivalent: the first cast types 
-for Anyvals, 
+This is a special case where `==` and `equals` are not equivalent: the first cast types and perform value check, the second check type equality and then value equality:
+```scala
+scala> 'a' == 97
+
+```
+
 
 ## Closures
 This is a closure:
@@ -370,7 +374,7 @@ from overrides import overrides  # decorator '@overrides'
 from abc import ABC, abstractmethod  #  'class C(ABC)' is abstract and decorator '@abstractmethod' usable.
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk2OTQ4Nzg1MiwxMzk4NTk1NjcsLTkyMz
+eyJoaXN0b3J5IjpbMTY2ODM3OTg0NSwxMzk4NTk1NjcsLTkyMz
 AwMDAxMCwtODI2NDc1Mjc0LDE5ODUxMzUzMSwtMTUzMjY5Nzk2
 OSwtMTExNjU0ODAwOSwtNTUyNTI2MTg4LC0xNTkyOTgzNDYzLC
 0xODAyMTY4Ml19
