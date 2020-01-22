@@ -101,7 +101,7 @@ g==f          false: Boolean
 ```
 
 Note:
-Use equals to perform
+for Anyvals, 
 
 ## Closures
 This is a closure:
@@ -369,8 +369,8 @@ from overrides import overrides  # decorator '@overrides'
 from abc import ABC, abstractmethod  #  'class C(ABC)' is abstract and decorator '@abstractmethod' usable.
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODUwNDQ1MDM5LDEzOTg1OTU2NywtOTIzMD
-AwMDEwLC04MjY0NzUyNzQsMTk4NTEzNTMxLC0xNTMyNjk3OTY5
-LC0xMTE2NTQ4MDA5LC01NTI1MjYxODgsLTE1OTI5ODM0NjMsLT
-E4MDIxNjgyXX0=
+eyJoaXN0b3J5IjpbLTU5MTk4OTA1MCwxMzk4NTk1NjcsLTkyMz
+AwMDAxMCwtODI2NDc1Mjc0LDE5ODUxMzUzMSwtMTUzMjY5Nzk2
+OSwtMTExNjU0ODAwOSwtNTUyNTI2MTg4LC0xNTkyOTgzNDYzLC
+0xODAyMTY4Ml19
 -->
