@@ -5,7 +5,6 @@
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 <script>document.body.style.background = "#f2f2f2";</script>
 <!--NOTE HEAD END-->
-
 # General
 ## Idiomatic coding
 A code snippet is said *idiomatic* if it uses its programming language **the way the language is intended to be used**.
@@ -13,11 +12,10 @@ A code snippet is said *idiomatic* if it uses its programming language **the way
 Programming using only idioms ensures you a certain level of :
 - **performance**: all the benchmarks are by default based on idiomatic ways to perform tasks using the language.
 - **readability**: your code will be more easily intelligible by the rest of the community because the set of idioms represents a standard.
-
+- 
 # Java
 ## Java 8: Interfaces
-We will take the following interface as an example for this section: (java8)
-### functional interface, `default` and `static`
+We will take the following interface as an example for this section:
 ```java
 @FunctionalInterface
 interface Square{
@@ -32,18 +30,14 @@ interface Square{
 }
 ```
 ### functional interface
-`Square` definition ");
-  }
-}
-```
-allows to get a concrete implementation of Square interface by implementing its `calculate `abstract method like follow:
+`Square` definition allows to get a concrete implementation of Square interface by implementing its `calculate `abstract method like follow:
 ```java
 Square sq = (int x) -> x*x;
 ```
 
 In fact `@FunctionalInterface` is here to guarantee that the functional interface **has only one abstract method**.
 
-#### `default` method in interface vs abstract method in abstract classes ?
+### `default` method in interface vs abstract method in abstract classes ?
  [(post)](https://stackoverflow.com/a/19998827/6580080)
  
 - When doubting, use interface with defaults method in priority, because it has more constraints leading to more compiler optimizations
@@ -69,10 +63,8 @@ class NamePrinter implements Named, Printer {
 }
 ```
 
-Use interface whenever you can, it's like a **DIP** applied to library writing instead of client writing.
-#### `static` methods
-Unlike for (abstract) class
-On interfaces,  `static` method in interfaces cannot be accessed through instancescan only:
+### `static` methods
+Unlike for (abstract) classes,  `static` method in interfaces cannot be accessed through instances:
 - `sq.printName();` does not compile
 - `Square.printName();` compiles
 
@@ -80,11 +72,11 @@ On interfaces,  `static` method in interfaces cannot be accessed through instanc
 Interface attributes cannot receive any modifier and are by default `public static final`. Like for methods, *staticity* in interface attribute implies that it cannot be reached from an instance:
 - `sq.NAME;` does not compile
 - `Square.NAME;` compiles
-Note: both this 2 lines would have compiled if `Square ` were an *abstract class*.
+
 ### Diamond problem
 
 # Scala
-## Constructors parameattributers scope
+## Constructors parameters scope
 ```scala
 (case) class C(... a: Int)
 ```
@@ -373,7 +365,8 @@ from overrides import overrides  # decorator '@overrides'
 from abc import ABC, abstractmethod  #  'class C(ABC)' is abstract and decorator '@abstractmethod' usable.
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkyMzAwMDAxMCwtODI2NDc1Mjc0LDE5OD
-UxMzUzMSwtMTUzMjY5Nzk2OSwtMTExNjU0ODAwOSwtNTUyNTI2
-MTg4LC0xNTkyOTgzNDYzLC0xODAyMTY4Ml19
+eyJoaXN0b3J5IjpbMTM5ODU5NTY3LC05MjMwMDAwMTAsLTgyNj
+Q3NTI3NCwxOTg1MTM1MzEsLTE1MzI2OTc5NjksLTExMTY1NDgw
+MDksLTU1MjUyNjE4OCwtMTU5Mjk4MzQ2MywtMTgwMjE2ODJdfQ
+==
 -->
