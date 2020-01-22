@@ -103,8 +103,10 @@ g==f          false: Boolean
 ### `Anyval`'s `equals`
 This is a special case where `==` and `equals` are not equivalent: the first cast types and perform value check, the second check type equality and then value equality:
 ```scala
-scala> 'a' == 97
-
+'a' == 97  // true
+97L == 'a'  // true
+'a'.equals(97)  // false
+97L.equals('a')  // false
 ```
 
 
@@ -374,8 +376,8 @@ from overrides import overrides  # decorator '@overrides'
 from abc import ABC, abstractmethod  #  'class C(ABC)' is abstract and decorator '@abstractmethod' usable.
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY2ODM3OTg0NSwxMzk4NTk1NjcsLTkyMz
-AwMDAxMCwtODI2NDc1Mjc0LDE5ODUxMzUzMSwtMTUzMjY5Nzk2
-OSwtMTExNjU0ODAwOSwtNTUyNTI2MTg4LC0xNTkyOTgzNDYzLC
-0xODAyMTY4Ml19
+eyJoaXN0b3J5IjpbLTE5Nzg4MDA4NDIsMTM5ODU5NTY3LC05Mj
+MwMDAwMTAsLTgyNjQ3NTI3NCwxOTg1MTM1MzEsLTE1MzI2OTc5
+NjksLTExMTY1NDgwMDksLTU1MjUyNjE4OCwtMTU5Mjk4MzQ2My
+wtMTgwMjE2ODJdfQ==
 -->
