@@ -99,6 +99,10 @@ f.equals(g)   true: Boolean
 f==g          true: Boolean
 g==f          false: Boolean
 ```
+
+Note:
+Use equals to perform
+
 ## Closures
 This is a closure:
 The variable *a* in *f* in captured by f and the modifications of a are influencing f executions.
@@ -365,8 +369,8 @@ from overrides import overrides  # decorator '@overrides'
 from abc import ABC, abstractmethod  #  'class C(ABC)' is abstract and decorator '@abstractmethod' usable.
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM5ODU5NTY3LC05MjMwMDAwMTAsLTgyNj
-Q3NTI3NCwxOTg1MTM1MzEsLTE1MzI2OTc5NjksLTExMTY1NDgw
-MDksLTU1MjUyNjE4OCwtMTU5Mjk4MzQ2MywtMTgwMjE2ODJdfQ
-==
+eyJoaXN0b3J5IjpbODUwNDQ1MDM5LDEzOTg1OTU2NywtOTIzMD
+AwMDEwLC04MjY0NzUyNzQsMTk4NTEzNTMxLC0xNTMyNjk3OTY5
+LC0xMTE2NTQ4MDA5LC01NTI1MjYxODgsLTE1OTI5ODM0NjMsLT
+E4MDIxNjgyXX0=
 -->
