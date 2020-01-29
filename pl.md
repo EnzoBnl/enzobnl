@@ -73,9 +73,22 @@ Interface attributes cannot receive any modifier and are by default `public stat
 - `sq.NAME;` does not compile
 - `Square.NAME;` compiles
 
-### ++
+### `++`
 
 The statement 
+
+```java
+return ++counter;
+```
+
+is a syntax sugar for
+
+```java
+counter += 1;
+return counter;
+```
+
+and
 
 ```java
 return counter++;
@@ -86,19 +99,6 @@ is a syntax sugar for
 ```java
 counter += 1;
 return counter - 1;
-```
-
-and
-
-```java
-++counter
-```
-
-is a syntax sugar for
-
-```java
-counter += 1;
-return counter;
 ```
 
 ### Diamond problem
@@ -404,7 +404,7 @@ from overrides import overrides  # decorator '@overrides'
 from abc import ABC, abstractmethod  #  'class C(ABC)' is abstract and decorator '@abstractmethod' usable.
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg4ODg2ODE3MiwyMDI1MzA5ODg1LDEzOT
+eyJoaXN0b3J5IjpbLTk2NDA3MDEwNywyMDI1MzA5ODg1LDEzOT
 g1OTU2NywtOTIzMDAwMDEwLC04MjY0NzUyNzQsMTk4NTEzNTMx
 LC0xNTMyNjk3OTY5LC0xMTE2NTQ4MDA5LC01NTI1MjYxODgsLT
 E1OTI5ODM0NjMsLTE4MDIxNjgyXX0=
