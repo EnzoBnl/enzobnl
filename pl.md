@@ -75,7 +75,7 @@ Interface attributes cannot receive any modifier and are by default `public stat
 
 ### `++`
 
-The statement 
+Given `counter` a numeric primitive (`int`, ...) or an instance of a corresponding boxed type (`Integer`, ...), the statement 
 
 ```java
 return ++counter;
@@ -404,8 +404,8 @@ from overrides import overrides  # decorator '@overrides'
 from abc import ABC, abstractmethod  #  'class C(ABC)' is abstract and decorator '@abstractmethod' usable.
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk2NDA3MDEwNywyMDI1MzA5ODg1LDEzOT
-g1OTU2NywtOTIzMDAwMDEwLC04MjY0NzUyNzQsMTk4NTEzNTMx
-LC0xNTMyNjk3OTY5LC0xMTE2NTQ4MDA5LC01NTI1MjYxODgsLT
-E1OTI5ODM0NjMsLTE4MDIxNjgyXX0=
+eyJoaXN0b3J5IjpbLTEyMjc2MDg0NjAsMjAyNTMwOTg4NSwxMz
+k4NTk1NjcsLTkyMzAwMDAxMCwtODI2NDc1Mjc0LDE5ODUxMzUz
+MSwtMTUzMjY5Nzk2OSwtMTExNjU0ODAwOSwtNTUyNTI2MTg4LC
+0xNTkyOTgzNDYzLC0xODAyMTY4Ml19
 -->
