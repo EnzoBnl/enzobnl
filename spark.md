@@ -624,8 +624,10 @@ spark.range(100000).foreachPartition(p => ())}
 ```
 
 #### c) `spark.default.parallelism` vs `spark.sql.shuffle.partitions`
-
-- `spark.default.parallelism`: 
+|conf|affects|default|
+|--|--|--|
+|`spark.default.parallelism`|||
+|`spark.sql.shuffle.partitions`|||
 
 
 ### 2) Repartitioning  (SQL & Core)
@@ -1148,7 +1150,7 @@ _____
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMwMjkzODI1MCwtMTQxMjQ0OTY3NSwtNj
+eyJoaXN0b3J5IjpbLTE4MDE0MzY5NywtMTQxMjQ0OTY3NSwtNj
 I3NTAzMDQ0LC0zNDYyNDc2NDcsMTAyNDQzMTYyOSwtOTU4MzU0
 Mjc2LDEyMjY2NjgyMDAsLTE3ODM4OTkwMDMsNzg3MzExODA1LD
 E3OTM3OTA2NTRdfQ==
