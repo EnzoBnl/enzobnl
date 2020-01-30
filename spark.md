@@ -630,6 +630,7 @@ spark.range(100000).foreachPartition(p => ())}
 |`spark.default.parallelism`|Spark core's `join`, `reduceByKey`, `parallelize`, Spark SQL's `range`| Largest partition number of parents RDDs for `join`, `reduceByKey`... and number of available cores for `parallelize`|
 |`spark.sql.shuffle.partitions`|Spark SQL number of partitions after exchanges (Spark SQL's shuffles)|200|
 
+#### b) Dealing
 
 ### 2) Repartitioning  (SQL & Core)
 #### a) coalesce
@@ -1092,6 +1093,7 @@ edges.repartition(10, col("src")).withColumnRenamed("src", "id").groupBy("id").c
 ## XVI/ The OMM Zone
 
 Spark is designed to deal with any size of input data, even with one having poor partitioning with sizes completely exceeding your execution memory of your executors: It is an "as possible in-memory" engine that tries to work in memory but when it becomes impossible it *spills* data to disk. This is the theory, but in practice you will face evil OOMs: This is because Spark's data are not just RDDs: There are many auxiliary in memory data structures that are used by Spark and that may grow with partitions sizes, potentially leading to OOMs.
+If no complex operators like sort or join are involved, a simple `range` followed by a repartitioning and 
 
 ### 1) Errors and fix
 *TODO: Complete me*
@@ -1151,8 +1153,8 @@ _____
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDU3NzE3NTM1LC0xNDEyNDQ5Njc1LC02Mj
-c1MDMwNDQsLTM0NjI0NzY0NywxMDI0NDMxNjI5LC05NTgzNTQy
-NzYsMTIyNjY2ODIwMCwtMTc4Mzg5OTAwMyw3ODczMTE4MDUsMT
-c5Mzc5MDY1NF19
+eyJoaXN0b3J5IjpbMTkzMjg3OTM0MCw0NTc3MTc1MzUsLTE0MT
+I0NDk2NzUsLTYyNzUwMzA0NCwtMzQ2MjQ3NjQ3LDEwMjQ0MzE2
+MjksLTk1ODM1NDI3NiwxMjI2NjY4MjAwLC0xNzgzODk5MDAzLD
+c4NzMxMTgwNSwxNzkzNzkwNjU0XX0=
 -->
