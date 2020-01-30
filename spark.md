@@ -1039,6 +1039,9 @@ See `BypassMergeSortShuffleWriter` which relies on `DiskBlockObjectWriter` & `Bl
 
 - an `ExternalShuffleService` is a server that serves the map output files to guarantee their availability in case of executor failure, by not making executors directly serve each others.
 
+#### b) Spark UI Shuffle insights
+- the size under *shuffle write* and *shuffle read* sections
+
 ### 7) Exchanges planning (SQL)
 Exchange are carefully optimized by Catalyst and are ordered to be as cheap as possible.
 
@@ -1178,9 +1181,9 @@ _____
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMyNjcyMzkwNywtMTkyMDcxMzA2NywtMT
-k5NDg3MzUyNCw0NTc3MTc1MzUsLTE0MTI0NDk2NzUsLTYyNzUw
-MzA0NCwtMzQ2MjQ3NjQ3LDEwMjQ0MzE2MjksLTk1ODM1NDI3Ni
-wxMjI2NjY4MjAwLC0xNzgzODk5MDAzLDc4NzMxMTgwNSwxNzkz
-NzkwNjU0XX0=
+eyJoaXN0b3J5IjpbLTE3MzQ1Mjk0ODAsMTMyNjcyMzkwNywtMT
+kyMDcxMzA2NywtMTk5NDg3MzUyNCw0NTc3MTc1MzUsLTE0MTI0
+NDk2NzUsLTYyNzUwMzA0NCwtMzQ2MjQ3NjQ3LDEwMjQ0MzE2Mj
+ksLTk1ODM1NDI3NiwxMjI2NjY4MjAwLC0xNzgzODk5MDAzLDc4
+NzMxMTgwNSwxNzkzNzkwNjU0XX0=
 -->
