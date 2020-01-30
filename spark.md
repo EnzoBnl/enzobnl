@@ -1090,10 +1090,30 @@ edges.repartition(10, col("src")).withColumnRenamed("src", "id").groupBy("id").c
             +- *(1) FileScan csv [src#98L] ...
 ```
 
-## XVI/ The OMM Zone
+## XVI/ The OOM Zone
 
-Spark is designed to deal with any size of input data, even with one having poor partitioning with sizes completely exceeding your execution memory of your executors: It is an "as possible in-memory" engine that tries to work in memory but when it becomes impossible it *spills* data to disk. This is the theory, but in practice you will face evil OOMs: This is because Spark's data are not just RDDs: There are many auxiliary in memory data structures that are used by Spark and that may grow with partitions sizes, potentially leading to OOMs.
-If no complex operators like *sort* or *join* are involved, a simple `range` followed by a repartitioning manipulating all along a single partition will work just fine
+Spark is designed to deal with any size of input data, even with one having poor partitioning with sizes completely exceeding your execution memory of your executors: It is an "as possible in-memory" engine that tries to work in memory but when it becomes impossible it *spills* data to disk. This is the theory, but in practice you will face evil OOMs (`OutOfMemoryError`s): This is because Spark's data are not just RDDs: There are many auxiliary in memory data structures that are used by Spark and that may grow with partitions sizes, potentially leading to OOMs.
+
+If no complex operators like *sort* or *join* are involved, a simple `range` followed by a repartitioning manipulating all along a single partition of more than 10GB with an executor memory of 1GB will work just fine:
+```scala
+val spark = SparkSession.builder  
+  .config("spark.executor.memory", "1g")  
+      .config("spark.driver.memory", "512m")  
+      .master("local[1]")  
+      .appName("testLargePartition")  
+      .getOrCreate()  
+  
+val df = spark.range(0, 100000000, 1, 1)  
+  .withColumn("some_string", lit("a"*100))  
+  .repartition(1)  
+  
+df.explain()  
+/*  
+Exchange RoundRobinPartitioning(1)  
++- *(1) Project [id#0L, aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa AS some_string#2]  
+ +- *(1) Range (0, 100000000, step=1, splits=1) */  
+df.write.csv("/home/enzo/Data/11GB.csv")
+```
 
 ### 1) Errors and fix
 *TODO: Complete me*
@@ -1153,7 +1173,7 @@ _____
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk0OTM0MTkzNiw0NTc3MTc1MzUsLTE0MT
+eyJoaXN0b3J5IjpbMTc2MzI1MjgxMiw0NTc3MTc1MzUsLTE0MT
 I0NDk2NzUsLTYyNzUwMzA0NCwtMzQ2MjQ3NjQ3LDEwMjQ0MzE2
 MjksLTk1ODM1NDI3NiwxMjI2NjY4MjAwLC0xNzgzODk5MDAzLD
 c4NzMxMTgwNSwxNzkzNzkwNjU0XX0=
