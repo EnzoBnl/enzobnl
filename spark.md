@@ -1093,6 +1093,8 @@ edges.repartition(10, col("src")).withColumnRenamed("src", "id").groupBy("id").c
 
 Spark is may be able to deal with any size of input data, even with one having poor partitioning with sizes completely exceeding the execution memory of your executors: **It is an "in-memory as possible" engine that tries to work in memory but when it becomes impossible it *spills* data to disk**. This is the theory, but in practice you will face evil OOMs (`OutOfMemoryError`s): This is because Spark's data are not just RDDs: There are many **auxiliary data structures in memory ** that are used by Spark and that may grow with partitions sizes, potentially leading to OOMs.
 
+An Intel's article says about number of partitions
+
 ### 1) "all is right" scenarios
 If no complex operators like *sort* or *join* are involved, a simple `range` followed by a repartitioning manipulating all along **a single partition of more than 10GB** with an **executor memory of 1GB** will work just **fine**:
 ```scala
@@ -1173,8 +1175,9 @@ _____
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MjA3MTMwNjcsLTE5OTQ4NzM1MjQsND
-U3NzE3NTM1LC0xNDEyNDQ5Njc1LC02Mjc1MDMwNDQsLTM0NjI0
-NzY0NywxMDI0NDMxNjI5LC05NTgzNTQyNzYsMTIyNjY2ODIwMC
-wtMTc4Mzg5OTAwMyw3ODczMTE4MDUsMTc5Mzc5MDY1NF19
+eyJoaXN0b3J5IjpbMTIyODc0OTQ0NCwtMTkyMDcxMzA2NywtMT
+k5NDg3MzUyNCw0NTc3MTc1MzUsLTE0MTI0NDk2NzUsLTYyNzUw
+MzA0NCwtMzQ2MjQ3NjQ3LDEwMjQ0MzE2MjksLTk1ODM1NDI3Ni
+wxMjI2NjY4MjAwLC0xNzgzODk5MDAzLDc4NzMxMTgwNSwxNzkz
+NzkwNjU0XX0=
 -->
