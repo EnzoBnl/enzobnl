@@ -1093,7 +1093,7 @@ edges.repartition(10, col("src")).withColumnRenamed("src", "id").groupBy("id").c
 
 Spark is may be able to deal with any size of input data, even with one having poor partitioning with sizes completely exceeding the execution memory of your executors: **It is an "in-memory as possible" engine that tries to work in memory but when it becomes impossible it *spills* data to disk**. This is the theory, but in practice you will face evil OOMs (`OutOfMemoryError`s): This is because Spark's data are not just RDDs: There are many **auxiliary data structures in memory ** that are used by Spark and that may grow with partitions sizes, potentially leading to OOMs.
 
-An [Intel's article](https://software.intel.com/en-us/articles/spark-sql-adaptive-execution-at-100-tb) says about number of partitions: *"If it is too small, then lower parallelism, and each reduce task has to process more data. Spilling to disk even happens as memory may not hold all data. In the worst case, it may cause serious GC problems or OOMs."*
+An [Intel's article about AE](https://software.intel.com/en-us/articles/spark-sql-adaptive-execution-at-100-tb) says about number of partitions: *"If it is too small, then lower parallelism, and each reduce task has to process more data. Spilling to disk even happens as memory may not hold all data. In the worst case, it may cause serious GC problems or OOMs."*
 
 ### 1) "all is right" scenarios
 If no complex operators like *sort* or *join* are involved, a simple `range` followed by a repartitioning manipulating all along **a single partition of more than 10GB** with an **executor memory of 1GB** will work just **fine**:
@@ -1135,6 +1135,9 @@ refs:
 [JIRA issue's Google Doc](https://docs.google.com/document/d/1mpVjvQZRAkD-Ggy6-hcjXtBPiQoVbZGe3dLnAKgtJ4k/edit)
 
 [Intel doc](https://software.intel.com/en-us/articles/spark-sql-adaptive-execution-at-100-tb)
+
+[Intel Article](https://software.intel.com/en-us/articles/spark-sql-adaptive-execution-at-100-tb)
+
 apache/spark master branch is about to be released in the next months as Spark 3.0.0.
 AE open since 1.6 has been merged 15/Jun/19. (Lead by # Carson Wang from Intel)
 
@@ -1175,7 +1178,7 @@ _____
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgzNDI3OTg1MSwtMTkyMDcxMzA2NywtMT
+eyJoaXN0b3J5IjpbMTMyNjcyMzkwNywtMTkyMDcxMzA2NywtMT
 k5NDg3MzUyNCw0NTc3MTc1MzUsLTE0MTI0NDk2NzUsLTYyNzUw
 MzA0NCwtMzQ2MjQ3NjQ3LDEwMjQ0MzE2MjksLTk1ODM1NDI3Ni
 wxMjI2NjY4MjAwLC0xNzgzODk5MDAzLDc4NzMxMTgwNSwxNzkz
