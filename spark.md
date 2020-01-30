@@ -1092,8 +1092,9 @@ edges.repartition(10, col("src")).withColumnRenamed("src", "id").groupBy("id").c
 
 ## XVI/ The OOM Zone
 
-Spark is designed to deal with any size of input data, even with one having poor partitioning with sizes completely exceeding your execution memory of your executors: It is an "as possible in-memory" engine that tries to work in memory but when it becomes impossible it *spills* data to disk. This is the theory, but in practice you will face evil OOMs (`OutOfMemoryError`s): This is because Spark's data are not just RDDs: There are many auxiliary in memory data structures that are used by Spark and that may grow with partitions sizes, potentially leading to OOMs.
+Spark is may be able to deal with any size of input data, even with one having poor partitioning with sizes completely exceeding the execution memory of your executors: **It is an "in-memory as possible" engine that tries to work in memory but when it becomes impossible it *spills* data to disk**. This is the theory, but in practice you will face evil OOMs (`OutOfMemoryError`s): This is because Spark's data are not just RDDs: There are many **auxiliary data structures in memory ** that are used by Spark and that may grow with partitions sizes, potentially leading to OOMs.
 
+### When all is right
 If no complex operators like *sort* or *join* are involved, a simple `range` followed by a repartitioning manipulating all along a single partition of more than 10GB with an executor memory of 1GB will work just fine:
 ```scala
 val spark = SparkSession.builder  
@@ -1173,7 +1174,7 @@ _____
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc2MzI1MjgxMiw0NTc3MTc1MzUsLTE0MT
+eyJoaXN0b3J5IjpbLTg1ODE2NTE3OSw0NTc3MTc1MzUsLTE0MT
 I0NDk2NzUsLTYyNzUwMzA0NCwtMzQ2MjQ3NjQ3LDEwMjQ0MzE2
 MjksLTk1ODM1NDI3NiwxMjI2NjY4MjAwLC0xNzgzODk5MDAzLD
 c4NzMxMTgwNSwxNzkzNzkwNjU0XX0=
