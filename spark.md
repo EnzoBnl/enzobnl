@@ -430,7 +430,7 @@ append((project_mutableStateArray_0[7].getRow()));
 [Jacek Laskowski's post on SO](https://stackoverflow.com/questions/44708629/is-dataset-rdd-an-action-or-transformation)
 
 1. `.rdd`
-It deserializes `InternalRow`s. It's still lazy: the need of deserialization is recorded (`mapPartitions` transformation) but not triggered.
+It deserializes `InternalRow`s. It's still lazy: the need of deserialization is recorded (a `mapPartitions` transformation is used) but not triggered.
 It's a transformation that returns `RDD[T]`.
 If it's called on a `DataFrame = Dataset[Row]`, it returns `RDD[Row]`.
 ```scala
@@ -1173,8 +1173,8 @@ _____
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI4MzM2Mzc2OSwtMTk5NDg3MzUyNCw0NT
-c3MTc1MzUsLTE0MTI0NDk2NzUsLTYyNzUwMzA0NCwtMzQ2MjQ3
-NjQ3LDEwMjQ0MzE2MjksLTk1ODM1NDI3NiwxMjI2NjY4MjAwLC
-0xNzgzODk5MDAzLDc4NzMxMTgwNSwxNzkzNzkwNjU0XX0=
+eyJoaXN0b3J5IjpbLTE5MjA3MTMwNjcsLTE5OTQ4NzM1MjQsND
+U3NzE3NTM1LC0xNDEyNDQ5Njc1LC02Mjc1MDMwNDQsLTM0NjI0
+NzY0NywxMDI0NDMxNjI5LC05NTgzNTQyNzYsMTIyNjY2ODIwMC
+wtMTc4Mzg5OTAwMyw3ODczMTE4MDUsMTc5Mzc5MDY1NF19
 -->
