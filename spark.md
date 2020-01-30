@@ -623,6 +623,8 @@ is up to 30% faster than
 spark.range(100000).foreachPartition(p => ())}  
 ```
 
+#### c) 
+
 ### 2) Repartitioning  (SQL & Core)
 #### a) coalesce
 Try to minimize the data that need to be shuffled by merging partitions on the same executors in priority -> fast but may lead inequal partition 
@@ -1143,8 +1145,8 @@ _____
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MTI0NDk2NzUsLTYyNzUwMzA0NCwtMz
-Q2MjQ3NjQ3LDEwMjQ0MzE2MjksLTk1ODM1NDI3NiwxMjI2NjY4
-MjAwLC0xNzgzODk5MDAzLDc4NzMxMTgwNSwxNzkzNzkwNjU0XX
-0=
+eyJoaXN0b3J5IjpbLTExMDE2NDQxMDUsLTE0MTI0NDk2NzUsLT
+YyNzUwMzA0NCwtMzQ2MjQ3NjQ3LDEwMjQ0MzE2MjksLTk1ODM1
+NDI3NiwxMjI2NjY4MjAwLC0xNzgzODk5MDAzLDc4NzMxMTgwNS
+wxNzkzNzkwNjU0XX0=
 -->
