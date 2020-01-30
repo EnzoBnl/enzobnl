@@ -626,7 +626,7 @@ spark.range(100000).foreachPartition(p => ())}
 #### c) `spark.default.parallelism` vs `spark.sql.shuffle.partitions`
 |conf|affects|default|
 |--|--|--|
-|`spark.default.parallelism`|number of available cores for ||
+|`spark.default.parallelism`|`join`, `reduceByKey`, `parallelize`, Spark SQL's `spark.range`| Largest partition number of parents RDDs for `join`, `reduceByKey`... and number of available cores for `parallelize`|
 |`spark.sql.shuffle.partitions`|Spark SQL number of partitions after exchange|200|
 
 
@@ -1150,8 +1150,8 @@ _____
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAyNzAzMTIyMCwtMTQxMjQ0OTY3NSwtNj
-I3NTAzMDQ0LC0zNDYyNDc2NDcsMTAyNDQzMTYyOSwtOTU4MzU0
-Mjc2LDEyMjY2NjgyMDAsLTE3ODM4OTkwMDMsNzg3MzExODA1LD
-E3OTM3OTA2NTRdfQ==
+eyJoaXN0b3J5IjpbNzc5NDUxODkxLC0xNDEyNDQ5Njc1LC02Mj
+c1MDMwNDQsLTM0NjI0NzY0NywxMDI0NDMxNjI5LC05NTgzNTQy
+NzYsMTIyNjY2ODIwMCwtMTc4Mzg5OTAwMyw3ODczMTE4MDUsMT
+c5Mzc5MDY1NF19
 -->
