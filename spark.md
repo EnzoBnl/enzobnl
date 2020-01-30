@@ -430,7 +430,7 @@ append((project_mutableStateArray_0[7].getRow()));
 [Jacek Laskowski's post on SO](https://stackoverflow.com/questions/44708629/is-dataset-rdd-an-action-or-transformation)
 
 1. `.rdd`
-It deserializes `InternalRow`s and put back data on-heap. It's still lazy: the need of deserialization is recorded but not triggered.
+It deserializes `InternalRow`s. It's still lazy: the need of deserialization is recorded (`mapPartitions` transformation) but not triggered.
 It's a transformation that returns `RDD[T]`.
 If it's called on a `DataFrame = Dataset[Row]`, it returns `RDD[Row]`.
 ```scala
@@ -456,7 +456,7 @@ df.rdd
 2. `.queryExecution.toRdd()`
 
 It is used by `.rdd`.
-If you stuck to this step, you keep your rows `InternalRow`s off-heap.
+If you stuck to this step, you keep your rows `InternalRow`s.
 ```scala
 class QueryExecution(  
     val sparkSession: SparkSession,  
@@ -630,7 +630,6 @@ spark.range(100000).foreachPartition(p => ())}
 |`spark.default.parallelism`|Spark core's `join`, `reduceByKey`, `parallelize`, Spark SQL's `range`| Largest partition number of parents RDDs for `join`, `reduceByKey`... and number of available cores for `parallelize`|
 |`spark.sql.shuffle.partitions`|Spark SQL number of partitions after exchanges (Spark SQL's shuffles)|200|
 
-#### b) Dealing
 
 ### 2) Repartitioning  (SQL & Core)
 #### a) coalesce
@@ -1174,8 +1173,8 @@ _____
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5OTQ4NzM1MjQsNDU3NzE3NTM1LC0xND
-EyNDQ5Njc1LC02Mjc1MDMwNDQsLTM0NjI0NzY0NywxMDI0NDMx
-NjI5LC05NTgzNTQyNzYsMTIyNjY2ODIwMCwtMTc4Mzg5OTAwMy
-w3ODczMTE4MDUsMTc5Mzc5MDY1NF19
+eyJoaXN0b3J5IjpbLTI4MzM2Mzc2OSwtMTk5NDg3MzUyNCw0NT
+c3MTc1MzUsLTE0MTI0NDk2NzUsLTYyNzUwMzA0NCwtMzQ2MjQ3
+NjQ3LDEwMjQ0MzE2MjksLTk1ODM1NDI3NiwxMjI2NjY4MjAwLC
+0xNzgzODk5MDAzLDc4NzMxMTgwNSwxNzkzNzkwNjU0XX0=
 -->
