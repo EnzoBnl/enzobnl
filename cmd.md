@@ -122,6 +122,8 @@ sudo su - username
 # make host resolution made by a server
 ssh -D 1080 <server>
 chromium-browser --proxy-server="socks5://127.0.0.1:1080" --user-data-dir="/home/enzo/chrome-proxy-profile"
+# quit ssh connection
+exit
 ```
 ### CMD removes :
 ```bash
@@ -257,10 +259,10 @@ c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex 
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTY3Nzk0MTgxLC0xMzU4OTczODQzLC0xMD
-c0ODgwMTA1LC02ODMzMTgxOTMsNjU1NDUzNzIyLC02OTEyNzQy
-ODIsLTYwODYwNTcwOCwxMTIxOTkxNTM4LC0zMTYzMzA2NTIsLT
-E5NDAzMDAyOTcsMjQxMzYwNDc1LC0xMDc0NTAxNTQwLC04Njcx
-Njg3NTEsLTg3NDk3ODUyOSwtMTM1ODMzOTE1MCw1OTcwNjUwNz
-IsLTEwMzA3NzAzOTddfQ==
+eyJoaXN0b3J5IjpbMTUxMTAxNzE1MSw5Njc3OTQxODEsLTEzNT
+g5NzM4NDMsLTEwNzQ4ODAxMDUsLTY4MzMxODE5Myw2NTU0NTM3
+MjIsLTY5MTI3NDI4MiwtNjA4NjA1NzA4LDExMjE5OTE1MzgsLT
+MxNjMzMDY1MiwtMTk0MDMwMDI5NywyNDEzNjA0NzUsLTEwNzQ1
+MDE1NDAsLTg2NzE2ODc1MSwtODc0OTc4NTI5LC0xMzU4MzM5MT
+UwLDU5NzA2NTA3MiwtMTAzMDc3MDM5N119
 -->
