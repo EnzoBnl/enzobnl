@@ -146,7 +146,7 @@ https://spoddutur.github.io/spark-notes/deep_dive_into_storage_formats.html
   - store their data very efficiently --> divide by 4 memory footprint compared to RDDs of Java objects. 
   - Leverage the activation of the off-heap memory usage more than RDDs of deserialized objects by not implying ser/deser overhead.
   - [UnsafeRow](https://jaceklaskowski.gitbooks.io/mastering-spark-sql/spark-sql-UnsafeRow.html) is the basic implementation of [InternalRow](https://jaceklaskowski.gitbooks.io/mastering-spark-sql/spark-sql-InternalRow.html) (see descriptions of Jacek Laskowski's *Mastering Spark SQL* links for each)
-  - GC benefit because less long living references: for example if a String need to be manipulated, characters will be in-place accessed in binary format and the String life is only 1 row processing duration -> these short life time ensure that they are always in the "young" set of references for garbage collection.
+  - **GC benefit** because less long living references: for example if a String need to be manipulated, characters will be in-place accessed in binary format and the String life is only 1 row processing duration -> these short life time ensure that they are always in the "young" set of references for garbage collection. (see ["Advanced GC Tuning" section](https://spark.apache.org/docs/latest/tuning.html#memory-management-overview))
   
 - 1.6.0 (Dec 22, 2015): `Dataset` is created as a separated class. There is conversions between `Dataset`s and `DataFrame`s. 
 - Since 2.0.0 (Jul 19, 2016), `DataFrame` is merged with `Dataset` and remains just an alias `type DataFrame = Dataset[Row]`.
@@ -1181,9 +1181,9 @@ _____
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNzgzOTc4MTAsMTMyNjcyMzkwNywtMT
-kyMDcxMzA2NywtMTk5NDg3MzUyNCw0NTc3MTc1MzUsLTE0MTI0
-NDk2NzUsLTYyNzUwMzA0NCwtMzQ2MjQ3NjQ3LDEwMjQ0MzE2Mj
-ksLTk1ODM1NDI3NiwxMjI2NjY4MjAwLC0xNzgzODk5MDAzLDc4
-NzMxMTgwNSwxNzkzNzkwNjU0XX0=
+eyJoaXN0b3J5IjpbOTE4NjE3MTU4LC0xMTc4Mzk3ODEwLDEzMj
+Y3MjM5MDcsLTE5MjA3MTMwNjcsLTE5OTQ4NzM1MjQsNDU3NzE3
+NTM1LC0xNDEyNDQ5Njc1LC02Mjc1MDMwNDQsLTM0NjI0NzY0Ny
+wxMDI0NDMxNjI5LC05NTgzNTQyNzYsMTIyNjY2ODIwMCwtMTc4
+Mzg5OTAwMyw3ODczMTE4MDUsMTc5Mzc5MDY1NF19
 -->
