@@ -147,7 +147,7 @@ https://spoddutur.github.io/spark-notes/deep_dive_into_storage_formats.html
   - allows **in-place elements access** that avoid expensive Java/Kryo serialization/deserialization. This format is a a bit slower compared to access to elements from an `RDD` of Java objects cached in memory but much faster when it comes to shuffles. Shuffle is also improved thanks to the tinier memory footprint of the row, leading to saves in network bandwidth.![](https://user-images.githubusercontent.com/22542670/27128201-351d0b84-511b-11e7-8c08-5f0dd0b4085b.png)
   - Leverage the activation of the off-heap memory usage more than RDDs of deserialized objects by not implying ser/deser overhead.
 
-  - have **GC benefits** because their less long living references: for example if a String need to be manipulated, characters will be in-place accessed in binary format and the String life is only 1 row processing duration -> these short life time ensure that they are always in the "young" set of references for garbage collection. (see ["Advanced GC Tuning" section](https://spark.apache.org/docs/latest/tuning.html#memory-management-overview))
+  - have **GC benefits** because they imply less long living references to be created: for example if a String need to be manipulated, characters will be in-place accessed in binary format and the String life is only 1 row processing duration -> these short life time ensure that they are always in the "young" set of references for garbage collection. (see ["Advanced GC Tuning" section](https://spark.apache.org/docs/latest/tuning.html#memory-management-overview))
   
 - 1.6.0 (Dec 22, 2015): `Dataset` is created as a separated class. There is conversions between `Dataset`s and `DataFrame`s. 
 - Since 2.0.0 (Jul 19, 2016), `DataFrame` is merged with `Dataset` and remains just an alias `type DataFrame = Dataset[Row]`.
@@ -1182,10 +1182,10 @@ _____
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAyMTkwNzc0LDkxODYxNzE1OCwtMTE3OD
-M5NzgxMCwxMzI2NzIzOTA3LC0xOTIwNzEzMDY3LC0xOTk0ODcz
-NTI0LDQ1NzcxNzUzNSwtMTQxMjQ0OTY3NSwtNjI3NTAzMDQ0LC
-0zNDYyNDc2NDcsMTAyNDQzMTYyOSwtOTU4MzU0Mjc2LDEyMjY2
-NjgyMDAsLTE3ODM4OTkwMDMsNzg3MzExODA1LDE3OTM3OTA2NT
-RdfQ==
+eyJoaXN0b3J5IjpbLTI1MDk3NjIyNywxMDIxOTA3NzQsOTE4Nj
+E3MTU4LC0xMTc4Mzk3ODEwLDEzMjY3MjM5MDcsLTE5MjA3MTMw
+NjcsLTE5OTQ4NzM1MjQsNDU3NzE3NTM1LC0xNDEyNDQ5Njc1LC
+02Mjc1MDMwNDQsLTM0NjI0NzY0NywxMDI0NDMxNjI5LC05NTgz
+NTQyNzYsMTIyNjY2ODIwMCwtMTc4Mzg5OTAwMyw3ODczMTE4MD
+UsMTc5Mzc5MDY1NF19
 -->
