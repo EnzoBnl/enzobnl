@@ -142,11 +142,11 @@ https://spoddutur.github.io/spark-notes/deep_dive_into_storage_formats.html
 ```
 
 - Since 1.4.0 (June 11, 2015) it is `RDD` of `InternalRow`s that are almost always implemented as [`UnsafeRow`s](https://jaceklaskowski.gitbooks.io/mastering-spark-sql/spark-sql-UnsafeRow.html). They:
-  - are **Binary Row-Based Format** known as **Tungsten Row Format**. `UnsafeRow`s:
-  - allows **in-place elements access** that avoid serialization/deserialization --> just a little little bit slower than `RDD`s for element access but very very faster when it comes to shuffles.
+  - are **Binary Row-Based Format** known as **Tungsten Row Format**, that stores values in one bytes array instead of Java objects: ![](https://user-images.githubusercontent.com/22542670/26983560-cc595054-4d59-11e7-805e-c3526ca4d38e.png)
+  - allows **in-place elements access** that avoid serialization/deserialization --> just a little little bit slower than `RDD`s cached in memory for element access but v faster when it comes to shuffles.
   - store their data very efficiently --> divide by 4 memory footprint compared to RDDs of Java objects. 
   - Leverage the activation of the off-heap memory usage more than RDDs of deserialized objects by not implying ser/deser overhead.
-  - https://user-images.githubusercontent.com/22542670/26983560-cc595054-4d59-11e7-805e-c3526ca4d38e.png is the basic implementation of [InternalRow](https://jaceklaskowski.gitbooks.io/mastering-spark-sql/spark-sql-InternalRow.html) (see descriptions of Jacek Laskowski's *Mastering Spark SQL* links for each)
+  -  is the basic implementation of [InternalRow](https://jaceklaskowski.gitbooks.io/mastering-spark-sql/spark-sql-InternalRow.html) (see descriptions of Jacek Laskowski's *Mastering Spark SQL* links for each)
   - **GC benefit** because less long living references: for example if a String need to be manipulated, characters will be in-place accessed in binary format and the String life is only 1 row processing duration -> these short life time ensure that they are always in the "young" set of references for garbage collection. (see ["Advanced GC Tuning" section](https://spark.apache.org/docs/latest/tuning.html#memory-management-overview))
   
 - 1.6.0 (Dec 22, 2015): `Dataset` is created as a separated class. There is conversions between `Dataset`s and `DataFrame`s. 
@@ -1182,7 +1182,7 @@ _____
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg4MDI2MzMyMyw5MTg2MTcxNTgsLTExNz
+eyJoaXN0b3J5IjpbMTMxMjQ3ODg1Nyw5MTg2MTcxNTgsLTExNz
 gzOTc4MTAsMTMyNjcyMzkwNywtMTkyMDcxMzA2NywtMTk5NDg3
 MzUyNCw0NTc3MTc1MzUsLTE0MTI0NDk2NzUsLTYyNzUwMzA0NC
 wtMzQ2MjQ3NjQ3LDEwMjQ0MzE2MjksLTk1ODM1NDI3NiwxMjI2
