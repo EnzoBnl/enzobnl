@@ -144,8 +144,7 @@ https://spoddutur.github.io/spark-notes/deep_dive_into_storage_formats.html
 
 - Since 1.4.0 (June 11, 2015) it is `RDD` of `InternalRow`s that are almost always implemented as [`UnsafeRow`s](https://jaceklaskowski.gitbooks.io/mastering-spark-sql/spark-sql-UnsafeRow.html). They:
   - are **Binary Row-Based Format** known as **Tungsten Row Format**, that stores values in one bytes array instead of Java objects: ![](https://user-images.githubusercontent.com/22542670/26983560-cc595054-4d59-11e7-805e-c3526ca4d38e.png)
-  - allows **in-place elements access** that avoid serialization/deserialization --> just a little little bit slower than `RDD`s cached in memory for element access but much faster when it comes to shuffles.
-  - store their data very efficiently --> divide by 4 memory footprint compared to RDDs of Java objects. ![](https://user-images.githubusercontent.com/22542670/27128201-351d0b84-511b-11e7-8c08-5f0dd0b4085b.png)
+  - allows **in-place elements access** that avoid expensive Java/Kryo serialization/deserialization. This format is a a bit slower compared to access to elements from an `RDD` of Java objects cached in memory but much faster when it comes to shuffles and divide by 4 memory footprint compared to RDDs of Java objects. ![](https://user-images.githubusercontent.com/22542670/27128201-351d0b84-511b-11e7-8c08-5f0dd0b4085b.png)
   - Leverage the activation of the off-heap memory usage more than RDDs of deserialized objects by not implying ser/deser overhead.
   -  is the basic implementation of [InternalRow](https://jaceklaskowski.gitbooks.io/mastering-spark-sql/spark-sql-InternalRow.html) (see descriptions of Jacek Laskowski's *Mastering Spark SQL* links for each)
   - **GC benefit** because less long living references: for example if a String need to be manipulated, characters will be in-place accessed in binary format and the String life is only 1 row processing duration -> these short life time ensure that they are always in the "young" set of references for garbage collection. (see ["Advanced GC Tuning" section](https://spark.apache.org/docs/latest/tuning.html#memory-management-overview))
@@ -1183,10 +1182,10 @@ _____
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc1NTIwNTUwLDkxODYxNzE1OCwtMTE3OD
-M5NzgxMCwxMzI2NzIzOTA3LC0xOTIwNzEzMDY3LC0xOTk0ODcz
-NTI0LDQ1NzcxNzUzNSwtMTQxMjQ0OTY3NSwtNjI3NTAzMDQ0LC
-0zNDYyNDc2NDcsMTAyNDQzMTYyOSwtOTU4MzU0Mjc2LDEyMjY2
-NjgyMDAsLTE3ODM4OTkwMDMsNzg3MzExODA1LDE3OTM3OTA2NT
-RdfQ==
+eyJoaXN0b3J5IjpbMTYyNzc4MTgzOSw5MTg2MTcxNTgsLTExNz
+gzOTc4MTAsMTMyNjcyMzkwNywtMTkyMDcxMzA2NywtMTk5NDg3
+MzUyNCw0NTc3MTc1MzUsLTE0MTI0NDk2NzUsLTYyNzUwMzA0NC
+wtMzQ2MjQ3NjQ3LDEwMjQ0MzE2MjksLTk1ODM1NDI3NiwxMjI2
+NjY4MjAwLC0xNzgzODk5MDAzLDc4NzMxMTgwNSwxNzkzNzkwNj
+U0XX0=
 -->
