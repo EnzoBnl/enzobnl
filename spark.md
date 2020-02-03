@@ -141,7 +141,8 @@ https://spoddutur.github.io/spark-notes/deep_dive_into_storage_formats.html
   type SchemaRDD = DataFrame
 ```
 
-- Since 1.4.0 (June 11, 2015) it is `RDD` of `InternalRow`s that are almost always implemented as [`UnsafeRow`](https://jaceklaskowski.gitbooks.io/mastering-spark-sql/spark-sql-UnsafeRow.html)s. They are **Binary Row-Based Format** known as **Tungsten Row Format**. `UnsafeRow`s:
+- Since 1.4.0 (June 11, 2015) it is `RDD` of `InternalRow`s that are almost always implemented as [`UnsafeRow`s](https://jaceklaskowski.gitbooks.io/mastering-spark-sql/spark-sql-UnsafeRow.html). They:
+  - are **Binary Row-Based Format** known as **Tungsten Row Format**. `UnsafeRow`s:
   - allows **in-place elements access** that avoid serialization/deserialization --> just a little little bit slower than `RDD`s for element access but very very faster when it comes to shuffles.
   - store their data very efficiently --> divide by 4 memory footprint compared to RDDs of Java objects. 
   - Leverage the activation of the off-heap memory usage more than RDDs of deserialized objects by not implying ser/deser overhead.
@@ -1181,10 +1182,10 @@ _____
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMTQzMDEwNDAsOTE4NjE3MTU4LC0xMT
-c4Mzk3ODEwLDEzMjY3MjM5MDcsLTE5MjA3MTMwNjcsLTE5OTQ4
-NzM1MjQsNDU3NzE3NTM1LC0xNDEyNDQ5Njc1LC02Mjc1MDMwND
-QsLTM0NjI0NzY0NywxMDI0NDMxNjI5LC05NTgzNTQyNzYsMTIy
-NjY2ODIwMCwtMTc4Mzg5OTAwMyw3ODczMTE4MDUsMTc5Mzc5MD
-Y1NF19
+eyJoaXN0b3J5IjpbMTg4MDI2MzMyMyw5MTg2MTcxNTgsLTExNz
+gzOTc4MTAsMTMyNjcyMzkwNywtMTkyMDcxMzA2NywtMTk5NDg3
+MzUyNCw0NTc3MTc1MzUsLTE0MTI0NDk2NzUsLTYyNzUwMzA0NC
+wtMzQ2MjQ3NjQ3LDEwMjQ0MzE2MjksLTk1ODM1NDI3NiwxMjI2
+NjY4MjAwLC0xNzgzODk5MDAzLDc4NzMxMTgwNSwxNzkzNzkwNj
+U0XX0=
 -->
