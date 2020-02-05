@@ -250,6 +250,9 @@ $ git add .                                              # (4)
 $ git commit -c CommitHashThatYouWantTheMessageAndAuthorship                               # (5)
 # after rebasing, force git pull with stop if someone else pushed on the branch:
 sudo git push origin branch-x --force-with-lease
+# override local branch with remote
+sudo git fetch --all
+sudo git reset --hard origin/master
 ```
 
 ## Text edition
@@ -259,10 +262,11 @@ c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex 
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUxMTAxNzE1MSw5Njc3OTQxODEsLTEzNT
-g5NzM4NDMsLTEwNzQ4ODAxMDUsLTY4MzMxODE5Myw2NTU0NTM3
-MjIsLTY5MTI3NDI4MiwtNjA4NjA1NzA4LDExMjE5OTE1MzgsLT
-MxNjMzMDY1MiwtMTk0MDMwMDI5NywyNDEzNjA0NzUsLTEwNzQ1
-MDE1NDAsLTg2NzE2ODc1MSwtODc0OTc4NTI5LC0xMzU4MzM5MT
-UwLDU5NzA2NTA3MiwtMTAzMDc3MDM5N119
+eyJoaXN0b3J5IjpbLTE3NDQ5NTM1NTUsMTUxMTAxNzE1MSw5Nj
+c3OTQxODEsLTEzNTg5NzM4NDMsLTEwNzQ4ODAxMDUsLTY4MzMx
+ODE5Myw2NTU0NTM3MjIsLTY5MTI3NDI4MiwtNjA4NjA1NzA4LD
+ExMjE5OTE1MzgsLTMxNjMzMDY1MiwtMTk0MDMwMDI5NywyNDEz
+NjA0NzUsLTEwNzQ1MDE1NDAsLTg2NzE2ODc1MSwtODc0OTc4NT
+I5LC0xMzU4MzM5MTUwLDU5NzA2NTA3MiwtMTAzMDc3MDM5N119
+
 -->
