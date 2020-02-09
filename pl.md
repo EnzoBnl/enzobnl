@@ -15,11 +15,11 @@ Programming using only idioms ensures you a certain level of :
 - 
 # Java
 ## `-Xms` & `-Xmx`
-Passing the following argumen
+Passing the following arguments to the JVM:
 ```bash
 java -Xms256m -Xmx2048m
 ```
-
+will reserve an inital amount of memory of 256 MB for JVM's heap consumption and allow it to use up to during the process.
 
 ## Java 8: Interfaces
 We will take the following interface as an example for this section:
@@ -411,7 +411,7 @@ from overrides import overrides  # decorator '@overrides'
 from abc import ABC, abstractmethod  #  'class C(ABC)' is abstract and decorator '@abstractmethod' usable.
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk2OTc2MjU0OSwtMTIyNzYwODQ2MCwyMD
+eyJoaXN0b3J5IjpbMTE5NjE4NDI1OSwtMTIyNzYwODQ2MCwyMD
 I1MzA5ODg1LDEzOTg1OTU2NywtOTIzMDAwMDEwLC04MjY0NzUy
 NzQsMTk4NTEzNTMxLC0xNTMyNjk3OTY5LC0xMTE2NTQ4MDA5LC
 01NTI1MjYxODgsLTE1OTI5ODM0NjMsLTE4MDIxNjgyXX0=
