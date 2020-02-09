@@ -14,6 +14,13 @@ Programming using only idioms ensures you a certain level of :
 - **readability**: your code will be more easily intelligible by the rest of the community because the set of idioms represents a standard.
 - 
 # Java
+## `-Xms` & `-Xmx`
+Passing the following argumen
+```bash
+java -Xms256m -Xmx2048m
+```
+
+
 ## Java 8: Interfaces
 We will take the following interface as an example for this section:
 ```java
@@ -404,8 +411,8 @@ from overrides import overrides  # decorator '@overrides'
 from abc import ABC, abstractmethod  #  'class C(ABC)' is abstract and decorator '@abstractmethod' usable.
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMjc2MDg0NjAsMjAyNTMwOTg4NSwxMz
-k4NTk1NjcsLTkyMzAwMDAxMCwtODI2NDc1Mjc0LDE5ODUxMzUz
-MSwtMTUzMjY5Nzk2OSwtMTExNjU0ODAwOSwtNTUyNTI2MTg4LC
-0xNTkyOTgzNDYzLC0xODAyMTY4Ml19
+eyJoaXN0b3J5IjpbLTk2OTc2MjU0OSwtMTIyNzYwODQ2MCwyMD
+I1MzA5ODg1LDEzOTg1OTU2NywtOTIzMDAwMDEwLC04MjY0NzUy
+NzQsMTk4NTEzNTMxLC0xNTMyNjk3OTY5LC0xMTE2NTQ4MDA5LC
+01NTI1MjYxODgsLTE1OTI5ODM0NjMsLTE4MDIxNjgyXX0=
 -->
