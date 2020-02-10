@@ -548,6 +548,7 @@ end if;
 ```
 
 ### Switching
+*Java:*
 ```java
 switch (var) {
   case 0: case 1: case 2:
@@ -557,7 +558,7 @@ switch (var) {
     ...;
 }
 ```
-
+*Ada:*
 ```ada
 case Var is
   when 0 .. 2 =>
@@ -568,8 +569,13 @@ end case;
 ```
 
 ### Loops
+*Java:*
 ```java
 while (var > 0) {
+  ...;
+}
+
+for (int i = 0; i <= N, i++) {
   ...;
 }
 
@@ -577,13 +583,19 @@ for (int i : intArray) {
   ...;
 }
 ```
-
+*Ada:*
 ```ada
 while Var > 0 loop
   ...;
 end loop;
 
-for i of Int_Array 
+for i in reverse 0 .. N loop
+  ...;
+end loop;
+
+for i of Int_Array loop
+  ...;
+end loop;
 ```
 
 ### Class/Type
@@ -594,10 +606,10 @@ for i of Int_Array
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI0MTc3OTQzNCwyMzMwMzYxNzYsLTQ1MD
-gyNDMxMiwtNDUyNjcwMjk3LC0xMDg0NzM0MzI2LC0xMTU1MzY5
-MjM5LDE1MTUwNDUzMzMsLTEyMjc2MDg0NjAsMjAyNTMwOTg4NS
-wxMzk4NTk1NjcsLTkyMzAwMDAxMCwtODI2NDc1Mjc0LDE5ODUx
-MzUzMSwtMTUzMjY5Nzk2OSwtMTExNjU0ODAwOSwtNTUyNTI2MT
-g4LC0xNTkyOTgzNDYzLC0xODAyMTY4Ml19
+eyJoaXN0b3J5IjpbNTgzMDM3MzA5LDIzMzAzNjE3NiwtNDUwOD
+I0MzEyLC00NTI2NzAyOTcsLTEwODQ3MzQzMjYsLTExNTUzNjky
+MzksMTUxNTA0NTMzMywtMTIyNzYwODQ2MCwyMDI1MzA5ODg1LD
+EzOTg1OTU2NywtOTIzMDAwMDEwLC04MjY0NzUyNzQsMTk4NTEz
+NTMxLC0xNTMyNjk3OTY5LC0xMTE2NTQ4MDA5LC01NTI1MjYxOD
+gsLTE1OTI5ODM0NjMsLTE4MDIxNjgyXX0=
 -->
