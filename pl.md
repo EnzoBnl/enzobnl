@@ -488,12 +488,16 @@ Put_Line("hello");
 **Java:**
 ```java
 ...
-  void proc(Int
+  void proc(int a) {
+    int b = a * 2;
+    System.out.println(b);
+  }
 ```
 
 **Ada:**
 ```ada
-
+procedure Proc is
+  
 ```
 
 ### Class/Type
@@ -511,7 +515,7 @@ Put_Line("hello");
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ5MzYyMjU4NywtNDUyNjcwMjk3LC0xMD
+eyJoaXN0b3J5IjpbMTMzMzYwMzIyNiwtNDUyNjcwMjk3LC0xMD
 g0NzM0MzI2LC0xMTU1MzY5MjM5LDE1MTUwNDUzMzMsLTEyMjc2
 MDg0NjAsMjAyNTMwOTg4NSwxMzk4NTk1NjcsLTkyMzAwMDAxMC
 wtODI2NDc1Mjc0LDE5ODUxMzUzMSwtMTUzMjY5Nzk2OSwtMTEx
