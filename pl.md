@@ -524,18 +524,26 @@ end Proc;
 ### Compilation unit (Package/.class)
 **Java:**
 ```java
-
+if (a > 0) {
+  ...
+} else if (a < 0) {
+  ...
+} else {
+  ...
+}
 ```
 
 **Ada:**
 ```ada
+if (A > 0)
 
+els
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNzQ0ODgwMTYsLTQ1MDgyNDMxMiwtND
-UyNjcwMjk3LC0xMDg0NzM0MzI2LC0xMTU1MzY5MjM5LDE1MTUw
-NDUzMzMsLTEyMjc2MDg0NjAsMjAyNTMwOTg4NSwxMzk4NTk1Nj
-csLTkyMzAwMDAxMCwtODI2NDc1Mjc0LDE5ODUxMzUzMSwtMTUz
-MjY5Nzk2OSwtMTExNjU0ODAwOSwtNTUyNTI2MTg4LC0xNTkyOT
-gzNDYzLC0xODAyMTY4Ml19
+eyJoaXN0b3J5IjpbOTQ4MTMwNTkzLC00NTA4MjQzMTIsLTQ1Mj
+Y3MDI5NywtMTA4NDczNDMyNiwtMTE1NTM2OTIzOSwxNTE1MDQ1
+MzMzLC0xMjI3NjA4NDYwLDIwMjUzMDk4ODUsMTM5ODU5NTY3LC
+05MjMwMDAwMTAsLTgyNjQ3NTI3NCwxOTg1MTM1MzEsLTE1MzI2
+OTc5NjksLTExMTY1NDgwMDksLTU1MjUyNjE4OCwtMTU5Mjk4Mz
+Q2MywtMTgwMjE2ODJdfQ==
 -->
