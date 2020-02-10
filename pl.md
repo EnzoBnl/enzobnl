@@ -430,16 +430,22 @@ from abc import ABC, abstractmethod  #  'class C(ABC)' is abstract and decorator
 ## Bindings to Java concepts
 mainly from Adacore's [Ada for C++ and Java developper](https://learn.adacore.com/pdf_books/courses/Ada_For_The_CPP_Java_Developer.pdf)
 _____
-### Concepts
-|Java|Ada|
-|--|--|
-|Class|Package|
+### Imports
+**Java:**
+```java
+
+```
+
+**Ada:**
+```ada
+
+```
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg5MTQwNDMzMSwtMTE1NTM2OTIzOSwxNT
-E1MDQ1MzMzLC0xMjI3NjA4NDYwLDIwMjUzMDk4ODUsMTM5ODU5
-NTY3LC05MjMwMDAwMTAsLTgyNjQ3NTI3NCwxOTg1MTM1MzEsLT
-E1MzI2OTc5NjksLTExMTY1NDgwMDksLTU1MjUyNjE4OCwtMTU5
-Mjk4MzQ2MywtMTgwMjE2ODJdfQ==
+eyJoaXN0b3J5IjpbLTExNjU1MDI1OTYsLTExNTUzNjkyMzksMT
+UxNTA0NTMzMywtMTIyNzYwODQ2MCwyMDI1MzA5ODg1LDEzOTg1
+OTU2NywtOTIzMDAwMDEwLC04MjY0NzUyNzQsMTk4NTEzNTMxLC
+0xNTMyNjk3OTY5LC0xMTE2NTQ4MDA5LC01NTI1MjYxODgsLTE1
+OTI5ODM0NjMsLTE4MDIxNjgyXX0=
 -->
