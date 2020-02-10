@@ -567,6 +567,23 @@ case Var is
 end case;
 ```
 
+### Loops
+```java
+while (var > 0) {
+  ...;
+}
+
+for (int i : intArray) {
+
+}
+```
+
+```ada
+while Var > 0 loop
+  ...;
+end loop;
+```
+
 ### Class/Type
 
 
@@ -575,7 +592,7 @@ end case;
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMTMxMzM1NzcsMjMzMDM2MTc2LC00NT
+eyJoaXN0b3J5IjpbLTEzMjg0NTc2OTQsMjMzMDM2MTc2LC00NT
 A4MjQzMTIsLTQ1MjY3MDI5NywtMTA4NDczNDMyNiwtMTE1NTM2
 OTIzOSwxNTE1MDQ1MzMzLC0xMjI3NjA4NDYwLDIwMjUzMDk4OD
 UsMTM5ODU5NTY3LC05MjMwMDAwMTAsLTgyNjQ3NTI3NCwxOTg1
