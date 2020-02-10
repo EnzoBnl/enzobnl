@@ -456,10 +456,10 @@ public SomeClass {
 
 *Ada:*
 ```ada
-procedure SomeProcedure is
+procedure Some_Procedure is
 begin
   ...
-end SomeProcedure;
+end Some_Procedure;
 ```
 
 ### Print
@@ -505,16 +505,16 @@ Put_Line("hello");
 ```ada
 procedure Proc 
  (Arg : Integer;
-  OuterScopeField1 : out Integer;
-  OuterScopeField2 : in out Integer)
+  Outer_Scope_Field_1 : out Integer;
+  Outer_Scope_Field_2 : in out Integer)
 is
-  LocalVar1, LocalVar2 : Integer;
-  LocalVar3 : Integer := 2;
+  Local_Var_1, Local_Var_2 : Integer;
+  Local_Var_3 : Integer := 2;
 begin
-  LocalVar1 := Arg * OuterScopeField2;
-  LocalVar3 := Arg * LocalVar1;
-  OuterScopeField2 := LocalVar1 * LocalVar2;
-  OuterScopeField1 := Arg;
+  Local_Var_1 := Arg * Outer_Scope_Field_2;
+  Local_Var_3 := Arg * Local_Var_1;
+  Outer_Scope_Field_2 := Local_Var_1 * Local_Var_2;
+  Outer_Scope_Field_1 := Arg;
 end Proc;
 ```
 
@@ -574,7 +574,7 @@ while (var > 0) {
 }
 
 for (int i : intArray) {
-
+  ...;
 }
 ```
 
@@ -582,6 +582,8 @@ for (int i : intArray) {
 while Var > 0 loop
   ...;
 end loop;
+
+for i of Int_Array 
 ```
 
 ### Class/Type
@@ -592,10 +594,10 @@ end loop;
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMjg0NTc2OTQsMjMzMDM2MTc2LC00NT
-A4MjQzMTIsLTQ1MjY3MDI5NywtMTA4NDczNDMyNiwtMTE1NTM2
-OTIzOSwxNTE1MDQ1MzMzLC0xMjI3NjA4NDYwLDIwMjUzMDk4OD
-UsMTM5ODU5NTY3LC05MjMwMDAwMTAsLTgyNjQ3NTI3NCwxOTg1
-MTM1MzEsLTE1MzI2OTc5NjksLTExMTY1NDgwMDksLTU1MjUyNj
-E4OCwtMTU5Mjk4MzQ2MywtMTgwMjE2ODJdfQ==
+eyJoaXN0b3J5IjpbLTI0MTc3OTQzNCwyMzMwMzYxNzYsLTQ1MD
+gyNDMxMiwtNDUyNjcwMjk3LC0xMDg0NzM0MzI2LC0xMTU1MzY5
+MjM5LDE1MTUwNDUzMzMsLTEyMjc2MDg0NjAsMjAyNTMwOTg4NS
+wxMzk4NTk1NjcsLTkyMzAwMDAxMCwtODI2NDc1Mjc0LDE5ODUx
+MzUzMSwtMTUzMjY5Nzk2OSwtMTExNjU0ODAwOSwtNTUyNTI2MT
+g4LC0xNTkyOTgzNDYzLC0xODAyMTY4Ml19
 -->
