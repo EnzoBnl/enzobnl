@@ -433,20 +433,32 @@ _____
 ### Imports
 **Java:**
 ```java
-// une
-import java.lang.System
+// unecessary
+import java.lang.System;
 ```
 
 **Ada:**
 ```ada
+-- `use` allows to use package elements without namespace
 with Ada.Text_IO; use Ada.Text_IO;
 ```
 
+### Print
+**Java:**
+```java
+System.out.println("hello");
+```
+
+**Ada:**
+```ada
+-- `use` allows to use package elements without namespace
+with Ada.Text_IO; use Ada.Text_IO;
+```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMzNDM2NDU2MywtMTE1NTM2OTIzOSwxNT
-E1MDQ1MzMzLC0xMjI3NjA4NDYwLDIwMjUzMDk4ODUsMTM5ODU5
-NTY3LC05MjMwMDAwMTAsLTgyNjQ3NTI3NCwxOTg1MTM1MzEsLT
-E1MzI2OTc5NjksLTExMTY1NDgwMDksLTU1MjUyNjE4OCwtMTU5
-Mjk4MzQ2MywtMTgwMjE2ODJdfQ==
+eyJoaXN0b3J5IjpbMzM2MTc4NTE3LC0xMTU1MzY5MjM5LDE1MT
+UwNDUzMzMsLTEyMjc2MDg0NjAsMjAyNTMwOTg4NSwxMzk4NTk1
+NjcsLTkyMzAwMDAxMCwtODI2NDc1Mjc0LDE5ODUxMzUzMSwtMT
+UzMjY5Nzk2OSwtMTExNjU0ODAwOSwtNTUyNTI2MTg4LC0xNTky
+OTgzNDYzLC0xODAyMTY4Ml19
 -->
