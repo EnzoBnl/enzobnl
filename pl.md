@@ -430,20 +430,22 @@ from abc import ABC, abstractmethod  #  'class C(ABC)' is abstract and decorator
 ## Bindings to Java concepts
 mainly from Adacore's [Ada for C++ and Java developper](https://learn.adacore.com/pdf_books/courses/Ada_For_The_CPP_Java_Developer.pdf)
 _____
+
 ### Imports
-**Java:**
+*Java:*
 ```java
 // unecessary
 import java.lang.System;
 ```
 
-**Ada:**
+*Ada:*
 ```ada
 -- `use` allows to use package elements without namespace
 with Ada.Text_IO; -- use Ada.Text_IO;
 ```
+
 ### Program entry point
-**Java:**
+*Java:*
 ```java
 public SomeClass {
   public static void main(String[] args) {
@@ -452,7 +454,7 @@ public SomeClass {
 }
 ```
 
-**Ada:**
+*Ada:*
 ```ada
 procedure SomeProcedure is
 begin
@@ -461,31 +463,31 @@ end SomeProcedure;
 ```
 
 ### Print
-**Java:**
+*Java:*
 ```java
 System.out.println("hello");
 ```
 
-**Ada:**
+*Ada:*
 ```ada
 -- Using `with` and `use` of `Ada.Text_IO.` package
 Put_Line("hello");
 ```
 
 ### Print
-**Java:**
+*Java:*
 ```java
 System.out.println("hello");
 ```
 
-**Ada:**
+*Ada:*
 ```ada
 -- Using `with` and `use` of `Ada.Text_IO.` package
 Put_Line("hello");
 ```
 
 ### Declarations
-**Java:**
+*Java:*
 ```java
 ...
   int outerScopeField1
@@ -499,7 +501,7 @@ Put_Line("hello");
   }
 ```
 
-**Ada:**
+*Ada:*
 ```ada
 procedure Proc 
  (Arg : Integer;
@@ -516,6 +518,35 @@ begin
 end Proc;
 ```
 
+### Condition
+*Java:*
+```java
+if (a > 0) {
+  ...;
+  ...;
+} else if (a < 0) {
+  ...;
+  ...;
+} else {
+  ...;
+  ...;
+}
+```
+
+*Ada:*
+```ada
+if A > 0 then
+  ...;
+  ...;
+elsif A < 0 then
+  ...;
+  ...;
+else
+  ...;
+  ...;
+end if;
+```
+
 ### Class/Type
 
 
@@ -524,7 +555,7 @@ end Proc;
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTAxMTQ2NjgwLC00NTA4MjQzMTIsLTQ1Mj
+eyJoaXN0b3J5IjpbMjMzMDM2MTc2LC00NTA4MjQzMTIsLTQ1Mj
 Y3MDI5NywtMTA4NDczNDMyNiwtMTE1NTM2OTIzOSwxNTE1MDQ1
 MzMzLC0xMjI3NjA4NDYwLDIwMjUzMDk4ODUsMTM5ODU5NTY3LC
 05MjMwMDAwMTAsLTgyNjQ3NTI3NCwxOTg1MTM1MzEsLTE1MzI2
