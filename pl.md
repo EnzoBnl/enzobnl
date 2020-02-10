@@ -598,27 +598,32 @@ for i of Int_Array loop
 end loop;
 ```
 
-### Class/Type
+### Ada's trong typing vs Java's implicit conversions
 *Java:*
 ```java
-double i = 1 / 3;
-         double j = 1 / (double)3;
+double a = 1 / 3;
+double b = 1 / (double)3;
 ```
 *Ada:*
 ```ada
-
+...
+  A : Float;
+  B : Float;
+is
+ 
 ```
 
+### Class/Type
 
 ### Compilation unit (Package/.class)
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwOTczMzQ1NTgsMTk3OTkzNDMxMywyMz
-MwMzYxNzYsLTQ1MDgyNDMxMiwtNDUyNjcwMjk3LC0xMDg0NzM0
-MzI2LC0xMTU1MzY5MjM5LDE1MTUwNDUzMzMsLTEyMjc2MDg0Nj
-AsMjAyNTMwOTg4NSwxMzk4NTk1NjcsLTkyMzAwMDAxMCwtODI2
-NDc1Mjc0LDE5ODUxMzUzMSwtMTUzMjY5Nzk2OSwtMTExNjU0OD
-AwOSwtNTUyNTI2MTg4LC0xNTkyOTgzNDYzLC0xODAyMTY4Ml19
+eyJoaXN0b3J5IjpbMzczODg0MzcwLDE5Nzk5MzQzMTMsMjMzMD
+M2MTc2LC00NTA4MjQzMTIsLTQ1MjY3MDI5NywtMTA4NDczNDMy
+NiwtMTE1NTM2OTIzOSwxNTE1MDQ1MzMzLC0xMjI3NjA4NDYwLD
+IwMjUzMDk4ODUsMTM5ODU5NTY3LC05MjMwMDAwMTAsLTgyNjQ3
+NTI3NCwxOTg1MTM1MzEsLTE1MzI2OTc5NjksLTExMTY1NDgwMD
+ksLTU1MjUyNjE4OCwtMTU5Mjk4MzQ2MywtMTgwMjE2ODJdfQ==
 
 -->
