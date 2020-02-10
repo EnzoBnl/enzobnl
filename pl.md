@@ -440,7 +440,7 @@ import java.lang.System;
 **Ada:**
 ```ada
 -- `use` allows to use package elements without namespace
-with Ada.Text_IO; use Ada.Text_IO;
+with Ada.Text_IO; -- use Ada.Text_IO;
 ```
 ### Program entry point
 **Java:**
@@ -455,6 +455,9 @@ public SomeClass {
 **Ada:**
 ```ada
 procedure SomeProcedure is
+begin
+  ...
+end SomeProcedure;
 ```
 
 ### Print
@@ -465,11 +468,11 @@ System.out.println("hello");
 
 **Ada:**
 ```ada
-Put_Line("hello");
+AdaPut_Line("hello");
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgyMDIzMTc5MiwtMTE1NTM2OTIzOSwxNT
+eyJoaXN0b3J5IjpbMTYyMzYzNzkzNiwtMTE1NTM2OTIzOSwxNT
 E1MDQ1MzMzLC0xMjI3NjA4NDYwLDIwMjUzMDk4ODUsMTM5ODU5
 NTY3LC05MjMwMDAwMTAsLTgyNjQ3NTI3NCwxOTg1MTM1MzEsLT
 E1MzI2OTc5NjksLTExMTY1NDgwMDksLTU1MjUyNjE4OCwtMTU5
