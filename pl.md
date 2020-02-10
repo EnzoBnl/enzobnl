@@ -468,13 +468,26 @@ System.out.println("hello");
 
 **Ada:**
 ```ada
-AdaPut_Line("hello");
+-- Using `with` and `use` of `Ada.Text_IO.` package
+Put_Line("hello");
+```
+
+### Print
+**Java:**
+```java
+System.out.println("hello");
+```
+
+**Ada:**
+```ada
+-- Using `with` and `use` of `Ada.Text_IO.` package
+Put_Line("hello");
 ```
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYyMzYzNzkzNiwtMTE1NTM2OTIzOSwxNT
-E1MDQ1MzMzLC0xMjI3NjA4NDYwLDIwMjUzMDk4ODUsMTM5ODU5
-NTY3LC05MjMwMDAwMTAsLTgyNjQ3NTI3NCwxOTg1MTM1MzEsLT
-E1MzI2OTc5NjksLTExMTY1NDgwMDksLTU1MjUyNjE4OCwtMTU5
-Mjk4MzQ2MywtMTgwMjE2ODJdfQ==
+eyJoaXN0b3J5IjpbLTEwODQ3MzQzMjYsLTExNTUzNjkyMzksMT
+UxNTA0NTMzMywtMTIyNzYwODQ2MCwyMDI1MzA5ODg1LDEzOTg1
+OTU2NywtOTIzMDAwMDEwLC04MjY0NzUyNzQsMTk4NTEzNTMxLC
+0xNTMyNjk3OTY5LC0xMTE2NTQ4MDA5LC01NTI1MjYxODgsLTE1
+OTI5ODM0NjMsLTE4MDIxNjgyXX0=
 -->
