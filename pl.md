@@ -488,10 +488,12 @@ Put_Line("hello");
 **Java:**
 ```java
 ...
-  int outerScope
+  int outerScopeField1
+  int outerScopeField2
   void proc(int arg) {
-    int localVar = a * 2;
-    System.out.println(b);
+    int localVar = arg * outerScopeField1;
+    outerScopeField2 = arg;
+    this.outerScopeField = localVar;
   }
 ```
 
@@ -518,7 +520,7 @@ is
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAzMzUzNDgxNSwtNDUyNjcwMjk3LC0xMD
+eyJoaXN0b3J5IjpbMTk0NDk0OTQwNSwtNDUyNjcwMjk3LC0xMD
 g0NzM0MzI2LC0xMTU1MzY5MjM5LDE1MTUwNDUzMzMsLTEyMjc2
 MDg0NjAsMjAyNTMwOTg4NSwxMzk4NTk1NjcsLTkyMzAwMDAxMC
 wtODI2NDc1Mjc0LDE5ODUxMzUzMSwtMTUzMjY5Nzk2OSwtMTEx
