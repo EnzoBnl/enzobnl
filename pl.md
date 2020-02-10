@@ -514,7 +514,6 @@ begin
   OuterScopeField2 := LocalVar1 * LocalVar2;
   OuterScopeField1 := Arg;
 end Proc;
-  
 ```
 
 ### Class/Type
@@ -522,25 +521,10 @@ end Proc;
 
 
 ### Compilation unit (Package/.class)
-**Java:**
-```java
-if (a > 0) {
-  ...
-} else if (a < 0) {
-  ...
-} else {
-  ...
-}
-```
 
-**Ada:**
-```ada
-if (A > 0)
 
-els
-```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTQ4MTMwNTkzLC00NTA4MjQzMTIsLTQ1Mj
+eyJoaXN0b3J5IjpbNTAxMTQ2NjgwLC00NTA4MjQzMTIsLTQ1Mj
 Y3MDI5NywtMTA4NDczNDMyNiwtMTE1NTM2OTIzOSwxNTE1MDQ1
 MzMzLC0xMjI3NjA4NDYwLDIwMjUzMDk4ODUsMTM5ODU5NTY3LC
 05MjMwMDAwMTAsLTgyNjQ3NTI3NCwxOTg1MTM1MzEsLTE1MzI2
