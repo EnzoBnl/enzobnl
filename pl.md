@@ -504,8 +504,12 @@ procedure Proc
   OuterScopeField1 : out Integer;
   OuterScopeField2 : in out Integer)
 is
-B : Integer;
+  LocalVar : Integer;
 begin
+  LocalVar := Arg * OuterScopeField2
+  OuterScopeField2 := Arg
+  OuterScopeField1 := Arg
+end Proc;
   
 ```
 
@@ -524,10 +528,10 @@ begin
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NzUyNDAwNTAsLTQ1MDgyNDMxMiwtND
-UyNjcwMjk3LC0xMDg0NzM0MzI2LC0xMTU1MzY5MjM5LDE1MTUw
-NDUzMzMsLTEyMjc2MDg0NjAsMjAyNTMwOTg4NSwxMzk4NTk1Nj
-csLTkyMzAwMDAxMCwtODI2NDc1Mjc0LDE5ODUxMzUzMSwtMTUz
-MjY5Nzk2OSwtMTExNjU0ODAwOSwtNTUyNTI2MTg4LC0xNTkyOT
-gzNDYzLC0xODAyMTY4Ml19
+eyJoaXN0b3J5IjpbMTA1OTU1MDMzOSwtNDUwODI0MzEyLC00NT
+I2NzAyOTcsLTEwODQ3MzQzMjYsLTExNTUzNjkyMzksMTUxNTA0
+NTMzMywtMTIyNzYwODQ2MCwyMDI1MzA5ODg1LDEzOTg1OTU2Ny
+wtOTIzMDAwMDEwLC04MjY0NzUyNzQsMTk4NTEzNTMxLC0xNTMy
+Njk3OTY5LC0xMTE2NTQ4MDA5LC01NTI1MjYxODgsLTE1OTI5OD
+M0NjMsLTE4MDIxNjgyXX0=
 -->
