@@ -28,6 +28,7 @@ synchronized
 native
 strictfp
 ```
+
 ## `-Xms` & `-Xmx`
 Passing the following arguments to the JVM:
 ```bash
@@ -425,9 +426,9 @@ from overrides import overrides  # decorator '@overrides'
 from abc import ABC, abstractmethod  #  'class C(ABC)' is abstract and decorator '@abstractmethod' usable.
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE5NDY1NTA5OSwxNTE1MDQ1MzMzLC0xMj
-I3NjA4NDYwLDIwMjUzMDk4ODUsMTM5ODU5NTY3LC05MjMwMDAw
-MTAsLTgyNjQ3NTI3NCwxOTg1MTM1MzEsLTE1MzI2OTc5NjksLT
-ExMTY1NDgwMDksLTU1MjUyNjE4OCwtMTU5Mjk4MzQ2MywtMTgw
-MjE2ODJdfQ==
+eyJoaXN0b3J5IjpbLTExNTUzNjkyMzksMTUxNTA0NTMzMywtMT
+IyNzYwODQ2MCwyMDI1MzA5ODg1LDEzOTg1OTU2NywtOTIzMDAw
+MDEwLC04MjY0NzUyNzQsMTk4NTEzNTMxLC0xNTMyNjk3OTY5LC
+0xMTE2NTQ4MDA5LC01NTI1MjYxODgsLTE1OTI5ODM0NjMsLTE4
+MDIxNjgyXX0=
 -->
