@@ -425,10 +425,21 @@ repr
 from overrides import overrides  # decorator '@overrides' 
 from abc import ABC, abstractmethod  #  'class C(ABC)' is abstract and decorator '@abstractmethod' usable.
 ```
+
+# Ada
+## Bindings to Java concepts
+mainly from Adacore's [Ada for C++ and Java developper](https://learn.adacore.com/pdf_books/courses/Ada_For_The_CPP_Java_Developer.pdf)
+_____
+### Concepts
+|Java|Ada|
+|--|--|
+|Class|Package|
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNTUzNjkyMzksMTUxNTA0NTMzMywtMT
-IyNzYwODQ2MCwyMDI1MzA5ODg1LDEzOTg1OTU2NywtOTIzMDAw
-MDEwLC04MjY0NzUyNzQsMTk4NTEzNTMxLC0xNTMyNjk3OTY5LC
-0xMTE2NTQ4MDA5LC01NTI1MjYxODgsLTE1OTI5ODM0NjMsLTE4
-MDIxNjgyXX0=
+eyJoaXN0b3J5IjpbLTg5MTQwNDMzMSwtMTE1NTM2OTIzOSwxNT
+E1MDQ1MzMzLC0xMjI3NjA4NDYwLDIwMjUzMDk4ODUsMTM5ODU5
+NTY3LC05MjMwMDAwMTAsLTgyNjQ3NTI3NCwxOTg1MTM1MzEsLT
+E1MzI2OTc5NjksLTExMTY1NDgwMDksLTU1MjUyNjE4OCwtMTU5
+Mjk4MzQ2MywtMTgwMjE2ODJdfQ==
 -->
