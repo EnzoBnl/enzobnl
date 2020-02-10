@@ -550,9 +550,7 @@ end if;
 ### Switching
 ```java
 switch (var) {
-  case 0:
-    ...;
-  case 1: case 2:
+  case 0: case 1: case 2:
     ...;
     break;
   default:
@@ -562,10 +560,11 @@ switch (var) {
 
 ```ada
 case Var is
-  when 0 ..  =>
+  when 0 .. 2 =>
     ...;
-  when 1 =>
+  when others =>
     ...;
+end case;
 ```
 
 ### Class/Type
@@ -576,10 +575,10 @@ case Var is
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDk1MzkyNTEyLDIzMzAzNjE3NiwtNDUwOD
-I0MzEyLC00NTI2NzAyOTcsLTEwODQ3MzQzMjYsLTExNTUzNjky
-MzksMTUxNTA0NTMzMywtMTIyNzYwODQ2MCwyMDI1MzA5ODg1LD
-EzOTg1OTU2NywtOTIzMDAwMDEwLC04MjY0NzUyNzQsMTk4NTEz
-NTMxLC0xNTMyNjk3OTY5LC0xMTE2NTQ4MDA5LC01NTI1MjYxOD
-gsLTE1OTI5ODM0NjMsLTE4MDIxNjgyXX0=
+eyJoaXN0b3J5IjpbLTEyMTMxMzM1NzcsMjMzMDM2MTc2LC00NT
+A4MjQzMTIsLTQ1MjY3MDI5NywtMTA4NDczNDMyNiwtMTE1NTM2
+OTIzOSwxNTE1MDQ1MzMzLC0xMjI3NjA4NDYwLDIwMjUzMDk4OD
+UsMTM5ODU5NTY3LC05MjMwMDAwMTAsLTgyNjQ3NTI3NCwxOTg1
+MTM1MzEsLTE1MzI2OTc5NjksLTExMTY1NDgwMDksLTU1MjUyNj
+E4OCwtMTU5Mjk4MzQ2MywtMTgwMjE2ODJdfQ==
 -->
