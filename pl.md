@@ -492,8 +492,9 @@ Put_Line("hello");
   int outerScopeField2
   void proc(int arg) {
     int localVar1 = arg * outerScopeField2;
+    int localVar3 = arg * localVar1;
     int localVar2 = 2;
-    this.outerScopeField2 = localVar;
+    this.outerScopeField2 = localVar1 * localVar2;
     this.outerScopeField1 = arg;
   }
 ```
@@ -506,10 +507,11 @@ procedure Proc
   OuterScopeField2 : in out Integer)
 is
   LocalVar1, LocalVar2 : Integer;
-  LocalVar1, LocalVar2 : Integer;
+  LocalVar3 : Integer := 2;
 begin
   LocalVar1 := Arg * OuterScopeField2;
-  OuterScopeField2 := LocalVar;
+  LocalVar3 := Arg * LocalVar1;
+  OuterScopeField2 := LocalVar1 * LocalVar2;
   OuterScopeField1 := Arg;
 end Proc;
   
@@ -530,10 +532,10 @@ end Proc;
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUzNjQ0ODAyMiwtNDUwODI0MzEyLC00NT
-I2NzAyOTcsLTEwODQ3MzQzMjYsLTExNTUzNjkyMzksMTUxNTA0
-NTMzMywtMTIyNzYwODQ2MCwyMDI1MzA5ODg1LDEzOTg1OTU2Ny
-wtOTIzMDAwMDEwLC04MjY0NzUyNzQsMTk4NTEzNTMxLC0xNTMy
-Njk3OTY5LC0xMTE2NTQ4MDA5LC01NTI1MjYxODgsLTE1OTI5OD
-M0NjMsLTE4MDIxNjgyXX0=
+eyJoaXN0b3J5IjpbLTEyNzQ0ODgwMTYsLTQ1MDgyNDMxMiwtND
+UyNjcwMjk3LC0xMDg0NzM0MzI2LC0xMTU1MzY5MjM5LDE1MTUw
+NDUzMzMsLTEyMjc2MDg0NjAsMjAyNTMwOTg4NSwxMzk4NTk1Nj
+csLTkyMzAwMDAxMCwtODI2NDc1Mjc0LDE5ODUxMzUzMSwtMTUz
+MjY5Nzk2OSwtMTExNjU0ODAwOSwtNTUyNTI2MTg4LC0xNTkyOT
+gzNDYzLC0xODAyMTY4Ml19
 -->
