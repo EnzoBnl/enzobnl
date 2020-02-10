@@ -484,7 +484,17 @@ System.out.println("hello");
 Put_Line("hello");
 ```
 
-###
+### Declarations
+**Java:**
+```java
+...
+  void proc(Int
+```
+
+**Ada:**
+```ada
+
+```
 
 ### Class/Type
 
@@ -501,10 +511,10 @@ Put_Line("hello");
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyODI0OTQzNTcsLTQ1MjY3MDI5NywtMT
-A4NDczNDMyNiwtMTE1NTM2OTIzOSwxNTE1MDQ1MzMzLC0xMjI3
-NjA4NDYwLDIwMjUzMDk4ODUsMTM5ODU5NTY3LC05MjMwMDAwMT
-AsLTgyNjQ3NTI3NCwxOTg1MTM1MzEsLTE1MzI2OTc5NjksLTEx
-MTY1NDgwMDksLTU1MjUyNjE4OCwtMTU5Mjk4MzQ2MywtMTgwMj
-E2ODJdfQ==
+eyJoaXN0b3J5IjpbLTQ5MzYyMjU4NywtNDUyNjcwMjk3LC0xMD
+g0NzM0MzI2LC0xMTU1MzY5MjM5LDE1MTUwNDUzMzMsLTEyMjc2
+MDg0NjAsMjAyNTMwOTg4NSwxMzk4NTk1NjcsLTkyMzAwMDAxMC
+wtODI2NDc1Mjc0LDE5ODUxMzUzMSwtMTUzMjY5Nzk2OSwtMTEx
+NjU0ODAwOSwtNTUyNTI2MTg4LC0xNTkyOTgzNDYzLC0xODAyMT
+Y4Ml19
 -->
