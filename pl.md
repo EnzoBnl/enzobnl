@@ -493,7 +493,7 @@ Put_Line("hello");
   void proc(int arg) {
     int localVar = arg * outerScopeField2;
     this.outerScopeField2 = localVar;
-    outerScopeField1 = arg;
+    this.outerScopeField1 = arg;
   }
 ```
 
@@ -501,9 +501,12 @@ Put_Line("hello");
 ```ada
 procedure Proc 
  (Arg : Integer;
- 
+  OuterScopeField1 : out Integer;
+  OuterScopeField2 : in out Integer)
 is
-  B : Integer;
+B : Integer;
+begin
+  
 ```
 
 ### Class/Type
@@ -521,10 +524,10 @@ is
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODE3NDc5MjAxLC00NTA4MjQzMTIsLTQ1Mj
-Y3MDI5NywtMTA4NDczNDMyNiwtMTE1NTM2OTIzOSwxNTE1MDQ1
-MzMzLC0xMjI3NjA4NDYwLDIwMjUzMDk4ODUsMTM5ODU5NTY3LC
-05MjMwMDAwMTAsLTgyNjQ3NTI3NCwxOTg1MTM1MzEsLTE1MzI2
-OTc5NjksLTExMTY1NDgwMDksLTU1MjUyNjE4OCwtMTU5Mjk4Mz
-Q2MywtMTgwMjE2ODJdfQ==
+eyJoaXN0b3J5IjpbLTE0NzUyNDAwNTAsLTQ1MDgyNDMxMiwtND
+UyNjcwMjk3LC0xMDg0NzM0MzI2LC0xMTU1MzY5MjM5LDE1MTUw
+NDUzMzMsLTEyMjc2MDg0NjAsMjAyNTMwOTg4NSwxMzk4NTk1Nj
+csLTkyMzAwMDAxMCwtODI2NDc1Mjc0LDE5ODUxMzUzMSwtMTUz
+MjY5Nzk2OSwtMTExNjU0ODAwOSwtNTUyNTI2MTg4LC0xNTkyOT
+gzNDYzLC0xODAyMTY4Ml19
 -->
