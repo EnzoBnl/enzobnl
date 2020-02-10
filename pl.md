@@ -496,8 +496,10 @@ Put_Line("hello");
 
 **Ada:**
 ```ada
-procedure Proc is
-  
+procedure Proc 
+ (A
+is
+  B : Integer;
 ```
 
 ### Class/Type
@@ -515,7 +517,7 @@ procedure Proc is
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMzMzYwMzIyNiwtNDUyNjcwMjk3LC0xMD
+eyJoaXN0b3J5IjpbMTE2NDUxMTg0NCwtNDUyNjcwMjk3LC0xMD
 g0NzM0MzI2LC0xMTU1MzY5MjM5LDE1MTUwNDUzMzMsLTEyMjc2
 MDg0NjAsMjAyNTMwOTg4NSwxMzk4NTk1NjcsLTkyMzAwMDAxMC
 wtODI2NDc1Mjc0LDE5ODUxMzUzMSwtMTUzMjY5Nzk2OSwtMTEx
