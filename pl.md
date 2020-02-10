@@ -14,6 +14,20 @@ Programming using only idioms ensures you a certain level of :
 - **readability**: your code will be more easily intelligible by the rest of the community because the set of idioms represents a standard.
 - 
 # Java
+## Modifiers order
+from [open jdk guidelines](http://cr.openjdk.java.net/~alundblad/styleguide/index-v6.html):
+```java
+public / private / protected
+abstract
+static
+final
+transient
+volatile
+**default**
+synchronized
+native
+strictfp
+```
 ## `-Xms` & `-Xmx`
 Passing the following arguments to the JVM:
 ```bash
@@ -411,8 +425,9 @@ from overrides import overrides  # decorator '@overrides'
 from abc import ABC, abstractmethod  #  'class C(ABC)' is abstract and decorator '@abstractmethod' usable.
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUxNTA0NTMzMywtMTIyNzYwODQ2MCwyMD
-I1MzA5ODg1LDEzOTg1OTU2NywtOTIzMDAwMDEwLC04MjY0NzUy
-NzQsMTk4NTEzNTMxLC0xNTMyNjk3OTY5LC0xMTE2NTQ4MDA5LC
-01NTI1MjYxODgsLTE1OTI5ODM0NjMsLTE4MDIxNjgyXX0=
+eyJoaXN0b3J5IjpbMTE5NDY1NTA5OSwxNTE1MDQ1MzMzLC0xMj
+I3NjA4NDYwLDIwMjUzMDk4ODUsMTM5ODU5NTY3LC05MjMwMDAw
+MTAsLTgyNjQ3NTI3NCwxOTg1MTM1MzEsLTE1MzI2OTc5NjksLT
+ExMTY1NDgwMDksLTU1MjUyNjE4OCwtMTU5Mjk4MzQ2MywtMTgw
+MjE2ODJdfQ==
 -->
