@@ -575,7 +575,7 @@ while (var > 0) {
   ...;
 }
 
-for (int i = 0; i <= N, i++) {
+for (int i = N; i >= 0, i--) {
   ...;
 }
 
@@ -599,17 +599,24 @@ end loop;
 ```
 
 ### Class/Type
+*Java:*
+```java
 
+```
+*Ada:*
+```ada
+
+```
 
 
 ### Compilation unit (Package/.class)
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTgzMDM3MzA5LDIzMzAzNjE3NiwtNDUwOD
-I0MzEyLC00NTI2NzAyOTcsLTEwODQ3MzQzMjYsLTExNTUzNjky
-MzksMTUxNTA0NTMzMywtMTIyNzYwODQ2MCwyMDI1MzA5ODg1LD
-EzOTg1OTU2NywtOTIzMDAwMDEwLC04MjY0NzUyNzQsMTk4NTEz
-NTMxLC0xNTMyNjk3OTY5LC0xMTE2NTQ4MDA5LC01NTI1MjYxOD
-gsLTE1OTI5ODM0NjMsLTE4MDIxNjgyXX0=
+eyJoaXN0b3J5IjpbMTk3OTkzNDMxMywyMzMwMzYxNzYsLTQ1MD
+gyNDMxMiwtNDUyNjcwMjk3LC0xMDg0NzM0MzI2LC0xMTU1MzY5
+MjM5LDE1MTUwNDUzMzMsLTEyMjc2MDg0NjAsMjAyNTMwOTg4NS
+wxMzk4NTk1NjcsLTkyMzAwMDAxMCwtODI2NDc1Mjc0LDE5ODUx
+MzUzMSwtMTUzMjY5Nzk2OSwtMTExNjU0ODAwOSwtNTUyNTI2MT
+g4LC0xNTkyOTgzNDYzLC0xODAyMTY4Ml19
 -->
