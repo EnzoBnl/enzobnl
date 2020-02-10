@@ -491,7 +491,8 @@ Put_Line("hello");
   int outerScopeField1
   int outerScopeField2
   void proc(int arg) {
-    int localVar = arg * outerScopeField2;
+    int localVar1 = arg * outerScopeField2;
+    int localVar2 = 2;
     this.outerScopeField2 = localVar;
     this.outerScopeField1 = arg;
   }
@@ -504,11 +505,12 @@ procedure Proc
   OuterScopeField1 : out Integer;
   OuterScopeField2 : in out Integer)
 is
-  LocalVar : Integer;
+  LocalVar1, LocalVar2 : Integer;
+  LocalVar1, LocalVar2 : Integer;
 begin
-  LocalVar := Arg * OuterScopeField2
-  OuterScopeField2 := Arg
-  OuterScopeField1 := Arg
+  LocalVar1 := Arg * OuterScopeField2;
+  OuterScopeField2 := LocalVar;
+  OuterScopeField1 := Arg;
 end Proc;
   
 ```
@@ -528,7 +530,7 @@ end Proc;
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA1OTU1MDMzOSwtNDUwODI0MzEyLC00NT
+eyJoaXN0b3J5IjpbLTUzNjQ0ODAyMiwtNDUwODI0MzEyLC00NT
 I2NzAyOTcsLTEwODQ3MzQzMjYsLTExNTUzNjkyMzksMTUxNTA0
 NTMzMywtMTIyNzYwODQ2MCwyMDI1MzA5ODg1LDEzOTg1OTU2Ny
 wtOTIzMDAwMDEwLC04MjY0NzUyNzQsMTk4NTEzNTMxLC0xNTMy
