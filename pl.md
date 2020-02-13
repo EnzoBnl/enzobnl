@@ -60,7 +60,7 @@ Square sq = (int x) -> x*x;
 In fact `@FunctionalInterface` is here to guarantee that the functional interface **has only one abstract method**.
 
 ### Making a lambda Serializable
-At instantiation time, you can use a union cast to make your lambda serializable:
+At instantiation time, you can use a union cast to make your lambda serializable (`Serializable` is an empty interface):
 ```java
 (Runnable & Serializable) () -> System.out.println("runnable is running")
 ```
@@ -628,11 +628,11 @@ is
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMTUzNTc1NzIsLTE2MzY0NzIwMjEsNj
-EwOTAyNDc1LC0yNjczOTk3NSwxOTc5OTM0MzEzLDIzMzAzNjE3
-NiwtNDUwODI0MzEyLC00NTI2NzAyOTcsLTEwODQ3MzQzMjYsLT
-ExNTUzNjkyMzksMTUxNTA0NTMzMywtMTIyNzYwODQ2MCwyMDI1
-MzA5ODg1LDEzOTg1OTU2NywtOTIzMDAwMDEwLC04MjY0NzUyNz
-QsMTk4NTEzNTMxLC0xNTMyNjk3OTY5LC0xMTE2NTQ4MDA5LC01
-NTI1MjYxODhdfQ==
+eyJoaXN0b3J5IjpbMTYyNDM4ODU3MywtMTYzNjQ3MjAyMSw2MT
+A5MDI0NzUsLTI2NzM5OTc1LDE5Nzk5MzQzMTMsMjMzMDM2MTc2
+LC00NTA4MjQzMTIsLTQ1MjY3MDI5NywtMTA4NDczNDMyNiwtMT
+E1NTM2OTIzOSwxNTE1MDQ1MzMzLC0xMjI3NjA4NDYwLDIwMjUz
+MDk4ODUsMTM5ODU5NTY3LC05MjMwMDAwMTAsLTgyNjQ3NTI3NC
+wxOTg1MTM1MzEsLTE1MzI2OTc5NjksLTExMTY1NDgwMDksLTU1
+MjUyNjE4OF19
 -->
