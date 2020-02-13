@@ -62,7 +62,7 @@ In fact `@FunctionalInterface` is here to guarantee that the functional interfac
 ### Making a lambda Serializable
 At instantiation time, you can use a union cast to make your lambda serializable:
 ```java
-(Runnable & Serializable)(() -> System.out.println("runnable is running")) 
+(Runnable & Serializable) () -> System.out.println("runnable is running")
 ```
 
 ### `default` method in interface vs abstract method in abstract classes ?
@@ -628,7 +628,7 @@ is
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNjM5MTI2OTEsLTE2MzY0NzIwMjEsNj
+eyJoaXN0b3J5IjpbLTExMTUzNTc1NzIsLTE2MzY0NzIwMjEsNj
 EwOTAyNDc1LC0yNjczOTk3NSwxOTc5OTM0MzEzLDIzMzAzNjE3
 NiwtNDUwODI0MzEyLC00NTI2NzAyOTcsLTEwODQ3MzQzMjYsLT
 ExNTUzNjkyMzksMTUxNTA0NTMzMywtMTIyNzYwODQ2MCwyMDI1
