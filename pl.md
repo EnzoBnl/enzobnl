@@ -59,6 +59,9 @@ Square sq = (int x) -> x*x;
 
 In fact `@FunctionalInterface` is here to guarantee that the functional interface **has only one abstract method**.
 
+### Making a lambda Serializable
+At instantiation time, you can use a union cast to make your lambda serializable
+
 ### `default` method in interface vs abstract method in abstract classes ?
  [(post)](https://stackoverflow.com/a/19998827/6580080)
  
@@ -622,11 +625,11 @@ is
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MzY0NzIwMjEsNjEwOTAyNDc1LC0yNj
-czOTk3NSwxOTc5OTM0MzEzLDIzMzAzNjE3NiwtNDUwODI0MzEy
-LC00NTI2NzAyOTcsLTEwODQ3MzQzMjYsLTExNTUzNjkyMzksMT
-UxNTA0NTMzMywtMTIyNzYwODQ2MCwyMDI1MzA5ODg1LDEzOTg1
-OTU2NywtOTIzMDAwMDEwLC04MjY0NzUyNzQsMTk4NTEzNTMxLC
-0xNTMyNjk3OTY5LC0xMTE2NTQ4MDA5LC01NTI1MjYxODgsLTE1
-OTI5ODM0NjNdfQ==
+eyJoaXN0b3J5IjpbLTU1NzYzMTIzMiwtMTYzNjQ3MjAyMSw2MT
+A5MDI0NzUsLTI2NzM5OTc1LDE5Nzk5MzQzMTMsMjMzMDM2MTc2
+LC00NTA4MjQzMTIsLTQ1MjY3MDI5NywtMTA4NDczNDMyNiwtMT
+E1NTM2OTIzOSwxNTE1MDQ1MzMzLC0xMjI3NjA4NDYwLDIwMjUz
+MDk4ODUsMTM5ODU5NTY3LC05MjMwMDAwMTAsLTgyNjQ3NTI3NC
+wxOTg1MTM1MzEsLTE1MzI2OTc5NjksLTExMTY1NDgwMDksLTU1
+MjUyNjE4OF19
 -->
