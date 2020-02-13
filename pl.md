@@ -34,7 +34,7 @@ Passing the following arguments to the JVM:
 ```bash
 java -Xms256m -Xmx2048m
 ```
-will reserve an initial amount of memory of 256 MB for JVM's heap consumption and allow it to use up to 2048 MB during the process.
+will reserve an initial amount of memory of 256 MB for JVM's heap consumption and allow it to use up to 2048 MB during its runtime.
 
 ## Java 8: Interfaces
 We will take the following interface as an example for this section:
@@ -622,11 +622,11 @@ is
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjEwOTAyNDc1LC0yNjczOTk3NSwxOTc5OT
-M0MzEzLDIzMzAzNjE3NiwtNDUwODI0MzEyLC00NTI2NzAyOTcs
-LTEwODQ3MzQzMjYsLTExNTUzNjkyMzksMTUxNTA0NTMzMywtMT
-IyNzYwODQ2MCwyMDI1MzA5ODg1LDEzOTg1OTU2NywtOTIzMDAw
-MDEwLC04MjY0NzUyNzQsMTk4NTEzNTMxLC0xNTMyNjk3OTY5LC
-0xMTE2NTQ4MDA5LC01NTI1MjYxODgsLTE1OTI5ODM0NjMsLTE4
-MDIxNjgyXX0=
+eyJoaXN0b3J5IjpbLTE2MzY0NzIwMjEsNjEwOTAyNDc1LC0yNj
+czOTk3NSwxOTc5OTM0MzEzLDIzMzAzNjE3NiwtNDUwODI0MzEy
+LC00NTI2NzAyOTcsLTEwODQ3MzQzMjYsLTExNTUzNjkyMzksMT
+UxNTA0NTMzMywtMTIyNzYwODQ2MCwyMDI1MzA5ODg1LDEzOTg1
+OTU2NywtOTIzMDAwMDEwLC04MjY0NzUyNzQsMTk4NTEzNTMxLC
+0xNTMyNjk3OTY5LC0xMTE2NTQ4MDA5LC01NTI1MjYxODgsLTE1
+OTI5ODM0NjNdfQ==
 -->
