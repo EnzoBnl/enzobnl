@@ -8,7 +8,7 @@
 |[Graphs theory & web](graph.html)|Definitions & theorems, search engines and web's graph properties|
 |[Functional Programming](FP.html)|Scala & Cats, categories|
 |[Big Data Systems](bd.html)|Frameworks & theory|
-|[Development](pl.html)|Coding in Java/Scala/Python|
+|[Development](pl.html)|Coding in Java/Scala/Python/Ada|
 |[Distributed algorithms](da.html)|Leader election & Consensus, synchronous systems|
 |[Other CS notes](div.html)|Multi-threading, computer architecture, network...|
 |[Commands cheat sheet](cmd.html)|To write down some useful CLI stuff|
@@ -19,6 +19,7 @@ ___
 – Flannery O'Connor
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMDAyODcwNDEsLTE2NDk4NDA3NiwzOT
-E3NTUyMjEsMzA5MDI0OTUyLDUzMDAxMzE5XX0=
+eyJoaXN0b3J5IjpbLTE1NzAyMzk5NTIsLTIwMDAyODcwNDEsLT
+E2NDk4NDA3NiwzOTE3NTUyMjEsMzA5MDI0OTUyLDUzMDAxMzE5
+XX0=
 -->
