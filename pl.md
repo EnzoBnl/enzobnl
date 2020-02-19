@@ -16,6 +16,8 @@ Programming using only idioms ensures you a certain level of :
 # Java
 ## `&&` vs `&`, `||` vs `|`
 When the boolean operator is doubled, it means that its evaluation will be lazy:
+
+Given that `a` evaluates to `false`:
 `a && b`
 
 ## Modifiers order
@@ -632,7 +634,7 @@ is
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODEwMzg4MDYxLDE2MjQzODg1NzMsLTE2Mz
+eyJoaXN0b3J5IjpbMTI1MjM4OTE4LDE2MjQzODg1NzMsLTE2Mz
 Y0NzIwMjEsNjEwOTAyNDc1LC0yNjczOTk3NSwxOTc5OTM0MzEz
 LDIzMzAzNjE3NiwtNDUwODI0MzEyLC00NTI2NzAyOTcsLTEwOD
 Q3MzQzMjYsLTExNTUzNjkyMzksMTUxNTA0NTMzMywtMTIyNzYw
