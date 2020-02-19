@@ -14,7 +14,7 @@ Programming using only idioms ensures you a certain level of :
 - **readability**: your code will be more easily intelligible by the rest of the community because the set of idioms represents a standard.
 - 
 # Java
-## `&&` vs `&`, `||` vs `|`
+## `&&` and `||` vs `&` and `|`
 When the boolean operator is doubled, it means that its evaluation will be **lazy**:
 
 - Given that `a` evaluates to `false`: `a && b` will not trigger the evaluation of `b` but `a & b` will.
@@ -634,11 +634,11 @@ is
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY2NTE0MTc0NiwxNjI0Mzg4NTczLC0xNj
-M2NDcyMDIxLDYxMDkwMjQ3NSwtMjY3Mzk5NzUsMTk3OTkzNDMx
-MywyMzMwMzYxNzYsLTQ1MDgyNDMxMiwtNDUyNjcwMjk3LC0xMD
-g0NzM0MzI2LC0xMTU1MzY5MjM5LDE1MTUwNDUzMzMsLTEyMjc2
-MDg0NjAsMjAyNTMwOTg4NSwxMzk4NTk1NjcsLTkyMzAwMDAxMC
-wtODI2NDc1Mjc0LDE5ODUxMzUzMSwtMTUzMjY5Nzk2OSwtMTEx
-NjU0ODAwOV19
+eyJoaXN0b3J5IjpbNjI4Njg3MDcxLDE2MjQzODg1NzMsLTE2Mz
+Y0NzIwMjEsNjEwOTAyNDc1LC0yNjczOTk3NSwxOTc5OTM0MzEz
+LDIzMzAzNjE3NiwtNDUwODI0MzEyLC00NTI2NzAyOTcsLTEwOD
+Q3MzQzMjYsLTExNTUzNjkyMzksMTUxNTA0NTMzMywtMTIyNzYw
+ODQ2MCwyMDI1MzA5ODg1LDEzOTg1OTU2NywtOTIzMDAwMDEwLC
+04MjY0NzUyNzQsMTk4NTEzNTMxLC0xNTMyNjk3OTY5LC0xMTE2
+NTQ4MDA5XX0=
 -->
