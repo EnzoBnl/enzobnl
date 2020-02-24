@@ -208,6 +208,8 @@ type ':wq' + press enter (save and quit vim)
 ```bash 
 // rename commit message
 git commit --amend -m"new message"
+// rename branch
+git branch -m oldname newname
 //tag
 $ git tag -a v1.4 -m "my version 1.4"
 //Fusionner i last commits
@@ -270,11 +272,11 @@ c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex 
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc3NjU3Mzc1MywyOTAxMjA3NzQsMjA2Mz
-c0NTY0OSwtMTc0NDk1MzU1NSwxNTExMDE3MTUxLDk2Nzc5NDE4
-MSwtMTM1ODk3Mzg0MywtMTA3NDg4MDEwNSwtNjgzMzE4MTkzLD
-Y1NTQ1MzcyMiwtNjkxMjc0MjgyLC02MDg2MDU3MDgsMTEyMTk5
-MTUzOCwtMzE2MzMwNjUyLC0xOTQwMzAwMjk3LDI0MTM2MDQ3NS
-wtMTA3NDUwMTU0MCwtODY3MTY4NzUxLC04NzQ5Nzg1MjksLTEz
-NTgzMzkxNTBdfQ==
+eyJoaXN0b3J5IjpbODc2OTI2MTY2LDI5MDEyMDc3NCwyMDYzNz
+Q1NjQ5LC0xNzQ0OTUzNTU1LDE1MTEwMTcxNTEsOTY3Nzk0MTgx
+LC0xMzU4OTczODQzLC0xMDc0ODgwMTA1LC02ODMzMTgxOTMsNj
+U1NDUzNzIyLC02OTEyNzQyODIsLTYwODYwNTcwOCwxMTIxOTkx
+NTM4LC0zMTYzMzA2NTIsLTE5NDAzMDAyOTcsMjQxMzYwNDc1LC
+0xMDc0NTAxNTQwLC04NjcxNjg3NTEsLTg3NDk3ODUyOSwtMTM1
+ODMzOTE1MF19
 -->
