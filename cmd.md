@@ -209,7 +209,7 @@ type ':wq' + press enter (save and quit vim)
 // rename commit message
 git commit --amend -m"new message"
 // rename branch
-git branch -m oldname newname
+git branch -m <oldname> <newname>
 //tag
 $ git tag -a v1.4 -m "my version 1.4"
 //Fusionner i last commits
@@ -272,7 +272,7 @@ c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex 
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODc2OTI2MTY2LDI5MDEyMDc3NCwyMDYzNz
+eyJoaXN0b3J5IjpbMTE3ODE2MzgwLDI5MDEyMDc3NCwyMDYzNz
 Q1NjQ5LC0xNzQ0OTUzNTU1LDE1MTEwMTcxNTEsOTY3Nzk0MTgx
 LC0xMzU4OTczODQzLC0xMDc0ODgwMTA1LC02ODMzMTgxOTMsNj
 U1NDUzNzIyLC02OTEyNzQyODIsLTYwODYwNTcwOCwxMTIxOTkx
