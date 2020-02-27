@@ -94,7 +94,7 @@ implicit def StringToInt(s: String) = Integer.parseInt(s)
 ```
 
 #### Use Case: Decorator Pattern with implicit class
-Suppose we want to be able to call `.show()` on a `DeltaTable` (optionally refer to see [delta.io](delta.io)) that has not such a method. 
+Suppose we want to be able to call `.show()` on a `DeltaTable` (optionally refer to see [delta.io](https://delta.io)) that has not such a method. 
 
 Two approaches in OOP:
 1. Try to achieve this with a classic Decorator pattern:
@@ -141,6 +141,6 @@ deltaTable.as("alias").show()
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA0Njc4MTU2OSwxMDAwNTQ0NzM3LC04ND
+eyJoaXN0b3J5IjpbLTE3NjczNzgzOCwxMDAwNTQ0NzM3LC04ND
 E5ODI2OThdfQ==
 -->
