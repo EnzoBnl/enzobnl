@@ -4,7 +4,7 @@ kramdown:
   math_engine: mathjax
   
 title: >-
-    <a href="index.html" style="color: #f2f2f2">Enzo Bonnal's</a>
+    <a href="/" style="color: #f2f2f2">Enzo Bonnal's</a>
 
 description: >-
     <a href="works.html" style="color: #f2f2f2">Works</a> × <a href="notes.html" style="color: #f2f2f2">Notes</a> × <a href="http://linkedin.com/in/enzo-bonnal" style="color: #f2f2f2">LinkedIn</a> × <a href="https://stackoverflow.com/users/6580080/enzobnl?tab=answers&sort=newest#user-tab-answers" style="color: #f2f2f2">StackOverflow</a> × <a href="https://github.com/enzobnl" style="color: #f2f2f2">Github</a>
