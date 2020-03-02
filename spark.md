@@ -1045,9 +1045,6 @@ See `BypassMergeSortShuffleWriter` which relies on `DiskBlockObjectWriter` & `Bl
 #### b) Spark UI Shuffle insights
 - the size under *shuffle write* and *shuffle read* sections are values after compression.
 
-
-
-
 ### 7) Exchanges planning (SQL)
 Exchange are carefully optimized by Catalyst and are ordered to be as cheap as possible.
 
@@ -1100,12 +1097,12 @@ edges.repartition(10, col("src")).withColumnRenamed("src", "id").groupBy("id").c
 
 ## XVI/ The OOM Zone
 
-Spark is may be able to deal with any size of input data, even with one having poor partitioning with sizes completely exceeding the execution memory of your executors: **It is an "in-memory as possible" engine that tries to work in memory but when it becomes impossible it *spills* data to disk**. This is the theory, but in practice you will face evil OOMs (`OutOfMemoryError`s): This is because Spark's data are not just RDDs: There are many **auxiliary data structures in memory ** that are used by Spark and that may grow with partitions sizes, potentially leading to OOMs.
+Spark may be able to deal with any size of input data, even with one having poor partitioning with sizes completely exceeding the execution memory of your executors: **It is an "in-memory as possible" engine that tries to work in memory but when it becomes impossible it *spills* data to disk**. This is the theory, but in practice you will face evil OOMs (`OutOfMemoryError`s): This is because Spark's data are not just RDDs: There are many **auxiliary data structures in memory ** that are used by Spark and that may grow with partitions sizes, potentially leading to OOMs.
 
 An [Intel's article about AE](https://software.intel.com/en-us/articles/spark-sql-adaptive-execution-at-100-tb) says about number of partitions: *"If it is too small, then lower parallelism, and each reduce task has to process more data. Spilling to disk even happens as memory may not hold all data. In the worst case, it may cause serious GC problems or OOMs."*
 
 ### 1) "all is right" scenarios
-If no complex operators like *sort* or *join* are involved, a simple `range` followed by a repartitioning manipulating all along **a single partition of more than 10GB** with an **executor memory of 1GB** will work just **fine**:
+If no complex operators like *sort* are involved, a simple `range` followed by a repartitioning manipulating all along **a single partition of more than 10GB** with an **executor memory of 1GB** will work just **fine**:
 ```scala
 val spark = SparkSession.builder  
   .config("spark.executor.memory", "1g")  
@@ -1190,11 +1187,11 @@ _____
 ## Videos
 - [A Deeper Understanding of Spark Internals - Aaron Davidson (Databricks)](https://www.youtube.com/watch?v=dmL0N3qfSc8)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MzkxMzA1NDEsLTI4NjM5MzUyLDIxMT
-c1MTQxMywtMjUwOTc2MjI3LDEwMjE5MDc3NCw5MTg2MTcxNTgs
-LTExNzgzOTc4MTAsMTMyNjcyMzkwNywtMTkyMDcxMzA2NywtMT
-k5NDg3MzUyNCw0NTc3MTc1MzUsLTE0MTI0NDk2NzUsLTYyNzUw
-MzA0NCwtMzQ2MjQ3NjQ3LDEwMjQ0MzE2MjksLTk1ODM1NDI3Ni
-wxMjI2NjY4MjAwLC0xNzgzODk5MDAzLDc4NzMxMTgwNSwxNzkz
-NzkwNjU0XX0=
+eyJoaXN0b3J5IjpbLTMyOTUxMjk1NiwtMTYzOTEzMDU0MSwtMj
+g2MzkzNTIsMjExNzUxNDEzLC0yNTA5NzYyMjcsMTAyMTkwNzc0
+LDkxODYxNzE1OCwtMTE3ODM5NzgxMCwxMzI2NzIzOTA3LC0xOT
+IwNzEzMDY3LC0xOTk0ODczNTI0LDQ1NzcxNzUzNSwtMTQxMjQ0
+OTY3NSwtNjI3NTAzMDQ0LC0zNDYyNDc2NDcsMTAyNDQzMTYyOS
+wtOTU4MzU0Mjc2LDEyMjY2NjgyMDAsLTE3ODM4OTkwMDMsNzg3
+MzExODA1XX0=
 -->
