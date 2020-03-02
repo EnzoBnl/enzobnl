@@ -1040,11 +1040,14 @@ See `BypassMergeSortShuffleWriter` which relies on `DiskBlockObjectWriter` & `Bl
 
 - an `ExternalShuffleService` is a server that serves the map output files to guarantee their availability in case of executor failure, by not making executors directly serve each others.
 
-#### b) Spark UI Shuffle insights
-- the size under *shuffle write* and *shuffle read* sections are values after compression (used algorithm is set in `spark.io.compression.codec`, default using *lz4*)
+#### b) Shuffle output format
+Map output objects are serialized (using Java serialization or Kryo if set) and written into compressed files(used algorithm is set in `spark.io.compression.codec`, default using *lz4*). 
 
-#### c) Shuffle output format
-Map output objects are serialized (using Java serialization or Kryo if set) and written into files, compressed using `spark` codec
+#### c) Spark UI Shuffle insights
+- the size under *shuffle write* and *shuffle read* sections are values after compression.
+
+
+
 
 ### 7) Exchanges planning (SQL)
 Exchange are carefully optimized by Catalyst and are ordered to be as cheap as possible.
@@ -1188,10 +1191,11 @@ _____
 ## Videos
 - [A Deeper Understanding of Spark Internals - Aaron Davidson (Databricks)](https://www.youtube.com/watch?v=dmL0N3qfSc8)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI4NjM5MzUyLDIxMTc1MTQxMywtMjUwOT
-c2MjI3LDEwMjE5MDc3NCw5MTg2MTcxNTgsLTExNzgzOTc4MTAs
-MTMyNjcyMzkwNywtMTkyMDcxMzA2NywtMTk5NDg3MzUyNCw0NT
-c3MTc1MzUsLTE0MTI0NDk2NzUsLTYyNzUwMzA0NCwtMzQ2MjQ3
-NjQ3LDEwMjQ0MzE2MjksLTk1ODM1NDI3NiwxMjI2NjY4MjAwLC
-0xNzgzODk5MDAzLDc4NzMxMTgwNSwxNzkzNzkwNjU0XX0=
+eyJoaXN0b3J5IjpbLTE4MDIyNTgyNjEsLTI4NjM5MzUyLDIxMT
+c1MTQxMywtMjUwOTc2MjI3LDEwMjE5MDc3NCw5MTg2MTcxNTgs
+LTExNzgzOTc4MTAsMTMyNjcyMzkwNywtMTkyMDcxMzA2NywtMT
+k5NDg3MzUyNCw0NTc3MTc1MzUsLTE0MTI0NDk2NzUsLTYyNzUw
+MzA0NCwtMzQ2MjQ3NjQ3LDEwMjQ0MzE2MjksLTk1ODM1NDI3Ni
+wxMjI2NjY4MjAwLC0xNzgzODk5MDAzLDc4NzMxMTgwNSwxNzkz
+NzkwNjU0XX0=
 -->
