@@ -1043,6 +1043,9 @@ See `BypassMergeSortShuffleWriter` which relies on `DiskBlockObjectWriter` & `Bl
 #### b) Spark UI Shuffle insights
 - the size under *shuffle write* and *shuffle read* sections are values after compression (used algorithm is set in `spark.io.compression.codec`, default using *lz4*)
 
+#### c) Shuffle output format
+The shuffle output is 
+
 ### 7) Exchanges planning (SQL)
 Exchange are carefully optimized by Catalyst and are ordered to be as cheap as possible.
 
@@ -1182,10 +1185,10 @@ _____
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI1MDk3NjIyNywxMDIxOTA3NzQsOTE4Nj
-E3MTU4LC0xMTc4Mzk3ODEwLDEzMjY3MjM5MDcsLTE5MjA3MTMw
-NjcsLTE5OTQ4NzM1MjQsNDU3NzE3NTM1LC0xNDEyNDQ5Njc1LC
-02Mjc1MDMwNDQsLTM0NjI0NzY0NywxMDI0NDMxNjI5LC05NTgz
-NTQyNzYsMTIyNjY2ODIwMCwtMTc4Mzg5OTAwMyw3ODczMTE4MD
-UsMTc5Mzc5MDY1NF19
+eyJoaXN0b3J5IjpbMjExNzUxNDEzLC0yNTA5NzYyMjcsMTAyMT
+kwNzc0LDkxODYxNzE1OCwtMTE3ODM5NzgxMCwxMzI2NzIzOTA3
+LC0xOTIwNzEzMDY3LC0xOTk0ODczNTI0LDQ1NzcxNzUzNSwtMT
+QxMjQ0OTY3NSwtNjI3NTAzMDQ0LC0zNDYyNDc2NDcsMTAyNDQz
+MTYyOSwtOTU4MzU0Mjc2LDEyMjY2NjgyMDAsLTE3ODM4OTkwMD
+MsNzg3MzExODA1LDE3OTM3OTA2NTRdfQ==
 -->
