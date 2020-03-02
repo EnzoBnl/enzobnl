@@ -1185,11 +1185,13 @@ _____
 - [HashPartitioner explained](https://stackoverflow.com/questions/31424396/how-does-hashpartitioner-work)
 - [Spark's configuration (latest)](https://spark.apache.org/docs/lastest/configuration.html)
 
+## Videos
+- [A Deeper Understanding of Spark Internals - Aaron Davidson (Databricks)](https://www.youtube.com/watch?v=dmL0N3qfSc8)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODc5NjAzNTY3LDIxMTc1MTQxMywtMjUwOT
-c2MjI3LDEwMjE5MDc3NCw5MTg2MTcxNTgsLTExNzgzOTc4MTAs
-MTMyNjcyMzkwNywtMTkyMDcxMzA2NywtMTk5NDg3MzUyNCw0NT
-c3MTc1MzUsLTE0MTI0NDk2NzUsLTYyNzUwMzA0NCwtMzQ2MjQ3
-NjQ3LDEwMjQ0MzE2MjksLTk1ODM1NDI3NiwxMjI2NjY4MjAwLC
-0xNzgzODk5MDAzLDc4NzMxMTgwNSwxNzkzNzkwNjU0XX0=
+eyJoaXN0b3J5IjpbMjA4NDAzODk2OSwyMTE3NTE0MTMsLTI1MD
+k3NjIyNywxMDIxOTA3NzQsOTE4NjE3MTU4LC0xMTc4Mzk3ODEw
+LDEzMjY3MjM5MDcsLTE5MjA3MTMwNjcsLTE5OTQ4NzM1MjQsND
+U3NzE3NTM1LC0xNDEyNDQ5Njc1LC02Mjc1MDMwNDQsLTM0NjI0
+NzY0NywxMDI0NDMxNjI5LC05NTgzNTQyNzYsMTIyNjY2ODIwMC
+wtMTc4Mzg5OTAwMyw3ODczMTE4MDUsMTc5Mzc5MDY1NF19
 -->
