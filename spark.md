@@ -1027,9 +1027,10 @@ related issues: SPARK-2044 SPARK-3376 SPARK-4550
 Shuffle execution: 
 1. local partitions **map output are packed in execution memory** region and **spilled to local file system by batch** when memory become saturated
 2. outputs targeting the **same partition are spilled to an unique file**
-3. Shuffle output files consist of the stage pipeline output objects serialized
+3. Shuffle output files consist of the stage output serialized objects
 4. Shuffle output files are compressed using the algorithm set in `spark.io.compression.codec` (default using *lz4*).
-5. when a file corresponding to a given partition id has been written completely on map side, the shuffle manager states that the **chunk is ready to be fetched** by reduce side tasks.
+5. Shuffle files targetting
+6. when a file corresponding to a given partition id has been written completely on map side, the shuffle manager states that the **chunk is ready to be fetched** by reduce side tasks.
 
 
 
@@ -1187,11 +1188,11 @@ _____
 ## Videos
 - [A Deeper Understanding of Spark Internals - Aaron Davidson (Databricks)](https://www.youtube.com/watch?v=dmL0N3qfSc8)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMyOTUxMjk1NiwtMTYzOTEzMDU0MSwtMj
-g2MzkzNTIsMjExNzUxNDEzLC0yNTA5NzYyMjcsMTAyMTkwNzc0
-LDkxODYxNzE1OCwtMTE3ODM5NzgxMCwxMzI2NzIzOTA3LC0xOT
-IwNzEzMDY3LC0xOTk0ODczNTI0LDQ1NzcxNzUzNSwtMTQxMjQ0
-OTY3NSwtNjI3NTAzMDQ0LC0zNDYyNDc2NDcsMTAyNDQzMTYyOS
-wtOTU4MzU0Mjc2LDEyMjY2NjgyMDAsLTE3ODM4OTkwMDMsNzg3
-MzExODA1XX0=
+eyJoaXN0b3J5IjpbMTM4NTIyNzg4OSwtMzI5NTEyOTU2LC0xNj
+M5MTMwNTQxLC0yODYzOTM1MiwyMTE3NTE0MTMsLTI1MDk3NjIy
+NywxMDIxOTA3NzQsOTE4NjE3MTU4LC0xMTc4Mzk3ODEwLDEzMj
+Y3MjM5MDcsLTE5MjA3MTMwNjcsLTE5OTQ4NzM1MjQsNDU3NzE3
+NTM1LC0xNDEyNDQ5Njc1LC02Mjc1MDMwNDQsLTM0NjI0NzY0Ny
+wxMDI0NDMxNjI5LC05NTgzNTQyNzYsMTIyNjY2ODIwMCwtMTc4
+Mzg5OTAwM119
 -->
