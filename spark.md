@@ -1018,18 +1018,18 @@ SELECT src, count(*) as c FROM edges GROUP BY src ORDER BY c
 
 ### 6) Exchange/Shuffle (SQL & Core)
 
-http://hydronitrogen.com/apache-spark-shuffles-explained-in-depth.html
+- http://hydronitrogen.com/apache-spark-shuffles-explained-in-depth.html
 
-https://0x0fff.com/spark-architecture-shuffle/
+- Shuffle strategies: https://0x0fff.com/spark-architecture-shuffle/
 
-related issues: SPARK-2044 SPARK-3376 SPARK-4550
+- related issues: SPARK-2044 SPARK-3376 SPARK-4550
 
 Shuffle execution: 
 1. local partitions **map output are packed in execution memory** region and **spilled to local file system by batch** when memory become saturated
 2. outputs targeting the **same partition are spilled to an unique file**
 3. Shuffle output files consist of the stage output serialized objects
 4. Shuffle output files are compressed using the algorithm set in `spark.io.compression.codec` (default using *lz4*).
-5. Shuffle spilled files that targets the same partition are merged within each executor. This merge phase is avoided if manipulated partitions do fit entirely in memory and a single file can be written, without need for temporary spillings.
+5. Shuffle spilled files that targets the same partition are **merged** within each executor. This merge phase is avoided if manipulated partitions do fit entirely in memory and a single file can be written, without need for temporary spillings.
 6. when a file corresponding to a given partition id has been written completely on map side, the shuffle manager states that the **chunk is ready to be fetched** by reduce side tasks.
 
 
@@ -1188,11 +1188,11 @@ _____
 ## Videos
 - [A Deeper Understanding of Spark Internals - Aaron Davidson (Databricks)](https://www.youtube.com/watch?v=dmL0N3qfSc8)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQwNDA1MDQzNiwtMzI5NTEyOTU2LC0xNj
-M5MTMwNTQxLC0yODYzOTM1MiwyMTE3NTE0MTMsLTI1MDk3NjIy
-NywxMDIxOTA3NzQsOTE4NjE3MTU4LC0xMTc4Mzk3ODEwLDEzMj
-Y3MjM5MDcsLTE5MjA3MTMwNjcsLTE5OTQ4NzM1MjQsNDU3NzE3
-NTM1LC0xNDEyNDQ5Njc1LC02Mjc1MDMwNDQsLTM0NjI0NzY0Ny
-wxMDI0NDMxNjI5LC05NTgzNTQyNzYsMTIyNjY2ODIwMCwtMTc4
-Mzg5OTAwM119
+eyJoaXN0b3J5IjpbMTIyODUzNjUzOSwxNDA0MDUwNDM2LC0zMj
+k1MTI5NTYsLTE2MzkxMzA1NDEsLTI4NjM5MzUyLDIxMTc1MTQx
+MywtMjUwOTc2MjI3LDEwMjE5MDc3NCw5MTg2MTcxNTgsLTExNz
+gzOTc4MTAsMTMyNjcyMzkwNywtMTkyMDcxMzA2NywtMTk5NDg3
+MzUyNCw0NTc3MTc1MzUsLTE0MTI0NDk2NzUsLTYyNzUwMzA0NC
+wtMzQ2MjQ3NjQ3LDEwMjQ0MzE2MjksLTk1ODM1NDI3NiwxMjI2
+NjY4MjAwXX0=
 -->
