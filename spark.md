@@ -1029,7 +1029,7 @@ Shuffle execution:
 2. outputs targeting the **same partition are spilled to an unique file**
 3. Shuffle output files consist of the stage output serialized objects
 4. Shuffle output files are compressed using the algorithm set in `spark.io.compression.codec` (default using *lz4*).
-5. Shuffle files targetting
+5. Shuffle spilled files that targets the same partition are merged within each executor. This merge phase is avoided if manipulated partitions do fit entire in memory and a single file is written without temporary spills.
 6. when a file corresponding to a given partition id has been written completely on map side, the shuffle manager states that the **chunk is ready to be fetched** by reduce side tasks.
 
 
@@ -1188,11 +1188,11 @@ _____
 ## Videos
 - [A Deeper Understanding of Spark Internals - Aaron Davidson (Databricks)](https://www.youtube.com/watch?v=dmL0N3qfSc8)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM4NTIyNzg4OSwtMzI5NTEyOTU2LC0xNj
-M5MTMwNTQxLC0yODYzOTM1MiwyMTE3NTE0MTMsLTI1MDk3NjIy
-NywxMDIxOTA3NzQsOTE4NjE3MTU4LC0xMTc4Mzk3ODEwLDEzMj
-Y3MjM5MDcsLTE5MjA3MTMwNjcsLTE5OTQ4NzM1MjQsNDU3NzE3
-NTM1LC0xNDEyNDQ5Njc1LC02Mjc1MDMwNDQsLTM0NjI0NzY0Ny
-wxMDI0NDMxNjI5LC05NTgzNTQyNzYsMTIyNjY2ODIwMCwtMTc4
-Mzg5OTAwM119
+eyJoaXN0b3J5IjpbMjk4MTU4OTYxLC0zMjk1MTI5NTYsLTE2Mz
+kxMzA1NDEsLTI4NjM5MzUyLDIxMTc1MTQxMywtMjUwOTc2MjI3
+LDEwMjE5MDc3NCw5MTg2MTcxNTgsLTExNzgzOTc4MTAsMTMyNj
+cyMzkwNywtMTkyMDcxMzA2NywtMTk5NDg3MzUyNCw0NTc3MTc1
+MzUsLTE0MTI0NDk2NzUsLTYyNzUwMzA0NCwtMzQ2MjQ3NjQ3LD
+EwMjQ0MzE2MjksLTk1ODM1NDI3NiwxMjI2NjY4MjAwLC0xNzgz
+ODk5MDAzXX0=
 -->
