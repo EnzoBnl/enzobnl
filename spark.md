@@ -1028,9 +1028,9 @@ Shuffle execution:
 1. local partitions **map output are packed in execution memory** region and **spilled to local file system by batch** when memory become saturated
 2. outputs targeting the **same partition are spilled to an unique file**
 3. Shuffle output files consist of the stage output serialized objects
-4. Shuffle output files are compressed using the algorithm set in `spark.io.compression.codec` (default using *lz4*).
-5. Shuffle spilled files that targets the same partition are **merged** within each executor. This merge phase is avoided if manipulated partitions do fit entirely in memory and a single file can be written, without need for temporary spillings.
-6. when a file corresponding to a given partition id has been written completely on map side, the shuffle manager states that the **chunk is ready to be fetched** by reduce side tasks.
+4. Shuffle output files are compressed using the algorithm set in `spark.io.compression.codec` (default using *lz4*). ![https://i.stack.imgur.com/LPCSe.png](https://i.stack.imgur.com/LPCSe.png)
+6. Shuffle spilled files that targets the same partition are **merged** within each executor. This merge phase is avoided if manipulated partitions do fit entirely in memory and a single file can be written, without need for temporary spillings.
+7. when a file corresponding to a given partition id has been written completely on map side, the shuffle manager states that the **chunk is ready to be fetched** by reduce side tasks.
 
 
 
@@ -1151,6 +1151,8 @@ AE open since 1.6 has been merged 15/Jun/19. (Lead by # Carson Wang from Intel)
 > a. dynamic parallelism  
 I believe [Carson Wang](https://issues.apache.org/jira/secure/ViewProfile.jspa?name=carsonwang) is working on it. He will create a new ticket when the PR is ready.
 
+[Here is the PR](https://github.com/apache/spark/pull/24978)
+
 > b. sort merge join to broadcast hash join or shuffle hash join  
 It's included in the current framework
 
@@ -1188,11 +1190,11 @@ _____
 ## Videos
 - [A Deeper Understanding of Spark Internals - Aaron Davidson (Databricks)](https://www.youtube.com/watch?v=dmL0N3qfSc8)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIyODUzNjUzOSwxNDA0MDUwNDM2LC0zMj
-k1MTI5NTYsLTE2MzkxMzA1NDEsLTI4NjM5MzUyLDIxMTc1MTQx
-MywtMjUwOTc2MjI3LDEwMjE5MDc3NCw5MTg2MTcxNTgsLTExNz
-gzOTc4MTAsMTMyNjcyMzkwNywtMTkyMDcxMzA2NywtMTk5NDg3
-MzUyNCw0NTc3MTc1MzUsLTE0MTI0NDk2NzUsLTYyNzUwMzA0NC
-wtMzQ2MjQ3NjQ3LDEwMjQ0MzE2MjksLTk1ODM1NDI3NiwxMjI2
-NjY4MjAwXX0=
+eyJoaXN0b3J5IjpbMTcxNDk1NzQ1NCwxMjI4NTM2NTM5LDE0MD
+QwNTA0MzYsLTMyOTUxMjk1NiwtMTYzOTEzMDU0MSwtMjg2Mzkz
+NTIsMjExNzUxNDEzLC0yNTA5NzYyMjcsMTAyMTkwNzc0LDkxOD
+YxNzE1OCwtMTE3ODM5NzgxMCwxMzI2NzIzOTA3LC0xOTIwNzEz
+MDY3LC0xOTk0ODczNTI0LDQ1NzcxNzUzNSwtMTQxMjQ0OTY3NS
+wtNjI3NTAzMDQ0LC0zNDYyNDc2NDcsMTAyNDQzMTYyOSwtOTU4
+MzU0Mjc2XX0=
 -->
