@@ -1151,7 +1151,7 @@ AE open since 1.6 has been merged 15/Jun/19. (Lead by # Carson Wang from Intel)
 > a. dynamic parallelism  
 I believe [Carson Wang](https://issues.apache.org/jira/secure/ViewProfile.jspa?name=carsonwang) is working on it. He will create a new ticket when the PR is ready.
 
-[Here is the PR](https://github.com/apache/spark/pull/24978)
+[--> Here is the PR](https://github.com/apache/spark/pull/24978)
 
 > b. sort merge join to broadcast hash join or shuffle hash join  
 It's included in the current framework
@@ -1190,11 +1190,11 @@ _____
 ## Videos
 - [A Deeper Understanding of Spark Internals - Aaron Davidson (Databricks)](https://www.youtube.com/watch?v=dmL0N3qfSc8)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcxNDk1NzQ1NCwxMjI4NTM2NTM5LDE0MD
-QwNTA0MzYsLTMyOTUxMjk1NiwtMTYzOTEzMDU0MSwtMjg2Mzkz
-NTIsMjExNzUxNDEzLC0yNTA5NzYyMjcsMTAyMTkwNzc0LDkxOD
-YxNzE1OCwtMTE3ODM5NzgxMCwxMzI2NzIzOTA3LC0xOTIwNzEz
-MDY3LC0xOTk0ODczNTI0LDQ1NzcxNzUzNSwtMTQxMjQ0OTY3NS
-wtNjI3NTAzMDQ0LC0zNDYyNDc2NDcsMTAyNDQzMTYyOSwtOTU4
-MzU0Mjc2XX0=
+eyJoaXN0b3J5IjpbLTE0MDMxMTg1ODAsMTIyODUzNjUzOSwxND
+A0MDUwNDM2LC0zMjk1MTI5NTYsLTE2MzkxMzA1NDEsLTI4NjM5
+MzUyLDIxMTc1MTQxMywtMjUwOTc2MjI3LDEwMjE5MDc3NCw5MT
+g2MTcxNTgsLTExNzgzOTc4MTAsMTMyNjcyMzkwNywtMTkyMDcx
+MzA2NywtMTk5NDg3MzUyNCw0NTc3MTc1MzUsLTE0MTI0NDk2Nz
+UsLTYyNzUwMzA0NCwtMzQ2MjQ3NjQ3LDEwMjQ0MzE2MjksLTk1
+ODM1NDI3Nl19
 -->
