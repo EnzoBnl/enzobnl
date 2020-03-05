@@ -634,7 +634,7 @@ spark.range(100000).foreachPartition(p => ())}
 
 ### 2) Repartitioning  (SQL & Core)
 #### a) coalesce
-Try to minimize the data that need to be shuffled by merging partitions on the same executors in priority -> fast but may lead inequal partition 
+Make its stage's tasks work on the union of several collocated partitions -> fast way to reduce the parallelism but that can lead to uneven partitioning.
 #### b) repartition
 If column not given: round robin
 else: hashpartitioning
@@ -1191,11 +1191,11 @@ _____
 ## Videos
 - [A Deeper Understanding of Spark Internals - Aaron Davidson (Databricks)](https://www.youtube.com/watch?v=dmL0N3qfSc8)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc2MDM1MjUyMSwtMTQwMzExODU4MCwxMj
-I4NTM2NTM5LDE0MDQwNTA0MzYsLTMyOTUxMjk1NiwtMTYzOTEz
-MDU0MSwtMjg2MzkzNTIsMjExNzUxNDEzLC0yNTA5NzYyMjcsMT
-AyMTkwNzc0LDkxODYxNzE1OCwtMTE3ODM5NzgxMCwxMzI2NzIz
-OTA3LC0xOTIwNzEzMDY3LC0xOTk0ODczNTI0LDQ1NzcxNzUzNS
-wtMTQxMjQ0OTY3NSwtNjI3NTAzMDQ0LC0zNDYyNDc2NDcsMTAy
-NDQzMTYyOV19
+eyJoaXN0b3J5IjpbLTY3MjU0MjE4NiwxNzYwMzUyNTIxLC0xND
+AzMTE4NTgwLDEyMjg1MzY1MzksMTQwNDA1MDQzNiwtMzI5NTEy
+OTU2LC0xNjM5MTMwNTQxLC0yODYzOTM1MiwyMTE3NTE0MTMsLT
+I1MDk3NjIyNywxMDIxOTA3NzQsOTE4NjE3MTU4LC0xMTc4Mzk3
+ODEwLDEzMjY3MjM5MDcsLTE5MjA3MTMwNjcsLTE5OTQ4NzM1Mj
+QsNDU3NzE3NTM1LC0xNDEyNDQ5Njc1LC02Mjc1MDMwNDQsLTM0
+NjI0NzY0N119
 -->
