@@ -1048,7 +1048,9 @@ See `BypassMergeSortShuffleWriter` which relies on `DiskBlockObjectWriter` & `Bl
 - the size under *shuffle write* and *shuffle read* sections are values after compression.
 
 #### c) Exchange-optimized jobs
-Shuffle can be the bottleneck for I/O bound jobs. It is not about reducing the number of shuffle stages but about reducing the total amount of data passed over the network: having 2 exchanges steps shuffling 100GB leads to a 2 times worst performance than having 4 exchanges of 25GB because with the first scenario there is 200GB of data that goes through the network and only 100 in the second. For example, DatabrickAaron Davidson presents an optimization in [its talk](youtube.com/watch?v=dmL0N3qfSc8 A Deeper Understanding of Spark Internals - Aaron Davidson (Databricks)), for a job counting distinct names per initial letter:
+Shuffle can be the bottleneck step for I/O bound jobs. Writing exchange-optimized jobs it is **not about reducing the number of shuffle steps but about reducing the total amount of data passed over the network during the job**.
+
+For example, Aaron Davidson presents an optimization in [its talk (# A Deeper Understanding of Spark Internals)](youtube.com/watch?v=dmL0N3qfSc8 A Deeper Understanding of Spark Internals - Aaron Davidson (Databricks)), for a job counting distinct names per initial letter:
 
 ```scala
 val names: RDD[String] = ...
@@ -1217,11 +1219,11 @@ _____
 ## Videos
 - [A Deeper Understanding of Spark Internals - Aaron Davidson (Databricks)](https://www.youtube.com/watch?v=dmL0N3qfSc8)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMTIzNTM3NDMsMTk1NTAzMjc3NCwxNz
-YwMzUyNTIxLC0xNDAzMTE4NTgwLDEyMjg1MzY1MzksMTQwNDA1
-MDQzNiwtMzI5NTEyOTU2LC0xNjM5MTMwNTQxLC0yODYzOTM1Mi
-wyMTE3NTE0MTMsLTI1MDk3NjIyNywxMDIxOTA3NzQsOTE4NjE3
-MTU4LC0xMTc4Mzk3ODEwLDEzMjY3MjM5MDcsLTE5MjA3MTMwNj
-csLTE5OTQ4NzM1MjQsNDU3NzE3NTM1LC0xNDEyNDQ5Njc1LC02
-Mjc1MDMwNDRdfQ==
+eyJoaXN0b3J5IjpbNTY5NDg5MDU5LDE5NTUwMzI3NzQsMTc2MD
+M1MjUyMSwtMTQwMzExODU4MCwxMjI4NTM2NTM5LDE0MDQwNTA0
+MzYsLTMyOTUxMjk1NiwtMTYzOTEzMDU0MSwtMjg2MzkzNTIsMj
+ExNzUxNDEzLC0yNTA5NzYyMjcsMTAyMTkwNzc0LDkxODYxNzE1
+OCwtMTE3ODM5NzgxMCwxMzI2NzIzOTA3LC0xOTIwNzEzMDY3LC
+0xOTk0ODczNTI0LDQ1NzcxNzUzNSwtMTQxMjQ0OTY3NSwtNjI3
+NTAzMDQ0XX0=
 -->
