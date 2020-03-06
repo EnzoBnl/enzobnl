@@ -1063,9 +1063,11 @@ is functionally equivalent but slower than:
 ```scala
 val names: RDD[String] = ...
 names
-  .map(name => (name.charAt(0), name))
-  .groupByKey()
-  .mapValues(names => names.toSet.size)
+  // shuffle names, with a pre-aggregation
+  .distinct()
+  .map(name => (name.charAt(0), 1))
+  // shuffle light (one character, 1) pairs
+  .reduceByKey(_ + _)
 ```
 
 --> While it adds an additional shuffle it still reduces the total amount of shuffled data.
@@ -1214,7 +1216,7 @@ _____
 ## Videos
 - [A Deeper Understanding of Spark Internals - Aaron Davidson (Databricks)](https://www.youtube.com/watch?v=dmL0N3qfSc8)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYzOTM5MjcyOCwxOTU1MDMyNzc0LDE3Nj
+eyJoaXN0b3J5IjpbMTk4NzA4Mzk2OCwxOTU1MDMyNzc0LDE3Nj
 AzNTI1MjEsLTE0MDMxMTg1ODAsMTIyODUzNjUzOSwxNDA0MDUw
 NDM2LC0zMjk1MTI5NTYsLTE2MzkxMzA1NDEsLTI4NjM5MzUyLD
 IxMTc1MTQxMywtMjUwOTc2MjI3LDEwMjE5MDc3NCw5MTg2MTcx
