@@ -1048,12 +1048,13 @@ See `BypassMergeSortShuffleWriter` which relies on `DiskBlockObjectWriter` & `Bl
 - the size under *shuffle write* and *shuffle read* sections are values after compression.
 
 #### c) Exchange-optimized jobs
-Shuffle can be the bottleneck for I/O bound jobs. It is not about reducing the number of shuffle stages but about reducing the total amount of data passed over the network: having 2 exchanges steps shuffling 100GB leads to a 2 times worst performance than having 4 exchanges of 25GB because with the first scenario there is 200GB of data that goes through the network and only 100 in the second. For example, Aaron Davidson presents an optimization in [its talk](), for a job counting distinct names per initial letter:
+Shuffle can be the bottleneck for I/O bound jobs. It is not about reducing the number of shuffle stages but about reducing the total amount of data passed over the network: having 2 exchanges steps shuffling 100GB leads to a 2 times worst performance than having 4 exchanges of 25GB because with the first scenario there is 200GB of data that goes through the network and only 100 in the second. For example, DatabrickAaron Davidson presents an optimization in [its talk](youtube.com/watch?v=dmL0N3qfSc8 A Deeper Understanding of Spark Internals - Aaron Davidson (Databricks)), for a job counting distinct names per initial letter:
 
 ```scala
 val names: RDD[String] = ...
 names
   .map(name => (name.charAt(0), name))
+  // shuffle (one character, name) for ALL names
   .groupByKey()
   .mapValues(names => names.toSet.size)
 ```
@@ -1066,11 +1067,11 @@ names
   // shuffle names, with a pre-aggregation
   .distinct()
   .map(name => (name.charAt(0), 1))
-  // shuffle light (one character, 1) pairs
+  // light shuffle of (one character, 1) pairs, pre-aggregated
   .reduceByKey(_ + _)
 ```
 
---> While it adds an additional shuffle it still reduces the total amount of shuffled data.
+--> While it adds an additional shuffle, it still reduces the total amount of shuffled data, making the job faster
 
 ### 7) Exchanges planning (SQL)
 Exchange are carefully optimized by Catalyst and are ordered to be as cheap as possible.
@@ -1216,11 +1217,11 @@ _____
 ## Videos
 - [A Deeper Understanding of Spark Internals - Aaron Davidson (Databricks)](https://www.youtube.com/watch?v=dmL0N3qfSc8)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk4NzA4Mzk2OCwxOTU1MDMyNzc0LDE3Nj
-AzNTI1MjEsLTE0MDMxMTg1ODAsMTIyODUzNjUzOSwxNDA0MDUw
-NDM2LC0zMjk1MTI5NTYsLTE2MzkxMzA1NDEsLTI4NjM5MzUyLD
-IxMTc1MTQxMywtMjUwOTc2MjI3LDEwMjE5MDc3NCw5MTg2MTcx
-NTgsLTExNzgzOTc4MTAsMTMyNjcyMzkwNywtMTkyMDcxMzA2Ny
-wtMTk5NDg3MzUyNCw0NTc3MTc1MzUsLTE0MTI0NDk2NzUsLTYy
-NzUwMzA0NF19
+eyJoaXN0b3J5IjpbLTIxMTIzNTM3NDMsMTk1NTAzMjc3NCwxNz
+YwMzUyNTIxLC0xNDAzMTE4NTgwLDEyMjg1MzY1MzksMTQwNDA1
+MDQzNiwtMzI5NTEyOTU2LC0xNjM5MTMwNTQxLC0yODYzOTM1Mi
+wyMTE3NTE0MTMsLTI1MDk3NjIyNywxMDIxOTA3NzQsOTE4NjE3
+MTU4LC0xMTc4Mzk3ODEwLDEzMjY3MjM5MDcsLTE5MjA3MTMwNj
+csLTE5OTQ4NzM1MjQsNDU3NzE3NTM1LC0xNDEyNDQ5Njc1LC02
+Mjc1MDMwNDRdfQ==
 -->
