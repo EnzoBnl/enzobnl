@@ -74,6 +74,8 @@ gsutil mv gs://old_name gs://new_name
 ## Terminals
 ### unix
 ```bash
+# show running processes
+ps -A
 //NEBOJSA PIPE EXAMPLE : LISTE toute la 1ere colonne
  cat OS_IU_sample | cut -f1 |more 
  hadoop dfs -cat /Data/O19593/SECURE/RAW/TXT/OS_IU_1/2017/05/16/2017_05_16_OSO_3G_37.csv | head -1000 > OS_IU_sample
@@ -272,11 +274,11 @@ c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex 
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE3ODE2MzgwLDI5MDEyMDc3NCwyMDYzNz
-Q1NjQ5LC0xNzQ0OTUzNTU1LDE1MTEwMTcxNTEsOTY3Nzk0MTgx
-LC0xMzU4OTczODQzLC0xMDc0ODgwMTA1LC02ODMzMTgxOTMsNj
-U1NDUzNzIyLC02OTEyNzQyODIsLTYwODYwNTcwOCwxMTIxOTkx
-NTM4LC0zMTYzMzA2NTIsLTE5NDAzMDAyOTcsMjQxMzYwNDc1LC
-0xMDc0NTAxNTQwLC04NjcxNjg3NTEsLTg3NDk3ODUyOSwtMTM1
-ODMzOTE1MF19
+eyJoaXN0b3J5IjpbLTUyMTM3MTA0MywxMTc4MTYzODAsMjkwMT
+IwNzc0LDIwNjM3NDU2NDksLTE3NDQ5NTM1NTUsMTUxMTAxNzE1
+MSw5Njc3OTQxODEsLTEzNTg5NzM4NDMsLTEwNzQ4ODAxMDUsLT
+Y4MzMxODE5Myw2NTU0NTM3MjIsLTY5MTI3NDI4MiwtNjA4NjA1
+NzA4LDExMjE5OTE1MzgsLTMxNjMzMDY1MiwtMTk0MDMwMDI5Ny
+wyNDEzNjA0NzUsLTEwNzQ1MDE1NDAsLTg2NzE2ODc1MSwtODc0
+OTc4NTI5XX0=
 -->
