@@ -1048,7 +1048,7 @@ See `BypassMergeSortShuffleWriter` which relies on `DiskBlockObjectWriter` & `Bl
 - the size under *shuffle write* and *shuffle read* sections are values after compression.
 
 #### c) Exchange-optimized jobs
-Shuffle can be the bottleneck for I/O bound jo
+Shuffle can be the bottleneck for I/O bound jobs. It is not about reducing the number of shuffle stages but about reducing the total amount of data passed over the network: having 2 exchanges steps shuffling 100GB leads to 
 
 ### 7) Exchanges planning (SQL)
 Exchange are carefully optimized by Catalyst and are ordered to be as cheap as possible.
@@ -1194,7 +1194,7 @@ _____
 ## Videos
 - [A Deeper Understanding of Spark Internals - Aaron Davidson (Databricks)](https://www.youtube.com/watch?v=dmL0N3qfSc8)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODg3NjU4MTM2LDE5NTUwMzI3NzQsMTc2MD
+eyJoaXN0b3J5IjpbNDMyMTk3NzM4LDE5NTUwMzI3NzQsMTc2MD
 M1MjUyMSwtMTQwMzExODU4MCwxMjI4NTM2NTM5LDE0MDQwNTA0
 MzYsLTMyOTUxMjk1NiwtMTYzOTEzMDU0MSwtMjg2MzkzNTIsMj
 ExNzUxNDEzLC0yNTA5NzYyMjcsMTAyMTkwNzc0LDkxODYxNzE1
