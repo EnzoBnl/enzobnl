@@ -1051,8 +1051,11 @@ See `BypassMergeSortShuffleWriter` which relies on `DiskBlockObjectWriter` & `Bl
 Shuffle can be the bottleneck for I/O bound jobs. It is not about reducing the number of shuffle stages but about reducing the total amount of data passed over the network: having 2 exchanges steps shuffling 100GB leads to a 2 times worst performance than having 4 exchanges of 25GB because with the first scenario there is 200GB of data that goes through the network and only 100 in the second. For example, Aaron Davidson presents an optimization in [its talk]():
 
 ```scala
-<some rdd>
-  
+val names: RDD[String] = ...
+names
+  .map(name => (name.charAt(0), name))
+  .groupByKey()
+  .mapValues(names =>
 ```
 
 is functionally equivalent but slower than:
@@ -1207,7 +1210,7 @@ _____
 ## Videos
 - [A Deeper Understanding of Spark Internals - Aaron Davidson (Databricks)](https://www.youtube.com/watch?v=dmL0N3qfSc8)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDYxNjk1NjMxLDE5NTUwMzI3NzQsMTc2MD
+eyJoaXN0b3J5IjpbMjE3NDQwNDI3LDE5NTUwMzI3NzQsMTc2MD
 M1MjUyMSwtMTQwMzExODU4MCwxMjI4NTM2NTM5LDE0MDQwNTA0
 MzYsLTMyOTUxMjk1NiwtMTYzOTEzMDU0MSwtMjg2MzkzNTIsMj
 ExNzUxNDEzLC0yNTA5NzYyMjcsMTAyMTkwNzc0LDkxODYxNzE1
