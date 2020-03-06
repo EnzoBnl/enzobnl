@@ -1048,20 +1048,24 @@ See `BypassMergeSortShuffleWriter` which relies on `DiskBlockObjectWriter` & `Bl
 - the size under *shuffle write* and *shuffle read* sections are values after compression.
 
 #### c) Exchange-optimized jobs
-Shuffle can be the bottleneck for I/O bound jobs. It is not about reducing the number of shuffle stages but about reducing the total amount of data passed over the network: having 2 exchanges steps shuffling 100GB leads to a 2 times worst performance than having 4 exchanges of 25GB because with the first scenario there is 200GB of data that goes through the network and only 100 in the second. For example, Aaron Davidson presents an optimization in [its talk]():
+Shuffle can be the bottleneck for I/O bound jobs. It is not about reducing the number of shuffle stages but about reducing the total amount of data passed over the network: having 2 exchanges steps shuffling 100GB leads to a 2 times worst performance than having 4 exchanges of 25GB because with the first scenario there is 200GB of data that goes through the network and only 100 in the second. For example, Aaron Davidson presents an optimization in [its talk](), for a job counting distinct names per initial letter:
 
 ```scala
 val names: RDD[String] = ...
 names
   .map(name => (name.charAt(0), name))
   .groupByKey()
-  .mapValues(names =>
+  .mapValues(names => names.toSet.size)
 ```
 
 is functionally equivalent but slower than:
 
 ```scala
-
+val names: RDD[String] = ...
+names
+  .map(name => (name.charAt(0), name))
+  .groupByKey()
+  .mapValues(names => names.toSet.size)
 ```
 
 --> While it adds an additional shuffle it still reduces the total amount of shuffled data.
@@ -1210,11 +1214,11 @@ _____
 ## Videos
 - [A Deeper Understanding of Spark Internals - Aaron Davidson (Databricks)](https://www.youtube.com/watch?v=dmL0N3qfSc8)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjE3NDQwNDI3LDE5NTUwMzI3NzQsMTc2MD
-M1MjUyMSwtMTQwMzExODU4MCwxMjI4NTM2NTM5LDE0MDQwNTA0
-MzYsLTMyOTUxMjk1NiwtMTYzOTEzMDU0MSwtMjg2MzkzNTIsMj
-ExNzUxNDEzLC0yNTA5NzYyMjcsMTAyMTkwNzc0LDkxODYxNzE1
-OCwtMTE3ODM5NzgxMCwxMzI2NzIzOTA3LC0xOTIwNzEzMDY3LC
-0xOTk0ODczNTI0LDQ1NzcxNzUzNSwtMTQxMjQ0OTY3NSwtNjI3
-NTAzMDQ0XX0=
+eyJoaXN0b3J5IjpbLTYzOTM5MjcyOCwxOTU1MDMyNzc0LDE3Nj
+AzNTI1MjEsLTE0MDMxMTg1ODAsMTIyODUzNjUzOSwxNDA0MDUw
+NDM2LC0zMjk1MTI5NTYsLTE2MzkxMzA1NDEsLTI4NjM5MzUyLD
+IxMTc1MTQxMywtMjUwOTc2MjI3LDEwMjE5MDc3NCw5MTg2MTcx
+NTgsLTExNzgzOTc4MTAsMTMyNjcyMzkwNywtMTkyMDcxMzA2Ny
+wtMTk5NDg3MzUyNCw0NTc3MTc1MzUsLTE0MTI0NDk2NzUsLTYy
+NzUwMzA0NF19
 -->
