@@ -1050,13 +1050,13 @@ See `BypassMergeSortShuffleWriter` which relies on `DiskBlockObjectWriter` & `Bl
 #### c) Exchange-optimized jobs
 Shuffle can be the bottleneck step for I/O bound jobs. Writing exchange-optimized jobs it is **not about reducing the number of shuffle steps but about reducing the total amount of data passed over the network during the job**.
 
-For example, Aaron Davidson presents an optimization in [its talk (# A Deeper Understanding of Spark Internals)](youtube.com/watch?v=dmL0N3qfSc8 A Deeper Understanding of Spark Internals - Aaron Davidson (Databricks)), for a job counting distinct names per initial letter:
+For example, Aaron Davidson presents an optimization in [its talk (A Deeper Understanding of Spark Internals)](youtube.com/watch?v=dmL0N3qfSc8), for a job counting distinct names per initial letter:
 
 ```scala
 val names: RDD[String] = ...
 names
   .map(name => (name.charAt(0), name))
-  // shuffle (one character, name) for ALL names
+  // shuffle (one character, name) pairs for ALL names
   .groupByKey()
   .mapValues(names => names.toSet.size)
 ```
@@ -1073,7 +1073,7 @@ names
   .reduceByKey(_ + _)
 ```
 
---> While it adds an additional shuffle, it still reduces the total amount of shuffled data, making the job faster
+- While it adds an additional shuffle it still reduces the total amount of shuffled data, making the job faster.
 
 ### 7) Exchanges planning (SQL)
 Exchange are carefully optimized by Catalyst and are ordered to be as cheap as possible.
@@ -1219,7 +1219,7 @@ _____
 ## Videos
 - [A Deeper Understanding of Spark Internals - Aaron Davidson (Databricks)](https://www.youtube.com/watch?v=dmL0N3qfSc8)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTY5NDg5MDU5LDE5NTUwMzI3NzQsMTc2MD
+eyJoaXN0b3J5IjpbMjgyMjEyNjkzLDE5NTUwMzI3NzQsMTc2MD
 M1MjUyMSwtMTQwMzExODU4MCwxMjI4NTM2NTM5LDE0MDQwNTA0
 MzYsLTMyOTUxMjk1NiwtMTYzOTEzMDU0MSwtMjg2MzkzNTIsMj
 ExNzUxNDEzLC0yNTA5NzYyMjcsMTAyMTkwNzc0LDkxODYxNzE1
