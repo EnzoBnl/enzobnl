@@ -1047,6 +1047,9 @@ See `BypassMergeSortShuffleWriter` which relies on `DiskBlockObjectWriter` & `Bl
 #### b) Spark UI Shuffle insights
 - the size under *shuffle write* and *shuffle read* sections are values after compression.
 
+#### c) Exchange-optimized jobs
+Shuffle can be the bottleneck for I/O bound jo
+
 ### 7) Exchanges planning (SQL)
 Exchange are carefully optimized by Catalyst and are ordered to be as cheap as possible.
 
@@ -1191,11 +1194,11 @@ _____
 ## Videos
 - [A Deeper Understanding of Spark Internals - Aaron Davidson (Databricks)](https://www.youtube.com/watch?v=dmL0N3qfSc8)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk1NTAzMjc3NCwxNzYwMzUyNTIxLC0xND
-AzMTE4NTgwLDEyMjg1MzY1MzksMTQwNDA1MDQzNiwtMzI5NTEy
-OTU2LC0xNjM5MTMwNTQxLC0yODYzOTM1MiwyMTE3NTE0MTMsLT
-I1MDk3NjIyNywxMDIxOTA3NzQsOTE4NjE3MTU4LC0xMTc4Mzk3
-ODEwLDEzMjY3MjM5MDcsLTE5MjA3MTMwNjcsLTE5OTQ4NzM1Mj
-QsNDU3NzE3NTM1LC0xNDEyNDQ5Njc1LC02Mjc1MDMwNDQsLTM0
-NjI0NzY0N119
+eyJoaXN0b3J5IjpbODg3NjU4MTM2LDE5NTUwMzI3NzQsMTc2MD
+M1MjUyMSwtMTQwMzExODU4MCwxMjI4NTM2NTM5LDE0MDQwNTA0
+MzYsLTMyOTUxMjk1NiwtMTYzOTEzMDU0MSwtMjg2MzkzNTIsMj
+ExNzUxNDEzLC0yNTA5NzYyMjcsMTAyMTkwNzc0LDkxODYxNzE1
+OCwtMTE3ODM5NzgxMCwxMzI2NzIzOTA3LC0xOTIwNzEzMDY3LC
+0xOTk0ODczNTI0LDQ1NzcxNzUzNSwtMTQxMjQ0OTY3NSwtNjI3
+NTAzMDQ0XX0=
 -->
