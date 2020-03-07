@@ -1167,7 +1167,7 @@ refs:
 ## XVII/ Other gotchas
 |error|reason|workaround|
 |--|--|--|
-|`Kryo serialization failed: Buffer overflow. Available: 0, required: 2. To avoid this, increase spark.kryoserializer.buffer.max value.`| because the maximum object size that you want to serialized is superior to `spark.kryoserializer.buffer.max`. This can be because of a large record or because of a large object to broadcast (for example the broadcast of a table triggered by Broadcast Exchange)|Increase this maximum (up to 2048m) or broadc|
+|`Kryo serialization failed: Buffer overflow. Available: 0, required: 2. To avoid this, increase spark.kryoserializer.buffer.max value.`| The biggest object that you want to serialized is superior to `spark.kryoserializer.buffer.max`. This can be because of a large record or because of a large object to broadcast (for example the broadcast of a table triggered by Broadcast Exchange)|Increase this maximum (up to 2048m) or broadcast smaller objects (can desactivate auto broadcast optimization by setting `spark.sql.autoBroadcastJoinThreshold` to -1|
 
 
 ## XVIII/ Coming soon
@@ -1225,11 +1225,11 @@ _____
 ## Videos
 - [A Deeper Understanding of Spark Internals - Aaron Davidson (Databricks)](https://www.youtube.com/watch?v=dmL0N3qfSc8)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAxNjAxNTAyMSwyODIyMTI2OTMsMTk1NT
-AzMjc3NCwxNzYwMzUyNTIxLC0xNDAzMTE4NTgwLDEyMjg1MzY1
-MzksMTQwNDA1MDQzNiwtMzI5NTEyOTU2LC0xNjM5MTMwNTQxLC
-0yODYzOTM1MiwyMTE3NTE0MTMsLTI1MDk3NjIyNywxMDIxOTA3
-NzQsOTE4NjE3MTU4LC0xMTc4Mzk3ODEwLDEzMjY3MjM5MDcsLT
-E5MjA3MTMwNjcsLTE5OTQ4NzM1MjQsNDU3NzE3NTM1LC0xNDEy
-NDQ5Njc1XX0=
+eyJoaXN0b3J5IjpbLTcyODUxNDA5LDI4MjIxMjY5MywxOTU1MD
+MyNzc0LDE3NjAzNTI1MjEsLTE0MDMxMTg1ODAsMTIyODUzNjUz
+OSwxNDA0MDUwNDM2LC0zMjk1MTI5NTYsLTE2MzkxMzA1NDEsLT
+I4NjM5MzUyLDIxMTc1MTQxMywtMjUwOTc2MjI3LDEwMjE5MDc3
+NCw5MTg2MTcxNTgsLTExNzgzOTc4MTAsMTMyNjcyMzkwNywtMT
+kyMDcxMzA2NywtMTk5NDg3MzUyNCw0NTc3MTc1MzUsLTE0MTI0
+NDk2NzVdfQ==
 -->
