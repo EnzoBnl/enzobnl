@@ -1168,6 +1168,7 @@ refs:
 |error|reason|workaround|
 |--|--|--|
 |`Kryo serialization failed: Buffer overflow. Available: <available>, required: <required>. To avoid this, increase spark.kryoserializer.buffer.max value.`| The biggest object that has to be kryo-serialized is bigger than `spark.kryoserializer.buffer.max`. This can be a large record or a large object that has to be broadcasted (even if you do not explicitly broadcast any object, a catalyst optimization may make a join be executed using a *Broadcast Exchange*)|Increase `spark.kryoserializer.buffer.max` (up to 2048m) or broadcast smaller objects or desactivate auto broadcast optimization by setting `spark.sql.autoBroadcastJoinThreshold` to -1.|
+|YARN container killed with exit code 143|memory/GC issue|Same workaround as OOMs|
 
 
 ## XVIII/ Coming soon
@@ -1225,11 +1226,11 @@ _____
 ## Videos
 - [A Deeper Understanding of Spark Internals - Aaron Davidson (Databricks)](https://www.youtube.com/watch?v=dmL0N3qfSc8)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NjEyMjQyMzIsMjgyMjEyNjkzLDE5NT
-UwMzI3NzQsMTc2MDM1MjUyMSwtMTQwMzExODU4MCwxMjI4NTM2
-NTM5LDE0MDQwNTA0MzYsLTMyOTUxMjk1NiwtMTYzOTEzMDU0MS
-wtMjg2MzkzNTIsMjExNzUxNDEzLC0yNTA5NzYyMjcsMTAyMTkw
-Nzc0LDkxODYxNzE1OCwtMTE3ODM5NzgxMCwxMzI2NzIzOTA3LC
-0xOTIwNzEzMDY3LC0xOTk0ODczNTI0LDQ1NzcxNzUzNSwtMTQx
-MjQ0OTY3NV19
+eyJoaXN0b3J5IjpbMTY0Mzc2NDIsLTE5NjEyMjQyMzIsMjgyMj
+EyNjkzLDE5NTUwMzI3NzQsMTc2MDM1MjUyMSwtMTQwMzExODU4
+MCwxMjI4NTM2NTM5LDE0MDQwNTA0MzYsLTMyOTUxMjk1NiwtMT
+YzOTEzMDU0MSwtMjg2MzkzNTIsMjExNzUxNDEzLC0yNTA5NzYy
+MjcsMTAyMTkwNzc0LDkxODYxNzE1OCwtMTE3ODM5NzgxMCwxMz
+I2NzIzOTA3LC0xOTIwNzEzMDY3LC0xOTk0ODczNTI0LDQ1Nzcx
+NzUzNV19
 -->
