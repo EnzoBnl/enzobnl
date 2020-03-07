@@ -1167,7 +1167,7 @@ refs:
 ## XVII/ Other gotchas
 |error|reason|workaround|
 |--|--|--|
-|`Kryo serialization failed: Buffer overflow. Available: 0, required: 2. To avoid this, increase spark.kryoserializer.buffer.max value.`| The biggest object that you want to serialized is superior to `spark.kryoserializer.buffer.max`. This can be because of a large record or because of a large object to broadcast (for example the broadcast of a table triggered by Broadcast Exchange)|Increase this maximum (up to 2048m) or broadcast smaller objects (can desactivate auto broadcast optimization by setting `spark.sql.autoBroadcastJoinThreshold` to -1|
+|`Kryo serialization failed: Buffer overflow. Available: 0, required: 2. To avoid this, increase spark.kryoserializer.buffer.max value.`| The biggest object that has to be kryo-serialized is bigger than `spark.kryoserializer.buffer.max`. This can be a large record or a large object that has to be broadcasted (even if you do not explicitly broadcast any object, an automatic optimization can make a join be executed using a *Broadcast Exchange*)|Increase this maximum (up to 2048m) or broadcast smaller objects (can desactivate auto broadcast optimization by setting `spark.sql.autoBroadcastJoinThreshold` to -1|
 
 
 ## XVIII/ Coming soon
@@ -1225,11 +1225,11 @@ _____
 ## Videos
 - [A Deeper Understanding of Spark Internals - Aaron Davidson (Databricks)](https://www.youtube.com/watch?v=dmL0N3qfSc8)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcyODUxNDA5LDI4MjIxMjY5MywxOTU1MD
-MyNzc0LDE3NjAzNTI1MjEsLTE0MDMxMTg1ODAsMTIyODUzNjUz
-OSwxNDA0MDUwNDM2LC0zMjk1MTI5NTYsLTE2MzkxMzA1NDEsLT
-I4NjM5MzUyLDIxMTc1MTQxMywtMjUwOTc2MjI3LDEwMjE5MDc3
-NCw5MTg2MTcxNTgsLTExNzgzOTc4MTAsMTMyNjcyMzkwNywtMT
-kyMDcxMzA2NywtMTk5NDg3MzUyNCw0NTc3MTc1MzUsLTE0MTI0
-NDk2NzVdfQ==
+eyJoaXN0b3J5IjpbODMwOTMyNDQsMjgyMjEyNjkzLDE5NTUwMz
+I3NzQsMTc2MDM1MjUyMSwtMTQwMzExODU4MCwxMjI4NTM2NTM5
+LDE0MDQwNTA0MzYsLTMyOTUxMjk1NiwtMTYzOTEzMDU0MSwtMj
+g2MzkzNTIsMjExNzUxNDEzLC0yNTA5NzYyMjcsMTAyMTkwNzc0
+LDkxODYxNzE1OCwtMTE3ODM5NzgxMCwxMzI2NzIzOTA3LC0xOT
+IwNzEzMDY3LC0xOTk0ODczNTI0LDQ1NzcxNzUzNSwtMTQxMjQ0
+OTY3NV19
 -->
