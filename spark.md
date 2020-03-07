@@ -1164,7 +1164,13 @@ __________________
 refs:
 - [SO post by Nikolay Vasiliev](https://stackoverflow.com/a/45570944/6580080)
 
-## XVII/ Coming soon
+## XVII/ Other gotchas
+|error|reason|workaround|
+|--|--|--|
+|`Kryo serialization failed: Buffer overflow. Available: 0, required: 2. To avoid this, increase spark.kryoserializer.buffer.max value.`| because the maximum | |
+
+
+## XVIII/ Coming soon
 ### 1) ouverture: Adaptative Execution (AE) in 3.0.0
 [JIRA](https://issues.apache.org/jira/browse/SPARK-9850?jql=text%20~%20%22adaptative%20execution%22)
 
@@ -1219,11 +1225,11 @@ _____
 ## Videos
 - [A Deeper Understanding of Spark Internals - Aaron Davidson (Databricks)](https://www.youtube.com/watch?v=dmL0N3qfSc8)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjgyMjEyNjkzLDE5NTUwMzI3NzQsMTc2MD
-M1MjUyMSwtMTQwMzExODU4MCwxMjI4NTM2NTM5LDE0MDQwNTA0
-MzYsLTMyOTUxMjk1NiwtMTYzOTEzMDU0MSwtMjg2MzkzNTIsMj
-ExNzUxNDEzLC0yNTA5NzYyMjcsMTAyMTkwNzc0LDkxODYxNzE1
-OCwtMTE3ODM5NzgxMCwxMzI2NzIzOTA3LC0xOTIwNzEzMDY3LC
-0xOTk0ODczNTI0LDQ1NzcxNzUzNSwtMTQxMjQ0OTY3NSwtNjI3
-NTAzMDQ0XX0=
+eyJoaXN0b3J5IjpbLTY2MDYyNjc1MCwyODIyMTI2OTMsMTk1NT
+AzMjc3NCwxNzYwMzUyNTIxLC0xNDAzMTE4NTgwLDEyMjg1MzY1
+MzksMTQwNDA1MDQzNiwtMzI5NTEyOTU2LC0xNjM5MTMwNTQxLC
+0yODYzOTM1MiwyMTE3NTE0MTMsLTI1MDk3NjIyNywxMDIxOTA3
+NzQsOTE4NjE3MTU4LC0xMTc4Mzk3ODEwLDEzMjY3MjM5MDcsLT
+E5MjA3MTMwNjcsLTE5OTQ4NzM1MjQsNDU3NzE3NTM1LC0xNDEy
+NDQ5Njc1XX0=
 -->
