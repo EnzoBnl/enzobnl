@@ -10,7 +10,7 @@
 
 ## Asymptotic analysis
 
-$f(n)=O(g(n))\iff \exists n_o \in N, \exists c\in R, \forall n>n_o,\vert\frac{f(n)}{g(n)}\vert<=c$
+$f(n)=O(g(n))\iff \exists c\in R^{+*}, \lim_{n\to\infty} \vert\frac{f(n)}{g(n)}\vert=c$
 
 $f(n)=o(g(n))\iff \forall \epsilon \in R, \exists n_o \in N,  \forall n>n_o,\vert\frac{f(n)}{g(n)}\vert<=\epsilon$
 
@@ -249,7 +249,8 @@ The difference is in which libraries are used. In order to use OS stuff (I/O for
 4. Master 1 to 3 specialized frameworks: Node.js, React, Spark, Kubernetes, Unity...
 5. Practice with CI/CD & cloud
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ3Mzk1ODQ0MSwtMTY1MDY0MTA4OCwtMj
-A4ODU0NTUwNiwxMjY1Mjc2NzEsMTYxMzEzNjcxMSwtMjAzNzkw
-OTg3OSwtMTk4MTYyMjc3MywyNzE2MTc4MjZdfQ==
+eyJoaXN0b3J5IjpbLTE1MjA5NzYyNzEsMTQ3Mzk1ODQ0MSwtMT
+Y1MDY0MTA4OCwtMjA4ODU0NTUwNiwxMjY1Mjc2NzEsMTYxMzEz
+NjcxMSwtMjAzNzkwOTg3OSwtMTk4MTYyMjc3MywyNzE2MTc4Mj
+ZdfQ==
 -->
