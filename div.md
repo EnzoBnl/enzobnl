@@ -20,7 +20,7 @@ $f(n)=\omega(g(n))\iff \forall \Delta \in R, \exists n_o \in N,  \forall n>n_o,\
 
 $f(n)=\Theta(g(n))\iff \exists n_o \in N, \exists c\in R, \forall n>n_o,\frac{f(n)}{g(n)}=c$
 
-$f(n)\sim g(n)\iff \forall \epsilon \in R, \exists n_o \in N,  \forall n>n_o,\frac{f(n)}{g(n)}-1<=\epsilon$
+$f(n)\sim g(n)\iff \forall \epsilon \in R, \exists n_o \in N,  \forall n>n_o, 1 - \epsilon <=\vert \frac{f(n)}{g(n)}\vert<=1 + \epsilon$
 
 
 ## Memories accessing latencies
@@ -249,6 +249,7 @@ The difference is in which libraries are used. In order to use OS stuff (I/O for
 4. Master 1 to 3 specialized frameworks: Node.js, React, Spark, Kubernetes, Unity...
 5. Practice with CI/CD & cloud
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI2NTI3NjcxLDE2MTMxMzY3MTEsLTIwMz
-c5MDk4NzksLTE5ODE2MjI3NzMsMjcxNjE3ODI2XX0=
+eyJoaXN0b3J5IjpbLTIwODg1NDU1MDYsMTI2NTI3NjcxLDE2MT
+MxMzY3MTEsLTIwMzc5MDk4NzksLTE5ODE2MjI3NzMsMjcxNjE3
+ODI2XX0=
 -->
