@@ -1171,6 +1171,9 @@ refs:
 |YARN container killed with exit code 143|memory/GC issue|Same workaround as OOMs|
 
 
+*Other reading:* 
+- https://community.cloudera.com/t5/Support-Questions/How-to-process-a-large-data-set-with-Spark/m-p/39428
+
 ## XVIII/ Coming soon
 ### 1) ouverture: Adaptative Execution (AE) in 3.0.0
 [JIRA](https://issues.apache.org/jira/browse/SPARK-9850?jql=text%20~%20%22adaptative%20execution%22)
@@ -1226,11 +1229,11 @@ _____
 ## Videos
 - [A Deeper Understanding of Spark Internals - Aaron Davidson (Databricks)](https://www.youtube.com/watch?v=dmL0N3qfSc8)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY0Mzc2NDIsLTE5NjEyMjQyMzIsMjgyMj
-EyNjkzLDE5NTUwMzI3NzQsMTc2MDM1MjUyMSwtMTQwMzExODU4
-MCwxMjI4NTM2NTM5LDE0MDQwNTA0MzYsLTMyOTUxMjk1NiwtMT
-YzOTEzMDU0MSwtMjg2MzkzNTIsMjExNzUxNDEzLC0yNTA5NzYy
-MjcsMTAyMTkwNzc0LDkxODYxNzE1OCwtMTE3ODM5NzgxMCwxMz
-I2NzIzOTA3LC0xOTIwNzEzMDY3LC0xOTk0ODczNTI0LDQ1Nzcx
-NzUzNV19
+eyJoaXN0b3J5IjpbLTEwNDIxNzkzMSwxNjQzNzY0MiwtMTk2MT
+IyNDIzMiwyODIyMTI2OTMsMTk1NTAzMjc3NCwxNzYwMzUyNTIx
+LC0xNDAzMTE4NTgwLDEyMjg1MzY1MzksMTQwNDA1MDQzNiwtMz
+I5NTEyOTU2LC0xNjM5MTMwNTQxLC0yODYzOTM1MiwyMTE3NTE0
+MTMsLTI1MDk3NjIyNywxMDIxOTA3NzQsOTE4NjE3MTU4LC0xMT
+c4Mzk3ODEwLDEzMjY3MjM5MDcsLTE5MjA3MTMwNjcsLTE5OTQ4
+NzM1MjRdfQ==
 -->
