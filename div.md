@@ -10,13 +10,13 @@
 
 ## Asymptotic analysis
 
-$f(n)=O(g(n))\iff \exists n_o \in N, \exists c\in R^+, \forall n>n_o,\vert\frac{f(n)}{g(n)}\vert<=c$
+$f(n)=O(g(n))\iff \exists n_o \in N, \exists c\in R^{+*}, \forall n>n_o,\vert\frac{f(n)}{g(n)}\vert<=c$
 
 $f(n)=o(g(n))\iff \forall \epsilon \in R^{+*}, \exists n_o \in N,  \forall n>n_o,\vert\frac{f(n)}{g(n)}\vert<=\epsilon$
 
 $f(n)=\Omega(g(n))\iff \exists n_o \in N, \exists c\in R^{+*}, \forall n>n_o,\vert\frac{f(n)}{g(n)}\vert>=c$
 
-$f(n)=\omega(g(n))\iff \forall \Delta \in R^{+}, \exists n_o \in N,  \forall n>n_o,\vert\frac{f(n)}{g(n)}\vert>=\Delta$
+$f(n)=\omega(g(n))\iff \forall \Delta \in R^{+*}, \exists n_o \in N,  \forall n>n_o,\vert\frac{f(n)}{g(n)}\vert>=\Delta$
 
 $f(n)=\Theta(g(n))\iff \exists n_o \in N, \exists c\in R, \forall n>n_o,\frac{f(n)}{g(n)}<=c+\epsilon$
 
@@ -249,8 +249,8 @@ The difference is in which libraries are used. In order to use OS stuff (I/O for
 4. Master 1 to 3 specialized frameworks: Node.js, React, Spark, Kubernetes, Unity...
 5. Practice with CI/CD & cloud
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTg1MDcxNjU1LC0xNDQxODE1NDM5LDE0Nz
-M5NTg0NDEsMTQ3Mzk1ODQ0MSwtMTY1MDY0MTA4OCwtMjA4ODU0
-NTUwNiwxMjY1Mjc2NzEsMTYxMzEzNjcxMSwtMjAzNzkwOTg3OS
-wtMTk4MTYyMjc3MywyNzE2MTc4MjZdfQ==
+eyJoaXN0b3J5IjpbLTE1MzIxNDA0NTksLTE0NDE4MTU0MzksMT
+Q3Mzk1ODQ0MSwxNDczOTU4NDQxLC0xNjUwNjQxMDg4LC0yMDg4
+NTQ1NTA2LDEyNjUyNzY3MSwxNjEzMTM2NzExLC0yMDM3OTA5OD
+c5LC0xOTgxNjIyNzczLDI3MTYxNzgyNl19
 -->
