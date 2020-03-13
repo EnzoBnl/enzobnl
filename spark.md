@@ -1050,7 +1050,7 @@ See `BypassMergeSortShuffleWriter` which relies on `DiskBlockObjectWriter` & `Bl
 #### c) Exchange-optimized jobs
 Shuffle can be the bottleneck step for I/O bound jobs. Writing exchange-optimized jobs it is **not about reducing the number of shuffle steps but about reducing the total amount of data passed over the network during the job**.
 
-For example, Aaron Davidson presents an optimization in [its talk (A Deeper Understanding of Spark Internals)](youtube.com/watch?v=dmL0N3qfSc8), for a job counting distinct names per initial letter:
+For example, Aaron Davidson presents an optimization in [its talk (A Deeper Understanding of Spark Internals)](https://youtube.com/watch?v=dmL0N3qfSc8), for a job counting distinct names per initial letter:
 
 ```scala
 val names: RDD[String] = ...
@@ -1229,11 +1229,11 @@ _____
 ## Videos
 - [A Deeper Understanding of Spark Internals - Aaron Davidson (Databricks)](https://www.youtube.com/watch?v=dmL0N3qfSc8)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNDIxNzkzMSwxNjQzNzY0MiwtMTk2MT
-IyNDIzMiwyODIyMTI2OTMsMTk1NTAzMjc3NCwxNzYwMzUyNTIx
-LC0xNDAzMTE4NTgwLDEyMjg1MzY1MzksMTQwNDA1MDQzNiwtMz
-I5NTEyOTU2LC0xNjM5MTMwNTQxLC0yODYzOTM1MiwyMTE3NTE0
-MTMsLTI1MDk3NjIyNywxMDIxOTA3NzQsOTE4NjE3MTU4LC0xMT
-c4Mzk3ODEwLDEzMjY3MjM5MDcsLTE5MjA3MTMwNjcsLTE5OTQ4
-NzM1MjRdfQ==
+eyJoaXN0b3J5IjpbMTc4ODczNjQ1MiwtMTA0MjE3OTMxLDE2ND
+M3NjQyLC0xOTYxMjI0MjMyLDI4MjIxMjY5MywxOTU1MDMyNzc0
+LDE3NjAzNTI1MjEsLTE0MDMxMTg1ODAsMTIyODUzNjUzOSwxND
+A0MDUwNDM2LC0zMjk1MTI5NTYsLTE2MzkxMzA1NDEsLTI4NjM5
+MzUyLDIxMTc1MTQxMywtMjUwOTc2MjI3LDEwMjE5MDc3NCw5MT
+g2MTcxNTgsLTExNzgzOTc4MTAsMTMyNjcyMzkwNywtMTkyMDcx
+MzA2N119
 -->
