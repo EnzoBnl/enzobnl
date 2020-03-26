@@ -146,11 +146,14 @@ If *dictionary encoding* is enabled, parquet's *row groups* looks like:
 
 This dictionary pages are just keys and values encoded using plain encoding.
 
-There is a fallback to plain encoding if it turns out that there is too much unique values to leverage this encoding. (According 
+There is a fallback to plain encoding if it turns out that there is too much unique values to leverage this encoding.
 
-In spark one can desactivate dictionary encoding with the config: `"parquet.enable.dictionary" -"false"`
+In Spark, one can desactivate dictionary encoding with the config: `"parquet.enable.dictionary" -> "false"`
+
+#### Delta encoding
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE3MDg4ODE1OCwtMjE0MDgzMTc0OSwxNT
+eyJoaXN0b3J5IjpbLTk4MTU4NzI5OSwtMjE0MDgzMTc0OSwxNT
 U3MTczOTUsODA0NzU4MzM3LDE0ODA0NTg3NzYsMTkwNDY3Njgw
 OCwxMTkxNjcyODg1LC0xMjU3MDA1MzAsLTE5NzA3MzU0MDQsLT
 EyNzQ5NjYzNCwtMTQzNzYxMjM5NywtMTA2NjY4MDA4OCwyMDkz
