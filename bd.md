@@ -139,7 +139,7 @@ Sources:
 ### Compression
 A compression algorithm is applied by parquet, the compression unit being the **page**.
 
-Here are the supported algorithms, when set through *Spark 2.4.5* configuration `"spark.sql.parquet.compression.codec"`:
+Here are the supported algorithms, when set through *Spark* configuration `"spark.sql.parquet.compression.codec"`:
 - snappy (default)
 - gzip
 - lzo
@@ -165,7 +165,7 @@ In Spark, one can desactivate dictionary encoding with the config: `"parquet.ena
 Only supported types are `INT32` and `INT64`. This Encoding leverage the **similarity between successive values**, for instance when integers are representing *timestamps*.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg1NjYyNjcwNiwxOTM4MzkzODkwLC0yMT
+eyJoaXN0b3J5IjpbMTM0NDk0MTE3MSwxOTM4MzkzODkwLC0yMT
 QwODMxNzQ5LDE1NTcxNzM5NSw4MDQ3NTgzMzcsMTQ4MDQ1ODc3
 NiwxOTA0Njc2ODA4LDExOTE2NzI4ODUsLTEyNTcwMDUzMCwtMT
 k3MDczNTQwNCwtMTI3NDk2NjM0LC0xNDM3NjEyMzk3LC0xMDY2
