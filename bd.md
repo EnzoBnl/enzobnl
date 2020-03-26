@@ -125,8 +125,9 @@ Further readings:
 # File formats
 ## Parquet
 Sources:
-- [Overview by Mridul Verma](https://miuv.blog/2018/08/21/handling-large-amounts-of-data-with-parquet-part-1/)
-- [Twitter engineering blog post](
+- [Blog post by Mridul Verma](https://miuv.blog/2018/08/21/handling-large-amounts-of-data-with-parquet-part-1/)
+- [Twitter engineering blog post](https://blog.twitter.com/engineering/en_us/a/2013/announcing-parquet-10-columnar-storage-for-hadoop.html)
+- [SO post by Artem Ignatiev](https://stackoverflow.com/a/45541741/6580080)
 
 ### Hierarchy
 - Root Folder
@@ -147,13 +148,13 @@ This dictionary pages are just keys and values encoded using plain encoding.
 
 There is a fallback to plain encoding if it turns out that there is too much unique values to leverage this encoding. (According 
 
-In spark one can desactivate dictionary encoding with the config: ``
+In spark one can desactivate dictionary encoding with the config: `"parquet.enable.dictionary" -"false"`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0Mzk5MjI1NDQsLTIxNDA4MzE3NDksMT
-U1NzE3Mzk1LDgwNDc1ODMzNywxNDgwNDU4Nzc2LDE5MDQ2NzY4
-MDgsMTE5MTY3Mjg4NSwtMTI1NzAwNTMwLC0xOTcwNzM1NDA0LC
-0xMjc0OTY2MzQsLTE0Mzc2MTIzOTcsLTEwNjY2ODAwODgsMjA5
-MzIzNTU4OCwxODExMzExMTk2LC01Mzk4MzY1MzgsLTE4NTk1ND
-IxNjMsMTc0MzE2OTAwNCwtNzM5ODUyOTM1LDIwMTkzMDQ4OTcs
-LTE4NzE0NTY4NzldfQ==
+eyJoaXN0b3J5IjpbMTE3MDg4ODE1OCwtMjE0MDgzMTc0OSwxNT
+U3MTczOTUsODA0NzU4MzM3LDE0ODA0NTg3NzYsMTkwNDY3Njgw
+OCwxMTkxNjcyODg1LC0xMjU3MDA1MzAsLTE5NzA3MzU0MDQsLT
+EyNzQ5NjYzNCwtMTQzNzYxMjM5NywtMTA2NjY4MDA4OCwyMDkz
+MjM1NTg4LDE4MTEzMTExOTYsLTUzOTgzNjUzOCwtMTg1OTU0Mj
+E2MywxNzQzMTY5MDA0LC03Mzk4NTI5MzUsMjAxOTMwNDg5Nywt
+MTg3MTQ1Njg3OV19
 -->
