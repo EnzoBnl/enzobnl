@@ -162,7 +162,7 @@ This *dictionary pages* are keys and values encoded using plain encoding.
 
 There is a fallback to plain encoding if it turns out that there is too much unique values to leverage this encoding.
 
-In Spark, one can desactivate dictionary encoding with the config: `"parquet.enable.dictionary" -> "false"`, that can be useful as it may take the place of a 
+In Spark, one can desactivate dictionary encoding with the config: `"parquet.enable.dictionary" -> "false"`, that can be useful as it may take the place of a more efficient encoding. (*dictionary encoding* taking the place of *delta string encoding* on `BYTE_ARRAY`s for example)
 
 #### Delta encoding
 Supported types are `INT32` and `INT64`. 
@@ -175,11 +175,11 @@ Known as [Incremental encoding](https://en.wikipedia.org/wiki/Incremental_encodi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQyODc3NTAsOTIyNzMxNDA3LDEzNDQ5ND
-ExNzEsMTkzODM5Mzg5MCwtMjE0MDgzMTc0OSwxNTU3MTczOTUs
-ODA0NzU4MzM3LDE0ODA0NTg3NzYsMTkwNDY3NjgwOCwxMTkxNj
-cyODg1LC0xMjU3MDA1MzAsLTE5NzA3MzU0MDQsLTEyNzQ5NjYz
-NCwtMTQzNzYxMjM5NywtMTA2NjY4MDA4OCwyMDkzMjM1NTg4LD
-E4MTEzMTExOTYsLTUzOTgzNjUzOCwtMTg1OTU0MjE2MywxNzQz
-MTY5MDA0XX0=
+eyJoaXN0b3J5IjpbLTIwMjA1MjM2NTksOTIyNzMxNDA3LDEzND
+Q5NDExNzEsMTkzODM5Mzg5MCwtMjE0MDgzMTc0OSwxNTU3MTcz
+OTUsODA0NzU4MzM3LDE0ODA0NTg3NzYsMTkwNDY3NjgwOCwxMT
+kxNjcyODg1LC0xMjU3MDA1MzAsLTE5NzA3MzU0MDQsLTEyNzQ5
+NjYzNCwtMTQzNzYxMjM5NywtMTA2NjY4MDA4OCwyMDkzMjM1NT
+g4LDE4MTEzMTExOTYsLTUzOTgzNjUzOCwtMTg1OTU0MjE2Mywx
+NzQzMTY5MDA0XX0=
 -->
