@@ -164,12 +164,61 @@ In Spark, one can desactivate dictionary encoding with the config: `"parquet.ena
 #### Delta encoding
 Only supported types are `INT32` and `INT64`. This Encoding leverage the **similarity between successive values**, for instance when integers are representing *timestamps*.
 
+#### Delta strings
+Known as [Incremental encoding][# Incremental encoding)
+
+Input
+
+Common prefix
+
+Compressed output
+
+myxa
+myxophyta
+myxopod
+nab
+nabbed
+nabbing
+nabit
+nabk
+nabob
+nacarat
+nacelle
+
+no preceding word
+'myx'
+'myxop'
+no common prefix
+'nab'
+'nabb'
+'nab'
+'nab'
+'nab'
+'na'
+'nac'
+
+0 myxa
+3 ophyta
+5 od
+0 nab
+3 bed
+4 ing
+3 it
+3 k
+3 ob
+2 carat
+3 elle
+
+64 bytes
+
+46 bytes
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM0NDk0MTE3MSwxOTM4MzkzODkwLC0yMT
-QwODMxNzQ5LDE1NTcxNzM5NSw4MDQ3NTgzMzcsMTQ4MDQ1ODc3
-NiwxOTA0Njc2ODA4LDExOTE2NzI4ODUsLTEyNTcwMDUzMCwtMT
-k3MDczNTQwNCwtMTI3NDk2NjM0LC0xNDM3NjEyMzk3LC0xMDY2
-NjgwMDg4LDIwOTMyMzU1ODgsMTgxMTMxMTE5NiwtNTM5ODM2NT
-M4LC0xODU5NTQyMTYzLDE3NDMxNjkwMDQsLTczOTg1MjkzNSwy
-MDE5MzA0ODk3XX0=
+eyJoaXN0b3J5IjpbOTIxMDU4Mzc1LDEzNDQ5NDExNzEsMTkzOD
+M5Mzg5MCwtMjE0MDgzMTc0OSwxNTU3MTczOTUsODA0NzU4MzM3
+LDE0ODA0NTg3NzYsMTkwNDY3NjgwOCwxMTkxNjcyODg1LC0xMj
+U3MDA1MzAsLTE5NzA3MzU0MDQsLTEyNzQ5NjYzNCwtMTQzNzYx
+MjM5NywtMTA2NjY4MDA4OCwyMDkzMjM1NTg4LDE4MTEzMTExOT
+YsLTUzOTgzNjUzOCwtMTg1OTU0MjE2MywxNzQzMTY5MDA0LC03
+Mzk4NTI5MzVdfQ==
 -->
