@@ -124,15 +124,17 @@ Further readings:
 
 # File formats
 ## Parquet
-- [File format overview blog article](https://miuv.blog/2018/08/21/handling-large-amounts-of-data-with-parquet-part-1/)
+Sources:
+- [Overview by Mridul Verma](https://miuv.blog/2018/08/21/handling-large-amounts-of-data-with-parquet-part-1/)
 ### Parquet's dictionary pages
-If dictionary encoding is enabled, parquet
+If dictionary encoding is enabled, parquet's row groups looks like:
+![](https://i2.wp.com/miuv.blog/wp-content/uploads/2018/08/blank-diagram-17-e1534819920877.png?resize=594%2C226&ssl=1)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTk5MDYzMjgzLDE1NTcxNzM5NSw4MDQ3NT
-gzMzcsMTQ4MDQ1ODc3NiwxOTA0Njc2ODA4LDExOTE2NzI4ODUs
-LTEyNTcwMDUzMCwtMTk3MDczNTQwNCwtMTI3NDk2NjM0LC0xND
-M3NjEyMzk3LC0xMDY2NjgwMDg4LDIwOTMyMzU1ODgsMTgxMTMx
-MTE5NiwtNTM5ODM2NTM4LC0xODU5NTQyMTYzLDE3NDMxNjkwMD
-QsLTczOTg1MjkzNSwyMDE5MzA0ODk3LC0xODcxNDU2ODc5LDE3
-NTI0ODYwNDddfQ==
+eyJoaXN0b3J5IjpbMTI1NDk5MjI5OSwxNTU3MTczOTUsODA0Nz
+U4MzM3LDE0ODA0NTg3NzYsMTkwNDY3NjgwOCwxMTkxNjcyODg1
+LC0xMjU3MDA1MzAsLTE5NzA3MzU0MDQsLTEyNzQ5NjYzNCwtMT
+QzNzYxMjM5NywtMTA2NjY4MDA4OCwyMDkzMjM1NTg4LDE4MTEz
+MTExOTYsLTUzOTgzNjUzOCwtMTg1OTU0MjE2MywxNzQzMTY5MD
+A0LC03Mzk4NTI5MzUsMjAxOTMwNDg5NywtMTg3MTQ1Njg3OSwx
+NzUyNDg2MDQ3XX0=
 -->
