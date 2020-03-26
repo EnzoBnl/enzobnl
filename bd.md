@@ -128,13 +128,13 @@ Sources:
 - [Overview by Mridul Verma](https://miuv.blog/2018/08/21/handling-large-amounts-of-data-with-parquet-part-1/)
 ### Parquet's dictionary pages
 If dictionary encoding is enabled, parquet's row groups looks like:
-![](https://i2.wp.com/miuv.blog/wp-content/uploads/2018/08/blank-diagram-17-e1534819920877.png?resize=594%2C226&ssl=1)
+![](https://i2.wp.com/miuv.blog/wp-content/uploads/2018/08/blank-diagram-17-e1534819920877.png?resize=594%2C226&ssl=1)We can see that *columns chucks*'s data pages consist of a bunch of references relative to the Dictionary Page that follows
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI1NDk5MjI5OSwxNTU3MTczOTUsODA0Nz
-U4MzM3LDE0ODA0NTg3NzYsMTkwNDY3NjgwOCwxMTkxNjcyODg1
-LC0xMjU3MDA1MzAsLTE5NzA3MzU0MDQsLTEyNzQ5NjYzNCwtMT
-QzNzYxMjM5NywtMTA2NjY4MDA4OCwyMDkzMjM1NTg4LDE4MTEz
-MTExOTYsLTUzOTgzNjUzOCwtMTg1OTU0MjE2MywxNzQzMTY5MD
-A0LC03Mzk4NTI5MzUsMjAxOTMwNDg5NywtMTg3MTQ1Njg3OSwx
-NzUyNDg2MDQ3XX0=
+eyJoaXN0b3J5IjpbLTE0OTY5NTA2NjksMTU1NzE3Mzk1LDgwND
+c1ODMzNywxNDgwNDU4Nzc2LDE5MDQ2NzY4MDgsMTE5MTY3Mjg4
+NSwtMTI1NzAwNTMwLC0xOTcwNzM1NDA0LC0xMjc0OTY2MzQsLT
+E0Mzc2MTIzOTcsLTEwNjY2ODAwODgsMjA5MzIzNTU4OCwxODEx
+MzExMTk2LC01Mzk4MzY1MzgsLTE4NTk1NDIxNjMsMTc0MzE2OT
+AwNCwtNzM5ODUyOTM1LDIwMTkzMDQ4OTcsLTE4NzE0NTY4Nzks
+MTc1MjQ4NjA0N119
 -->
