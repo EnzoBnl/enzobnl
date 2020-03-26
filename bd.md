@@ -150,7 +150,8 @@ Here are the supported algorithms, when set through *Spark* configuration `"spar
 
 ### Encodings
 https://github.com/apache/parquet-format/blob/master/Encodings.md
-Encoding are applied automatically by the framework, depending on the 
+Encoding are applied automatically by the framework, depending on the data type (must be supported by the encoding) and the values (some heuristic decide if it is worth to use this or this encoding, depending on the data values).
+
 #### Dictionary encoding
 If *dictionary encoding* is enabled, parquet's *row groups* looks like:
 
@@ -161,7 +162,7 @@ This *dictionary pages* are keys and values encoded using plain encoding.
 
 There is a fallback to plain encoding if it turns out that there is too much unique values to leverage this encoding.
 
-In Spark, one can desactivate dictionary encoding with the config: `"parquet.enable.dictionary" -> "false"`, that can be useful as it may it degrade other encodings efficiency.
+In Spark, one can desactivate dictionary encoding with the config: `"parquet.enable.dictionary" -> "false"`, that can be useful as it may take the place of a 
 
 #### Delta encoding
 Supported types are `INT32` and `INT64`. 
@@ -174,11 +175,11 @@ Known as [Incremental encoding](https://en.wikipedia.org/wiki/Incremental_encodi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUxNTg2NzgyOCw5MjI3MzE0MDcsMTM0ND
-k0MTE3MSwxOTM4MzkzODkwLC0yMTQwODMxNzQ5LDE1NTcxNzM5
-NSw4MDQ3NTgzMzcsMTQ4MDQ1ODc3NiwxOTA0Njc2ODA4LDExOT
-E2NzI4ODUsLTEyNTcwMDUzMCwtMTk3MDczNTQwNCwtMTI3NDk2
-NjM0LC0xNDM3NjEyMzk3LC0xMDY2NjgwMDg4LDIwOTMyMzU1OD
-gsMTgxMTMxMTE5NiwtNTM5ODM2NTM4LC0xODU5NTQyMTYzLDE3
-NDMxNjkwMDRdfQ==
+eyJoaXN0b3J5IjpbMTQyODc3NTAsOTIyNzMxNDA3LDEzNDQ5ND
+ExNzEsMTkzODM5Mzg5MCwtMjE0MDgzMTc0OSwxNTU3MTczOTUs
+ODA0NzU4MzM3LDE0ODA0NTg3NzYsMTkwNDY3NjgwOCwxMTkxNj
+cyODg1LC0xMjU3MDA1MzAsLTE5NzA3MzU0MDQsLTEyNzQ5NjYz
+NCwtMTQzNzYxMjM5NywtMTA2NjY4MDA4OCwyMDkzMjM1NTg4LD
+E4MTEzMTExOTYsLTUzOTgzNjUzOCwtMTg1OTU0MjE2MywxNzQz
+MTY5MDA0XX0=
 -->
