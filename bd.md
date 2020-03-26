@@ -150,7 +150,7 @@ Here are the supported algorithms, when set through *Spark* configuration `"spar
 
 ### Encodings
 https://github.com/apache/parquet-format/blob/master/Encodings.md
-Encoding are applied automatically by the framework, depending on the data type (must be supported by the encoding) and the values (some heuristic decide if it is worth to use this or this encoding, depending on the data values).
+Encoding are applied automatically by the framework, depending on the data type (must be supported by the encoding) and the values (some heuristic decide if it is worth to use this or this encoding, depending on the data values). Dictionary encoding is a default that parquet will try on each column.
 
 #### Dictionary encoding
 If *dictionary encoding* is enabled, parquet's *row groups* looks like:
@@ -175,11 +175,11 @@ Known as [Incremental encoding](https://en.wikipedia.org/wiki/Incremental_encodi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMjA1MjM2NTksOTIyNzMxNDA3LDEzND
-Q5NDExNzEsMTkzODM5Mzg5MCwtMjE0MDgzMTc0OSwxNTU3MTcz
-OTUsODA0NzU4MzM3LDE0ODA0NTg3NzYsMTkwNDY3NjgwOCwxMT
-kxNjcyODg1LC0xMjU3MDA1MzAsLTE5NzA3MzU0MDQsLTEyNzQ5
-NjYzNCwtMTQzNzYxMjM5NywtMTA2NjY4MDA4OCwyMDkzMjM1NT
-g4LDE4MTEzMTExOTYsLTUzOTgzNjUzOCwtMTg1OTU0MjE2Mywx
-NzQzMTY5MDA0XX0=
+eyJoaXN0b3J5IjpbLTE5NDU3MjExMTYsLTIwMjA1MjM2NTksOT
+IyNzMxNDA3LDEzNDQ5NDExNzEsMTkzODM5Mzg5MCwtMjE0MDgz
+MTc0OSwxNTU3MTczOTUsODA0NzU4MzM3LDE0ODA0NTg3NzYsMT
+kwNDY3NjgwOCwxMTkxNjcyODg1LC0xMjU3MDA1MzAsLTE5NzA3
+MzU0MDQsLTEyNzQ5NjYzNCwtMTQzNzYxMjM5NywtMTA2NjY4MD
+A4OCwyMDkzMjM1NTg4LDE4MTEzMTExOTYsLTUzOTgzNjUzOCwt
+MTg1OTU0MjE2M119
 -->
