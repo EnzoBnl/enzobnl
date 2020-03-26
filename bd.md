@@ -150,7 +150,7 @@ Here are the supported algorithms, when set through *Spark* configuration `"spar
 
 ### Encodings
 https://github.com/apache/parquet-format/blob/master/Encodings.md
-Encoding are applied automatically by the framework, depending on the data type (must be supported by the encoding) and the values (some heuristic decide if it is worth to use this or this encoding, depending on the data values). Dictionary encoding is a default that parquet will try on each column: It is considered to be the most efficient encoding if its condition of trigg are met (small number of distinct values).
+Parquet framework **automatically find out which encoding to use** for each column depending on the **data type** (must be supported by the encoding) and the **values characteristics** (some rules decide if it is worth to use this or this encoding, depending on the data values). *Dictionary encoding* is a default that parquet will try on each column: It is considered to be the most efficient encoding if its condition of trigger are met (small number of distinct values).
 
 #### Dictionary encoding
 If *dictionary encoding* is enabled, parquet's *row groups* looks like:
@@ -175,7 +175,7 @@ Known as [Incremental encoding](https://en.wikipedia.org/wiki/Incremental_encodi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzQ4NjAyMDAzLC0xOTQ1NzIxMTE2LC0yMD
+eyJoaXN0b3J5IjpbNTQyNzY3NTU4LC0xOTQ1NzIxMTE2LC0yMD
 IwNTIzNjU5LDkyMjczMTQwNywxMzQ0OTQxMTcxLDE5MzgzOTM4
 OTAsLTIxNDA4MzE3NDksMTU1NzE3Mzk1LDgwNDc1ODMzNywxND
 gwNDU4Nzc2LDE5MDQ2NzY4MDgsMTE5MTY3Mjg4NSwtMTI1NzAw
