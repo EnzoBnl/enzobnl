@@ -151,9 +151,9 @@ There is a fallback to plain encoding if it turns out that there is too much uni
 In Spark, one can desactivate dictionary encoding with the config: `"parquet.enable.dictionary" -> "false"`
 
 #### Delta encoding
-Only supported types are `INT32` and `INT64`. This Encoding leverage the similarity between 
+Only supported types are `INT32` and `INT64`. This Encoding leverage the **similarity between successive values, for instance when integers are representing *timestamps*.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNTI1Njk3MjYsLTIxNDA4MzE3NDksMT
+eyJoaXN0b3J5IjpbLTE2NjA5NDI1OTksLTIxNDA4MzE3NDksMT
 U1NzE3Mzk1LDgwNDc1ODMzNywxNDgwNDU4Nzc2LDE5MDQ2NzY4
 MDgsMTE5MTY3Mjg4NSwtMTI1NzAwNTMwLC0xOTcwNzM1NDA0LC
 0xMjc0OTY2MzQsLTE0Mzc2MTIzOTcsLTEwNjY2ODAwODgsMjA5
