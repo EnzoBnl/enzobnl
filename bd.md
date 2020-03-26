@@ -144,15 +144,15 @@ If *dictionary encoding* is enabled, parquet's *row groups* looks like:
 
 This dictionary pages are just keys and values encoded using plain encoding.
 
-There is a fallback to plain encoding if it turns out that more than 100 000 entries would be written into a dictionary page.
+There is a fallback to plain encoding if it turns out that there is more than 100 000  unique values in a column chunkentries would be written into a dictionary page.
 
 In spark one can desactivate dictionary encoding with the config: ``
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNzk5MjA5MDAsLTIxNDA4MzE3NDksMT
-U1NzE3Mzk1LDgwNDc1ODMzNywxNDgwNDU4Nzc2LDE5MDQ2NzY4
-MDgsMTE5MTY3Mjg4NSwtMTI1NzAwNTMwLC0xOTcwNzM1NDA0LC
-0xMjc0OTY2MzQsLTE0Mzc2MTIzOTcsLTEwNjY2ODAwODgsMjA5
-MzIzNTU4OCwxODExMzExMTk2LC01Mzk4MzY1MzgsLTE4NTk1ND
-IxNjMsMTc0MzE2OTAwNCwtNzM5ODUyOTM1LDIwMTkzMDQ4OTcs
-LTE4NzE0NTY4NzldfQ==
+eyJoaXN0b3J5IjpbLTkzMjA1OTc4MiwtMjE0MDgzMTc0OSwxNT
+U3MTczOTUsODA0NzU4MzM3LDE0ODA0NTg3NzYsMTkwNDY3Njgw
+OCwxMTkxNjcyODg1LC0xMjU3MDA1MzAsLTE5NzA3MzU0MDQsLT
+EyNzQ5NjYzNCwtMTQzNzYxMjM5NywtMTA2NjY4MDA4OCwyMDkz
+MjM1NTg4LDE4MTEzMTExOTYsLTUzOTgzNjUzOCwtMTg1OTU0Mj
+E2MywxNzQzMTY5MDA0LC03Mzk4NTI5MzUsMjAxOTMwNDg5Nywt
+MTg3MTQ1Njg3OV19
 -->
