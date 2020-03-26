@@ -122,12 +122,17 @@ Further readings:
 |Spark History Server (Applications level)|18080|
 |Jupyter notebook|8888|
 
+# File formats
+## Parquet
+- [File format overview blog article](https://miuv.blog/2018/08/21/handling-large-amounts-of-data-with-parquet-part-1/)
+### Parquet's dictionary pages
+If dictionary encoding is enabled, parquet
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU1NzE3Mzk1LDgwNDc1ODMzNywxNDgwND
-U4Nzc2LDE5MDQ2NzY4MDgsMTE5MTY3Mjg4NSwtMTI1NzAwNTMw
-LC0xOTcwNzM1NDA0LC0xMjc0OTY2MzQsLTE0Mzc2MTIzOTcsLT
-EwNjY2ODAwODgsMjA5MzIzNTU4OCwxODExMzExMTk2LC01Mzk4
-MzY1MzgsLTE4NTk1NDIxNjMsMTc0MzE2OTAwNCwtNzM5ODUyOT
-M1LDIwMTkzMDQ4OTcsLTE4NzE0NTY4NzksMTc1MjQ4NjA0Nywt
-NjE0OTQ2MjVdfQ==
+eyJoaXN0b3J5IjpbOTk5MDYzMjgzLDE1NTcxNzM5NSw4MDQ3NT
+gzMzcsMTQ4MDQ1ODc3NiwxOTA0Njc2ODA4LDExOTE2NzI4ODUs
+LTEyNTcwMDUzMCwtMTk3MDczNTQwNCwtMTI3NDk2NjM0LC0xND
+M3NjEyMzk3LC0xMDY2NjgwMDg4LDIwOTMyMzU1ODgsMTgxMTMx
+MTE5NiwtNTM5ODM2NTM4LC0xODU5NTQyMTYzLDE3NDMxNjkwMD
+QsLTczOTg1MjkzNSwyMDE5MzA0ODk3LC0xODcxNDU2ODc5LDE3
+NTI0ODYwNDddfQ==
 -->
