@@ -146,9 +146,9 @@ This dictionary pages are just keys and values encoded using plain encoding.
 
 There is a fallback to plain encoding if it turns out that more than 100 000 entries would be written into a dictionary page.
 
-In spark one can desactivate dictionary encoding with the co
+In spark one can desactivate dictionary encoding with the config: ``
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3ODMzNzk3MjAsLTIxNDA4MzE3NDksMT
+eyJoaXN0b3J5IjpbLTIwNzk5MjA5MDAsLTIxNDA4MzE3NDksMT
 U1NzE3Mzk1LDgwNDc1ODMzNywxNDgwNDU4Nzc2LDE5MDQ2NzY4
 MDgsMTE5MTY3Mjg4NSwtMTI1NzAwNTMwLC0xOTcwNzM1NDA0LC
 0xMjc0OTY2MzQsLTE0Mzc2MTIzOTcsLTEwNjY2ODAwODgsMjA5
