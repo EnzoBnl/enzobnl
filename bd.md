@@ -134,19 +134,23 @@ Sources:
 - Column chunk
 - Data pages (and dictionary pages)
 
-### Parquet's dictionary pages
+### Encodings
+https://github.com/apache/parquet-format/blob/master/Encodings.md
+#### Dictionary encoding
 If *dictionary encoding* is enabled, parquet's *row groups* looks like:
 
 ![](https://i2.wp.com/miuv.blog/wp-content/uploads/2018/08/blank-diagram-17-e1534819920877.png?resize=594%2C226&ssl=1)
 *Columns chucks*'s *data pages* consist of a bunch of references relative to the *dictionary page* that follows them.
 
-This dictionary page
+This dictionary pages are just keys and values encoded using plain encoding.
+
+If there it turns out that 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxNDA4MzE3NDksMTU1NzE3Mzk1LDgwND
-c1ODMzNywxNDgwNDU4Nzc2LDE5MDQ2NzY4MDgsMTE5MTY3Mjg4
-NSwtMTI1NzAwNTMwLC0xOTcwNzM1NDA0LC0xMjc0OTY2MzQsLT
-E0Mzc2MTIzOTcsLTEwNjY2ODAwODgsMjA5MzIzNTU4OCwxODEx
-MzExMTk2LC01Mzk4MzY1MzgsLTE4NTk1NDIxNjMsMTc0MzE2OT
-AwNCwtNzM5ODUyOTM1LDIwMTkzMDQ4OTcsLTE4NzE0NTY4Nzks
-MTc1MjQ4NjA0N119
+eyJoaXN0b3J5IjpbMTg2Nzc3ODkwMCwtMjE0MDgzMTc0OSwxNT
+U3MTczOTUsODA0NzU4MzM3LDE0ODA0NTg3NzYsMTkwNDY3Njgw
+OCwxMTkxNjcyODg1LC0xMjU3MDA1MzAsLTE5NzA3MzU0MDQsLT
+EyNzQ5NjYzNCwtMTQzNzYxMjM5NywtMTA2NjY4MDA4OCwyMDkz
+MjM1NTg4LDE4MTEzMTExOTYsLTUzOTgzNjUzOCwtMTg1OTU0Mj
+E2MywxNzQzMTY5MDA0LC03Mzk4NTI5MzUsMjAxOTMwNDg5Nywt
+MTg3MTQ1Njg3OV19
 -->
