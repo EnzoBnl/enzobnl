@@ -144,16 +144,16 @@ If *dictionary encoding* is enabled, parquet's *row groups* looks like:
 ![](https://i2.wp.com/miuv.blog/wp-content/uploads/2018/08/blank-diagram-17-e1534819920877.png?resize=594%2C226&ssl=1)
 *Columns chucks*'s *data pages* consist of a bunch of references relative to the *dictionary page* that follows them.
 
-This dictionary pages are just keys and values encoded using plain encoding.
+This *dictionary pages* are keys and values encoded using plain encoding.
 
 There is a fallback to plain encoding if it turns out that there is too much unique values to leverage this encoding.
 
-In Spark, one can desactivate dictionary encoding with the config: `"parquet.enable.dictionary" -> "false"`
+In Spark, one can desactivate dictionary encoding with the config: `"parquet.enable.dictionary" -> "false"`, that can be useful when it interfer 
 
 #### Delta encoding
-Only supported types are `INT32` and `INT64`. This Encoding leverage the **similarity between successive values, for instance when integers are representing *timestamps*.
+Only supported types are `INT32` and `INT64`. This Encoding leverage the **similarity between successive values**, for instance when integers are representing *timestamps*.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NjA5NDI1OTksLTIxNDA4MzE3NDksMT
+eyJoaXN0b3J5IjpbLTE0MDQzNTg0MzcsLTIxNDA4MzE3NDksMT
 U1NzE3Mzk1LDgwNDc1ODMzNywxNDgwNDU4Nzc2LDE5MDQ2NzY4
 MDgsMTE5MTY3Mjg4NSwtMTI1NzAwNTMwLC0xOTcwNzM1NDA0LC
 0xMjc0OTY2MzQsLTE0Mzc2MTIzOTcsLTEwNjY2ODAwODgsMjA5
