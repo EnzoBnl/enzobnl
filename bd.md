@@ -128,6 +128,7 @@ Sources:
 - [Blog post by Mridul Verma](https://miuv.blog/2018/08/21/handling-large-amounts-of-data-with-parquet-part-1/)
 - [Twitter engineering blog post](https://blog.twitter.com/engineering/en_us/a/2013/announcing-parquet-10-columnar-storage-for-hadoop.html)
 - [SO post by Artem Ignatiev](https://stackoverflow.com/a/45541741/6580080)
+- [Blog post by Bartosz Konieczny](https://www.waitingforcode.com/apache-parquet/encodings-apache-parquet/read)
 
 ### Hierarchy
 - Root Folder
@@ -149,6 +150,7 @@ Here are the supported algorithms, when set through *Spark* configuration `"spar
 
 ### Encodings
 https://github.com/apache/parquet-format/blob/master/Encodings.md
+Encoding are applied automatically by the framework, depending on the 
 #### Dictionary encoding
 If *dictionary encoding* is enabled, parquet's *row groups* looks like:
 
@@ -162,19 +164,21 @@ There is a fallback to plain encoding if it turns out that there is too much uni
 In Spark, one can desactivate dictionary encoding with the config: `"parquet.enable.dictionary" -> "false"`, that can be useful as it may it degrade other encodings efficiency.
 
 #### Delta encoding
-Only supported types are `INT32` and `INT64`. This Encoding leverage the **similarity between successive values**, for instance when integers are representing *timestamps*.
+Supported types are `INT32` and `INT64`. 
+This encoding leverage the **similarity between successive values**, for instance when integers are representing *timestamps*.
 
 #### Delta strings encoding
+Suppoted type is `BYTE_ARRAY`.
 Known as [Incremental encoding](https://en.wikipedia.org/wiki/Incremental_encoding), it is another delta encoding that elude the writing of common prefix and suffix between: may lead to nice compression for close HTML pages.
 
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTIyNzMxNDA3LDEzNDQ5NDExNzEsMTkzOD
-M5Mzg5MCwtMjE0MDgzMTc0OSwxNTU3MTczOTUsODA0NzU4MzM3
-LDE0ODA0NTg3NzYsMTkwNDY3NjgwOCwxMTkxNjcyODg1LC0xMj
-U3MDA1MzAsLTE5NzA3MzU0MDQsLTEyNzQ5NjYzNCwtMTQzNzYx
-MjM5NywtMTA2NjY4MDA4OCwyMDkzMjM1NTg4LDE4MTEzMTExOT
-YsLTUzOTgzNjUzOCwtMTg1OTU0MjE2MywxNzQzMTY5MDA0LC03
-Mzk4NTI5MzVdfQ==
+eyJoaXN0b3J5IjpbLTUxNTg2NzgyOCw5MjI3MzE0MDcsMTM0ND
+k0MTE3MSwxOTM4MzkzODkwLC0yMTQwODMxNzQ5LDE1NTcxNzM5
+NSw4MDQ3NTgzMzcsMTQ4MDQ1ODc3NiwxOTA0Njc2ODA4LDExOT
+E2NzI4ODUsLTEyNTcwMDUzMCwtMTk3MDczNTQwNCwtMTI3NDk2
+NjM0LC0xNDM3NjEyMzk3LC0xMDY2NjgwMDg4LDIwOTMyMzU1OD
+gsMTgxMTMxMTE5NiwtNTM5ODM2NTM4LC0xODU5NTQyMTYzLDE3
+NDMxNjkwMDRdfQ==
 -->
