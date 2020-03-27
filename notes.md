@@ -7,7 +7,7 @@
 |[Machine Learning & Stats](ML.html)|Definitions, test statistics, bias-variance, methodology, algorithms|
 |[Graphs theory & web](graph.html)|Definitions & theorems, search engines and web's graph properties|
 |[Functional Programming](FP.html)|Scala & Cats, categories|
-|[Big Data Systems](bd.html)|Frameworks & theory|
+|[Big Data Systems](bd.html)|Theory & Processing/Storage/File formats Frameworks|
 |[Development](pl.html)|Coding in Java/Scala/Python/Ada|
 |[Distributed algorithms](da.html)|Leader election & Consensus, synchronous systems|
 |[Other CS notes](div.html)|Multi-threading, computer architecture, network...|
@@ -19,7 +19,7 @@ ___
 – Flannery O'Connor
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NzAyMzk5NTIsLTIwMDAyODcwNDEsLT
-E2NDk4NDA3NiwzOTE3NTUyMjEsMzA5MDI0OTUyLDUzMDAxMzE5
-XX0=
+eyJoaXN0b3J5IjpbMzAxNjk4ODcyLC0yMDAwMjg3MDQxLC0xNj
+Q5ODQwNzYsMzkxNzU1MjIxLDMwOTAyNDk1Miw1MzAwMTMxOV19
+
 -->
