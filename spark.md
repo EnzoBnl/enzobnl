@@ -614,7 +614,10 @@ but prefer:
 val ds: Dataset[T] = ...
 ds.count()
 ```
-wich might be rough
+
+This is what is done by Spark itself when it needs to trigger a computation, for example when a **eager checkpoint is requested** ( 
+
+wich is less verbose but roughly equivalent to:
 ```scala
 spark.range(100000).queryExecution.toRdd.foreachPartition(p => ())
 ```
@@ -1224,11 +1227,11 @@ _____
 ## Videos
 - [A Deeper Understanding of Spark Internals - Aaron Davidson (Databricks)](https://www.youtube.com/watch?v=dmL0N3qfSc8)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDM0NzIzMDMwLDE0ODk0OTI0MDEsMTc4OD
-czNjQ1MiwtMTA0MjE3OTMxLDE2NDM3NjQyLC0xOTYxMjI0MjMy
-LDI4MjIxMjY5MywxOTU1MDMyNzc0LDE3NjAzNTI1MjEsLTE0MD
-MxMTg1ODAsMTIyODUzNjUzOSwxNDA0MDUwNDM2LC0zMjk1MTI5
-NTYsLTE2MzkxMzA1NDEsLTI4NjM5MzUyLDIxMTc1MTQxMywtMj
-UwOTc2MjI3LDEwMjE5MDc3NCw5MTg2MTcxNTgsLTExNzgzOTc4
-MTBdfQ==
+eyJoaXN0b3J5IjpbLTMxNjcwMzUyNiwxNDg5NDkyNDAxLDE3OD
+g3MzY0NTIsLTEwNDIxNzkzMSwxNjQzNzY0MiwtMTk2MTIyNDIz
+MiwyODIyMTI2OTMsMTk1NTAzMjc3NCwxNzYwMzUyNTIxLC0xND
+AzMTE4NTgwLDEyMjg1MzY1MzksMTQwNDA1MDQzNiwtMzI5NTEy
+OTU2LC0xNjM5MTMwNTQxLC0yODYzOTM1MiwyMTE3NTE0MTMsLT
+I1MDk3NjIyNywxMDIxOTA3NzQsOTE4NjE3MTU4LC0xMTc4Mzk3
+ODEwXX0=
 -->
