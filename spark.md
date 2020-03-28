@@ -595,22 +595,13 @@ Materializing a  `ds: Dataset[T] = [...].cache()` into cache can be done in two 
 1. `rdd.count()`
 2. `rdd.queryExecution.toRdd.foreachPartition(_ => ())`
 
-One must avoid to do `ds.foreachPartition(_ => ())` which is equivalent to `ds.rdd`:
-`def foreachPartition(f: Iterator[T] => Unit): Unit = withNewRDDExecutionId(rdd.foreachPartition(f)) `
-equivalent to:
+One must avoid to do `ds.foreachPartition(_ => ())` which is equivalent to `ds.rdd.foreachPartition(_ => ())`:
+
 ```scala
-val ds: Dataset[T] = ...
-val rddRow: RDD[T] = ds.rdd
-rddRow.foreachPartition(p: Iterator[T] => p.size)
+def foreachPartition(f: Iterator[T] => Unit): Unit = withNewRDDExecutionId(rdd.foreachPartition(f))
 ```
 
-but prefer:
-```scala
-val ds: Dataset[T] = ...
-ds.count()
-```
-
-This is what is done by Spark itself when it needs to trigger a computation, for example when a **eager checkpoint is requested** (synchronous/blocking checkpoint), in `Dataset.scala`:
+As a note here is what is done inside *Spark* itself when it needs to trigger a computation, for example when a **eager checkpoint is requested** (synchronous/blocking checkpoint), in `Dataset.scala`:
 ```scala
 private def checkpoint(eager: Boolean, reliableCheckpoint: Boolean): Dataset[T] = {  
   val internalRdd = queryExecution.toRdd.map(_.copy())  
@@ -1235,7 +1226,7 @@ _____
 ## Videos
 - [A Deeper Understanding of Spark Internals - Aaron Davidson (Databricks)](https://www.youtube.com/watch?v=dmL0N3qfSc8)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk2OTIyMjQyMCwtMTY4NDEyODYxNywtOT
+eyJoaXN0b3J5IjpbLTY2NTM2NTEyMSwtMTY4NDEyODYxNywtOT
 E0NDk2MjAzLDE0ODk0OTI0MDEsMTc4ODczNjQ1MiwtMTA0MjE3
 OTMxLDE2NDM3NjQyLC0xOTYxMjI0MjMyLDI4MjIxMjY5MywxOT
 U1MDMyNzc0LDE3NjAzNTI1MjEsLTE0MDMxMTg1ODAsMTIyODUz
