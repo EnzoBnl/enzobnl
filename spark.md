@@ -586,7 +586,7 @@ Main partitioning
 
 Always partition on Long or Int, hash/encrypt string key if necessary.
 
-#### b) Materialize partitions
+#### b) Materialize partitions into cache
 Materializing a  `rdd: RDD[T] = [...].cache()` into cache can be done in two roughly equivalent ways, the first one being less verbose:
 1. `rdd.count()`
 2. `rdd.foreachPartition(_ => ())`
@@ -595,7 +595,7 @@ Materializing a  `ds: Dataset[T] = [...].cache()` into cache can be done in two 
 1. `rdd.count()`
 2. `rdd.queryExecution.toRdd.foreachPartition(_ => ())`
 
-One must avoid to do `ds.foreachPartition(_ => ())` which is equivalent to `ds.rdd.foreachPartition(_ => ())`:
+One must avoid to do `ds.foreachPartition(_ => ())` which is like doing `ds.rdd.foreachPartition(_ => ())`:
 
 ```scala
 def foreachPartition(f: Iterator[T] => Unit): Unit = withNewRDDExecutionId(rdd.foreachPartition(f))
@@ -1220,7 +1220,7 @@ _____
 ## Videos
 - [A Deeper Understanding of Spark Internals - Aaron Davidson (Databricks)](https://www.youtube.com/watch?v=dmL0N3qfSc8)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk5MzU1NDk4MSwtMTY4NDEyODYxNywtOT
+eyJoaXN0b3J5IjpbLTI1NTE2MDkxOCwtMTY4NDEyODYxNywtOT
 E0NDk2MjAzLDE0ODk0OTI0MDEsMTc4ODczNjQ1MiwtMTA0MjE3
 OTMxLDE2NDM3NjQyLC0xOTYxMjI0MjMyLDI4MjIxMjY5MywxOT
 U1MDMyNzc0LDE3NjAzNTI1MjEsLTE0MDMxMTg1ODAsMTIyODUz
