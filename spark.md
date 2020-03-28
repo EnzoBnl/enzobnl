@@ -587,7 +587,7 @@ Main partitioning
 Always partition on Long or Int, hash/encrypt string key if necessary.
 
 #### b) Materialize partitions
-// FIXME
+
 RDD: 
 ```scala
 val rdd: RDD[T] = ...
@@ -1229,11 +1229,11 @@ _____
 ## Videos
 - [A Deeper Understanding of Spark Internals - Aaron Davidson (Databricks)](https://www.youtube.com/watch?v=dmL0N3qfSc8)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc4ODczNjQ1MiwtMTA0MjE3OTMxLDE2ND
-M3NjQyLC0xOTYxMjI0MjMyLDI4MjIxMjY5MywxOTU1MDMyNzc0
-LDE3NjAzNTI1MjEsLTE0MDMxMTg1ODAsMTIyODUzNjUzOSwxND
-A0MDUwNDM2LC0zMjk1MTI5NTYsLTE2MzkxMzA1NDEsLTI4NjM5
-MzUyLDIxMTc1MTQxMywtMjUwOTc2MjI3LDEwMjE5MDc3NCw5MT
-g2MTcxNTgsLTExNzgzOTc4MTAsMTMyNjcyMzkwNywtMTkyMDcx
-MzA2N119
+eyJoaXN0b3J5IjpbMTQ4OTQ5MjQwMSwxNzg4NzM2NDUyLC0xMD
+QyMTc5MzEsMTY0Mzc2NDIsLTE5NjEyMjQyMzIsMjgyMjEyNjkz
+LDE5NTUwMzI3NzQsMTc2MDM1MjUyMSwtMTQwMzExODU4MCwxMj
+I4NTM2NTM5LDE0MDQwNTA0MzYsLTMyOTUxMjk1NiwtMTYzOTEz
+MDU0MSwtMjg2MzkzNTIsMjExNzUxNDEzLC0yNTA5NzYyMjcsMT
+AyMTkwNzc0LDkxODYxNzE1OCwtMTE3ODM5NzgxMCwxMzI2NzIz
+OTA3XX0=
 -->
