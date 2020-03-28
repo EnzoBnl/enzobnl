@@ -601,7 +601,7 @@ One must avoid to do `ds.foreachPartition(_ => ())` which is equivalent to `ds.r
 def foreachPartition(f: Iterator[T] => Unit): Unit = withNewRDDExecutionId(rdd.foreachPartition(f))
 ```
 
-As a note here is what is done inside *Spark* itself when it needs to trigger a computation, for example when a **eager checkpoint is requested** (synchronous/blocking checkpoint), in `Dataset.scala`:
+As a note here is what is done inside *Spark* itself when when an **eager checkpoint is requested** (synchronous/blocking checkpoint), in `Dataset.scala`:
 ```scala
 private def checkpoint(eager: Boolean, reliableCheckpoint: Boolean): Dataset[T] = {  
   val internalRdd = queryExecution.toRdd.map(_.copy())  
@@ -609,16 +609,10 @@ private def checkpoint(eager: Boolean, reliableCheckpoint: Boolean): Dataset[T] 
     internalRdd.checkpoint()  
   } else {  
     internalRdd.localCheckpoint()  
-  }  
-  
+  }
   if (eager) {  
     internalRdd.count()  
   }
-``` 
-
-wich is less verbose but roughly equivalent to:
-```scala
-spark.range(100000).queryExecution.toRdd.foreachPartition(p => ())
 ```
 
 #### c) `spark.default.parallelism` vs `spark.sql.shuffle.partitions`
@@ -1226,7 +1220,7 @@ _____
 ## Videos
 - [A Deeper Understanding of Spark Internals - Aaron Davidson (Databricks)](https://www.youtube.com/watch?v=dmL0N3qfSc8)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY2NTM2NTEyMSwtMTY4NDEyODYxNywtOT
+eyJoaXN0b3J5IjpbMTk5MzU1NDk4MSwtMTY4NDEyODYxNywtOT
 E0NDk2MjAzLDE0ODk0OTI0MDEsMTc4ODczNjQ1MiwtMTA0MjE3
 OTMxLDE2NDM3NjQyLC0xOTYxMjI0MjMyLDI4MjIxMjY5MywxOT
 U1MDMyNzc0LDE3NjAzNTI1MjEsLTE0MDMxMTg1ODAsMTIyODUz
