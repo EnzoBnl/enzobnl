@@ -615,7 +615,20 @@ val ds: Dataset[T] = ...
 ds.count()
 ```
 
-This is what is done by Spark itself when it needs to trigger a computation, for example when a **eager checkpoint is requested** ( 
+This is what is done by Spark itself when it needs to trigger a computation, for example when a **eager checkpoint is requested** (synchronous/blocking checkpoint), in `Dataset.scala`:
+```scala
+private def checkpoint(eager: Boolean, reliableCheckpoint: Boolean): Dataset[T] = {  
+  val internalRdd = queryExecution.toRdd.map(_.copy())  
+  if (reliableCheckpoint) {  
+    internalRdd.checkpoint()  
+  } else {  
+    internalRdd.localCheckpoint()  
+  }  
+  
+  if (eager) {  
+    internalRdd.count()  
+  }
+``` 
 
 wich is less verbose but roughly equivalent to:
 ```scala
@@ -1227,7 +1240,7 @@ _____
 ## Videos
 - [A Deeper Understanding of Spark Internals - Aaron Davidson (Databricks)](https://www.youtube.com/watch?v=dmL0N3qfSc8)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMxNjcwMzUyNiwxNDg5NDkyNDAxLDE3OD
+eyJoaXN0b3J5IjpbLTkxNDQ5NjIwMywxNDg5NDkyNDAxLDE3OD
 g3MzY0NTIsLTEwNDIxNzkzMSwxNjQzNzY0MiwtMTk2MTIyNDIz
 MiwyODIyMTI2OTMsMTk1NTAzMjc3NCwxNzYwMzUyNTIxLC0xND
 AzMTE4NTgwLDEyMjg1MzY1MzksMTQwNDA1MDQzNiwtMzI5NTEy
