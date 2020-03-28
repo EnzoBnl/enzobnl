@@ -614,14 +614,9 @@ but prefer:
 val ds: Dataset[T] = ...
 ds.count()
 ```
-
-which skips two steps: DeserializeToObjects & MapPartitions
+wich might be rough
 ```scala
 spark.range(100000).queryExecution.toRdd.foreachPartition(p => ())
-```
-is up to 30% faster than
-```scala
-spark.range(100000).foreachPartition(p => ())}  
 ```
 
 #### c) `spark.default.parallelism` vs `spark.sql.shuffle.partitions`
@@ -1229,11 +1224,11 @@ _____
 ## Videos
 - [A Deeper Understanding of Spark Internals - Aaron Davidson (Databricks)](https://www.youtube.com/watch?v=dmL0N3qfSc8)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ4OTQ5MjQwMSwxNzg4NzM2NDUyLC0xMD
-QyMTc5MzEsMTY0Mzc2NDIsLTE5NjEyMjQyMzIsMjgyMjEyNjkz
-LDE5NTUwMzI3NzQsMTc2MDM1MjUyMSwtMTQwMzExODU4MCwxMj
-I4NTM2NTM5LDE0MDQwNTA0MzYsLTMyOTUxMjk1NiwtMTYzOTEz
-MDU0MSwtMjg2MzkzNTIsMjExNzUxNDEzLC0yNTA5NzYyMjcsMT
-AyMTkwNzc0LDkxODYxNzE1OCwtMTE3ODM5NzgxMCwxMzI2NzIz
-OTA3XX0=
+eyJoaXN0b3J5IjpbNDM0NzIzMDMwLDE0ODk0OTI0MDEsMTc4OD
+czNjQ1MiwtMTA0MjE3OTMxLDE2NDM3NjQyLC0xOTYxMjI0MjMy
+LDI4MjIxMjY5MywxOTU1MDMyNzc0LDE3NjAzNTI1MjEsLTE0MD
+MxMTg1ODAsMTIyODUzNjUzOSwxNDA0MDUwNDM2LC0zMjk1MTI5
+NTYsLTE2MzkxMzA1NDEsLTI4NjM5MzUyLDIxMTc1MTQxMywtMj
+UwOTc2MjI3LDEwMjE5MDc3NCw5MTg2MTcxNTgsLTExNzgzOTc4
+MTBdfQ==
 -->
