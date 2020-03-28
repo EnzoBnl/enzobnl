@@ -586,37 +586,34 @@ Main partitioning
 
 Always partition on Long or Int, hash/encrypt string key if necessary.
 
-#### b) Materialize partitions
+#### b) Materialize partitions into cache
+Materializing a  `rdd: RDD[T] = [...].cache()` into cache can be done in two roughly equivalent ways, the first one being less verbose:
+1. `rdd.count()`
+2. `rdd.foreachPartition(_ => ())`
 
-RDD: 
-```scala
-val rdd: RDD[T] = ...
-rdd.foreachPartition(p: Iterator[T] => ())
-```
+Materializing a  `ds: Dataset[T] = [...].cache()` into cache can be done in two roughly equivalent ways, the first one being less verbose:
+1. `rdd.count()`
+2. `rdd.queryExecution.toRdd.foreachPartition(_ => ())`
 
-Dataset: 
-avoid (even for dataframes where T=Row):
+As it adds two additionnal steps: DeserializeToObjects & MapPartitionsne must avoid to do `ds.foreachPartition(_ => ())` which is like doing `ds.rdd.foreachPartition(_ => ())`, in `Dataset.scala`:
+
 ```scala
-val ds: Dataset[T] = ...
-ds.foreachPartition(p: Iterator[T] => p.size)
-```
-which just calls:
-`def foreachPartition(f: Iterator[T] => Unit): Unit = withNewRDDExecutionId(rdd.foreachPartition(f)) `
-equivalent to:
-```scala
-val ds: Dataset[T] = ...
-val rddRow: RDD[T] = ds.rdd
-rddRow.foreachPartition(p: Iterator[T] => p.size)
+def foreachPartition(f: Iterator[T] => Unit): Unit = withNewRDDExecutionId(rdd.foreachPartition(f))
 ```
 
-but prefer:
+
+As a note here is what is done inside *Spark* itself when when an **eager checkpoint is requested** (synchronous/blocking checkpoint), in `Dataset.scala`:
 ```scala
-val ds: Dataset[T] = ...
-ds.count()
-```
-wich might be roughly equivalent but less verbose than to:
-```scala
-spark.range(100000).queryExecution.toRdd.foreachPartition(p => ())
+private def checkpoint(eager: Boolean, reliableCheckpoint: Boolean): Dataset[T] = {  
+  val internalRdd = queryExecution.toRdd.map(_.copy())  
+  if (reliableCheckpoint) {  
+    internalRdd.checkpoint()  
+  } else {  
+    internalRdd.localCheckpoint()  
+  }
+  if (eager) {  
+    internalRdd.count()  
+  }
 ```
 
 #### c) `spark.default.parallelism` vs `spark.sql.shuffle.partitions`
@@ -1224,7 +1221,7 @@ _____
 ## Videos
 - [A Deeper Understanding of Spark Internals - Aaron Davidson (Databricks)](https://www.youtube.com/watch?v=dmL0N3qfSc8)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM4NjgxMzQwNSwxNzEzNzIxMDc1LC0yNT
+eyJoaXN0b3J5IjpbMjE0NDU2ODAzOCwxNzEzNzIxMDc1LC0yNT
 UxNjA5MTgsLTE2ODQxMjg2MTcsLTkxNDQ5NjIwMywxNDg5NDky
 NDAxLDE3ODg3MzY0NTIsLTEwNDIxNzkzMSwxNjQzNzY0MiwtMT
 k2MTIyNDIzMiwyODIyMTI2OTMsMTk1NTAzMjc3NCwxNzYwMzUy
