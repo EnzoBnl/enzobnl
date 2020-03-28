@@ -595,7 +595,7 @@ Materializing a  `ds: Dataset[T] = [...].cache()` into cache can be done in two 
 1. `rdd.count()`
 2. `rdd.queryExecution.toRdd.foreachPartition(_ => ())`
 
-As it adds two additionnal steps: DeserializeToObjects & MapPartitionsne must avoid to do `ds.foreachPartition(_ => ())` which is like doing `ds.rdd.foreachPartition(_ => ())`, in `Dataset.scala`:
+As it adds two additionnal steps (`DeserializeToObjects` and `MapPartitions`), one must avoid to do `ds.foreachPartition(_ => ())` which is like doing `ds.rdd.foreachPartition(_ => ())`, in `Dataset.scala`:
 
 ```scala
 def foreachPartition(f: Iterator[T] => Unit): Unit = withNewRDDExecutionId(rdd.foreachPartition(f))
@@ -1221,7 +1221,7 @@ _____
 ## Videos
 - [A Deeper Understanding of Spark Internals - Aaron Davidson (Databricks)](https://www.youtube.com/watch?v=dmL0N3qfSc8)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjE0NDU2ODAzOCwxNzEzNzIxMDc1LC0yNT
+eyJoaXN0b3J5IjpbMTYwOTMwMjA0NywxNzEzNzIxMDc1LC0yNT
 UxNjA5MTgsLTE2ODQxMjg2MTcsLTkxNDQ5NjIwMywxNDg5NDky
 NDAxLDE3ODg3MzY0NTIsLTEwNDIxNzkzMSwxNjQzNzY0MiwtMT
 k2MTIyNDIzMiwyODIyMTI2OTMsMTk1NTAzMjc3NCwxNzYwMzUy
