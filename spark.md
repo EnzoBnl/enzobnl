@@ -599,7 +599,7 @@ Dataset:
 avoid (even for dataframes where T=Row):
 ```scala
 val ds: Dataset[T] = ...
-ds.foreachPartition(p: Iterator[T] => p.size)
+ds.queryExecution.toRdd.foreachPartition(_ => ())
 ```
 which just calls:
 `def foreachPartition(f: Iterator[T] => Unit): Unit = withNewRDDExecutionId(rdd.foreachPartition(f)) `
@@ -1241,11 +1241,11 @@ _____
 ## Videos
 - [A Deeper Understanding of Spark Internals - Aaron Davidson (Databricks)](https://www.youtube.com/watch?v=dmL0N3qfSc8)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ3MzEzNDg0NywtMTY4NDEyODYxNywtOT
-E0NDk2MjAzLDE0ODk0OTI0MDEsMTc4ODczNjQ1MiwtMTA0MjE3
-OTMxLDE2NDM3NjQyLC0xOTYxMjI0MjMyLDI4MjIxMjY5MywxOT
-U1MDMyNzc0LDE3NjAzNTI1MjEsLTE0MDMxMTg1ODAsMTIyODUz
-NjUzOSwxNDA0MDUwNDM2LC0zMjk1MTI5NTYsLTE2MzkxMzA1ND
-EsLTI4NjM5MzUyLDIxMTc1MTQxMywtMjUwOTc2MjI3LDEwMjE5
-MDc3NF19
+eyJoaXN0b3J5IjpbMzIyMzI5NTA5LC0xNjg0MTI4NjE3LC05MT
+Q0OTYyMDMsMTQ4OTQ5MjQwMSwxNzg4NzM2NDUyLC0xMDQyMTc5
+MzEsMTY0Mzc2NDIsLTE5NjEyMjQyMzIsMjgyMjEyNjkzLDE5NT
+UwMzI3NzQsMTc2MDM1MjUyMSwtMTQwMzExODU4MCwxMjI4NTM2
+NTM5LDE0MDQwNTA0MzYsLTMyOTUxMjk1NiwtMTYzOTEzMDU0MS
+wtMjg2MzkzNTIsMjExNzUxNDEzLC0yNTA5NzYyMjcsMTAyMTkw
+Nzc0XX0=
 -->
