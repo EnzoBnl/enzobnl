@@ -593,15 +593,9 @@ Materializing a  `rdd: RDD[T] = [...].cache()` into cache can be done in two rou
 
 Materializing a  `ds: Dataset[T] = [...].cache()` into cache can be done in two roughly equivalent ways, the first one being less verbose:
 1. `rdd.count()`
-2. `rdd.foreachPartition(_ => ())`
+2. `rdd.queryExecution.toRdd.foreachPartition(_ => ())`
 
-Dataset: 
-avoid (even for dataframes where T=Row):
-```scala
-val ds: Dataset[T] = ...
-ds.queryExecution.toRdd.foreachPartition(_ => ())
-```
-which just calls:
+One must avoid to do `` which just calls:
 `def foreachPartition(f: Iterator[T] => Unit): Unit = withNewRDDExecutionId(rdd.foreachPartition(f)) `
 equivalent to:
 ```scala
@@ -1241,11 +1235,11 @@ _____
 ## Videos
 - [A Deeper Understanding of Spark Internals - Aaron Davidson (Databricks)](https://www.youtube.com/watch?v=dmL0N3qfSc8)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzIyMzI5NTA5LC0xNjg0MTI4NjE3LC05MT
-Q0OTYyMDMsMTQ4OTQ5MjQwMSwxNzg4NzM2NDUyLC0xMDQyMTc5
-MzEsMTY0Mzc2NDIsLTE5NjEyMjQyMzIsMjgyMjEyNjkzLDE5NT
-UwMzI3NzQsMTc2MDM1MjUyMSwtMTQwMzExODU4MCwxMjI4NTM2
-NTM5LDE0MDQwNTA0MzYsLTMyOTUxMjk1NiwtMTYzOTEzMDU0MS
-wtMjg2MzkzNTIsMjExNzUxNDEzLC0yNTA5NzYyMjcsMTAyMTkw
-Nzc0XX0=
+eyJoaXN0b3J5IjpbLTE3OTIwOTUwODYsLTE2ODQxMjg2MTcsLT
+kxNDQ5NjIwMywxNDg5NDkyNDAxLDE3ODg3MzY0NTIsLTEwNDIx
+NzkzMSwxNjQzNzY0MiwtMTk2MTIyNDIzMiwyODIyMTI2OTMsMT
+k1NTAzMjc3NCwxNzYwMzUyNTIxLC0xNDAzMTE4NTgwLDEyMjg1
+MzY1MzksMTQwNDA1MDQzNiwtMzI5NTEyOTU2LC0xNjM5MTMwNT
+QxLC0yODYzOTM1MiwyMTE3NTE0MTMsLTI1MDk3NjIyNywxMDIx
+OTA3NzRdfQ==
 -->
