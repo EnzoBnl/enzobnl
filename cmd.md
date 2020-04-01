@@ -107,6 +107,8 @@ sudo mount -o ro /dev/nvme0n1p5 /media/enzobnl/sdd
 sudo unmount /media/enzobnl/sdd
 // Fix broken installs
 sudo apt-get --fix-broken install
+// list files installed by a package
+dpkg-query -L <package_name>
 // update paths
 source ~/.bashrc
 // You can make a file executable as follows:
@@ -274,11 +276,11 @@ c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex 
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUyMTM3MTA0MywxMTc4MTYzODAsMjkwMT
-IwNzc0LDIwNjM3NDU2NDksLTE3NDQ5NTM1NTUsMTUxMTAxNzE1
-MSw5Njc3OTQxODEsLTEzNTg5NzM4NDMsLTEwNzQ4ODAxMDUsLT
-Y4MzMxODE5Myw2NTU0NTM3MjIsLTY5MTI3NDI4MiwtNjA4NjA1
-NzA4LDExMjE5OTE1MzgsLTMxNjMzMDY1MiwtMTk0MDMwMDI5Ny
-wyNDEzNjA0NzUsLTEwNzQ1MDE1NDAsLTg2NzE2ODc1MSwtODc0
-OTc4NTI5XX0=
+eyJoaXN0b3J5IjpbMTMwMTk0NzcwLC01MjEzNzEwNDMsMTE3OD
+E2MzgwLDI5MDEyMDc3NCwyMDYzNzQ1NjQ5LC0xNzQ0OTUzNTU1
+LDE1MTEwMTcxNTEsOTY3Nzk0MTgxLC0xMzU4OTczODQzLC0xMD
+c0ODgwMTA1LC02ODMzMTgxOTMsNjU1NDUzNzIyLC02OTEyNzQy
+ODIsLTYwODYwNTcwOCwxMTIxOTkxNTM4LC0zMTYzMzA2NTIsLT
+E5NDAzMDAyOTcsMjQxMzYwNDc1LC0xMDc0NTAxNTQwLC04Njcx
+Njg3NTFdfQ==
 -->
