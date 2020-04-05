@@ -6,7 +6,9 @@
 <script>document.body.style.background = "#f2f2f2";</script>
 <!--NOTE HEAD END-->
 
-# Diverse n Dev Notes
+# Diverse themes
+
+## Compression algorithms
 
 ## Asymptotic analysis
 
@@ -249,8 +251,9 @@ The difference is in which libraries are used. In order to use OS stuff (I/O for
 4. Master 1 to 3 specialized frameworks: Node.js, React, Spark, Kubernetes, Unity...
 5. Practice with CI/CD & cloud
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MzIxNDA0NTksLTE0NDE4MTU0MzksMT
-Q3Mzk1ODQ0MSwxNDczOTU4NDQxLC0xNjUwNjQxMDg4LC0yMDg4
-NTQ1NTA2LDEyNjUyNzY3MSwxNjEzMTM2NzExLC0yMDM3OTA5OD
-c5LC0xOTgxNjIyNzczLDI3MTYxNzgyNl19
+eyJoaXN0b3J5IjpbMTEyMjc0OTAwMSwtMTUzMjE0MDQ1OSwtMT
+Q0MTgxNTQzOSwxNDczOTU4NDQxLDE0NzM5NTg0NDEsLTE2NTA2
+NDEwODgsLTIwODg1NDU1MDYsMTI2NTI3NjcxLDE2MTMxMzY3MT
+EsLTIwMzc5MDk4NzksLTE5ODE2MjI3NzMsMjcxNjE3ODI2XX0=
+
 -->
