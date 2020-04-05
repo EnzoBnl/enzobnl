@@ -10,11 +10,12 @@
 
 ## Compression algorithms
 ![https://i.stack.imgur.com/LPCSe.png](https://i.stack.imgur.com/LPCSe.png)
-### GZIP
-### SNAPPY
-### LZ4
-### ZSTD
-### 
+### Gzip
+### Snappy
+### Lz4
+### Zstd
+### Brotli
+### Lzma
 
 
 ## Asymptotic analysis
@@ -258,7 +259,7 @@ The difference is in which libraries are used. In order to use OS stuff (I/O for
 4. Master 1 to 3 specialized frameworks: Node.js, React, Spark, Kubernetes, Unity...
 5. Practice with CI/CD & cloud
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNjgwMTMwNzYsMTEyMjc0OTAwMSwtMT
+eyJoaXN0b3J5IjpbLTE2MzE2OTE3OTksMTEyMjc0OTAwMSwtMT
 UzMjE0MDQ1OSwtMTQ0MTgxNTQzOSwxNDczOTU4NDQxLDE0NzM5
 NTg0NDEsLTE2NTA2NDEwODgsLTIwODg1NDU1MDYsMTI2NTI3Nj
 cxLDE2MTMxMzY3MTEsLTIwMzc5MDk4NzksLTE5ODE2MjI3NzMs
