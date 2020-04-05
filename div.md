@@ -9,6 +9,11 @@
 # Diverse themes
 
 ## Compression algorithms
+### GZIP
+### SNAPPY
+### LZO
+### LZ4
+
 
 ## Asymptotic analysis
 
@@ -251,9 +256,9 @@ The difference is in which libraries are used. In order to use OS stuff (I/O for
 4. Master 1 to 3 specialized frameworks: Node.js, React, Spark, Kubernetes, Unity...
 5. Practice with CI/CD & cloud
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEyMjc0OTAwMSwtMTUzMjE0MDQ1OSwtMT
-Q0MTgxNTQzOSwxNDczOTU4NDQxLDE0NzM5NTg0NDEsLTE2NTA2
-NDEwODgsLTIwODg1NDU1MDYsMTI2NTI3NjcxLDE2MTMxMzY3MT
-EsLTIwMzc5MDk4NzksLTE5ODE2MjI3NzMsMjcxNjE3ODI2XX0=
-
+eyJoaXN0b3J5IjpbLTE1ODc1NjM4MzMsMTEyMjc0OTAwMSwtMT
+UzMjE0MDQ1OSwtMTQ0MTgxNTQzOSwxNDczOTU4NDQxLDE0NzM5
+NTg0NDEsLTE2NTA2NDEwODgsLTIwODg1NDU1MDYsMTI2NTI3Nj
+cxLDE2MTMxMzY3MTEsLTIwMzc5MDk4NzksLTE5ODE2MjI3NzMs
+MjcxNjE3ODI2XX0=
 -->
