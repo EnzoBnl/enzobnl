@@ -8,16 +8,6 @@
 
 # Diverse themes
 
-## Compression algorithms
-![https://i.stack.imgur.com/LPCSe.png](https://i.stack.imgur.com/LPCSe.png)
-### Gzip
-### Snappy
-### Lz4
-### Zstd
-### Brotli
-### Lzma
-
-
 ## Asymptotic analysis
 
 $f(n)=O(g(n))\iff \exists n_o \in N, \exists c\in R^{+*}, \forall n>n_o,\vert\frac{f(n)}{g(n)}\vert<=c$
@@ -259,9 +249,9 @@ The difference is in which libraries are used. In order to use OS stuff (I/O for
 4. Master 1 to 3 specialized frameworks: Node.js, React, Spark, Kubernetes, Unity...
 5. Practice with CI/CD & cloud
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MzE2OTE3OTksMTEyMjc0OTAwMSwtMT
-UzMjE0MDQ1OSwtMTQ0MTgxNTQzOSwxNDczOTU4NDQxLDE0NzM5
-NTg0NDEsLTE2NTA2NDEwODgsLTIwODg1NDU1MDYsMTI2NTI3Nj
-cxLDE2MTMxMzY3MTEsLTIwMzc5MDk4NzksLTE5ODE2MjI3NzMs
-MjcxNjE3ODI2XX0=
+eyJoaXN0b3J5IjpbNzI4MTUyNDc3LC0xNjMxNjkxNzk5LDExMj
+I3NDkwMDEsLTE1MzIxNDA0NTksLTE0NDE4MTU0MzksMTQ3Mzk1
+ODQ0MSwxNDczOTU4NDQxLC0xNjUwNjQxMDg4LC0yMDg4NTQ1NT
+A2LDEyNjUyNzY3MSwxNjEzMTM2NzExLC0yMDM3OTA5ODc5LC0x
+OTgxNjIyNzczLDI3MTYxNzgyNl19
 -->
