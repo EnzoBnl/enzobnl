@@ -167,6 +167,9 @@ mvn test -Dtest=com....   [-f pom.xml]
 mvn test -Dsuites=com....   [-f pom.xml]
 mvn package -DskipTests=true
 
+// build specific modules (. is parent pom)
+mvn -pl .,library1,library2 clean install ...
+
 sudo mvn install:install-file -U -Dfile=/path/bla.jar    -DgroupId=com.bla    -DartifactId=bla    -Dversion=X.x    -Dpackaging=jar   -DgeneratePom=true -DlocalRepositoryPath=/root/.m2/repository
 ```
 ### pypi //pip
@@ -276,11 +279,11 @@ c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex 
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMwMTk0NzcwLC01MjEzNzEwNDMsMTE3OD
-E2MzgwLDI5MDEyMDc3NCwyMDYzNzQ1NjQ5LC0xNzQ0OTUzNTU1
-LDE1MTEwMTcxNTEsOTY3Nzk0MTgxLC0xMzU4OTczODQzLC0xMD
-c0ODgwMTA1LC02ODMzMTgxOTMsNjU1NDUzNzIyLC02OTEyNzQy
-ODIsLTYwODYwNTcwOCwxMTIxOTkxNTM4LC0zMTYzMzA2NTIsLT
-E5NDAzMDAyOTcsMjQxMzYwNDc1LC0xMDc0NTAxNTQwLC04Njcx
-Njg3NTFdfQ==
+eyJoaXN0b3J5IjpbLTE0MTYwMTIyNzEsMTMwMTk0NzcwLC01Mj
+EzNzEwNDMsMTE3ODE2MzgwLDI5MDEyMDc3NCwyMDYzNzQ1NjQ5
+LC0xNzQ0OTUzNTU1LDE1MTEwMTcxNTEsOTY3Nzk0MTgxLC0xMz
+U4OTczODQzLC0xMDc0ODgwMTA1LC02ODMzMTgxOTMsNjU1NDUz
+NzIyLC02OTEyNzQyODIsLTYwODYwNTcwOCwxMTIxOTkxNTM4LC
+0zMTYzMzA2NTIsLTE5NDAzMDAyOTcsMjQxMzYwNDc1LC0xMDc0
+NTAxNTQwXX0=
 -->
