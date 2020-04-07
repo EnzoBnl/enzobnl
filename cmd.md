@@ -238,6 +238,8 @@ git push origin master
 //branch
 git checkout (-b for creation only) <name>
 git push origin <name>
+// chackout a remote tag
+git checkout tags/<name>
 //sometime :
 git push origin heads/<name>
 //show refs :
@@ -279,11 +281,11 @@ c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex 
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MTYwMTIyNzEsMTMwMTk0NzcwLC01Mj
-EzNzEwNDMsMTE3ODE2MzgwLDI5MDEyMDc3NCwyMDYzNzQ1NjQ5
-LC0xNzQ0OTUzNTU1LDE1MTEwMTcxNTEsOTY3Nzk0MTgxLC0xMz
-U4OTczODQzLC0xMDc0ODgwMTA1LC02ODMzMTgxOTMsNjU1NDUz
-NzIyLC02OTEyNzQyODIsLTYwODYwNTcwOCwxMTIxOTkxNTM4LC
-0zMTYzMzA2NTIsLTE5NDAzMDAyOTcsMjQxMzYwNDc1LC0xMDc0
-NTAxNTQwXX0=
+eyJoaXN0b3J5IjpbLTEwMTQ4MjcyNzMsLTE0MTYwMTIyNzEsMT
+MwMTk0NzcwLC01MjEzNzEwNDMsMTE3ODE2MzgwLDI5MDEyMDc3
+NCwyMDYzNzQ1NjQ5LC0xNzQ0OTUzNTU1LDE1MTEwMTcxNTEsOT
+Y3Nzk0MTgxLC0xMzU4OTczODQzLC0xMDc0ODgwMTA1LC02ODMz
+MTgxOTMsNjU1NDUzNzIyLC02OTEyNzQyODIsLTYwODYwNTcwOC
+wxMTIxOTkxNTM4LC0zMTYzMzA2NTIsLTE5NDAzMDAyOTcsMjQx
+MzYwNDc1XX0=
 -->
