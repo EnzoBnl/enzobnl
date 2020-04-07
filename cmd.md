@@ -96,6 +96,8 @@ $ chmod +x hello_world.sh
 chmod u=rwx,g=rx,o=r /.../folder/ --recursive
 // tar extract tgz
 tar -xvzf /path/to/yourfile.tgz
+// archive and compress with gzip
+tar -cz filename
 // env var tmp
 export ABC=/bla/blouche
 // env var perm for all users
@@ -281,11 +283,11 @@ c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex 
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMTQ4MjcyNzMsLTE0MTYwMTIyNzEsMT
-MwMTk0NzcwLC01MjEzNzEwNDMsMTE3ODE2MzgwLDI5MDEyMDc3
-NCwyMDYzNzQ1NjQ5LC0xNzQ0OTUzNTU1LDE1MTEwMTcxNTEsOT
-Y3Nzk0MTgxLC0xMzU4OTczODQzLC0xMDc0ODgwMTA1LC02ODMz
-MTgxOTMsNjU1NDUzNzIyLC02OTEyNzQyODIsLTYwODYwNTcwOC
-wxMTIxOTkxNTM4LC0zMTYzMzA2NTIsLTE5NDAzMDAyOTcsMjQx
-MzYwNDc1XX0=
+eyJoaXN0b3J5IjpbLTMwMDA5NzYyOCwtMTAxNDgyNzI3MywtMT
+QxNjAxMjI3MSwxMzAxOTQ3NzAsLTUyMTM3MTA0MywxMTc4MTYz
+ODAsMjkwMTIwNzc0LDIwNjM3NDU2NDksLTE3NDQ5NTM1NTUsMT
+UxMTAxNzE1MSw5Njc3OTQxODEsLTEzNTg5NzM4NDMsLTEwNzQ4
+ODAxMDUsLTY4MzMxODE5Myw2NTU0NTM3MjIsLTY5MTI3NDI4Mi
+wtNjA4NjA1NzA4LDExMjE5OTE1MzgsLTMxNjMzMDY1MiwtMTk0
+MDMwMDI5N119
 -->
