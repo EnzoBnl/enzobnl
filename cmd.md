@@ -117,6 +117,8 @@ apt-cache policy <package name>
 sudo apt-get --fix-broken install
 // list files installed by a package
 dpkg-query -L <package_name>
+// install a .deb package
+dpkg -i package_name.deb
 // update paths
 source ~/.bashrc
 // You can make a file executable as follows:
@@ -289,11 +291,11 @@ c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex 
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4OTcwNzQ0NjYsLTU1MDE2ODM0MiwtMT
-k1Mzc2Mzk3OSwxMTAwMDY3NTEyLC0xMDE0ODI3MjczLC0xNDE2
-MDEyMjcxLDEzMDE5NDc3MCwtNTIxMzcxMDQzLDExNzgxNjM4MC
-wyOTAxMjA3NzQsMjA2Mzc0NTY0OSwtMTc0NDk1MzU1NSwxNTEx
-MDE3MTUxLDk2Nzc5NDE4MSwtMTM1ODk3Mzg0MywtMTA3NDg4MD
-EwNSwtNjgzMzE4MTkzLDY1NTQ1MzcyMiwtNjkxMjc0MjgyLC02
-MDg2MDU3MDhdfQ==
+eyJoaXN0b3J5IjpbMjA5NjQ1MzM5NiwtNTUwMTY4MzQyLC0xOT
+UzNzYzOTc5LDExMDAwNjc1MTIsLTEwMTQ4MjcyNzMsLTE0MTYw
+MTIyNzEsMTMwMTk0NzcwLC01MjEzNzEwNDMsMTE3ODE2MzgwLD
+I5MDEyMDc3NCwyMDYzNzQ1NjQ5LC0xNzQ0OTUzNTU1LDE1MTEw
+MTcxNTEsOTY3Nzk0MTgxLC0xMzU4OTczODQzLC0xMDc0ODgwMT
+A1LC02ODMzMTgxOTMsNjU1NDUzNzIyLC02OTEyNzQyODIsLTYw
+ODYwNTcwOF19
 -->
