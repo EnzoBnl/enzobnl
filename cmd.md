@@ -111,6 +111,8 @@ sudo unmount /media/enzobnl/sdd
 sudo apt-get --fix-broken install
 // install specific version
 `apt-get install «pkg»=«version»`
+// list available versions on apt
+apt-cache policy <package name>
 // list files installed by a package
 dpkg-query -L <package_name>
 // update paths
@@ -285,11 +287,11 @@ c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex 
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NTM3NjM5NzksMTEwMDA2NzUxMiwtMT
-AxNDgyNzI3MywtMTQxNjAxMjI3MSwxMzAxOTQ3NzAsLTUyMTM3
-MTA0MywxMTc4MTYzODAsMjkwMTIwNzc0LDIwNjM3NDU2NDksLT
-E3NDQ5NTM1NTUsMTUxMTAxNzE1MSw5Njc3OTQxODEsLTEzNTg5
-NzM4NDMsLTEwNzQ4ODAxMDUsLTY4MzMxODE5Myw2NTU0NTM3Mj
-IsLTY5MTI3NDI4MiwtNjA4NjA1NzA4LDExMjE5OTE1MzgsLTMx
-NjMzMDY1Ml19
+eyJoaXN0b3J5IjpbLTU1MDE2ODM0MiwtMTk1Mzc2Mzk3OSwxMT
+AwMDY3NTEyLC0xMDE0ODI3MjczLC0xNDE2MDEyMjcxLDEzMDE5
+NDc3MCwtNTIxMzcxMDQzLDExNzgxNjM4MCwyOTAxMjA3NzQsMj
+A2Mzc0NTY0OSwtMTc0NDk1MzU1NSwxNTExMDE3MTUxLDk2Nzc5
+NDE4MSwtMTM1ODk3Mzg0MywtMTA3NDg4MDEwNSwtNjgzMzE4MT
+kzLDY1NTQ1MzcyMiwtNjkxMjc0MjgyLC02MDg2MDU3MDgsMTEy
+MTk5MTUzOF19
 -->
