@@ -138,6 +138,10 @@ ssh -D 1080 <server>
 chromium-browser --proxy-server="socks5://127.0.0.1:1080" --user-data-dir="/home/enzo/chrome-proxy-profile"
 # quit ssh connection
 exit
+// shebang commentary
+#!/usr/bin/python
+#!/bin/bash
+
 ```
 ### CMD removes :
 ```bash
@@ -291,11 +295,11 @@ c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex 
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA5NjQ1MzM5NiwtNTUwMTY4MzQyLC0xOT
-UzNzYzOTc5LDExMDAwNjc1MTIsLTEwMTQ4MjcyNzMsLTE0MTYw
-MTIyNzEsMTMwMTk0NzcwLC01MjEzNzEwNDMsMTE3ODE2MzgwLD
-I5MDEyMDc3NCwyMDYzNzQ1NjQ5LC0xNzQ0OTUzNTU1LDE1MTEw
-MTcxNTEsOTY3Nzk0MTgxLC0xMzU4OTczODQzLC0xMDc0ODgwMT
-A1LC02ODMzMTgxOTMsNjU1NDUzNzIyLC02OTEyNzQyODIsLTYw
-ODYwNTcwOF19
+eyJoaXN0b3J5IjpbNDU5NDY4MjYsMjA5NjQ1MzM5NiwtNTUwMT
+Y4MzQyLC0xOTUzNzYzOTc5LDExMDAwNjc1MTIsLTEwMTQ4Mjcy
+NzMsLTE0MTYwMTIyNzEsMTMwMTk0NzcwLC01MjEzNzEwNDMsMT
+E3ODE2MzgwLDI5MDEyMDc3NCwyMDYzNzQ1NjQ5LC0xNzQ0OTUz
+NTU1LDE1MTEwMTcxNTEsOTY3Nzk0MTgxLC0xMzU4OTczODQzLC
+0xMDc0ODgwMTA1LC02ODMzMTgxOTMsNjU1NDUzNzIyLC02OTEy
+NzQyODJdfQ==
 -->
