@@ -1174,7 +1174,7 @@ There is 3 ways to pass a configuration property to an spark application's `Spar
 
 *Note:* **Deprecated** configuration keys never take precedence over their substitute, whatever how they are passed.
 
-[Source](http://spark.apache.org/docs/latest/configuration.html)
+[See doc here](http://spark.apache.org/docs/latest/configuration.html)
 
 ## XIX/ Coming soon
 ### 1) ouverture: Adaptative Execution (AE) in 3.0.0
@@ -1231,11 +1231,11 @@ _____
 ## Videos
 - [A Deeper Understanding of Spark Internals - Aaron Davidson (Databricks)](https://www.youtube.com/watch?v=dmL0N3qfSc8)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMxMjEwNjI2NywxNjA5MzAyMDQ3LDE3MT
-M3MjEwNzUsLTI1NTE2MDkxOCwtMTY4NDEyODYxNywtOTE0NDk2
-MjAzLDE0ODk0OTI0MDEsMTc4ODczNjQ1MiwtMTA0MjE3OTMxLD
-E2NDM3NjQyLC0xOTYxMjI0MjMyLDI4MjIxMjY5MywxOTU1MDMy
-Nzc0LDE3NjAzNTI1MjEsLTE0MDMxMTg1ODAsMTIyODUzNjUzOS
-wxNDA0MDUwNDM2LC0zMjk1MTI5NTYsLTE2MzkxMzA1NDEsLTI4
-NjM5MzUyXX0=
+eyJoaXN0b3J5IjpbOTgwNjkwODg1LDE2MDkzMDIwNDcsMTcxMz
+cyMTA3NSwtMjU1MTYwOTE4LC0xNjg0MTI4NjE3LC05MTQ0OTYy
+MDMsMTQ4OTQ5MjQwMSwxNzg4NzM2NDUyLC0xMDQyMTc5MzEsMT
+Y0Mzc2NDIsLTE5NjEyMjQyMzIsMjgyMjEyNjkzLDE5NTUwMzI3
+NzQsMTc2MDM1MjUyMSwtMTQwMzExODU4MCwxMjI4NTM2NTM5LD
+E0MDQwNTA0MzYsLTMyOTUxMjk1NiwtMTYzOTEzMDU0MSwtMjg2
+MzkzNTJdfQ==
 -->
