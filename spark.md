@@ -1167,7 +1167,14 @@ refs:
 - https://community.cloudera.com/t5/Support-Questions/How-to-process-a-large-data-set-with-Spark/m-p/39428
 
 ## XVIII/ Configuration
-There is 3 ways to pass a configuration property to an Applications `SparkSession`. Here is the order of priority from the highest to the lowest
+There is 3 ways to pass a configuration property to an Application's `SparkSession`. Here is the order of priority from the highest to the lowest:
+1. Properties set directly on the SparkConf
+2. Flags passed to spark-submit or spark-shell
+3. Options in the spark-defaults.conf file
+
+Deprecated configuration keys take a smaller precedence overwhatever how they are passed.A few configuration keys have been renamed since earlier versions of Spark; in such cases, the older key names are still accepted, but take lower precedence than any instance of the newer key.
+
+[Source](http://spark.apache.org/docs/latest/configuration.html)
 
 ## XIX/ Coming soon
 ### 1) ouverture: Adaptative Execution (AE) in 3.0.0
@@ -1224,11 +1231,11 @@ _____
 ## Videos
 - [A Deeper Understanding of Spark Internals - Aaron Davidson (Databricks)](https://www.youtube.com/watch?v=dmL0N3qfSc8)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzODcwMTQ3OTUsMTYwOTMwMjA0NywxNz
-EzNzIxMDc1LC0yNTUxNjA5MTgsLTE2ODQxMjg2MTcsLTkxNDQ5
-NjIwMywxNDg5NDkyNDAxLDE3ODg3MzY0NTIsLTEwNDIxNzkzMS
-wxNjQzNzY0MiwtMTk2MTIyNDIzMiwyODIyMTI2OTMsMTk1NTAz
-Mjc3NCwxNzYwMzUyNTIxLC0xNDAzMTE4NTgwLDEyMjg1MzY1Mz
-ksMTQwNDA1MDQzNiwtMzI5NTEyOTU2LC0xNjM5MTMwNTQxLC0y
-ODYzOTM1Ml19
+eyJoaXN0b3J5IjpbNzk0OTU4MzU1LDE2MDkzMDIwNDcsMTcxMz
+cyMTA3NSwtMjU1MTYwOTE4LC0xNjg0MTI4NjE3LC05MTQ0OTYy
+MDMsMTQ4OTQ5MjQwMSwxNzg4NzM2NDUyLC0xMDQyMTc5MzEsMT
+Y0Mzc2NDIsLTE5NjEyMjQyMzIsMjgyMjEyNjkzLDE5NTUwMzI3
+NzQsMTc2MDM1MjUyMSwtMTQwMzExODU4MCwxMjI4NTM2NTM5LD
+E0MDQwNTA0MzYsLTMyOTUxMjk1NiwtMTYzOTEzMDU0MSwtMjg2
+MzkzNTJdfQ==
 -->
