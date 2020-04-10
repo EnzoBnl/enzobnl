@@ -1167,12 +1167,12 @@ refs:
 - https://community.cloudera.com/t5/Support-Questions/How-to-process-a-large-data-set-with-Spark/m-p/39428
 
 ## XVIII/ Configuration
-There is 3 ways to pass a configuration property to an Application's `SparkSession`. Here is the order of priority from the highest to the lowest:
+There is 3 ways to pass a configuration property to an spark application's `SparkSession`. Here is the order of priority from the highest to the lowest:
 1. Properties **set directly on the SparkConf** object in client code.
 2. Flags **passed to spark-submit** or spark-shell
 3. Options in the **spark-defaults.conf file**
 
-*Note:* **Deprecated** configuration keys take never take precedence over their substitute, whatever how they are passed.
+*Note:* **Deprecated** configuration keys never take precedence over their substitute, whatever how they are passed.
 
 [Source](http://spark.apache.org/docs/latest/configuration.html)
 
@@ -1231,7 +1231,7 @@ _____
 ## Videos
 - [A Deeper Understanding of Spark Internals - Aaron Davidson (Databricks)](https://www.youtube.com/watch?v=dmL0N3qfSc8)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE0NTYwMDA3MSwxNjA5MzAyMDQ3LDE3MT
+eyJoaXN0b3J5IjpbMTMxMjEwNjI2NywxNjA5MzAyMDQ3LDE3MT
 M3MjEwNzUsLTI1NTE2MDkxOCwtMTY4NDEyODYxNywtOTE0NDk2
 MjAzLDE0ODk0OTI0MDEsMTc4ODczNjQ1MiwtMTA0MjE3OTMxLD
 E2NDM3NjQyLC0xOTYxMjI0MjMyLDI4MjIxMjY5MywxOTU1MDMy
