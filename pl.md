@@ -134,8 +134,10 @@ is a syntax sugar for
 counter += 1;
 return counter - 1;
 ```
-### Getting objects names `getName` vs `getCanonicalName` `getSimpleName`
+### Getting objects names `getName` vs `getCanonicalName` vs `getSimpleName` vs `getTypeName`
 Source: [SO post by Nick Holts](https://stackoverflow.com/a/15203417/6580080)
+
+`getName` and `getTypeName` are equivalent, returning the fully qualified: the package of the class and the
 
 getName():          int
     getCanonicalName(): int
@@ -667,11 +669,11 @@ is
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MDYzODI1NjYsNjI4Njg3MDcxLDE2Mj
-QzODg1NzMsLTE2MzY0NzIwMjEsNjEwOTAyNDc1LC0yNjczOTk3
-NSwxOTc5OTM0MzEzLDIzMzAzNjE3NiwtNDUwODI0MzEyLC00NT
-I2NzAyOTcsLTEwODQ3MzQzMjYsLTExNTUzNjkyMzksMTUxNTA0
-NTMzMywtMTIyNzYwODQ2MCwyMDI1MzA5ODg1LDEzOTg1OTU2Ny
-wtOTIzMDAwMDEwLC04MjY0NzUyNzQsMTk4NTEzNTMxLC0xNTMy
-Njk3OTY5XX0=
+eyJoaXN0b3J5IjpbNDE2MzU5NjAsNjI4Njg3MDcxLDE2MjQzOD
+g1NzMsLTE2MzY0NzIwMjEsNjEwOTAyNDc1LC0yNjczOTk3NSwx
+OTc5OTM0MzEzLDIzMzAzNjE3NiwtNDUwODI0MzEyLC00NTI2Nz
+AyOTcsLTEwODQ3MzQzMjYsLTExNTUzNjkyMzksMTUxNTA0NTMz
+MywtMTIyNzYwODQ2MCwyMDI1MzA5ODg1LDEzOTg1OTU2NywtOT
+IzMDAwMDEwLC04MjY0NzUyNzQsMTk4NTEzNTMxLC0xNTMyNjk3
+OTY5XX0=
 -->
