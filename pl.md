@@ -137,11 +137,12 @@ return counter - 1;
 ### Getting objects names `getName` vs `getCanonicalName` vs `getSimpleName` vs `getTypeName`
 Source: [SO post by Nick Holts](https://stackoverflow.com/a/15203417/6580080)
 
-`getName` vs `getCanonicalName` vs `getSimpleName` vs `getTypeName`
-getName():          int
-    getCanonicalName(): int
-    getSimpleName():    int
-    getTypeName():
+||`getName` | `getCanonicalName` | `getSimpleName` | `getTypeName`|
+|--|--|--|--|--|
+|int.class (primitive)|int|int|int|int|
+|String.class (ordinary class)|java.lang.String|java.lang.String|String|java.lang.String|
+|java.util.HashMap.SimpleEntry.class (nested class)|||||
+||||||
 ```
 int.class (primitive):
     getName():          int
@@ -668,11 +669,11 @@ is
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYzNzYxMDQ0Miw2Mjg2ODcwNzEsMTYyND
-M4ODU3MywtMTYzNjQ3MjAyMSw2MTA5MDI0NzUsLTI2NzM5OTc1
-LDE5Nzk5MzQzMTMsMjMzMDM2MTc2LC00NTA4MjQzMTIsLTQ1Mj
-Y3MDI5NywtMTA4NDczNDMyNiwtMTE1NTM2OTIzOSwxNTE1MDQ1
-MzMzLC0xMjI3NjA4NDYwLDIwMjUzMDk4ODUsMTM5ODU5NTY3LC
-05MjMwMDAwMTAsLTgyNjQ3NTI3NCwxOTg1MTM1MzEsLTE1MzI2
-OTc5NjldfQ==
+eyJoaXN0b3J5IjpbLTE1NTM4Njc4MzMsNjI4Njg3MDcxLDE2Mj
+QzODg1NzMsLTE2MzY0NzIwMjEsNjEwOTAyNDc1LC0yNjczOTk3
+NSwxOTc5OTM0MzEzLDIzMzAzNjE3NiwtNDUwODI0MzEyLC00NT
+I2NzAyOTcsLTEwODQ3MzQzMjYsLTExNTUzNjkyMzksMTUxNTA0
+NTMzMywtMTIyNzYwODQ2MCwyMDI1MzA5ODg1LDEzOTg1OTU2Ny
+wtOTIzMDAwMDEwLC04MjY0NzUyNzQsMTk4NTEzNTMxLC0xNTMy
+Njk3OTY5XX0=
 -->
