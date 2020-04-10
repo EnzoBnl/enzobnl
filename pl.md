@@ -134,8 +134,34 @@ is a syntax sugar for
 counter += 1;
 return counter - 1;
 ```
+### getting objects names
+- [SO post by Nick Holts](https://stackoverflow.com/a/15203417/6580080)
+```
+int.class (primitive):
+    getName():          int
+    getCanonicalName(): int
+    getSimpleName():    int
+    getTypeName():      int
 
+String.class (ordinary class):
+    getName():          java.lang.String
+    getCanonicalName(): java.lang.String
+    getSimpleName():    String
+    getTypeName():      java.lang.String
+
+java.util.HashMap.SimpleEntry.class (nested class):
+    getName():          java.util.AbstractMap$SimpleEntry
+    getCanonicalName(): java.util.AbstractMap.SimpleEntry
+    getSimpleName():    SimpleEntry
+    getTypeName():      java.util.AbstractMap$SimpleEntry
+
+new java.io.Serializable(){}.getClass() (anonymous inner class):
+    getName():          ClassNameTest$1
+    getCanonicalName(): null
+    getSimpleName():    
+    getTypeName():      ClassNameTest$1
 ### Diamond problem
+
 
 # Scala
 ## Constructors parameters scope
@@ -634,11 +660,11 @@ is
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjI4Njg3MDcxLDE2MjQzODg1NzMsLTE2Mz
-Y0NzIwMjEsNjEwOTAyNDc1LC0yNjczOTk3NSwxOTc5OTM0MzEz
-LDIzMzAzNjE3NiwtNDUwODI0MzEyLC00NTI2NzAyOTcsLTEwOD
-Q3MzQzMjYsLTExNTUzNjkyMzksMTUxNTA0NTMzMywtMTIyNzYw
-ODQ2MCwyMDI1MzA5ODg1LDEzOTg1OTU2NywtOTIzMDAwMDEwLC
-04MjY0NzUyNzQsMTk4NTEzNTMxLC0xNTMyNjk3OTY5LC0xMTE2
-NTQ4MDA5XX0=
+eyJoaXN0b3J5IjpbMTc3MjI5NzAyNyw2Mjg2ODcwNzEsMTYyND
+M4ODU3MywtMTYzNjQ3MjAyMSw2MTA5MDI0NzUsLTI2NzM5OTc1
+LDE5Nzk5MzQzMTMsMjMzMDM2MTc2LC00NTA4MjQzMTIsLTQ1Mj
+Y3MDI5NywtMTA4NDczNDMyNiwtMTE1NTM2OTIzOSwxNTE1MDQ1
+MzMzLC0xMjI3NjA4NDYwLDIwMjUzMDk4ODUsMTM5ODU5NTY3LC
+05MjMwMDAwMTAsLTgyNjQ3NTI3NCwxOTg1MTM1MzEsLTE1MzI2
+OTc5NjldfQ==
 -->
