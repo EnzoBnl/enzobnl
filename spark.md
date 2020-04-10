@@ -1166,7 +1166,9 @@ refs:
 *Other reading:* 
 - https://community.cloudera.com/t5/Support-Questions/How-to-process-a-large-data-set-with-Spark/m-p/39428
 
-## XVIII/ Coming soon
+##
+
+## XIX/ Coming soon
 ### 1) ouverture: Adaptative Execution (AE) in 3.0.0
 [JIRA](https://issues.apache.org/jira/browse/SPARK-9850?jql=text%20~%20%22adaptative%20execution%22)
 
@@ -1221,11 +1223,11 @@ _____
 ## Videos
 - [A Deeper Understanding of Spark Internals - Aaron Davidson (Databricks)](https://www.youtube.com/watch?v=dmL0N3qfSc8)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYwOTMwMjA0NywxNzEzNzIxMDc1LC0yNT
-UxNjA5MTgsLTE2ODQxMjg2MTcsLTkxNDQ5NjIwMywxNDg5NDky
-NDAxLDE3ODg3MzY0NTIsLTEwNDIxNzkzMSwxNjQzNzY0MiwtMT
-k2MTIyNDIzMiwyODIyMTI2OTMsMTk1NTAzMjc3NCwxNzYwMzUy
-NTIxLC0xNDAzMTE4NTgwLDEyMjg1MzY1MzksMTQwNDA1MDQzNi
-wtMzI5NTEyOTU2LC0xNjM5MTMwNTQxLC0yODYzOTM1MiwyMTE3
-NTE0MTNdfQ==
+eyJoaXN0b3J5IjpbOTE3MDY1MDg3LDE2MDkzMDIwNDcsMTcxMz
+cyMTA3NSwtMjU1MTYwOTE4LC0xNjg0MTI4NjE3LC05MTQ0OTYy
+MDMsMTQ4OTQ5MjQwMSwxNzg4NzM2NDUyLC0xMDQyMTc5MzEsMT
+Y0Mzc2NDIsLTE5NjEyMjQyMzIsMjgyMjEyNjkzLDE5NTUwMzI3
+NzQsMTc2MDM1MjUyMSwtMTQwMzExODU4MCwxMjI4NTM2NTM5LD
+E0MDQwNTA0MzYsLTMyOTUxMjk1NiwtMTYzOTEzMDU0MSwtMjg2
+MzkzNTJdfQ==
 -->
