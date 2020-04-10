@@ -134,8 +134,13 @@ is a syntax sugar for
 counter += 1;
 return counter - 1;
 ```
-### getting objects names
-- [SO post by Nick Holts](https://stackoverflow.com/a/15203417/6580080)
+### Getting objects names `getName` vs `getCanonicalName` `getSimpleName`
+Source: [SO post by Nick Holts](https://stackoverflow.com/a/15203417/6580080)
+
+getName():          int
+    getCanonicalName(): int
+    getSimpleName():    int
+    getTypeName():
 ```
 int.class (primitive):
     getName():          int
@@ -160,6 +165,8 @@ new java.io.Serializable(){}.getClass() (anonymous inner class):
     getCanonicalName(): null
     getSimpleName():    
     getTypeName():      ClassNameTest$1
+```
+
 ### Diamond problem
 
 
@@ -660,11 +667,11 @@ is
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc3MjI5NzAyNyw2Mjg2ODcwNzEsMTYyND
-M4ODU3MywtMTYzNjQ3MjAyMSw2MTA5MDI0NzUsLTI2NzM5OTc1
-LDE5Nzk5MzQzMTMsMjMzMDM2MTc2LC00NTA4MjQzMTIsLTQ1Mj
-Y3MDI5NywtMTA4NDczNDMyNiwtMTE1NTM2OTIzOSwxNTE1MDQ1
-MzMzLC0xMjI3NjA4NDYwLDIwMjUzMDk4ODUsMTM5ODU5NTY3LC
-05MjMwMDAwMTAsLTgyNjQ3NTI3NCwxOTg1MTM1MzEsLTE1MzI2
-OTc5NjldfQ==
+eyJoaXN0b3J5IjpbLTE0MDYzODI1NjYsNjI4Njg3MDcxLDE2Mj
+QzODg1NzMsLTE2MzY0NzIwMjEsNjEwOTAyNDc1LC0yNjczOTk3
+NSwxOTc5OTM0MzEzLDIzMzAzNjE3NiwtNDUwODI0MzEyLC00NT
+I2NzAyOTcsLTEwODQ3MzQzMjYsLTExNTUzNjkyMzksMTUxNTA0
+NTMzMywtMTIyNzYwODQ2MCwyMDI1MzA5ODg1LDEzOTg1OTU2Ny
+wtOTIzMDAwMDEwLC04MjY0NzUyNzQsMTk4NTEzNTMxLC0xNTMy
+Njk3OTY5XX0=
 -->
