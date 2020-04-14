@@ -77,7 +77,7 @@ Execution steps of a MapReduce job containing 1 Mapper and 1 Reducer (steps **in
 
 ## Hadoop
 ### `JAVA_HOME` said to be missing but is not
-`/etc/hadoop/hadoop-env.sh` but the variable is exported in your `.bashrc` and/or `.profile` ? -> You need to also export it by uncommenting the properline in `<hadoop home>/etc/hadoop/hadoop-env.sh`
+Getting `ERROR: JAVA_HOME is not set and could not be found.` but the variable is exported in your `.bashrc` and/or `.profile` ? -> You need to also export it by uncommenting the proper line in `<hadoop home>/etc/hadoop/hadoop-env.sh`.
 
 ## Google Cloud Platform's tools
 
@@ -179,11 +179,11 @@ Known as [Incremental encoding](https://en.wikipedia.org/wiki/Incremental_encodi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg5NTk3OTE2OCw1NDI3Njc1NTgsLTE5ND
-U3MjExMTYsLTIwMjA1MjM2NTksOTIyNzMxNDA3LDEzNDQ5NDEx
-NzEsMTkzODM5Mzg5MCwtMjE0MDgzMTc0OSwxNTU3MTczOTUsOD
-A0NzU4MzM3LDE0ODA0NTg3NzYsMTkwNDY3NjgwOCwxMTkxNjcy
-ODg1LC0xMjU3MDA1MzAsLTE5NzA3MzU0MDQsLTEyNzQ5NjYzNC
-wtMTQzNzYxMjM5NywtMTA2NjY4MDA4OCwyMDkzMjM1NTg4LDE4
-MTEzMTExOTZdfQ==
+eyJoaXN0b3J5IjpbLTIxMzI1NDQ0MjUsNTQyNzY3NTU4LC0xOT
+Q1NzIxMTE2LC0yMDIwNTIzNjU5LDkyMjczMTQwNywxMzQ0OTQx
+MTcxLDE5MzgzOTM4OTAsLTIxNDA4MzE3NDksMTU1NzE3Mzk1LD
+gwNDc1ODMzNywxNDgwNDU4Nzc2LDE5MDQ2NzY4MDgsMTE5MTY3
+Mjg4NSwtMTI1NzAwNTMwLC0xOTcwNzM1NDA0LC0xMjc0OTY2Mz
+QsLTE0Mzc2MTIzOTcsLTEwNjY2ODAwODgsMjA5MzIzNTU4OCwx
+ODExMzExMTk2XX0=
 -->
