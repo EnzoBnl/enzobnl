@@ -75,6 +75,10 @@ Execution steps of a MapReduce job containing 1 Mapper and 1 Reducer (steps **in
 |Index Shard|DB Partition|
 |Shard's Replica|Partition's Replica|
 
+## Hadoop
+### `JAVA_HOME` said to be missing but is not
+Need to also export it by uncommenting the properline in `<hadoop home>/etc/hadoop/hadoop-env.sh`
+
 ## Google Cloud Platform's tools
 
 ### BigQuery vs BigTable
@@ -175,11 +179,11 @@ Known as [Incremental encoding](https://en.wikipedia.org/wiki/Incremental_encodi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTQyNzY3NTU4LC0xOTQ1NzIxMTE2LC0yMD
-IwNTIzNjU5LDkyMjczMTQwNywxMzQ0OTQxMTcxLDE5MzgzOTM4
-OTAsLTIxNDA4MzE3NDksMTU1NzE3Mzk1LDgwNDc1ODMzNywxND
-gwNDU4Nzc2LDE5MDQ2NzY4MDgsMTE5MTY3Mjg4NSwtMTI1NzAw
-NTMwLC0xOTcwNzM1NDA0LC0xMjc0OTY2MzQsLTE0Mzc2MTIzOT
-csLTEwNjY2ODAwODgsMjA5MzIzNTU4OCwxODExMzExMTk2LC01
-Mzk4MzY1MzhdfQ==
+eyJoaXN0b3J5IjpbNjIzMzk1MTUsNTQyNzY3NTU4LC0xOTQ1Nz
+IxMTE2LC0yMDIwNTIzNjU5LDkyMjczMTQwNywxMzQ0OTQxMTcx
+LDE5MzgzOTM4OTAsLTIxNDA4MzE3NDksMTU1NzE3Mzk1LDgwND
+c1ODMzNywxNDgwNDU4Nzc2LDE5MDQ2NzY4MDgsMTE5MTY3Mjg4
+NSwtMTI1NzAwNTMwLC0xOTcwNzM1NDA0LC0xMjc0OTY2MzQsLT
+E0Mzc2MTIzOTcsLTEwNjY2ODAwODgsMjA5MzIzNTU4OCwxODEx
+MzExMTk2XX0=
 -->
