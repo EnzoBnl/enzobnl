@@ -76,6 +76,9 @@ gsutil mv gs://old_name gs://new_name
 ```bash
 # Disk Usage Analyzer
 sudo baobab
+# du: list folder sizes with a given depth, at bytes level
+du -h --max-depth=1 --block-size=1
+
 # show running processes
 ps -A
 //NEBOJSA PIPE EXAMPLE : LISTE toute la 1ere colonne
@@ -297,11 +300,11 @@ c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex 
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgwNDc4MzU4OSw0NTk0NjgyNiwyMDk2ND
-UzMzk2LC01NTAxNjgzNDIsLTE5NTM3NjM5NzksMTEwMDA2NzUx
-MiwtMTAxNDgyNzI3MywtMTQxNjAxMjI3MSwxMzAxOTQ3NzAsLT
-UyMTM3MTA0MywxMTc4MTYzODAsMjkwMTIwNzc0LDIwNjM3NDU2
-NDksLTE3NDQ5NTM1NTUsMTUxMTAxNzE1MSw5Njc3OTQxODEsLT
-EzNTg5NzM4NDMsLTEwNzQ4ODAxMDUsLTY4MzMxODE5Myw2NTU0
-NTM3MjJdfQ==
+eyJoaXN0b3J5IjpbLTIwNTcyNzQxMzcsMTgwNDc4MzU4OSw0NT
+k0NjgyNiwyMDk2NDUzMzk2LC01NTAxNjgzNDIsLTE5NTM3NjM5
+NzksMTEwMDA2NzUxMiwtMTAxNDgyNzI3MywtMTQxNjAxMjI3MS
+wxMzAxOTQ3NzAsLTUyMTM3MTA0MywxMTc4MTYzODAsMjkwMTIw
+Nzc0LDIwNjM3NDU2NDksLTE3NDQ5NTM1NTUsMTUxMTAxNzE1MS
+w5Njc3OTQxODEsLTEzNTg5NzM4NDMsLTEwNzQ4ODAxMDUsLTY4
+MzMxODE5M119
 -->
