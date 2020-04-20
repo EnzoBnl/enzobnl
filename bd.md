@@ -139,7 +139,7 @@ Sources:
 - File
 - Row group
 - Column chunk
-- Data pages (and dictionary pages)
+- Pages (a column chunk is composed of exactly 1 data page and 1 optional dictionary page)
 
 ### Compression
 A compression algorithm is applied by parquet, the compression unit being the **page**.
@@ -179,11 +179,11 @@ Known as [Incremental encoding](https://en.wikipedia.org/wiki/Incremental_encodi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMzI1NDQ0MjUsNTQyNzY3NTU4LC0xOT
-Q1NzIxMTE2LC0yMDIwNTIzNjU5LDkyMjczMTQwNywxMzQ0OTQx
-MTcxLDE5MzgzOTM4OTAsLTIxNDA4MzE3NDksMTU1NzE3Mzk1LD
-gwNDc1ODMzNywxNDgwNDU4Nzc2LDE5MDQ2NzY4MDgsMTE5MTY3
-Mjg4NSwtMTI1NzAwNTMwLC0xOTcwNzM1NDA0LC0xMjc0OTY2Mz
-QsLTE0Mzc2MTIzOTcsLTEwNjY2ODAwODgsMjA5MzIzNTU4OCwx
-ODExMzExMTk2XX0=
+eyJoaXN0b3J5IjpbMTEwMzMyMTY2LC0yMTMyNTQ0NDI1LDU0Mj
+c2NzU1OCwtMTk0NTcyMTExNiwtMjAyMDUyMzY1OSw5MjI3MzE0
+MDcsMTM0NDk0MTE3MSwxOTM4MzkzODkwLC0yMTQwODMxNzQ5LD
+E1NTcxNzM5NSw4MDQ3NTgzMzcsMTQ4MDQ1ODc3NiwxOTA0Njc2
+ODA4LDExOTE2NzI4ODUsLTEyNTcwMDUzMCwtMTk3MDczNTQwNC
+wtMTI3NDk2NjM0LC0xNDM3NjEyMzk3LC0xMDY2NjgwMDg4LDIw
+OTMyMzU1ODhdfQ==
 -->
