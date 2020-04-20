@@ -74,6 +74,8 @@ gsutil mv gs://old_name gs://new_name
 ## Terminals
 ### unix
 ```bash
+# Disk Usage Analyzer
+sudo baobab
 # show running processes
 ps -A
 //NEBOJSA PIPE EXAMPLE : LISTE toute la 1ere colonne
@@ -295,11 +297,11 @@ c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex 
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDU5NDY4MjYsMjA5NjQ1MzM5NiwtNTUwMT
-Y4MzQyLC0xOTUzNzYzOTc5LDExMDAwNjc1MTIsLTEwMTQ4Mjcy
-NzMsLTE0MTYwMTIyNzEsMTMwMTk0NzcwLC01MjEzNzEwNDMsMT
-E3ODE2MzgwLDI5MDEyMDc3NCwyMDYzNzQ1NjQ5LC0xNzQ0OTUz
-NTU1LDE1MTEwMTcxNTEsOTY3Nzk0MTgxLC0xMzU4OTczODQzLC
-0xMDc0ODgwMTA1LC02ODMzMTgxOTMsNjU1NDUzNzIyLC02OTEy
-NzQyODJdfQ==
+eyJoaXN0b3J5IjpbMTgwNDc4MzU4OSw0NTk0NjgyNiwyMDk2ND
+UzMzk2LC01NTAxNjgzNDIsLTE5NTM3NjM5NzksMTEwMDA2NzUx
+MiwtMTAxNDgyNzI3MywtMTQxNjAxMjI3MSwxMzAxOTQ3NzAsLT
+UyMTM3MTA0MywxMTc4MTYzODAsMjkwMTIwNzc0LDIwNjM3NDU2
+NDksLTE3NDQ5NTM1NTUsMTUxMTAxNzE1MSw5Njc3OTQxODEsLT
+EzNTg5NzM4NDMsLTEwNzQ4ODAxMDUsLTY4MzMxODE5Myw2NTU0
+NTM3MjJdfQ==
 -->
