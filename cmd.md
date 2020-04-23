@@ -139,7 +139,7 @@ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 eval "$(ssh-agent -s)"
 // 3. add it to the agent
 ssh-add ~/.ssh/id_rsa
-// -> public key is in ~/.ssh/id-rsa.pub
+// -> public key is in ~/.ssh/id_rsa.pub
 
 // ssh bridge: maps port 9000 of 10.240.0.44 accessed through <host_url> to localhost:9000
 ssh -L 9000:10.240.0.44:9000 <host_url>
@@ -309,11 +309,11 @@ c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex 
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzAzNDU1OTQ5LC0yMDU3Mjc0MTM3LDE4MD
-Q3ODM1ODksNDU5NDY4MjYsMjA5NjQ1MzM5NiwtNTUwMTY4MzQy
-LC0xOTUzNzYzOTc5LDExMDAwNjc1MTIsLTEwMTQ4MjcyNzMsLT
-E0MTYwMTIyNzEsMTMwMTk0NzcwLC01MjEzNzEwNDMsMTE3ODE2
-MzgwLDI5MDEyMDc3NCwyMDYzNzQ1NjQ5LC0xNzQ0OTUzNTU1LD
-E1MTEwMTcxNTEsOTY3Nzk0MTgxLC0xMzU4OTczODQzLC0xMDc0
-ODgwMTA1XX0=
+eyJoaXN0b3J5IjpbLTQ1NDQ0NzQ4OSwtMjA1NzI3NDEzNywxOD
+A0NzgzNTg5LDQ1OTQ2ODI2LDIwOTY0NTMzOTYsLTU1MDE2ODM0
+MiwtMTk1Mzc2Mzk3OSwxMTAwMDY3NTEyLC0xMDE0ODI3MjczLC
+0xNDE2MDEyMjcxLDEzMDE5NDc3MCwtNTIxMzcxMDQzLDExNzgx
+NjM4MCwyOTAxMjA3NzQsMjA2Mzc0NTY0OSwtMTc0NDk1MzU1NS
+wxNTExMDE3MTUxLDk2Nzc5NDE4MSwtMTM1ODk3Mzg0MywtMTA3
+NDg4MDEwNV19
 -->
