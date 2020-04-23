@@ -149,6 +149,7 @@ export CLASSPATH="/home/enzo/Prog/lib/jar/*"
 sudo su - username
 # make host resolution made by a server
 ssh -D 1080 <server>
+# chromium with port redirection
 chromium-browser --proxy-server="socks5://127.0.0.1:1080" --user-data-dir="/home/enzo/chrome-proxy-profile"
 # quit ssh connection
 exit
@@ -309,11 +310,11 @@ c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex 
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ1NDQ0NzQ4OSwtMjA1NzI3NDEzNywxOD
-A0NzgzNTg5LDQ1OTQ2ODI2LDIwOTY0NTMzOTYsLTU1MDE2ODM0
-MiwtMTk1Mzc2Mzk3OSwxMTAwMDY3NTEyLC0xMDE0ODI3MjczLC
-0xNDE2MDEyMjcxLDEzMDE5NDc3MCwtNTIxMzcxMDQzLDExNzgx
-NjM4MCwyOTAxMjA3NzQsMjA2Mzc0NTY0OSwtMTc0NDk1MzU1NS
-wxNTExMDE3MTUxLDk2Nzc5NDE4MSwtMTM1ODk3Mzg0MywtMTA3
-NDg4MDEwNV19
+eyJoaXN0b3J5IjpbLTE4MTQ2MDk5MzMsLTQ1NDQ0NzQ4OSwtMj
+A1NzI3NDEzNywxODA0NzgzNTg5LDQ1OTQ2ODI2LDIwOTY0NTMz
+OTYsLTU1MDE2ODM0MiwtMTk1Mzc2Mzk3OSwxMTAwMDY3NTEyLC
+0xMDE0ODI3MjczLC0xNDE2MDEyMjcxLDEzMDE5NDc3MCwtNTIx
+MzcxMDQzLDExNzgxNjM4MCwyOTAxMjA3NzQsMjA2Mzc0NTY0OS
+wtMTc0NDk1MzU1NSwxNTExMDE3MTUxLDk2Nzc5NDE4MSwtMTM1
+ODk3Mzg0M119
 -->
