@@ -133,11 +133,13 @@ chmod a+x exampleName.AppImage
 // create a symlinl (symbolic link)
 sudo ln -s origin target
 // generate ssh pub/private keys
-// 1. generate th
+// 1. generate the keys
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
-
+// 2. run ssh agent in background
 eval "$(ssh-agent -s)"
-
+// 3. add it to the agent
+ssh-add ~/.ssh/id_rsa
+// -> public key is in ~/.ssh/id-rsa.pub
 
 // ssh bridge: maps port 9000 of 10.240.0.44 accessed through <host_url> to localhost:9000
 ssh -L 9000:10.240.0.44:9000 <host_url>
@@ -307,11 +309,11 @@ c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex 
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0ODg2ODA1MjgsLTIwNTcyNzQxMzcsMT
-gwNDc4MzU4OSw0NTk0NjgyNiwyMDk2NDUzMzk2LC01NTAxNjgz
-NDIsLTE5NTM3NjM5NzksMTEwMDA2NzUxMiwtMTAxNDgyNzI3My
-wtMTQxNjAxMjI3MSwxMzAxOTQ3NzAsLTUyMTM3MTA0MywxMTc4
-MTYzODAsMjkwMTIwNzc0LDIwNjM3NDU2NDksLTE3NDQ5NTM1NT
-UsMTUxMTAxNzE1MSw5Njc3OTQxODEsLTEzNTg5NzM4NDMsLTEw
-NzQ4ODAxMDVdfQ==
+eyJoaXN0b3J5IjpbMzAzNDU1OTQ5LC0yMDU3Mjc0MTM3LDE4MD
+Q3ODM1ODksNDU5NDY4MjYsMjA5NjQ1MzM5NiwtNTUwMTY4MzQy
+LC0xOTUzNzYzOTc5LDExMDAwNjc1MTIsLTEwMTQ4MjcyNzMsLT
+E0MTYwMTIyNzEsMTMwMTk0NzcwLC01MjEzNzEwNDMsMTE3ODE2
+MzgwLDI5MDEyMDc3NCwyMDYzNzQ1NjQ5LC0xNzQ0OTUzNTU1LD
+E1MTEwMTcxNTEsOTY3Nzk0MTgxLC0xMzU4OTczODQzLC0xMDc0
+ODgwMTA1XX0=
 -->
