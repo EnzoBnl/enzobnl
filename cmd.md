@@ -157,6 +157,9 @@ exit
 #!/usr/bin/python
 #!/bin/bash
 
+//grant current user with privilegess on all the content of folderx
+sudo chown $USER folderx -R
+
 ```
 ### CMD removes :
 ```bash
@@ -310,11 +313,11 @@ c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex 
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MTQ2MDk5MzMsLTQ1NDQ0NzQ4OSwtMj
-A1NzI3NDEzNywxODA0NzgzNTg5LDQ1OTQ2ODI2LDIwOTY0NTMz
-OTYsLTU1MDE2ODM0MiwtMTk1Mzc2Mzk3OSwxMTAwMDY3NTEyLC
-0xMDE0ODI3MjczLC0xNDE2MDEyMjcxLDEzMDE5NDc3MCwtNTIx
-MzcxMDQzLDExNzgxNjM4MCwyOTAxMjA3NzQsMjA2Mzc0NTY0OS
-wtMTc0NDk1MzU1NSwxNTExMDE3MTUxLDk2Nzc5NDE4MSwtMTM1
-ODk3Mzg0M119
+eyJoaXN0b3J5IjpbMTU3NDY0MzU2MywtMTgxNDYwOTkzMywtND
+U0NDQ3NDg5LC0yMDU3Mjc0MTM3LDE4MDQ3ODM1ODksNDU5NDY4
+MjYsMjA5NjQ1MzM5NiwtNTUwMTY4MzQyLC0xOTUzNzYzOTc5LD
+ExMDAwNjc1MTIsLTEwMTQ4MjcyNzMsLTE0MTYwMTIyNzEsMTMw
+MTk0NzcwLC01MjEzNzEwNDMsMTE3ODE2MzgwLDI5MDEyMDc3NC
+wyMDYzNzQ1NjQ5LC0xNzQ0OTUzNTU1LDE1MTEwMTcxNTEsOTY3
+Nzk0MTgxXX0=
 -->
