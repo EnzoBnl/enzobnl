@@ -160,6 +160,9 @@ exit
 //grant current user with privilegess on all the content of folderx
 sudo chown $USER folderx -R
 
+// empty root trash
+sudo rm -r /root/.local/share/Trash/files
+
 ```
 ### CMD removes :
 ```bash
@@ -313,11 +316,11 @@ c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex 
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU3NDY0MzU2MywtMTgxNDYwOTkzMywtND
-U0NDQ3NDg5LC0yMDU3Mjc0MTM3LDE4MDQ3ODM1ODksNDU5NDY4
-MjYsMjA5NjQ1MzM5NiwtNTUwMTY4MzQyLC0xOTUzNzYzOTc5LD
-ExMDAwNjc1MTIsLTEwMTQ4MjcyNzMsLTE0MTYwMTIyNzEsMTMw
-MTk0NzcwLC01MjEzNzEwNDMsMTE3ODE2MzgwLDI5MDEyMDc3NC
-wyMDYzNzQ1NjQ5LC0xNzQ0OTUzNTU1LDE1MTEwMTcxNTEsOTY3
-Nzk0MTgxXX0=
+eyJoaXN0b3J5IjpbLTY1NjIyNTkzMSwxNTc0NjQzNTYzLC0xOD
+E0NjA5OTMzLC00NTQ0NDc0ODksLTIwNTcyNzQxMzcsMTgwNDc4
+MzU4OSw0NTk0NjgyNiwyMDk2NDUzMzk2LC01NTAxNjgzNDIsLT
+E5NTM3NjM5NzksMTEwMDA2NzUxMiwtMTAxNDgyNzI3MywtMTQx
+NjAxMjI3MSwxMzAxOTQ3NzAsLTUyMTM3MTA0MywxMTc4MTYzOD
+AsMjkwMTIwNzc0LDIwNjM3NDU2NDksLTE3NDQ5NTM1NTUsMTUx
+MTAxNzE1MV19
 -->
