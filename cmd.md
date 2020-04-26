@@ -164,6 +164,7 @@ sudo chown $USER folderx -R
 sudo rm -r /root/.local/share/Trash/files
 
 ```
+
 ### CMD removes :
 ```bash
 del <fichier>
@@ -316,11 +317,11 @@ c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex 
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY1NjIyNTkzMSwxNTc0NjQzNTYzLC0xOD
-E0NjA5OTMzLC00NTQ0NDc0ODksLTIwNTcyNzQxMzcsMTgwNDc4
-MzU4OSw0NTk0NjgyNiwyMDk2NDUzMzk2LC01NTAxNjgzNDIsLT
-E5NTM3NjM5NzksMTEwMDA2NzUxMiwtMTAxNDgyNzI3MywtMTQx
-NjAxMjI3MSwxMzAxOTQ3NzAsLTUyMTM3MTA0MywxMTc4MTYzOD
-AsMjkwMTIwNzc0LDIwNjM3NDU2NDksLTE3NDQ5NTM1NTUsMTUx
-MTAxNzE1MV19
+eyJoaXN0b3J5IjpbLTE3MzAwNDcxMzMsLTY1NjIyNTkzMSwxNT
+c0NjQzNTYzLC0xODE0NjA5OTMzLC00NTQ0NDc0ODksLTIwNTcy
+NzQxMzcsMTgwNDc4MzU4OSw0NTk0NjgyNiwyMDk2NDUzMzk2LC
+01NTAxNjgzNDIsLTE5NTM3NjM5NzksMTEwMDA2NzUxMiwtMTAx
+NDgyNzI3MywtMTQxNjAxMjI3MSwxMzAxOTQ3NzAsLTUyMTM3MT
+A0MywxMTc4MTYzODAsMjkwMTIwNzc0LDIwNjM3NDU2NDksLTE3
+NDQ5NTM1NTVdfQ==
 -->
