@@ -725,7 +725,7 @@ With RDDs, better to use `sc.union` instead of chaining unions. In SQL it's auto
 
 
 SQL:
-INSERT Tungsten UnsafeRow off-heap format
+INSERT Tungsten UnsafeRow binary format
 
 `WholestageCodegen.doExecute` (overriding of `SparkPlan.doExecute`) `mapPartitions` of parent RDD associating to them a `Iterator[InternalRow]` based on a generated class extending `BufferedRowIterator` (named `GeneratedIteratorForCodegenStageX`) which fill a `LinkedList[InternalRow]` (`append` method inputing a written `UnsafeRowWriter`'s `getRow` output)
 
@@ -1231,11 +1231,11 @@ _____
 ## Videos
 - [A Deeper Understanding of Spark Internals - Aaron Davidson (Databricks)](https://www.youtube.com/watch?v=dmL0N3qfSc8)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTgwNjkwODg1LDE2MDkzMDIwNDcsMTcxMz
-cyMTA3NSwtMjU1MTYwOTE4LC0xNjg0MTI4NjE3LC05MTQ0OTYy
-MDMsMTQ4OTQ5MjQwMSwxNzg4NzM2NDUyLC0xMDQyMTc5MzEsMT
-Y0Mzc2NDIsLTE5NjEyMjQyMzIsMjgyMjEyNjkzLDE5NTUwMzI3
-NzQsMTc2MDM1MjUyMSwtMTQwMzExODU4MCwxMjI4NTM2NTM5LD
-E0MDQwNTA0MzYsLTMyOTUxMjk1NiwtMTYzOTEzMDU0MSwtMjg2
-MzkzNTJdfQ==
+eyJoaXN0b3J5IjpbMTAzODE0MjA0LDk4MDY5MDg4NSwxNjA5Mz
+AyMDQ3LDE3MTM3MjEwNzUsLTI1NTE2MDkxOCwtMTY4NDEyODYx
+NywtOTE0NDk2MjAzLDE0ODk0OTI0MDEsMTc4ODczNjQ1MiwtMT
+A0MjE3OTMxLDE2NDM3NjQyLC0xOTYxMjI0MjMyLDI4MjIxMjY5
+MywxOTU1MDMyNzc0LDE3NjAzNTI1MjEsLTE0MDMxMTg1ODAsMT
+IyODUzNjUzOSwxNDA0MDUwNDM2LC0zMjk1MTI5NTYsLTE2Mzkx
+MzA1NDFdfQ==
 -->
