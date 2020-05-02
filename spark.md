@@ -472,7 +472,7 @@ df.queryExecution.toRdd
 .map((row: InternalRow) => InternalRow.fromSeq(Seq(row.getLong(0)+10, row.getLong(0)-10)))  
 ```
 
-### Construct a `DataFrame` from a `RDD[InternalRow` and a schema
+### Construct a `DataFrame` from a `RDD[InternalRow]` and a schema
 ```scala
 def createDataFrameOfInternalRows(internalRows: RDD[InternalRow], 
                                   schema: StructType)
@@ -1241,7 +1241,7 @@ _____
 ## Videos
 - [A Deeper Understanding of Spark Internals - Aaron Davidson (Databricks)](https://www.youtube.com/watch?v=dmL0N3qfSc8)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYwNTIyMjg2MCwtMTc2NDUyMTA3NSwxMD
+eyJoaXN0b3J5IjpbLTgxMzcyMjY1MywtMTc2NDUyMTA3NSwxMD
 M4MTQyMDQsOTgwNjkwODg1LDE2MDkzMDIwNDcsMTcxMzcyMTA3
 NSwtMjU1MTYwOTE4LC0xNjg0MTI4NjE3LC05MTQ0OTYyMDMsMT
 Q4OTQ5MjQwMSwxNzg4NzM2NDUyLC0xMDQyMTc5MzEsMTY0Mzc2
