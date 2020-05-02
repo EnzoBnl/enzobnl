@@ -473,13 +473,13 @@ df.queryExecution.toRdd
 ```
 
 ### Construct a `DataFrame` from a `RDD[InternalRow` and a schema
+Has to be inside `package org.apache.spark.sql` to have access to `private[`
 
 ```scala
-package org.apache.spark.sql  
-object BlaBla
-def createDataFrameOfInternalRows(internalRows: RDD[InternalRow], schema: StructType)(implicit spark: SparkSession): DataFrame = {  
-Dataset.ofRows(spark, LogicalRDD(schema.toAttributes, internalRows)(spark))  
-}
+def createDataFrameOfInternalRows(internalRows: RDD[InternalRow], 
+                                  schema: StructType)
+                                  (implicit spark: SparkSession): DataFrame =
+  Dataset.ofRows(spark, LogicalRDD(schema.toAttributes, internalRows)(spark))  
 ```
 
 ## VII/ Dataset's OOP design
@@ -1241,11 +1241,11 @@ _____
 ## Videos
 - [A Deeper Understanding of Spark Internals - Aaron Davidson (Databricks)](https://www.youtube.com/watch?v=dmL0N3qfSc8)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkwOTc1MjAyNywtMTc2NDUyMTA3NSwxMD
-M4MTQyMDQsOTgwNjkwODg1LDE2MDkzMDIwNDcsMTcxMzcyMTA3
-NSwtMjU1MTYwOTE4LC0xNjg0MTI4NjE3LC05MTQ0OTYyMDMsMT
-Q4OTQ5MjQwMSwxNzg4NzM2NDUyLC0xMDQyMTc5MzEsMTY0Mzc2
-NDIsLTE5NjEyMjQyMzIsMjgyMjEyNjkzLDE5NTUwMzI3NzQsMT
-c2MDM1MjUyMSwtMTQwMzExODU4MCwxMjI4NTM2NTM5LDE0MDQw
-NTA0MzZdfQ==
+eyJoaXN0b3J5IjpbNzUwODgxODE0LC0xNzY0NTIxMDc1LDEwMz
+gxNDIwNCw5ODA2OTA4ODUsMTYwOTMwMjA0NywxNzEzNzIxMDc1
+LC0yNTUxNjA5MTgsLTE2ODQxMjg2MTcsLTkxNDQ5NjIwMywxND
+g5NDkyNDAxLDE3ODg3MzY0NTIsLTEwNDIxNzkzMSwxNjQzNzY0
+MiwtMTk2MTIyNDIzMiwyODIyMTI2OTMsMTk1NTAzMjc3NCwxNz
+YwMzUyNTIxLC0xNDAzMTE4NTgwLDEyMjg1MzY1MzksMTQwNDA1
+MDQzNl19
 -->
