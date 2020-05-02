@@ -472,6 +472,16 @@ df.queryExecution.toRdd
 .map((row: InternalRow) => InternalRow.fromSeq(Seq(row.getLong(0)+10, row.getLong(0)-10)))  
 ```
 
+### Construct a `DataFrame` from a `RDD[InternalRow` and a schema
+
+```scala
+package org.apache.spark.sql  
+object BlaBla
+def createDataFrameOfInternalRows(internalRows: RDD[InternalRow], schema: StructType)(implicit spark: SparkSession): DataFrame = {  
+Dataset.ofRows(spark, LogicalRDD(schema.toAttributes, internalRows)(spark))  
+}
+```
+
 ## VII/ Dataset's OOP design
 `Dataset` can be viewed as a **functional builder** for a `LogicalPlan`, implemented as a **fluent API** friendly to SQL users.
 ```scala
@@ -1231,11 +1241,11 @@ _____
 ## Videos
 - [A Deeper Understanding of Spark Internals - Aaron Davidson (Databricks)](https://www.youtube.com/watch?v=dmL0N3qfSc8)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NjQ1MjEwNzUsMTAzODE0MjA0LDk4MD
-Y5MDg4NSwxNjA5MzAyMDQ3LDE3MTM3MjEwNzUsLTI1NTE2MDkx
-OCwtMTY4NDEyODYxNywtOTE0NDk2MjAzLDE0ODk0OTI0MDEsMT
-c4ODczNjQ1MiwtMTA0MjE3OTMxLDE2NDM3NjQyLC0xOTYxMjI0
-MjMyLDI4MjIxMjY5MywxOTU1MDMyNzc0LDE3NjAzNTI1MjEsLT
-E0MDMxMTg1ODAsMTIyODUzNjUzOSwxNDA0MDUwNDM2LC0zMjk1
-MTI5NTZdfQ==
+eyJoaXN0b3J5IjpbLTkwOTc1MjAyNywtMTc2NDUyMTA3NSwxMD
+M4MTQyMDQsOTgwNjkwODg1LDE2MDkzMDIwNDcsMTcxMzcyMTA3
+NSwtMjU1MTYwOTE4LC0xNjg0MTI4NjE3LC05MTQ0OTYyMDMsMT
+Q4OTQ5MjQwMSwxNzg4NzM2NDUyLC0xMDQyMTc5MzEsMTY0Mzc2
+NDIsLTE5NjEyMjQyMzIsMjgyMjEyNjkzLDE5NTUwMzI3NzQsMT
+c2MDM1MjUyMSwtMTQwMzExODU4MCwxMjI4NTM2NTM5LDE0MDQw
+NTA0MzZdfQ==
 -->
