@@ -691,7 +691,7 @@ val x = if (gcd(n_conf, n) != 1) gcd(n_conf, n) else n
 
 *Note:* if `n` is primal, `x` will always be `n` no matter the value of `n_conf`
 -->
-## XV/ Internal representationsData structures ()
+## XV/ Internal representations & data structures
 
 SQL & RDD:
 join are materialized as `ZippedPartitionsRDD2` whose memory format depends on the provided `var f: (Iterator[A], Iterator[B]) => Iterator[V]`
@@ -1231,11 +1231,11 @@ _____
 ## Videos
 - [A Deeper Understanding of Spark Internals - Aaron Davidson (Databricks)](https://www.youtube.com/watch?v=dmL0N3qfSc8)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAzODE0MjA0LDk4MDY5MDg4NSwxNjA5Mz
-AyMDQ3LDE3MTM3MjEwNzUsLTI1NTE2MDkxOCwtMTY4NDEyODYx
-NywtOTE0NDk2MjAzLDE0ODk0OTI0MDEsMTc4ODczNjQ1MiwtMT
-A0MjE3OTMxLDE2NDM3NjQyLC0xOTYxMjI0MjMyLDI4MjIxMjY5
-MywxOTU1MDMyNzc0LDE3NjAzNTI1MjEsLTE0MDMxMTg1ODAsMT
-IyODUzNjUzOSwxNDA0MDUwNDM2LC0zMjk1MTI5NTYsLTE2Mzkx
-MzA1NDFdfQ==
+eyJoaXN0b3J5IjpbLTE3NjQ1MjEwNzUsMTAzODE0MjA0LDk4MD
+Y5MDg4NSwxNjA5MzAyMDQ3LDE3MTM3MjEwNzUsLTI1NTE2MDkx
+OCwtMTY4NDEyODYxNywtOTE0NDk2MjAzLDE0ODk0OTI0MDEsMT
+c4ODczNjQ1MiwtMTA0MjE3OTMxLDE2NDM3NjQyLC0xOTYxMjI0
+MjMyLDI4MjIxMjY5MywxOTU1MDMyNzc0LDE3NjAzNTI1MjEsLT
+E0MDMxMTg1ODAsMTIyODUzNjUzOSwxNDA0MDUwNDM2LC0zMjk1
+MTI5NTZdfQ==
 -->
