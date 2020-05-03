@@ -674,15 +674,15 @@ is
 int a; 
 // at this point `a` has an allocated memory range but it is uninitialized: its memory range contains the trash that was written here previously.
 
-// let's create another variable of type
+// let's create another variable of type int* this time. It will allocate a memory range on the stack, that can hold a memory adress
 int *p; 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU1OTUwMTg4OSw2MTA2NDE1NDcsNjI4Nj
-g3MDcxLDE2MjQzODg1NzMsLTE2MzY0NzIwMjEsNjEwOTAyNDc1
-LC0yNjczOTk3NSwxOTc5OTM0MzEzLDIzMzAzNjE3NiwtNDUwOD
-I0MzEyLC00NTI2NzAyOTcsLTEwODQ3MzQzMjYsLTExNTUzNjky
-MzksMTUxNTA0NTMzMywtMTIyNzYwODQ2MCwyMDI1MzA5ODg1LD
-EzOTg1OTU2NywtOTIzMDAwMDEwLC04MjY0NzUyNzQsMTk4NTEz
-NTMxXX0=
+eyJoaXN0b3J5IjpbLTYzMTM5MTcyLDYxMDY0MTU0Nyw2Mjg2OD
+cwNzEsMTYyNDM4ODU3MywtMTYzNjQ3MjAyMSw2MTA5MDI0NzUs
+LTI2NzM5OTc1LDE5Nzk5MzQzMTMsMjMzMDM2MTc2LC00NTA4Mj
+QzMTIsLTQ1MjY3MDI5NywtMTA4NDczNDMyNiwtMTE1NTM2OTIz
+OSwxNTE1MDQ1MzMzLC0xMjI3NjA4NDYwLDIwMjUzMDk4ODUsMT
+M5ODU5NTY3LC05MjMwMDAwMTAsLTgyNjQ3NTI3NCwxOTg1MTM1
+MzFdfQ==
 -->
