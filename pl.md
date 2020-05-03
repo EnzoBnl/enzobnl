@@ -687,11 +687,13 @@ int *p;
 // It is because `p` is uninitialized and its the memory adress it holds is trash
 // and most of the time out of our current allowed memory space.
 
-// let's make the `p` add
+// let's put into variable `p` memory range the address of the memory range of `a`:
+p = &a;
+// now let's multiply the
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM1NTk0OTcwMCw2MTA2NDE1NDcsNjI4Nj
+eyJoaXN0b3J5IjpbLTIxMzcwOTUzNSw2MTA2NDE1NDcsNjI4Nj
 g3MDcxLDE2MjQzODg1NzMsLTE2MzY0NzIwMjEsNjEwOTAyNDc1
 LC0yNjczOTk3NSwxOTc5OTM0MzEzLDIzMzAzNjE3NiwtNDUwOD
 I0MzEyLC00NTI2NzAyOTcsLTEwODQ3MzQzMjYsLTExNTUzNjky
