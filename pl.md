@@ -728,13 +728,13 @@ p = trash;
 // inside the last `int` slot of the memory range pointed
 // by the address held by variable `p`.
 // In two different ways:
-*(p + 1*sizeof(int)) = a;
-p[1] = a;
+*(p + 5*sizeof(int)) = a;
+p[2][3] = a;
 
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg4MjU4NjM3NSwtMzY3OTY5MTI1LDYxMD
+eyJoaXN0b3J5IjpbLTQ5ODA1MjE0MywtMzY3OTY5MTI1LDYxMD
 Y0MTU0Nyw2Mjg2ODcwNzEsMTYyNDM4ODU3MywtMTYzNjQ3MjAy
 MSw2MTA5MDI0NzUsLTI2NzM5OTc1LDE5Nzk5MzQzMTMsMjMzMD
 M2MTc2LC00NTA4MjQzMTIsLTQ1MjY3MDI5NywtMTA4NDczNDMy
