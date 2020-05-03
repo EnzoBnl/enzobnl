@@ -670,15 +670,17 @@ is
 # C
 ## variable, pointer types, heap, stack
 ```c
-int a = 25;
-int *p = 
+// Let's create a variable: a memory location on the functions execution stack holding data of a certain type, here int:
+int a; 
+// at this
+int *p; 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjM4NDIzNDksNjEwNjQxNTQ3LDYyODY4Nz
-A3MSwxNjI0Mzg4NTczLC0xNjM2NDcyMDIxLDYxMDkwMjQ3NSwt
-MjY3Mzk5NzUsMTk3OTkzNDMxMywyMzMwMzYxNzYsLTQ1MDgyND
-MxMiwtNDUyNjcwMjk3LC0xMDg0NzM0MzI2LC0xMTU1MzY5MjM5
-LDE1MTUwNDUzMzMsLTEyMjc2MDg0NjAsMjAyNTMwOTg4NSwxMz
-k4NTk1NjcsLTkyMzAwMDAxMCwtODI2NDc1Mjc0LDE5ODUxMzUz
-MV19
+eyJoaXN0b3J5IjpbMTI0NDIyNjY2OCw2MTA2NDE1NDcsNjI4Nj
+g3MDcxLDE2MjQzODg1NzMsLTE2MzY0NzIwMjEsNjEwOTAyNDc1
+LC0yNjczOTk3NSwxOTc5OTM0MzEzLDIzMzAzNjE3NiwtNDUwOD
+I0MzEyLC00NTI2NzAyOTcsLTEwODQ3MzQzMjYsLTExNTUzNjky
+MzksMTUxNTA0NTMzMywtMTIyNzYwODQ2MCwyMDI1MzA5ODg1LD
+EzOTg1OTU2NywtOTIzMDAwMDEwLC04MjY0NzUyNzQsMTk4NTEz
+NTMxXX0=
 -->
