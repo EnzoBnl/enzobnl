@@ -671,24 +671,24 @@ is
 ## variable, pointer types, heap, stack
 ```c
 // Let's create a variable: an allocated memory range on the stack,
-// sized to hold the data of a certain type, here int (4 bytes):
+// sized to hold the data of a certain type, here `int` (4 bytes):
 int a; 
 // at this point `a` has an allocated memory range but it is uninitialized: 
 // its memory range contains the trash that was written here previously.
 
-// let's create another variable of type int* this time. 
+// let's create another variable of type `int*` this time. 
 // It will be mapped to an allocated memory range on the stack, 
 // that can hold a memory address (64 or 32 bits) 
-// that is intended to point to the data of an int (4 bytes).
+// which is intended to point to an `int`'s data (4 bytes).
 int *p;
-// at this point if we want to modify the data on which the memory adress hold by the variable p points to using `*p = ...` we will end up with a segfault: core dump. It is because
+// at this point if we want to modify the 4 bytes of stack's data pointed by the which the memory address held by the variable p points to using `*p = ...` we will end up with a segfault: core dump. It is because
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM3NTMyNjg1Niw2MTA2NDE1NDcsNjI4Nj
-g3MDcxLDE2MjQzODg1NzMsLTE2MzY0NzIwMjEsNjEwOTAyNDc1
-LC0yNjczOTk3NSwxOTc5OTM0MzEzLDIzMzAzNjE3NiwtNDUwOD
-I0MzEyLC00NTI2NzAyOTcsLTEwODQ3MzQzMjYsLTExNTUzNjky
-MzksMTUxNTA0NTMzMywtMTIyNzYwODQ2MCwyMDI1MzA5ODg1LD
-EzOTg1OTU2NywtOTIzMDAwMDEwLC04MjY0NzUyNzQsMTk4NTEz
-NTMxXX0=
+eyJoaXN0b3J5IjpbMTE3NTI5NzU0LDYxMDY0MTU0Nyw2Mjg2OD
+cwNzEsMTYyNDM4ODU3MywtMTYzNjQ3MjAyMSw2MTA5MDI0NzUs
+LTI2NzM5OTc1LDE5Nzk5MzQzMTMsMjMzMDM2MTc2LC00NTA4Mj
+QzMTIsLTQ1MjY3MDI5NywtMTA4NDczNDMyNiwtMTE1NTM2OTIz
+OSwxNTE1MDQ1MzMzLC0xMjI3NjA4NDYwLDIwMjUzMDk4ODUsMT
+M5ODU5NTY3LC05MjMwMDAwMTAsLTgyNjQ3NTI3NCwxOTg1MTM1
+MzFdfQ==
 -->
