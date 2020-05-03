@@ -700,16 +700,17 @@ a = 1;
 // let's make variable `p` hold a memory address of 
 // an allocated a memory range on the stack, 
 // that can contains the data of 2 `int`s (8 bytes, not initialized):
-p = 
+int t2[2];  
+p = t2;
 
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM2Nzk2OTEyNSw2MTA2NDE1NDcsNjI4Nj
-g3MDcxLDE2MjQzODg1NzMsLTE2MzY0NzIwMjEsNjEwOTAyNDc1
-LC0yNjczOTk3NSwxOTc5OTM0MzEzLDIzMzAzNjE3NiwtNDUwOD
-I0MzEyLC00NTI2NzAyOTcsLTEwODQ3MzQzMjYsLTExNTUzNjky
-MzksMTUxNTA0NTMzMywtMTIyNzYwODQ2MCwyMDI1MzA5ODg1LD
-EzOTg1OTU2NywtOTIzMDAwMDEwLC04MjY0NzUyNzQsMTk4NTEz
-NTMxXX0=
+eyJoaXN0b3J5IjpbLTE4Nzg2MDk4MTIsLTM2Nzk2OTEyNSw2MT
+A2NDE1NDcsNjI4Njg3MDcxLDE2MjQzODg1NzMsLTE2MzY0NzIw
+MjEsNjEwOTAyNDc1LC0yNjczOTk3NSwxOTc5OTM0MzEzLDIzMz
+AzNjE3NiwtNDUwODI0MzEyLC00NTI2NzAyOTcsLTEwODQ3MzQz
+MjYsLTExNTUzNjkyMzksMTUxNTA0NTMzMywtMTIyNzYwODQ2MC
+wyMDI1MzA5ODg1LDEzOTg1OTU2NywtOTIzMDAwMDEwLC04MjY0
+NzUyNzRdfQ==
 -->
