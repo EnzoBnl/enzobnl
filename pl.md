@@ -698,7 +698,7 @@ a = 1;
 // at this point a == 2 and *p == 2
 
 // let's make variable `p` hold a memory address of 
-// an allocated a memory range on the stack, 
+// an allocated a memory range on the STACK, 
 // that can contains the data of 2 `int`s (8 bytes, not initialized):
 int trash[2];  
 p = trash;
@@ -707,18 +707,21 @@ int ones[2] = {1, 1};
 p = ones;
 
 // let's make variable `p` hold a memory address of 
-// an allocated a memory range on the stack, 
-// that can contains the data of 2 `int`s (8 bytes, initialized with zeros):
+// an allocated a memory range on the HEAP, 
+// that can contains the data of 2 `int`s (8 bytes, not initialized):
+p = (int *)malloc(2*sizeof(int));
+
+// let's put inside the memory range poited by the addres held by variable `p`
 
 
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzA4MDU0Njg2LC0zNjc5NjkxMjUsNjEwNj
-QxNTQ3LDYyODY4NzA3MSwxNjI0Mzg4NTczLC0xNjM2NDcyMDIx
-LDYxMDkwMjQ3NSwtMjY3Mzk5NzUsMTk3OTkzNDMxMywyMzMwMz
-YxNzYsLTQ1MDgyNDMxMiwtNDUyNjcwMjk3LC0xMDg0NzM0MzI2
-LC0xMTU1MzY5MjM5LDE1MTUwNDUzMzMsLTEyMjc2MDg0NjAsMj
-AyNTMwOTg4NSwxMzk4NTk1NjcsLTkyMzAwMDAxMCwtODI2NDc1
-Mjc0XX0=
+eyJoaXN0b3J5IjpbMTE1MDA2OTA0MiwtMzY3OTY5MTI1LDYxMD
+Y0MTU0Nyw2Mjg2ODcwNzEsMTYyNDM4ODU3MywtMTYzNjQ3MjAy
+MSw2MTA5MDI0NzUsLTI2NzM5OTc1LDE5Nzk5MzQzMTMsMjMzMD
+M2MTc2LC00NTA4MjQzMTIsLTQ1MjY3MDI5NywtMTA4NDczNDMy
+NiwtMTE1NTM2OTIzOSwxNTE1MDQ1MzMzLC0xMjI3NjA4NDYwLD
+IwMjUzMDk4ODUsMTM5ODU5NTY3LC05MjMwMDAwMTAsLTgyNjQ3
+NTI3NF19
 -->
