@@ -709,13 +709,13 @@ p = ones;
 // let's make variable `p` hold a memory address of 
 // an allocated a memory range on the HEAP, 
 // that can contains the data of 2 `int`s (8 bytes, not initialized):
-p = (int *)malloc(2*sizeof(int));
+p = (int *)malloc(2 * sizeof(int));
 
 // let's put the value held by the variable `a`
 // inside the second `int` slot of the memory range pointed
 // by the address held by variable `p`.
 // In two different ways:
-*(p + 1*sizeof(int)) = a;
+*(p + 1) = a;
 p[1] = a;
 
 // let's make variable `p` hold a memory address of 
@@ -734,11 +734,11 @@ trash[1][2] = a;
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NjQ1MzAwNjAsLTQ5ODA1MjE0MywtMz
-Y3OTY5MTI1LDYxMDY0MTU0Nyw2Mjg2ODcwNzEsMTYyNDM4ODU3
-MywtMTYzNjQ3MjAyMSw2MTA5MDI0NzUsLTI2NzM5OTc1LDE5Nz
-k5MzQzMTMsMjMzMDM2MTc2LC00NTA4MjQzMTIsLTQ1MjY3MDI5
-NywtMTA4NDczNDMyNiwtMTE1NTM2OTIzOSwxNTE1MDQ1MzMzLC
-0xMjI3NjA4NDYwLDIwMjUzMDk4ODUsMTM5ODU5NTY3LC05MjMw
-MDAwMTBdfQ==
+eyJoaXN0b3J5IjpbMjExNDMxMjM1MiwtMTg2NDUzMDA2MCwtND
+k4MDUyMTQzLC0zNjc5NjkxMjUsNjEwNjQxNTQ3LDYyODY4NzA3
+MSwxNjI0Mzg4NTczLC0xNjM2NDcyMDIxLDYxMDkwMjQ3NSwtMj
+Y3Mzk5NzUsMTk3OTkzNDMxMywyMzMwMzYxNzYsLTQ1MDgyNDMx
+MiwtNDUyNjcwMjk3LC0xMDg0NzM0MzI2LC0xMTU1MzY5MjM5LD
+E1MTUwNDUzMzMsLTEyMjc2MDg0NjAsMjAyNTMwOTg4NSwxMzk4
+NTk1NjddfQ==
 -->
