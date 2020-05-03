@@ -700,17 +700,25 @@ a = 1;
 // let's make variable `p` hold a memory address of 
 // an allocated a memory range on the stack, 
 // that can contains the data of 2 `int`s (8 bytes, not initialized):
-int t2[2];  
-p = t2;
+int trash[2];  
+p = trash;
+// with initialization:
+int ones[2] = {1, 1};  
+p = ones;
+
+// let's make variable `p` hold a memory address of 
+// an allocated a memory range on the stack, 
+// that can contains the data of 2 `int`s (8 bytes, initialized with zeros):
+
 
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4Nzg2MDk4MTIsLTM2Nzk2OTEyNSw2MT
-A2NDE1NDcsNjI4Njg3MDcxLDE2MjQzODg1NzMsLTE2MzY0NzIw
-MjEsNjEwOTAyNDc1LC0yNjczOTk3NSwxOTc5OTM0MzEzLDIzMz
-AzNjE3NiwtNDUwODI0MzEyLC00NTI2NzAyOTcsLTEwODQ3MzQz
-MjYsLTExNTUzNjkyMzksMTUxNTA0NTMzMywtMTIyNzYwODQ2MC
-wyMDI1MzA5ODg1LDEzOTg1OTU2NywtOTIzMDAwMDEwLC04MjY0
-NzUyNzRdfQ==
+eyJoaXN0b3J5IjpbNzA4MDU0Njg2LC0zNjc5NjkxMjUsNjEwNj
+QxNTQ3LDYyODY4NzA3MSwxNjI0Mzg4NTczLC0xNjM2NDcyMDIx
+LDYxMDkwMjQ3NSwtMjY3Mzk5NzUsMTk3OTkzNDMxMywyMzMwMz
+YxNzYsLTQ1MDgyNDMxMiwtNDUyNjcwMjk3LC0xMDg0NzM0MzI2
+LC0xMTU1MzY5MjM5LDE1MTUwNDUzMzMsLTEyMjc2MDg0NjAsMj
+AyNTMwOTg4NSwxMzk4NTk1NjcsLTkyMzAwMDAxMCwtODI2NDc1
+Mjc0XX0=
 -->
