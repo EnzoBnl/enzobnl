@@ -670,17 +670,17 @@ is
 # C
 ## variable, pointer types, heap, stack
 ```c
-// Let's create a variable: a memory location on the stack, holding data of a certain type, here int:
+// Let's create a variable: an allocated memory range on the stack, sized to hold the data of a certain type, here int (4 bytes):
 int a; 
-// at this point a is
+// at this point `a` has memory range allocated but it contains 
 int *p; 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU5MDQ4MDc5Niw2MTA2NDE1NDcsNjI4Nj
-g3MDcxLDE2MjQzODg1NzMsLTE2MzY0NzIwMjEsNjEwOTAyNDc1
-LC0yNjczOTk3NSwxOTc5OTM0MzEzLDIzMzAzNjE3NiwtNDUwOD
-I0MzEyLC00NTI2NzAyOTcsLTEwODQ3MzQzMjYsLTExNTUzNjky
-MzksMTUxNTA0NTMzMywtMTIyNzYwODQ2MCwyMDI1MzA5ODg1LD
-EzOTg1OTU2NywtOTIzMDAwMDEwLC04MjY0NzUyNzQsMTk4NTEz
-NTMxXX0=
+eyJoaXN0b3J5IjpbLTIxMTg3MDgzNTIsNjEwNjQxNTQ3LDYyOD
+Y4NzA3MSwxNjI0Mzg4NTczLC0xNjM2NDcyMDIxLDYxMDkwMjQ3
+NSwtMjY3Mzk5NzUsMTk3OTkzNDMxMywyMzMwMzYxNzYsLTQ1MD
+gyNDMxMiwtNDUyNjcwMjk3LC0xMDg0NzM0MzI2LC0xMTU1MzY5
+MjM5LDE1MTUwNDUzMzMsLTEyMjc2MDg0NjAsMjAyNTMwOTg4NS
+wxMzk4NTk1NjcsLTkyMzAwMDAxMCwtODI2NDc1Mjc0LDE5ODUx
+MzUzMV19
 -->
