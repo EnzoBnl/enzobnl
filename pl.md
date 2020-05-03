@@ -667,13 +667,18 @@ is
 
 ### Compilation unit (Package / .java file)
 
-
+# C
+## variable, pointer types, heap, stack
+```c
+int a = 25;
+int *p = 
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjEwNjQxNTQ3LDYyODY4NzA3MSwxNjI0Mz
-g4NTczLC0xNjM2NDcyMDIxLDYxMDkwMjQ3NSwtMjY3Mzk5NzUs
-MTk3OTkzNDMxMywyMzMwMzYxNzYsLTQ1MDgyNDMxMiwtNDUyNj
-cwMjk3LC0xMDg0NzM0MzI2LC0xMTU1MzY5MjM5LDE1MTUwNDUz
-MzMsLTEyMjc2MDg0NjAsMjAyNTMwOTg4NSwxMzk4NTk1NjcsLT
-kyMzAwMDAxMCwtODI2NDc1Mjc0LDE5ODUxMzUzMSwtMTUzMjY5
-Nzk2OV19
+eyJoaXN0b3J5IjpbNjM4NDIzNDksNjEwNjQxNTQ3LDYyODY4Nz
+A3MSwxNjI0Mzg4NTczLC0xNjM2NDcyMDIxLDYxMDkwMjQ3NSwt
+MjY3Mzk5NzUsMTk3OTkzNDMxMywyMzMwMzYxNzYsLTQ1MDgyND
+MxMiwtNDUyNjcwMjk3LC0xMDg0NzM0MzI2LC0xMTU1MzY5MjM5
+LDE1MTUwNDUzMzMsLTEyMjc2MDg0NjAsMjAyNTMwOTg4NSwxMz
+k4NTk1NjcsLTkyMzAwMDAxMCwtODI2NDc1Mjc0LDE5ODUxMzUz
+MV19
 -->
