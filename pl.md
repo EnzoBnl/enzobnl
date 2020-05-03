@@ -691,11 +691,14 @@ int *p;
 p = &a;
 // now let's initialise the `int` data both held inside variable `a` and pointed by the memory address held inside variable `p`, using two differetn ways:
 a = 1;
-*p = 2
+// at this point a == 1 and *p == 1
+*p = 2;
+// at this point a == 2 and *p == 2
+
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMTYzMjYzNjIsNjEwNjQxNTQ3LDYyOD
+eyJoaXN0b3J5IjpbLTE2NDg0Mzk3MDUsNjEwNjQxNTQ3LDYyOD
 Y4NzA3MSwxNjI0Mzg4NTczLC0xNjM2NDcyMDIxLDYxMDkwMjQ3
 NSwtMjY3Mzk5NzUsMTk3OTkzNDMxMywyMzMwMzYxNzYsLTQ1MD
 gyNDMxMiwtNDUyNjcwMjk3LC0xMDg0NzM0MzI2LC0xMTU1MzY5
