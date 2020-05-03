@@ -727,18 +727,18 @@ p = trash;
 // let's put the value held by the variable `a`
 // inside the last `int` slot of the memory range pointed
 // by the address held by variable `p`.
-// In two different ways:
-*(p + 5*sizeof(int)) = a;
-p[2][3] = a;
-
+// In 3 different ways:
+*(p + 5) = a;
+p[5] = a;
+trash[1][2] = a;
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ5ODA1MjE0MywtMzY3OTY5MTI1LDYxMD
-Y0MTU0Nyw2Mjg2ODcwNzEsMTYyNDM4ODU3MywtMTYzNjQ3MjAy
-MSw2MTA5MDI0NzUsLTI2NzM5OTc1LDE5Nzk5MzQzMTMsMjMzMD
-M2MTc2LC00NTA4MjQzMTIsLTQ1MjY3MDI5NywtMTA4NDczNDMy
-NiwtMTE1NTM2OTIzOSwxNTE1MDQ1MzMzLC0xMjI3NjA4NDYwLD
-IwMjUzMDk4ODUsMTM5ODU5NTY3LC05MjMwMDAwMTAsLTgyNjQ3
-NTI3NF19
+eyJoaXN0b3J5IjpbLTE4NjQ1MzAwNjAsLTQ5ODA1MjE0MywtMz
+Y3OTY5MTI1LDYxMDY0MTU0Nyw2Mjg2ODcwNzEsMTYyNDM4ODU3
+MywtMTYzNjQ3MjAyMSw2MTA5MDI0NzUsLTI2NzM5OTc1LDE5Nz
+k5MzQzMTMsMjMzMDM2MTc2LC00NTA4MjQzMTIsLTQ1MjY3MDI5
+NywtMTA4NDczNDMyNiwtMTE1NTM2OTIzOSwxNTE1MDQ1MzMzLC
+0xMjI3NjA4NDYwLDIwMjUzMDk4ODUsMTM5ODU5NTY3LC05MjMw
+MDAwMTBdfQ==
 -->
