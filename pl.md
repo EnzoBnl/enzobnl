@@ -670,13 +670,13 @@ is
 # C
 ## variable, pointer types, heap, stack
 ```c
-// Let's create a variable: a memory location on the functions execution stack holding data of a certain type, here int:
+// Let's create a variable: a memory location on the stack, holding data of a certain type, here int:
 int a; 
-// at this
+// at this point a is
 int *p; 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI0NDIyNjY2OCw2MTA2NDE1NDcsNjI4Nj
+eyJoaXN0b3J5IjpbLTU5MDQ4MDc5Niw2MTA2NDE1NDcsNjI4Nj
 g3MDcxLDE2MjQzODg1NzMsLTE2MzY0NzIwMjEsNjEwOTAyNDc1
 LC0yNjczOTk3NSwxOTc5OTM0MzEzLDIzMzAzNjE3NiwtNDUwOD
 I0MzEyLC00NTI2NzAyOTcsLTEwODQ3MzQzMjYsLTExNTUzNjky
