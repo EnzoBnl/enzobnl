@@ -696,10 +696,12 @@ a = 1;
 *p = 2;
 // at this point a == 2 and *p == 2
 
+// lets allocate a memory range of 2 `int`s (8 bytes)
+
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3ODYyMzY5NSw2MTA2NDE1NDcsNjI4Nj
+eyJoaXN0b3J5IjpbLTcyNzg5OTEyNiw2MTA2NDE1NDcsNjI4Nj
 g3MDcxLDE2MjQzODg1NzMsLTE2MzY0NzIwMjEsNjEwOTAyNDc1
 LC0yNjczOTk3NSwxOTc5OTM0MzEzLDIzMzAzNjE3NiwtNDUwOD
 I0MzEyLC00NTI2NzAyOTcsLTEwODQ3MzQzMjYsLTExNTUzNjky
