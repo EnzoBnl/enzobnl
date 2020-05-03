@@ -712,20 +712,21 @@ p = ones;
 p = (int *)malloc(2*sizeof(int));
 
 // let's put the value held by the variable `a`
-// inside the second half of the memory range pointed
-// by the address held by variable `p`, in two different ways:
-*(p + sizeof(int)) = a;
-p[1]
+// inside the second `int` slot of the memory range pointed
+// by the address held by variable `p`.
+// In two different ways:
+*(p + 1*sizeof(int)) = a;
+p[1] = a;
 
 
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxNDAzNzgyMjIsLTM2Nzk2OTEyNSw2MT
-A2NDE1NDcsNjI4Njg3MDcxLDE2MjQzODg1NzMsLTE2MzY0NzIw
-MjEsNjEwOTAyNDc1LC0yNjczOTk3NSwxOTc5OTM0MzEzLDIzMz
-AzNjE3NiwtNDUwODI0MzEyLC00NTI2NzAyOTcsLTEwODQ3MzQz
-MjYsLTExNTUzNjkyMzksMTUxNTA0NTMzMywtMTIyNzYwODQ2MC
-wyMDI1MzA5ODg1LDEzOTg1OTU2NywtOTIzMDAwMDEwLC04MjY0
-NzUyNzRdfQ==
+eyJoaXN0b3J5IjpbMTY2MjAxODMxOCwtMzY3OTY5MTI1LDYxMD
+Y0MTU0Nyw2Mjg2ODcwNzEsMTYyNDM4ODU3MywtMTYzNjQ3MjAy
+MSw2MTA5MDI0NzUsLTI2NzM5OTc1LDE5Nzk5MzQzMTMsMjMzMD
+M2MTc2LC00NTA4MjQzMTIsLTQ1MjY3MDI5NywtMTA4NDczNDMy
+NiwtMTE1NTM2OTIzOSwxNTE1MDQ1MzMzLC0xMjI3NjA4NDYwLD
+IwMjUzMDk4ODUsMTM5ODU5NTY3LC05MjMwMDAwMTAsLTgyNjQ3
+NTI3NF19
 -->
