@@ -685,10 +685,13 @@ int *p;
 // by the memory address held by the variable `p` using 
 // `*p = ...` we will end up with a segfault: core dump.
 // It is because `p` is uninitialized and its the memory adress it holds is trash
-// and most of the time out of the owned memory.
+// and most of the time out of our current allowed memory space.
+
+// let's make the `p` add
+
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg4Mjk2NDE5OCw2MTA2NDE1NDcsNjI4Nj
+eyJoaXN0b3J5IjpbMTM1NTk0OTcwMCw2MTA2NDE1NDcsNjI4Nj
 g3MDcxLDE2MjQzODg1NzMsLTE2MzY0NzIwMjEsNjEwOTAyNDc1
 LC0yNjczOTk3NSwxOTc5OTM0MzEzLDIzMzAzNjE3NiwtNDUwOD
 I0MzEyLC00NTI2NzAyOTcsLTEwODQ3MzQzMjYsLTExNTUzNjky
