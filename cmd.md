@@ -305,6 +305,9 @@ $ sudo git push origin branch-x --force-with-lease
 $ sudo git fetch --all
 $ sudo git reset --hard origin/master
 
+# Pull unitary commits onto current branch
+git cherry-pick <commit-hash>
+
 # find a pattern of path in entire root
 
 sudo find / -name *middleisthis*
@@ -317,11 +320,11 @@ c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex 
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MzAwNDcxMzMsLTY1NjIyNTkzMSwxNT
-c0NjQzNTYzLC0xODE0NjA5OTMzLC00NTQ0NDc0ODksLTIwNTcy
-NzQxMzcsMTgwNDc4MzU4OSw0NTk0NjgyNiwyMDk2NDUzMzk2LC
-01NTAxNjgzNDIsLTE5NTM3NjM5NzksMTEwMDA2NzUxMiwtMTAx
-NDgyNzI3MywtMTQxNjAxMjI3MSwxMzAxOTQ3NzAsLTUyMTM3MT
-A0MywxMTc4MTYzODAsMjkwMTIwNzc0LDIwNjM3NDU2NDksLTE3
-NDQ5NTM1NTVdfQ==
+eyJoaXN0b3J5IjpbODYwMzIzNzkxLC0xNzMwMDQ3MTMzLC02NT
+YyMjU5MzEsMTU3NDY0MzU2MywtMTgxNDYwOTkzMywtNDU0NDQ3
+NDg5LC0yMDU3Mjc0MTM3LDE4MDQ3ODM1ODksNDU5NDY4MjYsMj
+A5NjQ1MzM5NiwtNTUwMTY4MzQyLC0xOTUzNzYzOTc5LDExMDAw
+Njc1MTIsLTEwMTQ4MjcyNzMsLTE0MTYwMTIyNzEsMTMwMTk0Nz
+cwLC01MjEzNzEwNDMsMTE3ODE2MzgwLDI5MDEyMDc3NCwyMDYz
+NzQ1NjQ5XX0=
 -->
