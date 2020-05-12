@@ -723,7 +723,8 @@ p = (int *)malloc(2 * sizeof(int));
 p[1] = a;
 
 // let's make variable `p` hold a memory address of 
-// an allocated a memory range on the STACK, 
+// an allocated a memory range on the STACK 
+// (memory range hold by variable `trash`), 
 // that can contains the data of 6 `int`s (24 bytes, not initialized):
 int trash[2][3];  
 p = trash;
@@ -738,11 +739,11 @@ trash[1][2] = a;
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEyNDMzOTU4OSwyMTE0MzEyMzUyLC0xOD
-Y0NTMwMDYwLC00OTgwNTIxNDMsLTM2Nzk2OTEyNSw2MTA2NDE1
-NDcsNjI4Njg3MDcxLDE2MjQzODg1NzMsLTE2MzY0NzIwMjEsNj
-EwOTAyNDc1LC0yNjczOTk3NSwxOTc5OTM0MzEzLDIzMzAzNjE3
-NiwtNDUwODI0MzEyLC00NTI2NzAyOTcsLTEwODQ3MzQzMjYsLT
-ExNTUzNjkyMzksMTUxNTA0NTMzMywtMTIyNzYwODQ2MCwyMDI1
-MzA5ODg1XX0=
+eyJoaXN0b3J5IjpbOTk5MzQyMTE2LDIxMTQzMTIzNTIsLTE4Nj
+Q1MzAwNjAsLTQ5ODA1MjE0MywtMzY3OTY5MTI1LDYxMDY0MTU0
+Nyw2Mjg2ODcwNzEsMTYyNDM4ODU3MywtMTYzNjQ3MjAyMSw2MT
+A5MDI0NzUsLTI2NzM5OTc1LDE5Nzk5MzQzMTMsMjMzMDM2MTc2
+LC00NTA4MjQzMTIsLTQ1MjY3MDI5NywtMTA4NDczNDMyNiwtMT
+E1NTM2OTIzOSwxNTE1MDQ1MzMzLC0xMjI3NjA4NDYwLDIwMjUz
+MDk4ODVdfQ==
 -->
