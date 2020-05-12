@@ -697,10 +697,14 @@ a = 1;
 *p = 2;
 // at this point a == 2 and *p == 2
 
-// let's make variable `p` hold a memory address of 
-// an allocated memory range on the STACK, 
-// that can contains the data of 2 `int`s (8 bytes, not initialized):
+
+// let's make variable `trash` hold memory range 
+// on the STACK, that can contains the data of 2 `int`s 
+// (8 bytes, not initialized):
 int trash[2];  
+
+// let's make variable `p` hold a memory address of 
+// the allocated memory range hold by variable `trash` on the STACK.
 p = trash;
 // with initialization:
 int ones[2] = {1, 1};  
@@ -734,7 +738,7 @@ trash[1][2] = a;
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY4NDQ5MjI1NSwyMTE0MzEyMzUyLC0xOD
+eyJoaXN0b3J5IjpbMTEyNDMzOTU4OSwyMTE0MzEyMzUyLC0xOD
 Y0NTMwMDYwLC00OTgwNTIxNDMsLTM2Nzk2OTEyNSw2MTA2NDE1
 NDcsNjI4Njg3MDcxLDE2MjQzODg1NzMsLTE2MzY0NzIwMjEsNj
 EwOTAyNDc1LC0yNjczOTk3NSwxOTc5OTM0MzEzLDIzMzAzNjE3
