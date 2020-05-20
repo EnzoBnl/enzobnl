@@ -94,6 +94,8 @@ graph TB
 
 </div>
 
+*Note* : in local mode (`master=local[<numCores`
+
 ### 2) On-heap executor space
 The **On-heap executor space** is divided in 2 regions:
 - **Execution region**: 
@@ -1241,11 +1243,11 @@ _____
 ## Videos
 - [A Deeper Understanding of Spark Internals - Aaron Davidson (Databricks)](https://www.youtube.com/watch?v=dmL0N3qfSc8)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgxMzcyMjY1MywtMTc2NDUyMTA3NSwxMD
-M4MTQyMDQsOTgwNjkwODg1LDE2MDkzMDIwNDcsMTcxMzcyMTA3
-NSwtMjU1MTYwOTE4LC0xNjg0MTI4NjE3LC05MTQ0OTYyMDMsMT
-Q4OTQ5MjQwMSwxNzg4NzM2NDUyLC0xMDQyMTc5MzEsMTY0Mzc2
-NDIsLTE5NjEyMjQyMzIsMjgyMjEyNjkzLDE5NTUwMzI3NzQsMT
-c2MDM1MjUyMSwtMTQwMzExODU4MCwxMjI4NTM2NTM5LDE0MDQw
-NTA0MzZdfQ==
+eyJoaXN0b3J5IjpbMTY3NzA2MzY1OSwtODEzNzIyNjUzLC0xNz
+Y0NTIxMDc1LDEwMzgxNDIwNCw5ODA2OTA4ODUsMTYwOTMwMjA0
+NywxNzEzNzIxMDc1LC0yNTUxNjA5MTgsLTE2ODQxMjg2MTcsLT
+kxNDQ5NjIwMywxNDg5NDkyNDAxLDE3ODg3MzY0NTIsLTEwNDIx
+NzkzMSwxNjQzNzY0MiwtMTk2MTIyNDIzMiwyODIyMTI2OTMsMT
+k1NTAzMjc3NCwxNzYwMzUyNTIxLC0xNDAzMTE4NTgwLDEyMjg1
+MzY1MzldfQ==
 -->
