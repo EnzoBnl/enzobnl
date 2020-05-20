@@ -98,7 +98,7 @@ graph TB
 In *client mode* the driver process is a thread created inside the spark app JVM. So in order to set `spark.driver.memory` for example, one have to do it through `spark-submit` option `--driver-memory` and setting it through `SparkConf` in the application will have no effect.
 
 #### In local mode
-Like for client mode, the driver process runs inside the spark app JVM and its memory allocations have to be passed before its start (`spark-submit`, `Xmx`). The executor share the same In local mode the `Xmx` of the JVM in which the SparkSession is created will determine theavailable memory settings, passing in the code of the app settings
+Like for client mode, the driver process runs inside the spark app JVM and its memory allocations have to be passed before its start (`spark-submit`, `Xmx`). The (single) executor process lives inside the spark app JVM too and face its restrictions. In local mode the `Xmx` of the JVM in which the SparkSession is created will determine theavailable memory settings, passing in the code of the app settings
 
 ### 2) On-heap executor space
 The **On-heap executor space** is divided in 2 regions:
@@ -1247,11 +1247,11 @@ _____
 ## Videos
 - [A Deeper Understanding of Spark Internals - Aaron Davidson (Databricks)](https://www.youtube.com/watch?v=dmL0N3qfSc8)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM3MDEzNDUzOSwxNTAzNDkxOTcsLTgxMz
-cyMjY1MywtMTc2NDUyMTA3NSwxMDM4MTQyMDQsOTgwNjkwODg1
-LDE2MDkzMDIwNDcsMTcxMzcyMTA3NSwtMjU1MTYwOTE4LC0xNj
-g0MTI4NjE3LC05MTQ0OTYyMDMsMTQ4OTQ5MjQwMSwxNzg4NzM2
-NDUyLC0xMDQyMTc5MzEsMTY0Mzc2NDIsLTE5NjEyMjQyMzIsMj
-gyMjEyNjkzLDE5NTUwMzI3NzQsMTc2MDM1MjUyMSwtMTQwMzEx
-ODU4MF19
+eyJoaXN0b3J5IjpbLTE5MjUwMDg1ODksMTUwMzQ5MTk3LC04MT
+M3MjI2NTMsLTE3NjQ1MjEwNzUsMTAzODE0MjA0LDk4MDY5MDg4
+NSwxNjA5MzAyMDQ3LDE3MTM3MjEwNzUsLTI1NTE2MDkxOCwtMT
+Y4NDEyODYxNywtOTE0NDk2MjAzLDE0ODk0OTI0MDEsMTc4ODcz
+NjQ1MiwtMTA0MjE3OTMxLDE2NDM3NjQyLC0xOTYxMjI0MjMyLD
+I4MjIxMjY5MywxOTU1MDMyNzc0LDE3NjAzNTI1MjEsLTE0MDMx
+MTg1ODBdfQ==
 -->
