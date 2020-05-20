@@ -94,7 +94,8 @@ graph TB
 
 </div>
 
-*Note* : in local mode (`master=local[<numCores`
+#### In local mode
+In local mode the `Xmx` of the JVM in which the SparkSession is created will
 
 ### 2) On-heap executor space
 The **On-heap executor space** is divided in 2 regions:
@@ -1243,7 +1244,7 @@ _____
 ## Videos
 - [A Deeper Understanding of Spark Internals - Aaron Davidson (Databricks)](https://www.youtube.com/watch?v=dmL0N3qfSc8)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY3NzA2MzY1OSwtODEzNzIyNjUzLC0xNz
+eyJoaXN0b3J5IjpbMTA5NDkxNDAxMCwtODEzNzIyNjUzLC0xNz
 Y0NTIxMDc1LDEwMzgxNDIwNCw5ODA2OTA4ODUsMTYwOTMwMjA0
 NywxNzEzNzIxMDc1LC0yNTUxNjA5MTgsLTE2ODQxMjg2MTcsLT
 kxNDQ5NjIwMywxNDg5NDkyNDAxLDE3ODg3MzY0NTIsLTEwNDIx
