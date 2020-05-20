@@ -94,7 +94,8 @@ graph TB
 
 </div>
 
-#### In client mode
+#### Special case of client mode
+In client mode the driver process is a thread created inside the spark app JVM. So in order to set `spark.driver.memory` for example, one have to do it through spark-submit and not after the
 
 #### In local mode
 In local mode the `Xmx` of the JVM in which the SparkSession is created will determine theavailable memory settings, passing in the code of the app settings
@@ -1246,11 +1247,11 @@ _____
 ## Videos
 - [A Deeper Understanding of Spark Internals - Aaron Davidson (Databricks)](https://www.youtube.com/watch?v=dmL0N3qfSc8)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNTg1MzMwNjgsLTgxMzcyMjY1MywtMT
-c2NDUyMTA3NSwxMDM4MTQyMDQsOTgwNjkwODg1LDE2MDkzMDIw
-NDcsMTcxMzcyMTA3NSwtMjU1MTYwOTE4LC0xNjg0MTI4NjE3LC
-05MTQ0OTYyMDMsMTQ4OTQ5MjQwMSwxNzg4NzM2NDUyLC0xMDQy
-MTc5MzEsMTY0Mzc2NDIsLTE5NjEyMjQyMzIsMjgyMjEyNjkzLD
-E5NTUwMzI3NzQsMTc2MDM1MjUyMSwtMTQwMzExODU4MCwxMjI4
-NTM2NTM5XX0=
+eyJoaXN0b3J5IjpbLTc3NzcxNzYxMSwtODEzNzIyNjUzLC0xNz
+Y0NTIxMDc1LDEwMzgxNDIwNCw5ODA2OTA4ODUsMTYwOTMwMjA0
+NywxNzEzNzIxMDc1LC0yNTUxNjA5MTgsLTE2ODQxMjg2MTcsLT
+kxNDQ5NjIwMywxNDg5NDkyNDAxLDE3ODg3MzY0NTIsLTEwNDIx
+NzkzMSwxNjQzNzY0MiwtMTk2MTIyNDIzMiwyODIyMTI2OTMsMT
+k1NTAzMjc3NCwxNzYwMzUyNTIxLC0xNDAzMTE4NTgwLDEyMjg1
+MzY1MzldfQ==
 -->
