@@ -103,6 +103,8 @@ chmod u=rwx,g=rx,o=r /.../folder/ --recursive
 tar -xvzf /path/to/yourfile.tgz
 // archive and compress with gzip
 tar -cz filename -f filename.tar.gz
+// unzip
+unzip file.zip -d destination_folder
 // env var tmp
 export ABC=/bla/blouche
 // env var perm for all users
@@ -320,11 +322,11 @@ c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex 
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODYwMzIzNzkxLC0xNzMwMDQ3MTMzLC02NT
-YyMjU5MzEsMTU3NDY0MzU2MywtMTgxNDYwOTkzMywtNDU0NDQ3
-NDg5LC0yMDU3Mjc0MTM3LDE4MDQ3ODM1ODksNDU5NDY4MjYsMj
-A5NjQ1MzM5NiwtNTUwMTY4MzQyLC0xOTUzNzYzOTc5LDExMDAw
-Njc1MTIsLTEwMTQ4MjcyNzMsLTE0MTYwMTIyNzEsMTMwMTk0Nz
-cwLC01MjEzNzEwNDMsMTE3ODE2MzgwLDI5MDEyMDc3NCwyMDYz
-NzQ1NjQ5XX0=
+eyJoaXN0b3J5IjpbMTczNDk0ODE3MCw4NjAzMjM3OTEsLTE3Mz
+AwNDcxMzMsLTY1NjIyNTkzMSwxNTc0NjQzNTYzLC0xODE0NjA5
+OTMzLC00NTQ0NDc0ODksLTIwNTcyNzQxMzcsMTgwNDc4MzU4OS
+w0NTk0NjgyNiwyMDk2NDUzMzk2LC01NTAxNjgzNDIsLTE5NTM3
+NjM5NzksMTEwMDA2NzUxMiwtMTAxNDgyNzI3MywtMTQxNjAxMj
+I3MSwxMzAxOTQ3NzAsLTUyMTM3MTA0MywxMTc4MTYzODAsMjkw
+MTIwNzc0XX0=
 -->
