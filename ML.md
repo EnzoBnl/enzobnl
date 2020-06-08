@@ -254,17 +254,53 @@ $$L:  (y, ŷ) \mapsto -(y^{(i)}.log(ŷ^{(i)}) + (1-y^{(i)}).log(1 - ŷ^{(i)}))$$
 
 *Note the minus sign that is here to transform a quantity that we want to maximize (the likelihood) into a quantity that we want to minimize (the cost function).*
 
+### Python vectorized minimalist implementation (inspired by Andrew Ng course)
+```python
+# A vectorized logistic regression implem, with MLE compliant cost function
+import numpy as np
 
+# dims
+nx = 2
+m = 20
+
+# training data: there is a trivial linear dependency between X and y
+X = np.random.randint(-99, 100, (nx, 100))  # nx x m
+y = (np.dot(X.T, np.array([5, -1])) > 0).astype(np.int16)  # 1 x m
+
+# vectorized logit function
+logit = np.vectorize(lambda z: 1/(1 + np.exp(-z)))
+
+def learn(X, y, alpha, n_iter):
+    w = np.random.uniform(-1, 1, (nx, 1))
+    b = np.random.uniform(-1, 1)
+    for _ in range(n_iter):
+        # forward propagation a = y_hat
+        a = logit((np.dot(w.T, X) + b))  # dim 1 x m
+        # backward propagation
+        w -= (np.dot((a - y), X.T) * alpha).T/m
+        b -= (np.average(a - y) * alpha)/m
+    return (w, b)
+
+w, b = learn(X, y, 0.01, 10)
+print(f"learned parameters:\nw={w}\nb={b}")
+
+    
+def y_hat(w, b, x):
+    return logit(np.dot(w.T, x) + b)
+
+accuracy = sum([abs(y_hat(w, b, X[:, i]) - y[i]) < 0.5 for i in range(m)])/m
+print(f"accurancy={accuracy*100}%")
+```
 
 ## Neural Networks
 ### Initialization
 - As a first step before the training starts, **the initialization of the network's nodes weights needs to** ***break the symmetry***. 
 For example, in a fully connected MLP (Multi Layer Perceptron  having each of its nodes of layer *l* connected to every node of layer *l-1*) the nodes need to differs between each other in term of weights to avoid that the error propagation updates every nodes in the exact same way, making the network become just a slow Perceptron.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE5Mzg2NzE4Myw3NjAxNjE3NTQsLTQxMD
-MzODQzNiwzMzkwMjk1NTMsLTEyMDE1MTIyNjUsMTcxMDEwNDQy
-LDE5MzEwNjMyMzIsMTM2NjgyMDc1NywtMTUxMjcwMzUxMSwxNj
-EzMzQzNDQ1LDE2MDI3NTIzMTEsMTYyMjczNDk2MiwtMjExNDEy
-NDE2NSwtMTg5NjM2MjMxNywtMTA1ODEyODUwLC0xNDU2MTUwND
-c1LDE1NjA0MDc4OTldfQ==
+eyJoaXN0b3J5IjpbLTIwMDk5OTU2ODksMTE5Mzg2NzE4Myw3Nj
+AxNjE3NTQsLTQxMDMzODQzNiwzMzkwMjk1NTMsLTEyMDE1MTIy
+NjUsMTcxMDEwNDQyLDE5MzEwNjMyMzIsMTM2NjgyMDc1NywtMT
+UxMjcwMzUxMSwxNjEzMzQzNDQ1LDE2MDI3NTIzMTEsMTYyMjcz
+NDk2MiwtMjExNDEyNDE2NSwtMTg5NjM2MjMxNywtMTA1ODEyOD
+UwLC0xNDU2MTUwNDc1LDE1NjA0MDc4OTldfQ==
 -->
