@@ -232,13 +232,16 @@ Let's consider a use case of binary classification, being given a matrix $X\in R
 The MLE principle wants the algorithm to maximize the following quantity $likelihood = \prod_{i=1}^{m} p(y^{(i)}|X^{(i)})$ which is how probable our training samples are for our model (under the assumption that our samples are identically and independently distributed, or IID). Minimizing the likelihood is the same job as minimizing its log, i.e.:
  $$log(likelyhood) = \sum_{i=1}^m log(p(y^{(i)}|X^{(i)}))$$
  $$= \sum_{i=1}^m log({ŷ^{(i)}}^{y^{(i)}}.(1 - ŷ^{(i)})^{1-y^{(i)}})$$
+ $$= \sum_{i=1}^m y^{(i)}.log(ŷ^{(i)}) + (1-y^{(i)}).log(1 - ŷ^{(i)}))$$
+
+
 
 ## Neural Networks
 ### Initialization
 - As a first step before the training starts, **the initialization of the network's nodes weights needs to** ***break the symmetry***. 
 For example, in a fully connected MLP (Multi Layer Perceptron  having each of its nodes of layer *l* connected to every node of layer *l-1*) the nodes need to differs between each other in term of weights to avoid that the error propagation updates every nodes in the exact same way, making the network become just a slow Perceptron.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA5MjU0NzkyMywtNDEwMzM4NDM2LDMzOT
+eyJoaXN0b3J5IjpbMTkyNDI4MDMzMSwtNDEwMzM4NDM2LDMzOT
 AyOTU1MywtMTIwMTUxMjI2NSwxNzEwMTA0NDIsMTkzMTA2MzIz
 MiwxMzY2ODIwNzU3LC0xNTEyNzAzNTExLDE2MTMzNDM0NDUsMT
 YwMjc1MjMxMSwxNjIyNzM0OTYyLC0yMTE0MTI0MTY1LC0xODk2
