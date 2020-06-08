@@ -233,7 +233,7 @@ $$p(y^{(i)}\vert X^{(i)}) = {ŷ^{(i)}}^{y^{(i)}}.(1 - ŷ^{(i)})^{1-y^{(i)}}$$
 
 with:
 - $ŷ=logit(w^T.X + b)$
-- $logit: z \rightarrow \frac{1}{1+e^{-z}}$. 
+- $logit: z \mapsto \frac{1}{1+e^{-z}}$. 
 
 
 **MLE compliant Logistic Regression**: The MLE principle wants the algorithm to maximize the $likelihood = \prod_{i=1}^{m} p(y^{(i)}\vert X^{(i)})$ which is **how probable our training samples are from the perspective of our model** (under the assumption that our samples are identically and independently distributed, or IID). Minimizing the likelihood is the same task as minimizing its log, i.e.:
@@ -246,11 +246,11 @@ with:
 
 So to comply with the MLE principle, we just have to pass to our classic logistic regression algorithm the **cost function** (with a little rescaling):
 
-$$C: (y,ŷ) \rightarrow \frac{1}{m} \sum_{i=1}^m L(y, ŷ)$$
+$$C: (y,ŷ) \mapsto \frac{1}{m} \sum_{i=1}^m L(y, ŷ)$$
 
 $L$ being the **loss function**:
 
-$$L:  (y, ŷ) \rightarrow -(y^{(i)}.log(ŷ^{(i)}) + (1-y^{(i)}).log(1 - ŷ^{(i)}))$$ 
+$$L:  (y, ŷ) \mapsto -(y^{(i)}.log(ŷ^{(i)}) + (1-y^{(i)}).log(1 - ŷ^{(i)}))$$ 
 
 *Note the minus sign that is here to transform a quantity that we want to maximize (the likelihood) into a quantity that we want to minimize (the cost function).*
 
@@ -259,7 +259,7 @@ $$L:  (y, ŷ) \rightarrow -(y^{(i)}.log(ŷ^{(i)}) + (1-y^{(i)}).log(1 - ŷ^{(i)}
 - As a first step before the training starts, **the initialization of the network's nodes weights needs to** ***break the symmetry***. 
 For example, in a fully connected MLP (Multi Layer Perceptron  having each of its nodes of layer *l* connected to every node of layer *l-1*) the nodes need to differs between each other in term of weights to avoid that the error propagation updates every nodes in the exact same way, making the network become just a slow Perceptron.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA3MzQ3NDc2NSwtNDEwMzM4NDM2LDMzOT
+eyJoaXN0b3J5IjpbMTM0ODM4MjMzNCwtNDEwMzM4NDM2LDMzOT
 AyOTU1MywtMTIwMTUxMjI2NSwxNzEwMTA0NDIsMTkzMTA2MzIz
 MiwxMzY2ODIwNzU3LC0xNTEyNzAzNTExLDE2MTMzNDM0NDUsMT
 YwMjc1MjMxMSwxNjIyNzM0OTYyLC0yMTE0MTI0MTY1LC0xODk2
