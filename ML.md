@@ -237,17 +237,19 @@ The MLE principle wants the algorithm to maximize the $likelihood = \prod_{i=1}^
 So to comply with the MLE principle, we just have to pass to our classic logistic regression algorithm the **cost function** (with a little rescaling):
 $$C(y,ŷ)=\frac{1}{m} \sum_{i=1}^m L(y, ŷ)$$
 $L$ being the **loss function**:
-$$l(y, ŷ)=-(y^{(i)}.log(ŷ^{(i)}) + (1-y^{(i)}).log(1 - ŷ^{(i)}))$$ (note the minus sign thattransform a quantity that we want to maximize, the likel
+$$l(y, ŷ)=-(y^{(i)}.log(ŷ^{(i)}) + (1-y^{(i)}).log(1 - ŷ^{(i)}))$$ 
+
+*Note the minus sign that is here to transform a quantity that we want to maximize (the likelihood) into a quantity that we want to minimize (the cost function).*
 
 ## Neural Networks
 ### Initialization
 - As a first step before the training starts, **the initialization of the network's nodes weights needs to** ***break the symmetry***. 
 For example, in a fully connected MLP (Multi Layer Perceptron  having each of its nodes of layer *l* connected to every node of layer *l-1*) the nodes need to differs between each other in term of weights to avoid that the error propagation updates every nodes in the exact same way, making the network become just a slow Perceptron.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUwMTk4NzEzLC00MTAzMzg0MzYsMzM5MD
-I5NTUzLC0xMjAxNTEyMjY1LDE3MTAxMDQ0MiwxOTMxMDYzMjMy
-LDEzNjY4MjA3NTcsLTE1MTI3MDM1MTEsMTYxMzM0MzQ0NSwxNj
-AyNzUyMzExLDE2MjI3MzQ5NjIsLTIxMTQxMjQxNjUsLTE4OTYz
-NjIzMTcsLTEwNTgxMjg1MCwtMTQ1NjE1MDQ3NSwxNTYwNDA3OD
-k5XX0=
+eyJoaXN0b3J5IjpbLTE3NDYwMDE1NDksLTQxMDMzODQzNiwzMz
+kwMjk1NTMsLTEyMDE1MTIyNjUsMTcxMDEwNDQyLDE5MzEwNjMy
+MzIsMTM2NjgyMDc1NywtMTUxMjcwMzUxMSwxNjEzMzQzNDQ1LD
+E2MDI3NTIzMTEsMTYyMjczNDk2MiwtMjExNDEyNDE2NSwtMTg5
+NjM2MjMxNywtMTA1ODEyODUwLC0xNDU2MTUwNDc1LDE1NjA0MD
+c4OTldfQ==
 -->
