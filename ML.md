@@ -224,17 +224,18 @@ The split train-validation inside outer train set must follow the same logic.
 ### MARS
 ## Support Vector Machine
 ## Logistic Regression
-### Approach Following Maximum Likelyhood Estimation principle.
-ML
+### Approach Following Maximum Likelihood Estimation principle.
+A method for determining the parameters of a distribution model following MLE principle will
+
 ## Neural Networks
 ### Initialization
 - As a first step before the training starts, **the initialization of the network's nodes weights needs to** ***break the symmetry***. 
 For example, in a fully connected MLP (Multi Layer Perceptron  having each of its nodes of layer *l* connected to every node of layer *l-1*) the nodes need to differs between each other in term of weights to avoid that the error propagation updates every nodes in the exact same way, making the network become just a slow Perceptron.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDY2MTc3NywtNDEwMzM4NDM2LDMzOTAyOT
-U1MywtMTIwMTUxMjI2NSwxNzEwMTA0NDIsMTkzMTA2MzIzMiwx
-MzY2ODIwNzU3LC0xNTEyNzAzNTExLDE2MTMzNDM0NDUsMTYwMj
-c1MjMxMSwxNjIyNzM0OTYyLC0yMTE0MTI0MTY1LC0xODk2MzYy
-MzE3LC0xMDU4MTI4NTAsLTE0NTYxNTA0NzUsMTU2MDQwNzg5OV
-19
+eyJoaXN0b3J5IjpbMzkyMzEzMjIwLC00MTAzMzg0MzYsMzM5MD
+I5NTUzLC0xMjAxNTEyMjY1LDE3MTAxMDQ0MiwxOTMxMDYzMjMy
+LDEzNjY4MjA3NTcsLTE1MTI3MDM1MTEsMTYxMzM0MzQ0NSwxNj
+AyNzUyMzExLDE2MjI3MzQ5NjIsLTIxMTQxMjQxNjUsLTE4OTYz
+NjIzMTcsLTEwNTgxMjg1MCwtMTQ1NjE1MDQ3NSwxNTYwNDA3OD
+k5XX0=
 -->
