@@ -260,8 +260,8 @@ $$L:  (y, ŷ) \mapsto -(y^{(i)}.log(ŷ^{(i)}) + (1-y^{(i)}).log(1 - ŷ^{(i)}))$$
 import numpy as np
 
 # dims
-nx = 2
-m = 20
+nx = 2  # number of features
+m = 20  # number of samples
 
 # training data:
 X = np.random.randint(-99, 100, (nx, m))  # nx x m
@@ -292,11 +292,11 @@ print(f"accurancy={np.sum(logit(np.dot(w.T, X) + b) - y < 0.5)/m}")
 - As a first step before the training starts, **the initialization of the network's nodes weights needs to** ***break the symmetry***. 
 For example, in a fully connected MLP (Multi Layer Perceptron  having each of its nodes of layer *l* connected to every node of layer *l-1*) the nodes need to differs between each other in term of weights to avoid that the error propagation updates every nodes in the exact same way, making the network become just a slow Perceptron.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk0MDg4MzM4NCwxOTIxNTc0NjYxLDExOT
-M4NjcxODMsNzYwMTYxNzU0LC00MTAzMzg0MzYsMzM5MDI5NTUz
-LC0xMjAxNTEyMjY1LDE3MTAxMDQ0MiwxOTMxMDYzMjMyLDEzNj
-Y4MjA3NTcsLTE1MTI3MDM1MTEsMTYxMzM0MzQ0NSwxNjAyNzUy
-MzExLDE2MjI3MzQ5NjIsLTIxMTQxMjQxNjUsLTE4OTYzNjIzMT
-csLTEwNTgxMjg1MCwtMTQ1NjE1MDQ3NSwxNTYwNDA3ODk5XX0=
+eyJoaXN0b3J5IjpbLTE0NzY4MDkxODAsMTkyMTU3NDY2MSwxMT
+kzODY3MTgzLDc2MDE2MTc1NCwtNDEwMzM4NDM2LDMzOTAyOTU1
+MywtMTIwMTUxMjI2NSwxNzEwMTA0NDIsMTkzMTA2MzIzMiwxMz
+Y2ODIwNzU3LC0xNTEyNzAzNTExLDE2MTMzNDM0NDUsMTYwMjc1
+MjMxMSwxNjIyNzM0OTYyLC0yMTE0MTI0MTY1LC0xODk2MzYyMz
+E3LC0xMDU4MTI4NTAsLTE0NTYxNTA0NzUsMTU2MDQwNzg5OV19
 
 -->
