@@ -257,6 +257,7 @@ $$L:  (y, ŷ) \mapsto -(y^{(i)}.log(ŷ^{(i)}) + (1-y^{(i)}).log(1 - ŷ^{(i)}))$$
 ### Python vectorized minimalist implementation (inspired by Andrew Ng course)
 ```python
 # A vectorized logistic regression implem, with MLE compliant cost function
+
 import numpy as np
 
 # dims
@@ -297,10 +298,10 @@ print(f"accurancy={accuracy*100}%")
 - As a first step before the training starts, **the initialization of the network's nodes weights needs to** ***break the symmetry***. 
 For example, in a fully connected MLP (Multi Layer Perceptron  having each of its nodes of layer *l* connected to every node of layer *l-1*) the nodes need to differs between each other in term of weights to avoid that the error propagation updates every nodes in the exact same way, making the network become just a slow Perceptron.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMDk5OTU2ODksMTE5Mzg2NzE4Myw3Nj
-AxNjE3NTQsLTQxMDMzODQzNiwzMzkwMjk1NTMsLTEyMDE1MTIy
-NjUsMTcxMDEwNDQyLDE5MzEwNjMyMzIsMTM2NjgyMDc1NywtMT
-UxMjcwMzUxMSwxNjEzMzQzNDQ1LDE2MDI3NTIzMTEsMTYyMjcz
-NDk2MiwtMjExNDEyNDE2NSwtMTg5NjM2MjMxNywtMTA1ODEyOD
-UwLC0xNDU2MTUwNDc1LDE1NjA0MDc4OTldfQ==
+eyJoaXN0b3J5IjpbMTkyMTU3NDY2MSwxMTkzODY3MTgzLDc2MD
+E2MTc1NCwtNDEwMzM4NDM2LDMzOTAyOTU1MywtMTIwMTUxMjI2
+NSwxNzEwMTA0NDIsMTkzMTA2MzIzMiwxMzY2ODIwNzU3LC0xNT
+EyNzAzNTExLDE2MTMzNDM0NDUsMTYwMjc1MjMxMSwxNjIyNzM0
+OTYyLC0yMTE0MTI0MTY1LC0xODk2MzYyMzE3LC0xMDU4MTI4NT
+AsLTE0NTYxNTA0NzUsMTU2MDQwNzg5OV19
 -->
