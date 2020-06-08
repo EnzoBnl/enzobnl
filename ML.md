@@ -257,15 +257,14 @@ $$L:  (y, ŷ) \mapsto -(y^{(i)}.log(ŷ^{(i)}) + (1-y^{(i)}).log(1 - ŷ^{(i)}))$$
 ### Python vectorized minimalist implementation (inspired by Andrew Ng course)
 ```python
 # A vectorized logistic regression implem, with MLE compliant cost function
-
 import numpy as np
 
 # dims
 nx = 2
 m = 20
 
-# training data: there is a trivial linear dependency between X and y
-X = np.random.randint(-99, 100, (nx, 100))  # nx x m
+# training data:
+X = np.random.randint(-99, 100, (nx, m))  # nx x m
 y = (np.dot(X.T, np.array([5, -1])) > 0).astype(np.int16)  # 1 x m
 
 # vectorized logit function
@@ -285,12 +284,7 @@ def learn(X, y, alpha, n_iter):
 w, b = learn(X, y, 0.01, 10)
 print(f"learned parameters:\nw={w}\nb={b}")
 
-    
-def y_hat(w, b, x):
-    return logit(np.dot(w.T, x) + b)
-
-accuracy = sum([abs(y_hat(w, b, X[:, i]) - y[i]) < 0.5 for i in range(m)])/m
-print(f"accurancy={accuracy*100}%")
+print(f"accurancy={np.sum(logit(np.dot(w.T, X) + b) - y < 0.5)/m}")
 ```
 
 ## Neural Networks
@@ -298,10 +292,11 @@ print(f"accurancy={accuracy*100}%")
 - As a first step before the training starts, **the initialization of the network's nodes weights needs to** ***break the symmetry***. 
 For example, in a fully connected MLP (Multi Layer Perceptron  having each of its nodes of layer *l* connected to every node of layer *l-1*) the nodes need to differs between each other in term of weights to avoid that the error propagation updates every nodes in the exact same way, making the network become just a slow Perceptron.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkyMTU3NDY2MSwxMTkzODY3MTgzLDc2MD
-E2MTc1NCwtNDEwMzM4NDM2LDMzOTAyOTU1MywtMTIwMTUxMjI2
-NSwxNzEwMTA0NDIsMTkzMTA2MzIzMiwxMzY2ODIwNzU3LC0xNT
-EyNzAzNTExLDE2MTMzNDM0NDUsMTYwMjc1MjMxMSwxNjIyNzM0
-OTYyLC0yMTE0MTI0MTY1LC0xODk2MzYyMzE3LC0xMDU4MTI4NT
-AsLTE0NTYxNTA0NzUsMTU2MDQwNzg5OV19
+eyJoaXN0b3J5IjpbLTk0MDg4MzM4NCwxOTIxNTc0NjYxLDExOT
+M4NjcxODMsNzYwMTYxNzU0LC00MTAzMzg0MzYsMzM5MDI5NTUz
+LC0xMjAxNTEyMjY1LDE3MTAxMDQ0MiwxOTMxMDYzMjMyLDEzNj
+Y4MjA3NTcsLTE1MTI3MDM1MTEsMTYxMzM0MzQ0NSwxNjAyNzUy
+MzExLDE2MjI3MzQ5NjIsLTIxMTQxMjQxNjUsLTE4OTYzNjIzMT
+csLTEwNTgxMjg1MCwtMTQ1NjE1MDQ3NSwxNTYwNDA3ODk5XX0=
+
 -->
