@@ -227,7 +227,13 @@ The split train-validation inside outer train set must follow the same logic.
 ### Maximum Likelihood Estimation principle.
 **MLE**: A method for determining a distribution model follows MLE principle *iif* it  tries to find parameters that make the studied distribution be as probable as possible for the built model.
 
-**Logistic Regression**: Let's consider a use case of binary classification, being given a matrix $X\in R^{n_x\times m}$ of samples (as columns) and binary labels $y \in \{0, 1\}^m$. The logistic regression learning uses a gradient descent to fit parameters $w, b\in R^{n_x}$  so that the model prediction for the $i^{th}$ sample is $p(y^{(i)}|X^{(i)}) = {ŷ^{(i)}}^{y^{(i)}}.(1 - ŷ^{(i)})^{1-y^{(i)}}$, with $ŷ=logit(w^T.X + b)$, with $logit: z \rightarrow \frac{1}{1+e^{-z}}$. 
+**Logistic Regression**: Let's consider a use case of binary classification, being given a matrix $X\in R^{n_x\times m}$ of samples (as columns) and binary labels $y \in \{0, 1\}^m$. The logistic regression learning uses a gradient descent to fit parameters $w, b\in R^{n_x}$  so that the model prediction for the $i^{th}$ sample is:
+
+$$p(y^{(i)}|X^{(i)}) = {ŷ^{(i)}}^{y^{(i)}}.(1 - ŷ^{(i)})^{1-y^{(i)}}$$
+
+with:
+- $ŷ=logit(w^T.X + b)$
+- $logit: z \rightarrow \frac{1}{1+e^{-z}}$. 
 
 The MLE principle wants the algorithm to maximize the $likelihood = \prod_{i=1}^{m} p(y^{(i)}|X^{(i)})$ which is **how probable our training samples are from the perspective of our model** (under the assumption that our samples are identically and independently distributed, or IID). Minimizing the likelihood is the same job as minimizing its log, i.e.:
 
@@ -252,10 +258,10 @@ $$l(y, ŷ)=-(y^{(i)}.log(ŷ^{(i)}) + (1-y^{(i)}).log(1 - ŷ^{(i)}))$$
 - As a first step before the training starts, **the initialization of the network's nodes weights needs to** ***break the symmetry***. 
 For example, in a fully connected MLP (Multi Layer Perceptron  having each of its nodes of layer *l* connected to every node of layer *l-1*) the nodes need to differs between each other in term of weights to avoid that the error propagation updates every nodes in the exact same way, making the network become just a slow Perceptron.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0ODQ4MDE0MzksLTQxMDMzODQzNiwzMz
-kwMjk1NTMsLTEyMDE1MTIyNjUsMTcxMDEwNDQyLDE5MzEwNjMy
-MzIsMTM2NjgyMDc1NywtMTUxMjcwMzUxMSwxNjEzMzQzNDQ1LD
-E2MDI3NTIzMTEsMTYyMjczNDk2MiwtMjExNDEyNDE2NSwtMTg5
-NjM2MjMxNywtMTA1ODEyODUwLC0xNDU2MTUwNDc1LDE1NjA0MD
-c4OTldfQ==
+eyJoaXN0b3J5IjpbMTQxMDY5MTg1LC00MTAzMzg0MzYsMzM5MD
+I5NTUzLC0xMjAxNTEyMjY1LDE3MTAxMDQ0MiwxOTMxMDYzMjMy
+LDEzNjY4MjA3NTcsLTE1MTI3MDM1MTEsMTYxMzM0MzQ0NSwxNj
+AyNzUyMzExLDE2MjI3MzQ5NjIsLTIxMTQxMjQxNjUsLTE4OTYz
+NjIzMTcsLTEwNTgxMjg1MCwtMTQ1NjE1MDQ3NSwxNTYwNDA3OD
+k5XX0=
 -->
