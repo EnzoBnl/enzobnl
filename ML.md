@@ -225,7 +225,7 @@ The split train-validation inside outer train set must follow the same logic.
 ## Support Vector Machine
 ## Logistic Regression
 ### MLE oriented Logistic Regression
-**MLE**: A method for determining a distribution model follows MLE principle *iif* it  tries to find parameters that make the studied distribution be as probable as possible for the built model.
+**Maximum Likelihood Estimation**: A method for determining a distribution model follows MLE principle *iif* it  tries to find parameters that make the studied distribution be as probable as possible for the built model.
 
 **Logistic Regression**: Let's consider a use case of binary classification, being given a matrix $X\in R^{n_x\times m}$ of samples (as columns) and binary labels $y \in \{0, 1\}^m$. The logistic regression learning uses a gradient descent to fit parameters $w, b\in R^{n_x}$  so that the model prediction for the $i^{th}$ sample is:
 
@@ -261,10 +261,10 @@ $$L:  (y, ŷ) \mapsto -(y^{(i)}.log(ŷ^{(i)}) + (1-y^{(i)}).log(1 - ŷ^{(i)}))$$
 - As a first step before the training starts, **the initialization of the network's nodes weights needs to** ***break the symmetry***. 
 For example, in a fully connected MLP (Multi Layer Perceptron  having each of its nodes of layer *l* connected to every node of layer *l-1*) the nodes need to differs between each other in term of weights to avoid that the error propagation updates every nodes in the exact same way, making the network become just a slow Perceptron.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzYwMTYxNzU0LC00MTAzMzg0MzYsMzM5MD
-I5NTUzLC0xMjAxNTEyMjY1LDE3MTAxMDQ0MiwxOTMxMDYzMjMy
-LDEzNjY4MjA3NTcsLTE1MTI3MDM1MTEsMTYxMzM0MzQ0NSwxNj
-AyNzUyMzExLDE2MjI3MzQ5NjIsLTIxMTQxMjQxNjUsLTE4OTYz
-NjIzMTcsLTEwNTgxMjg1MCwtMTQ1NjE1MDQ3NSwxNTYwNDA3OD
-k5XX0=
+eyJoaXN0b3J5IjpbMTE5Mzg2NzE4Myw3NjAxNjE3NTQsLTQxMD
+MzODQzNiwzMzkwMjk1NTMsLTEyMDE1MTIyNjUsMTcxMDEwNDQy
+LDE5MzEwNjMyMzIsMTM2NjgyMDc1NywtMTUxMjcwMzUxMSwxNj
+EzMzQzNDQ1LDE2MDI3NTIzMTEsMTYyMjczNDk2MiwtMjExNDEy
+NDE2NSwtMTg5NjM2MjMxNywtMTA1ODEyODUwLC0xNDU2MTUwND
+c1LDE1NjA0MDc4OTldfQ==
 -->
