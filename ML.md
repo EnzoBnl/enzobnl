@@ -225,17 +225,19 @@ The split train-validation inside outer train set must follow the same logic.
 ## Support Vector Machine
 ## Logistic Regression
 ### Approach Following Maximum Likelihood Estimation principle.
-A method for determining the parameters of a distribution model following MLE principle will
+A method for determining a distribution model following MLE principle will try to find parameters that make the studied distribution be as probable as possible.
+
+The logistic regression
 
 ## Neural Networks
 ### Initialization
 - As a first step before the training starts, **the initialization of the network's nodes weights needs to** ***break the symmetry***. 
 For example, in a fully connected MLP (Multi Layer Perceptron  having each of its nodes of layer *l* connected to every node of layer *l-1*) the nodes need to differs between each other in term of weights to avoid that the error propagation updates every nodes in the exact same way, making the network become just a slow Perceptron.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzkyMzEzMjIwLC00MTAzMzg0MzYsMzM5MD
-I5NTUzLC0xMjAxNTEyMjY1LDE3MTAxMDQ0MiwxOTMxMDYzMjMy
-LDEzNjY4MjA3NTcsLTE1MTI3MDM1MTEsMTYxMzM0MzQ0NSwxNj
-AyNzUyMzExLDE2MjI3MzQ5NjIsLTIxMTQxMjQxNjUsLTE4OTYz
-NjIzMTcsLTEwNTgxMjg1MCwtMTQ1NjE1MDQ3NSwxNTYwNDA3OD
-k5XX0=
+eyJoaXN0b3J5IjpbLTEzNjIzNDk1OTIsLTQxMDMzODQzNiwzMz
+kwMjk1NTMsLTEyMDE1MTIyNjUsMTcxMDEwNDQyLDE5MzEwNjMy
+MzIsMTM2NjgyMDc1NywtMTUxMjcwMzUxMSwxNjEzMzQzNDQ1LD
+E2MDI3NTIzMTEsMTYyMjczNDk2MiwtMjExNDEyNDE2NSwtMTg5
+NjM2MjMxNywtMTA1ODEyODUwLC0xNDU2MTUwNDc1LDE1NjA0MD
+c4OTldfQ==
 -->
