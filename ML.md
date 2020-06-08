@@ -229,17 +229,19 @@ A method for determining a distribution model follows MLE principle iif it  trie
 
 Let's consider a use case of binary classification, being given a matrix $X\in R^{n_x\times m}$ of samples (as columns) and binary labels $y \in \{0, 1\}^m$. The logistic regression learning uses a gradient descent to fit parameters $w, b\in R^{n_x}$  so that the model prediction for the $i^{th}$ sample is $p(y|X) = ŷ^y.(1 - ŷ)^{1-y}$, with $ŷ=logit(w^T.X + b)$, with $logit: z \rightarrow \frac{1}{1+e^{-z}}$. 
 
-The MLE principle wants the algorithm to maximize the following quantity $likelihood = \prod_{i=1}^{m} p(y^{(i)}|X^{(i)})$ which is how probable our training samples are for our model (under the assumption that our samples are identically and independently distributed, or IID). Minimizing the likelihood is the same job as minimizing its log, which become $log(likelyhood) = \prod_{i=1}^m $
+The MLE principle wants the algorithm to maximize the following quantity $likelihood = \prod_{i=1}^{m} p(y^{(i)}|X^{(i)})$ which is how probable our training samples are for our model (under the assumption that our samples are identically and independently distributed, or IID). Minimizing the likelihood is the same job as minimizing its log, i.e.:
+ $$log(likelyhood) = \sum_{i=1}^m log(p(y^{(i)}|X^{(i)}))$$
+ $$log(likelyhood) = \sum_{i=1}^m log(p(y^{(i)}|X^{(i)}))$$
 
 ## Neural Networks
 ### Initialization
 - As a first step before the training starts, **the initialization of the network's nodes weights needs to** ***break the symmetry***. 
 For example, in a fully connected MLP (Multi Layer Perceptron  having each of its nodes of layer *l* connected to every node of layer *l-1*) the nodes need to differs between each other in term of weights to avoid that the error propagation updates every nodes in the exact same way, making the network become just a slow Perceptron.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxNDQxNzcxNzEsLTQxMDMzODQzNiwzMz
-kwMjk1NTMsLTEyMDE1MTIyNjUsMTcxMDEwNDQyLDE5MzEwNjMy
-MzIsMTM2NjgyMDc1NywtMTUxMjcwMzUxMSwxNjEzMzQzNDQ1LD
-E2MDI3NTIzMTEsMTYyMjczNDk2MiwtMjExNDEyNDE2NSwtMTg5
-NjM2MjMxNywtMTA1ODEyODUwLC0xNDU2MTUwNDc1LDE1NjA0MD
-c4OTldfQ==
+eyJoaXN0b3J5IjpbMTYwMzc0NTM4OSwtNDEwMzM4NDM2LDMzOT
+AyOTU1MywtMTIwMTUxMjI2NSwxNzEwMTA0NDIsMTkzMTA2MzIz
+MiwxMzY2ODIwNzU3LC0xNTEyNzAzNTExLDE2MTMzNDM0NDUsMT
+YwMjc1MjMxMSwxNjIyNzM0OTYyLC0yMTE0MTI0MTY1LC0xODk2
+MzYyMzE3LC0xMDU4MTI4NTAsLTE0NTYxNTA0NzUsMTU2MDQwNz
+g5OV19
 -->
