@@ -229,14 +229,14 @@ A method for determining a distribution model follows MLE principle iif it  trie
 
 Let's consider a use case of binary classification, being given a matrix $X\in R^{n_x\times m}$ of samples (as columns) and binary labels $y \in \{0, 1\}^m$. The logistic regression learning uses a gradient descent to fit parameters $w, b\in R^{n_x}$  so that the model prediction for the $i^{th}$ sample is $p(y|X) = ŷ^y.(1 - ŷ)^{1-y}$, with $ŷ=logit(w^T.X + b)$, with $logit: z \rightarrow \frac{1}{1+e^{-z}}$. 
 
-The MLE principle wants the algorithm to maximize the following quantity called likelihood $\prod_{i=1}^{m} p(y^{(i)}|X^{(i)}$ which is the probability that our 
+The MLE principle wants the algorithm to maximize the following quantity called likelihood $\prod_{i=1}^{m} p(y^{(i)}|X^{(i)}$ which is the probability that our training set exists under the assumption that our samples are identically and independently distributed (IID)
 
 ## Neural Networks
 ### Initialization
 - As a first step before the training starts, **the initialization of the network's nodes weights needs to** ***break the symmetry***. 
 For example, in a fully connected MLP (Multi Layer Perceptron  having each of its nodes of layer *l* connected to every node of layer *l-1*) the nodes need to differs between each other in term of weights to avoid that the error propagation updates every nodes in the exact same way, making the network become just a slow Perceptron.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIzOTk3NTI2NSwtNDEwMzM4NDM2LDMzOT
+eyJoaXN0b3J5IjpbLTM2NDM0NDI4MSwtNDEwMzM4NDM2LDMzOT
 AyOTU1MywtMTIwMTUxMjI2NSwxNzEwMTA0NDIsMTkzMTA2MzIz
 MiwxMzY2ODIwNzU3LC0xNTEyNzAzNTExLDE2MTMzNDM0NDUsMT
 YwMjc1MjMxMSwxNjIyNzM0OTYyLC0yMTE0MTI0MTY1LC0xODk2
