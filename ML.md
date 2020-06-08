@@ -224,7 +224,7 @@ The split train-validation inside outer train set must follow the same logic.
 ### MARS
 ## Support Vector Machine
 ## Logistic Regression
-### How to ake a MLE oriented Logistic Regression
+### MLE oriented Logistic Regression
 **MLE**: A method for determining a distribution model follows MLE principle *iif* it  tries to find parameters that make the studied distribution be as probable as possible for the built model.
 
 **Logistic Regression**: Let's consider a use case of binary classification, being given a matrix $X\in R^{n_x\times m}$ of samples (as columns) and binary labels $y \in \{0, 1\}^m$. The logistic regression learning uses a gradient descent to fit parameters $w, b\in R^{n_x}$  so that the model prediction for the $i^{th}$ sample is:
@@ -259,10 +259,10 @@ $$l(y, ŷ)=-(y^{(i)}.log(ŷ^{(i)}) + (1-y^{(i)}).log(1 - ŷ^{(i)}))$$
 - As a first step before the training starts, **the initialization of the network's nodes weights needs to** ***break the symmetry***. 
 For example, in a fully connected MLP (Multi Layer Perceptron  having each of its nodes of layer *l* connected to every node of layer *l-1*) the nodes need to differs between each other in term of weights to avoid that the error propagation updates every nodes in the exact same way, making the network become just a slow Perceptron.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzEzOTg0MzA3LC00MTAzMzg0MzYsMzM5MD
-I5NTUzLC0xMjAxNTEyMjY1LDE3MTAxMDQ0MiwxOTMxMDYzMjMy
-LDEzNjY4MjA3NTcsLTE1MTI3MDM1MTEsMTYxMzM0MzQ0NSwxNj
-AyNzUyMzExLDE2MjI3MzQ5NjIsLTIxMTQxMjQxNjUsLTE4OTYz
-NjIzMTcsLTEwNTgxMjg1MCwtMTQ1NjE1MDQ3NSwxNTYwNDA3OD
-k5XX0=
+eyJoaXN0b3J5IjpbMTc3NjA3MDE2MCwtNDEwMzM4NDM2LDMzOT
+AyOTU1MywtMTIwMTUxMjI2NSwxNzEwMTA0NDIsMTkzMTA2MzIz
+MiwxMzY2ODIwNzU3LC0xNTEyNzAzNTExLDE2MTMzNDM0NDUsMT
+YwMjc1MjMxMSwxNjIyNzM0OTYyLC0yMTE0MTI0MTY1LC0xODk2
+MzYyMzE3LC0xMDU4MTI4NTAsLTE0NTYxNTA0NzUsMTU2MDQwNz
+g5OV19
 -->
