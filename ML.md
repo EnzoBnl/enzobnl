@@ -294,17 +294,17 @@ Computation of the activation values on the entire training set $X \in R^{n_x \t
 
 $$A^{[k]} = activationFunction(W^{[k]}.X + b^{[k]})$$
 
-Note: $+ b^{[k]}$ uses vector broadcasting (numpy vocabulary), that is basically a content copy that makes dimensions match and allow matrix addition.
+Note: $+ b^{[k]}$ uses vector broadcasting convention (numpy vocabulary), that is basically a content copy that makes dimensions match and allow matrix addition.
 
 ### Initialization
 - As a first step before the training starts, **the initialization of the network's nodes weights needs to** ***break the symmetry***. 
 For example, in a fully connected MLP (Multi Layer Perceptron  having each of its nodes of layer *l* connected to every node of layer *l-1*) the nodes need to differs between each other in term of weights to avoid that the error propagation updates every nodes in the exact same way, making the network become just a slow Perceptron.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDY5NTk1OTMxLC0xMzgwNjQ0NDQ1LC0yMD
-U5MzE4Mjg4LC0xNDc2ODA5MTgwLDE5MjE1NzQ2NjEsMTE5Mzg2
-NzE4Myw3NjAxNjE3NTQsLTQxMDMzODQzNiwzMzkwMjk1NTMsLT
-EyMDE1MTIyNjUsMTcxMDEwNDQyLDE5MzEwNjMyMzIsMTM2Njgy
-MDc1NywtMTUxMjcwMzUxMSwxNjEzMzQzNDQ1LDE2MDI3NTIzMT
-EsMTYyMjczNDk2MiwtMjExNDEyNDE2NSwtMTg5NjM2MjMxNywt
-MTA1ODEyODUwXX0=
+eyJoaXN0b3J5IjpbMTEwMDI2MzE4NCwtMTM4MDY0NDQ0NSwtMj
+A1OTMxODI4OCwtMTQ3NjgwOTE4MCwxOTIxNTc0NjYxLDExOTM4
+NjcxODMsNzYwMTYxNzU0LC00MTAzMzg0MzYsMzM5MDI5NTUzLC
+0xMjAxNTEyMjY1LDE3MTAxMDQ0MiwxOTMxMDYzMjMyLDEzNjY4
+MjA3NTcsLTE1MTI3MDM1MTEsMTYxMzM0MzQ0NSwxNjAyNzUyMz
+ExLDE2MjI3MzQ5NjIsLTIxMTQxMjQxNjUsLTE4OTYzNjIzMTcs
+LTEwNTgxMjg1MF19
 -->
