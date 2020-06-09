@@ -13,7 +13,7 @@
 
 -> Action to (re)write code to leverage the **SIMD (Single Instruction, Multiple Data)** capacities of your hardware, either by writing code sufficiently straightforward to be **auto-vertorizable** by your medium/high level language compiler (C, C++) or by using **dedicated libraries in these languages (SSE)**. 
 
-Under the hood, the assembly code generated will use specific SIMD instructions that can apply a given transformation at the same time on up to all the data (typically subsequence of an array) present in a given register.
+Under the hood, the assembly code generated will use specific SIMD instructions that can **apply a given transformation at the same time on up to all the data** (typically subsequence of an array) **present in a given register**.
 
 ## Asymptotic analysis
 
@@ -256,9 +256,9 @@ The difference is in which libraries are used. In order to use OS stuff (I/O for
 4. Master 1 to 3 specialized frameworks: Node.js, React, Spark, Kubernetes, Unity...
 5. Practice with CI/CD & cloud
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzI3MDQ4ODY2LDcyODE1MjQ3NywtMTYzMT
-Y5MTc5OSwxMTIyNzQ5MDAxLC0xNTMyMTQwNDU5LC0xNDQxODE1
-NDM5LDE0NzM5NTg0NDEsMTQ3Mzk1ODQ0MSwtMTY1MDY0MTA4OC
-wtMjA4ODU0NTUwNiwxMjY1Mjc2NzEsMTYxMzEzNjcxMSwtMjAz
-NzkwOTg3OSwtMTk4MTYyMjc3MywyNzE2MTc4MjZdfQ==
+eyJoaXN0b3J5IjpbMTg5MjA4MzM2Miw3MjgxNTI0NzcsLTE2Mz
+E2OTE3OTksMTEyMjc0OTAwMSwtMTUzMjE0MDQ1OSwtMTQ0MTgx
+NTQzOSwxNDczOTU4NDQxLDE0NzM5NTg0NDEsLTE2NTA2NDEwOD
+gsLTIwODg1NDU1MDYsMTI2NTI3NjcxLDE2MTMxMzY3MTEsLTIw
+Mzc5MDk4NzksLTE5ODE2MjI3NzMsMjcxNjE3ODI2XX0=
 -->
