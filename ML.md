@@ -290,19 +290,19 @@ print(f"accurancy={np.sum(logit(np.dot(w.T, X) + b) - y < 0.5)/m}")
 ## Neural Networks
 ### Matrix representations
 #### Forward propagation
-Computation of the activation on the entire training set for all the units in the $i^{th}$ layer:
+Computation of the activation on the entire training set $X \in R^{n_x \times m}$ for all the units in the $k^{th}$ layer:
 
-$$A^{[i]} = activationFunction(W^{[i]})$$
+$$A^{[k]} = activationFunction(W^{[k]}.X + B), A^{[k]} \in$$
 
 ### Initialization
 - As a first step before the training starts, **the initialization of the network's nodes weights needs to** ***break the symmetry***. 
 For example, in a fully connected MLP (Multi Layer Perceptron  having each of its nodes of layer *l* connected to every node of layer *l-1*) the nodes need to differs between each other in term of weights to avoid that the error propagation updates every nodes in the exact same way, making the network become just a slow Perceptron.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3ODE4MjA4NDUsLTE0NzY4MDkxODAsMT
-kyMTU3NDY2MSwxMTkzODY3MTgzLDc2MDE2MTc1NCwtNDEwMzM4
-NDM2LDMzOTAyOTU1MywtMTIwMTUxMjI2NSwxNzEwMTA0NDIsMT
-kzMTA2MzIzMiwxMzY2ODIwNzU3LC0xNTEyNzAzNTExLDE2MTMz
-NDM0NDUsMTYwMjc1MjMxMSwxNjIyNzM0OTYyLC0yMTE0MTI0MT
-Y1LC0xODk2MzYyMzE3LC0xMDU4MTI4NTAsLTE0NTYxNTA0NzUs
-MTU2MDQwNzg5OV19
+eyJoaXN0b3J5IjpbMTc1NTkzNjE0NCwtMTQ3NjgwOTE4MCwxOT
+IxNTc0NjYxLDExOTM4NjcxODMsNzYwMTYxNzU0LC00MTAzMzg0
+MzYsMzM5MDI5NTUzLC0xMjAxNTEyMjY1LDE3MTAxMDQ0MiwxOT
+MxMDYzMjMyLDEzNjY4MjA3NTcsLTE1MTI3MDM1MTEsMTYxMzM0
+MzQ0NSwxNjAyNzUyMzExLDE2MjI3MzQ5NjIsLTIxMTQxMjQxNj
+UsLTE4OTYzNjIzMTcsLTEwNTgxMjg1MCwtMTQ1NjE1MDQ3NSwx
+NTYwNDA3ODk5XX0=
 -->
