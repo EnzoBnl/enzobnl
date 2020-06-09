@@ -290,12 +290,12 @@ print(f"accurancy={np.sum(logit(np.dot(w.T, X) + b) - y < 0.5)/m}")
 ## Neural Networks
 ### Matrix representations
 #### Vectorizable forward propagation using matrix representations
-Computation of the activation values on the entire training set $X \in R^{n^{[k-1]} \times m}$ for all the $n_u$ units in the $k^{th}$ layer whose weights are stacked in $W^{[k]} \in R^{n^{[k]} \times ^{[k-1]}}$, noted $A^{[k]} \in R^{n^{[k]} \times m}$ :
+Computation of the activation values on the entire training set $X \in R^{n^{[k-1]} \times m}$ for all the $n_u$ units in the $k^{th}$ layer whose weights are stacked in $W^{[k]} \in R^{n^{[k]} \times n^{[k-1]}}$, noted $A^{[k]} \in R^{n^{[k]} \times m}$ :
 
-$$A^{[k]} = g^{[k]}(W^{[k]}.X + b^{[k]})$$
+$$A^{[k]} = g^{[k]}(W^{[k]}.A^{[k-1]} + b^{[k]})$$
 
 Notes:
-- $$A^{[0]} = X$
+- $A^{[0]} = X$
 - $g^{[k]}$ is the *activation function* of the units in the $k^{th}$ layer (logit, tanh, REctified Linear Unit, Leaky RELU, etc...).
 - $+ b^{[k]}$ uses vector broadcasting convention (numpy vocabulary), that is basically a content copy that makes dimensions match and allow matrix addition.
 
@@ -303,7 +303,7 @@ Notes:
 - As a first step before the training starts, **the initialization of the network's nodes weights needs to** ***break the symmetry***. 
 For example, in a fully connected MLP (Multi Layer Perceptron  having each of its nodes of layer *l* connected to every node of layer *l-1*) the nodes need to differs between each other in term of weights to avoid that the error propagation updates every nodes in the exact same way, making the network become just a slow Perceptron.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIxMDg2NTQ5OSwtMTExOTEzNjA0LDM0NT
+eyJoaXN0b3J5IjpbLTYxNDA4NzU0MywtMTExOTEzNjA0LDM0NT
 A0MTk0LC0xOTYyNTk3Mjk0LC0xNTYyNDY4MzEzLDExMDAyNjMx
 ODQsLTEzODA2NDQ0NDUsLTIwNTkzMTgyODgsLTE0NzY4MDkxOD
 AsMTkyMTU3NDY2MSwxMTkzODY3MTgzLDc2MDE2MTc1NCwtNDEw
