@@ -9,7 +9,7 @@
 # Diverse themes
 
 ## Vectorization
-Write code that leverage the SIMD (Single Instruction capacities of your hardware, either by writing code that can be auto-vertorized by your "
+Write code that leverage the SIMD (Single Instruction capacities of your hardware, either by writing code that can be auto-vertorized by a medium/high level language compiler (C, C++) or by using dedicated libraries in this languages. Under the hood, the assembly code generated will use specific SIMD instructions.
 
 ## Asymptotic analysis
 
@@ -252,7 +252,7 @@ The difference is in which libraries are used. In order to use OS stuff (I/O for
 4. Master 1 to 3 specialized frameworks: Node.js, React, Spark, Kubernetes, Unity...
 5. Practice with CI/CD & cloud
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNjQ3OTQ1MTMsNzI4MTUyNDc3LC0xNj
+eyJoaXN0b3J5IjpbLTE1NTM4OTk2NjYsNzI4MTUyNDc3LC0xNj
 MxNjkxNzk5LDExMjI3NDkwMDEsLTE1MzIxNDA0NTksLTE0NDE4
 MTU0MzksMTQ3Mzk1ODQ0MSwxNDczOTU4NDQxLC0xNjUwNjQxMD
 g4LC0yMDg4NTQ1NTA2LDEyNjUyNzY3MSwxNjEzMTM2NzExLC0y
