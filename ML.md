@@ -290,11 +290,12 @@ print(f"accurancy={np.sum(logit(np.dot(w.T, X) + b) - y < 0.5)/m}")
 ## Neural Networks
 ### Matrix representations
 #### Vectorizable forward propagation using matrix representations
-Computation of the activation values on the entire training set $X \in R^{n_x \times m}$ for all the $n_u$ units in the $k^{th}$ layer whose weights are stacked in $W^{[k]} \in R^{n_u \times n_x}$, noted $A^{[k]} \in R^{n_u \times m}$ :
+Computation of the activation values on the entire training set $X \in R^{n^{[k-1]} \times m}$ for all the $n_u$ units in the $k^{th}$ layer whose weights are stacked in $W^{[k]} \in R^{n^{[k]} \times ^{[k-1]}}$, noted $A^{[k]} \in R^{n^{[k]} \times m}$ :
 
 $$A^{[k]} = g^{[k]}(W^{[k]}.X + b^{[k]})$$
 
 Notes:
+- $$A^{[0]} = X$
 - $g^{[k]}$ is the *activation function* of the units in the $k^{th}$ layer (logit, tanh, REctified Linear Unit, Leaky RELU, etc...).
 - $+ b^{[k]}$ uses vector broadcasting convention (numpy vocabulary), that is basically a content copy that makes dimensions match and allow matrix addition.
 
@@ -302,11 +303,11 @@ Notes:
 - As a first step before the training starts, **the initialization of the network's nodes weights needs to** ***break the symmetry***. 
 For example, in a fully connected MLP (Multi Layer Perceptron  having each of its nodes of layer *l* connected to every node of layer *l-1*) the nodes need to differs between each other in term of weights to avoid that the error propagation updates every nodes in the exact same way, making the network become just a slow Perceptron.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMTkxMzYwNCwzNDUwNDE5NCwtMTk2Mj
-U5NzI5NCwtMTU2MjQ2ODMxMywxMTAwMjYzMTg0LC0xMzgwNjQ0
-NDQ1LC0yMDU5MzE4Mjg4LC0xNDc2ODA5MTgwLDE5MjE1NzQ2Nj
-EsMTE5Mzg2NzE4Myw3NjAxNjE3NTQsLTQxMDMzODQzNiwzMzkw
-Mjk1NTMsLTEyMDE1MTIyNjUsMTcxMDEwNDQyLDE5MzEwNjMyMz
-IsMTM2NjgyMDc1NywtMTUxMjcwMzUxMSwxNjEzMzQzNDQ1LDE2
-MDI3NTIzMTFdfQ==
+eyJoaXN0b3J5IjpbMTIxMDg2NTQ5OSwtMTExOTEzNjA0LDM0NT
+A0MTk0LC0xOTYyNTk3Mjk0LC0xNTYyNDY4MzEzLDExMDAyNjMx
+ODQsLTEzODA2NDQ0NDUsLTIwNTkzMTgyODgsLTE0NzY4MDkxOD
+AsMTkyMTU3NDY2MSwxMTkzODY3MTgzLDc2MDE2MTc1NCwtNDEw
+MzM4NDM2LDMzOTAyOTU1MywtMTIwMTUxMjI2NSwxNzEwMTA0ND
+IsMTkzMTA2MzIzMiwxMzY2ODIwNzU3LC0xNTEyNzAzNTExLDE2
+MTMzNDM0NDVdfQ==
 -->
