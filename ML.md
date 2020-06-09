@@ -294,13 +294,13 @@ Computation of the activation values on the entire training set $X \in R^{n_x \t
 
 $$A^{[k]} = activationFunction(W^{[k]}.X + b^{[k]})$$
 
-Note: $+ b^{[k]}$ uses vertor bro
+Note: $+ b^{[k]}$ uses vector broadcasting (numpy vocabulary), that is basically a content copy ot make dimensions match and allow matrix addition.
 
 ### Initialization
 - As a first step before the training starts, **the initialization of the network's nodes weights needs to** ***break the symmetry***. 
 For example, in a fully connected MLP (Multi Layer Perceptron  having each of its nodes of layer *l* connected to every node of layer *l-1*) the nodes need to differs between each other in term of weights to avoid that the error propagation updates every nodes in the exact same way, making the network become just a slow Perceptron.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMyODMyOTY0NSwtMTM4MDY0NDQ0NSwtMj
+eyJoaXN0b3J5IjpbMTIwNTgxOTkwOCwtMTM4MDY0NDQ0NSwtMj
 A1OTMxODI4OCwtMTQ3NjgwOTE4MCwxOTIxNTc0NjYxLDExOTM4
 NjcxODMsNzYwMTYxNzU0LC00MTAzMzg0MzYsMzM5MDI5NTUzLC
 0xMjAxNTEyMjY1LDE3MTAxMDQ0MiwxOTMxMDYzMjMyLDEzNjY4
