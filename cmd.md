@@ -198,6 +198,13 @@ java -classpath bin <className>
 javac -o ...
 ```
 ## Build/IDEs/VCS
+### Gradle
+```
+# build without test
+gradle build -x <test task>
+# test only 
+```
+
 ### Maven:
 ```
 //one java/scala test:
@@ -322,11 +329,11 @@ c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex 
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTczNDk0ODE3MCw4NjAzMjM3OTEsLTE3Mz
-AwNDcxMzMsLTY1NjIyNTkzMSwxNTc0NjQzNTYzLC0xODE0NjA5
-OTMzLC00NTQ0NDc0ODksLTIwNTcyNzQxMzcsMTgwNDc4MzU4OS
-w0NTk0NjgyNiwyMDk2NDUzMzk2LC01NTAxNjgzNDIsLTE5NTM3
-NjM5NzksMTEwMDA2NzUxMiwtMTAxNDgyNzI3MywtMTQxNjAxMj
-I3MSwxMzAxOTQ3NzAsLTUyMTM3MTA0MywxMTc4MTYzODAsMjkw
-MTIwNzc0XX0=
+eyJoaXN0b3J5IjpbMTMwNTI0MTY0NywxNzM0OTQ4MTcwLDg2MD
+MyMzc5MSwtMTczMDA0NzEzMywtNjU2MjI1OTMxLDE1NzQ2NDM1
+NjMsLTE4MTQ2MDk5MzMsLTQ1NDQ0NzQ4OSwtMjA1NzI3NDEzNy
+wxODA0NzgzNTg5LDQ1OTQ2ODI2LDIwOTY0NTMzOTYsLTU1MDE2
+ODM0MiwtMTk1Mzc2Mzk3OSwxMTAwMDY3NTEyLC0xMDE0ODI3Mj
+czLC0xNDE2MDEyMjcxLDEzMDE5NDc3MCwtNTIxMzcxMDQzLDEx
+NzgxNjM4MF19
 -->
