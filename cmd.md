@@ -202,7 +202,7 @@ javac -o ...
 ```
 # build without test
 gradle build -x <test task>
-# run specific test class
+# run specific test classes
 gradle test --tests SomeClassTest
 ```
 
@@ -330,7 +330,7 @@ c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex 
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc2ODgwNDExOCwxNzM0OTQ4MTcwLDg2MD
+eyJoaXN0b3J5IjpbMTI3MzU5NzA5NiwxNzM0OTQ4MTcwLDg2MD
 MyMzc5MSwtMTczMDA0NzEzMywtNjU2MjI1OTMxLDE1NzQ2NDM1
 NjMsLTE4MTQ2MDk5MzMsLTQ1NDQ0NzQ4OSwtMjA1NzI3NDEzNy
 wxODA0NzgzNTg5LDQ1OTQ2ODI2LDIwOTY0NTMzOTYsLTU1MDE2
