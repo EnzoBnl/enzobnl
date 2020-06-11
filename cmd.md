@@ -212,7 +212,7 @@ plugins {
   
 apply plugin : "java"  
 ext {  
-  javaMainClass = "com.oncrawl.analysis.tasks.rad.internallinking.playground.usecases.ClubMedUseCase"  
+  javaMainClass = "com.bla.MyMainClass"  
 }  
   
 application {  
@@ -344,11 +344,11 @@ c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex 
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTUzMzg1NDI1LDEyNzM1OTcwOTYsMTczND
-k0ODE3MCw4NjAzMjM3OTEsLTE3MzAwNDcxMzMsLTY1NjIyNTkz
-MSwxNTc0NjQzNTYzLC0xODE0NjA5OTMzLC00NTQ0NDc0ODksLT
-IwNTcyNzQxMzcsMTgwNDc4MzU4OSw0NTk0NjgyNiwyMDk2NDUz
-Mzk2LC01NTAxNjgzNDIsLTE5NTM3NjM5NzksMTEwMDA2NzUxMi
-wtMTAxNDgyNzI3MywtMTQxNjAxMjI3MSwxMzAxOTQ3NzAsLTUy
-MTM3MTA0M119
+eyJoaXN0b3J5IjpbMTc0Mjg0MzEwOSwxMjczNTk3MDk2LDE3Mz
+Q5NDgxNzAsODYwMzIzNzkxLC0xNzMwMDQ3MTMzLC02NTYyMjU5
+MzEsMTU3NDY0MzU2MywtMTgxNDYwOTkzMywtNDU0NDQ3NDg5LC
+0yMDU3Mjc0MTM3LDE4MDQ3ODM1ODksNDU5NDY4MjYsMjA5NjQ1
+MzM5NiwtNTUwMTY4MzQyLC0xOTUzNzYzOTc5LDExMDAwNjc1MT
+IsLTEwMTQ4MjcyNzMsLTE0MTYwMTIyNzEsMTMwMTk0NzcwLC01
+MjEzNzEwNDNdfQ==
 -->
