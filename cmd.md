@@ -74,6 +74,8 @@ gsutil mv gs://old_name gs://new_name
 ## Terminals
 ### unix
 ```bash
+# create a new session
+sudo adduser <user_name>
 # Disk Usage Analyzer
 sudo baobab
 # du: list folder sizes with a given depth, at bytes level
@@ -167,16 +169,13 @@ sudo rm -r /root/.local/share/Trash/files
 
 ```
 
-### CMD removes :
-```bash
 
-```
 ### PowerShell
 ```
 //display env:
 $env:HADOOP_HOME
-//
-del <fichier>
+// remove file
+del <file>
 //remove directory :
 rd /s /q <directory> 
 ```
@@ -346,11 +345,11 @@ c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex 
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYwMDAxOTA0MSwxNzQyODQzMTA5LDEyNz
-M1OTcwOTYsMTczNDk0ODE3MCw4NjAzMjM3OTEsLTE3MzAwNDcx
-MzMsLTY1NjIyNTkzMSwxNTc0NjQzNTYzLC0xODE0NjA5OTMzLC
-00NTQ0NDc0ODksLTIwNTcyNzQxMzcsMTgwNDc4MzU4OSw0NTk0
-NjgyNiwyMDk2NDUzMzk2LC01NTAxNjgzNDIsLTE5NTM3NjM5Nz
-ksMTEwMDA2NzUxMiwtMTAxNDgyNzI3MywtMTQxNjAxMjI3MSwx
-MzAxOTQ3NzBdfQ==
+eyJoaXN0b3J5IjpbLTE5MzA4MDU5NjUsMTc0Mjg0MzEwOSwxMj
+czNTk3MDk2LDE3MzQ5NDgxNzAsODYwMzIzNzkxLC0xNzMwMDQ3
+MTMzLC02NTYyMjU5MzEsMTU3NDY0MzU2MywtMTgxNDYwOTkzMy
+wtNDU0NDQ3NDg5LC0yMDU3Mjc0MTM3LDE4MDQ3ODM1ODksNDU5
+NDY4MjYsMjA5NjQ1MzM5NiwtNTUwMTY4MzQyLC0xOTUzNzYzOT
+c5LDExMDAwNjc1MTIsLTEwMTQ4MjcyNzMsLTE0MTYwMTIyNzEs
+MTMwMTk0NzcwXX0=
 -->
