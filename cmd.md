@@ -169,14 +169,16 @@ sudo rm -r /root/.local/share/Trash/files
 
 ### CMD removes :
 ```bash
-del <fichier>
-//remove directory :
-rd /s /q <directory> 
+
 ```
 ### PowerShell
 ```
 //display env:
 $env:HADOOP_HOME
+//
+del <fichier>
+//remove directory :
+rd /s /q <directory> 
 ```
 
 ## Java
@@ -344,11 +346,11 @@ c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex 
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc0Mjg0MzEwOSwxMjczNTk3MDk2LDE3Mz
-Q5NDgxNzAsODYwMzIzNzkxLC0xNzMwMDQ3MTMzLC02NTYyMjU5
-MzEsMTU3NDY0MzU2MywtMTgxNDYwOTkzMywtNDU0NDQ3NDg5LC
-0yMDU3Mjc0MTM3LDE4MDQ3ODM1ODksNDU5NDY4MjYsMjA5NjQ1
-MzM5NiwtNTUwMTY4MzQyLC0xOTUzNzYzOTc5LDExMDAwNjc1MT
-IsLTEwMTQ4MjcyNzMsLTE0MTYwMTIyNzEsMTMwMTk0NzcwLC01
-MjEzNzEwNDNdfQ==
+eyJoaXN0b3J5IjpbMTYwMDAxOTA0MSwxNzQyODQzMTA5LDEyNz
+M1OTcwOTYsMTczNDk0ODE3MCw4NjAzMjM3OTEsLTE3MzAwNDcx
+MzMsLTY1NjIyNTkzMSwxNTc0NjQzNTYzLC0xODE0NjA5OTMzLC
+00NTQ0NDc0ODksLTIwNTcyNzQxMzcsMTgwNDc4MzU4OSw0NTk0
+NjgyNiwyMDk2NDUzMzk2LC01NTAxNjgzNDIsLTE5NTM3NjM5Nz
+ksMTEwMDA2NzUxMiwtMTAxNDgyNzI3MywtMTQxNjAxMjI3MSwx
+MzAxOTQ3NzBdfQ==
 -->
