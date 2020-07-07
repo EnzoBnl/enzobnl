@@ -74,6 +74,9 @@ gsutil mv gs://old_name gs://new_name
 ## Terminals
 ### unix
 ```bash
+# change default jdk: in .bashrc:
+export JAVA_HOME=/opt/java/<jdk>
+export PATH=$JAVA_HOME/bin:$PATH
 # create a new session
 sudo adduser <user_name>
 # Disk Usage Analyzer
@@ -345,11 +348,11 @@ c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex 
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MzA4MDU5NjUsMTc0Mjg0MzEwOSwxMj
-czNTk3MDk2LDE3MzQ5NDgxNzAsODYwMzIzNzkxLC0xNzMwMDQ3
-MTMzLC02NTYyMjU5MzEsMTU3NDY0MzU2MywtMTgxNDYwOTkzMy
-wtNDU0NDQ3NDg5LC0yMDU3Mjc0MTM3LDE4MDQ3ODM1ODksNDU5
-NDY4MjYsMjA5NjQ1MzM5NiwtNTUwMTY4MzQyLC0xOTUzNzYzOT
-c5LDExMDAwNjc1MTIsLTEwMTQ4MjcyNzMsLTE0MTYwMTIyNzEs
-MTMwMTk0NzcwXX0=
+eyJoaXN0b3J5IjpbNzk4MzAyNDIzLC0xOTMwODA1OTY1LDE3ND
+I4NDMxMDksMTI3MzU5NzA5NiwxNzM0OTQ4MTcwLDg2MDMyMzc5
+MSwtMTczMDA0NzEzMywtNjU2MjI1OTMxLDE1NzQ2NDM1NjMsLT
+E4MTQ2MDk5MzMsLTQ1NDQ0NzQ4OSwtMjA1NzI3NDEzNywxODA0
+NzgzNTg5LDQ1OTQ2ODI2LDIwOTY0NTMzOTYsLTU1MDE2ODM0Mi
+wtMTk1Mzc2Mzk3OSwxMTAwMDY3NTEyLC0xMDE0ODI3MjczLC0x
+NDE2MDEyMjcxXX0=
 -->
