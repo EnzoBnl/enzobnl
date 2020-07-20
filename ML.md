@@ -295,7 +295,7 @@ $$W_{unit\space id}^{[layer\space id\space k]} \in R^{\#units\space in\space lay
 $$A_{unit\space id}^{[layer\space id\space k](sample\space id\space i)} \in R$$
 
 #### Vectorizable forward propagation using matrix representations
-Computation of the activation values on the entire training set $X \in R^{n^{[k-1]} \times m}$ for all the $n^k$ units in the $k^{th}$ layer whose weights are stacked in $W^{[k]} \in R^{n^{[k]} \times n^{[k-1]}}$, noted $A^{[k]} \in R^{n^{[k]} \times m}$ :
+Computation of the activation values on the entire training set $X \in R^{n^{[k-1]} \times m}$ for all the $n^{[k]}$ units in the $k^{th}$ layer whose weights are stacked in $W^{[k]} \in R^{n^{[k]} \times n^{[k-1]}}$, noted $A^{[k]} \in R^{n^{[k]} \times m}$ :
 
 $$A^{[k]} = g^{[k]}(W^{[k]}.A^{[k-1]} + b^{[k]})$$
 
@@ -308,11 +308,11 @@ Notes:
 - As a first step before the training starts, **the initialization of the network's nodes weights needs to** ***break the symmetry***. 
 For example, in a fully connected MLP (Multi Layer Perceptron  having each of its nodes of layer *l* connected to every node of layer *l-1*) the nodes need to differs between each other in term of weights to avoid that the error propagation updates every nodes in the exact same way, making the network become just a slow Perceptron.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NDg0ODA4OTEsOTA1MTE1NzA4LDk0Mj
-UyNDQwOSwtNjE0MDg3NTQzLC0xMTE5MTM2MDQsMzQ1MDQxOTQs
-LTE5NjI1OTcyOTQsLTE1NjI0NjgzMTMsMTEwMDI2MzE4NCwtMT
-M4MDY0NDQ0NSwtMjA1OTMxODI4OCwtMTQ3NjgwOTE4MCwxOTIx
-NTc0NjYxLDExOTM4NjcxODMsNzYwMTYxNzU0LC00MTAzMzg0Mz
-YsMzM5MDI5NTUzLC0xMjAxNTEyMjY1LDE3MTAxMDQ0MiwxOTMx
-MDYzMjMyXX0=
+eyJoaXN0b3J5IjpbMTY2MDMzMzQ5LC0xNDQ4NDgwODkxLDkwNT
+ExNTcwOCw5NDI1MjQ0MDksLTYxNDA4NzU0MywtMTExOTEzNjA0
+LDM0NTA0MTk0LC0xOTYyNTk3Mjk0LC0xNTYyNDY4MzEzLDExMD
+AyNjMxODQsLTEzODA2NDQ0NDUsLTIwNTkzMTgyODgsLTE0NzY4
+MDkxODAsMTkyMTU3NDY2MSwxMTkzODY3MTgzLDc2MDE2MTc1NC
+wtNDEwMzM4NDM2LDMzOTAyOTU1MywtMTIwMTUxMjI2NSwxNzEw
+MTA0NDJdfQ==
 -->
