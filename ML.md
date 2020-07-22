@@ -295,24 +295,24 @@ $$W_{unit\space id}^{[layer\space id\space k]} \in R^{\#units\space in\space lay
 $$A_{unit\space id}^{[layer\space id\space k](sample\space id\space i)} \in R$$
 
 #### Vectorizable forward propagation using matrix representations
-Computation of the activation values on the entire training set $X \in \mathbb{R}^{n^{[k-1]} \times m}$ for all the $n^{[k]}$ units in the $k^{th}$ layer whose weights are stacked in $W^{[k]} \in \mathbb{R}^{n^{[k]} \times n^{[k-1]}}$, noted $A^{[k]} \in \mathbb{R}^{n^{[k]} \times m}$ :
+Computation of the activation values on the entire training set $X \in \mathbb{R}^{n^{[k-1]} \times m}$ for all the $n^{[k]}$ units in the $k^{th}$ layer whose weights are stacked in $W^{[k]} \in \mathbb{R}^{n^{[k]} \times n^{[k-1]}}$ and $b^{[k]} \in \mathbb{R}^{n^{[k]} \times 1}$, noted $A^{[k]} \in \mathbb{R}^{n^{[k]} \times m}$ :
 
 $$A^{[k]} = g^{[k]}(W^{[k]}.A^{[k-1]} + b^{[k]})$$
 
 Notes:
 - $A^{[0]} = X$
 - $g^{[k]}$ is the *activation function* of the units in the $k^{th}$ layer (logit, tanh, REctified Linear Unit, Leaky RELU, etc...).
-- $+ b^{[k]} \in \mathbb{R}^{n^{[k]} \times 1}$ uses vector broadcasting convention (numpy vocabulary), that is basically a content copy that makes dimensions match and allow matrix addition.
+- When additioning $b^{[k]}$, we consider that we can leverage numpy-like vector broadcasting convention (numpy vocabulary), that is basically a content copy that makes dimensions match and allow matrix addition.
 
 ### Initialization
 - As a first step before the training starts, **the initialization of the network's nodes weights needs to** ***break the symmetry***. 
 For example, in a fully connected MLP (Multi Layer Perceptron  having each of its nodes of layer *l* connected to every node of layer *l-1*) the nodes need to differs between each other in term of weights to avoid that the error propagation updates every nodes in the exact same way, making the network become just a slow Perceptron.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5OTUxNDQzMzYsMTY2MDMzMzQ5LC0xND
-Q4NDgwODkxLDkwNTExNTcwOCw5NDI1MjQ0MDksLTYxNDA4NzU0
-MywtMTExOTEzNjA0LDM0NTA0MTk0LC0xOTYyNTk3Mjk0LC0xNT
-YyNDY4MzEzLDExMDAyNjMxODQsLTEzODA2NDQ0NDUsLTIwNTkz
-MTgyODgsLTE0NzY4MDkxODAsMTkyMTU3NDY2MSwxMTkzODY3MT
-gzLDc2MDE2MTc1NCwtNDEwMzM4NDM2LDMzOTAyOTU1MywtMTIw
-MTUxMjI2NV19
+eyJoaXN0b3J5IjpbMTgxNzIyMTkxOSwxNjYwMzMzNDksLTE0ND
+g0ODA4OTEsOTA1MTE1NzA4LDk0MjUyNDQwOSwtNjE0MDg3NTQz
+LC0xMTE5MTM2MDQsMzQ1MDQxOTQsLTE5NjI1OTcyOTQsLTE1Nj
+I0NjgzMTMsMTEwMDI2MzE4NCwtMTM4MDY0NDQ0NSwtMjA1OTMx
+ODI4OCwtMTQ3NjgwOTE4MCwxOTIxNTc0NjYxLDExOTM4NjcxOD
+MsNzYwMTYxNzU0LC00MTAzMzg0MzYsMzM5MDI5NTUzLC0xMjAx
+NTEyMjY1XX0=
 -->
