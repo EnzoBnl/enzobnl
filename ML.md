@@ -302,17 +302,17 @@ $$A^{[k]} = g^{[k]}(W^{[k]}.A^{[k-1]} + b^{[k]})$$
 Notes:
 - $A^{[0]} = X$
 - $g^{[k]}$ is the *activation function* of the units in the $k^{th}$ layer (logit, tanh, REctified Linear Unit, Leaky RELU, etc...).
-- $+ b^{[k]}$ uses vector broadcasting convention (numpy vocabulary), that is basically a content copy that makes dimensions match and allow matrix addition.
+- $+ b^{[k]} \in \mathbb{R}^{}$ uses vector broadcasting convention (numpy vocabulary), that is basically a content copy that makes dimensions match and allow matrix addition.
 
 ### Initialization
 - As a first step before the training starts, **the initialization of the network's nodes weights needs to** ***break the symmetry***. 
 For example, in a fully connected MLP (Multi Layer Perceptron  having each of its nodes of layer *l* connected to every node of layer *l-1*) the nodes need to differs between each other in term of weights to avoid that the error propagation updates every nodes in the exact same way, making the network become just a slow Perceptron.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY2MDMzMzQ5LC0xNDQ4NDgwODkxLDkwNT
-ExNTcwOCw5NDI1MjQ0MDksLTYxNDA4NzU0MywtMTExOTEzNjA0
-LDM0NTA0MTk0LC0xOTYyNTk3Mjk0LC0xNTYyNDY4MzEzLDExMD
-AyNjMxODQsLTEzODA2NDQ0NDUsLTIwNTkzMTgyODgsLTE0NzY4
-MDkxODAsMTkyMTU3NDY2MSwxMTkzODY3MTgzLDc2MDE2MTc1NC
-wtNDEwMzM4NDM2LDMzOTAyOTU1MywtMTIwMTUxMjI2NSwxNzEw
-MTA0NDJdfQ==
+eyJoaXN0b3J5IjpbLTE4NjM1OTkwNzAsMTY2MDMzMzQ5LC0xND
+Q4NDgwODkxLDkwNTExNTcwOCw5NDI1MjQ0MDksLTYxNDA4NzU0
+MywtMTExOTEzNjA0LDM0NTA0MTk0LC0xOTYyNTk3Mjk0LC0xNT
+YyNDY4MzEzLDExMDAyNjMxODQsLTEzODA2NDQ0NDUsLTIwNTkz
+MTgyODgsLTE0NzY4MDkxODAsMTkyMTU3NDY2MSwxMTkzODY3MT
+gzLDc2MDE2MTc1NCwtNDEwMzM4NDM2LDMzOTAyOTU1MywtMTIw
+MTUxMjI2NV19
 -->
