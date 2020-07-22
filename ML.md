@@ -295,20 +295,20 @@ $$W_{unit\space id}^{[layer\space id\space k]} \in R^{\#units\space in\space lay
 $$A_{unit\space id}^{[layer\space id\space k](sample\space id\space i)} \in R$$
 
 #### Vectorizable forward propagation using matrix representations
-Computation of the activation values on the entire training set $X \in R^{n^{[k-1]} \times m}$ for all the $n^{[k]}$ units in the $k^{th}$ layer whose weights are stacked in $W^{[k]} \in R^{n^{[k]} \times n^{[k-1]}}$, noted $A^{[k]} \in R^{n^{[k]} \times m}$ :
+Computation of the activation values on the entire training set $X \in \mathbb{R}^{n^{[k-1]} \times m}$ for all the $n^{[k]}$ units in the $k^{th}$ layer whose weights are stacked in $W^{[k]} \in \mathbb{R}^{n^{[k]} \times n^{[k-1]}}$, noted $A^{[k]} \in \mathbb{R}^{n^{[k]} \times m}$ :
 
 $$A^{[k]} = g^{[k]}(W^{[k]}.A^{[k-1]} + b^{[k]})$$
 
 Notes:
 - $A^{[0]} = X$
 - $g^{[k]}$ is the *activation function* of the units in the $k^{th}$ layer (logit, tanh, REctified Linear Unit, Leaky RELU, etc...).
-- $+ b^{[k]} \in \mathbb{R}^{}$ uses vector broadcasting convention (numpy vocabulary), that is basically a content copy that makes dimensions match and allow matrix addition.
+- $+ b^{[k]} \in \mathbb{R}^{n^{[k]} \times 1}$ uses vector broadcasting convention (numpy vocabulary), that is basically a content copy that makes dimensions match and allow matrix addition.
 
 ### Initialization
 - As a first step before the training starts, **the initialization of the network's nodes weights needs to** ***break the symmetry***. 
 For example, in a fully connected MLP (Multi Layer Perceptron  having each of its nodes of layer *l* connected to every node of layer *l-1*) the nodes need to differs between each other in term of weights to avoid that the error propagation updates every nodes in the exact same way, making the network become just a slow Perceptron.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NjM1OTkwNzAsMTY2MDMzMzQ5LC0xND
+eyJoaXN0b3J5IjpbLTE5OTUxNDQzMzYsMTY2MDMzMzQ5LC0xND
 Q4NDgwODkxLDkwNTExNTcwOCw5NDI1MjQ0MDksLTYxNDA4NzU0
 MywtMTExOTEzNjA0LDM0NTA0MTk0LC0xOTYyNTk3Mjk0LC0xNT
 YyNDY4MzEzLDExMDAyNjMxODQsLTEzODA2NDQ0NDUsLTIwNTkz
