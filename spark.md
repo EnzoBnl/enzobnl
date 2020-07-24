@@ -1184,14 +1184,14 @@ refs:
 
 ## XVIII/ Configuration
 There is 3 ways to pass a configuration property to an spark application's `SparkSession`. Here is the order of priority from the highest to the lowest:
-1. Properties **set directly on the SparkConf** object in client code.
+1. Properties **set directly on the SparkConf** object in app code creating the `SparkSession`.
 2. Flags **passed to spark-submit** or spark-shell
 3. Options in the **spark-defaults.conf file**
 
 *Note:* **Deprecated** configuration keys never take precedence over their substitute, whatever how they are passed.
 
-[See doc here](http://spark.apache.org/docs/latest/configuration.html)
-
+[From official documentation](http://spark.apache.org/docs/latest/configuration.html)
+> Properties set directly on the SparkConf take highest precedence, then flags passed to `spark-submit` or `spark-shell`, then options in the `spark-defaults.conf` file
 ## XIX/ Coming soon
 ### 1) ouverture: Adaptative Execution (AE) in 3.0.0
 [JIRA](https://issues.apache.org/jira/browse/SPARK-9850?jql=text%20~%20%22adaptative%20execution%22)
@@ -1247,11 +1247,11 @@ _____
 ## Videos
 - [A Deeper Understanding of Spark Internals - Aaron Davidson (Databricks)](https://www.youtube.com/watch?v=dmL0N3qfSc8)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU5NDA4OTE1MCwxNTAzNDkxOTcsLTgxMz
-cyMjY1MywtMTc2NDUyMTA3NSwxMDM4MTQyMDQsOTgwNjkwODg1
-LDE2MDkzMDIwNDcsMTcxMzcyMTA3NSwtMjU1MTYwOTE4LC0xNj
-g0MTI4NjE3LC05MTQ0OTYyMDMsMTQ4OTQ5MjQwMSwxNzg4NzM2
-NDUyLC0xMDQyMTc5MzEsMTY0Mzc2NDIsLTE5NjEyMjQyMzIsMj
-gyMjEyNjkzLDE5NTUwMzI3NzQsMTc2MDM1MjUyMSwtMTQwMzEx
-ODU4MF19
+eyJoaXN0b3J5IjpbMTM5MDc3MTMxOSwxNTk0MDg5MTUwLDE1MD
+M0OTE5NywtODEzNzIyNjUzLC0xNzY0NTIxMDc1LDEwMzgxNDIw
+NCw5ODA2OTA4ODUsMTYwOTMwMjA0NywxNzEzNzIxMDc1LC0yNT
+UxNjA5MTgsLTE2ODQxMjg2MTcsLTkxNDQ5NjIwMywxNDg5NDky
+NDAxLDE3ODg3MzY0NTIsLTEwNDIxNzkzMSwxNjQzNzY0MiwtMT
+k2MTIyNDIzMiwyODIyMTI2OTMsMTk1NTAzMjc3NCwxNzYwMzUy
+NTIxXX0=
 -->
