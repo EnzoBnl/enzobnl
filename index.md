@@ -1,3 +1,5 @@
+<meta name="google-site-verification" content="xx2YGUcfdtxpNcHtsL7v-_VIeop5PPbgP8WNCXF5org" />
+
 Feel free to visit:
 
 - <a href="works.html"><img src="https://pngimg.com/uploads/book/book_PNG51027.png" height="12px">Works</a> like internship reports and master thesis
@@ -11,7 +13,7 @@ Feel free to visit:
 - <a href="https://stackoverflow.com/users/6580080/enzobnl?tab=answers&sort=newest#user-tab-answers"><img src="https://cdn.sstatic.net/Sites/stackoverflow/company/img/logos/so/so-icon.png?v=c78bd457575a" height="20px">StackOverflow</a> answers and questions
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzA3NTYwMDQ5LC0xNzUxNjkxNjksMTA3OD
-c4MzAzNCwtMzQxOTQ4MDk2LC0xNTYwMjczMjQyLC0xNzYwMzkx
-ODU2XX0=
+eyJoaXN0b3J5IjpbMTQwNTE0OTMwMSw3MDc1NjAwNDksLTE3NT
+E2OTE2OSwxMDc4NzgzMDM0LC0zNDE5NDgwOTYsLTE1NjAyNzMy
+NDIsLTE3NjAzOTE4NTZdfQ==
 -->
