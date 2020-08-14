@@ -1193,7 +1193,8 @@ There is 3 ways to pass a configuration property to an spark application's `Spar
 [From official documentation](http://spark.apache.org/docs/latest/configuration.html)
 > Properties set directly on the SparkConf take highest precedence, then flags passed to `spark-submit` or `spark-shell`, then options in the `spark-defaults.conf` file
 
-###
+### Useful conf
+- `spark.hadoop.mapred.output.compress=false` avoid output files to get a default `.snappy` compression.
 
 ## XIX/ Coming soon
 ### 1) ouverture: Adaptative Execution (AE) in 3.0.0
@@ -1250,11 +1251,11 @@ _____
 ## Videos
 - [A Deeper Understanding of Spark Internals - Aaron Davidson (Databricks)](https://www.youtube.com/watch?v=dmL0N3qfSc8)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNDExMTgyMDgsMTM5MDc3MTMxOSwxNT
-k0MDg5MTUwLDE1MDM0OTE5NywtODEzNzIyNjUzLC0xNzY0NTIx
-MDc1LDEwMzgxNDIwNCw5ODA2OTA4ODUsMTYwOTMwMjA0NywxNz
-EzNzIxMDc1LC0yNTUxNjA5MTgsLTE2ODQxMjg2MTcsLTkxNDQ5
-NjIwMywxNDg5NDkyNDAxLDE3ODg3MzY0NTIsLTEwNDIxNzkzMS
-wxNjQzNzY0MiwtMTk2MTIyNDIzMiwyODIyMTI2OTMsMTk1NTAz
-Mjc3NF19
+eyJoaXN0b3J5IjpbLTcxNjg3ODgxNiwxMzkwNzcxMzE5LDE1OT
+QwODkxNTAsMTUwMzQ5MTk3LC04MTM3MjI2NTMsLTE3NjQ1MjEw
+NzUsMTAzODE0MjA0LDk4MDY5MDg4NSwxNjA5MzAyMDQ3LDE3MT
+M3MjEwNzUsLTI1NTE2MDkxOCwtMTY4NDEyODYxNywtOTE0NDk2
+MjAzLDE0ODk0OTI0MDEsMTc4ODczNjQ1MiwtMTA0MjE3OTMxLD
+E2NDM3NjQyLC0xOTYxMjI0MjMyLDI4MjIxMjY5MywxOTU1MDMy
+Nzc0XX0=
 -->
