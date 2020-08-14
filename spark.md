@@ -1192,6 +1192,9 @@ There is 3 ways to pass a configuration property to an spark application's `Spar
 
 [From official documentation](http://spark.apache.org/docs/latest/configuration.html)
 > Properties set directly on the SparkConf take highest precedence, then flags passed to `spark-submit` or `spark-shell`, then options in the `spark-defaults.conf` file
+
+###
+
 ## XIX/ Coming soon
 ### 1) ouverture: Adaptative Execution (AE) in 3.0.0
 [JIRA](https://issues.apache.org/jira/browse/SPARK-9850?jql=text%20~%20%22adaptative%20execution%22)
@@ -1247,11 +1250,11 @@ _____
 ## Videos
 - [A Deeper Understanding of Spark Internals - Aaron Davidson (Databricks)](https://www.youtube.com/watch?v=dmL0N3qfSc8)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM5MDc3MTMxOSwxNTk0MDg5MTUwLDE1MD
-M0OTE5NywtODEzNzIyNjUzLC0xNzY0NTIxMDc1LDEwMzgxNDIw
-NCw5ODA2OTA4ODUsMTYwOTMwMjA0NywxNzEzNzIxMDc1LC0yNT
-UxNjA5MTgsLTE2ODQxMjg2MTcsLTkxNDQ5NjIwMywxNDg5NDky
-NDAxLDE3ODg3MzY0NTIsLTEwNDIxNzkzMSwxNjQzNzY0MiwtMT
-k2MTIyNDIzMiwyODIyMTI2OTMsMTk1NTAzMjc3NCwxNzYwMzUy
-NTIxXX0=
+eyJoaXN0b3J5IjpbLTExNDExMTgyMDgsMTM5MDc3MTMxOSwxNT
+k0MDg5MTUwLDE1MDM0OTE5NywtODEzNzIyNjUzLC0xNzY0NTIx
+MDc1LDEwMzgxNDIwNCw5ODA2OTA4ODUsMTYwOTMwMjA0NywxNz
+EzNzIxMDc1LC0yNTUxNjA5MTgsLTE2ODQxMjg2MTcsLTkxNDQ5
+NjIwMywxNDg5NDkyNDAxLDE3ODg3MzY0NTIsLTEwNDIxNzkzMS
+wxNjQzNzY0MiwtMTk2MTIyNDIzMiwyODIyMTI2OTMsMTk1NTAz
+Mjc3NF19
 -->
