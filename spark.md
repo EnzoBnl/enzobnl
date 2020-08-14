@@ -1194,7 +1194,7 @@ There is 3 ways to pass a configuration property to an spark application's `Spar
 > Properties set directly on the SparkConf take highest precedence, then flags passed to `spark-submit` or `spark-shell`, then options in the `spark-defaults.conf` file
 
 ### Useful conf
-- `spark.hadoop.mapred.output.compress=false` avoid **output files** to get a default `.snappy` compression (or override the default codec using `spark.hadoop.mapred.output.compression.codec`)
+- `spark.hadoop.mapred.output.compress=false` avoid **output files** to go through a default `.snappy` compression when written (or override the default codec using `spark.hadoop.mapred.output.compression.codec`).
 
 ## XIX/ Coming soon
 ### 1) ouverture: Adaptative Execution (AE) in 3.0.0
@@ -1251,11 +1251,11 @@ _____
 ## Videos
 - [A Deeper Understanding of Spark Internals - Aaron Davidson (Databricks)](https://www.youtube.com/watch?v=dmL0N3qfSc8)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQwNDAyMzE1OCwxMzkwNzcxMzE5LDE1OT
-QwODkxNTAsMTUwMzQ5MTk3LC04MTM3MjI2NTMsLTE3NjQ1MjEw
-NzUsMTAzODE0MjA0LDk4MDY5MDg4NSwxNjA5MzAyMDQ3LDE3MT
-M3MjEwNzUsLTI1NTE2MDkxOCwtMTY4NDEyODYxNywtOTE0NDk2
-MjAzLDE0ODk0OTI0MDEsMTc4ODczNjQ1MiwtMTA0MjE3OTMxLD
-E2NDM3NjQyLC0xOTYxMjI0MjMyLDI4MjIxMjY5MywxOTU1MDMy
-Nzc0XX0=
+eyJoaXN0b3J5IjpbODA2Mjc0MDQ4LDEzOTA3NzEzMTksMTU5ND
+A4OTE1MCwxNTAzNDkxOTcsLTgxMzcyMjY1MywtMTc2NDUyMTA3
+NSwxMDM4MTQyMDQsOTgwNjkwODg1LDE2MDkzMDIwNDcsMTcxMz
+cyMTA3NSwtMjU1MTYwOTE4LC0xNjg0MTI4NjE3LC05MTQ0OTYy
+MDMsMTQ4OTQ5MjQwMSwxNzg4NzM2NDUyLC0xMDQyMTc5MzEsMT
+Y0Mzc2NDIsLTE5NjEyMjQyMzIsMjgyMjEyNjkzLDE5NTUwMzI3
+NzRdfQ==
 -->
