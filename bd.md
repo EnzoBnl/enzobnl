@@ -139,7 +139,7 @@ Sources:
 - File
 - Row group
 - Column chunk
-- Pages (a column chunk is composed of 1 **or more** data page and 1 optional dictionary page)
+- Pages (a column chunk is composed of 1 **or more** data page(s) and 1 optional dictionary page)
 
 ### Compression
 A compression algorithm is applied by parquet, the compression unit being the **page**.
@@ -179,7 +179,7 @@ Known as [Incremental encoding](https://en.wikipedia.org/wiki/Incremental_encodi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUwMzQ4MjI3MiwxMTAzMzIxNjYsLTIxMz
+eyJoaXN0b3J5IjpbMjA4MzMyOTY5MCwxMTAzMzIxNjYsLTIxMz
 I1NDQ0MjUsNTQyNzY3NTU4LC0xOTQ1NzIxMTE2LC0yMDIwNTIz
 NjU5LDkyMjczMTQwNywxMzQ0OTQxMTcxLDE5MzgzOTM4OTAsLT
 IxNDA4MzE3NDksMTU1NzE3Mzk1LDgwNDc1ODMzNywxNDgwNDU4
