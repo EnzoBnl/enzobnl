@@ -276,6 +276,8 @@ esc (quit edit mode)
 type ':wq' + press enter (save and quit vim)
 ```
 ### git
+[How to write good commit messages](https://chris.beams.io/posts/git-commit/#imperative)
+
 ```bash 
 // rename commit message
 git commit --amend -m"new message"
@@ -348,11 +350,11 @@ c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex 
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzk4MzAyNDIzLC0xOTMwODA1OTY1LDE3ND
-I4NDMxMDksMTI3MzU5NzA5NiwxNzM0OTQ4MTcwLDg2MDMyMzc5
-MSwtMTczMDA0NzEzMywtNjU2MjI1OTMxLDE1NzQ2NDM1NjMsLT
-E4MTQ2MDk5MzMsLTQ1NDQ0NzQ4OSwtMjA1NzI3NDEzNywxODA0
-NzgzNTg5LDQ1OTQ2ODI2LDIwOTY0NTMzOTYsLTU1MDE2ODM0Mi
-wtMTk1Mzc2Mzk3OSwxMTAwMDY3NTEyLC0xMDE0ODI3MjczLC0x
-NDE2MDEyMjcxXX0=
+eyJoaXN0b3J5IjpbLTM4MTE4NDI5NSw3OTgzMDI0MjMsLTE5Mz
+A4MDU5NjUsMTc0Mjg0MzEwOSwxMjczNTk3MDk2LDE3MzQ5NDgx
+NzAsODYwMzIzNzkxLC0xNzMwMDQ3MTMzLC02NTYyMjU5MzEsMT
+U3NDY0MzU2MywtMTgxNDYwOTkzMywtNDU0NDQ3NDg5LC0yMDU3
+Mjc0MTM3LDE4MDQ3ODM1ODksNDU5NDY4MjYsMjA5NjQ1MzM5Ni
+wtNTUwMTY4MzQyLC0xOTUzNzYzOTc5LDExMDAwNjc1MTIsLTEw
+MTQ4MjcyNzNdfQ==
 -->
