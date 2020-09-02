@@ -253,7 +253,7 @@ $L$ being the **loss function**:
 $$L:  (y, ŷ) \mapsto -(y^{(i)}.log(ŷ^{(i)}) + (1-y^{(i)}).log(1 - ŷ^{(i)}))$$ 
 
 *Note the minus sign that is here to transform a quantity that we want to maximize (the likelihood) into a quantity that we want to minimize (the cost function).*
-___
+
 $$\frac{\partial L}{\partial ŷ}:  (y, ŷ) \mapsto -\frac{y}{ŷ} + \frac{1-y}{1-ŷ}$$ 
 
 ### Python vectorized minimalist implementation (inspired by Andrew Ng course)
@@ -310,11 +310,11 @@ Notes:
 - As a first step before the training starts, **the initialization of the network's nodes weights needs to** ***break the symmetry***. 
 For example, in a fully connected MLP (Multi Layer Perceptron  having each of its nodes of layer *l* connected to every node of layer *l-1*) the nodes need to differs between each other in term of weights to avoid that the error propagation updates every nodes in the exact same way, making the network become just a slow Perceptron.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjk5NzE1ODgsMTgxNzIyMTkxOSwxNjYwMz
-MzNDksLTE0NDg0ODA4OTEsOTA1MTE1NzA4LDk0MjUyNDQwOSwt
-NjE0MDg3NTQzLC0xMTE5MTM2MDQsMzQ1MDQxOTQsLTE5NjI1OT
-cyOTQsLTE1NjI0NjgzMTMsMTEwMDI2MzE4NCwtMTM4MDY0NDQ0
-NSwtMjA1OTMxODI4OCwtMTQ3NjgwOTE4MCwxOTIxNTc0NjYxLD
-ExOTM4NjcxODMsNzYwMTYxNzU0LC00MTAzMzg0MzYsMzM5MDI5
-NTUzXX0=
+eyJoaXN0b3J5IjpbLTYwOTAwNDI1NywxODE3MjIxOTE5LDE2Nj
+AzMzM0OSwtMTQ0ODQ4MDg5MSw5MDUxMTU3MDgsOTQyNTI0NDA5
+LC02MTQwODc1NDMsLTExMTkxMzYwNCwzNDUwNDE5NCwtMTk2Mj
+U5NzI5NCwtMTU2MjQ2ODMxMywxMTAwMjYzMTg0LC0xMzgwNjQ0
+NDQ1LC0yMDU5MzE4Mjg4LC0xNDc2ODA5MTgwLDE5MjE1NzQ2Nj
+EsMTE5Mzg2NzE4Myw3NjAxNjE3NTQsLTQxMDMzODQzNiwzMzkw
+Mjk1NTNdfQ==
 -->
