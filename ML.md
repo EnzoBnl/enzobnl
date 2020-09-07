@@ -292,6 +292,7 @@ print(f"accurancy={np.sum(logit(np.dot(w.T, X) + b) - y < 0.5)/m}")
 ## Neural Networks
 ### Matrix representations
 #### A bit of notation
+
 $$W_{unit\space id}^{[layer\space id\space k]} \in R^{\# units\space in\space layer\space k-1}$$
 
 $$A_{unit\space id}^{[layer\space id\space k](sample\space id\space i)} \in R$$
@@ -310,11 +311,11 @@ Notes:
 - As a first step before the training starts, **the initialization of the network's nodes weights needs to** ***break the symmetry***. 
 For example, in a fully connected MLP (Multi Layer Perceptron  having each of its nodes of layer *l* connected to every node of layer *l-1*) the nodes need to differs between each other in term of weights to avoid that the error propagation updates every nodes in the exact same way, making the network become just a slow Perceptron.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgwNzc0NzY1OSwtNjA5MDA0MjU3LDE4MT
-cyMjE5MTksMTY2MDMzMzQ5LC0xNDQ4NDgwODkxLDkwNTExNTcw
-OCw5NDI1MjQ0MDksLTYxNDA4NzU0MywtMTExOTEzNjA0LDM0NT
-A0MTk0LC0xOTYyNTk3Mjk0LC0xNTYyNDY4MzEzLDExMDAyNjMx
-ODQsLTEzODA2NDQ0NDUsLTIwNTkzMTgyODgsLTE0NzY4MDkxOD
-AsMTkyMTU3NDY2MSwxMTkzODY3MTgzLDc2MDE2MTc1NCwtNDEw
-MzM4NDM2XX0=
+eyJoaXN0b3J5IjpbMTUwMDM4OTk4NywtODA3NzQ3NjU5LC02MD
+kwMDQyNTcsMTgxNzIyMTkxOSwxNjYwMzMzNDksLTE0NDg0ODA4
+OTEsOTA1MTE1NzA4LDk0MjUyNDQwOSwtNjE0MDg3NTQzLC0xMT
+E5MTM2MDQsMzQ1MDQxOTQsLTE5NjI1OTcyOTQsLTE1NjI0Njgz
+MTMsMTEwMDI2MzE4NCwtMTM4MDY0NDQ0NSwtMjA1OTMxODI4OC
+wtMTQ3NjgwOTE4MCwxOTIxNTc0NjYxLDExOTM4NjcxODMsNzYw
+MTYxNzU0XX0=
 -->
