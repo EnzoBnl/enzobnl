@@ -162,12 +162,7 @@ more measures summarized at [confusion matrix' wiki](https://en.wikipedia.org/wi
 | predicted as **N** | **FN** |**TN**|
 ||**P** = TP + FN|**N** = FP + TN|
 
-- Plot parametric courb 
-- 
-$$
-\{^{y = TPR(\theta)}{x = FPR(\theta)}
-
-$$
+- Plot parametric courb : $\{^{y = TPR(\theta)}_{x = FPR(\theta)}$
 
 
 Actual positives well classified rate: $TPR=\frac{TP}{TP+FN}=\frac{TP}{P}$
@@ -316,11 +311,11 @@ Notes:
 - As a first step before the training starts, **the initialization of the network's nodes weights needs to** ***break the symmetry***. 
 For example, in a fully connected MLP (Multi Layer Perceptron  having each of its nodes of layer *l* connected to every node of layer *l-1*) the nodes need to differs between each other in term of weights to avoid that the error propagation updates every nodes in the exact same way, making the network become just a slow Perceptron.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU3MzA1MTI1MywxNTAwMzg5OTg3LC04MD
-c3NDc2NTksLTYwOTAwNDI1NywxODE3MjIxOTE5LDE2NjAzMzM0
-OSwtMTQ0ODQ4MDg5MSw5MDUxMTU3MDgsOTQyNTI0NDA5LC02MT
-QwODc1NDMsLTExMTkxMzYwNCwzNDUwNDE5NCwtMTk2MjU5NzI5
-NCwtMTU2MjQ2ODMxMywxMTAwMjYzMTg0LC0xMzgwNjQ0NDQ1LC
-0yMDU5MzE4Mjg4LC0xNDc2ODA5MTgwLDE5MjE1NzQ2NjEsMTE5
-Mzg2NzE4M119
+eyJoaXN0b3J5IjpbLTE5MDk0MDY2NjMsMTUwMDM4OTk4NywtOD
+A3NzQ3NjU5LC02MDkwMDQyNTcsMTgxNzIyMTkxOSwxNjYwMzMz
+NDksLTE0NDg0ODA4OTEsOTA1MTE1NzA4LDk0MjUyNDQwOSwtNj
+E0MDg3NTQzLC0xMTE5MTM2MDQsMzQ1MDQxOTQsLTE5NjI1OTcy
+OTQsLTE1NjI0NjgzMTMsMTEwMDI2MzE4NCwtMTM4MDY0NDQ0NS
+wtMjA1OTMxODI4OCwtMTQ3NjgwOTE4MCwxOTIxNTc0NjYxLDEx
+OTM4NjcxODNdfQ==
 -->
