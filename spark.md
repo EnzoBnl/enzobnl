@@ -618,7 +618,7 @@ def foreachPartition(f: Iterator[T] => Unit): Unit = withNewRDDExecutionId(rdd.f
 ```
 
 
-As a note here is what is done inside *Spark* itself when when an **eager checkpoint is requested** (synchronous/blocking checkpoint), in `Dataset.scala`:
+As a note, here is what is done inside *Spark* itself when an **eager checkpoint is requested** (synchronous/blocking checkpoint), in `Dataset.scala`:
 ```scala
 private def checkpoint(eager: Boolean, reliableCheckpoint: Boolean): Dataset[T] = {  
   val internalRdd = queryExecution.toRdd.map(_.copy())  
@@ -1251,11 +1251,11 @@ _____
 ## Videos
 - [A Deeper Understanding of Spark Internals - Aaron Davidson (Databricks)](https://www.youtube.com/watch?v=dmL0N3qfSc8)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODA2Mjc0MDQ4LDEzOTA3NzEzMTksMTU5ND
-A4OTE1MCwxNTAzNDkxOTcsLTgxMzcyMjY1MywtMTc2NDUyMTA3
-NSwxMDM4MTQyMDQsOTgwNjkwODg1LDE2MDkzMDIwNDcsMTcxMz
-cyMTA3NSwtMjU1MTYwOTE4LC0xNjg0MTI4NjE3LC05MTQ0OTYy
-MDMsMTQ4OTQ5MjQwMSwxNzg4NzM2NDUyLC0xMDQyMTc5MzEsMT
-Y0Mzc2NDIsLTE5NjEyMjQyMzIsMjgyMjEyNjkzLDE5NTUwMzI3
-NzRdfQ==
+eyJoaXN0b3J5IjpbLTEzMzMwMDY0NzAsODA2Mjc0MDQ4LDEzOT
+A3NzEzMTksMTU5NDA4OTE1MCwxNTAzNDkxOTcsLTgxMzcyMjY1
+MywtMTc2NDUyMTA3NSwxMDM4MTQyMDQsOTgwNjkwODg1LDE2MD
+kzMDIwNDcsMTcxMzcyMTA3NSwtMjU1MTYwOTE4LC0xNjg0MTI4
+NjE3LC05MTQ0OTYyMDMsMTQ4OTQ5MjQwMSwxNzg4NzM2NDUyLC
+0xMDQyMTc5MzEsMTY0Mzc2NDIsLTE5NjEyMjQyMzIsMjgyMjEy
+NjkzXX0=
 -->
