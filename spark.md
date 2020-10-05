@@ -1202,8 +1202,6 @@ There is 3 ways to pass a configuration property to an spark application's `Spar
 
 [JIRA issue's Google Doc](https://docs.google.com/document/d/1mpVjvQZRAkD-Ggy6-hcjXtBPiQoVbZGe3dLnAKgtJ4k/edit)
 
-[Intel doc](https://software.intel.com/en-us/articles/spark-sql-adaptive-execution-at-100-tb)
-
 [Intel Article](https://software.intel.com/en-us/articles/spark-sql-adaptive-execution-at-100-tb)
 
 apache/spark master branch is about to be released in the next months as Spark 3.0.0.
@@ -1251,11 +1249,11 @@ _____
 ## Videos
 - [A Deeper Understanding of Spark Internals - Aaron Davidson (Databricks)](https://www.youtube.com/watch?v=dmL0N3qfSc8)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMzMwMDY0NzAsODA2Mjc0MDQ4LDEzOT
-A3NzEzMTksMTU5NDA4OTE1MCwxNTAzNDkxOTcsLTgxMzcyMjY1
-MywtMTc2NDUyMTA3NSwxMDM4MTQyMDQsOTgwNjkwODg1LDE2MD
-kzMDIwNDcsMTcxMzcyMTA3NSwtMjU1MTYwOTE4LC0xNjg0MTI4
-NjE3LC05MTQ0OTYyMDMsMTQ4OTQ5MjQwMSwxNzg4NzM2NDUyLC
-0xMDQyMTc5MzEsMTY0Mzc2NDIsLTE5NjEyMjQyMzIsMjgyMjEy
-NjkzXX0=
+eyJoaXN0b3J5IjpbMTMwNjE1NDI0OSwtMTMzMzAwNjQ3MCw4MD
+YyNzQwNDgsMTM5MDc3MTMxOSwxNTk0MDg5MTUwLDE1MDM0OTE5
+NywtODEzNzIyNjUzLC0xNzY0NTIxMDc1LDEwMzgxNDIwNCw5OD
+A2OTA4ODUsMTYwOTMwMjA0NywxNzEzNzIxMDc1LC0yNTUxNjA5
+MTgsLTE2ODQxMjg2MTcsLTkxNDQ5NjIwMywxNDg5NDkyNDAxLD
+E3ODg3MzY0NTIsLTEwNDIxNzkzMSwxNjQzNzY0MiwtMTk2MTIy
+NDIzMl19
 -->
