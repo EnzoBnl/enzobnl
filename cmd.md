@@ -158,6 +158,7 @@ sudo su - username
 ssh -D 1080 <server>
 # chromium with port redirection
 chromium-browser --proxy-server="socks5://127.0.0.1:1080" --user-data-dir="/home/enzo/chrome-proxy-profile"
+# desactivate CORS for dev 
 # quit ssh connection
 exit
 // shebang commentary
@@ -350,7 +351,7 @@ c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex 
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM4MTE4NDI5NSw3OTgzMDI0MjMsLTE5Mz
+eyJoaXN0b3J5IjpbMTQyOTIyOTk2MCw3OTgzMDI0MjMsLTE5Mz
 A4MDU5NjUsMTc0Mjg0MzEwOSwxMjczNTk3MDk2LDE3MzQ5NDgx
 NzAsODYwMzIzNzkxLC0xNzMwMDQ3MTMzLC02NTYyMjU5MzEsMT
 U3NDY0MzU2MywtMTgxNDYwOTkzMywtNDU0NDQ3NDg5LC0yMDU3
