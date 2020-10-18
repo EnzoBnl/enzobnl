@@ -159,7 +159,7 @@ ssh -D 1080 <server>
 # chromium with port redirection
 chromium-browser --proxy-server="socks5://127.0.0.1:1080" --user-data-dir="/home/enzo/chrome-proxy-profile"
 # desactivate CORS for dev between file:// and http protocols
-chromium-browser --disable-web-security -data-dir
+chromium-browser --disable-web-security --user-data-dir
 # quit ssh connection
 exit
 // shebang commentary
@@ -352,11 +352,11 @@ c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex 
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMDU0NjQ5MzQsNzk4MzAyNDIzLC0xOT
-MwODA1OTY1LDE3NDI4NDMxMDksMTI3MzU5NzA5NiwxNzM0OTQ4
-MTcwLDg2MDMyMzc5MSwtMTczMDA0NzEzMywtNjU2MjI1OTMxLD
-E1NzQ2NDM1NjMsLTE4MTQ2MDk5MzMsLTQ1NDQ0NzQ4OSwtMjA1
-NzI3NDEzNywxODA0NzgzNTg5LDQ1OTQ2ODI2LDIwOTY0NTMzOT
-YsLTU1MDE2ODM0MiwtMTk1Mzc2Mzk3OSwxMTAwMDY3NTEyLC0x
-MDE0ODI3MjczXX0=
+eyJoaXN0b3J5IjpbMTYzNzk3MTQ3MSwtMTAwNTQ2NDkzNCw3OT
+gzMDI0MjMsLTE5MzA4MDU5NjUsMTc0Mjg0MzEwOSwxMjczNTk3
+MDk2LDE3MzQ5NDgxNzAsODYwMzIzNzkxLC0xNzMwMDQ3MTMzLC
+02NTYyMjU5MzEsMTU3NDY0MzU2MywtMTgxNDYwOTkzMywtNDU0
+NDQ3NDg5LC0yMDU3Mjc0MTM3LDE4MDQ3ODM1ODksNDU5NDY4Mj
+YsMjA5NjQ1MzM5NiwtNTUwMTY4MzQyLC0xOTUzNzYzOTc5LDEx
+MDAwNjc1MTJdfQ==
 -->
