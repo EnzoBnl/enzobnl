@@ -284,7 +284,8 @@ type ':wq' + press enter (save and quit vim)
 // use ssh auth o github
 - generate ssh pairs and add them to agent
 - copy entire content (including algo and email)
-- add
+- paste it in a new in Setting -> SSH/GPG section of github
+- git remote set-url origin git@github.com:ORGA_OR_USER/REPO.git
 // rename commit message
 git commit --amend -m"new message"
 // rename branch
@@ -356,7 +357,7 @@ c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex 
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY2ODAxNzEyMSwxNjM3OTcxNDcxLC0xMD
+eyJoaXN0b3J5IjpbMTQwNjc1ODEyNSwxNjM3OTcxNDcxLC0xMD
 A1NDY0OTM0LDc5ODMwMjQyMywtMTkzMDgwNTk2NSwxNzQyODQz
 MTA5LDEyNzM1OTcwOTYsMTczNDk0ODE3MCw4NjAzMjM3OTEsLT
 E3MzAwNDcxMzMsLTY1NjIyNTkzMSwxNTc0NjQzNTYzLC0xODE0
