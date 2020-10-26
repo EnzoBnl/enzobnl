@@ -283,7 +283,7 @@ type ':wq' + press enter (save and quit vim)
 ```bash 
 // use ssh auth o github
 - generate ssh pairs and add them to agent
-- copy entire content (including algo and email)
+- copy entire content (including algo name and email)
 - paste it as a new ssh key in section Setting -> SSH/GPG
 - git remote set-url origin git@github.com:ORGA_OR_USER/REPO.git
 // rename commit message
@@ -357,11 +357,11 @@ c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex 
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNTY4MTcyMDEsMTYzNzk3MTQ3MSwtMT
-AwNTQ2NDkzNCw3OTgzMDI0MjMsLTE5MzA4MDU5NjUsMTc0Mjg0
-MzEwOSwxMjczNTk3MDk2LDE3MzQ5NDgxNzAsODYwMzIzNzkxLC
-0xNzMwMDQ3MTMzLC02NTYyMjU5MzEsMTU3NDY0MzU2MywtMTgx
-NDYwOTkzMywtNDU0NDQ3NDg5LC0yMDU3Mjc0MTM3LDE4MDQ3OD
-M1ODksNDU5NDY4MjYsMjA5NjQ1MzM5NiwtNTUwMTY4MzQyLC0x
-OTUzNzYzOTc5XX0=
+eyJoaXN0b3J5IjpbMTUwMjQ4NDExMiwxNjM3OTcxNDcxLC0xMD
+A1NDY0OTM0LDc5ODMwMjQyMywtMTkzMDgwNTk2NSwxNzQyODQz
+MTA5LDEyNzM1OTcwOTYsMTczNDk0ODE3MCw4NjAzMjM3OTEsLT
+E3MzAwNDcxMzMsLTY1NjIyNTkzMSwxNTc0NjQzNTYzLC0xODE0
+NjA5OTMzLC00NTQ0NDc0ODksLTIwNTcyNzQxMzcsMTgwNDc4Mz
+U4OSw0NTk0NjgyNiwyMDk2NDUzMzk2LC01NTAxNjgzNDIsLTE5
+NTM3NjM5NzldfQ==
 -->
