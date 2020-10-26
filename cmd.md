@@ -281,6 +281,10 @@ type ':wq' + press enter (save and quit vim)
 [How to write good commit messages](https://chris.beams.io/posts/git-commit/#imperative)
 
 ```bash 
+// use ssh auth o github
+- generate ssh pairs and add them to agent
+- copy entire content (including algo and email)
+- add
 // rename commit message
 git commit --amend -m"new message"
 // rename branch
@@ -352,11 +356,11 @@ c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex 
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYzNzk3MTQ3MSwtMTAwNTQ2NDkzNCw3OT
-gzMDI0MjMsLTE5MzA4MDU5NjUsMTc0Mjg0MzEwOSwxMjczNTk3
-MDk2LDE3MzQ5NDgxNzAsODYwMzIzNzkxLC0xNzMwMDQ3MTMzLC
-02NTYyMjU5MzEsMTU3NDY0MzU2MywtMTgxNDYwOTkzMywtNDU0
-NDQ3NDg5LC0yMDU3Mjc0MTM3LDE4MDQ3ODM1ODksNDU5NDY4Mj
-YsMjA5NjQ1MzM5NiwtNTUwMTY4MzQyLC0xOTUzNzYzOTc5LDEx
-MDAwNjc1MTJdfQ==
+eyJoaXN0b3J5IjpbLTY2ODAxNzEyMSwxNjM3OTcxNDcxLC0xMD
+A1NDY0OTM0LDc5ODMwMjQyMywtMTkzMDgwNTk2NSwxNzQyODQz
+MTA5LDEyNzM1OTcwOTYsMTczNDk0ODE3MCw4NjAzMjM3OTEsLT
+E3MzAwNDcxMzMsLTY1NjIyNTkzMSwxNTc0NjQzNTYzLC0xODE0
+NjA5OTMzLC00NTQ0NDc0ODksLTIwNTcyNzQxMzcsMTgwNDc4Mz
+U4OSw0NTk0NjgyNiwyMDk2NDUzMzk2LC01NTAxNjgzNDIsLTE5
+NTM3NjM5NzldfQ==
 -->
