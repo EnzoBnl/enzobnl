@@ -128,7 +128,7 @@ apt-cache policy <package name>
 // fix broken installations
 sudo apt-get --fix-broken install
 // list files installed by a package
-dpkg-query -L <package_name>
+dpkg -L <package_name>
 // install a .deb package
 dpkg -i package_name.deb
 // update paths
@@ -357,11 +357,11 @@ c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex 
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUwMjQ4NDExMiwxNjM3OTcxNDcxLC0xMD
-A1NDY0OTM0LDc5ODMwMjQyMywtMTkzMDgwNTk2NSwxNzQyODQz
-MTA5LDEyNzM1OTcwOTYsMTczNDk0ODE3MCw4NjAzMjM3OTEsLT
-E3MzAwNDcxMzMsLTY1NjIyNTkzMSwxNTc0NjQzNTYzLC0xODE0
-NjA5OTMzLC00NTQ0NDc0ODksLTIwNTcyNzQxMzcsMTgwNDc4Mz
-U4OSw0NTk0NjgyNiwyMDk2NDUzMzk2LC01NTAxNjgzNDIsLTE5
-NTM3NjM5NzldfQ==
+eyJoaXN0b3J5IjpbMTA0MTYxNTAxOSwxNTAyNDg0MTEyLDE2Mz
+c5NzE0NzEsLTEwMDU0NjQ5MzQsNzk4MzAyNDIzLC0xOTMwODA1
+OTY1LDE3NDI4NDMxMDksMTI3MzU5NzA5NiwxNzM0OTQ4MTcwLD
+g2MDMyMzc5MSwtMTczMDA0NzEzMywtNjU2MjI1OTMxLDE1NzQ2
+NDM1NjMsLTE4MTQ2MDk5MzMsLTQ1NDQ0NzQ4OSwtMjA1NzI3ND
+EzNywxODA0NzgzNTg5LDQ1OTQ2ODI2LDIwOTY0NTMzOTYsLTU1
+MDE2ODM0Ml19
 -->
