@@ -68,6 +68,8 @@ gcloud dataproc jobs list --cluster=dataproc-xxxxxxx-dev --region=global
 gcloud dataproc jobs kill --region=global
 # rename file on Cloud Storage
 gsutil mv gs://old_name gs://new_name
+# switch google cloud project
+gcloud config set project <project-id>
 ```
 
 
@@ -357,11 +359,11 @@ c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex 
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA0MTYxNTAxOSwxNTAyNDg0MTEyLDE2Mz
-c5NzE0NzEsLTEwMDU0NjQ5MzQsNzk4MzAyNDIzLC0xOTMwODA1
-OTY1LDE3NDI4NDMxMDksMTI3MzU5NzA5NiwxNzM0OTQ4MTcwLD
-g2MDMyMzc5MSwtMTczMDA0NzEzMywtNjU2MjI1OTMxLDE1NzQ2
-NDM1NjMsLTE4MTQ2MDk5MzMsLTQ1NDQ0NzQ4OSwtMjA1NzI3ND
-EzNywxODA0NzgzNTg5LDQ1OTQ2ODI2LDIwOTY0NTMzOTYsLTU1
-MDE2ODM0Ml19
+eyJoaXN0b3J5IjpbLTE1MDU1NjAxMTUsMTA0MTYxNTAxOSwxNT
+AyNDg0MTEyLDE2Mzc5NzE0NzEsLTEwMDU0NjQ5MzQsNzk4MzAy
+NDIzLC0xOTMwODA1OTY1LDE3NDI4NDMxMDksMTI3MzU5NzA5Ni
+wxNzM0OTQ4MTcwLDg2MDMyMzc5MSwtMTczMDA0NzEzMywtNjU2
+MjI1OTMxLDE1NzQ2NDM1NjMsLTE4MTQ2MDk5MzMsLTQ1NDQ0Nz
+Q4OSwtMjA1NzI3NDEzNywxODA0NzgzNTg5LDQ1OTQ2ODI2LDIw
+OTY0NTMzOTZdfQ==
 -->
