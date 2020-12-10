@@ -85,7 +85,8 @@ Getting `ERROR: JAVA_HOME is not set and could not be found.` but the variable i
 #### Submit
 in your terminal: 
 ```bash
-gcloud dataproc jobs submit spark --cluster=<dataproc-cluster-name>  --region=<e.g. europe-west1> --class com.oncrawl.data.jobs.crawl.analysis.oncrawlboost.CLIInternalLinkingApp --properties 'spark.executor.cores=1,spark.driver.memory=8216m,spark.executor.memory=8216m,spark.master=yarn,spark.submit.deployMode=cluster,spark.kryoserializer.buffer.max=1500m,spark.default.parallelism=1,spark.dynamicAllocation.enabled=false,spark.sql.parquet.enableVectorizedReader=false,spark.rdd.compress=true,spark.sql.shuffle.partitions=1,spark.memory.storageFraction=0.5,spark.driver.memoryOverhead=1000m,spark.executor.memoryOverhead=1000m,spark.driver.maxResultSize=1g,spark.hadoop.mapred.output.compress=false' --jars gs://oncrawl-dataproc/tests/test-oncrawl-boost/jars/processing.jar -- -output-folder-path```
+gcloud dataproc jobs submit spark --cluster=<dataproc-cluster-name>  --region=<e.g. europe-west1> --class com.package.name.to.MainClassName --properties 'spark.executor.cores=2,...' --jars gs://<path-to-jarname.jar -- <aroptions
+```
 
 ### BigQuery vs BigTable
 - *BigQuery* excels for OLAP (OnLine Analytical Processing): scalable and efficient analytic querying on unchanging data (or just appending data).
@@ -185,11 +186,11 @@ Known as [Incremental encoding](https://en.wikipedia.org/wiki/Incremental_encodi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzQwMjAxNzY3LC0xMzQyMTM2NjksMjA4Mz
-MyOTY5MCwxMTAzMzIxNjYsLTIxMzI1NDQ0MjUsNTQyNzY3NTU4
-LC0xOTQ1NzIxMTE2LC0yMDIwNTIzNjU5LDkyMjczMTQwNywxMz
-Q0OTQxMTcxLDE5MzgzOTM4OTAsLTIxNDA4MzE3NDksMTU1NzE3
-Mzk1LDgwNDc1ODMzNywxNDgwNDU4Nzc2LDE5MDQ2NzY4MDgsMT
-E5MTY3Mjg4NSwtMTI1NzAwNTMwLC0xOTcwNzM1NDA0LC0xMjc0
-OTY2MzRdfQ==
+eyJoaXN0b3J5IjpbMTA2MTYyMDAzMSwtMTM0MjEzNjY5LDIwOD
+MzMjk2OTAsMTEwMzMyMTY2LC0yMTMyNTQ0NDI1LDU0Mjc2NzU1
+OCwtMTk0NTcyMTExNiwtMjAyMDUyMzY1OSw5MjI3MzE0MDcsMT
+M0NDk0MTE3MSwxOTM4MzkzODkwLC0yMTQwODMxNzQ5LDE1NTcx
+NzM5NSw4MDQ3NTgzMzcsMTQ4MDQ1ODc3NiwxOTA0Njc2ODA4LD
+ExOTE2NzI4ODUsLTEyNTcwMDUzMCwtMTk3MDczNTQwNCwtMTI3
+NDk2NjM0XX0=
 -->
