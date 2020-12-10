@@ -93,7 +93,11 @@ gcloud dataproc jobs submit spark --cluster=<dataproc-cluster-name>  --region=<e
 ```bash
 ssh -A -D 1080 <optionally: user@>104.155.87.75
 ```
-5. Launch a Chrome/Chromium that us
+5. Launch a Chrome/Chromium with a proxy on 1080 port (the one passing through our ssh connection)
+```bash
+chromium-browser --user-data-dir --proxy-server="socks5://127.0.0.1:1080"
+```
+6. **Use the browser to access the YARN Master**
 
 ### BigQuery vs BigTable
 - *BigQuery* excels for OLAP (OnLine Analytical Processing): scalable and efficient analytic querying on unchanging data (or just appending data).
@@ -193,7 +197,7 @@ Known as [Incremental encoding](https://en.wikipedia.org/wiki/Incremental_encodi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUzNTAwMTk4MiwxMTk5MDQ3OTk1LC0xMz
+eyJoaXN0b3J5IjpbMTUwNDA4MDE3NywxMTk5MDQ3OTk1LC0xMz
 QyMTM2NjksMjA4MzMyOTY5MCwxMTAzMzIxNjYsLTIxMzI1NDQ0
 MjUsNTQyNzY3NTU4LC0xOTQ1NzIxMTE2LC0yMDIwNTIzNjU5LD
 kyMjczMTQwNywxMzQ0OTQxMTcxLDE5MzgzOTM4OTAsLTIxNDA4
