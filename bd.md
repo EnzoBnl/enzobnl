@@ -79,7 +79,11 @@ Execution steps of a MapReduce job containing 1 Mapper and 1 Reducer (steps **in
 ### `JAVA_HOME` said to be missing but is not
 Getting `ERROR: JAVA_HOME is not set and could not be found.` but the variable is exported in your `.bashrc` and/or `.profile` ? -> You need to also export it by uncommenting the proper line in `<hadoop home>/etc/hadoop/hadoop-env.sh`.
 
-## Google Cloud Platform's tools
+## Google Cloud Platform
+
+### Submit and monitor a Dataproc spark job
+#### Submit
+in your terminal: ``
 
 ### BigQuery vs BigTable
 - *BigQuery* excels for OLAP (OnLine Analytical Processing): scalable and efficient analytic querying on unchanging data (or just appending data).
@@ -179,11 +183,11 @@ Known as [Incremental encoding](https://en.wikipedia.org/wiki/Incremental_encodi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNDIxMzY2OSwyMDgzMzI5NjkwLDExMD
-MzMjE2NiwtMjEzMjU0NDQyNSw1NDI3Njc1NTgsLTE5NDU3MjEx
-MTYsLTIwMjA1MjM2NTksOTIyNzMxNDA3LDEzNDQ5NDExNzEsMT
-kzODM5Mzg5MCwtMjE0MDgzMTc0OSwxNTU3MTczOTUsODA0NzU4
-MzM3LDE0ODA0NTg3NzYsMTkwNDY3NjgwOCwxMTkxNjcyODg1LC
-0xMjU3MDA1MzAsLTE5NzA3MzU0MDQsLTEyNzQ5NjYzNCwtMTQz
-NzYxMjM5N119
+eyJoaXN0b3J5IjpbODc2MDcxNjg1LC0xMzQyMTM2NjksMjA4Mz
+MyOTY5MCwxMTAzMzIxNjYsLTIxMzI1NDQ0MjUsNTQyNzY3NTU4
+LC0xOTQ1NzIxMTE2LC0yMDIwNTIzNjU5LDkyMjczMTQwNywxMz
+Q0OTQxMTcxLDE5MzgzOTM4OTAsLTIxNDA4MzE3NDksMTU1NzE3
+Mzk1LDgwNDc1ODMzNywxNDgwNDU4Nzc2LDE5MDQ2NzY4MDgsMT
+E5MTY3Mjg4NSwtMTI1NzAwNTMwLC0xOTcwNzM1NDA0LC0xMjc0
+OTY2MzRdfQ==
 -->
