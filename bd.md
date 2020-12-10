@@ -87,17 +87,20 @@ Getting `ERROR: JAVA_HOME is not set and could not be found.` but the variable i
 ```bash
 gcloud dataproc jobs submit spark --cluster=<dataproc-cluster-name>  --region=<e.g. europe-west1> --jars gs://<path-to-jarname.jar --class com.package.name.to.MainClassName --properties 'spark.executor.cores=2,[...]' -- <arg1 for MainClass> <arg2 for MainClass> [...]
 ```
-2. **Visit the page describing your master node** VM in Google Cloud Console: `https://console.cloud.google.com/compute/instancesDetail/zones/<region, e.g.: europe-west1-c>/instances/<dataproc cluster name>-m`
-3.  **Copy the ephemeral external ip address of the master** node VM, we will take the example address `104.155.87.75` as of now
-4.  **Open a SSH connection to that master VM**, forwarding its 1080 port using:
+2. **Visit the page describing your master node** VM in Google Cloud Console at: 
+```
+https://console.cloud.google.com/compute/instancesDetail/zones/<region, e.g.: europe-west1-c>/instances/<dataproc cluster name>-m
+```
+5.  **Copy the ephemeral external ip address of the master** node VM, we will take the example address `104.155.87.75` as of now
+6.  **Open a SSH connection to that master VM**, forwarding its 1080 port using:
 ```bash
 ssh -A -D 1080 <optionally: user@>104.155.87.75
 ```
-5. Launch a Chrome/**Chromium with a proxy on 1080** port (the one passing through our ssh connection)
+7. Launch a Chrome/**Chromium with a proxy on 1080** port (the one passing through our ssh connection)
 ```bash
 chromium-browser --user-data-dir --proxy-server="socks5://127.0.0.1:1080"
 ```
-6. Use this browser to **access the YARN cluster UI** at `http://<dataproc cluster name>-m:8088/cluster/` or the **Spark History Server** at `http://<dataproc cluster name>-m:18080`
+8. Use this browser to **access the YARN cluster UI** at `http://<dataproc cluster name>-m:8088/cluster/` or the **Spark History Server** at `http://<dataproc cluster name>-m:18080`
 
 ### BigQuery vs BigTable
 - *BigQuery* excels for OLAP (OnLine Analytical Processing): scalable and efficient analytic querying on unchanging data (or just appending data).
@@ -197,7 +200,7 @@ Known as [Incremental encoding](https://en.wikipedia.org/wiki/Incremental_encodi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MDU4OTI2NzYsMTE5OTA0Nzk5NSwtMT
+eyJoaXN0b3J5IjpbLTEwOTM3OTE1MzUsMTE5OTA0Nzk5NSwtMT
 M0MjEzNjY5LDIwODMzMjk2OTAsMTEwMzMyMTY2LC0yMTMyNTQ0
 NDI1LDU0Mjc2NzU1OCwtMTk0NTcyMTExNiwtMjAyMDUyMzY1OS
 w5MjI3MzE0MDcsMTM0NDk0MTE3MSwxOTM4MzkzODkwLC0yMTQw
