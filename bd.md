@@ -81,7 +81,7 @@ Getting `ERROR: JAVA_HOME is not set and could not be found.` but the variable i
 
 ## Google Cloud Platform
 
-### Submit and monitor a Dataproc spark job
+### Submit and monitor a Dataproc spark job (YARN)
 #### Submit
 1. **Submit your spark app** in your terminal using `gcloud` cli
 ```bash
@@ -93,11 +93,11 @@ gcloud dataproc jobs submit spark --cluster=<dataproc-cluster-name>  --region=<e
 ```bash
 ssh -A -D 1080 <optionally: user@>104.155.87.75
 ```
-5. Launch a Chrome/Chromium with a proxy on 1080 port (the one passing through our ssh connection)
+5. Launch a Chrome/**Chromium with a proxy on 1080** port (the one passing through our ssh connection)
 ```bash
 chromium-browser --user-data-dir --proxy-server="socks5://127.0.0.1:1080"
 ```
-6. **Use the browser to access the YARN Master**
+6. **Use this browser to access the YARN cluster UI** at `http://<dataproc cluster name>-m:8088/cluster/`
 
 ### BigQuery vs BigTable
 - *BigQuery* excels for OLAP (OnLine Analytical Processing): scalable and efficient analytic querying on unchanging data (or just appending data).
@@ -197,11 +197,11 @@ Known as [Incremental encoding](https://en.wikipedia.org/wiki/Incremental_encodi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUwNDA4MDE3NywxMTk5MDQ3OTk1LC0xMz
-QyMTM2NjksMjA4MzMyOTY5MCwxMTAzMzIxNjYsLTIxMzI1NDQ0
-MjUsNTQyNzY3NTU4LC0xOTQ1NzIxMTE2LC0yMDIwNTIzNjU5LD
-kyMjczMTQwNywxMzQ0OTQxMTcxLDE5MzgzOTM4OTAsLTIxNDA4
-MzE3NDksMTU1NzE3Mzk1LDgwNDc1ODMzNywxNDgwNDU4Nzc2LD
-E5MDQ2NzY4MDgsMTE5MTY3Mjg4NSwtMTI1NzAwNTMwLC0xOTcw
-NzM1NDA0XX0=
+eyJoaXN0b3J5IjpbLTE0MzUxOTgxMDMsMTE5OTA0Nzk5NSwtMT
+M0MjEzNjY5LDIwODMzMjk2OTAsMTEwMzMyMTY2LC0yMTMyNTQ0
+NDI1LDU0Mjc2NzU1OCwtMTk0NTcyMTExNiwtMjAyMDUyMzY1OS
+w5MjI3MzE0MDcsMTM0NDk0MTE3MSwxOTM4MzkzODkwLC0yMTQw
+ODMxNzQ5LDE1NTcxNzM5NSw4MDQ3NTgzMzcsMTQ4MDQ1ODc3Ni
+wxOTA0Njc2ODA4LDExOTE2NzI4ODUsLTEyNTcwMDUzMCwtMTk3
+MDczNTQwNF19
 -->
