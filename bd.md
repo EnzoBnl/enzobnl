@@ -89,10 +89,11 @@ gcloud dataproc jobs submit spark --cluster=<dataproc-cluster-name>  --region=<e
 ```
 2. **Visit the page describing your master node** VM in Google Cloud Console: `https://console.cloud.google.com/compute/instancesDetail/zones/<region, e.g.: europe-west1-c>/instances/<dataproc cluster name>-m`
 3.  **Copy the ephemeral external ip address of the master** node VM, we will take the example address `104.155.87.75` as of now
-4.  Open a ssh connection to that machine, forwarding its 1080 port using:
+4.  **Open a SSH connection to that master VM**, forwarding its 1080 port using:
 ```bash
-ssh -A -D 1080 <optionally 'id@>104.155.87.75
+ssh -A -D 1080 <optionally: user@>104.155.87.75
 ```
+5. Launch a Chrome/Chromium that us
 
 ### BigQuery vs BigTable
 - *BigQuery* excels for OLAP (OnLine Analytical Processing): scalable and efficient analytic querying on unchanging data (or just appending data).
@@ -192,11 +193,11 @@ Known as [Incremental encoding](https://en.wikipedia.org/wiki/Incremental_encodi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NTQ4ODEwNTIsMTE5OTA0Nzk5NSwtMT
-M0MjEzNjY5LDIwODMzMjk2OTAsMTEwMzMyMTY2LC0yMTMyNTQ0
-NDI1LDU0Mjc2NzU1OCwtMTk0NTcyMTExNiwtMjAyMDUyMzY1OS
-w5MjI3MzE0MDcsMTM0NDk0MTE3MSwxOTM4MzkzODkwLC0yMTQw
-ODMxNzQ5LDE1NTcxNzM5NSw4MDQ3NTgzMzcsMTQ4MDQ1ODc3Ni
-wxOTA0Njc2ODA4LDExOTE2NzI4ODUsLTEyNTcwMDUzMCwtMTk3
-MDczNTQwNF19
+eyJoaXN0b3J5IjpbMTUzNTAwMTk4MiwxMTk5MDQ3OTk1LC0xMz
+QyMTM2NjksMjA4MzMyOTY5MCwxMTAzMzIxNjYsLTIxMzI1NDQ0
+MjUsNTQyNzY3NTU4LC0xOTQ1NzIxMTE2LC0yMDIwNTIzNjU5LD
+kyMjczMTQwNywxMzQ0OTQxMTcxLDE5MzgzOTM4OTAsLTIxNDA4
+MzE3NDksMTU1NzE3Mzk1LDgwNDc1ODMzNywxNDgwNDU4Nzc2LD
+E5MDQ2NzY4MDgsMTE5MTY3Mjg4NSwtMTI1NzAwNTMwLC0xOTcw
+NzM1NDA0XX0=
 -->
