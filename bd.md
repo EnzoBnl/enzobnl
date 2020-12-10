@@ -97,7 +97,7 @@ ssh -A -D 1080 <optionally: user@>104.155.87.75
 ```bash
 chromium-browser --user-data-dir --proxy-server="socks5://127.0.0.1:1080"
 ```
-6. **Use this browser to access the YARN cluster UI** at `http://<dataproc cluster name>-m:8088/cluster/`
+6. Use this browser to **access the YARN cluster UI** at `http://<dataproc cluster name>-m:8088/cluster/` or the **Spark History Server** at `http://<dataproc cluster name>-m:18080`
 
 ### BigQuery vs BigTable
 - *BigQuery* excels for OLAP (OnLine Analytical Processing): scalable and efficient analytic querying on unchanging data (or just appending data).
@@ -197,7 +197,7 @@ Known as [Incremental encoding](https://en.wikipedia.org/wiki/Incremental_encodi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MzUxOTgxMDMsMTE5OTA0Nzk5NSwtMT
+eyJoaXN0b3J5IjpbLTE2MDU4OTI2NzYsMTE5OTA0Nzk5NSwtMT
 M0MjEzNjY5LDIwODMzMjk2OTAsMTEwMzMyMTY2LC0yMTMyNTQ0
 NDI1LDU0Mjc2NzU1OCwtMTk0NTcyMTExNiwtMjAyMDUyMzY1OS
 w5MjI3MzE0MDcsMTM0NDk0MTE3MSwxOTM4MzkzODkwLC0yMTQw
