@@ -83,10 +83,11 @@ Getting `ERROR: JAVA_HOME is not set and could not be found.` but the variable i
 
 ### Submit and monitor a Dataproc spark job
 #### Submit
-in your terminal: 
+1. Run in your terminal
 ```bash
-gcloud dataproc jobs submit spark --cluster=<dataproc-cluster-name>  --region=<e.g. europe-west1> --class com.package.name.to.MainClassName --properties 'spark.executor.cores=2,...' --jars gs://<path-to-jarname.jar -- <aroptions
+gcloud dataproc jobs submit spark --cluster=<dataproc-cluster-name>  --region=<e.g. europe-west1> --jars gs://<path-to-jarname.jar --class com.package.name.to.MainClassName --properties 'spark.executor.cores=2,[...]' -- <arg1 for MainClass> <arg2 for MainClass> [...]
 ```
+2. go to the page describing your master node in Google Cloud Co
 
 ### BigQuery vs BigTable
 - *BigQuery* excels for OLAP (OnLine Analytical Processing): scalable and efficient analytic querying on unchanging data (or just appending data).
@@ -186,7 +187,7 @@ Known as [Incremental encoding](https://en.wikipedia.org/wiki/Incremental_encodi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA2MTYyMDAzMSwtMTM0MjEzNjY5LDIwOD
+eyJoaXN0b3J5IjpbMTQ2NzgxMjc4NiwtMTM0MjEzNjY5LDIwOD
 MzMjk2OTAsMTEwMzMyMTY2LC0yMTMyNTQ0NDI1LDU0Mjc2NzU1
 OCwtMTk0NTcyMTExNiwtMjAyMDUyMzY1OSw5MjI3MzE0MDcsMT
 M0NDk0MTE3MSwxOTM4MzkzODkwLC0yMTQwODMxNzQ5LDE1NTcx
