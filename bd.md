@@ -88,7 +88,7 @@ Getting `ERROR: JAVA_HOME is not set and could not be found.` but the variable i
 gcloud dataproc jobs submit spark --cluster=<dataproc-cluster-name>  --region=<e.g. europe-west1> --jars gs://<path-to-jarname.jar --class com.package.name.to.MainClassName --properties 'spark.executor.cores=2,[...]' -- <arg1 for MainClass> <arg2 for MainClass> [...]
 ```
 2. go to the page describing your master node VM in Google Cloud Console: `https://console.cloud.google.com/compute/instancesDetail/zones/<region, e.g.: europe-west1-c>/instances/<dataproc cluster name>-m`
-3.  Copy the ephemeral external ip address of the master node VM
+3.  Copy the ephemeral external ip address of the master node VM, we will take the example address `104.155.87.75` as of now
 4.  
 
 ### BigQuery vs BigTable
@@ -189,11 +189,11 @@ Known as [Incremental encoding](https://en.wikipedia.org/wiki/Incremental_encodi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjExMTk5MjQ4MSwxMTk5MDQ3OTk1LC0xMz
-QyMTM2NjksMjA4MzMyOTY5MCwxMTAzMzIxNjYsLTIxMzI1NDQ0
-MjUsNTQyNzY3NTU4LC0xOTQ1NzIxMTE2LC0yMDIwNTIzNjU5LD
-kyMjczMTQwNywxMzQ0OTQxMTcxLDE5MzgzOTM4OTAsLTIxNDA4
-MzE3NDksMTU1NzE3Mzk1LDgwNDc1ODMzNywxNDgwNDU4Nzc2LD
-E5MDQ2NzY4MDgsMTE5MTY3Mjg4NSwtMTI1NzAwNTMwLC0xOTcw
-NzM1NDA0XX0=
+eyJoaXN0b3J5IjpbODMzMzI5ODQ3LDExOTkwNDc5OTUsLTEzND
+IxMzY2OSwyMDgzMzI5NjkwLDExMDMzMjE2NiwtMjEzMjU0NDQy
+NSw1NDI3Njc1NTgsLTE5NDU3MjExMTYsLTIwMjA1MjM2NTksOT
+IyNzMxNDA3LDEzNDQ5NDExNzEsMTkzODM5Mzg5MCwtMjE0MDgz
+MTc0OSwxNTU3MTczOTUsODA0NzU4MzM3LDE0ODA0NTg3NzYsMT
+kwNDY3NjgwOCwxMTkxNjcyODg1LC0xMjU3MDA1MzAsLTE5NzA3
+MzU0MDRdfQ==
 -->
