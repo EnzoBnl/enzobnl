@@ -83,13 +83,16 @@ Getting `ERROR: JAVA_HOME is not set and could not be found.` but the variable i
 
 ### Submit and monitor a Dataproc spark job
 #### Submit
-1. Run in your terminal
+1. **Submit your spark app** in your terminal using `gcloud` cli
 ```bash
 gcloud dataproc jobs submit spark --cluster=<dataproc-cluster-name>  --region=<e.g. europe-west1> --jars gs://<path-to-jarname.jar --class com.package.name.to.MainClassName --properties 'spark.executor.cores=2,[...]' -- <arg1 for MainClass> <arg2 for MainClass> [...]
 ```
-2. go to the page describing your master node VM in Google Cloud Console: `https://console.cloud.google.com/compute/instancesDetail/zones/<region, e.g.: europe-west1-c>/instances/<dataproc cluster name>-m`
-3.  Copy the ephemeral external ip address of the master node VM, we will take the example address `104.155.87.75` as of now
-4.  
+2. **Visit the page describing your master node** VM in Google Cloud Console: `https://console.cloud.google.com/compute/instancesDetail/zones/<region, e.g.: europe-west1-c>/instances/<dataproc cluster name>-m`
+3.  **Copy the ephemeral external ip address of the master** node VM, we will take the example address `104.155.87.75` as of now
+4.  Open a ssh connection to that machine, forwarding its 1080 port using:
+```bash
+
+```
 
 ### BigQuery vs BigTable
 - *BigQuery* excels for OLAP (OnLine Analytical Processing): scalable and efficient analytic querying on unchanging data (or just appending data).
@@ -189,11 +192,11 @@ Known as [Incremental encoding](https://en.wikipedia.org/wiki/Incremental_encodi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODMzMzI5ODQ3LDExOTkwNDc5OTUsLTEzND
-IxMzY2OSwyMDgzMzI5NjkwLDExMDMzMjE2NiwtMjEzMjU0NDQy
-NSw1NDI3Njc1NTgsLTE5NDU3MjExMTYsLTIwMjA1MjM2NTksOT
-IyNzMxNDA3LDEzNDQ5NDExNzEsMTkzODM5Mzg5MCwtMjE0MDgz
-MTc0OSwxNTU3MTczOTUsODA0NzU4MzM3LDE0ODA0NTg3NzYsMT
-kwNDY3NjgwOCwxMTkxNjcyODg1LC0xMjU3MDA1MzAsLTE5NzA3
-MzU0MDRdfQ==
+eyJoaXN0b3J5IjpbLTE2NzIyODUxNjYsMTE5OTA0Nzk5NSwtMT
+M0MjEzNjY5LDIwODMzMjk2OTAsMTEwMzMyMTY2LC0yMTMyNTQ0
+NDI1LDU0Mjc2NzU1OCwtMTk0NTcyMTExNiwtMjAyMDUyMzY1OS
+w5MjI3MzE0MDcsMTM0NDk0MTE3MSwxOTM4MzkzODkwLC0yMTQw
+ODMxNzQ5LDE1NTcxNzM5NSw4MDQ3NTgzMzcsMTQ4MDQ1ODc3Ni
+wxOTA0Njc2ODA4LDExOTE2NzI4ODUsLTEyNTcwMDUzMCwtMTk3
+MDczNTQwNF19
 -->
