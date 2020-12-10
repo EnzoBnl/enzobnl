@@ -83,7 +83,9 @@ Getting `ERROR: JAVA_HOME is not set and could not be found.` but the variable i
 
 ### Submit and monitor a Dataproc spark job
 #### Submit
-in your terminal: ``
+in your terminal: 
+```bash
+gcloud dataproc jobs submit spark --cluster=<dataproc-cluster-name>  --region=<e.g. europe-west1> --class com.oncrawl.data.jobs.crawl.analysis.oncrawlboost.CLIInternalLinkingApp --properties 'spark.executor.cores=1,spark.driver.memory=8216m,spark.executor.memory=8216m,spark.master=yarn,spark.submit.deployMode=cluster,spark.kryoserializer.buffer.max=1500m,spark.default.parallelism=1,spark.dynamicAllocation.enabled=false,spark.sql.parquet.enableVectorizedReader=false,spark.rdd.compress=true,spark.sql.shuffle.partitions=1,spark.memory.storageFraction=0.5,spark.driver.memoryOverhead=1000m,spark.executor.memoryOverhead=1000m,spark.driver.maxResultSize=1g,spark.hadoop.mapred.output.compress=false' --jars gs://oncrawl-dataproc/tests/test-oncrawl-boost/jars/processing.jar -- -output-folder-path```
 
 ### BigQuery vs BigTable
 - *BigQuery* excels for OLAP (OnLine Analytical Processing): scalable and efficient analytic querying on unchanging data (or just appending data).
@@ -183,7 +185,7 @@ Known as [Incremental encoding](https://en.wikipedia.org/wiki/Incremental_encodi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODc2MDcxNjg1LC0xMzQyMTM2NjksMjA4Mz
+eyJoaXN0b3J5IjpbNzQwMjAxNzY3LC0xMzQyMTM2NjksMjA4Mz
 MyOTY5MCwxMTAzMzIxNjYsLTIxMzI1NDQ0MjUsNTQyNzY3NTU4
 LC0xOTQ1NzIxMTE2LC0yMDIwNTIzNjU5LDkyMjczMTQwNywxMz
 Q0OTQxMTcxLDE5MzgzOTM4OTAsLTIxNDA4MzE3NDksMTU1NzE3
