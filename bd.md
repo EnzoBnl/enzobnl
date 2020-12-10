@@ -91,7 +91,7 @@ gcloud dataproc jobs submit spark --cluster=<dataproc-cluster-name>  --region=<e
 3.  **Copy the ephemeral external ip address of the master** node VM, we will take the example address `104.155.87.75` as of now
 4.  Open a ssh connection to that machine, forwarding its 1080 port using:
 ```bash
-
+ssh -A -D 1080 <optionally 'id@>104.155.87.75
 ```
 
 ### BigQuery vs BigTable
@@ -192,7 +192,7 @@ Known as [Incremental encoding](https://en.wikipedia.org/wiki/Incremental_encodi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NzIyODUxNjYsMTE5OTA0Nzk5NSwtMT
+eyJoaXN0b3J5IjpbLTE3NTQ4ODEwNTIsMTE5OTA0Nzk5NSwtMT
 M0MjEzNjY5LDIwODMzMjk2OTAsMTEwMzMyMTY2LC0yMTMyNTQ0
 NDI1LDU0Mjc2NzU1OCwtMTk0NTcyMTExNiwtMjAyMDUyMzY1OS
 w5MjI3MzE0MDcsMTM0NDk0MTE3MSwxOTM4MzkzODkwLC0yMTQw
