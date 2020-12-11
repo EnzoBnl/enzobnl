@@ -94,7 +94,7 @@ https://console.cloud.google.com/compute/instancesDetail/zones/<region, e.g.: eu
 5.  **Copy the ephemeral external ip address of the master** node VM, we will take the example address `104.155.87.75` as of now
 6.  **Open a SSH connection to that master VM**, forwarding its 1080 port using:
 ```bash
-ssh -A -D 1080 <optionally: user@>104.155.87.75
+ssh -A -D 1080 104.155.87.75
 ```
 7. Launch a Chrome/**Chromium with a proxy on 1080** port (the one passing through our ssh connection)
 ```bash
@@ -200,11 +200,11 @@ Known as [Incremental encoding](https://en.wikipedia.org/wiki/Incremental_encodi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwOTM3OTE1MzUsMTE5OTA0Nzk5NSwtMT
-M0MjEzNjY5LDIwODMzMjk2OTAsMTEwMzMyMTY2LC0yMTMyNTQ0
-NDI1LDU0Mjc2NzU1OCwtMTk0NTcyMTExNiwtMjAyMDUyMzY1OS
-w5MjI3MzE0MDcsMTM0NDk0MTE3MSwxOTM4MzkzODkwLC0yMTQw
-ODMxNzQ5LDE1NTcxNzM5NSw4MDQ3NTgzMzcsMTQ4MDQ1ODc3Ni
-wxOTA0Njc2ODA4LDExOTE2NzI4ODUsLTEyNTcwMDUzMCwtMTk3
-MDczNTQwNF19
+eyJoaXN0b3J5IjpbLTE3NjgyMTI4MDcsLTEwOTM3OTE1MzUsMT
+E5OTA0Nzk5NSwtMTM0MjEzNjY5LDIwODMzMjk2OTAsMTEwMzMy
+MTY2LC0yMTMyNTQ0NDI1LDU0Mjc2NzU1OCwtMTk0NTcyMTExNi
+wtMjAyMDUyMzY1OSw5MjI3MzE0MDcsMTM0NDk0MTE3MSwxOTM4
+MzkzODkwLC0yMTQwODMxNzQ5LDE1NTcxNzM5NSw4MDQ3NTgzMz
+csMTQ4MDQ1ODc3NiwxOTA0Njc2ODA4LDExOTE2NzI4ODUsLTEy
+NTcwMDUzMF19
 -->
