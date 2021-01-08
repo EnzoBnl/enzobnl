@@ -280,7 +280,7 @@ filter_mutableStateArray_0[1] = new org.apache.spark.sql.catalyst.expressions.co
 InternalRow scan_row_0 = (InternalRow) scan_mutableStateArray_0[0].next();
 ```
 
-- It instanciates Java objects from the needed fields. There is no deserialization thanks to `UnsafeRow` in-place accessors implementation. Here it gets pseudo:
+- It instanciates Java objects from the needed fields. There is no expensive deserialization thanks to `UnsafeRow` in-place accessors implementation. Here it gets pseudo:
 
 ```scala
 boolean scan_isNull_1 = scan_row_0.isNullAt(1);
@@ -363,7 +363,7 @@ project_mutableStateArray_0[1] = new org.apache.spark.sql.catalyst.expressions.c
 InternalRow scan_row_0 = (InternalRow) scan_mutableStateArray_0[0].next();
 ```
 
-- It instanciates Java objects from the needed fields. There is no deserialization thanks to `UnsafeRow` in-place accessors implementation. Here it gets pseudo:
+- It instanciates Java objects from the needed fields. There is no expensive deserialization thanks to `UnsafeRow` in-place accessors implementation. Here it gets pseudo:
 
 ```scala
 boolean scan_isNull_1 = scan_row_0.isNullAt(1);
@@ -1249,11 +1249,11 @@ _____
 ## Videos
 - [A Deeper Understanding of Spark Internals - Aaron Davidson (Databricks)](https://www.youtube.com/watch?v=dmL0N3qfSc8)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMwNjE1NDI0OSwtMTMzMzAwNjQ3MCw4MD
-YyNzQwNDgsMTM5MDc3MTMxOSwxNTk0MDg5MTUwLDE1MDM0OTE5
-NywtODEzNzIyNjUzLC0xNzY0NTIxMDc1LDEwMzgxNDIwNCw5OD
-A2OTA4ODUsMTYwOTMwMjA0NywxNzEzNzIxMDc1LC0yNTUxNjA5
-MTgsLTE2ODQxMjg2MTcsLTkxNDQ5NjIwMywxNDg5NDkyNDAxLD
-E3ODg3MzY0NTIsLTEwNDIxNzkzMSwxNjQzNzY0MiwtMTk2MTIy
-NDIzMl19
+eyJoaXN0b3J5IjpbOTAyNzAwMjAxLDEzMDYxNTQyNDksLTEzMz
+MwMDY0NzAsODA2Mjc0MDQ4LDEzOTA3NzEzMTksMTU5NDA4OTE1
+MCwxNTAzNDkxOTcsLTgxMzcyMjY1MywtMTc2NDUyMTA3NSwxMD
+M4MTQyMDQsOTgwNjkwODg1LDE2MDkzMDIwNDcsMTcxMzcyMTA3
+NSwtMjU1MTYwOTE4LC0xNjg0MTI4NjE3LC05MTQ0OTYyMDMsMT
+Q4OTQ5MjQwMSwxNzg4NzM2NDUyLC0xMDQyMTc5MzEsMTY0Mzc2
+NDJdfQ==
 -->
