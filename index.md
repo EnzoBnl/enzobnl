@@ -10,11 +10,9 @@ Feel free to visit:
 
 - <a href="https://stackoverflow.com/users/6580080/enzobnl?tab=answers&sort=newest#user-tab-answers"><img src="https://cdn.sstatic.net/Sites/stackoverflow/company/img/logos/so/so-icon.png?v=c78bd457575a" height="20px">StackOverflow</a> answers and questions
 
-- <a href="sandbox.html">[sandbox]</a>
-
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgwMjEyNDgzNCwxODQ5MDgzNTk3LC0yMT
-Q1NTEyNTUzLDcwNzU2MDA0OSwxNDA1MTQ5MzAxLDcwNzU2MDA0
-OSwtMTc1MTY5MTY5LDEwNzg3ODMwMzQsLTM0MTk0ODA5NiwtMT
-U2MDI3MzI0MiwtMTc2MDM5MTg1Nl19
+eyJoaXN0b3J5IjpbNzA3NTYwMDQ5LDE4MDIxMjQ4MzQsMTg0OT
+A4MzU5NywtMjE0NTUxMjU1Myw3MDc1NjAwNDksMTQwNTE0OTMw
+MSw3MDc1NjAwNDksLTE3NTE2OTE2OSwxMDc4NzgzMDM0LC0zND
+E5NDgwOTYsLTE1NjAyNzMyNDIsLTE3NjAzOTE4NTZdfQ==
 -->
