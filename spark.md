@@ -240,7 +240,7 @@ val dfIsSorted = !df.sort().queryExecution.sparkPlan.outputOrdering.isEmpty
 ```
 
 ## V/ `DataFrame` vs other `Dataset[<not Row>]` steps of rows processing steps
-Short: DataFrame less secure but a bit faster.
+Short: DataFrame less secure but a little bit more performant regarding GC pressure.
 
 Let's compare processing steps of the `GeneratedIteratorForCodegenStage1` class that you can view by calling `.queryExecution.debug.codegen()` on a `DataFrame`
 
@@ -432,6 +432,9 @@ append((project_mutableStateArray_0[7].getRow()));
 ```
 
 [Full code available here](https://gist.github.com/EnzoBnl/37e07e9cf7bce440734c7d33304257f0)
+
+### 3) Additionnal notes
+If the only references manipulated  
 
 ## VI/ Conversion to RDD: `df.rdd` vs `df.queryExecution.toRdd()`
 [Jacek Laskowski's post on SO](https://stackoverflow.com/questions/44708629/is-dataset-rdd-an-action-or-transformation)
@@ -1249,11 +1252,11 @@ _____
 ## Videos
 - [A Deeper Understanding of Spark Internals - Aaron Davidson (Databricks)](https://www.youtube.com/watch?v=dmL0N3qfSc8)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ0ODkxMDY4MSw5MDI3MDAyMDEsMTMwNj
-E1NDI0OSwtMTMzMzAwNjQ3MCw4MDYyNzQwNDgsMTM5MDc3MTMx
-OSwxNTk0MDg5MTUwLDE1MDM0OTE5NywtODEzNzIyNjUzLC0xNz
-Y0NTIxMDc1LDEwMzgxNDIwNCw5ODA2OTA4ODUsMTYwOTMwMjA0
-NywxNzEzNzIxMDc1LC0yNTUxNjA5MTgsLTE2ODQxMjg2MTcsLT
-kxNDQ5NjIwMywxNDg5NDkyNDAxLDE3ODg3MzY0NTIsLTEwNDIx
-NzkzMV19
+eyJoaXN0b3J5IjpbLTQ0NDc0NDkwLDkwMjcwMDIwMSwxMzA2MT
+U0MjQ5LC0xMzMzMDA2NDcwLDgwNjI3NDA0OCwxMzkwNzcxMzE5
+LDE1OTQwODkxNTAsMTUwMzQ5MTk3LC04MTM3MjI2NTMsLTE3Nj
+Q1MjEwNzUsMTAzODE0MjA0LDk4MDY5MDg4NSwxNjA5MzAyMDQ3
+LDE3MTM3MjEwNzUsLTI1NTE2MDkxOCwtMTY4NDEyODYxNywtOT
+E0NDk2MjAzLDE0ODk0OTI0MDEsMTc4ODczNjQ1MiwtMTA0MjE3
+OTMxXX0=
 -->
