@@ -12,7 +12,8 @@ A code snippet is said *idiomatic* if it uses its programming language **the way
 Programming using only idioms ensures you a certain level of :
 - **performance**: all the benchmarks are by default based on idiomatic ways to perform tasks using the language.
 - **readability**: your code will be more easily intelligible by the rest of the community because the set of idioms represents a standard.
-- 
+
+
 # Java
 ## `&&` and `||` vs `&` and `|`
 When the boolean operator is doubled, it means that its evaluation will be **lazy**:
@@ -743,11 +744,11 @@ trash[1][2] = a;
 ## LEFT SEMI JOIN
 The result table of `A LEFT SEMI JOIN B` is a subset of `A`'s records (only `A`'s fields) whose key is matching at least 1 record in `B`.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NzU5MTk2NTYsOTk5MzQyMTE2LDIxMT
-QzMTIzNTIsLTE4NjQ1MzAwNjAsLTQ5ODA1MjE0MywtMzY3OTY5
-MTI1LDYxMDY0MTU0Nyw2Mjg2ODcwNzEsMTYyNDM4ODU3MywtMT
-YzNjQ3MjAyMSw2MTA5MDI0NzUsLTI2NzM5OTc1LDE5Nzk5MzQz
-MTMsMjMzMDM2MTc2LC00NTA4MjQzMTIsLTQ1MjY3MDI5NywtMT
-A4NDczNDMyNiwtMTE1NTM2OTIzOSwxNTE1MDQ1MzMzLC0xMjI3
-NjA4NDYwXX0=
+eyJoaXN0b3J5IjpbMjA1Mjc3MjUzNyw5OTkzNDIxMTYsMjExND
+MxMjM1MiwtMTg2NDUzMDA2MCwtNDk4MDUyMTQzLC0zNjc5Njkx
+MjUsNjEwNjQxNTQ3LDYyODY4NzA3MSwxNjI0Mzg4NTczLC0xNj
+M2NDcyMDIxLDYxMDkwMjQ3NSwtMjY3Mzk5NzUsMTk3OTkzNDMx
+MywyMzMwMzYxNzYsLTQ1MDgyNDMxMiwtNDUyNjcwMjk3LC0xMD
+g0NzM0MzI2LC0xMTU1MzY5MjM5LDE1MTUwNDUzMzMsLTEyMjc2
+MDg0NjBdfQ==
 -->
