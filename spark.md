@@ -228,7 +228,7 @@ df2 = df
 
 - cached blocks are not replicated by default, neither in memory nor when spilled (which stores on disks using local file system). You can activate a factor 2 replication by appending a `_2` suffix to any storage level constant, for example `MEMORY_AND_DISK_2`.
 
-### 4) is a DataFrame sorted ?
+### 4) How to know if a particular DataFrame is sorted ?
 One can use `df.queryExecution.sparkPlan.outputOrdering` that returns a sequence of `org.apache.spark.sql.catalyst.expressions.SortOrder`s to retrieve this information:
 
 ```scala
@@ -1249,11 +1249,11 @@ _____
 ## Videos
 - [A Deeper Understanding of Spark Internals - Aaron Davidson (Databricks)](https://www.youtube.com/watch?v=dmL0N3qfSc8)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTAyNzAwMjAxLDEzMDYxNTQyNDksLTEzMz
-MwMDY0NzAsODA2Mjc0MDQ4LDEzOTA3NzEzMTksMTU5NDA4OTE1
-MCwxNTAzNDkxOTcsLTgxMzcyMjY1MywtMTc2NDUyMTA3NSwxMD
-M4MTQyMDQsOTgwNjkwODg1LDE2MDkzMDIwNDcsMTcxMzcyMTA3
-NSwtMjU1MTYwOTE4LC0xNjg0MTI4NjE3LC05MTQ0OTYyMDMsMT
-Q4OTQ5MjQwMSwxNzg4NzM2NDUyLC0xMDQyMTc5MzEsMTY0Mzc2
-NDJdfQ==
+eyJoaXN0b3J5IjpbLTQ0ODkxMDY4MSw5MDI3MDAyMDEsMTMwNj
+E1NDI0OSwtMTMzMzAwNjQ3MCw4MDYyNzQwNDgsMTM5MDc3MTMx
+OSwxNTk0MDg5MTUwLDE1MDM0OTE5NywtODEzNzIyNjUzLC0xNz
+Y0NTIxMDc1LDEwMzgxNDIwNCw5ODA2OTA4ODUsMTYwOTMwMjA0
+NywxNzEzNzIxMDc1LC0yNTUxNjA5MTgsLTE2ODQxMjg2MTcsLT
+kxNDQ5NjIwMywxNDg5NDkyNDAxLDE3ODg3MzY0NTIsLTEwNDIx
+NzkzMV19
 -->
