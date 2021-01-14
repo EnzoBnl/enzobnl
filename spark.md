@@ -435,6 +435,7 @@ append((project_mutableStateArray_0[7].getRow()));
 
 ### 3) Additionnal notes
 If the only references manipulated using strongly typed `Dataset`s are instances of `AnyVal`, then it will be as GC friendly as "DataFrame" operations and may only imply a few more method calls. You may want to run these code snippets to verify this:
+
 ```scala
 val ds: Dataset[Double] = spark  
   .range(10000000)  
@@ -1268,11 +1269,11 @@ _____
 ## Videos
 - [A Deeper Understanding of Spark Internals - Aaron Davidson (Databricks)](https://www.youtube.com/watch?v=dmL0N3qfSc8)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDUyNjAzOTM4LDkwMjcwMDIwMSwxMzA2MT
-U0MjQ5LC0xMzMzMDA2NDcwLDgwNjI3NDA0OCwxMzkwNzcxMzE5
-LDE1OTQwODkxNTAsMTUwMzQ5MTk3LC04MTM3MjI2NTMsLTE3Nj
-Q1MjEwNzUsMTAzODE0MjA0LDk4MDY5MDg4NSwxNjA5MzAyMDQ3
-LDE3MTM3MjEwNzUsLTI1NTE2MDkxOCwtMTY4NDEyODYxNywtOT
-E0NDk2MjAzLDE0ODk0OTI0MDEsMTc4ODczNjQ1MiwtMTA0MjE3
-OTMxXX0=
+eyJoaXN0b3J5IjpbLTEzNzYwMTM4MDgsOTAyNzAwMjAxLDEzMD
+YxNTQyNDksLTEzMzMwMDY0NzAsODA2Mjc0MDQ4LDEzOTA3NzEz
+MTksMTU5NDA4OTE1MCwxNTAzNDkxOTcsLTgxMzcyMjY1MywtMT
+c2NDUyMTA3NSwxMDM4MTQyMDQsOTgwNjkwODg1LDE2MDkzMDIw
+NDcsMTcxMzcyMTA3NSwtMjU1MTYwOTE4LC0xNjg0MTI4NjE3LC
+05MTQ0OTYyMDMsMTQ4OTQ5MjQwMSwxNzg4NzM2NDUyLC0xMDQy
+MTc5MzFdfQ==
 -->
