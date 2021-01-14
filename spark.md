@@ -434,7 +434,27 @@ append((project_mutableStateArray_0[7].getRow()));
 [Full code available here](https://gist.github.com/EnzoBnl/37e07e9cf7bce440734c7d33304257f0)
 
 ### 3) Additionnal notes
-If the only references manipulated using strongly typed `Dataset`s are instances of `AnyVal`, then it will be as GC friendly as "DataFrame" operations and may only imply a few more method calls. You may want to r
+If the only references manipulated using strongly typed `Dataset`s are instances of `AnyVal`, then it will be as GC friendly as "DataFrame" operations and may only imply a few more method calls. You may want to run these code snippets to verify this:
+
+```scala
+val df: DataFrame = spark
+  .range(10)
+  .select(sqrt(col("id")))
+  
+df.queryExecution.debug.codegen()  
+  
+val ds = spark  
+  .range(10000000)  
+  .select($"id".as[Long])  
+  .map(id => java.lang.Math.sqrt(id))  
+  
+ds.explain(true)  
+df.queryExecution.debug.codegen()
+```
+
+```scala
+
+```
 
 ## VI/ Conversion to RDD: `df.rdd` vs `df.queryExecution.toRdd()`
 [Jacek Laskowski's post on SO](https://stackoverflow.com/questions/44708629/is-dataset-rdd-an-action-or-transformation)
@@ -1252,7 +1272,7 @@ _____
 ## Videos
 - [A Deeper Understanding of Spark Internals - Aaron Davidson (Databricks)](https://www.youtube.com/watch?v=dmL0N3qfSc8)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMjA3OTc2OTAsOTAyNzAwMjAxLDEzMD
+eyJoaXN0b3J5IjpbLTE2MTc2ODM5MzUsOTAyNzAwMjAxLDEzMD
 YxNTQyNDksLTEzMzMwMDY0NzAsODA2Mjc0MDQ4LDEzOTA3NzEz
 MTksMTU5NDA4OTE1MCwxNTAzNDkxOTcsLTgxMzcyMjY1MywtMT
 c2NDUyMTA3NSwxMDM4MTQyMDQsOTgwNjkwODg1LDE2MDkzMDIw
