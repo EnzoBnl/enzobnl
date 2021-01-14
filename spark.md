@@ -442,18 +442,15 @@ val df: DataFrame = spark
   .select(sqrt(col("id")))
   
 df.queryExecution.debug.codegen()  
-  
-val ds = spark  
-  .range(10000000)  
-  .select($"id".as[Long])  
-  .map(id => java.lang.Math.sqrt(id))  
-  
-ds.explain(true)  
-df.queryExecution.debug.codegen()
 ```
 
 ```scala
+val ds: Dataset[Double] = spark  
+  .range(10000000)  
+  .select($"id".as[Long])  
+  .map(id => java.lang.Math.sqrt(id))
 
+ds.queryExecution.debug.codegen() 
 ```
 
 ## VI/ Conversion to RDD: `df.rdd` vs `df.queryExecution.toRdd()`
@@ -1272,7 +1269,7 @@ _____
 ## Videos
 - [A Deeper Understanding of Spark Internals - Aaron Davidson (Databricks)](https://www.youtube.com/watch?v=dmL0N3qfSc8)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MTc2ODM5MzUsOTAyNzAwMjAxLDEzMD
+eyJoaXN0b3J5IjpbLTE5NDUzNTIyNTQsOTAyNzAwMjAxLDEzMD
 YxNTQyNDksLTEzMzMwMDY0NzAsODA2Mjc0MDQ4LDEzOTA3NzEz
 MTksMTU5NDA4OTE1MCwxNTAzNDkxOTcsLTgxMzcyMjY1MywtMT
 c2NDUyMTA3NSwxMDM4MTQyMDQsOTgwNjkwODg1LDE2MDkzMDIw
