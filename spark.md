@@ -438,7 +438,7 @@ If the only references manipulated using strongly typed `Dataset`s are instances
 
 ```scala
 val ds: Dataset[Double] = spark  
-  .range(10000000)  
+  .range(n)  
   .select($"id".as[Long])  
   .map(id => java.lang.Math.sqrt(id))
 
@@ -447,7 +447,7 @@ ds.queryExecution.debug.codegen()
 
 ```scala
 val df: DataFrame = spark
-  .range(10)
+  .range(n)
   .select(sqrt(col("id")))
   
 df.queryExecution.debug.codegen()  
@@ -1269,11 +1269,11 @@ _____
 ## Videos
 - [A Deeper Understanding of Spark Internals - Aaron Davidson (Databricks)](https://www.youtube.com/watch?v=dmL0N3qfSc8)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNzYwMTM4MDgsOTAyNzAwMjAxLDEzMD
-YxNTQyNDksLTEzMzMwMDY0NzAsODA2Mjc0MDQ4LDEzOTA3NzEz
-MTksMTU5NDA4OTE1MCwxNTAzNDkxOTcsLTgxMzcyMjY1MywtMT
-c2NDUyMTA3NSwxMDM4MTQyMDQsOTgwNjkwODg1LDE2MDkzMDIw
-NDcsMTcxMzcyMTA3NSwtMjU1MTYwOTE4LC0xNjg0MTI4NjE3LC
-05MTQ0OTYyMDMsMTQ4OTQ5MjQwMSwxNzg4NzM2NDUyLC0xMDQy
-MTc5MzFdfQ==
+eyJoaXN0b3J5IjpbLTE0MTk0MDE2MTIsLTEzNzYwMTM4MDgsOT
+AyNzAwMjAxLDEzMDYxNTQyNDksLTEzMzMwMDY0NzAsODA2Mjc0
+MDQ4LDEzOTA3NzEzMTksMTU5NDA4OTE1MCwxNTAzNDkxOTcsLT
+gxMzcyMjY1MywtMTc2NDUyMTA3NSwxMDM4MTQyMDQsOTgwNjkw
+ODg1LDE2MDkzMDIwNDcsMTcxMzcyMTA3NSwtMjU1MTYwOTE4LC
+0xNjg0MTI4NjE3LC05MTQ0OTYyMDMsMTQ4OTQ5MjQwMSwxNzg4
+NzM2NDUyXX0=
 -->
