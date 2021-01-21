@@ -538,7 +538,7 @@ SELECT
 
 **\_\_frame_type\_\_**:  
 - **ROW** (*start* and *end* are then index and offsets: `ROWS BETWEEN UNBOUNDED PRECEDING AND 10 FOLLOWING`,  the frame contains every records from the begining of the partition to the ten next records after current one) 
-- **RANGE** (*start* and *end* are then values in *orderCol* unit : `RANGE BETWEEN 13000 PRECEDING AND CURRENT ROW FOLLOWING`, given that *ORDER BY* has been performed on column **price** and that *current_p* is the price of the current record, the frame contains all the records that have a value of **price** *p* that is between *current_p -13000* and *current_p*)
+- **RANGE** (*start* and *end* are then values in *orderCol* unit : `RANGE BETWEEN 13000 PRECEDING AND CURRENT ROW`, given that *ORDER BY* has been performed on column **price** and that *current_p* is the price of the current record, the frame contains all the records that have a value of **price** *p* that is between *current_p -13000* and *current_p*)
 
 
 ## IX/ Vector Type
@@ -1269,11 +1269,11 @@ _____
 ## Videos
 - [A Deeper Understanding of Spark Internals - Aaron Davidson (Databricks)](https://www.youtube.com/watch?v=dmL0N3qfSc8)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MTk0MDE2MTIsLTEzNzYwMTM4MDgsOT
-AyNzAwMjAxLDEzMDYxNTQyNDksLTEzMzMwMDY0NzAsODA2Mjc0
-MDQ4LDEzOTA3NzEzMTksMTU5NDA4OTE1MCwxNTAzNDkxOTcsLT
-gxMzcyMjY1MywtMTc2NDUyMTA3NSwxMDM4MTQyMDQsOTgwNjkw
-ODg1LDE2MDkzMDIwNDcsMTcxMzcyMTA3NSwtMjU1MTYwOTE4LC
-0xNjg0MTI4NjE3LC05MTQ0OTYyMDMsMTQ4OTQ5MjQwMSwxNzg4
-NzM2NDUyXX0=
+eyJoaXN0b3J5IjpbLTg3OTYyMDQ0NSwtMTQxOTQwMTYxMiwtMT
+M3NjAxMzgwOCw5MDI3MDAyMDEsMTMwNjE1NDI0OSwtMTMzMzAw
+NjQ3MCw4MDYyNzQwNDgsMTM5MDc3MTMxOSwxNTk0MDg5MTUwLD
+E1MDM0OTE5NywtODEzNzIyNjUzLC0xNzY0NTIxMDc1LDEwMzgx
+NDIwNCw5ODA2OTA4ODUsMTYwOTMwMjA0NywxNzEzNzIxMDc1LC
+0yNTUxNjA5MTgsLTE2ODQxMjg2MTcsLTkxNDQ5NjIwMywxNDg5
+NDkyNDAxXX0=
 -->
