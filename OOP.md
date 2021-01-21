@@ -41,11 +41,11 @@ This split is sometimes really arbitrary and discussable:
     -   Inheritance
     -   Polymorphism
 -   SOLID
-    -   Single Responsibility Principle
-    -   Open / Closed Principle (note: solves the *Expression Problem*)
-    -   Liskov Substitution Principle
-    -   Interface Segregation Principle
-    -   Dependency Inversion Principle)
+    -   **S**ingle Responsibility Principle
+    -   (Polymorphic) **O**pen / Closed Principle (note: solves the *Expression Problem*)
+    -   **L**iskov Substitution Principle
+    -   **I**nterface Segregation Principle
+    -   **D**ependency Inversion Principle)
 
 Different purposes:
 -   **languages or concepts which don't support Encapsulation, Abstraction, Inheritance and Poly _are not object oriented_**. If you do something object oriented you can always apply these OO basics, because they are available. One doesn't call such things principles.
@@ -133,6 +133,7 @@ M[Man<br/>____________<br/>]--extends-->H
 |**[Structural]** *Delegation Pattern*|*"Allows object composition to achieve the same code reuse as inheritance."*|When a method delegates its work to an underlying attribute. For example a `Body` can delegate walking to its `Legs`: its `.walk()` method simply call `this.legs.walk()`.|Useful to match **OCP** when we can't achieve behavior reuse through inheritance for some reason|
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODYzMzQ5NzA5LDE2MzcxOTkyNDYsOTI5OD
-c2MDc4LC0xNzcxODE5NDYzLC0xMDE1NDk2ODQxXX0=
+eyJoaXN0b3J5IjpbLTkwNzA0MjM2MCw4NjMzNDk3MDksMTYzNz
+E5OTI0Niw5Mjk4NzYwNzgsLTE3NzE4MTk0NjMsLTEwMTU0OTY4
+NDFdfQ==
 -->
