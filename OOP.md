@@ -63,6 +63,10 @@ Based on this idea, Robert C. Martin’s definition of the Dependency Inversion 
 #### Encapsulation
 Expose behavior in a public API that do calls to private behaviors implementations & attributes
 
+#### Polymorphism
+- *Ad hoc polymorphism*: Via method overloading.
+- *Parametric Polym
+
 ### Best practices
 #### Avoid fields direct use
 *"You should not need to know if you are manipulating a field or a method"*
@@ -128,6 +132,6 @@ M[Man<br/>____________<br/>]--extends-->H
 |**[Structural]** *Delegation Pattern*|*"Allows object composition to achieve the same code reuse as inheritance."*|When a method delegates its work to an underlying attribute. For example a `Body` can delegate walking to its `Legs`: its `.walk()` method simply call `this.legs.walk()`.|Useful to match **OCP** when we can't achieve behavior reuse through inheritance for some reason|
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYzNzE5OTI0Niw5Mjk4NzYwNzgsLTE3Nz
-E4MTk0NjMsLTEwMTU0OTY4NDFdfQ==
+eyJoaXN0b3J5IjpbMTAyMTMzNTU0NywxNjM3MTk5MjQ2LDkyOT
+g3NjA3OCwtMTc3MTgxOTQ2MywtMTAxNTQ5Njg0MV19
 -->
