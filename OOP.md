@@ -64,9 +64,9 @@ Based on this idea, Robert C. Martin’s definition of the Dependency Inversion 
 Expose behavior in a public API that do calls to private behaviors implementations & attributes
 
 #### Polymorphism
-- *Ad hoc Polymorphism*: Via method overloading.
-- *Parametric Polymorphism*: Via "generics" methods or classes/interfaces
-- *Subtyping*: Via Liskov Principle
+- *Ad hoc Polymorphism*: see Overloading.
+- *Parametric Polymorphism*: allowed by "Generics"
+- *Subtyping Polymorphism*: allows Liskov Substitution Principle
 
 ### Best practices
 #### Avoid fields direct use
@@ -133,6 +133,6 @@ M[Man<br/>____________<br/>]--extends-->H
 |**[Structural]** *Delegation Pattern*|*"Allows object composition to achieve the same code reuse as inheritance."*|When a method delegates its work to an underlying attribute. For example a `Body` can delegate walking to its `Legs`: its `.walk()` method simply call `this.legs.walk()`.|Useful to match **OCP** when we can't achieve behavior reuse through inheritance for some reason|
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc1NTkyNzg2NywxNjM3MTk5MjQ2LDkyOT
+eyJoaXN0b3J5IjpbMTM2Njc1MjU1MiwxNjM3MTk5MjQ2LDkyOT
 g3NjA3OCwtMTc3MTgxOTQ2MywtMTAxNTQ5Njg0MV19
 -->
