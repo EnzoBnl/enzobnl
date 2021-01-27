@@ -1,11 +1,12 @@
 # Welcome !
 
-<img width='300px' src='https://raw.githubusercontent.com/EnzoBnl/enzobnl.github.io/master/figs/patrick_data_engineer_meme.png'></img>
+<img width='250px' src='https://raw.githubusercontent.com/EnzoBnl/enzobnl.github.io/master/figs/patrick_data_engineer_meme.png'/>
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNzI1NDI4NzcsMjAzNTc0ODIyNiwtOD
-U3Mjc0ODg5LDcwNzU2MDA0OSwxODAyMTI0ODM0LDE4NDkwODM1
-OTcsLTIxNDU1MTI1NTMsNzA3NTYwMDQ5LDE0MDUxNDkzMDEsNz
-A3NTYwMDQ5LC0xNzUxNjkxNjksMTA3ODc4MzAzNCwtMzQxOTQ4
-MDk2LC0xNTYwMjczMjQyLC0xNzYwMzkxODU2XX0=
+eyJoaXN0b3J5IjpbMjEwMjQyOTYyNCwtMTM3MjU0Mjg3NywyMD
+M1NzQ4MjI2LC04NTcyNzQ4ODksNzA3NTYwMDQ5LDE4MDIxMjQ4
+MzQsMTg0OTA4MzU5NywtMjE0NTUxMjU1Myw3MDc1NjAwNDksMT
+QwNTE0OTMwMSw3MDc1NjAwNDksLTE3NTE2OTE2OSwxMDc4Nzgz
+MDM0LC0zNDE5NDgwOTYsLTE1NjAyNzMyNDIsLTE3NjAzOTE4NT
+ZdfQ==
 -->
