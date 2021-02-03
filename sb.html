@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ararauna Shop Sandbox</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+<!-- Button to Open the Modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+    Commander le chocolat
+</button>
+
+<!-- The Modal -->
+<div class="modal" id="myModal">
+    <div class="modal-dialog" style="max-width:90%">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Commande produits ARARAUNA</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body" style="text-align:center">
+                <em>Cliquer sur les images pour plus de détails</em>
+                <br/>
+                <br/>
+                <div class="row">
+                    <div class="col-sm" style="text-align:center">
+                        <a href="#" data-toggle="popover" title="Sachet de pistoles" data-placement="top" data-content="1kg, 32€">
+                            <img src="http://araraunacacao.com/WEFiles/Image/WEImage/Sachet%20pistoles-24d060ee.png"/>
+                        </a>
+                        <br/>
+                        <br/>
+                        Quantité: <input onchange="update();" type="number" class="border-0" id="pistqty" step="1" min="0" style="width:50px;text-align:right" value="0">
+                        <br/>
+                        <br/>
+                    </div>
+                    <div class="col-sm">
+                        <a href="#" data-toggle="popover" title="Tablette Classique" data-placement="top" data-content="70g, 4€">
+                            <img src="http://araraunacacao.com/WEFiles/Image/WEImage/Embalage%20tablette%20CL-e2b02cf9.png"/>
+                        </a>
+                        <br/>
+                        <br/>
+                        Quantité: <input onchange="update();" type="number" class="border-0" id="clasqty" step="1" min="0" style="width:50px;text-align:right" value="0">
+                        <br/>
+                        <br/>
+                    </div>
+                    <div class="col-sm">
+                        <a href="#" data-toggle="popover" title="Tablette Quinoa" data-placement="top" data-content="70g, 4€">
+                            <img src="http://araraunacacao.com/WEFiles/Image/WEImage/QUINOA-ee75bef2.png"/>
+                        </a>
+                        <br/>
+                        <br/>
+                        Quantité: <input onchange="update();" type="number" class="border-0" id="quinqty" step="1" min="0" style="width:50px;text-align:right" value="0">
+                        <br/>
+                        <br/>
+                    </div>
+                    <div class="col-sm">
+                        <a href="#" data-toggle="popover" title="Tablette Fleur de sel" data-placement="top" data-content="70g, 4€">
+                            <img src="http://araraunacacao.com/WEFiles/Image/WEImage/SEL-acb1df35.png"/>
+                        </a>
+                        <br/>
+                        <br/>
+                        Quantité: <input onchange="update();" type="number" class="border-0" id="fleuqty" step="1" min="0" style="width:50px;text-align:right" value="0">
+                        <br/>
+                        <br/>
+                    </div>
+                    <div class="col-sm">
+                        <a href="#" data-toggle="popover" title="Tablette Physalis" data-placement="top" data-placement="top" data-content="70g, 4€">
+                          <img src="http://araraunacacao.com/WEFiles/Image/WEImage/PHYSALIS-9bc10e1f.png"/>
+                        </a>
+                        <br/>
+                        <br/>
+                        Quantité: <input onchange="update();" type="number" class="border-0" id="physqty" step="1" min="0" style="width:50px;text-align:right" value="0">
+                        <br/>
+                        <br/>
+                    </div>
+                    <div class="col-sm">
+                        <a href="#" data-toggle="popover" title="Tablette Myrtilles" data-placement="top" data-content="70g, 4€">
+                            <img src="http://araraunacacao.com/WEFiles/Image/WEImage/MYRTILLES-37f45dbb.png"/>
+                        </a>
+                        <br/>
+                        <br/>
+                        Quantité: <input onchange="update();" type="number" class="border-0" id="myrtqty" step="1" min="0" style="width:50px;text-align:right" value="0" value="0">
+                        <br/>
+                        <br/>
+                    </div>
+                </div>
+                <br/>
+                <br/>
+                <p>Prix produits: <strong id="products_price">0</strong> €</p>
+                <p>Frais de ports: <strong id="shipping_price">0</strong> €
+                <br/>
+                <em>(Offerts au delà de 200€ de produits commandés)</em></p
+                <p>Total: <strong id="total_price">0</strong> €</p>
+                <button type="button" class="btn btn-success" id="checkout-button">
+                    Paiement <i class="fa fa-credit-card" aria-hidden="true"></i>
+                </button>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer" style="text-align:center">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+$(document).ready(function(){
+  $('[data-toggle="popover"]').popover();
+});
+</script>
+<script type="text/javascript">
+
+const computeShippingPrice = function(NS, NT) {
+    MP=NT*0.09+NS*1.05;
+    MT=(MP<3)*(MP+0.15)+(3<=MP && MP<5)*(MP+0.3)+(5<=MP && MP<7)*(MP+0.5);
+    FP=1.15*(1.5+5.5)*(MT<0.25)+(0.25<=MT && MT<0.5)*1.15*(1.5+6.45)+(0.5<=MT && MT<0.75)*1.15*(1.5+7.25)+(0.75<=MT && MT<1)*1.15*(1.5+7.90)+(1<=MT && MT<2)*1.15*(1.5+8.95)+(2<=MT && MT<5)*1.15*(1.5+11.5)+(5<=MT && MT<10)*1.15*(1.5+16.5)+(10<=MT && MT<30)*1.15*(1.5+24.5);
+    return FP;
+}
+
+const itemIds = ["pist", "clas", "fleu", "quin", "myrt", "phys"];
+
+const pistPriceInEuro = 32;
+const tabsPriceInEuro = 4;
+
+const update = function() {
+    var pistqty = 0;
+    var tabsqty = 0;
+    for (let i = 0; i<itemIds.length; i++) {
+        let itemId = itemIds[i];
+        console.log(itemId + 'qty');
+        let cleanValue = Math.max(0, Math.round(document.getElementById(itemId + 'qty').value));
+        document.getElementById(itemId + 'qty').value = cleanValue;
+        if (itemId == "pist") {
+            pistqty += cleanValue;
+        } else {
+            tabsqty += cleanValue;
+        }
+    }
+
+    var productPrice = pistqty * pistPriceInEuro + tabsqty * tabsPriceInEuro;
+
+    var shippingPrice = 0;
+    if (productPrice < 200) {
+        shippingPrice = computeShippingPrice(pistqty, tabsqty);
+    }
+
+    document.getElementById('products_price').innerHTML = Math.round(productPrice*100, 2)/100;
+    document.getElementById('shipping_price').innerHTML = Math.round(shippingPrice*100, 2)/100;
+    document.getElementById('total_price').innerHTML = Math.round((productPrice + shippingPrice)*100, 2)/100;
+};
+</script>
+<script type="text/javascript">
+// Create an instance of the Stripe object with your publishable API key
+const stripe = Stripe('pk_test_51IFR7rKyE41BXf9Y8NE6j1W99P8PLEtUxXQ6ZY42DWngrJKYAKMHABhHcC6kIyyHhA0aMDvsOc8Els8UBIC2ljTn00rtIXDOb6');
+const checkoutButton = document.getElementById('checkout-button');
+
+checkoutButton.addEventListener('click', function() {
+    const items = [];
+    for (let i = 0; i<itemIds.length; i++) {
+        let itemId = itemIds[i];
+        let qty = Number(document.getElementById(itemId + 'qty').value);
+        if (qty > 0) {
+            items.push({id: itemId, qty: qty});
+        }
+    }
+
+    if (items.length > 0) {
+        var command = {items: items};
+        // Create a new Checkout Session using the server-side endpoint you
+        // created in step 3.
+        fetch('https://europe-west1-ararauna.cloudfunctions.net/create-checkout-session?command=' + JSON.stringify(command), {
+          method: 'POST',
+        })
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(responseJSON) {
+          if ("errors" in responseJSON) {
+            return {error: {message: responseJSON["errors"]}}
+          } else {
+            return stripe.redirectToCheckout({ sessionId: responseJSON.id });
+          }
+        })
+        .then(function(result) {
+          // If `redirectToCheckout` fails due to a browser or network
+          // error, you should display the localized error message to your
+          // customer using `error.message`.
+          if (result.error) {
+            alert(result.error.message);
+          }
+        })
+        .catch(function(error) {
+          console.error('Error:', error);
+        });
+    } else {
+        alert("Sélectionner au moins 1 produit");
+    }
+});
+</script>
+</body>
+</html>
