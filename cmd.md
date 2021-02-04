@@ -106,6 +106,8 @@ echo $STRING
 $ chmod +x hello_world.sh 
 // chmod recursively on folder
 chmod u=rwx,g=rx,o=r /.../folder/ --recursive
+# compression de tous les fichiers gzip du répertoire, 8 à la fois, en faible prio avec nice:  
+nice parallel -j 8 gzip -- *.json
 // tar extract tgz
 tar -xvzf /path/to/yourfile.tgz
 // archive and compress with gzip
@@ -359,11 +361,11 @@ c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex 
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MDU1NjAxMTUsMTA0MTYxNTAxOSwxNT
-AyNDg0MTEyLDE2Mzc5NzE0NzEsLTEwMDU0NjQ5MzQsNzk4MzAy
-NDIzLC0xOTMwODA1OTY1LDE3NDI4NDMxMDksMTI3MzU5NzA5Ni
-wxNzM0OTQ4MTcwLDg2MDMyMzc5MSwtMTczMDA0NzEzMywtNjU2
-MjI1OTMxLDE1NzQ2NDM1NjMsLTE4MTQ2MDk5MzMsLTQ1NDQ0Nz
-Q4OSwtMjA1NzI3NDEzNywxODA0NzgzNTg5LDQ1OTQ2ODI2LDIw
-OTY0NTMzOTZdfQ==
+eyJoaXN0b3J5IjpbLTIxMzc2NzAxODQsLTE1MDU1NjAxMTUsMT
+A0MTYxNTAxOSwxNTAyNDg0MTEyLDE2Mzc5NzE0NzEsLTEwMDU0
+NjQ5MzQsNzk4MzAyNDIzLC0xOTMwODA1OTY1LDE3NDI4NDMxMD
+ksMTI3MzU5NzA5NiwxNzM0OTQ4MTcwLDg2MDMyMzc5MSwtMTcz
+MDA0NzEzMywtNjU2MjI1OTMxLDE1NzQ2NDM1NjMsLTE4MTQ2MD
+k5MzMsLTQ1NDQ0NzQ4OSwtMjA1NzI3NDEzNywxODA0NzgzNTg5
+LDQ1OTQ2ODI2XX0=
 -->
