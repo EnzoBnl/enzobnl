@@ -176,7 +176,7 @@ sudo chown $USER folderx -R
 // empty root trash
 sudo rm -r /root/.local/share/Trash/files
 
-# Null device in UNUX systems
+# Null device in UNIX systems
 /dev/null
 ```
 
@@ -363,11 +363,11 @@ c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex 
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg5OTQ3NzcwMSwtMjEzNzY3MDE4NCwtMT
-UwNTU2MDExNSwxMDQxNjE1MDE5LDE1MDI0ODQxMTIsMTYzNzk3
-MTQ3MSwtMTAwNTQ2NDkzNCw3OTgzMDI0MjMsLTE5MzA4MDU5Nj
-UsMTc0Mjg0MzEwOSwxMjczNTk3MDk2LDE3MzQ5NDgxNzAsODYw
-MzIzNzkxLC0xNzMwMDQ3MTMzLC02NTYyMjU5MzEsMTU3NDY0Mz
-U2MywtMTgxNDYwOTkzMywtNDU0NDQ3NDg5LC0yMDU3Mjc0MTM3
-LDE4MDQ3ODM1ODldfQ==
+eyJoaXN0b3J5IjpbMjEyNzE0NTQzLC0yMTM3NjcwMTg0LC0xNT
+A1NTYwMTE1LDEwNDE2MTUwMTksMTUwMjQ4NDExMiwxNjM3OTcx
+NDcxLC0xMDA1NDY0OTM0LDc5ODMwMjQyMywtMTkzMDgwNTk2NS
+wxNzQyODQzMTA5LDEyNzM1OTcwOTYsMTczNDk0ODE3MCw4NjAz
+MjM3OTEsLTE3MzAwNDcxMzMsLTY1NjIyNTkzMSwxNTc0NjQzNT
+YzLC0xODE0NjA5OTMzLC00NTQ0NDc0ODksLTIwNTcyNzQxMzcs
+MTgwNDc4MzU4OV19
 -->
