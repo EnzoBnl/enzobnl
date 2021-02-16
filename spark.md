@@ -1269,13 +1269,13 @@ _____
 ## Videos
 - [A Deeper Understanding of Spark Internals - Aaron Davidson (Databricks)](https://www.youtube.com/watch?v=dmL0N3qfSc8)
 
-<a rel="nofollow" href="tmp.html"> </a>
+<a rel="nofollow" href="tmp.html">_</a>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDkzNjgxNzY2LC04Nzk2MjA0NDUsLTE0MT
-k0MDE2MTIsLTEzNzYwMTM4MDgsOTAyNzAwMjAxLDEzMDYxNTQy
-NDksLTEzMzMwMDY0NzAsODA2Mjc0MDQ4LDEzOTA3NzEzMTksMT
-U5NDA4OTE1MCwxNTAzNDkxOTcsLTgxMzcyMjY1MywtMTc2NDUy
-MTA3NSwxMDM4MTQyMDQsOTgwNjkwODg1LDE2MDkzMDIwNDcsMT
-cxMzcyMTA3NSwtMjU1MTYwOTE4LC0xNjg0MTI4NjE3LC05MTQ0
-OTYyMDNdfQ==
+eyJoaXN0b3J5IjpbLTE4NDcwMzc2ODksNDkzNjgxNzY2LC04Nz
+k2MjA0NDUsLTE0MTk0MDE2MTIsLTEzNzYwMTM4MDgsOTAyNzAw
+MjAxLDEzMDYxNTQyNDksLTEzMzMwMDY0NzAsODA2Mjc0MDQ4LD
+EzOTA3NzEzMTksMTU5NDA4OTE1MCwxNTAzNDkxOTcsLTgxMzcy
+MjY1MywtMTc2NDUyMTA3NSwxMDM4MTQyMDQsOTgwNjkwODg1LD
+E2MDkzMDIwNDcsMTcxMzcyMTA3NSwtMjU1MTYwOTE4LC0xNjg0
+MTI4NjE3XX0=
 -->
