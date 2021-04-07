@@ -140,7 +140,9 @@ source ~/.bashrc
 // You can make a file executable as follows:
 chmod a+x exampleName.AppImage
 // get historic back after reset and clear
-[shortcut] Ctrl + L
+[shortcut] Ctrl + l
+// search terminal history, same shortcut to navigate matching lines
+[shortcut] Ctrl + r
 // create a symlinl (symbolic link)
 sudo ln -s origin target
 // generate ssh pub/private keys
@@ -363,11 +365,11 @@ c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex 
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjEyNzE0NTQzLC0yMTM3NjcwMTg0LC0xNT
-A1NTYwMTE1LDEwNDE2MTUwMTksMTUwMjQ4NDExMiwxNjM3OTcx
-NDcxLC0xMDA1NDY0OTM0LDc5ODMwMjQyMywtMTkzMDgwNTk2NS
-wxNzQyODQzMTA5LDEyNzM1OTcwOTYsMTczNDk0ODE3MCw4NjAz
-MjM3OTEsLTE3MzAwNDcxMzMsLTY1NjIyNTkzMSwxNTc0NjQzNT
-YzLC0xODE0NjA5OTMzLC00NTQ0NDc0ODksLTIwNTcyNzQxMzcs
-MTgwNDc4MzU4OV19
+eyJoaXN0b3J5IjpbMTg2NTc0NTY1MywyMTI3MTQ1NDMsLTIxMz
+c2NzAxODQsLTE1MDU1NjAxMTUsMTA0MTYxNTAxOSwxNTAyNDg0
+MTEyLDE2Mzc5NzE0NzEsLTEwMDU0NjQ5MzQsNzk4MzAyNDIzLC
+0xOTMwODA1OTY1LDE3NDI4NDMxMDksMTI3MzU5NzA5NiwxNzM0
+OTQ4MTcwLDg2MDMyMzc5MSwtMTczMDA0NzEzMywtNjU2MjI1OT
+MxLDE1NzQ2NDM1NjMsLTE4MTQ2MDk5MzMsLTQ1NDQ0NzQ4OSwt
+MjA1NzI3NDEzN119
 -->
