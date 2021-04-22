@@ -76,6 +76,8 @@ gcloud config set project <project-id>
 ## Terminals
 ### unix
 ```bash
+# grep
+grep 
 # change default jdk: in .bashrc:
 export JAVA_HOME=/opt/java/<jdk>
 export PATH=$JAVA_HOME/bin:$PATH
@@ -367,11 +369,11 @@ c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex 
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM5NjI3OTA5MSwxODY1NzQ1NjUzLDIxMj
-cxNDU0MywtMjEzNzY3MDE4NCwtMTUwNTU2MDExNSwxMDQxNjE1
-MDE5LDE1MDI0ODQxMTIsMTYzNzk3MTQ3MSwtMTAwNTQ2NDkzNC
-w3OTgzMDI0MjMsLTE5MzA4MDU5NjUsMTc0Mjg0MzEwOSwxMjcz
-NTk3MDk2LDE3MzQ5NDgxNzAsODYwMzIzNzkxLC0xNzMwMDQ3MT
-MzLC02NTYyMjU5MzEsMTU3NDY0MzU2MywtMTgxNDYwOTkzMywt
-NDU0NDQ3NDg5XX0=
+eyJoaXN0b3J5IjpbMTc3OTA1MzA5OCwxMzk2Mjc5MDkxLDE4Nj
+U3NDU2NTMsMjEyNzE0NTQzLC0yMTM3NjcwMTg0LC0xNTA1NTYw
+MTE1LDEwNDE2MTUwMTksMTUwMjQ4NDExMiwxNjM3OTcxNDcxLC
+0xMDA1NDY0OTM0LDc5ODMwMjQyMywtMTkzMDgwNTk2NSwxNzQy
+ODQzMTA5LDEyNzM1OTcwOTYsMTczNDk0ODE3MCw4NjAzMjM3OT
+EsLTE3MzAwNDcxMzMsLTY1NjIyNTkzMSwxNTc0NjQzNTYzLC0x
+ODE0NjA5OTMzXX0=
 -->
