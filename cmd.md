@@ -304,6 +304,8 @@ $ git tag -a v1.4 -m "my version 1.4"
 git rebase -i <after-this-commit>
 //lines in repo:
 git ls-files | xargs wc -l
+//reset to origin branch state
+git reset --hard origin/foo
 //reset to last commit
 git reset --hard
 fichier .gitignore avec les dossier à pas push (un par ligne, pas besoin du path relatif ./ , juste le nom)
@@ -365,11 +367,11 @@ c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex 
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg2NTc0NTY1MywyMTI3MTQ1NDMsLTIxMz
-c2NzAxODQsLTE1MDU1NjAxMTUsMTA0MTYxNTAxOSwxNTAyNDg0
-MTEyLDE2Mzc5NzE0NzEsLTEwMDU0NjQ5MzQsNzk4MzAyNDIzLC
-0xOTMwODA1OTY1LDE3NDI4NDMxMDksMTI3MzU5NzA5NiwxNzM0
-OTQ4MTcwLDg2MDMyMzc5MSwtMTczMDA0NzEzMywtNjU2MjI1OT
-MxLDE1NzQ2NDM1NjMsLTE4MTQ2MDk5MzMsLTQ1NDQ0NzQ4OSwt
-MjA1NzI3NDEzN119
+eyJoaXN0b3J5IjpbMTM5NjI3OTA5MSwxODY1NzQ1NjUzLDIxMj
+cxNDU0MywtMjEzNzY3MDE4NCwtMTUwNTU2MDExNSwxMDQxNjE1
+MDE5LDE1MDI0ODQxMTIsMTYzNzk3MTQ3MSwtMTAwNTQ2NDkzNC
+w3OTgzMDI0MjMsLTE5MzA4MDU5NjUsMTc0Mjg0MzEwOSwxMjcz
+NTk3MDk2LDE3MzQ5NDgxNzAsODYwMzIzNzkxLC0xNzMwMDQ3MT
+MzLC02NTYyMjU5MzEsMTU3NDY0MzU2MywtMTgxNDYwOTkzMywt
+NDU0NDQ3NDg5XX0=
 -->
