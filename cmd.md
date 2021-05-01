@@ -76,6 +76,8 @@ gcloud config set project <project-id>
 ## Terminals
 ### unix
 ```bash
+# purge nvidia drivers
+sudo apt-get purge nvidia*
 # check which GPU is in use
 glxheads
 # grep
@@ -371,11 +373,11 @@ c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex 
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ1ODQ5MTIsMTc3OTA1MzA5OCwxMzk2Mj
-c5MDkxLDE4NjU3NDU2NTMsMjEyNzE0NTQzLC0yMTM3NjcwMTg0
-LC0xNTA1NTYwMTE1LDEwNDE2MTUwMTksMTUwMjQ4NDExMiwxNj
-M3OTcxNDcxLC0xMDA1NDY0OTM0LDc5ODMwMjQyMywtMTkzMDgw
-NTk2NSwxNzQyODQzMTA5LDEyNzM1OTcwOTYsMTczNDk0ODE3MC
-w4NjAzMjM3OTEsLTE3MzAwNDcxMzMsLTY1NjIyNTkzMSwxNTc0
-NjQzNTYzXX0=
+eyJoaXN0b3J5IjpbNjIxOTAwNDksLTQ1ODQ5MTIsMTc3OTA1Mz
+A5OCwxMzk2Mjc5MDkxLDE4NjU3NDU2NTMsMjEyNzE0NTQzLC0y
+MTM3NjcwMTg0LC0xNTA1NTYwMTE1LDEwNDE2MTUwMTksMTUwMj
+Q4NDExMiwxNjM3OTcxNDcxLC0xMDA1NDY0OTM0LDc5ODMwMjQy
+MywtMTkzMDgwNTk2NSwxNzQyODQzMTA5LDEyNzM1OTcwOTYsMT
+czNDk0ODE3MCw4NjAzMjM3OTEsLTE3MzAwNDcxMzMsLTY1NjIy
+NTkzMV19
 -->
