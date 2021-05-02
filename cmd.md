@@ -76,7 +76,7 @@ gcloud config set project <project-id>
 ## Terminals
 ### unix
 ```bash
-#
+# 
 
 # keyboard's layout to azerty
 loadkeys fr
@@ -377,7 +377,7 @@ c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex 
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzI5NjkwMDkxLDYyMTkwMDQ5LC00NTg0OT
+eyJoaXN0b3J5IjpbNjI4NzMyODQ5LDYyMTkwMDQ5LC00NTg0OT
 EyLDE3NzkwNTMwOTgsMTM5NjI3OTA5MSwxODY1NzQ1NjUzLDIx
 MjcxNDU0MywtMjEzNzY3MDE4NCwtMTUwNTU2MDExNSwxMDQxNj
 E1MDE5LDE1MDI0ODQxMTIsMTYzNzk3MTQ3MSwtMTAwNTQ2NDkz
