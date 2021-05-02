@@ -76,12 +76,16 @@ gcloud config set project <project-id>
 ## Terminals
 ### unix
 ```bash
+#
+
+# keyboard's layout to azerty
+loadkeys fr
 # purge nvidia drivers
 sudo apt-get purge nvidia*
 # check which GPU is in use
 glxheads
-# grep
-grep 
+# grep example
+grep 'alias' /home/foo/.bashrc
 # change default jdk: in .bashrc:
 export JAVA_HOME=/opt/java/<jdk>
 export PATH=$JAVA_HOME/bin:$PATH
@@ -373,11 +377,11 @@ c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex 
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjIxOTAwNDksLTQ1ODQ5MTIsMTc3OTA1Mz
-A5OCwxMzk2Mjc5MDkxLDE4NjU3NDU2NTMsMjEyNzE0NTQzLC0y
-MTM3NjcwMTg0LC0xNTA1NTYwMTE1LDEwNDE2MTUwMTksMTUwMj
-Q4NDExMiwxNjM3OTcxNDcxLC0xMDA1NDY0OTM0LDc5ODMwMjQy
-MywtMTkzMDgwNTk2NSwxNzQyODQzMTA5LDEyNzM1OTcwOTYsMT
-czNDk0ODE3MCw4NjAzMjM3OTEsLTE3MzAwNDcxMzMsLTY1NjIy
-NTkzMV19
+eyJoaXN0b3J5IjpbMzI5NjkwMDkxLDYyMTkwMDQ5LC00NTg0OT
+EyLDE3NzkwNTMwOTgsMTM5NjI3OTA5MSwxODY1NzQ1NjUzLDIx
+MjcxNDU0MywtMjEzNzY3MDE4NCwtMTUwNTU2MDExNSwxMDQxNj
+E1MDE5LDE1MDI0ODQxMTIsMTYzNzk3MTQ3MSwtMTAwNTQ2NDkz
+NCw3OTgzMDI0MjMsLTE5MzA4MDU5NjUsMTc0Mjg0MzEwOSwxMj
+czNTk3MDk2LDE3MzQ5NDgxNzAsODYwMzIzNzkxLC0xNzMwMDQ3
+MTMzXX0=
 -->
