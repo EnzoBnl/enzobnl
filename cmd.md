@@ -76,8 +76,8 @@ gcloud config set project <project-id>
 ## Terminals
 ### unix
 ```bash
-# 
-
+# switch between virtual consoles
+Ctrl + Alt + F[0-9]
 # keyboard's layout to azerty
 loadkeys fr
 # purge nvidia drivers
@@ -377,11 +377,11 @@ c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex 
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjI4NzMyODQ5LDYyMTkwMDQ5LC00NTg0OT
-EyLDE3NzkwNTMwOTgsMTM5NjI3OTA5MSwxODY1NzQ1NjUzLDIx
-MjcxNDU0MywtMjEzNzY3MDE4NCwtMTUwNTU2MDExNSwxMDQxNj
-E1MDE5LDE1MDI0ODQxMTIsMTYzNzk3MTQ3MSwtMTAwNTQ2NDkz
-NCw3OTgzMDI0MjMsLTE5MzA4MDU5NjUsMTc0Mjg0MzEwOSwxMj
-czNTk3MDk2LDE3MzQ5NDgxNzAsODYwMzIzNzkxLC0xNzMwMDQ3
-MTMzXX0=
+eyJoaXN0b3J5IjpbLTE4MzgyNDI2NTgsNjI4NzMyODQ5LDYyMT
+kwMDQ5LC00NTg0OTEyLDE3NzkwNTMwOTgsMTM5NjI3OTA5MSwx
+ODY1NzQ1NjUzLDIxMjcxNDU0MywtMjEzNzY3MDE4NCwtMTUwNT
+U2MDExNSwxMDQxNjE1MDE5LDE1MDI0ODQxMTIsMTYzNzk3MTQ3
+MSwtMTAwNTQ2NDkzNCw3OTgzMDI0MjMsLTE5MzA4MDU5NjUsMT
+c0Mjg0MzEwOSwxMjczNTk3MDk2LDE3MzQ5NDgxNzAsODYwMzIz
+NzkxXX0=
 -->
