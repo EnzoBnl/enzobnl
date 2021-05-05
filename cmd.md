@@ -76,6 +76,10 @@ gcloud config set project <project-id>
 ## Terminals
 ### unix
 ```bash
+# set up ultra wide on HDMI-1-2 output for example
+xrandr --newmode wide44 299.75  3440 3664 4024 4608  1440 1443 1453 1479 -hsync +vsync
+xrandr --addmode HDMI-1-2 wide44
+xrandr --output HDMI-1-2 --mode wide44
 # ubuntu show date and time
 gsettings set org.gnome.desktop.interface clock-show-date true
 gsettings set org.gnome.desktop.interface clock-show-seconds true
@@ -381,11 +385,11 @@ c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex 
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzQ1NzE2MzAyLC0xODM4MjQyNjU4LDYyOD
-czMjg0OSw2MjE5MDA0OSwtNDU4NDkxMiwxNzc5MDUzMDk4LDEz
-OTYyNzkwOTEsMTg2NTc0NTY1MywyMTI3MTQ1NDMsLTIxMzc2Nz
-AxODQsLTE1MDU1NjAxMTUsMTA0MTYxNTAxOSwxNTAyNDg0MTEy
-LDE2Mzc5NzE0NzEsLTEwMDU0NjQ5MzQsNzk4MzAyNDIzLC0xOT
-MwODA1OTY1LDE3NDI4NDMxMDksMTI3MzU5NzA5NiwxNzM0OTQ4
-MTcwXX0=
+eyJoaXN0b3J5IjpbLTEyMzc2MDA1OTUsMzQ1NzE2MzAyLC0xOD
+M4MjQyNjU4LDYyODczMjg0OSw2MjE5MDA0OSwtNDU4NDkxMiwx
+Nzc5MDUzMDk4LDEzOTYyNzkwOTEsMTg2NTc0NTY1MywyMTI3MT
+Q1NDMsLTIxMzc2NzAxODQsLTE1MDU1NjAxMTUsMTA0MTYxNTAx
+OSwxNTAyNDg0MTEyLDE2Mzc5NzE0NzEsLTEwMDU0NjQ5MzQsNz
+k4MzAyNDIzLC0xOTMwODA1OTY1LDE3NDI4NDMxMDksMTI3MzU5
+NzA5Nl19
 -->
