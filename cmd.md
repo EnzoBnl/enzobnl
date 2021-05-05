@@ -77,6 +77,9 @@ gcloud config set project <project-id>
 ### unix
 ```bash
 # set up ultra wide on HDMI-1-2 output for example
+# - get modeline 3440p x 1440p, 44Hz
+cvt 3440 1440 44
+# - apply it
 xrandr --newmode wide44 299.75  3440 3664 4024 4608  1440 1443 1453 1479 -hsync +vsync
 xrandr --addmode HDMI-1-2 wide44
 xrandr --output HDMI-1-2 --mode wide44
@@ -385,11 +388,11 @@ c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex 
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMzc2MDA1OTUsMzQ1NzE2MzAyLC0xOD
-M4MjQyNjU4LDYyODczMjg0OSw2MjE5MDA0OSwtNDU4NDkxMiwx
-Nzc5MDUzMDk4LDEzOTYyNzkwOTEsMTg2NTc0NTY1MywyMTI3MT
-Q1NDMsLTIxMzc2NzAxODQsLTE1MDU1NjAxMTUsMTA0MTYxNTAx
-OSwxNTAyNDg0MTEyLDE2Mzc5NzE0NzEsLTEwMDU0NjQ5MzQsNz
-k4MzAyNDIzLC0xOTMwODA1OTY1LDE3NDI4NDMxMDksMTI3MzU5
-NzA5Nl19
+eyJoaXN0b3J5IjpbMTAyODAxODc4NCwtMTIzNzYwMDU5NSwzND
+U3MTYzMDIsLTE4MzgyNDI2NTgsNjI4NzMyODQ5LDYyMTkwMDQ5
+LC00NTg0OTEyLDE3NzkwNTMwOTgsMTM5NjI3OTA5MSwxODY1Nz
+Q1NjUzLDIxMjcxNDU0MywtMjEzNzY3MDE4NCwtMTUwNTU2MDEx
+NSwxMDQxNjE1MDE5LDE1MDI0ODQxMTIsMTYzNzk3MTQ3MSwtMT
+AwNTQ2NDkzNCw3OTgzMDI0MjMsLTE5MzA4MDU5NjUsMTc0Mjg0
+MzEwOV19
 -->
