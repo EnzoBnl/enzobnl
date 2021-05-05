@@ -76,6 +76,10 @@ gcloud config set project <project-id>
 ## Terminals
 ### unix
 ```bash
+# ubuntu show date and time
+gsettings set org.gnome.desktop.interface clock-show-date true
+gsettings set org.gnome.desktop.interface clock-show-seconds true
+gsettings set org.gnome.desktop.interface clock-show-weekday true
 # switch between virtual consoles
 Ctrl + Alt + F[0-9]
 # keyboard's layout to azerty
@@ -377,11 +381,11 @@ c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex 
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MzgyNDI2NTgsNjI4NzMyODQ5LDYyMT
-kwMDQ5LC00NTg0OTEyLDE3NzkwNTMwOTgsMTM5NjI3OTA5MSwx
-ODY1NzQ1NjUzLDIxMjcxNDU0MywtMjEzNzY3MDE4NCwtMTUwNT
-U2MDExNSwxMDQxNjE1MDE5LDE1MDI0ODQxMTIsMTYzNzk3MTQ3
-MSwtMTAwNTQ2NDkzNCw3OTgzMDI0MjMsLTE5MzA4MDU5NjUsMT
-c0Mjg0MzEwOSwxMjczNTk3MDk2LDE3MzQ5NDgxNzAsODYwMzIz
-NzkxXX0=
+eyJoaXN0b3J5IjpbMzQ1NzE2MzAyLC0xODM4MjQyNjU4LDYyOD
+czMjg0OSw2MjE5MDA0OSwtNDU4NDkxMiwxNzc5MDUzMDk4LDEz
+OTYyNzkwOTEsMTg2NTc0NTY1MywyMTI3MTQ1NDMsLTIxMzc2Nz
+AxODQsLTE1MDU1NjAxMTUsMTA0MTYxNTAxOSwxNTAyNDg0MTEy
+LDE2Mzc5NzE0NzEsLTEwMDU0NjQ5MzQsNzk4MzAyNDIzLC0xOT
+MwODA1OTY1LDE3NDI4NDMxMDksMTI3MzU5NzA5NiwxNzM0OTQ4
+MTcwXX0=
 -->
