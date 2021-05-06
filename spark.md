@@ -653,7 +653,13 @@ private def checkpoint(eager: Boolean, reliableCheckpoint: Boolean): Dataset[T] 
 ```
 
 ##### Why caching before checkpoint ?
-In Reliab
+It is encouraged in `RDD.scala`:
+```scala
+ * [...] It is strongly recommended that this RDD is persisted in  
+ * memory, otherwise saving it on a file will require recomputation. */def checkpoint(): Unit = RDDCheckpointData.synchronized {
+```
+
+This is to prevent the RDD's DAG to be computed twice because in `ReliableRDDCheckpointData.scala`:
 ```scala
 /**  
  * Materialize this RDD and write its content to a reliable DFS. 
@@ -1281,11 +1287,11 @@ _____
 
 <a rel="nofollow" href="tmp.html">_</a>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM0NDEzMzkxNywtMTg0NzAzNzY4OSwtMz
-QyNTUzNjEsNDkzNjgxNzY2LC04Nzk2MjA0NDUsLTE0MTk0MDE2
-MTIsLTEzNzYwMTM4MDgsOTAyNzAwMjAxLDEzMDYxNTQyNDksLT
-EzMzMwMDY0NzAsODA2Mjc0MDQ4LDEzOTA3NzEzMTksMTU5NDA4
-OTE1MCwxNTAzNDkxOTcsLTgxMzcyMjY1MywtMTc2NDUyMTA3NS
-wxMDM4MTQyMDQsOTgwNjkwODg1LDE2MDkzMDIwNDcsMTcxMzcy
-MTA3NV19
+eyJoaXN0b3J5IjpbMjM2NDI0MjAxLC0xODQ3MDM3Njg5LC0zND
+I1NTM2MSw0OTM2ODE3NjYsLTg3OTYyMDQ0NSwtMTQxOTQwMTYx
+MiwtMTM3NjAxMzgwOCw5MDI3MDAyMDEsMTMwNjE1NDI0OSwtMT
+MzMzAwNjQ3MCw4MDYyNzQwNDgsMTM5MDc3MTMxOSwxNTk0MDg5
+MTUwLDE1MDM0OTE5NywtODEzNzIyNjUzLC0xNzY0NTIxMDc1LD
+EwMzgxNDIwNCw5ODA2OTA4ODUsMTYwOTMwMjA0NywxNzEzNzIx
+MDc1XX0=
 -->
