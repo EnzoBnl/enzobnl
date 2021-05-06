@@ -656,7 +656,9 @@ private def checkpoint(eager: Boolean, reliableCheckpoint: Boolean): Dataset[T] 
 It is encouraged in `RDD.scala`:
 ```scala
  * [...] It is strongly recommended that this RDD is persisted in  
- * memory, otherwise saving it on a file will require recomputation. */def checkpoint(): Unit = RDDCheckpointData.synchronized {
+ * memory, otherwise saving it on a file will require recomputation. 
+ */
+ def checkpoint(): Unit = RDDCheckpointData.synchronized {
 ```
 
 This is to prevent the RDD's DAG to be computed twice because in `ReliableRDDCheckpointData.scala`:
@@ -1287,11 +1289,11 @@ _____
 
 <a rel="nofollow" href="tmp.html">_</a>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjM2NDI0MjAxLC0xODQ3MDM3Njg5LC0zND
-I1NTM2MSw0OTM2ODE3NjYsLTg3OTYyMDQ0NSwtMTQxOTQwMTYx
-MiwtMTM3NjAxMzgwOCw5MDI3MDAyMDEsMTMwNjE1NDI0OSwtMT
-MzMzAwNjQ3MCw4MDYyNzQwNDgsMTM5MDc3MTMxOSwxNTk0MDg5
-MTUwLDE1MDM0OTE5NywtODEzNzIyNjUzLC0xNzY0NTIxMDc1LD
-EwMzgxNDIwNCw5ODA2OTA4ODUsMTYwOTMwMjA0NywxNzEzNzIx
-MDc1XX0=
+eyJoaXN0b3J5IjpbLTEwMzAxNTcwNjksLTE4NDcwMzc2ODksLT
+M0MjU1MzYxLDQ5MzY4MTc2NiwtODc5NjIwNDQ1LC0xNDE5NDAx
+NjEyLC0xMzc2MDEzODA4LDkwMjcwMDIwMSwxMzA2MTU0MjQ5LC
+0xMzMzMDA2NDcwLDgwNjI3NDA0OCwxMzkwNzcxMzE5LDE1OTQw
+ODkxNTAsMTUwMzQ5MTk3LC04MTM3MjI2NTMsLTE3NjQ1MjEwNz
+UsMTAzODE0MjA0LDk4MDY5MDg4NSwxNjA5MzAyMDQ3LDE3MTM3
+MjEwNzVdfQ==
 -->
