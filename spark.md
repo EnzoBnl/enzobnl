@@ -652,6 +652,16 @@ private def checkpoint(eager: Boolean, reliableCheckpoint: Boolean): Dataset[T] 
   }
 ```
 
+##### Why caching before checkpoint ?
+In Reliab
+```scala
+/**  
+ * Materialize this RDD and write its content to a reliable DFS. 
+ * This is called immediately after the first action invoked on this RDD has completed. 
+ */
+protected override def doCheckpoint(): CheckpointRDD[T] = {
+```
+
 #### c) `spark.default.parallelism` vs `spark.sql.shuffle.partitions`
 
 |conf|affects|default|
@@ -1271,11 +1281,11 @@ _____
 
 <a rel="nofollow" href="tmp.html">_</a>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NDcwMzc2ODksLTM0MjU1MzYxLDQ5Mz
-Y4MTc2NiwtODc5NjIwNDQ1LC0xNDE5NDAxNjEyLC0xMzc2MDEz
-ODA4LDkwMjcwMDIwMSwxMzA2MTU0MjQ5LC0xMzMzMDA2NDcwLD
-gwNjI3NDA0OCwxMzkwNzcxMzE5LDE1OTQwODkxNTAsMTUwMzQ5
-MTk3LC04MTM3MjI2NTMsLTE3NjQ1MjEwNzUsMTAzODE0MjA0LD
-k4MDY5MDg4NSwxNjA5MzAyMDQ3LDE3MTM3MjEwNzUsLTI1NTE2
-MDkxOF19
+eyJoaXN0b3J5IjpbMTM0NDEzMzkxNywtMTg0NzAzNzY4OSwtMz
+QyNTUzNjEsNDkzNjgxNzY2LC04Nzk2MjA0NDUsLTE0MTk0MDE2
+MTIsLTEzNzYwMTM4MDgsOTAyNzAwMjAxLDEzMDYxNTQyNDksLT
+EzMzMwMDY0NzAsODA2Mjc0MDQ4LDEzOTA3NzEzMTksMTU5NDA4
+OTE1MCwxNTAzNDkxOTcsLTgxMzcyMjY1MywtMTc2NDUyMTA3NS
+wxMDM4MTQyMDQsOTgwNjkwODg1LDE2MDkzMDIwNDcsMTcxMzcy
+MTA3NV19
 -->
