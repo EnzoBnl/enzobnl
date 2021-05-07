@@ -78,6 +78,12 @@ gcloud config set project <project-id>
 |||
 |--|--|
 |exit a mode|escape|
+|enter edit mode|`i`|
+|quit|`:q`|
+|force quit without saving|`:q!`|
+|save|`:w`|
+|save and quit|`:wq`|
+|||
 ```bash
 # exit a mode
 esc.
@@ -402,11 +408,11 @@ c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex 
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzc5MTI4NDIzLDEwMjgwMTg3ODQsLTEyMz
-c2MDA1OTUsMzQ1NzE2MzAyLC0xODM4MjQyNjU4LDYyODczMjg0
-OSw2MjE5MDA0OSwtNDU4NDkxMiwxNzc5MDUzMDk4LDEzOTYyNz
-kwOTEsMTg2NTc0NTY1MywyMTI3MTQ1NDMsLTIxMzc2NzAxODQs
-LTE1MDU1NjAxMTUsMTA0MTYxNTAxOSwxNTAyNDg0MTEyLDE2Mz
-c5NzE0NzEsLTEwMDU0NjQ5MzQsNzk4MzAyNDIzLC0xOTMwODA1
-OTY1XX0=
+eyJoaXN0b3J5IjpbMjE0MjEzODU4OCwxMDI4MDE4Nzg0LC0xMj
+M3NjAwNTk1LDM0NTcxNjMwMiwtMTgzODI0MjY1OCw2Mjg3MzI4
+NDksNjIxOTAwNDksLTQ1ODQ5MTIsMTc3OTA1MzA5OCwxMzk2Mj
+c5MDkxLDE4NjU3NDU2NTMsMjEyNzE0NTQzLC0yMTM3NjcwMTg0
+LC0xNTA1NTYwMTE1LDEwNDE2MTUwMTksMTUwMjQ4NDExMiwxNj
+M3OTcxNDcxLC0xMDA1NDY0OTM0LDc5ODMwMjQyMywtMTkzMDgw
+NTk2NV19
 -->
