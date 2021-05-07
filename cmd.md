@@ -74,7 +74,21 @@ gcloud config set project <project-id>
 
 
 ## Terminals
+### vim basic
+|||
+|--|--|
+|exit a mode|escape|
+```bash
+# exit a mode
+esc.
+# start editing mode
+i
+# quit
+
+```
+
 ### unix
+
 ```bash
 # set up ultra wide on HDMI-1-2 output for example
 # - get modeline 3440p x 1440p, 44Hz
@@ -388,11 +402,11 @@ c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex 
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAyODAxODc4NCwtMTIzNzYwMDU5NSwzND
-U3MTYzMDIsLTE4MzgyNDI2NTgsNjI4NzMyODQ5LDYyMTkwMDQ5
-LC00NTg0OTEyLDE3NzkwNTMwOTgsMTM5NjI3OTA5MSwxODY1Nz
-Q1NjUzLDIxMjcxNDU0MywtMjEzNzY3MDE4NCwtMTUwNTU2MDEx
-NSwxMDQxNjE1MDE5LDE1MDI0ODQxMTIsMTYzNzk3MTQ3MSwtMT
-AwNTQ2NDkzNCw3OTgzMDI0MjMsLTE5MzA4MDU5NjUsMTc0Mjg0
-MzEwOV19
+eyJoaXN0b3J5IjpbMzc5MTI4NDIzLDEwMjgwMTg3ODQsLTEyMz
+c2MDA1OTUsMzQ1NzE2MzAyLC0xODM4MjQyNjU4LDYyODczMjg0
+OSw2MjE5MDA0OSwtNDU4NDkxMiwxNzc5MDUzMDk4LDEzOTYyNz
+kwOTEsMTg2NTc0NTY1MywyMTI3MTQ1NDMsLTIxMzc2NzAxODQs
+LTE1MDU1NjAxMTUsMTA0MTYxNTAxOSwxNTAyNDg0MTEyLDE2Mz
+c5NzE0NzEsLTEwMDU0NjQ5MzQsNzk4MzAyNDIzLC0xOTMwODA1
+OTY1XX0=
 -->
