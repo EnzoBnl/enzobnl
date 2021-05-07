@@ -74,7 +74,8 @@ gcloud config set project <project-id>
 
 
 ## Terminals
-### vim basic
+### vim basics
+
 |||
 |--|--|
 |exit a mode (=enter command mode)|escape|
@@ -402,11 +403,11 @@ c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex 
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ3NTIzMjY5OSwxMDI4MDE4Nzg0LC0xMj
-M3NjAwNTk1LDM0NTcxNjMwMiwtMTgzODI0MjY1OCw2Mjg3MzI4
-NDksNjIxOTAwNDksLTQ1ODQ5MTIsMTc3OTA1MzA5OCwxMzk2Mj
-c5MDkxLDE4NjU3NDU2NTMsMjEyNzE0NTQzLC0yMTM3NjcwMTg0
-LC0xNTA1NTYwMTE1LDEwNDE2MTUwMTksMTUwMjQ4NDExMiwxNj
-M3OTcxNDcxLC0xMDA1NDY0OTM0LDc5ODMwMjQyMywtMTkzMDgw
-NTk2NV19
+eyJoaXN0b3J5IjpbLTE2NDEyMDUxNzYsMTAyODAxODc4NCwtMT
+IzNzYwMDU5NSwzNDU3MTYzMDIsLTE4MzgyNDI2NTgsNjI4NzMy
+ODQ5LDYyMTkwMDQ5LC00NTg0OTEyLDE3NzkwNTMwOTgsMTM5Nj
+I3OTA5MSwxODY1NzQ1NjUzLDIxMjcxNDU0MywtMjEzNzY3MDE4
+NCwtMTUwNTU2MDExNSwxMDQxNjE1MDE5LDE1MDI0ODQxMTIsMT
+YzNzk3MTQ3MSwtMTAwNTQ2NDkzNCw3OTgzMDI0MjMsLTE5MzA4
+MDU5NjVdfQ==
 -->
