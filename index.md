@@ -1,6 +1,6 @@
 # Welcome !
 
-<img width='250px' src='https://raw.githubusercontent.com/EnzoBnl/enzobnl.github.io/master/figs/patrick_data_engineer_meme.png'/>
+<img width='250px' src='https://raw.githubusercontent.com/bonnal-enzo/bonnal-enzo.github.io/master/figs/patrick_data_engineer_meme.png'/>
 
 <!--stackedit_data:
 eyJoaXN0b3J5IjpbMjEwMjQyOTYyNCwtMTM3MjU0Mjg3NywyMD

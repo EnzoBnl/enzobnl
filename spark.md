@@ -265,7 +265,7 @@ val df = spark.read
       .filter("sub LIKE 'a%' ")
 ```
 
-[SEE SQL DAG](https://raw.githubusercontent.com/EnzoBnl/enzobnl.github.io/master/figs/DFSQLdiag.png)
+[SEE SQL DAG](https://raw.githubusercontent.com/bonnal-enzo/bonnal-enzo.github.io/master/figs/DFSQLdiag.png)
 
 Steps (~80 lines of generated code):
 - Get input `Iterator` during init: `public void init(int index, scala.collection.Iterator[] inputs)`. An `UnsafeRowWriter` is also instanciated with 4 fields:
@@ -348,7 +348,7 @@ val ds = spark.read
       .filter((extendedUser: (Int, String, String, String)) => extendedUser._4.startsWith("a"))
 ```
 
-[SEE SQL DAG](https://raw.githubusercontent.com/EnzoBnl/enzobnl.github.io/master/figs/DSSQLdiag.png)
+[SEE SQL DAG](https://raw.githubusercontent.com/bonnal-enzo/bonnal-enzo.github.io/master/figs/DSSQLdiag.png)
 
 Steps (~300 lines of generated code):
 - Get input `Iterator` during init: `public void init(int index, scala.collection.Iterator[] inputs)`. An `UnsafeRowWriter` is also instanciated with 4 fields:
@@ -376,9 +376,9 @@ UTF8String scan_value_1 = scan_isNull_1 ? null : (scan_row_0.getUTF8String(1));
 [...]
 deserializetoobject_funcResult_1 = deserializetoobject_expr_2_0.toString();
 [...]
-final com.enzobnl.sparkscalaexpe.playground.User deserializetoobject_value_3 = false ? 
+final com.bonnalenzo.sparkscalaexpe.playground.User deserializetoobject_value_3 = false ? 
   null : 
-  new com.enzobnl.sparkscalaexpe.playground.User(
+  new com.bonnalenzo.sparkscalaexpe.playground.User(
     deserializetoobject_argValue_0, 
     deserializetoobject_mutableStateArray_0[0], 
     deserializetoobject_mutableStateArray_0[1]
@@ -389,7 +389,7 @@ final com.enzobnl.sparkscalaexpe.playground.User deserializetoobject_value_3 = f
 
 
 
-- `mapelements_doConsume_0(com.enzobnl.sparkscalaexpe.playground.User mapelements_expr_0_0, boolean mapelements_exprIsNull_0_0)` applies the anonymous function provided to the `map`: apply the substring and return a Tuple4
+- `mapelements_doConsume_0(com.bonnalenzo.sparkscalaexpe.playground.User mapelements_expr_0_0, boolean mapelements_exprIsNull_0_0)` applies the anonymous function provided to the `map`: apply the substring and return a Tuple4
 
 ```scala
 mapelements_funcResult_0 = ((scala.Function1) references[2]).apply(mapelements_mutableStateArray_0[0]);
@@ -431,7 +431,7 @@ if (serializefromobject_isNull_12) {
 append((project_mutableStateArray_0[7].getRow()));
 ```
 
-[Full code available here](https://gist.github.com/EnzoBnl/37e07e9cf7bce440734c7d33304257f0)
+[Full code available here](https://gist.github.com/bonnal-enzo/37e07e9cf7bce440734c7d33304257f0)
 
 ### 3) Additionnal notes
 If the only references manipulated using strongly typed `Dataset`s are instances of `AnyVal`, then it will be as GC friendly as "DataFrame" operations and may only imply a few more method calls. You may want to run these code snippets to verify this:

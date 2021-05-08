@@ -43,7 +43,7 @@ hadoop fs -get WORK/TESTHDFS/*py
 ### MR
 ```bash
 //MapReduce
-yarn jar .\target\wordcountmr-1.0-SNAPSHOT.jar com.enzobnl.wordcountmr.WordCount .\pom.xml ./output
+yarn jar .\target\wordcountmr-1.0-SNAPSHOT.jar com.bonnalenzo.wordcountmr.WordCount .\pom.xml ./output
 hdfs dfs -text ./output/part-r-00000
 ```
 ### Kafka:
@@ -157,8 +157,8 @@ nano /etc/environment
 // show permissions
 ls -la fileOrDir
 // mount read-only
-sudo mount -o ro /dev/nvme0n1p5 /media/enzobnl/sdd
-sudo unmount /media/enzobnl/sdd
+sudo mount -o ro /dev/nvme0n1p5 dest
+sudo unmount dest
 // Fix broken installs
 sudo apt-get --fix-broken install
 // install specific version

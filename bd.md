@@ -35,7 +35,7 @@ A transaction is a sequence of database operations that satisfies the following 
 
 # Frameworks' notes
 ## Spark
-[See dedicated notes](https://enzobnl.github.io/spark.html)
+[See dedicated notes](https://bonnal-enzo.github.io/spark.html)
 ## Hadoop's MapReduce
 Execution steps of a MapReduce job containing 1 Mapper and 1 Reducer (steps **in bold** rely on *hook classes* exposed to the user for extension):
 
