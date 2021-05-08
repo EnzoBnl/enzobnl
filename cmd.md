@@ -325,6 +325,10 @@ type ':wq' + press enter (save and quit vim)
 [How to write good commit messages](https://chris.beams.io/posts/git-commit/#imperative)
 
 ```bash 
+# git delete tag locally and remotely
+git tag -d tagname
+git push --delete origin tagname
+
 // use ssh auth o github
 - generate ssh pairs and add them to agent
 - copy entire content (including algo name and email)
@@ -403,11 +407,11 @@ c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex 
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NDEyMDUxNzYsMTAyODAxODc4NCwtMT
-IzNzYwMDU5NSwzNDU3MTYzMDIsLTE4MzgyNDI2NTgsNjI4NzMy
-ODQ5LDYyMTkwMDQ5LC00NTg0OTEyLDE3NzkwNTMwOTgsMTM5Nj
-I3OTA5MSwxODY1NzQ1NjUzLDIxMjcxNDU0MywtMjEzNzY3MDE4
-NCwtMTUwNTU2MDExNSwxMDQxNjE1MDE5LDE1MDI0ODQxMTIsMT
-YzNzk3MTQ3MSwtMTAwNTQ2NDkzNCw3OTgzMDI0MjMsLTE5MzA4
-MDU5NjVdfQ==
+eyJoaXN0b3J5IjpbMjAwOTkyMDQ0MiwtMTY0MTIwNTE3NiwxMD
+I4MDE4Nzg0LC0xMjM3NjAwNTk1LDM0NTcxNjMwMiwtMTgzODI0
+MjY1OCw2Mjg3MzI4NDksNjIxOTAwNDksLTQ1ODQ5MTIsMTc3OT
+A1MzA5OCwxMzk2Mjc5MDkxLDE4NjU3NDU2NTMsMjEyNzE0NTQz
+LC0yMTM3NjcwMTg0LC0xNTA1NTYwMTE1LDEwNDE2MTUwMTksMT
+UwMjQ4NDExMiwxNjM3OTcxNDcxLC0xMDA1NDY0OTM0LDc5ODMw
+MjQyM119
 -->
