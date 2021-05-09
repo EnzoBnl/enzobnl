@@ -216,6 +216,9 @@ sudo rm -r /root/.local/share/Trash/files
 
 # Null device in UNIX systems
 /dev/null
+
+# scalastyle jar usage example
+java -jar ~/Apps/scalastyle_2.12-1.0.0-batch.jar --config ~/Prog/spark/scalastyle-config.xml ./PageRank.scala
 ```
 
 
@@ -407,11 +410,11 @@ c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex 
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAwOTkyMDQ0MiwtMTY0MTIwNTE3NiwxMD
-I4MDE4Nzg0LC0xMjM3NjAwNTk1LDM0NTcxNjMwMiwtMTgzODI0
-MjY1OCw2Mjg3MzI4NDksNjIxOTAwNDksLTQ1ODQ5MTIsMTc3OT
-A1MzA5OCwxMzk2Mjc5MDkxLDE4NjU3NDU2NTMsMjEyNzE0NTQz
-LC0yMTM3NjcwMTg0LC0xNTA1NTYwMTE1LDEwNDE2MTUwMTksMT
-UwMjQ4NDExMiwxNjM3OTcxNDcxLC0xMDA1NDY0OTM0LDc5ODMw
-MjQyM119
+eyJoaXN0b3J5IjpbOTg4OTM3MTAyLDIwMDk5MjA0NDIsLTE2ND
+EyMDUxNzYsMTAyODAxODc4NCwtMTIzNzYwMDU5NSwzNDU3MTYz
+MDIsLTE4MzgyNDI2NTgsNjI4NzMyODQ5LDYyMTkwMDQ5LC00NT
+g0OTEyLDE3NzkwNTMwOTgsMTM5NjI3OTA5MSwxODY1NzQ1NjUz
+LDIxMjcxNDU0MywtMjEzNzY3MDE4NCwtMTUwNTU2MDExNSwxMD
+QxNjE1MDE5LDE1MDI0ODQxMTIsMTYzNzk3MTQ3MSwtMTAwNTQ2
+NDkzNF19
 -->
