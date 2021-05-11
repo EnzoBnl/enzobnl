@@ -91,6 +91,12 @@ gcloud config set project <project-id>
 ### unix
 
 ```bash
+# search and kill a process foo by pid
+ps -e
+#     PID TTY          TIME CMD
+#   9947 pts/6    00:00:00 foo
+kill -9 9947
+
 # set up ultra wide on HDMI-1-2 output for example
 # - get modeline 3440p x 1440p, 44Hz
 cvt 3440 1440 44
@@ -410,11 +416,11 @@ c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex 
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTg4OTM3MTAyLDIwMDk5MjA0NDIsLTE2ND
-EyMDUxNzYsMTAyODAxODc4NCwtMTIzNzYwMDU5NSwzNDU3MTYz
-MDIsLTE4MzgyNDI2NTgsNjI4NzMyODQ5LDYyMTkwMDQ5LC00NT
-g0OTEyLDE3NzkwNTMwOTgsMTM5NjI3OTA5MSwxODY1NzQ1NjUz
-LDIxMjcxNDU0MywtMjEzNzY3MDE4NCwtMTUwNTU2MDExNSwxMD
-QxNjE1MDE5LDE1MDI0ODQxMTIsMTYzNzk3MTQ3MSwtMTAwNTQ2
-NDkzNF19
+eyJoaXN0b3J5IjpbLTEyMDg0ODIwMDYsOTg4OTM3MTAyLDIwMD
+k5MjA0NDIsLTE2NDEyMDUxNzYsMTAyODAxODc4NCwtMTIzNzYw
+MDU5NSwzNDU3MTYzMDIsLTE4MzgyNDI2NTgsNjI4NzMyODQ5LD
+YyMTkwMDQ5LC00NTg0OTEyLDE3NzkwNTMwOTgsMTM5NjI3OTA5
+MSwxODY1NzQ1NjUzLDIxMjcxNDU0MywtMjEzNzY3MDE4NCwtMT
+UwNTU2MDExNSwxMDQxNjE1MDE5LDE1MDI0ODQxMTIsMTYzNzk3
+MTQ3MV19
 -->
