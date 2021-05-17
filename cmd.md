@@ -88,6 +88,13 @@ gcloud config set project <project-id>
 |cut|`dd`|
 |paste|`p`|
 
+### Container technos
+
+```bash
+# docker run jupyter notebook
+docker run -p 8888:8888 -v notebooks:/home/jovyan/work -v /tmp:/home/jovyan/data jupyter/all-spark-notebook
+```
+
 ### unix
 
 ```bash
@@ -416,11 +423,11 @@ c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex 
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMDg0ODIwMDYsOTg4OTM3MTAyLDIwMD
-k5MjA0NDIsLTE2NDEyMDUxNzYsMTAyODAxODc4NCwtMTIzNzYw
-MDU5NSwzNDU3MTYzMDIsLTE4MzgyNDI2NTgsNjI4NzMyODQ5LD
-YyMTkwMDQ5LC00NTg0OTEyLDE3NzkwNTMwOTgsMTM5NjI3OTA5
-MSwxODY1NzQ1NjUzLDIxMjcxNDU0MywtMjEzNzY3MDE4NCwtMT
-UwNTU2MDExNSwxMDQxNjE1MDE5LDE1MDI0ODQxMTIsMTYzNzk3
-MTQ3MV19
+eyJoaXN0b3J5IjpbNzk2Njc1MDYsLTEyMDg0ODIwMDYsOTg4OT
+M3MTAyLDIwMDk5MjA0NDIsLTE2NDEyMDUxNzYsMTAyODAxODc4
+NCwtMTIzNzYwMDU5NSwzNDU3MTYzMDIsLTE4MzgyNDI2NTgsNj
+I4NzMyODQ5LDYyMTkwMDQ5LC00NTg0OTEyLDE3NzkwNTMwOTgs
+MTM5NjI3OTA5MSwxODY1NzQ1NjUzLDIxMjcxNDU0MywtMjEzNz
+Y3MDE4NCwtMTUwNTU2MDExNSwxMDQxNjE1MDE5LDE1MDI0ODQx
+MTJdfQ==
 -->
