@@ -98,6 +98,8 @@ docker run -p 8888:8888 -v notebooks:/home/jovyan/work -v /tmp:/home/jovyan/data
 ### unix
 
 ```bash
+# xargs hello world
+echo world | xargs -I % echo hello %
 # search and kill a process foo by pid
 ps -e
 #     PID TTY          TIME CMD
@@ -423,11 +425,11 @@ c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex 
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzk2Njc1MDYsLTEyMDg0ODIwMDYsOTg4OT
-M3MTAyLDIwMDk5MjA0NDIsLTE2NDEyMDUxNzYsMTAyODAxODc4
-NCwtMTIzNzYwMDU5NSwzNDU3MTYzMDIsLTE4MzgyNDI2NTgsNj
-I4NzMyODQ5LDYyMTkwMDQ5LC00NTg0OTEyLDE3NzkwNTMwOTgs
-MTM5NjI3OTA5MSwxODY1NzQ1NjUzLDIxMjcxNDU0MywtMjEzNz
-Y3MDE4NCwtMTUwNTU2MDExNSwxMDQxNjE1MDE5LDE1MDI0ODQx
-MTJdfQ==
+eyJoaXN0b3J5IjpbMTI1NzcwMjIxNyw3OTY2NzUwNiwtMTIwOD
+Q4MjAwNiw5ODg5MzcxMDIsMjAwOTkyMDQ0MiwtMTY0MTIwNTE3
+NiwxMDI4MDE4Nzg0LC0xMjM3NjAwNTk1LDM0NTcxNjMwMiwtMT
+gzODI0MjY1OCw2Mjg3MzI4NDksNjIxOTAwNDksLTQ1ODQ5MTIs
+MTc3OTA1MzA5OCwxMzk2Mjc5MDkxLDE4NjU3NDU2NTMsMjEyNz
+E0NTQzLC0yMTM3NjcwMTg0LC0xNTA1NTYwMTE1LDEwNDE2MTUw
+MTldfQ==
 -->
