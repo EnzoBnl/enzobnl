@@ -343,6 +343,8 @@ type ':wq' + press enter (save and quit vim)
 [How to write good commit messages](https://chris.beams.io/posts/git-commit/#imperative)
 
 ```bash 
+# cherry pick a commit's changes
+git cherry-pick <commit hash>
 # git delete tag locally and remotely
 git tag -d tagname
 git push --delete origin tagname
@@ -425,11 +427,11 @@ c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex 
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI1NzcwMjIxNyw3OTY2NzUwNiwtMTIwOD
-Q4MjAwNiw5ODg5MzcxMDIsMjAwOTkyMDQ0MiwtMTY0MTIwNTE3
-NiwxMDI4MDE4Nzg0LC0xMjM3NjAwNTk1LDM0NTcxNjMwMiwtMT
-gzODI0MjY1OCw2Mjg3MzI4NDksNjIxOTAwNDksLTQ1ODQ5MTIs
-MTc3OTA1MzA5OCwxMzk2Mjc5MDkxLDE4NjU3NDU2NTMsMjEyNz
-E0NTQzLC0yMTM3NjcwMTg0LC0xNTA1NTYwMTE1LDEwNDE2MTUw
-MTldfQ==
+eyJoaXN0b3J5IjpbLTk4NDgyMjA3NywxMjU3NzAyMjE3LDc5Nj
+Y3NTA2LC0xMjA4NDgyMDA2LDk4ODkzNzEwMiwyMDA5OTIwNDQy
+LC0xNjQxMjA1MTc2LDEwMjgwMTg3ODQsLTEyMzc2MDA1OTUsMz
+Q1NzE2MzAyLC0xODM4MjQyNjU4LDYyODczMjg0OSw2MjE5MDA0
+OSwtNDU4NDkxMiwxNzc5MDUzMDk4LDEzOTYyNzkwOTEsMTg2NT
+c0NTY1MywyMTI3MTQ1NDMsLTIxMzc2NzAxODQsLTE1MDU1NjAx
+MTVdfQ==
 -->
