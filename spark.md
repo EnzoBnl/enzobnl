@@ -1217,8 +1217,23 @@ refs:
 |YARN container killed with exit code 143|memory/GC issue|Same workaround as OOMs|
 
 
-*Other reading:* 
+### Other reading:* 
 - https://community.cloudera.com/t5/Support-Questions/How-to-process-a-large-data-set-with-Spark/m-p/39428
+
+### How to simulate an executor's crash, deterministically
+
+It may be useful in order to see if the app recovers its state cleanly after executor failures at some given precise points in the spark App.
+
+The **first attempt** of the job triggered by the following line will crash the executor that contains the **first partition** of `someRDD`:
+
+```scala
+someRDD.mapPartitionsWithIndex {
+  case (id, partition) => {
+    if (id == 0 && TaskContext.get().attemptNumber() == 0) System.exit(0)
+    Iterator()
+  }
+}
+```
 
 ## XVIII/ Configuration
 There is 3 ways to pass a configuration property to an spark application's `SparkSession`. Here is the order of priority from the highest to the lowest:
@@ -1289,11 +1304,11 @@ _____
 
 <a rel="nofollow" href="tmp.html">_</a>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMzAxNTcwNjksLTE4NDcwMzc2ODksLT
-M0MjU1MzYxLDQ5MzY4MTc2NiwtODc5NjIwNDQ1LC0xNDE5NDAx
-NjEyLC0xMzc2MDEzODA4LDkwMjcwMDIwMSwxMzA2MTU0MjQ5LC
-0xMzMzMDA2NDcwLDgwNjI3NDA0OCwxMzkwNzcxMzE5LDE1OTQw
-ODkxNTAsMTUwMzQ5MTk3LC04MTM3MjI2NTMsLTE3NjQ1MjEwNz
-UsMTAzODE0MjA0LDk4MDY5MDg4NSwxNjA5MzAyMDQ3LDE3MTM3
-MjEwNzVdfQ==
+eyJoaXN0b3J5IjpbMTM3MTI2NjMxLC0xMDMwMTU3MDY5LC0xOD
+Q3MDM3Njg5LC0zNDI1NTM2MSw0OTM2ODE3NjYsLTg3OTYyMDQ0
+NSwtMTQxOTQwMTYxMiwtMTM3NjAxMzgwOCw5MDI3MDAyMDEsMT
+MwNjE1NDI0OSwtMTMzMzAwNjQ3MCw4MDYyNzQwNDgsMTM5MDc3
+MTMxOSwxNTk0MDg5MTUwLDE1MDM0OTE5NywtODEzNzIyNjUzLC
+0xNzY0NTIxMDc1LDEwMzgxNDIwNCw5ODA2OTA4ODUsMTYwOTMw
+MjA0N119
 -->
