@@ -459,13 +459,18 @@ airflow dags trigger hello_world
 airflow dags pause hello_world
 ```
 
-### Access webserver l
+## Kubernetes
+```bash
+# Access Airflow's Kube executor webserver locally
+kubectl port-forward svc/airflow-webserver 8080:8080 --namespace airflow
+# deploy and expose externally a one container d
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY1MDEzNzgzMCwtMTQyMzA4MTU4LDg4Mz
-Y4ODEwMyw5MTkzMTEyNTAsLTk4NDgyMjA3NywxMjU3NzAyMjE3
-LDc5NjY3NTA2LC0xMjA4NDgyMDA2LDk4ODkzNzEwMiwyMDA5OT
-IwNDQyLC0xNjQxMjA1MTc2LDEwMjgwMTg3ODQsLTEyMzc2MDA1
-OTUsMzQ1NzE2MzAyLC0xODM4MjQyNjU4LDYyODczMjg0OSw2Mj
-E5MDA0OSwtNDU4NDkxMiwxNzc5MDUzMDk4LDEzOTYyNzkwOTFd
-fQ==
+eyJoaXN0b3J5IjpbNzU2MzA2Mzk0LC0xNDIzMDgxNTgsODgzNj
+g4MTAzLDkxOTMxMTI1MCwtOTg0ODIyMDc3LDEyNTc3MDIyMTcs
+Nzk2Njc1MDYsLTEyMDg0ODIwMDYsOTg4OTM3MTAyLDIwMDk5Mj
+A0NDIsLTE2NDEyMDUxNzYsMTAyODAxODc4NCwtMTIzNzYwMDU5
+NSwzNDU3MTYzMDIsLTE4MzgyNDI2NTgsNjI4NzMyODQ5LDYyMT
+kwMDQ5LC00NTg0OTEyLDE3NzkwNTMwOTgsMTM5NjI3OTA5MV19
+
 -->
