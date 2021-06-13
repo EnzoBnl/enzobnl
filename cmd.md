@@ -428,8 +428,8 @@ c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown 
 ```
 
 ## airflow
+### local airflow setup test
 ```bash
-# local airflow setup test
 pip3 install apache-airflow
 export AIRFLOW_HOME="~/airflow"
 cd ~/airflow
@@ -453,18 +453,17 @@ hello_operator1 >> hello_operator2
 
 ```bash
 airflow db init
-```
 airflow webserver --port 8080 -D --pid
 airflow scheduler
 airflow dags trigger hello_world
-```
+airflow dags pause hello_world
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNDM4MjQ2NjAsODgzNjg4MTAzLDkxOT
-MxMTI1MCwtOTg0ODIyMDc3LDEyNTc3MDIyMTcsNzk2Njc1MDYs
-LTEyMDg0ODIwMDYsOTg4OTM3MTAyLDIwMDk5MjA0NDIsLTE2ND
-EyMDUxNzYsMTAyODAxODc4NCwtMTIzNzYwMDU5NSwzNDU3MTYz
-MDIsLTE4MzgyNDI2NTgsNjI4NzMyODQ5LDYyMTkwMDQ5LC00NT
-g0OTEyLDE3NzkwNTMwOTgsMTM5NjI3OTA5MSwxODY1NzQ1NjUz
-XX0=
+eyJoaXN0b3J5IjpbLTE0MjMwODE1OCw4ODM2ODgxMDMsOTE5Mz
+ExMjUwLC05ODQ4MjIwNzcsMTI1NzcwMjIxNyw3OTY2NzUwNiwt
+MTIwODQ4MjAwNiw5ODg5MzcxMDIsMjAwOTkyMDQ0MiwtMTY0MT
+IwNTE3NiwxMDI4MDE4Nzg0LC0xMjM3NjAwNTk1LDM0NTcxNjMw
+MiwtMTgzODI0MjY1OCw2Mjg3MzI4NDksNjIxOTAwNDksLTQ1OD
+Q5MTIsMTc3OTA1MzA5OCwxMzk2Mjc5MDkxLDE4NjU3NDU2NTNd
+fQ==
 -->
