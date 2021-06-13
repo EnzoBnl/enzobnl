@@ -426,12 +426,18 @@ sudo find / -name *middleisthis*
 c:/applications/anaconda2/scripts/pandoc --latex-engine=xelatex -H preamble.tex -V fontsize=12pt -V documentclass:book -V papersize:a4paper  -V classoption:openright --chapters --bibliography=papers.bib --csl="csl/nature.csl" title.md summary.md zusammenfassung.md acknowledgements.md toc.md "introduction/intro1.md" "introduction/intro2.md" chapter2_paper.md chapter3_extra_results.md chapter4_generaldiscussion.md appendix.md references.md -o "phdthesis.pdf"
 c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown --latex-engine=xelatex
 ```
+
+## airflow
+```bash
+# local airflow setup test
+export AIRFLOW_HOME="
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk4NDgyMjA3NywxMjU3NzAyMjE3LDc5Nj
-Y3NTA2LC0xMjA4NDgyMDA2LDk4ODkzNzEwMiwyMDA5OTIwNDQy
-LC0xNjQxMjA1MTc2LDEwMjgwMTg3ODQsLTEyMzc2MDA1OTUsMz
-Q1NzE2MzAyLC0xODM4MjQyNjU4LDYyODczMjg0OSw2MjE5MDA0
-OSwtNDU4NDkxMiwxNzc5MDUzMDk4LDEzOTYyNzkwOTEsMTg2NT
-c0NTY1MywyMTI3MTQ1NDMsLTIxMzc2NzAxODQsLTE1MDU1NjAx
-MTVdfQ==
+eyJoaXN0b3J5IjpbLTUzMjUzNTA0MSwtOTg0ODIyMDc3LDEyNT
+c3MDIyMTcsNzk2Njc1MDYsLTEyMDg0ODIwMDYsOTg4OTM3MTAy
+LDIwMDk5MjA0NDIsLTE2NDEyMDUxNzYsMTAyODAxODc4NCwtMT
+IzNzYwMDU5NSwzNDU3MTYzMDIsLTE4MzgyNDI2NTgsNjI4NzMy
+ODQ5LDYyMTkwMDQ5LC00NTg0OTEyLDE3NzkwNTMwOTgsMTM5Nj
+I3OTA5MSwxODY1NzQ1NjUzLDIxMjcxNDU0MywtMjEzNzY3MDE4
+NF19
 -->
