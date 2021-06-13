@@ -430,10 +430,31 @@ c:/applications/anaconda2/scripts/pandoc .\plan.md -o plan.pdf  --read=markdown 
 ## airflow
 ```bash
 # local airflow setup test
-export AIRFLOW_HOME="
+pip3 install apache-airflow
+export AIRFLOW_HOME="~/airflow"
+cd ~/airflow
+mkdir dags
+gedit ./dags/hello.py
+```
+
+`hello.py` content:
+```python
+from datetime import datetime
+from airflow import DAG
+from airflow.operators.python_operator import PythonOperator
+
+
+dag = DAG('hello_world', description='Hello world example', schedule_interval='* * * * *', start_date=datetime(1970, 1, 1), catchup=False)
+
+hello_operator1 = PythonOperator(task_id='hello_task1', python_callable=lambda: "hello 1", dag=dag)
+hello_operator2 = PythonOperator(task_id='hello_task2', python_callable=lambda: "hello 2", dag=dag)
+hello_operator1 >> hello_operator2
+```
+
+```bash
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUzMjUzNTA0MSwtOTg0ODIyMDc3LDEyNT
+eyJoaXN0b3J5IjpbMTc5MTAxNTg5MSwtOTg0ODIyMDc3LDEyNT
 c3MDIyMTcsNzk2Njc1MDYsLTEyMDg0ODIwMDYsOTg4OTM3MTAy
 LDIwMDk5MjA0NDIsLTE2NDEyMDUxNzYsMTAyODAxODc4NCwtMT
 IzNzYwMDU5NSwzNDU3MTYzMDIsLTE4MzgyNDI2NTgsNjI4NzMy
