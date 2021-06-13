@@ -465,9 +465,10 @@ airflow dags pause hello_world
 kubectl port-forward svc/airflow-webserver 8080:8080 --namespace airflow
 # deploy and expose externally a 1-container deployment
 kubectl create deployment --image eu.gcr.io/playground-314008/ork:0.0.1 ork
+kubectl expose deploy ork --port=5000 --target-port=8080 --name=ork-http-ext --type=LoadBalancer
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU4NjE1Mjg3NiwtMTQyMzA4MTU4LDg4Mz
+eyJoaXN0b3J5IjpbMTQ5MDU3MjE3NiwtMTQyMzA4MTU4LDg4Mz
 Y4ODEwMyw5MTkzMTEyNTAsLTk4NDgyMjA3NywxMjU3NzAyMjE3
 LDc5NjY3NTA2LC0xMjA4NDgyMDA2LDk4ODkzNzEwMiwyMDA5OT
 IwNDQyLC0xNjQxMjA1MTc2LDEwMjgwMTg3ODQsLTEyMzc2MDA1
