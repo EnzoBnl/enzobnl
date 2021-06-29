@@ -101,7 +101,10 @@ docker run -p 8888:8888 -v notebooks:/home/jovyan/work -v /tmp:/home/jovyan/data
 # print current terminal pid
 echo $$
 # pass env key-value pairs to a process, i.e bash here
-A=B B=C 
+$A=B B=C bash
+# gives
+bash$ echo $A
+B
 # xargs hello world
 echo world | xargs -I % echo hello %
 # search and kill a process foo by pid
@@ -474,11 +477,11 @@ kubectl create deployment --image eu.gcr.io/playground-314008/example:0.0.1 exam
 kubectl expose deploy example --port=5000 --target-port=8080 --name=example-http-ext --type=LoadBalancer
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI5MzkzOTc3NCwyMTE0Njk5NzM3LDEyMT
-AwODAyNzIsLTE0MjMwODE1OCw4ODM2ODgxMDMsOTE5MzExMjUw
-LC05ODQ4MjIwNzcsMTI1NzcwMjIxNyw3OTY2NzUwNiwtMTIwOD
-Q4MjAwNiw5ODg5MzcxMDIsMjAwOTkyMDQ0MiwtMTY0MTIwNTE3
-NiwxMDI4MDE4Nzg0LC0xMjM3NjAwNTk1LDM0NTcxNjMwMiwtMT
-gzODI0MjY1OCw2Mjg3MzI4NDksNjIxOTAwNDksLTQ1ODQ5MTJd
-fQ==
+eyJoaXN0b3J5IjpbLTE0NzcwNjg2MjcsMjExNDY5OTczNywxMj
+EwMDgwMjcyLC0xNDIzMDgxNTgsODgzNjg4MTAzLDkxOTMxMTI1
+MCwtOTg0ODIyMDc3LDEyNTc3MDIyMTcsNzk2Njc1MDYsLTEyMD
+g0ODIwMDYsOTg4OTM3MTAyLDIwMDk5MjA0NDIsLTE2NDEyMDUx
+NzYsMTAyODAxODc4NCwtMTIzNzYwMDU5NSwzNDU3MTYzMDIsLT
+E4MzgyNDI2NTgsNjI4NzMyODQ5LDYyMTkwMDQ5LC00NTg0OTEy
+XX0=
 -->
