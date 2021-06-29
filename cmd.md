@@ -190,6 +190,8 @@ dpkg -i package_name.deb
 source ~/.bashrc
 // You can make a file executable as follows:
 chmod a+x exampleName.AppImage
+// or
+chmod 755 <script or binary name>
 // get historic back after reset and clear
 [shortcut] Ctrl + l
 // search terminal history, same shortcut to navigate matching lines
@@ -468,11 +470,11 @@ kubectl create deployment --image eu.gcr.io/playground-314008/example:0.0.1 exam
 kubectl expose deploy example --port=5000 --target-port=8080 --name=example-http-ext --type=LoadBalancer
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIxMDA4MDI3MiwtMTQyMzA4MTU4LDg4Mz
-Y4ODEwMyw5MTkzMTEyNTAsLTk4NDgyMjA3NywxMjU3NzAyMjE3
-LDc5NjY3NTA2LC0xMjA4NDgyMDA2LDk4ODkzNzEwMiwyMDA5OT
-IwNDQyLC0xNjQxMjA1MTc2LDEwMjgwMTg3ODQsLTEyMzc2MDA1
-OTUsMzQ1NzE2MzAyLC0xODM4MjQyNjU4LDYyODczMjg0OSw2Mj
-E5MDA0OSwtNDU4NDkxMiwxNzc5MDUzMDk4LDEzOTYyNzkwOTFd
+eyJoaXN0b3J5IjpbMjExNDY5OTczNywxMjEwMDgwMjcyLC0xND
+IzMDgxNTgsODgzNjg4MTAzLDkxOTMxMTI1MCwtOTg0ODIyMDc3
+LDEyNTc3MDIyMTcsNzk2Njc1MDYsLTEyMDg0ODIwMDYsOTg4OT
+M3MTAyLDIwMDk5MjA0NDIsLTE2NDEyMDUxNzYsMTAyODAxODc4
+NCwtMTIzNzYwMDU5NSwzNDU3MTYzMDIsLTE4MzgyNDI2NTgsNj
+I4NzMyODQ5LDYyMTkwMDQ5LC00NTg0OTEyLDE3NzkwNTMwOThd
 fQ==
 -->
