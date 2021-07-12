@@ -473,7 +473,7 @@ airflow dags pause hello_world
 ```bash
 # Access Airflow's Kube executor webserver locally
 kubectl port-forward svc/airflow-webserver 8080:8080 --namespace airflow
-# deploy and expose externally a 1-container deployment
+# deploy and expose (create service) externally a 1-container deployment
 kubectl create deployment --image eu.gcr.io/playground-314008/example:0.0.1 example
 kubectl expose deploy example --port=5000 --target-port=8080 --name=example-http-ext --type=LoadBalancer
 ```
@@ -485,11 +485,11 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkxNDIwNTAzNywxMDI5MTA4ODczLDUxOD
-AyNjQyNSwtMTQ3NzA2ODYyNywyMTE0Njk5NzM3LDEyMTAwODAy
-NzIsLTE0MjMwODE1OCw4ODM2ODgxMDMsOTE5MzExMjUwLC05OD
-Q4MjIwNzcsMTI1NzcwMjIxNyw3OTY2NzUwNiwtMTIwODQ4MjAw
-Niw5ODg5MzcxMDIsMjAwOTkyMDQ0MiwtMTY0MTIwNTE3NiwxMD
-I4MDE4Nzg0LC0xMjM3NjAwNTk1LDM0NTcxNjMwMiwtMTgzODI0
-MjY1OF19
+eyJoaXN0b3J5IjpbMTQzODc1OTI2NywxOTE0MjA1MDM3LDEwMj
+kxMDg4NzMsNTE4MDI2NDI1LC0xNDc3MDY4NjI3LDIxMTQ2OTk3
+MzcsMTIxMDA4MDI3MiwtMTQyMzA4MTU4LDg4MzY4ODEwMyw5MT
+kzMTEyNTAsLTk4NDgyMjA3NywxMjU3NzAyMjE3LDc5NjY3NTA2
+LC0xMjA4NDgyMDA2LDk4ODkzNzEwMiwyMDA5OTIwNDQyLC0xNj
+QxMjA1MTc2LDEwMjgwMTg3ODQsLTEyMzc2MDA1OTUsMzQ1NzE2
+MzAyXX0=
 -->
