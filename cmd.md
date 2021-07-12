@@ -93,6 +93,7 @@ gcloud config set project <project-id>
 ```bash
 # docker run jupyter notebook
 docker run -p 8888:8888 -v notebooks:/home/jovyan/work -v /tmp:/home/jovyan/data jupyter/all-spark-notebook
+# docker remove all images with none ta
 ```
 
 ### unix
@@ -476,11 +477,11 @@ kubectl create deployment --image eu.gcr.io/playground-314008/example:0.0.1 exam
 kubectl expose deploy example --port=5000 --target-port=8080 --name=example-http-ext --type=LoadBalancer
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTE4MDI2NDI1LC0xNDc3MDY4NjI3LDIxMT
-Q2OTk3MzcsMTIxMDA4MDI3MiwtMTQyMzA4MTU4LDg4MzY4ODEw
-Myw5MTkzMTEyNTAsLTk4NDgyMjA3NywxMjU3NzAyMjE3LDc5Nj
-Y3NTA2LC0xMjA4NDgyMDA2LDk4ODkzNzEwMiwyMDA5OTIwNDQy
-LC0xNjQxMjA1MTc2LDEwMjgwMTg3ODQsLTEyMzc2MDA1OTUsMz
-Q1NzE2MzAyLC0xODM4MjQyNjU4LDYyODczMjg0OSw2MjE5MDA0
-OV19
+eyJoaXN0b3J5IjpbLTE3NTE2Mzg3ODgsNTE4MDI2NDI1LC0xND
+c3MDY4NjI3LDIxMTQ2OTk3MzcsMTIxMDA4MDI3MiwtMTQyMzA4
+MTU4LDg4MzY4ODEwMyw5MTkzMTEyNTAsLTk4NDgyMjA3NywxMj
+U3NzAyMjE3LDc5NjY3NTA2LC0xMjA4NDgyMDA2LDk4ODkzNzEw
+MiwyMDA5OTIwNDQyLC0xNjQxMjA1MTc2LDEwMjgwMTg3ODQsLT
+EyMzc2MDA1OTUsMzQ1NzE2MzAyLC0xODM4MjQyNjU4LDYyODcz
+Mjg0OV19
 -->
