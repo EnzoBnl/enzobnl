@@ -477,12 +477,19 @@ kubectl port-forward svc/airflow-webserver 8080:8080 --namespace airflow
 kubectl create deployment --image eu.gcr.io/playground-314008/example:0.0.1 example
 kubectl expose deploy example --port=5000 --target-port=8080 --name=example-http-ext --type=LoadBalancer
 ```
+
+### macos
+Shortcuts
+```
+# exit full screen
+cmd + ctl + F
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAyOTEwODg3Myw1MTgwMjY0MjUsLTE0Nz
-cwNjg2MjcsMjExNDY5OTczNywxMjEwMDgwMjcyLC0xNDIzMDgx
-NTgsODgzNjg4MTAzLDkxOTMxMTI1MCwtOTg0ODIyMDc3LDEyNT
-c3MDIyMTcsNzk2Njc1MDYsLTEyMDg0ODIwMDYsOTg4OTM3MTAy
-LDIwMDk5MjA0NDIsLTE2NDEyMDUxNzYsMTAyODAxODc4NCwtMT
-IzNzYwMDU5NSwzNDU3MTYzMDIsLTE4MzgyNDI2NTgsNjI4NzMy
-ODQ5XX0=
+eyJoaXN0b3J5IjpbMTkxNDIwNTAzNywxMDI5MTA4ODczLDUxOD
+AyNjQyNSwtMTQ3NzA2ODYyNywyMTE0Njk5NzM3LDEyMTAwODAy
+NzIsLTE0MjMwODE1OCw4ODM2ODgxMDMsOTE5MzExMjUwLC05OD
+Q4MjIwNzcsMTI1NzcwMjIxNyw3OTY2NzUwNiwtMTIwODQ4MjAw
+Niw5ODg5MzcxMDIsMjAwOTkyMDQ0MiwtMTY0MTIwNTE3NiwxMD
+I4MDE4Nzg0LC0xMjM3NjAwNTk1LDM0NTcxNjMwMiwtMTgzODI0
+MjY1OF19
 -->
