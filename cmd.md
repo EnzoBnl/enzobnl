@@ -428,6 +428,10 @@ git cherry-pick <commit-hash>
 # find a pattern of path in entire root
 
 sudo find / -name *middleisthis*
+
+# dump man output to file
+man somecommand | col -b > ksh.txt
+
 ```
 
 ## Text edition
@@ -485,11 +489,11 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQzODc1OTI2NywxOTE0MjA1MDM3LDEwMj
-kxMDg4NzMsNTE4MDI2NDI1LC0xNDc3MDY4NjI3LDIxMTQ2OTk3
-MzcsMTIxMDA4MDI3MiwtMTQyMzA4MTU4LDg4MzY4ODEwMyw5MT
-kzMTEyNTAsLTk4NDgyMjA3NywxMjU3NzAyMjE3LDc5NjY3NTA2
-LC0xMjA4NDgyMDA2LDk4ODkzNzEwMiwyMDA5OTIwNDQyLC0xNj
-QxMjA1MTc2LDEwMjgwMTg3ODQsLTEyMzc2MDA1OTUsMzQ1NzE2
-MzAyXX0=
+eyJoaXN0b3J5IjpbMTE1NTg5NTg2LDE0Mzg3NTkyNjcsMTkxND
+IwNTAzNywxMDI5MTA4ODczLDUxODAyNjQyNSwtMTQ3NzA2ODYy
+NywyMTE0Njk5NzM3LDEyMTAwODAyNzIsLTE0MjMwODE1OCw4OD
+M2ODgxMDMsOTE5MzExMjUwLC05ODQ4MjIwNzcsMTI1NzcwMjIx
+Nyw3OTY2NzUwNiwtMTIwODQ4MjAwNiw5ODg5MzcxMDIsMjAwOT
+kyMDQ0MiwtMTY0MTIwNTE3NiwxMDI4MDE4Nzg0LC0xMjM3NjAw
+NTk1XX0=
 -->
