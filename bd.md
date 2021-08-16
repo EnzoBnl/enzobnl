@@ -114,7 +114,7 @@ chromium-browser --user-data-dir --proxy-server="socks5://127.0.0.1:1080"
 - Compute Engine: Dremel X (Successor to Dremel)
 
 See:
-[Google's *BigQuery Under the Hood*" podcast](https://www.youtube.com/watch?v=2jDGAl4Ef-Y)
+[Google's *BigQuery Under the Hood* podcast](https://www.youtube.com/watch?v=2jDGAl4Ef-Y)
 
 ## Delta Lake
 ### DeltaLog & ACID guarantees
@@ -210,11 +210,11 @@ Known as [Incremental encoding](https://en.wikipedia.org/wiki/Incremental_encodi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMTY3MzQ0MDcsNDI0NDIzMjczLC0xNz
-ExMDUzMDAsLTE3NjgyMTI4MDcsLTEwOTM3OTE1MzUsMTE5OTA0
-Nzk5NSwtMTM0MjEzNjY5LDIwODMzMjk2OTAsMTEwMzMyMTY2LC
-0yMTMyNTQ0NDI1LDU0Mjc2NzU1OCwtMTk0NTcyMTExNiwtMjAy
-MDUyMzY1OSw5MjI3MzE0MDcsMTM0NDk0MTE3MSwxOTM4MzkzOD
-kwLC0yMTQwODMxNzQ5LDE1NTcxNzM5NSw4MDQ3NTgzMzcsMTQ4
-MDQ1ODc3Nl19
+eyJoaXN0b3J5IjpbMjkwMDQ5MDc1LDQyNDQyMzI3MywtMTcxMT
+A1MzAwLC0xNzY4MjEyODA3LC0xMDkzNzkxNTM1LDExOTkwNDc5
+OTUsLTEzNDIxMzY2OSwyMDgzMzI5NjkwLDExMDMzMjE2NiwtMj
+EzMjU0NDQyNSw1NDI3Njc1NTgsLTE5NDU3MjExMTYsLTIwMjA1
+MjM2NTksOTIyNzMxNDA3LDEzNDQ5NDExNzEsMTkzODM5Mzg5MC
+wtMjE0MDgzMTc0OSwxNTU3MTczOTUsODA0NzU4MzM3LDE0ODA0
+NTg3NzZdfQ==
 -->
