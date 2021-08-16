@@ -109,9 +109,9 @@ chromium-browser --user-data-dir --proxy-server="socks5://127.0.0.1:1080"
 ### BigQuery
 - Storage Level: 
   - distributed file system: Google Colossus (on hard drives)
-  - str
-- Intermediate data storage: in-memory shuffler component
-- COmpute: DremelX
+  - columnar storage format: [Google Capacitor](https://cloud.google.com/blog/products/bigquery/inside-capacitor-bigquerys-next-generation-columnar-storage-format)
+- Intermediate data storage: in-memory shuffler component (not tight to compute ressources)
+- Compute Engine: (Successor to Dremel)
 ## Delta Lake
 ### DeltaLog & ACID guarantees
 
@@ -206,11 +206,11 @@ Known as [Incremental encoding](https://en.wikipedia.org/wiki/Incremental_encodi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE4NDgxNDA3MSwtMTcxMTA1MzAwLC0xNz
-Y4MjEyODA3LC0xMDkzNzkxNTM1LDExOTkwNDc5OTUsLTEzNDIx
-MzY2OSwyMDgzMzI5NjkwLDExMDMzMjE2NiwtMjEzMjU0NDQyNS
-w1NDI3Njc1NTgsLTE5NDU3MjExMTYsLTIwMjA1MjM2NTksOTIy
-NzMxNDA3LDEzNDQ5NDExNzEsMTkzODM5Mzg5MCwtMjE0MDgzMT
-c0OSwxNTU3MTczOTUsODA0NzU4MzM3LDE0ODA0NTg3NzYsMTkw
-NDY3NjgwOF19
+eyJoaXN0b3J5IjpbMzcxMTM1NzIxLC0xNzExMDUzMDAsLTE3Nj
+gyMTI4MDcsLTEwOTM3OTE1MzUsMTE5OTA0Nzk5NSwtMTM0MjEz
+NjY5LDIwODMzMjk2OTAsMTEwMzMyMTY2LC0yMTMyNTQ0NDI1LD
+U0Mjc2NzU1OCwtMTk0NTcyMTExNiwtMjAyMDUyMzY1OSw5MjI3
+MzE0MDcsMTM0NDk0MTE3MSwxOTM4MzkzODkwLC0yMTQwODMxNz
+Q5LDE1NTcxNzM5NSw4MDQ3NTgzMzcsMTQ4MDQ1ODc3NiwxOTA0
+Njc2ODA4XX0=
 -->
