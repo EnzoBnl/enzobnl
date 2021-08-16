@@ -107,7 +107,9 @@ chromium-browser --user-data-dir --proxy-server="socks5://127.0.0.1:1080"
 - *BigTable* excels for OLTP (OnLine Transaction Processing): scalable and efficient read and write
 
 ### BigQuery
-- Storage level: Google Colossus (on hard drives)
+- Storage Level: 
+  - distributed file system: Google Colossus (on hard drives)
+  - str
 - Intermediate data storage: in-memory shuffler component
 - COmpute: DremelX
 ## Delta Lake
@@ -204,11 +206,11 @@ Known as [Incremental encoding](https://en.wikipedia.org/wiki/Incremental_encodi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MTEwNTMwMCwtMTc2ODIxMjgwNywtMT
-A5Mzc5MTUzNSwxMTk5MDQ3OTk1LC0xMzQyMTM2NjksMjA4MzMy
-OTY5MCwxMTAzMzIxNjYsLTIxMzI1NDQ0MjUsNTQyNzY3NTU4LC
-0xOTQ1NzIxMTE2LC0yMDIwNTIzNjU5LDkyMjczMTQwNywxMzQ0
-OTQxMTcxLDE5MzgzOTM4OTAsLTIxNDA4MzE3NDksMTU1NzE3Mz
-k1LDgwNDc1ODMzNywxNDgwNDU4Nzc2LDE5MDQ2NzY4MDgsMTE5
-MTY3Mjg4NV19
+eyJoaXN0b3J5IjpbMTE4NDgxNDA3MSwtMTcxMTA1MzAwLC0xNz
+Y4MjEyODA3LC0xMDkzNzkxNTM1LDExOTkwNDc5OTUsLTEzNDIx
+MzY2OSwyMDgzMzI5NjkwLDExMDMzMjE2NiwtMjEzMjU0NDQyNS
+w1NDI3Njc1NTgsLTE5NDU3MjExMTYsLTIwMjA1MjM2NTksOTIy
+NzMxNDA3LDEzNDQ5NDExNzEsMTkzODM5Mzg5MCwtMjE0MDgzMT
+c0OSwxNTU3MTczOTUsODA0NzU4MzM3LDE0ODA0NTg3NzYsMTkw
+NDY3NjgwOF19
 -->
