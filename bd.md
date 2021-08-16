@@ -106,6 +106,10 @@ chromium-browser --user-data-dir --proxy-server="socks5://127.0.0.1:1080"
 - *BigQuery* excels for OLAP (OnLine Analytical Processing): scalable and efficient analytic querying on unchanging data (or just appending data).
 - *BigTable* excels for OLTP (OnLine Transaction Processing): scalable and efficient read and write
 
+### BigQuery
+- Storage level: Google Colossus (on hard drives)
+- Intermediate data storage: in-memory shuffler component
+- COmpute: DremelX
 ## Delta Lake
 ### DeltaLog & ACID guarantees
 
@@ -200,11 +204,11 @@ Known as [Incremental encoding](https://en.wikipedia.org/wiki/Incremental_encodi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NjgyMTI4MDcsLTEwOTM3OTE1MzUsMT
-E5OTA0Nzk5NSwtMTM0MjEzNjY5LDIwODMzMjk2OTAsMTEwMzMy
-MTY2LC0yMTMyNTQ0NDI1LDU0Mjc2NzU1OCwtMTk0NTcyMTExNi
-wtMjAyMDUyMzY1OSw5MjI3MzE0MDcsMTM0NDk0MTE3MSwxOTM4
-MzkzODkwLC0yMTQwODMxNzQ5LDE1NTcxNzM5NSw4MDQ3NTgzMz
-csMTQ4MDQ1ODc3NiwxOTA0Njc2ODA4LDExOTE2NzI4ODUsLTEy
-NTcwMDUzMF19
+eyJoaXN0b3J5IjpbLTE3MTEwNTMwMCwtMTc2ODIxMjgwNywtMT
+A5Mzc5MTUzNSwxMTk5MDQ3OTk1LC0xMzQyMTM2NjksMjA4MzMy
+OTY5MCwxMTAzMzIxNjYsLTIxMzI1NDQ0MjUsNTQyNzY3NTU4LC
+0xOTQ1NzIxMTE2LC0yMDIwNTIzNjU5LDkyMjczMTQwNywxMzQ0
+OTQxMTcxLDE5MzgzOTM4OTAsLTIxNDA4MzE3NDksMTU1NzE3Mz
+k1LDgwNDc1ODMzNywxNDgwNDU4Nzc2LDE5MDQ2NzY4MDgsMTE5
+MTY3Mjg4NV19
 -->
