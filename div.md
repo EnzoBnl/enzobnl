@@ -233,6 +233,16 @@ You can pull using rebase instead of merge (`git pull --rebase`). The local chan
 
 Atlassian has some excellent [documentation on merging vs. rebasing](https://www.atlassian.com/git/tutorials/merging-vs-rebasing/workflow-walkthrough).
 
+### Co-authoring a commit
+In commit message:
+```
+Commit title
+
+Commit body
+
+Co-authored-by: Foo <foo@bar.com>
+Co-authored-by: Bar <bar@foo.com>
+```
 
 ## Assembly/Hardware
 ### Windows/Linux binaries incompatibility ?
@@ -256,9 +266,10 @@ The difference is in which libraries are used. In order to use OS stuff (I/O for
 4. Master 1 to 3 specialized frameworks: Node.js, React, Spark, Kubernetes, Unity...
 5. Practice with CI/CD & cloud
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg5MjA4MzM2Miw3MjgxNTI0NzcsLTE2Mz
-E2OTE3OTksMTEyMjc0OTAwMSwtMTUzMjE0MDQ1OSwtMTQ0MTgx
-NTQzOSwxNDczOTU4NDQxLDE0NzM5NTg0NDEsLTE2NTA2NDEwOD
-gsLTIwODg1NDU1MDYsMTI2NTI3NjcxLDE2MTMxMzY3MTEsLTIw
-Mzc5MDk4NzksLTE5ODE2MjI3NzMsMjcxNjE3ODI2XX0=
+eyJoaXN0b3J5IjpbLTE0MzczODA2NTEsMTg5MjA4MzM2Miw3Mj
+gxNTI0NzcsLTE2MzE2OTE3OTksMTEyMjc0OTAwMSwtMTUzMjE0
+MDQ1OSwtMTQ0MTgxNTQzOSwxNDczOTU4NDQxLDE0NzM5NTg0ND
+EsLTE2NTA2NDEwODgsLTIwODg1NDU1MDYsMTI2NTI3NjcxLDE2
+MTMxMzY3MTEsLTIwMzc5MDk4NzksLTE5ODE2MjI3NzMsMjcxNj
+E3ODI2XX0=
 -->
