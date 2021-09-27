@@ -100,6 +100,10 @@ docker rmi $(docker images -f "dangling=true" -q) --force
 ### unix
 
 ```bash
+# count lines
+
+# split large file in files of X lines
+split -l X largefile.txt 
 # print current terminal pid
 echo $$
 # pass env key-value pairs to a process, i.e bash here
@@ -489,11 +493,11 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE1NTg5NTg2LDE0Mzg3NTkyNjcsMTkxND
-IwNTAzNywxMDI5MTA4ODczLDUxODAyNjQyNSwtMTQ3NzA2ODYy
-NywyMTE0Njk5NzM3LDEyMTAwODAyNzIsLTE0MjMwODE1OCw4OD
-M2ODgxMDMsOTE5MzExMjUwLC05ODQ4MjIwNzcsMTI1NzcwMjIx
-Nyw3OTY2NzUwNiwtMTIwODQ4MjAwNiw5ODg5MzcxMDIsMjAwOT
-kyMDQ0MiwtMTY0MTIwNTE3NiwxMDI4MDE4Nzg0LC0xMjM3NjAw
-NTk1XX0=
+eyJoaXN0b3J5IjpbMzM2Njk5ODU5LDExNTU4OTU4NiwxNDM4Nz
+U5MjY3LDE5MTQyMDUwMzcsMTAyOTEwODg3Myw1MTgwMjY0MjUs
+LTE0NzcwNjg2MjcsMjExNDY5OTczNywxMjEwMDgwMjcyLC0xND
+IzMDgxNTgsODgzNjg4MTAzLDkxOTMxMTI1MCwtOTg0ODIyMDc3
+LDEyNTc3MDIyMTcsNzk2Njc1MDYsLTEyMDg0ODIwMDYsOTg4OT
+M3MTAyLDIwMDk5MjA0NDIsLTE2NDEyMDUxNzYsMTAyODAxODc4
+NF19
 -->
