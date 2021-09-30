@@ -744,18 +744,19 @@ trash[1][2] = a;
 ## SELECT struct replacing only one field in it
 ```sql
 SELECT
-  *
-  ,SELECT AS STRUCT current_video.video.* REPLACE(backfill_column.{{ params.column }} as {{ params.column }})
+  ...
+  , SELECT AS STRUCT struct_name.* REPLACE(new_value as struct_field)
+FROM ...
 ```
 
 ## LEFT SEMI JOIN
 The result table of `A LEFT SEMI JOIN B` is a subset of `A`'s records (only `A`'s fields) whose key is matching at least 1 record in `B`.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUzNzc0NDE4OCwyMDUyNzcyNTM3LDk5OT
-M0MjExNiwyMTE0MzEyMzUyLC0xODY0NTMwMDYwLC00OTgwNTIx
-NDMsLTM2Nzk2OTEyNSw2MTA2NDE1NDcsNjI4Njg3MDcxLDE2Mj
-QzODg1NzMsLTE2MzY0NzIwMjEsNjEwOTAyNDc1LC0yNjczOTk3
-NSwxOTc5OTM0MzEzLDIzMzAzNjE3NiwtNDUwODI0MzEyLC00NT
-I2NzAyOTcsLTEwODQ3MzQzMjYsLTExNTUzNjkyMzksMTUxNTA0
-NTMzM119
+eyJoaXN0b3J5IjpbLTE1NjA5NjI0OTQsMjA1Mjc3MjUzNyw5OT
+kzNDIxMTYsMjExNDMxMjM1MiwtMTg2NDUzMDA2MCwtNDk4MDUy
+MTQzLC0zNjc5NjkxMjUsNjEwNjQxNTQ3LDYyODY4NzA3MSwxNj
+I0Mzg4NTczLC0xNjM2NDcyMDIxLDYxMDkwMjQ3NSwtMjY3Mzk5
+NzUsMTk3OTkzNDMxMywyMzMwMzYxNzYsLTQ1MDgyNDMxMiwtND
+UyNjcwMjk3LC0xMDg0NzM0MzI2LC0xMTU1MzY5MjM5LDE1MTUw
+NDUzMzNdfQ==
 -->
