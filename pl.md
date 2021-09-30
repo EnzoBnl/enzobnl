@@ -744,13 +744,14 @@ trash[1][2] = a;
 ## SELECT struct replacing only one field in it
 ```sql
 SELECT
-  *SELECT AS STRUCT current_video.video.* REPLACE(backfill_column.{{ params.column }} as {{ params.column }})
+  *
+  ,SELECT AS STRUCT current_video.video.* REPLACE(backfill_column.{{ params.column }} as {{ params.column }})
 ```
 
 ## LEFT SEMI JOIN
 The result table of `A LEFT SEMI JOIN B` is a subset of `A`'s records (only `A`'s fields) whose key is matching at least 1 record in `B`.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA2OTk0NDQ3MCwyMDUyNzcyNTM3LDk5OT
+eyJoaXN0b3J5IjpbMTUzNzc0NDE4OCwyMDUyNzcyNTM3LDk5OT
 M0MjExNiwyMTE0MzEyMzUyLC0xODY0NTMwMDYwLC00OTgwNTIx
 NDMsLTM2Nzk2OTEyNSw2MTA2NDE1NDcsNjI4Njg3MDcxLDE2Mj
 QzODg1NzMsLTE2MzY0NzIwMjEsNjEwOTAyNDc1LC0yNjczOTk3
