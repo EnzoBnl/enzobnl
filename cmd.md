@@ -100,6 +100,9 @@ docker rmi $(docker images -f "dangling=true" -q) --force
 ### unix
 
 ```bash
+# find location of a symlink:
+ls -al <symlink>
+
 # count lines
 wc -l filename
 # split large file in files of X lines, smallfileaa, smallfileaa, smallfileab
@@ -315,23 +318,26 @@ mvn -pl .,library1,library2 clean install ...
 sudo mvn install:install-file -U -Dfile=/path/bla.jar    -DgroupId=com.bla    -DartifactId=bla    -Dversion=X.x    -Dpackaging=jar   -DgeneratePom=true -DlocalRepositoryPath=/root/.m2/repository
 ```
 ### pypi //pip
-```
-//specific version
+```bash
+# specific version
 pip install 'scimple==1.2.5' --force-reinstall
 
 pip install twine
-//local install :
+# local install :
 pip install .
-//pypi install:
+# pypi install:
 python setup.py sdist (bdist_wininst)
 cd dist
 twine upload <package_name>-<version>.tar.gz
-//use:
+# use:
 pip install <package_name>
 pip install <package_name> --upgrade
 
-// Deep Learning
+# Deep Learning
 pip install tensorflow-gpu
+
+# use pip as module
+python2 -m pip install ...
 ```
 ### Eclipse :
 ```
@@ -493,11 +499,11 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5OTI5MzAxNDAsMTE1NTg5NTg2LDE0Mz
-g3NTkyNjcsMTkxNDIwNTAzNywxMDI5MTA4ODczLDUxODAyNjQy
-NSwtMTQ3NzA2ODYyNywyMTE0Njk5NzM3LDEyMTAwODAyNzIsLT
-E0MjMwODE1OCw4ODM2ODgxMDMsOTE5MzExMjUwLC05ODQ4MjIw
-NzcsMTI1NzcwMjIxNyw3OTY2NzUwNiwtMTIwODQ4MjAwNiw5OD
-g5MzcxMDIsMjAwOTkyMDQ0MiwtMTY0MTIwNTE3NiwxMDI4MDE4
-Nzg0XX0=
+eyJoaXN0b3J5IjpbLTc0NzYwOTYxOCwtMTk5MjkzMDE0MCwxMT
+U1ODk1ODYsMTQzODc1OTI2NywxOTE0MjA1MDM3LDEwMjkxMDg4
+NzMsNTE4MDI2NDI1LC0xNDc3MDY4NjI3LDIxMTQ2OTk3MzcsMT
+IxMDA4MDI3MiwtMTQyMzA4MTU4LDg4MzY4ODEwMyw5MTkzMTEy
+NTAsLTk4NDgyMjA3NywxMjU3NzAyMjE3LDc5NjY3NTA2LC0xMj
+A4NDgyMDA2LDk4ODkzNzEwMiwyMDA5OTIwNDQyLC0xNjQxMjA1
+MTc2XX0=
 -->
