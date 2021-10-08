@@ -363,7 +363,8 @@ type ':wq' + press enter (save and quit vim)
 [How to write good commit messages](https://chris.beams.io/posts/git-commit/#imperative)
 
 ```bash 
-# Instruct git to always use SSH URL instead of 
+# Instruct git to always access remote repositories using ssh instead of https (useful for vscode golang)
+git config --global url.git@github.com:.insteadOf https://github.com/
 # cherry pick a commit's changes
 git cherry-pick <commit hash>
 # git delete tag locally and remotely
@@ -500,11 +501,11 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzMwNjE3NzAyLC03NDc2MDk2MTgsLTE5OT
-I5MzAxNDAsMTE1NTg5NTg2LDE0Mzg3NTkyNjcsMTkxNDIwNTAz
-NywxMDI5MTA4ODczLDUxODAyNjQyNSwtMTQ3NzA2ODYyNywyMT
-E0Njk5NzM3LDEyMTAwODAyNzIsLTE0MjMwODE1OCw4ODM2ODgx
-MDMsOTE5MzExMjUwLC05ODQ4MjIwNzcsMTI1NzcwMjIxNyw3OT
-Y2NzUwNiwtMTIwODQ4MjAwNiw5ODg5MzcxMDIsMjAwOTkyMDQ0
-Ml19
+eyJoaXN0b3J5IjpbLTEzMjAzMDM2NiwtNzQ3NjA5NjE4LC0xOT
+kyOTMwMTQwLDExNTU4OTU4NiwxNDM4NzU5MjY3LDE5MTQyMDUw
+MzcsMTAyOTEwODg3Myw1MTgwMjY0MjUsLTE0NzcwNjg2MjcsMj
+ExNDY5OTczNywxMjEwMDgwMjcyLC0xNDIzMDgxNTgsODgzNjg4
+MTAzLDkxOTMxMTI1MCwtOTg0ODIyMDc3LDEyNTc3MDIyMTcsNz
+k2Njc1MDYsLTEyMDg0ODIwMDYsOTg4OTM3MTAyLDIwMDk5MjA0
+NDJdfQ==
 -->
