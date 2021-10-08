@@ -6,7 +6,7 @@
 <script>document.body.style.background = "#f2f2f2";</script>
 <!--NOTE HEAD END-->
 # Syntax reminders
-A big personal mess that nobody should ever look at :D 
+A big personal mess, nobody should never ever look at it :D
 
 ## Big Data related
 ### Spark / scala
@@ -502,11 +502,11 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNjk5NDkwNTIsLTc0NzYwOTYxOCwtMT
-k5MjkzMDE0MCwxMTU1ODk1ODYsMTQzODc1OTI2NywxOTE0MjA1
-MDM3LDEwMjkxMDg4NzMsNTE4MDI2NDI1LC0xNDc3MDY4NjI3LD
-IxMTQ2OTk3MzcsMTIxMDA4MDI3MiwtMTQyMzA4MTU4LDg4MzY4
-ODEwMyw5MTkzMTEyNTAsLTk4NDgyMjA3NywxMjU3NzAyMjE3LD
-c5NjY3NTA2LC0xMjA4NDgyMDA2LDk4ODkzNzEwMiwyMDA5OTIw
-NDQyXX0=
+eyJoaXN0b3J5IjpbMTk4NTEyNDcwMCwtNzQ3NjA5NjE4LC0xOT
+kyOTMwMTQwLDExNTU4OTU4NiwxNDM4NzU5MjY3LDE5MTQyMDUw
+MzcsMTAyOTEwODg3Myw1MTgwMjY0MjUsLTE0NzcwNjg2MjcsMj
+ExNDY5OTczNywxMjEwMDgwMjcyLC0xNDIzMDgxNTgsODgzNjg4
+MTAzLDkxOTMxMTI1MCwtOTg0ODIyMDc3LDEyNTc3MDIyMTcsNz
+k2Njc1MDYsLTEyMDg0ODIwMDYsOTg4OTM3MTAyLDIwMDk5MjA0
+NDJdfQ==
 -->
