@@ -363,6 +363,7 @@ type ':wq' + press enter (save and quit vim)
 [How to write good commit messages](https://chris.beams.io/posts/git-commit/#imperative)
 
 ```bash 
+# Instruct git to always use SSH URL instead of 
 # cherry pick a commit's changes
 git cherry-pick <commit hash>
 # git delete tag locally and remotely
@@ -499,11 +500,11 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc0NzYwOTYxOCwtMTk5MjkzMDE0MCwxMT
-U1ODk1ODYsMTQzODc1OTI2NywxOTE0MjA1MDM3LDEwMjkxMDg4
-NzMsNTE4MDI2NDI1LC0xNDc3MDY4NjI3LDIxMTQ2OTk3MzcsMT
-IxMDA4MDI3MiwtMTQyMzA4MTU4LDg4MzY4ODEwMyw5MTkzMTEy
-NTAsLTk4NDgyMjA3NywxMjU3NzAyMjE3LDc5NjY3NTA2LC0xMj
-A4NDgyMDA2LDk4ODkzNzEwMiwyMDA5OTIwNDQyLC0xNjQxMjA1
-MTc2XX0=
+eyJoaXN0b3J5IjpbNzMwNjE3NzAyLC03NDc2MDk2MTgsLTE5OT
+I5MzAxNDAsMTE1NTg5NTg2LDE0Mzg3NTkyNjcsMTkxNDIwNTAz
+NywxMDI5MTA4ODczLDUxODAyNjQyNSwtMTQ3NzA2ODYyNywyMT
+E0Njk5NzM3LDEyMTAwODAyNzIsLTE0MjMwODE1OCw4ODM2ODgx
+MDMsOTE5MzExMjUwLC05ODQ4MjIwNzcsMTI1NzcwMjIxNyw3OT
+Y2NzUwNiwtMTIwODQ4MjAwNiw5ODg5MzcxMDIsMjAwOTkyMDQ0
+Ml19
 -->
