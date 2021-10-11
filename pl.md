@@ -749,12 +749,18 @@ SELECT
 FROM ...
 ```
 
-## Get 10 values from a group
+## Get a sample of 10 values from a group
+```sql
+SELECT ARRAY_AGG(field LIMIT 10) FROM ...
+```
+
+## Get row with timestamp from cu
+
 
 ## LEFT SEMI JOIN
 The result table of `A LEFT SEMI JOIN B` is a subset of `A`'s records (only `A`'s fields) whose key is matching at least 1 record in `B`.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQwNTAyMDI3LC0xNTYwOTYyNDk0LDIwNT
+eyJoaXN0b3J5IjpbOTYzNTE0NjQ1LC0xNTYwOTYyNDk0LDIwNT
 I3NzI1MzcsOTk5MzQyMTE2LDIxMTQzMTIzNTIsLTE4NjQ1MzAw
 NjAsLTQ5ODA1MjE0MywtMzY3OTY5MTI1LDYxMDY0MTU0Nyw2Mj
 g2ODcwNzEsMTYyNDM4ODU3MywtMTYzNjQ3MjAyMSw2MTA5MDI0
