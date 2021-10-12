@@ -95,6 +95,7 @@ gcloud config set project <project-id>
 # docker run jupyter notebook
 docker run -p 8888:8888 -v notebooks:/home/jovyan/work -v /tmp:/home/jovyan/data jupyter/all-spark-notebook
 # docker delete dangling volumes
+docker volume rm $(docker volume ls -qf dangling=true)
 # docker remove all images with none tag
 docker rmi $(docker images -f "dangling=true" -q) --force
 # docker delete all images
@@ -505,7 +506,7 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQwMjg3MzU5OSwxOTg1MTI0NzAwLC03ND
+eyJoaXN0b3J5IjpbMTY5OTgzODE2NSwxOTg1MTI0NzAwLC03ND
 c2MDk2MTgsLTE5OTI5MzAxNDAsMTE1NTg5NTg2LDE0Mzg3NTky
 NjcsMTkxNDIwNTAzNywxMDI5MTA4ODczLDUxODAyNjQyNSwtMT
 Q3NzA2ODYyNywyMTE0Njk5NzM3LDEyMTAwODAyNzIsLTE0MjMw
