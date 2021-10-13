@@ -407,9 +407,9 @@ Allows to implement a nice *Decorator Pattern* in a functional style.
 # Python
 ## `threading`vs `multiprocessing` modules
 - `threading` module allows to spawn threads in Python script. It let's you perform concurrent execution of your tasks. One BIG limitation compared to C or Java threads is that the GIL ([Global Interpreter Lock](https://realpython.com/python-gil/)) only allows one thread at a time to be executed by the Python interpreter, making impossible to do *parallel processing* with threads (i.e. execute threads not only concurrently but in parallel). This make this library irrelevant for CPU intensive threads but it is still good enough for IO intensive threads.
-- `multiprocessing` module on the other hand allows *parallel processing* as it spawns separate processes, each one tight with its own python interpreter. Note that as your tasks are different processes you cannot shared heap memory between each other like with threads.
+- `multiprocessing` module on the other hand allows *parallel processing* by running tasks in separate processes, each one tight with its own python interpreter. Note that as your tasks are different processes they cannot share heap's memory like threads do.
 
-A limitation of Python is that you cannot have in the same time your tasks both executing in parallel and sharing memory.
+-> A limitation of Python is that you cannot have in the same time your tasks both executing in parallel and sharing memory.
 
 ### `threading` lib
 #### Critical section
@@ -761,11 +761,11 @@ SELECT ARRAY_AGG(field LIMIT 10) FROM ...
 ## LEFT SEMI JOIN
 The result table of `A LEFT SEMI JOIN B` is a subset of `A`'s records (only `A`'s fields) whose key is matching at least 1 record in `B`.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MjY3NTIzODYsLTU3NzA3OTUyMCw5Nj
-M1MTQ2NDUsLTE1NjA5NjI0OTQsMjA1Mjc3MjUzNyw5OTkzNDIx
-MTYsMjExNDMxMjM1MiwtMTg2NDUzMDA2MCwtNDk4MDUyMTQzLC
-0zNjc5NjkxMjUsNjEwNjQxNTQ3LDYyODY4NzA3MSwxNjI0Mzg4
-NTczLC0xNjM2NDcyMDIxLDYxMDkwMjQ3NSwtMjY3Mzk5NzUsMT
-k3OTkzNDMxMywyMzMwMzYxNzYsLTQ1MDgyNDMxMiwtNDUyNjcw
-Mjk3XX0=
+eyJoaXN0b3J5IjpbMTU5MjA5ODE1MiwtNTc3MDc5NTIwLDk2Mz
+UxNDY0NSwtMTU2MDk2MjQ5NCwyMDUyNzcyNTM3LDk5OTM0MjEx
+NiwyMTE0MzEyMzUyLC0xODY0NTMwMDYwLC00OTgwNTIxNDMsLT
+M2Nzk2OTEyNSw2MTA2NDE1NDcsNjI4Njg3MDcxLDE2MjQzODg1
+NzMsLTE2MzY0NzIwMjEsNjEwOTAyNDc1LC0yNjczOTk3NSwxOT
+c5OTM0MzEzLDIzMzAzNjE3NiwtNDUwODI0MzEyLC00NTI2NzAy
+OTddfQ==
 -->
