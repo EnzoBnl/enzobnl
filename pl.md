@@ -406,6 +406,7 @@ Allows to implement a nice *Decorator Pattern* in a functional style.
 
 # Python
 ## multithreading 
+`threading` standard module allows to spawn threads in Python script. You will be able this way to perform the concurrent execution of tasks. One 
 Mainly there is:
 - a concurrency lib: `threading` (only one interpreter)
 - a true parallel lib: `multiprocessing`
@@ -760,11 +761,11 @@ SELECT ARRAY_AGG(field LIMIT 10) FROM ...
 ## LEFT SEMI JOIN
 The result table of `A LEFT SEMI JOIN B` is a subset of `A`'s records (only `A`'s fields) whose key is matching at least 1 record in `B`.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU3NzA3OTUyMCw5NjM1MTQ2NDUsLTE1Nj
-A5NjI0OTQsMjA1Mjc3MjUzNyw5OTkzNDIxMTYsMjExNDMxMjM1
-MiwtMTg2NDUzMDA2MCwtNDk4MDUyMTQzLC0zNjc5NjkxMjUsNj
-EwNjQxNTQ3LDYyODY4NzA3MSwxNjI0Mzg4NTczLC0xNjM2NDcy
-MDIxLDYxMDkwMjQ3NSwtMjY3Mzk5NzUsMTk3OTkzNDMxMywyMz
-MwMzYxNzYsLTQ1MDgyNDMxMiwtNDUyNjcwMjk3LC0xMDg0NzM0
-MzI2XX0=
+eyJoaXN0b3J5IjpbMTU3NjA5MDE4NCwtNTc3MDc5NTIwLDk2Mz
+UxNDY0NSwtMTU2MDk2MjQ5NCwyMDUyNzcyNTM3LDk5OTM0MjEx
+NiwyMTE0MzEyMzUyLC0xODY0NTMwMDYwLC00OTgwNTIxNDMsLT
+M2Nzk2OTEyNSw2MTA2NDE1NDcsNjI4Njg3MDcxLDE2MjQzODg1
+NzMsLTE2MzY0NzIwMjEsNjEwOTAyNDc1LC0yNjczOTk3NSwxOT
+c5OTM0MzEzLDIzMzAzNjE3NiwtNDUwODI0MzEyLC00NTI2NzAy
+OTddfQ==
 -->
