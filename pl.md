@@ -406,7 +406,7 @@ Allows to implement a nice *Decorator Pattern* in a functional style.
 
 # Python
 ## multithreading 
-`threading` standard module allows to spawn threads in Python script. You will be able this way to perform the concurrent execution of tasks. One 
+`threading` standard module allows to spawn threads in Python script. You will be able this way to perform the concurrent execution of tasks. One BIG limitation compared to C or Java threads is that the GIL ([Global Interpreter Lock](https://realpython.com/python-gil/)) only let one thread at a time to be executed by the Python interpreter. Still this is good enough for threads doing 
 Mainly there is:
 - a concurrency lib: `threading` (only one interpreter)
 - a true parallel lib: `multiprocessing`
@@ -761,7 +761,7 @@ SELECT ARRAY_AGG(field LIMIT 10) FROM ...
 ## LEFT SEMI JOIN
 The result table of `A LEFT SEMI JOIN B` is a subset of `A`'s records (only `A`'s fields) whose key is matching at least 1 record in `B`.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU3NjA5MDE4NCwtNTc3MDc5NTIwLDk2Mz
+eyJoaXN0b3J5IjpbMTA5NTQxMDQ0NSwtNTc3MDc5NTIwLDk2Mz
 UxNDY0NSwtMTU2MDk2MjQ5NCwyMDUyNzcyNTM3LDk5OTM0MjEx
 NiwyMTE0MzEyMzUyLC0xODY0NTMwMDYwLC00OTgwNTIxNDMsLT
 M2Nzk2OTEyNSw2MTA2NDE1NDcsNjI4Njg3MDcxLDE2MjQzODg1
