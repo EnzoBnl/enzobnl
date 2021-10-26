@@ -116,6 +116,12 @@ chromium-browser --user-data-dir --proxy-server="socks5://127.0.0.1:1080"
 See:
 Google's [*BigQuery Under the Hood* podcast](https://www.youtube.com/watch?v=2jDGAl4Ef-Y) and [blog article](https://cloud.google.com/blog/products/bigquery/bigquery-under-the-hood)
 
+### Get and Update table schema
+
+- retrieve it: `bq show --schema --format=prettyjson project_id:dataset.table > schema_file.json`
+- edit `schema_file.json`
+- update table: ``
+
 ## Delta Lake
 ### DeltaLog & ACID guarantees
 
@@ -210,11 +216,11 @@ Known as [Incremental encoding](https://en.wikipedia.org/wiki/Incremental_encodi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ5NjIyNTA5LDI5MDA0OTA3NSw0MjQ0Mj
-MyNzMsLTE3MTEwNTMwMCwtMTc2ODIxMjgwNywtMTA5Mzc5MTUz
-NSwxMTk5MDQ3OTk1LC0xMzQyMTM2NjksMjA4MzMyOTY5MCwxMT
-AzMzIxNjYsLTIxMzI1NDQ0MjUsNTQyNzY3NTU4LC0xOTQ1NzIx
-MTE2LC0yMDIwNTIzNjU5LDkyMjczMTQwNywxMzQ0OTQxMTcxLD
-E5MzgzOTM4OTAsLTIxNDA4MzE3NDksMTU1NzE3Mzk1LDgwNDc1
-ODMzN119
+eyJoaXN0b3J5IjpbNjQ1MzYxMzMwLDE0OTYyMjUwOSwyOTAwND
+kwNzUsNDI0NDIzMjczLC0xNzExMDUzMDAsLTE3NjgyMTI4MDcs
+LTEwOTM3OTE1MzUsMTE5OTA0Nzk5NSwtMTM0MjEzNjY5LDIwOD
+MzMjk2OTAsMTEwMzMyMTY2LC0yMTMyNTQ0NDI1LDU0Mjc2NzU1
+OCwtMTk0NTcyMTExNiwtMjAyMDUyMzY1OSw5MjI3MzE0MDcsMT
+M0NDk0MTE3MSwxOTM4MzkzODkwLC0yMTQwODMxNzQ5LDE1NTcx
+NzM5NV19
 -->
