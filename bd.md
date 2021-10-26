@@ -120,7 +120,7 @@ Google's [*BigQuery Under the Hood* podcast](https://www.youtube.com/watch?v=2jD
 
 - retrieve it: `bq show --schema --format=prettyjson project_id:dataset.table > schema_file.json`
 - edit `schema_file.json`
-- update table: ``
+- update table: `bq update project_id:dataset.table schema.json`
 
 ## Delta Lake
 ### DeltaLog & ACID guarantees
@@ -216,11 +216,11 @@ Known as [Incremental encoding](https://en.wikipedia.org/wiki/Incremental_encodi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjQ1MzYxMzMwLDE0OTYyMjUwOSwyOTAwND
-kwNzUsNDI0NDIzMjczLC0xNzExMDUzMDAsLTE3NjgyMTI4MDcs
-LTEwOTM3OTE1MzUsMTE5OTA0Nzk5NSwtMTM0MjEzNjY5LDIwOD
-MzMjk2OTAsMTEwMzMyMTY2LC0yMTMyNTQ0NDI1LDU0Mjc2NzU1
-OCwtMTk0NTcyMTExNiwtMjAyMDUyMzY1OSw5MjI3MzE0MDcsMT
-M0NDk0MTE3MSwxOTM4MzkzODkwLC0yMTQwODMxNzQ5LDE1NTcx
-NzM5NV19
+eyJoaXN0b3J5IjpbMTkyMzczMzc1MiwxNDk2MjI1MDksMjkwMD
+Q5MDc1LDQyNDQyMzI3MywtMTcxMTA1MzAwLC0xNzY4MjEyODA3
+LC0xMDkzNzkxNTM1LDExOTkwNDc5OTUsLTEzNDIxMzY2OSwyMD
+gzMzI5NjkwLDExMDMzMjE2NiwtMjEzMjU0NDQyNSw1NDI3Njc1
+NTgsLTE5NDU3MjExMTYsLTIwMjA1MjM2NTksOTIyNzMxNDA3LD
+EzNDQ5NDExNzEsMTkzODM5Mzg5MCwtMjE0MDgzMTc0OSwxNTU3
+MTczOTVdfQ==
 -->
