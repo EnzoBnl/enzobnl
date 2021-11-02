@@ -71,6 +71,8 @@ gcloud dataproc jobs kill --region=global
 gsutil mv gs://old_name gs://new_name
 # switch google cloud project
 gcloud config set project <project-id>
+# get size of a folder in human readable unit
+gsutil du -sh gs://bucket/some/folder
 ```
 
 
@@ -506,11 +508,11 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY5OTgzODE2NSwxOTg1MTI0NzAwLC03ND
-c2MDk2MTgsLTE5OTI5MzAxNDAsMTE1NTg5NTg2LDE0Mzg3NTky
-NjcsMTkxNDIwNTAzNywxMDI5MTA4ODczLDUxODAyNjQyNSwtMT
-Q3NzA2ODYyNywyMTE0Njk5NzM3LDEyMTAwODAyNzIsLTE0MjMw
-ODE1OCw4ODM2ODgxMDMsOTE5MzExMjUwLC05ODQ4MjIwNzcsMT
-I1NzcwMjIxNyw3OTY2NzUwNiwtMTIwODQ4MjAwNiw5ODg5Mzcx
-MDJdfQ==
+eyJoaXN0b3J5IjpbNjYzODMxOTEwLDE2OTk4MzgxNjUsMTk4NT
+EyNDcwMCwtNzQ3NjA5NjE4LC0xOTkyOTMwMTQwLDExNTU4OTU4
+NiwxNDM4NzU5MjY3LDE5MTQyMDUwMzcsMTAyOTEwODg3Myw1MT
+gwMjY0MjUsLTE0NzcwNjg2MjcsMjExNDY5OTczNywxMjEwMDgw
+MjcyLC0xNDIzMDgxNTgsODgzNjg4MTAzLDkxOTMxMTI1MCwtOT
+g0ODIyMDc3LDEyNTc3MDIyMTcsNzk2Njc1MDYsLTEyMDg0ODIw
+MDZdfQ==
 -->
