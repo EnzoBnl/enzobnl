@@ -124,14 +124,13 @@ Google's [*BigQuery Under the Hood* podcast](https://www.youtube.com/watch?v=2jD
 
 ### Check the slot time consumed by your personal last 10 queries
 ```sql
-
 SELECT
  job_id
  , (CASE WHEN TIMESTAMP_DIFF(end_time,start_time,MILLISECOND) = 0 THEN NULL ELSE total_slot_ms / TIMESTAMP_DIFF(end_time,start_time,MILLISECOND) END) as num_slot
  , total_slot_ms
  , *
 FROM `region-us`.INFORMATION_SCHEMA.JOBS_BY_PROJECT
-WHERE user_email='f@dailymotion.com'
+WHERE user_email='foo@bar'
 ORDER BY creation_time DESC
 LIMIT 10
 ```
@@ -229,11 +228,11 @@ Known as [Incremental encoding](https://en.wikipedia.org/wiki/Incremental_encodi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjE1NzcxMDQ3LDE5MjM3MzM3NTIsMTQ5Nj
-IyNTA5LDI5MDA0OTA3NSw0MjQ0MjMyNzMsLTE3MTEwNTMwMCwt
-MTc2ODIxMjgwNywtMTA5Mzc5MTUzNSwxMTk5MDQ3OTk1LC0xMz
-QyMTM2NjksMjA4MzMyOTY5MCwxMTAzMzIxNjYsLTIxMzI1NDQ0
-MjUsNTQyNzY3NTU4LC0xOTQ1NzIxMTE2LC0yMDIwNTIzNjU5LD
-kyMjczMTQwNywxMzQ0OTQxMTcxLDE5MzgzOTM4OTAsLTIxNDA4
-MzE3NDldfQ==
+eyJoaXN0b3J5IjpbLTIwMDQ1MDU3ODQsMTkyMzczMzc1MiwxND
+k2MjI1MDksMjkwMDQ5MDc1LDQyNDQyMzI3MywtMTcxMTA1MzAw
+LC0xNzY4MjEyODA3LC0xMDkzNzkxNTM1LDExOTkwNDc5OTUsLT
+EzNDIxMzY2OSwyMDgzMzI5NjkwLDExMDMzMjE2NiwtMjEzMjU0
+NDQyNSw1NDI3Njc1NTgsLTE5NDU3MjExMTYsLTIwMjA1MjM2NT
+ksOTIyNzMxNDA3LDEzNDQ5NDExNzEsMTkzODM5Mzg5MCwtMjE0
+MDgzMTc0OV19
 -->
