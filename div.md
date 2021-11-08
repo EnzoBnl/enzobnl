@@ -265,11 +265,26 @@ The difference is in which libraries are used. In order to use OS stuff (I/O for
 3. Web APIs building: RESTful principles...
 4. Master 1 to 3 specialized frameworks: Node.js, React, Spark, Kubernetes, Unity...
 5. Practice with CI/CD & cloud
+
+
+## Github Markdown
+Toggle:
+```md
+<details>
+<summary>foo</summary>
+bar
+</details>
+```
+gives:
+<details>
+<summary>foo</summary>
+bar
+</details>
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MzczODA2NTEsMTg5MjA4MzM2Miw3Mj
-gxNTI0NzcsLTE2MzE2OTE3OTksMTEyMjc0OTAwMSwtMTUzMjE0
-MDQ1OSwtMTQ0MTgxNTQzOSwxNDczOTU4NDQxLDE0NzM5NTg0ND
-EsLTE2NTA2NDEwODgsLTIwODg1NDU1MDYsMTI2NTI3NjcxLDE2
-MTMxMzY3MTEsLTIwMzc5MDk4NzksLTE5ODE2MjI3NzMsMjcxNj
-E3ODI2XX0=
+eyJoaXN0b3J5IjpbMjMzNDA5NzU0LC0xNDM3MzgwNjUxLDE4OT
+IwODMzNjIsNzI4MTUyNDc3LC0xNjMxNjkxNzk5LDExMjI3NDkw
+MDEsLTE1MzIxNDA0NTksLTE0NDE4MTU0MzksMTQ3Mzk1ODQ0MS
+wxNDczOTU4NDQxLC0xNjUwNjQxMDg4LC0yMDg4NTQ1NTA2LDEy
+NjUyNzY3MSwxNjEzMTM2NzExLC0yMDM3OTA5ODc5LC0xOTgxNj
+IyNzczLDI3MTYxNzgyNl19
 -->
