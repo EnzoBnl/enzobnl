@@ -499,8 +499,8 @@ kubectl port-forward svc/airflow-webserver 8080:8080 --namespace airflow
 # deploy and expose (create service) externally a 1-container deployment
 kubectl create deployment --image eu.gcr.io/playground-314008/example:0.0.1 example
 kubectl expose deploy example --port=5000 --target-port=8080 --name=example-http-ext --type=LoadBalancer
-# get logs from a pod
-
+# get logs from a pod (streamed real-time with -f)
+kubectl --context ... --namespace ... logs <pod_name> -f
 ```
 
 ### macos
@@ -510,11 +510,11 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAyNjgyNTc0NSwxMDczMTU5OTc3LDE2OT
-k4MzgxNjUsMTk4NTEyNDcwMCwtNzQ3NjA5NjE4LC0xOTkyOTMw
-MTQwLDExNTU4OTU4NiwxNDM4NzU5MjY3LDE5MTQyMDUwMzcsMT
-AyOTEwODg3Myw1MTgwMjY0MjUsLTE0NzcwNjg2MjcsMjExNDY5
-OTczNywxMjEwMDgwMjcyLC0xNDIzMDgxNTgsODgzNjg4MTAzLD
-kxOTMxMTI1MCwtOTg0ODIyMDc3LDEyNTc3MDIyMTcsNzk2Njc1
-MDZdfQ==
+eyJoaXN0b3J5IjpbLTE2MzM3NDIwOTEsMTA3MzE1OTk3NywxNj
+k5ODM4MTY1LDE5ODUxMjQ3MDAsLTc0NzYwOTYxOCwtMTk5Mjkz
+MDE0MCwxMTU1ODk1ODYsMTQzODc1OTI2NywxOTE0MjA1MDM3LD
+EwMjkxMDg4NzMsNTE4MDI2NDI1LC0xNDc3MDY4NjI3LDIxMTQ2
+OTk3MzcsMTIxMDA4MDI3MiwtMTQyMzA4MTU4LDg4MzY4ODEwMy
+w5MTkzMTEyNTAsLTk4NDgyMjA3NywxMjU3NzAyMjE3LDc5NjY3
+NTA2XX0=
 -->
