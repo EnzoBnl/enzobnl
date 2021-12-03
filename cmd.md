@@ -495,6 +495,12 @@ airflow dags pause hello_world
 
 ## Kubernetes
 ```bash
+# config GKE context
+gcloud container clusters get-credentials <cluster_name> --region <region> --project <project>
+# if former command failed with "get-credentials requires edit permissions on", run (cf https://stackoverflow.com/a/62957050/6580080)
+gcloud config set container/use_client_certificate False
+# list available contexts
+kubectl config get-contexts
 # Access Airflow's Kube executor webserver locally
 kubectl port-forward svc/airflow-webserver 8080:8080 --namespace airflow
 # deploy and expose (create service) externally a 1-container deployment
@@ -511,11 +517,11 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NDYxOTYyMDMsLTE2MzM3NDIwOTEsMT
-A3MzE1OTk3NywxNjk5ODM4MTY1LDE5ODUxMjQ3MDAsLTc0NzYw
-OTYxOCwtMTk5MjkzMDE0MCwxMTU1ODk1ODYsMTQzODc1OTI2Ny
-wxOTE0MjA1MDM3LDEwMjkxMDg4NzMsNTE4MDI2NDI1LC0xNDc3
-MDY4NjI3LDIxMTQ2OTk3MzcsMTIxMDA4MDI3MiwtMTQyMzA4MT
-U4LDg4MzY4ODEwMyw5MTkzMTEyNTAsLTk4NDgyMjA3NywxMjU3
-NzAyMjE3XX0=
+eyJoaXN0b3J5IjpbNzg3OTMwMzE3LC0xOTQ2MTk2MjAzLC0xNj
+MzNzQyMDkxLDEwNzMxNTk5NzcsMTY5OTgzODE2NSwxOTg1MTI0
+NzAwLC03NDc2MDk2MTgsLTE5OTI5MzAxNDAsMTE1NTg5NTg2LD
+E0Mzg3NTkyNjcsMTkxNDIwNTAzNywxMDI5MTA4ODczLDUxODAy
+NjQyNSwtMTQ3NzA2ODYyNywyMTE0Njk5NzM3LDEyMTAwODAyNz
+IsLTE0MjMwODE1OCw4ODM2ODgxMDMsOTE5MzExMjUwLC05ODQ4
+MjIwNzddfQ==
 -->
