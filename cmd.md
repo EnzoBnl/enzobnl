@@ -500,7 +500,7 @@ gcloud container clusters get-credentials <cluster_name> --region <region> --pro
 # if former command failed with "get-credentials requires edit permissions on", run (cf https://stackoverflow.com/a/62957050/6580080)
 gcloud config set container/use_client_certificate False
 # get a shell to a running container
-kubectl exec --stdin --tty shell-demo -- /bin/bash
+kubectl exec --stdin --tty <pod_name> -c <container_name> -- /bin/bash
 # list available contexts
 kubectl config get-contexts
 # Access Airflow's Kube executor webserver locally
@@ -519,11 +519,11 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MTE3NDgwNDYsNzg3OTMwMzE3LC0xOT
-Q2MTk2MjAzLC0xNjMzNzQyMDkxLDEwNzMxNTk5NzcsMTY5OTgz
-ODE2NSwxOTg1MTI0NzAwLC03NDc2MDk2MTgsLTE5OTI5MzAxND
-AsMTE1NTg5NTg2LDE0Mzg3NTkyNjcsMTkxNDIwNTAzNywxMDI5
-MTA4ODczLDUxODAyNjQyNSwtMTQ3NzA2ODYyNywyMTE0Njk5Nz
-M3LDEyMTAwODAyNzIsLTE0MjMwODE1OCw4ODM2ODgxMDMsOTE5
-MzExMjUwXX0=
+eyJoaXN0b3J5IjpbLTcxNzQzMjAxNCwtMTQxMTc0ODA0Niw3OD
+c5MzAzMTcsLTE5NDYxOTYyMDMsLTE2MzM3NDIwOTEsMTA3MzE1
+OTk3NywxNjk5ODM4MTY1LDE5ODUxMjQ3MDAsLTc0NzYwOTYxOC
+wtMTk5MjkzMDE0MCwxMTU1ODk1ODYsMTQzODc1OTI2NywxOTE0
+MjA1MDM3LDEwMjkxMDg4NzMsNTE4MDI2NDI1LC0xNDc3MDY4Nj
+I3LDIxMTQ2OTk3MzcsMTIxMDA4MDI3MiwtMTQyMzA4MTU4LDg4
+MzY4ODEwM119
 -->
