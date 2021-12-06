@@ -445,9 +445,8 @@ $ sudo git reset --hard origin/master
 # Pull unitary commits onto current branch
 git cherry-pick <commit-hash>
 
-# find a pattern of path in entire root
-
-sudo find / -name *middleisthis*
+# find a pattern of path in folder
+find <path_to_folder> -type <d or t> -name '*middleisthis*'
 
 # dump man output to file
 man somecommand | col -b > ksh.txt
@@ -519,11 +518,11 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcxNzQzMjAxNCwtMTQxMTc0ODA0Niw3OD
-c5MzAzMTcsLTE5NDYxOTYyMDMsLTE2MzM3NDIwOTEsMTA3MzE1
-OTk3NywxNjk5ODM4MTY1LDE5ODUxMjQ3MDAsLTc0NzYwOTYxOC
-wtMTk5MjkzMDE0MCwxMTU1ODk1ODYsMTQzODc1OTI2NywxOTE0
-MjA1MDM3LDEwMjkxMDg4NzMsNTE4MDI2NDI1LC0xNDc3MDY4Nj
-I3LDIxMTQ2OTk3MzcsMTIxMDA4MDI3MiwtMTQyMzA4MTU4LDg4
-MzY4ODEwM119
+eyJoaXN0b3J5IjpbLTE4OTMzMDM4NjMsLTcxNzQzMjAxNCwtMT
+QxMTc0ODA0Niw3ODc5MzAzMTcsLTE5NDYxOTYyMDMsLTE2MzM3
+NDIwOTEsMTA3MzE1OTk3NywxNjk5ODM4MTY1LDE5ODUxMjQ3MD
+AsLTc0NzYwOTYxOCwtMTk5MjkzMDE0MCwxMTU1ODk1ODYsMTQz
+ODc1OTI2NywxOTE0MjA1MDM3LDEwMjkxMDg4NzMsNTE4MDI2ND
+I1LC0xNDc3MDY4NjI3LDIxMTQ2OTk3MzcsMTIxMDA4MDI3Miwt
+MTQyMzA4MTU4XX0=
 -->
