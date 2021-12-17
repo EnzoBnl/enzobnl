@@ -395,7 +395,7 @@ $ git tag -a v1.4 -m "my version 1.4"
 //Fusionner i last commits
 git rebase -i <after-this-commit>
 //lines in repo:
-git ls-files | xargs wc -l
+git ls-files | wc -l
 //reset to origin branch state
 git reset --hard origin/foo
 //reset to last commit
@@ -520,11 +520,11 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAyMzYxMjE0NSwxODk1NTc3Mzg0LC0xOD
-kzMzAzODYzLC03MTc0MzIwMTQsLTE0MTE3NDgwNDYsNzg3OTMw
-MzE3LC0xOTQ2MTk2MjAzLC0xNjMzNzQyMDkxLDEwNzMxNTk5Nz
-csMTY5OTgzODE2NSwxOTg1MTI0NzAwLC03NDc2MDk2MTgsLTE5
-OTI5MzAxNDAsMTE1NTg5NTg2LDE0Mzg3NTkyNjcsMTkxNDIwNT
-AzNywxMDI5MTA4ODczLDUxODAyNjQyNSwtMTQ3NzA2ODYyNywy
-MTE0Njk5NzM3XX0=
+eyJoaXN0b3J5IjpbLTExNTM4MTYxMzIsMTg5NTU3NzM4NCwtMT
+g5MzMwMzg2MywtNzE3NDMyMDE0LC0xNDExNzQ4MDQ2LDc4Nzkz
+MDMxNywtMTk0NjE5NjIwMywtMTYzMzc0MjA5MSwxMDczMTU5OT
+c3LDE2OTk4MzgxNjUsMTk4NTEyNDcwMCwtNzQ3NjA5NjE4LC0x
+OTkyOTMwMTQwLDExNTU4OTU4NiwxNDM4NzU5MjY3LDE5MTQyMD
+UwMzcsMTAyOTEwODg3Myw1MTgwMjY0MjUsLTE0NzcwNjg2Mjcs
+MjExNDY5OTczN119
 -->
