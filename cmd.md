@@ -151,7 +151,7 @@ glxheads
 grep 'alias' /home/foo/.bashrc
 # find/xargs/cat/grep/wc to count the number of lines containing 'abc' in all python files contained in cwd
 find . -type f -name '*.py' | xargs cat | grep 'abc' | wc -l
-# or using `command` (that executes command and replaces new lines by spaces in its stddout before inlining it in wrapping command)
+# or using `subcommand` (that executes subcommand and replaces new lines by spaces in its stddout before inlining it in wrapping command)
 cat `find . -type f -name '*.py'` | grep 'abc' | wc -l
 # change default jdk: in .bashrc:
 export JAVA_HOME=/opt/java/<jdk>
@@ -522,11 +522,11 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTM2MzE1Nzg5LDIxMzM2OTMzOTQsMTg5NT
-U3NzM4NCwtMTg5MzMwMzg2MywtNzE3NDMyMDE0LC0xNDExNzQ4
-MDQ2LDc4NzkzMDMxNywtMTk0NjE5NjIwMywtMTYzMzc0MjA5MS
-wxMDczMTU5OTc3LDE2OTk4MzgxNjUsMTk4NTEyNDcwMCwtNzQ3
-NjA5NjE4LC0xOTkyOTMwMTQwLDExNTU4OTU4NiwxNDM4NzU5Mj
-Y3LDE5MTQyMDUwMzcsMTAyOTEwODg3Myw1MTgwMjY0MjUsLTE0
-NzcwNjg2MjddfQ==
+eyJoaXN0b3J5IjpbLTU4MDA4MzY0NywyMTMzNjkzMzk0LDE4OT
+U1NzczODQsLTE4OTMzMDM4NjMsLTcxNzQzMjAxNCwtMTQxMTc0
+ODA0Niw3ODc5MzAzMTcsLTE5NDYxOTYyMDMsLTE2MzM3NDIwOT
+EsMTA3MzE1OTk3NywxNjk5ODM4MTY1LDE5ODUxMjQ3MDAsLTc0
+NzYwOTYxOCwtMTk5MjkzMDE0MCwxMTU1ODk1ODYsMTQzODc1OT
+I2NywxOTE0MjA1MDM3LDEwMjkxMDg4NzMsNTE4MDI2NDI1LC0x
+NDc3MDY4NjI3XX0=
 -->
