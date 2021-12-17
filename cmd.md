@@ -149,6 +149,8 @@ sudo apt-get purge nvidia*
 glxheads
 # grep example
 grep 'alias' /home/foo/.bashrc
+# find/xargs/cat/grep/wc to count the number of lines containing 'abc' in current working dir
+find . -type f -name '| xargs -I % cat % | grep 'abc' | wc -l
 # change default jdk: in .bashrc:
 export JAVA_HOME=/opt/java/<jdk>
 export PATH=$JAVA_HOME/bin:$PATH
@@ -518,11 +520,11 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg5NTU3NzM4NCwtMTg5MzMwMzg2MywtNz
-E3NDMyMDE0LC0xNDExNzQ4MDQ2LDc4NzkzMDMxNywtMTk0NjE5
-NjIwMywtMTYzMzc0MjA5MSwxMDczMTU5OTc3LDE2OTk4MzgxNj
-UsMTk4NTEyNDcwMCwtNzQ3NjA5NjE4LC0xOTkyOTMwMTQwLDEx
-NTU4OTU4NiwxNDM4NzU5MjY3LDE5MTQyMDUwMzcsMTAyOTEwOD
-g3Myw1MTgwMjY0MjUsLTE0NzcwNjg2MjcsMjExNDY5OTczNywx
-MjEwMDgwMjcyXX0=
+eyJoaXN0b3J5IjpbLTE2ODQyNDI1MjYsMTg5NTU3NzM4NCwtMT
+g5MzMwMzg2MywtNzE3NDMyMDE0LC0xNDExNzQ4MDQ2LDc4Nzkz
+MDMxNywtMTk0NjE5NjIwMywtMTYzMzc0MjA5MSwxMDczMTU5OT
+c3LDE2OTk4MzgxNjUsMTk4NTEyNDcwMCwtNzQ3NjA5NjE4LC0x
+OTkyOTMwMTQwLDExNTU4OTU4NiwxNDM4NzU5MjY3LDE5MTQyMD
+UwMzcsMTAyOTEwODg3Myw1MTgwMjY0MjUsLTE0NzcwNjg2Mjcs
+MjExNDY5OTczN119
 -->
