@@ -152,7 +152,7 @@ grep 'alias' /home/foo/.bashrc
 # find/xargs/cat/grep/wc to count the number of lines containing 'abc' in all python files contained in cwd
 find . -type f -name '*.py' | xargs cat | grep 'abc' | wc -l
 # or
-cat ``
+cat `find . -type f -name '*.py'` | grep 'abc' | wc -l
 # change default jdk: in .bashrc:
 export JAVA_HOME=/opt/java/<jdk>
 export PATH=$JAVA_HOME/bin:$PATH
@@ -522,7 +522,7 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAxODk5NDg5NCwxODk1NTc3Mzg0LC0xOD
+eyJoaXN0b3J5IjpbMjEzMzY5MzM5NCwxODk1NTc3Mzg0LC0xOD
 kzMzAzODYzLC03MTc0MzIwMTQsLTE0MTE3NDgwNDYsNzg3OTMw
 MzE3LC0xOTQ2MTk2MjAzLC0xNjMzNzQyMDkxLDEwNzMxNTk5Nz
 csMTY5OTgzODE2NSwxOTg1MTI0NzAwLC03NDc2MDk2MTgsLTE5
