@@ -513,6 +513,9 @@ kubectl create deployment --image eu.gcr.io/playground-314008/example:0.0.1 exam
 kubectl expose deploy example --port=5000 --target-port=8080 --name=example-http-ext --type=LoadBalancer
 # get logs from a pod (streamed real-time with -f)
 kubectl --context ... --namespace ... logs <pod_name> -f
+# scale to 0 pods
+kubectl scale --replicas=0 deployment <deployment_name>
+
 ```
 
 ### macos
@@ -522,11 +525,11 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU4MDA4MzY0NywyMTMzNjkzMzk0LDE4OT
-U1NzczODQsLTE4OTMzMDM4NjMsLTcxNzQzMjAxNCwtMTQxMTc0
-ODA0Niw3ODc5MzAzMTcsLTE5NDYxOTYyMDMsLTE2MzM3NDIwOT
-EsMTA3MzE1OTk3NywxNjk5ODM4MTY1LDE5ODUxMjQ3MDAsLTc0
-NzYwOTYxOCwtMTk5MjkzMDE0MCwxMTU1ODk1ODYsMTQzODc1OT
-I2NywxOTE0MjA1MDM3LDEwMjkxMDg4NzMsNTE4MDI2NDI1LC0x
-NDc3MDY4NjI3XX0=
+eyJoaXN0b3J5IjpbMTEwOTU5NDk3MSwtNTgwMDgzNjQ3LDIxMz
+M2OTMzOTQsMTg5NTU3NzM4NCwtMTg5MzMwMzg2MywtNzE3NDMy
+MDE0LC0xNDExNzQ4MDQ2LDc4NzkzMDMxNywtMTk0NjE5NjIwMy
+wtMTYzMzc0MjA5MSwxMDczMTU5OTc3LDE2OTk4MzgxNjUsMTk4
+NTEyNDcwMCwtNzQ3NjA5NjE4LC0xOTkyOTMwMTQwLDExNTU4OT
+U4NiwxNDM4NzU5MjY3LDE5MTQyMDUwMzcsMTAyOTEwODg3Myw1
+MTgwMjY0MjVdfQ==
 -->
