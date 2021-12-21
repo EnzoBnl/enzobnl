@@ -515,6 +515,10 @@ kubectl expose deploy example --port=5000 --target-port=8080 --name=example-http
 kubectl --context ... --namespace ... logs <pod_name> -f
 # scale to 0 pods: noOp deployment
 kubectl scale --replicas=0 deployment <deployment_name>
+# edit and redeploy a deployment (vim-like edition)
+kubectl edit deployment <deployment_name>
+# redeploy a deployment without any change
+kubectl rollout restart deployment <deployment_name>
 ```
 
 ### macos
@@ -524,11 +528,11 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY0NjA1OTMyOCwtNTgwMDgzNjQ3LDIxMz
-M2OTMzOTQsMTg5NTU3NzM4NCwtMTg5MzMwMzg2MywtNzE3NDMy
-MDE0LC0xNDExNzQ4MDQ2LDc4NzkzMDMxNywtMTk0NjE5NjIwMy
-wtMTYzMzc0MjA5MSwxMDczMTU5OTc3LDE2OTk4MzgxNjUsMTk4
-NTEyNDcwMCwtNzQ3NjA5NjE4LC0xOTkyOTMwMTQwLDExNTU4OT
-U4NiwxNDM4NzU5MjY3LDE5MTQyMDUwMzcsMTAyOTEwODg3Myw1
-MTgwMjY0MjVdfQ==
+eyJoaXN0b3J5IjpbMTAwNTI2MDk0OCwxNjQ2MDU5MzI4LC01OD
+AwODM2NDcsMjEzMzY5MzM5NCwxODk1NTc3Mzg0LC0xODkzMzAz
+ODYzLC03MTc0MzIwMTQsLTE0MTE3NDgwNDYsNzg3OTMwMzE3LC
+0xOTQ2MTk2MjAzLC0xNjMzNzQyMDkxLDEwNzMxNTk5NzcsMTY5
+OTgzODE2NSwxOTg1MTI0NzAwLC03NDc2MDk2MTgsLTE5OTI5Mz
+AxNDAsMTE1NTg5NTg2LDE0Mzg3NTkyNjcsMTkxNDIwNTAzNywx
+MDI5MTA4ODczXX0=
 -->
