@@ -107,9 +107,10 @@ docker rmi $(docker images -a -q) # -f
 ### unix
 
 ```bash
+# print gpu info
+sudo lshw -C display
 # find location of a symlink:
 ls -al <symlink>
-
 # count lines
 wc -l filename
 # split large file in files of X lines, smallfileaa, smallfileaa, smallfileab
@@ -528,11 +529,11 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAwNTI2MDk0OCwxNjQ2MDU5MzI4LC01OD
-AwODM2NDcsMjEzMzY5MzM5NCwxODk1NTc3Mzg0LC0xODkzMzAz
-ODYzLC03MTc0MzIwMTQsLTE0MTE3NDgwNDYsNzg3OTMwMzE3LC
-0xOTQ2MTk2MjAzLC0xNjMzNzQyMDkxLDEwNzMxNTk5NzcsMTY5
-OTgzODE2NSwxOTg1MTI0NzAwLC03NDc2MDk2MTgsLTE5OTI5Mz
-AxNDAsMTE1NTg5NTg2LDE0Mzg3NTkyNjcsMTkxNDIwNTAzNywx
-MDI5MTA4ODczXX0=
+eyJoaXN0b3J5IjpbLTgxNzQxNDQwMywxMDA1MjYwOTQ4LDE2ND
+YwNTkzMjgsLTU4MDA4MzY0NywyMTMzNjkzMzk0LDE4OTU1Nzcz
+ODQsLTE4OTMzMDM4NjMsLTcxNzQzMjAxNCwtMTQxMTc0ODA0Ni
+w3ODc5MzAzMTcsLTE5NDYxOTYyMDMsLTE2MzM3NDIwOTEsMTA3
+MzE1OTk3NywxNjk5ODM4MTY1LDE5ODUxMjQ3MDAsLTc0NzYwOT
+YxOCwtMTk5MjkzMDE0MCwxMTU1ODk1ODYsMTQzODc1OTI2Nywx
+OTE0MjA1MDM3XX0=
 -->
