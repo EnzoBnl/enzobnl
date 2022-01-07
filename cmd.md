@@ -104,6 +104,12 @@ docker rmi $(docker images -f "dangling=true" -q) --force
 docker rmi $(docker images -a -q) # -f
 ```
 
+### Tensorflow
+```bash
+pip3 install tensorflow
+saved_model_cli show --dir /path/to/model --all
+```
+
 ### unix
 
 ```bash
@@ -529,11 +535,11 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgxNzQxNDQwMywxMDA1MjYwOTQ4LDE2ND
-YwNTkzMjgsLTU4MDA4MzY0NywyMTMzNjkzMzk0LDE4OTU1Nzcz
-ODQsLTE4OTMzMDM4NjMsLTcxNzQzMjAxNCwtMTQxMTc0ODA0Ni
-w3ODc5MzAzMTcsLTE5NDYxOTYyMDMsLTE2MzM3NDIwOTEsMTA3
-MzE1OTk3NywxNjk5ODM4MTY1LDE5ODUxMjQ3MDAsLTc0NzYwOT
-YxOCwtMTk5MjkzMDE0MCwxMTU1ODk1ODYsMTQzODc1OTI2Nywx
-OTE0MjA1MDM3XX0=
+eyJoaXN0b3J5IjpbLTExMjY3NTkwOTYsLTgxNzQxNDQwMywxMD
+A1MjYwOTQ4LDE2NDYwNTkzMjgsLTU4MDA4MzY0NywyMTMzNjkz
+Mzk0LDE4OTU1NzczODQsLTE4OTMzMDM4NjMsLTcxNzQzMjAxNC
+wtMTQxMTc0ODA0Niw3ODc5MzAzMTcsLTE5NDYxOTYyMDMsLTE2
+MzM3NDIwOTEsMTA3MzE1OTk3NywxNjk5ODM4MTY1LDE5ODUxMj
+Q3MDAsLTc0NzYwOTYxOCwtMTk5MjkzMDE0MCwxMTU1ODk1ODYs
+MTQzODc1OTI2N119
 -->
