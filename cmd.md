@@ -156,7 +156,8 @@ sudo apt-get purge nvidia*
 glxheads
 # or
 watch nvidia-smi
-# duplicate command's output into a 
+# duplicate command's output into a file
+ping google.com | tee -a /tmp/t.txt
 # grep example
 grep 'alias' /home/foo/.bashrc
 # find/xargs/cat/grep/wc to count the number of lines containing 'abc' in all python files contained in cwd
@@ -538,11 +539,11 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUzNzc4MDM0NSwtMTEyNjc1OTA5NiwtOD
-E3NDE0NDAzLDEwMDUyNjA5NDgsMTY0NjA1OTMyOCwtNTgwMDgz
-NjQ3LDIxMzM2OTMzOTQsMTg5NTU3NzM4NCwtMTg5MzMwMzg2My
-wtNzE3NDMyMDE0LC0xNDExNzQ4MDQ2LDc4NzkzMDMxNywtMTk0
-NjE5NjIwMywtMTYzMzc0MjA5MSwxMDczMTU5OTc3LDE2OTk4Mz
-gxNjUsMTk4NTEyNDcwMCwtNzQ3NjA5NjE4LC0xOTkyOTMwMTQw
-LDExNTU4OTU4Nl19
+eyJoaXN0b3J5IjpbLTE3MDQ2Njg5MzQsLTExMjY3NTkwOTYsLT
+gxNzQxNDQwMywxMDA1MjYwOTQ4LDE2NDYwNTkzMjgsLTU4MDA4
+MzY0NywyMTMzNjkzMzk0LDE4OTU1NzczODQsLTE4OTMzMDM4Nj
+MsLTcxNzQzMjAxNCwtMTQxMTc0ODA0Niw3ODc5MzAzMTcsLTE5
+NDYxOTYyMDMsLTE2MzM3NDIwOTEsMTA3MzE1OTk3NywxNjk5OD
+M4MTY1LDE5ODUxMjQ3MDAsLTc0NzYwOTYxOCwtMTk5MjkzMDE0
+MCwxMTU1ODk1ODZdfQ==
 -->
