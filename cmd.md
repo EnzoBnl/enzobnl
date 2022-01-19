@@ -154,6 +154,9 @@ loadkeys fr
 sudo apt-get purge nvidia*
 # check which GPU is in use
 glxheads
+# or
+watch nvidia-smi
+# duplicate command's output into a 
 # grep example
 grep 'alias' /home/foo/.bashrc
 # find/xargs/cat/grep/wc to count the number of lines containing 'abc' in all python files contained in cwd
@@ -535,11 +538,11 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMjY3NTkwOTYsLTgxNzQxNDQwMywxMD
-A1MjYwOTQ4LDE2NDYwNTkzMjgsLTU4MDA4MzY0NywyMTMzNjkz
-Mzk0LDE4OTU1NzczODQsLTE4OTMzMDM4NjMsLTcxNzQzMjAxNC
-wtMTQxMTc0ODA0Niw3ODc5MzAzMTcsLTE5NDYxOTYyMDMsLTE2
-MzM3NDIwOTEsMTA3MzE1OTk3NywxNjk5ODM4MTY1LDE5ODUxMj
-Q3MDAsLTc0NzYwOTYxOCwtMTk5MjkzMDE0MCwxMTU1ODk1ODYs
-MTQzODc1OTI2N119
+eyJoaXN0b3J5IjpbLTUzNzc4MDM0NSwtMTEyNjc1OTA5NiwtOD
+E3NDE0NDAzLDEwMDUyNjA5NDgsMTY0NjA1OTMyOCwtNTgwMDgz
+NjQ3LDIxMzM2OTMzOTQsMTg5NTU3NzM4NCwtMTg5MzMwMzg2My
+wtNzE3NDMyMDE0LC0xNDExNzQ4MDQ2LDc4NzkzMDMxNywtMTk0
+NjE5NjIwMywtMTYzMzc0MjA5MSwxMDczMTU5OTc3LDE2OTk4Mz
+gxNjUsMTk4NTEyNDcwMCwtNzQ3NjA5NjE4LC0xOTkyOTMwMTQw
+LDExNTU4OTU4Nl19
 -->
