@@ -392,9 +392,11 @@ git cherry-pick <commit hash>
 # git delete tag locally and remotely
 git tag -d tagname
 git push --delete origin tagname
-# git force push local state to remote branch foo
+# git force push last local committed state to remote branch foo
 git push --force HEAD:foo
-// use ssh auth o github
+# generic force push syntax
+git push origin --force localbranch:remotebranch
+# use ssh auth o github
 - generate ssh pairs and add them to agent
 - copy entire content (including algo name and email)
 - paste it as a new ssh key in section Setting -> SSH/GPG
@@ -539,11 +541,11 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MDQ2Njg5MzQsLTExMjY3NTkwOTYsLT
-gxNzQxNDQwMywxMDA1MjYwOTQ4LDE2NDYwNTkzMjgsLTU4MDA4
-MzY0NywyMTMzNjkzMzk0LDE4OTU1NzczODQsLTE4OTMzMDM4Nj
-MsLTcxNzQzMjAxNCwtMTQxMTc0ODA0Niw3ODc5MzAzMTcsLTE5
-NDYxOTYyMDMsLTE2MzM3NDIwOTEsMTA3MzE1OTk3NywxNjk5OD
-M4MTY1LDE5ODUxMjQ3MDAsLTc0NzYwOTYxOCwtMTk5MjkzMDE0
-MCwxMTU1ODk1ODZdfQ==
+eyJoaXN0b3J5IjpbLTE4NzMwOTc4NzEsLTE3MDQ2Njg5MzQsLT
+ExMjY3NTkwOTYsLTgxNzQxNDQwMywxMDA1MjYwOTQ4LDE2NDYw
+NTkzMjgsLTU4MDA4MzY0NywyMTMzNjkzMzk0LDE4OTU1NzczOD
+QsLTE4OTMzMDM4NjMsLTcxNzQzMjAxNCwtMTQxMTc0ODA0Niw3
+ODc5MzAzMTcsLTE5NDYxOTYyMDMsLTE2MzM3NDIwOTEsMTA3Mz
+E1OTk3NywxNjk5ODM4MTY1LDE5ODUxMjQ3MDAsLTc0NzYwOTYx
+OCwtMTk5MjkzMDE0MF19
 -->
