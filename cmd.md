@@ -155,7 +155,7 @@ sudo apt-get purge nvidia*
 # check which GPU is in use
 glxheads
 # or monitor valatile usage and power consumption every 250ms
-watch -n 0.25 nvidia-smi -lms 250
+watch -n 0.25 nvidia-smi
 # duplicate command's output into a file
 ping google.com | tee -a /tmp/t.txt
 # grep example
@@ -543,11 +543,11 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM3NjY0MjA0NSwxMzkxNTk2Nzg5LC0xOD
-czMDk3ODcxLC0xNzA0NjY4OTM0LC0xMTI2NzU5MDk2LC04MTc0
-MTQ0MDMsMTAwNTI2MDk0OCwxNjQ2MDU5MzI4LC01ODAwODM2ND
-csMjEzMzY5MzM5NCwxODk1NTc3Mzg0LC0xODkzMzAzODYzLC03
-MTc0MzIwMTQsLTE0MTE3NDgwNDYsNzg3OTMwMzE3LC0xOTQ2MT
-k2MjAzLC0xNjMzNzQyMDkxLDEwNzMxNTk5NzcsMTY5OTgzODE2
-NSwxOTg1MTI0NzAwXX0=
+eyJoaXN0b3J5IjpbMjcyOTY0NTQ5LDEzOTE1OTY3ODksLTE4Nz
+MwOTc4NzEsLTE3MDQ2Njg5MzQsLTExMjY3NTkwOTYsLTgxNzQx
+NDQwMywxMDA1MjYwOTQ4LDE2NDYwNTkzMjgsLTU4MDA4MzY0Ny
+wyMTMzNjkzMzk0LDE4OTU1NzczODQsLTE4OTMzMDM4NjMsLTcx
+NzQzMjAxNCwtMTQxMTc0ODA0Niw3ODc5MzAzMTcsLTE5NDYxOT
+YyMDMsLTE2MzM3NDIwOTEsMTA3MzE1OTk3NywxNjk5ODM4MTY1
+LDE5ODUxMjQ3MDBdfQ==
 -->
