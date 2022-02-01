@@ -158,6 +158,8 @@ glxheads
 watch -n 0.25 nvidia-smi
 # duplicate command's output into a file
 ping google.com | tee -a /tmp/t.txt
+# jq pretty format/s
+echo '{"foo":{"bar": 0}}' | jq '.,.foo'
 # grep example
 grep 'alias' /home/foo/.bashrc
 # find/xargs/cat/grep/wc to count the number of lines containing 'abc' in all python files contained in cwd
@@ -543,11 +545,11 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjcyOTY0NTQ5LDEzOTE1OTY3ODksLTE4Nz
-MwOTc4NzEsLTE3MDQ2Njg5MzQsLTExMjY3NTkwOTYsLTgxNzQx
-NDQwMywxMDA1MjYwOTQ4LDE2NDYwNTkzMjgsLTU4MDA4MzY0Ny
-wyMTMzNjkzMzk0LDE4OTU1NzczODQsLTE4OTMzMDM4NjMsLTcx
-NzQzMjAxNCwtMTQxMTc0ODA0Niw3ODc5MzAzMTcsLTE5NDYxOT
-YyMDMsLTE2MzM3NDIwOTEsMTA3MzE1OTk3NywxNjk5ODM4MTY1
-LDE5ODUxMjQ3MDBdfQ==
+eyJoaXN0b3J5IjpbLTEyMDI4NTk2NzUsMjcyOTY0NTQ5LDEzOT
+E1OTY3ODksLTE4NzMwOTc4NzEsLTE3MDQ2Njg5MzQsLTExMjY3
+NTkwOTYsLTgxNzQxNDQwMywxMDA1MjYwOTQ4LDE2NDYwNTkzMj
+gsLTU4MDA4MzY0NywyMTMzNjkzMzk0LDE4OTU1NzczODQsLTE4
+OTMzMDM4NjMsLTcxNzQzMjAxNCwtMTQxMTc0ODA0Niw3ODc5Mz
+AzMTcsLTE5NDYxOTYyMDMsLTE2MzM3NDIwOTEsMTA3MzE1OTk3
+NywxNjk5ODM4MTY1XX0=
 -->
