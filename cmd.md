@@ -436,6 +436,8 @@ git push origin heads/<name>
 git show-ref (to know if heads/... or sm is needed)
 //show last commit log:
 git log -1
+# show commits history graph
+git log --graph
 //update change in .gitignore
 git rm -r --cached .
 AND:
@@ -541,11 +543,11 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NzMwOTc4NzEsLTE3MDQ2Njg5MzQsLT
-ExMjY3NTkwOTYsLTgxNzQxNDQwMywxMDA1MjYwOTQ4LDE2NDYw
-NTkzMjgsLTU4MDA4MzY0NywyMTMzNjkzMzk0LDE4OTU1NzczOD
-QsLTE4OTMzMDM4NjMsLTcxNzQzMjAxNCwtMTQxMTc0ODA0Niw3
-ODc5MzAzMTcsLTE5NDYxOTYyMDMsLTE2MzM3NDIwOTEsMTA3Mz
-E1OTk3NywxNjk5ODM4MTY1LDE5ODUxMjQ3MDAsLTc0NzYwOTYx
-OCwtMTk5MjkzMDE0MF19
+eyJoaXN0b3J5IjpbMTM5MTU5Njc4OSwtMTg3MzA5Nzg3MSwtMT
+cwNDY2ODkzNCwtMTEyNjc1OTA5NiwtODE3NDE0NDAzLDEwMDUy
+NjA5NDgsMTY0NjA1OTMyOCwtNTgwMDgzNjQ3LDIxMzM2OTMzOT
+QsMTg5NTU3NzM4NCwtMTg5MzMwMzg2MywtNzE3NDMyMDE0LC0x
+NDExNzQ4MDQ2LDc4NzkzMDMxNywtMTk0NjE5NjIwMywtMTYzMz
+c0MjA5MSwxMDczMTU5OTc3LDE2OTk4MzgxNjUsMTk4NTEyNDcw
+MCwtNzQ3NjA5NjE4XX0=
 -->
