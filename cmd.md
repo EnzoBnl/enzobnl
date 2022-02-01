@@ -158,7 +158,7 @@ glxheads
 watch -n 0.25 nvidia-smi
 # duplicate command's output into a file
 ping google.com | tee -a /tmp/t.txt
-# jq pretty format/s
+# jq pretty print / multiple select
 echo '{"foo":{"bar": 0}}' | jq '.,.foo'
 # grep example
 grep 'alias' /home/foo/.bashrc
@@ -545,11 +545,11 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMDI4NTk2NzUsMjcyOTY0NTQ5LDEzOT
-E1OTY3ODksLTE4NzMwOTc4NzEsLTE3MDQ2Njg5MzQsLTExMjY3
-NTkwOTYsLTgxNzQxNDQwMywxMDA1MjYwOTQ4LDE2NDYwNTkzMj
-gsLTU4MDA4MzY0NywyMTMzNjkzMzk0LDE4OTU1NzczODQsLTE4
-OTMzMDM4NjMsLTcxNzQzMjAxNCwtMTQxMTc0ODA0Niw3ODc5Mz
-AzMTcsLTE5NDYxOTYyMDMsLTE2MzM3NDIwOTEsMTA3MzE1OTk3
-NywxNjk5ODM4MTY1XX0=
+eyJoaXN0b3J5IjpbMTQ0MDM2MDAwMiwyNzI5NjQ1NDksMTM5MT
+U5Njc4OSwtMTg3MzA5Nzg3MSwtMTcwNDY2ODkzNCwtMTEyNjc1
+OTA5NiwtODE3NDE0NDAzLDEwMDUyNjA5NDgsMTY0NjA1OTMyOC
+wtNTgwMDgzNjQ3LDIxMzM2OTMzOTQsMTg5NTU3NzM4NCwtMTg5
+MzMwMzg2MywtNzE3NDMyMDE0LC0xNDExNzQ4MDQ2LDc4NzkzMD
+MxNywtMTk0NjE5NjIwMywtMTYzMzc0MjA5MSwxMDczMTU5OTc3
+LDE2OTk4MzgxNjVdfQ==
 -->
