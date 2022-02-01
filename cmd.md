@@ -31,6 +31,12 @@ val r1=v2.reduceByKey(_+_)
 val v2=v1.map(word =>{var wordModif:String="";for(l<-word){if(l=='e'){wordModif+='a'}else{wordModif+=l}};(1,wordModif);})
 //fin remplacement 'e' par 'a'
 ```
+
+### Redis
+```bash
+
+```
+
 ### PYSPARK
 ```bash
 pyspark --master local[2] (lance jupyter avec sc accessible)
@@ -545,11 +551,11 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ0MDM2MDAwMiwyNzI5NjQ1NDksMTM5MT
-U5Njc4OSwtMTg3MzA5Nzg3MSwtMTcwNDY2ODkzNCwtMTEyNjc1
-OTA5NiwtODE3NDE0NDAzLDEwMDUyNjA5NDgsMTY0NjA1OTMyOC
-wtNTgwMDgzNjQ3LDIxMzM2OTMzOTQsMTg5NTU3NzM4NCwtMTg5
-MzMwMzg2MywtNzE3NDMyMDE0LC0xNDExNzQ4MDQ2LDc4NzkzMD
-MxNywtMTk0NjE5NjIwMywtMTYzMzc0MjA5MSwxMDczMTU5OTc3
-LDE2OTk4MzgxNjVdfQ==
+eyJoaXN0b3J5IjpbLTEyMzk1NDcyNCwxNDQwMzYwMDAyLDI3Mj
+k2NDU0OSwxMzkxNTk2Nzg5LC0xODczMDk3ODcxLC0xNzA0NjY4
+OTM0LC0xMTI2NzU5MDk2LC04MTc0MTQ0MDMsMTAwNTI2MDk0OC
+wxNjQ2MDU5MzI4LC01ODAwODM2NDcsMjEzMzY5MzM5NCwxODk1
+NTc3Mzg0LC0xODkzMzAzODYzLC03MTc0MzIwMTQsLTE0MTE3ND
+gwNDYsNzg3OTMwMzE3LC0xOTQ2MTk2MjAzLC0xNjMzNzQyMDkx
+LDEwNzMxNTk5NzddfQ==
 -->
