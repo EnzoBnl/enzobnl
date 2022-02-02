@@ -168,7 +168,7 @@ ping google.com | tee -a /tmp/t.txt
 # jq pretty print / multiple select
 echo '{"foo":{"bar": 0}}' | jq '.,.foo'
 # get unique whitespace separated words
-echo foo bar foo | tr " " "\n" | sort | uniq
+echo foo bar foo | sed 's/ /\n/g' | sort | uniq
 # grep example
 grep 'alias' /home/foo/.bashrc
 # find/xargs/cat/grep/wc to count the number of lines containing 'abc' in all python files contained in cwd
@@ -554,11 +554,11 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyOTgzNDIyNTcsLTUxNTkxNjAxLC0xMj
-M5NTQ3MjQsMTQ0MDM2MDAwMiwyNzI5NjQ1NDksMTM5MTU5Njc4
-OSwtMTg3MzA5Nzg3MSwtMTcwNDY2ODkzNCwtMTEyNjc1OTA5Ni
-wtODE3NDE0NDAzLDEwMDUyNjA5NDgsMTY0NjA1OTMyOCwtNTgw
-MDgzNjQ3LDIxMzM2OTMzOTQsMTg5NTU3NzM4NCwtMTg5MzMwMz
-g2MywtNzE3NDMyMDE0LC0xNDExNzQ4MDQ2LDc4NzkzMDMxNywt
-MTk0NjE5NjIwM119
+eyJoaXN0b3J5IjpbMTQyNzI3OTQzMiwtMTI5ODM0MjI1NywtNT
+E1OTE2MDEsLTEyMzk1NDcyNCwxNDQwMzYwMDAyLDI3Mjk2NDU0
+OSwxMzkxNTk2Nzg5LC0xODczMDk3ODcxLC0xNzA0NjY4OTM0LC
+0xMTI2NzU5MDk2LC04MTc0MTQ0MDMsMTAwNTI2MDk0OCwxNjQ2
+MDU5MzI4LC01ODAwODM2NDcsMjEzMzY5MzM5NCwxODk1NTc3Mz
+g0LC0xODkzMzAzODYzLC03MTc0MzIwMTQsLTE0MTE3NDgwNDYs
+Nzg3OTMwMzE3XX0=
 -->
