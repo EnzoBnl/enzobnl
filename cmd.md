@@ -167,7 +167,7 @@ watch -n 0.25 nvidia-smi
 ping google.com | tee -a /tmp/t.txt
 # jq pretty print / multiple select
 echo '{"foo":{"bar": 0}}' | jq '.,.foo'
-# get unique whitespace separated words
+# get unique whitespace separated words (using sed to Substitute spaces by newlines Globally)
 echo foo bar foo | sed 's/ /\n/g' | sort | uniq
 # grep example
 grep 'alias' /home/foo/.bashrc
@@ -554,11 +554,11 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQyNzI3OTQzMiwtMTI5ODM0MjI1NywtNT
-E1OTE2MDEsLTEyMzk1NDcyNCwxNDQwMzYwMDAyLDI3Mjk2NDU0
-OSwxMzkxNTk2Nzg5LC0xODczMDk3ODcxLC0xNzA0NjY4OTM0LC
-0xMTI2NzU5MDk2LC04MTc0MTQ0MDMsMTAwNTI2MDk0OCwxNjQ2
-MDU5MzI4LC01ODAwODM2NDcsMjEzMzY5MzM5NCwxODk1NTc3Mz
-g0LC0xODkzMzAzODYzLC03MTc0MzIwMTQsLTE0MTE3NDgwNDYs
-Nzg3OTMwMzE3XX0=
+eyJoaXN0b3J5IjpbLTEwMTE2NTY5NTEsMTQyNzI3OTQzMiwtMT
+I5ODM0MjI1NywtNTE1OTE2MDEsLTEyMzk1NDcyNCwxNDQwMzYw
+MDAyLDI3Mjk2NDU0OSwxMzkxNTk2Nzg5LC0xODczMDk3ODcxLC
+0xNzA0NjY4OTM0LC0xMTI2NzU5MDk2LC04MTc0MTQ0MDMsMTAw
+NTI2MDk0OCwxNjQ2MDU5MzI4LC01ODAwODM2NDcsMjEzMzY5Mz
+M5NCwxODk1NTc3Mzg0LC0xODkzMzAzODYzLC03MTc0MzIwMTQs
+LTE0MTE3NDgwNDZdfQ==
 -->
