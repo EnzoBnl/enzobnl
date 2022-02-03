@@ -36,6 +36,8 @@ val v2=v1.map(word =>{var wordModif:String="";for(l<-word){if(l=='e'){wordModif+
 ```bash
 # list databases
 redis-cli INFO | grep 'db'
+# dump all keys
+redis-cli KEYS '*' > /tmp/redis_keys_dump.txt
 ```
 
 ### PYSPARK
@@ -554,11 +556,11 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMTE2NTY5NTEsMTQyNzI3OTQzMiwtMT
-I5ODM0MjI1NywtNTE1OTE2MDEsLTEyMzk1NDcyNCwxNDQwMzYw
-MDAyLDI3Mjk2NDU0OSwxMzkxNTk2Nzg5LC0xODczMDk3ODcxLC
-0xNzA0NjY4OTM0LC0xMTI2NzU5MDk2LC04MTc0MTQ0MDMsMTAw
-NTI2MDk0OCwxNjQ2MDU5MzI4LC01ODAwODM2NDcsMjEzMzY5Mz
-M5NCwxODk1NTc3Mzg0LC0xODkzMzAzODYzLC03MTc0MzIwMTQs
-LTE0MTE3NDgwNDZdfQ==
+eyJoaXN0b3J5IjpbMzExNDM4MjI5LC0xMDExNjU2OTUxLDE0Mj
+cyNzk0MzIsLTEyOTgzNDIyNTcsLTUxNTkxNjAxLC0xMjM5NTQ3
+MjQsMTQ0MDM2MDAwMiwyNzI5NjQ1NDksMTM5MTU5Njc4OSwtMT
+g3MzA5Nzg3MSwtMTcwNDY2ODkzNCwtMTEyNjc1OTA5NiwtODE3
+NDE0NDAzLDEwMDUyNjA5NDgsMTY0NjA1OTMyOCwtNTgwMDgzNj
+Q3LDIxMzM2OTMzOTQsMTg5NTU3NzM4NCwtMTg5MzMwMzg2Mywt
+NzE3NDMyMDE0XX0=
 -->
