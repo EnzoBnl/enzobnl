@@ -406,7 +406,7 @@ git cherry-pick <commit hash>
 git tag -d tagname
 git push --delete origin tagname
 # git force push last local committed state to remote branch foo
-git push --force HEAD:foo
+git push origin --force HEAD:foo
 # generic force push syntax
 git push origin --force localbranch:remotebranch
 # use ssh auth o github
@@ -556,11 +556,11 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzExNDM4MjI5LC0xMDExNjU2OTUxLDE0Mj
-cyNzk0MzIsLTEyOTgzNDIyNTcsLTUxNTkxNjAxLC0xMjM5NTQ3
-MjQsMTQ0MDM2MDAwMiwyNzI5NjQ1NDksMTM5MTU5Njc4OSwtMT
-g3MzA5Nzg3MSwtMTcwNDY2ODkzNCwtMTEyNjc1OTA5NiwtODE3
-NDE0NDAzLDEwMDUyNjA5NDgsMTY0NjA1OTMyOCwtNTgwMDgzNj
-Q3LDIxMzM2OTMzOTQsMTg5NTU3NzM4NCwtMTg5MzMwMzg2Mywt
-NzE3NDMyMDE0XX0=
+eyJoaXN0b3J5IjpbLTE4MTczNzIzNjksMzExNDM4MjI5LC0xMD
+ExNjU2OTUxLDE0MjcyNzk0MzIsLTEyOTgzNDIyNTcsLTUxNTkx
+NjAxLC0xMjM5NTQ3MjQsMTQ0MDM2MDAwMiwyNzI5NjQ1NDksMT
+M5MTU5Njc4OSwtMTg3MzA5Nzg3MSwtMTcwNDY2ODkzNCwtMTEy
+Njc1OTA5NiwtODE3NDE0NDAzLDEwMDUyNjA5NDgsMTY0NjA1OT
+MyOCwtNTgwMDgzNjQ3LDIxMzM2OTMzOTQsMTg5NTU3NzM4NCwt
+MTg5MzMwMzg2M119
 -->
