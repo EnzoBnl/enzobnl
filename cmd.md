@@ -426,7 +426,7 @@ git rebase -i <after-this-commit>
 git ls-files | wc -l
 //reset to origin branch state
 git reset --hard origin/foo
-# git reset --hard is equivalent to git reset --hard origin/<current branch>
+# `git reset --hard` is equivalent to `git reset --hard origin/<current branch>`
 //init :
 git init 
 git remote add origin http/...
@@ -555,7 +555,7 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc3MjgzOTMwOSw3MjMwOTM1ODIsLTE4MT
+eyJoaXN0b3J5IjpbLTIyNTU5Mzg4OSw3MjMwOTM1ODIsLTE4MT
 czNzIzNjksMzExNDM4MjI5LC0xMDExNjU2OTUxLDE0MjcyNzk0
 MzIsLTEyOTgzNDIyNTcsLTUxNTkxNjAxLC0xMjM5NTQ3MjQsMT
 Q0MDM2MDAwMiwyNzI5NjQ1NDksMTM5MTU5Njc4OSwtMTg3MzA5
