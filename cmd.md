@@ -461,8 +461,9 @@ git commit --amend -m "New commit message"
 //merge stashed changes with pulled (or just current) state
 git stash apply
 // roll back to commit -X
-$ git commit -m "Something terribly misguided"             # (1)
-$ git reset HEAD~X                                          # (2)
+$ git commit -m "Something terribly misguided"             # (1) reset to n-th last commit
+# git reset HEAD^ is equivalent to git reset HEAD~1
+$ git reset HEAD~X n                                        # (2)
 << edit files as necessary >>                              # (3)
 $ git add .                                              # (4)
 $ git commit -c CommitHashThatYouWantTheMessageAndAuthorship                               # (5)
@@ -556,11 +557,11 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MTczNzIzNjksMzExNDM4MjI5LC0xMD
-ExNjU2OTUxLDE0MjcyNzk0MzIsLTEyOTgzNDIyNTcsLTUxNTkx
-NjAxLC0xMjM5NTQ3MjQsMTQ0MDM2MDAwMiwyNzI5NjQ1NDksMT
-M5MTU5Njc4OSwtMTg3MzA5Nzg3MSwtMTcwNDY2ODkzNCwtMTEy
-Njc1OTA5NiwtODE3NDE0NDAzLDEwMDUyNjA5NDgsMTY0NjA1OT
-MyOCwtNTgwMDgzNjQ3LDIxMzM2OTMzOTQsMTg5NTU3NzM4NCwt
-MTg5MzMwMzg2M119
+eyJoaXN0b3J5IjpbNzIzMDkzNTgyLC0xODE3MzcyMzY5LDMxMT
+QzODIyOSwtMTAxMTY1Njk1MSwxNDI3Mjc5NDMyLC0xMjk4MzQy
+MjU3LC01MTU5MTYwMSwtMTIzOTU0NzI0LDE0NDAzNjAwMDIsMj
+cyOTY0NTQ5LDEzOTE1OTY3ODksLTE4NzMwOTc4NzEsLTE3MDQ2
+Njg5MzQsLTExMjY3NTkwOTYsLTgxNzQxNDQwMywxMDA1MjYwOT
+Q4LDE2NDYwNTkzMjgsLTU4MDA4MzY0NywyMTMzNjkzMzk0LDE4
+OTU1NzczODRdfQ==
 -->
