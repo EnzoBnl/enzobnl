@@ -426,9 +426,6 @@ git rebase -i <after-this-commit>
 git ls-files | wc -l
 //reset to origin branch state
 git reset --hard origin/foo
-//reset to last commit
-git reset --hard
-fichier .gitignore avec les dossier à pas push (un par ligne, pas besoin du path relatif ./ , juste le nom)
 //init :
 git init 
 git remote add origin http/...
@@ -557,11 +554,11 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzIzMDkzNTgyLC0xODE3MzcyMzY5LDMxMT
-QzODIyOSwtMTAxMTY1Njk1MSwxNDI3Mjc5NDMyLC0xMjk4MzQy
-MjU3LC01MTU5MTYwMSwtMTIzOTU0NzI0LDE0NDAzNjAwMDIsMj
-cyOTY0NTQ5LDEzOTE1OTY3ODksLTE4NzMwOTc4NzEsLTE3MDQ2
-Njg5MzQsLTExMjY3NTkwOTYsLTgxNzQxNDQwMywxMDA1MjYwOT
-Q4LDE2NDYwNTkzMjgsLTU4MDA4MzY0NywyMTMzNjkzMzk0LDE4
-OTU1NzczODRdfQ==
+eyJoaXN0b3J5IjpbOTI3ODgxMzQxLDcyMzA5MzU4MiwtMTgxNz
+M3MjM2OSwzMTE0MzgyMjksLTEwMTE2NTY5NTEsMTQyNzI3OTQz
+MiwtMTI5ODM0MjI1NywtNTE1OTE2MDEsLTEyMzk1NDcyNCwxND
+QwMzYwMDAyLDI3Mjk2NDU0OSwxMzkxNTk2Nzg5LC0xODczMDk3
+ODcxLC0xNzA0NjY4OTM0LC0xMTI2NzU5MDk2LC04MTc0MTQ0MD
+MsMTAwNTI2MDk0OCwxNjQ2MDU5MzI4LC01ODAwODM2NDcsMjEz
+MzY5MzM5NF19
 -->
