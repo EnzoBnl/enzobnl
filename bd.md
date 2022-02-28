@@ -135,9 +135,9 @@ ORDER BY creation_time DESC
 LIMIT 10
 ```
 ### Set partition expiration
-
+to 7 days
 ```
-bashbq update --time_partitioning_expiration 604800 --time_partitioning_type DAY 
+bashbq update --time_partitioning_expiration 604800 --time_partitioning_type DAY project:dataset.table
 ```
 
 ## Delta Lake
@@ -234,11 +234,11 @@ Known as [Incremental encoding](https://en.wikipedia.org/wiki/Incremental_encodi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzU5MDAzNDY5LC0xNjc5MTc3ODQwLC0yMD
-A0NTA1Nzg0LDE5MjM3MzM3NTIsMTQ5NjIyNTA5LDI5MDA0OTA3
-NSw0MjQ0MjMyNzMsLTE3MTEwNTMwMCwtMTc2ODIxMjgwNywtMT
-A5Mzc5MTUzNSwxMTk5MDQ3OTk1LC0xMzQyMTM2NjksMjA4MzMy
-OTY5MCwxMTAzMzIxNjYsLTIxMzI1NDQ0MjUsNTQyNzY3NTU4LC
-0xOTQ1NzIxMTE2LC0yMDIwNTIzNjU5LDkyMjczMTQwNywxMzQ0
-OTQxMTcxXX0=
+eyJoaXN0b3J5IjpbMTQ1NTcxMTIwNSwtMTY3OTE3Nzg0MCwtMj
+AwNDUwNTc4NCwxOTIzNzMzNzUyLDE0OTYyMjUwOSwyOTAwNDkw
+NzUsNDI0NDIzMjczLC0xNzExMDUzMDAsLTE3NjgyMTI4MDcsLT
+EwOTM3OTE1MzUsMTE5OTA0Nzk5NSwtMTM0MjEzNjY5LDIwODMz
+Mjk2OTAsMTEwMzMyMTY2LC0yMTMyNTQ0NDI1LDU0Mjc2NzU1OC
+wtMTk0NTcyMTExNiwtMjAyMDUyMzY1OSw5MjI3MzE0MDcsMTM0
+NDk0MTE3MV19
 -->
