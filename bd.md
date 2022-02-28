@@ -134,6 +134,11 @@ WHERE user_email='foo@bar'
 ORDER BY creation_time DESC
 LIMIT 10
 ```
+### Set partition expiration
+```bash
+- stage retention: délai expiration 1 mois: set in BQ: mesurer ce qu'on a gagné: 1000€ par an
+```
+
 ## Delta Lake
 ### DeltaLog & ACID guarantees
 
@@ -228,11 +233,11 @@ Known as [Incremental encoding](https://en.wikipedia.org/wiki/Incremental_encodi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NzkxNzc4NDAsLTIwMDQ1MDU3ODQsMT
-kyMzczMzc1MiwxNDk2MjI1MDksMjkwMDQ5MDc1LDQyNDQyMzI3
-MywtMTcxMTA1MzAwLC0xNzY4MjEyODA3LC0xMDkzNzkxNTM1LD
-ExOTkwNDc5OTUsLTEzNDIxMzY2OSwyMDgzMzI5NjkwLDExMDMz
-MjE2NiwtMjEzMjU0NDQyNSw1NDI3Njc1NTgsLTE5NDU3MjExMT
-YsLTIwMjA1MjM2NTksOTIyNzMxNDA3LDEzNDQ5NDExNzEsMTkz
-ODM5Mzg5MF19
+eyJoaXN0b3J5IjpbLTUwNTkxNzU0MSwtMTY3OTE3Nzg0MCwtMj
+AwNDUwNTc4NCwxOTIzNzMzNzUyLDE0OTYyMjUwOSwyOTAwNDkw
+NzUsNDI0NDIzMjczLC0xNzExMDUzMDAsLTE3NjgyMTI4MDcsLT
+EwOTM3OTE1MzUsMTE5OTA0Nzk5NSwtMTM0MjEzNjY5LDIwODMz
+Mjk2OTAsMTEwMzMyMTY2LC0yMTMyNTQ0NDI1LDU0Mjc2NzU1OC
+wtMTk0NTcyMTExNiwtMjAyMDUyMzY1OSw5MjI3MzE0MDcsMTM0
+NDk0MTE3MV19
 -->
