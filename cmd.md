@@ -420,8 +420,8 @@ git commit --amend -m"new message"
 git branch -m <oldname> <newname>
 //tag
 $ git tag -a v1.4 -m "my version 1.4"
-//Fusionner i last commits
-git rebase -i <after-this-commit>
+//Fusionner i last commits from current branch
+git rebase -i <onto-this-commit>
 //lines in repo:
 git ls-files | wc -l
 //reset to origin branch state
@@ -555,11 +555,11 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkxNTczMDE1OSwtMjI1NTkzODg5LDcyMz
-A5MzU4MiwtMTgxNzM3MjM2OSwzMTE0MzgyMjksLTEwMTE2NTY5
-NTEsMTQyNzI3OTQzMiwtMTI5ODM0MjI1NywtNTE1OTE2MDEsLT
-EyMzk1NDcyNCwxNDQwMzYwMDAyLDI3Mjk2NDU0OSwxMzkxNTk2
-Nzg5LC0xODczMDk3ODcxLC0xNzA0NjY4OTM0LC0xMTI2NzU5MD
-k2LC04MTc0MTQ0MDMsMTAwNTI2MDk0OCwxNjQ2MDU5MzI4LC01
-ODAwODM2NDddfQ==
+eyJoaXN0b3J5IjpbMzM0MjgyODIsLTkxNTczMDE1OSwtMjI1NT
+kzODg5LDcyMzA5MzU4MiwtMTgxNzM3MjM2OSwzMTE0MzgyMjks
+LTEwMTE2NTY5NTEsMTQyNzI3OTQzMiwtMTI5ODM0MjI1NywtNT
+E1OTE2MDEsLTEyMzk1NDcyNCwxNDQwMzYwMDAyLDI3Mjk2NDU0
+OSwxMzkxNTk2Nzg5LC0xODczMDk3ODcxLC0xNzA0NjY4OTM0LC
+0xMTI2NzU5MDk2LC04MTc0MTQ0MDMsMTAwNTI2MDk0OCwxNjQ2
+MDU5MzI4XX0=
 -->
