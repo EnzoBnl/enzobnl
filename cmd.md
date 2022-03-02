@@ -439,6 +439,8 @@ git push origin master
 //branch
 git checkout (-b for creation only) <name>
 git push --set-upstream origin <name>
+# checkout a remote branch
+git checkout -b branch-name origin/branch-name
 // chackout a remote tag
 git checkout tags/<name>
 //sometime :
@@ -555,11 +557,11 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzM0MjgyODIsLTkxNTczMDE1OSwtMjI1NT
-kzODg5LDcyMzA5MzU4MiwtMTgxNzM3MjM2OSwzMTE0MzgyMjks
-LTEwMTE2NTY5NTEsMTQyNzI3OTQzMiwtMTI5ODM0MjI1NywtNT
-E1OTE2MDEsLTEyMzk1NDcyNCwxNDQwMzYwMDAyLDI3Mjk2NDU0
-OSwxMzkxNTk2Nzg5LC0xODczMDk3ODcxLC0xNzA0NjY4OTM0LC
-0xMTI2NzU5MDk2LC04MTc0MTQ0MDMsMTAwNTI2MDk0OCwxNjQ2
-MDU5MzI4XX0=
+eyJoaXN0b3J5IjpbLTc3MjYxMzgyNCwzMzQyODI4MiwtOTE1Nz
+MwMTU5LC0yMjU1OTM4ODksNzIzMDkzNTgyLC0xODE3MzcyMzY5
+LDMxMTQzODIyOSwtMTAxMTY1Njk1MSwxNDI3Mjc5NDMyLC0xMj
+k4MzQyMjU3LC01MTU5MTYwMSwtMTIzOTU0NzI0LDE0NDAzNjAw
+MDIsMjcyOTY0NTQ5LDEzOTE1OTY3ODksLTE4NzMwOTc4NzEsLT
+E3MDQ2Njg5MzQsLTExMjY3NTkwOTYsLTgxNzQxNDQwMywxMDA1
+MjYwOTQ4XX0=
 -->
