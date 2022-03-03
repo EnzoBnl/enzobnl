@@ -460,6 +460,13 @@ git commit ...etc
 git commit --amend -m "New commit message"
 //merge stashed changes with pulled (or just current) state
 git stash apply
+// co author commit
+```shell
+git commit -m "Refactor usability tests.
+>
+Co-authored-by: foo <foo@example.com>
+Co-authored-by: another-name <another-name@example.com>"
+```
 // roll back to commit -X
 $ git commit -m "Something terribly misguided"             # (1) reset to n-th last commit
 # git reset HEAD^ is equivalent to git reset HEAD~1
@@ -557,11 +564,11 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc3MjYxMzgyNCwzMzQyODI4MiwtOTE1Nz
-MwMTU5LC0yMjU1OTM4ODksNzIzMDkzNTgyLC0xODE3MzcyMzY5
-LDMxMTQzODIyOSwtMTAxMTY1Njk1MSwxNDI3Mjc5NDMyLC0xMj
-k4MzQyMjU3LC01MTU5MTYwMSwtMTIzOTU0NzI0LDE0NDAzNjAw
-MDIsMjcyOTY0NTQ5LDEzOTE1OTY3ODksLTE4NzMwOTc4NzEsLT
-E3MDQ2Njg5MzQsLTExMjY3NTkwOTYsLTgxNzQxNDQwMywxMDA1
-MjYwOTQ4XX0=
+eyJoaXN0b3J5IjpbLTE2MTAxMzgzNDQsLTc3MjYxMzgyNCwzMz
+QyODI4MiwtOTE1NzMwMTU5LC0yMjU1OTM4ODksNzIzMDkzNTgy
+LC0xODE3MzcyMzY5LDMxMTQzODIyOSwtMTAxMTY1Njk1MSwxND
+I3Mjc5NDMyLC0xMjk4MzQyMjU3LC01MTU5MTYwMSwtMTIzOTU0
+NzI0LDE0NDAzNjAwMDIsMjcyOTY0NTQ5LDEzOTE1OTY3ODksLT
+E4NzMwOTc4NzEsLTE3MDQ2Njg5MzQsLTExMjY3NTkwOTYsLTgx
+NzQxNDQwM119
 -->
