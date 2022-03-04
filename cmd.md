@@ -452,7 +452,7 @@ git show-ref (to know if heads/... or sm is needed)
 # show last sates of HEAD
 git reflog
 //show last commit log:
-git log -1
+git log -1 --pretty=fuller
 # show commits history graph
 git log --graph
 //update change in .gitignore
@@ -566,11 +566,11 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDEzNzQ3NjcwLC0yMDEyMjI2MjA0LC0xMT
-cxOTc4ODgzLC03NzI2MTM4MjQsMzM0MjgyODIsLTkxNTczMDE1
-OSwtMjI1NTkzODg5LDcyMzA5MzU4MiwtMTgxNzM3MjM2OSwzMT
-E0MzgyMjksLTEwMTE2NTY5NTEsMTQyNzI3OTQzMiwtMTI5ODM0
-MjI1NywtNTE1OTE2MDEsLTEyMzk1NDcyNCwxNDQwMzYwMDAyLD
-I3Mjk2NDU0OSwxMzkxNTk2Nzg5LC0xODczMDk3ODcxLC0xNzA0
-NjY4OTM0XX0=
+eyJoaXN0b3J5IjpbLTg3NTM4NDg3MSw0MTM3NDc2NzAsLTIwMT
+IyMjYyMDQsLTExNzE5Nzg4ODMsLTc3MjYxMzgyNCwzMzQyODI4
+MiwtOTE1NzMwMTU5LC0yMjU1OTM4ODksNzIzMDkzNTgyLC0xOD
+E3MzcyMzY5LDMxMTQzODIyOSwtMTAxMTY1Njk1MSwxNDI3Mjc5
+NDMyLC0xMjk4MzQyMjU3LC01MTU5MTYwMSwtMTIzOTU0NzI0LD
+E0NDAzNjAwMDIsMjcyOTY0NTQ5LDEzOTE1OTY3ODksLTE4NzMw
+OTc4NzFdfQ==
 -->
