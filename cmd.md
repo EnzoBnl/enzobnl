@@ -449,6 +449,8 @@ git checkout tags/<name>
 git push origin heads/<name>
 //show refs :
 git show-ref (to know if heads/... or sm is needed)
+# show last sates of HEAD
+git reflog
 //show last commit log:
 git log -1
 # show commits history graph
@@ -564,11 +566,11 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMTIyMjYyMDQsLTExNzE5Nzg4ODMsLT
-c3MjYxMzgyNCwzMzQyODI4MiwtOTE1NzMwMTU5LC0yMjU1OTM4
-ODksNzIzMDkzNTgyLC0xODE3MzcyMzY5LDMxMTQzODIyOSwtMT
-AxMTY1Njk1MSwxNDI3Mjc5NDMyLC0xMjk4MzQyMjU3LC01MTU5
-MTYwMSwtMTIzOTU0NzI0LDE0NDAzNjAwMDIsMjcyOTY0NTQ5LD
-EzOTE1OTY3ODksLTE4NzMwOTc4NzEsLTE3MDQ2Njg5MzQsLTEx
-MjY3NTkwOTZdfQ==
+eyJoaXN0b3J5IjpbNDEzNzQ3NjcwLC0yMDEyMjI2MjA0LC0xMT
+cxOTc4ODgzLC03NzI2MTM4MjQsMzM0MjgyODIsLTkxNTczMDE1
+OSwtMjI1NTkzODg5LDcyMzA5MzU4MiwtMTgxNzM3MjM2OSwzMT
+E0MzgyMjksLTEwMTE2NTY5NTEsMTQyNzI3OTQzMiwtMTI5ODM0
+MjI1NywtNTE1OTE2MDEsLTEyMzk1NDcyNCwxNDQwMzYwMDAyLD
+I3Mjk2NDU0OSwxMzkxNTk2Nzg5LC0xODczMDk3ODcxLC0xNzA0
+NjY4OTM0XX0=
 -->
