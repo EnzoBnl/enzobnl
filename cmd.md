@@ -246,6 +246,8 @@ chmod 755 <script or binary name>
 [shortcut] Ctrl + l
 // search terminal history, same shortcut to navigate matching lines
 [shortcut] Ctrl + r
+# output last 100 commands run in current terminal
+history 100
 // create a symlinl (symbolic link)
 sudo ln -s origin target
 // generate ssh pub/private keys
@@ -562,11 +564,11 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNzE5Nzg4ODMsLTc3MjYxMzgyNCwzMz
-QyODI4MiwtOTE1NzMwMTU5LC0yMjU1OTM4ODksNzIzMDkzNTgy
-LC0xODE3MzcyMzY5LDMxMTQzODIyOSwtMTAxMTY1Njk1MSwxND
-I3Mjc5NDMyLC0xMjk4MzQyMjU3LC01MTU5MTYwMSwtMTIzOTU0
-NzI0LDE0NDAzNjAwMDIsMjcyOTY0NTQ5LDEzOTE1OTY3ODksLT
-E4NzMwOTc4NzEsLTE3MDQ2Njg5MzQsLTExMjY3NTkwOTYsLTgx
-NzQxNDQwM119
+eyJoaXN0b3J5IjpbLTIwMTIyMjYyMDQsLTExNzE5Nzg4ODMsLT
+c3MjYxMzgyNCwzMzQyODI4MiwtOTE1NzMwMTU5LC0yMjU1OTM4
+ODksNzIzMDkzNTgyLC0xODE3MzcyMzY5LDMxMTQzODIyOSwtMT
+AxMTY1Njk1MSwxNDI3Mjc5NDMyLC0xMjk4MzQyMjU3LC01MTU5
+MTYwMSwtMTIzOTU0NzI0LDE0NDAzNjAwMDIsMjcyOTY0NTQ5LD
+EzOTE1OTY3ODksLTE4NzMwOTc4NzEsLTE3MDQ2Njg5MzQsLTEx
+MjY3NTkwOTZdfQ==
 -->
