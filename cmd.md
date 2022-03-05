@@ -438,6 +438,8 @@ git pull origin master
 git add .
 git commit -m "Initial Commit"
 git push origin master
+# get short commit hash
+git rev-parse --short <my_long_commit_hash>
 //branch
 git checkout (-b for creation only) <name>
 git push --set-upstream origin <name>
@@ -566,11 +568,11 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg3NTM4NDg3MSw0MTM3NDc2NzAsLTIwMT
-IyMjYyMDQsLTExNzE5Nzg4ODMsLTc3MjYxMzgyNCwzMzQyODI4
-MiwtOTE1NzMwMTU5LC0yMjU1OTM4ODksNzIzMDkzNTgyLC0xOD
-E3MzcyMzY5LDMxMTQzODIyOSwtMTAxMTY1Njk1MSwxNDI3Mjc5
-NDMyLC0xMjk4MzQyMjU3LC01MTU5MTYwMSwtMTIzOTU0NzI0LD
-E0NDAzNjAwMDIsMjcyOTY0NTQ5LDEzOTE1OTY3ODksLTE4NzMw
-OTc4NzFdfQ==
+eyJoaXN0b3J5IjpbMTA4MDQ4MDc5NCwtODc1Mzg0ODcxLDQxMz
+c0NzY3MCwtMjAxMjIyNjIwNCwtMTE3MTk3ODg4MywtNzcyNjEz
+ODI0LDMzNDI4MjgyLC05MTU3MzAxNTksLTIyNTU5Mzg4OSw3Mj
+MwOTM1ODIsLTE4MTczNzIzNjksMzExNDM4MjI5LC0xMDExNjU2
+OTUxLDE0MjcyNzk0MzIsLTEyOTgzNDIyNTcsLTUxNTkxNjAxLC
+0xMjM5NTQ3MjQsMTQ0MDM2MDAwMiwyNzI5NjQ1NDksMTM5MTU5
+Njc4OV19
 -->
