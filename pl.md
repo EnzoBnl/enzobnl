@@ -5,6 +5,7 @@
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 <script>document.body.style.background = "#f2f2f2";</script>
 <!--NOTE HEAD END-->
+
 # General
 ## Idiomatic coding
 A code snippet is said *idiomatic* if it uses its programming language **the way the language is intended to be used**.
@@ -766,11 +767,11 @@ SELECT ARRAY_AGG(DISTINCT field LIMIT 10) FROM ...
 ## LEFT SEMI JOIN
 The result table of `A LEFT SEMI JOIN B` is a subset of `A`'s records (only `A`'s fields) whose key is matching at least 1 record in `B`.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEwMTQ5MjUwMCwxNTkyMDk4MTUyLC01Nz
-cwNzk1MjAsOTYzNTE0NjQ1LC0xNTYwOTYyNDk0LDIwNTI3NzI1
-MzcsOTk5MzQyMTE2LDIxMTQzMTIzNTIsLTE4NjQ1MzAwNjAsLT
-Q5ODA1MjE0MywtMzY3OTY5MTI1LDYxMDY0MTU0Nyw2Mjg2ODcw
-NzEsMTYyNDM4ODU3MywtMTYzNjQ3MjAyMSw2MTA5MDI0NzUsLT
-I2NzM5OTc1LDE5Nzk5MzQzMTMsMjMzMDM2MTc2LC00NTA4MjQz
-MTJdfQ==
+eyJoaXN0b3J5IjpbNzUxMDc2NDE4LDExMDE0OTI1MDAsMTU5Mj
+A5ODE1MiwtNTc3MDc5NTIwLDk2MzUxNDY0NSwtMTU2MDk2MjQ5
+NCwyMDUyNzcyNTM3LDk5OTM0MjExNiwyMTE0MzEyMzUyLC0xOD
+Y0NTMwMDYwLC00OTgwNTIxNDMsLTM2Nzk2OTEyNSw2MTA2NDE1
+NDcsNjI4Njg3MDcxLDE2MjQzODg1NzMsLTE2MzY0NzIwMjEsNj
+EwOTAyNDc1LC0yNjczOTk3NSwxOTc5OTM0MzEzLDIzMzAzNjE3
+Nl19
 -->
