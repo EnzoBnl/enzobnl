@@ -384,8 +384,8 @@ regular ^\s*\n
 
 ### VSCode
 ```
-# duplicate current line below
-Shift + Alt + Up Arrow Key
+# duplicate current line
+Shift + Alt + Down or Up Arrow Key
 ```
 
 
@@ -575,11 +575,11 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc0MjEyNDA1MSwxMDgwNDgwNzk0LC04Nz
-UzODQ4NzEsNDEzNzQ3NjcwLC0yMDEyMjI2MjA0LC0xMTcxOTc4
-ODgzLC03NzI2MTM4MjQsMzM0MjgyODIsLTkxNTczMDE1OSwtMj
-I1NTkzODg5LDcyMzA5MzU4MiwtMTgxNzM3MjM2OSwzMTE0Mzgy
-MjksLTEwMTE2NTY5NTEsMTQyNzI3OTQzMiwtMTI5ODM0MjI1Ny
-wtNTE1OTE2MDEsLTEyMzk1NDcyNCwxNDQwMzYwMDAyLDI3Mjk2
-NDU0OV19
+eyJoaXN0b3J5IjpbNDA1MTgxMTcsMTA4MDQ4MDc5NCwtODc1Mz
+g0ODcxLDQxMzc0NzY3MCwtMjAxMjIyNjIwNCwtMTE3MTk3ODg4
+MywtNzcyNjEzODI0LDMzNDI4MjgyLC05MTU3MzAxNTksLTIyNT
+U5Mzg4OSw3MjMwOTM1ODIsLTE4MTczNzIzNjksMzExNDM4MjI5
+LC0xMDExNjU2OTUxLDE0MjcyNzk0MzIsLTEyOTgzNDIyNTcsLT
+UxNTkxNjAxLC0xMjM5NTQ3MjQsMTQ0MDM2MDAwMiwyNzI5NjQ1
+NDldfQ==
 -->
