@@ -382,6 +382,13 @@ python2 -m pip install ...
 regular ^\s*\n
 ```
 
+### VSCode
+```
+# 
+Shift + Alt + Up Arrow Key
+```
+
+
 ### IntelliJ
 ```
 Doc : Select item and then Ctrl + Q
@@ -568,11 +575,11 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA4MDQ4MDc5NCwtODc1Mzg0ODcxLDQxMz
-c0NzY3MCwtMjAxMjIyNjIwNCwtMTE3MTk3ODg4MywtNzcyNjEz
-ODI0LDMzNDI4MjgyLC05MTU3MzAxNTksLTIyNTU5Mzg4OSw3Mj
-MwOTM1ODIsLTE4MTczNzIzNjksMzExNDM4MjI5LC0xMDExNjU2
-OTUxLDE0MjcyNzk0MzIsLTEyOTgzNDIyNTcsLTUxNTkxNjAxLC
-0xMjM5NTQ3MjQsMTQ0MDM2MDAwMiwyNzI5NjQ1NDksMTM5MTU5
-Njc4OV19
+eyJoaXN0b3J5IjpbMTIwMTEyNzY2OCwxMDgwNDgwNzk0LC04Nz
+UzODQ4NzEsNDEzNzQ3NjcwLC0yMDEyMjI2MjA0LC0xMTcxOTc4
+ODgzLC03NzI2MTM4MjQsMzM0MjgyODIsLTkxNTczMDE1OSwtMj
+I1NTkzODg5LDcyMzA5MzU4MiwtMTgxNzM3MjM2OSwzMTE0Mzgy
+MjksLTEwMTE2NTY5NTEsMTQyNzI3OTQzMiwtMTI5ODM0MjI1Ny
+wtNTE1OTE2MDEsLTEyMzk1NDcyNCwxNDQwMzYwMDAyLDI3Mjk2
+NDU0OV19
 -->
