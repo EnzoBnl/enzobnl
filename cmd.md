@@ -384,7 +384,7 @@ regular ^\s*\n
 
 ### VSCode
 ```
-# 
+# duplicate current line below
 Shift + Alt + Up Arrow Key
 ```
 
@@ -575,7 +575,7 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIwMTEyNzY2OCwxMDgwNDgwNzk0LC04Nz
+eyJoaXN0b3J5IjpbMTc0MjEyNDA1MSwxMDgwNDgwNzk0LC04Nz
 UzODQ4NzEsNDEzNzQ3NjcwLC0yMDEyMjI2MjA0LC0xMTcxOTc4
 ODgzLC03NzI2MTM4MjQsMzM0MjgyODIsLTkxNTczMDE1OSwtMj
 I1NTkzODg5LDcyMzA5MzU4MiwtMTgxNzM3MjM2OSwzMTE0Mzgy
