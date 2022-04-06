@@ -399,9 +399,15 @@ apm install hydrogen
 ```
 
 ### vim
+- save and quit
 ```
 esc (quit edit mode)
 type ':wq' + press enter (save and quit vim)
+```
+- move fast right and left: `e` and `b`
+- batch change
+```bash
+
 ```
 ### git
 [How to write good commit messages](https://chris.beams.io/posts/git-commit/#imperative)
@@ -575,11 +581,11 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTU5NTQ0NDYzLDEwODA0ODA3OTQsLTg3NT
-M4NDg3MSw0MTM3NDc2NzAsLTIwMTIyMjYyMDQsLTExNzE5Nzg4
-ODMsLTc3MjYxMzgyNCwzMzQyODI4MiwtOTE1NzMwMTU5LC0yMj
-U1OTM4ODksNzIzMDkzNTgyLC0xODE3MzcyMzY5LDMxMTQzODIy
-OSwtMTAxMTY1Njk1MSwxNDI3Mjc5NDMyLC0xMjk4MzQyMjU3LC
-01MTU5MTYwMSwtMTIzOTU0NzI0LDE0NDAzNjAwMDIsMjcyOTY0
-NTQ5XX0=
+eyJoaXN0b3J5IjpbMTg0MDI2NDc0Miw1NTk1NDQ0NjMsMTA4MD
+Q4MDc5NCwtODc1Mzg0ODcxLDQxMzc0NzY3MCwtMjAxMjIyNjIw
+NCwtMTE3MTk3ODg4MywtNzcyNjEzODI0LDMzNDI4MjgyLC05MT
+U3MzAxNTksLTIyNTU5Mzg4OSw3MjMwOTM1ODIsLTE4MTczNzIz
+NjksMzExNDM4MjI5LC0xMDExNjU2OTUxLDE0MjcyNzk0MzIsLT
+EyOTgzNDIyNTcsLTUxNTkxNjAxLC0xMjM5NTQ3MjQsMTQ0MDM2
+MDAwMl19
 -->
