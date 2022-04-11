@@ -401,14 +401,15 @@ apm install hydrogen
 ```
 
 ### vim
-- save and quit
-```
-esc (quit edit mode)
-type ':wq' + press enter (save and quit vim)
-```
-- move fast right and left: `e` and `b`
-- batch change
 ```bash
+# save and quit
+esc # quit edit mode
+:wq + press enter # save and quit vim)
+# move fast right
+
+# and left
+`e` and `b`
+# batch change
 
 ```
 ### git
@@ -583,7 +584,7 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzkxMTI3NjAzLDE4NDAyNjQ3NDIsNTU5NT
+eyJoaXN0b3J5IjpbODk2OTg1OTIxLDE4NDAyNjQ3NDIsNTU5NT
 Q0NDYzLDEwODA0ODA3OTQsLTg3NTM4NDg3MSw0MTM3NDc2NzAs
 LTIwMTIyMjYyMDQsLTExNzE5Nzg4ODMsLTc3MjYxMzgyNCwzMz
 QyODI4MiwtOTE1NzMwMTU5LC0yMjU1OTM4ODksNzIzMDkzNTgy
