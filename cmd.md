@@ -404,16 +404,22 @@ apm install hydrogen
 ```bash
 # quit mode
 esc
+
 # save and quit
 :wq
 enter
+
 # move fast right
 e
 # and left
 b
-# batch change
+
+# batch remove and write 
 Ctrl + V
-select characters rectwith arrow
+select characters to remove rectangle with arrows
+c
+*type stuff on one line*
+esc # applies to every lines
 ```
 ### git
 [How to write good commit messages](https://chris.beams.io/posts/git-commit/#imperative)
@@ -587,7 +593,7 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg1OTk1NDcyOCwxODQwMjY0NzQyLDU1OT
+eyJoaXN0b3J5IjpbMTM5Nzk4MDQ3NCwxODQwMjY0NzQyLDU1OT
 U0NDQ2MywxMDgwNDgwNzk0LC04NzUzODQ4NzEsNDEzNzQ3Njcw
 LC0yMDEyMjI2MjA0LC0xMTcxOTc4ODgzLC03NzI2MTM4MjQsMz
 M0MjgyODIsLTkxNTczMDE1OSwtMjI1NTkzODg5LDcyMzA5MzU4
