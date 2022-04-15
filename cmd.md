@@ -484,7 +484,7 @@ git push origin heads/<name>
 git show-ref (to know if heads/... or sm is needed)
 # show last sates of HEAD
 git reflog
-//show last commit log:
+#show last commit log:
 git log -1 --pretty=fuller
 # show commits history graph
 git log --graph
@@ -599,11 +599,11 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQzMTE0MzYxNCwxMzk3OTgwNDc0LDE4ND
-AyNjQ3NDIsNTU5NTQ0NDYzLDEwODA0ODA3OTQsLTg3NTM4NDg3
-MSw0MTM3NDc2NzAsLTIwMTIyMjYyMDQsLTExNzE5Nzg4ODMsLT
-c3MjYxMzgyNCwzMzQyODI4MiwtOTE1NzMwMTU5LC0yMjU1OTM4
-ODksNzIzMDkzNTgyLC0xODE3MzcyMzY5LDMxMTQzODIyOSwtMT
-AxMTY1Njk1MSwxNDI3Mjc5NDMyLC0xMjk4MzQyMjU3LC01MTU5
-MTYwMV19
+eyJoaXN0b3J5IjpbLTE1NjQ2ODAxMzMsMTQzMTE0MzYxNCwxMz
+k3OTgwNDc0LDE4NDAyNjQ3NDIsNTU5NTQ0NDYzLDEwODA0ODA3
+OTQsLTg3NTM4NDg3MSw0MTM3NDc2NzAsLTIwMTIyMjYyMDQsLT
+ExNzE5Nzg4ODMsLTc3MjYxMzgyNCwzMzQyODI4MiwtOTE1NzMw
+MTU5LC0yMjU1OTM4ODksNzIzMDkzNTgyLC0xODE3MzcyMzY5LD
+MxMTQzODIyOSwtMTAxMTY1Njk1MSwxNDI3Mjc5NDMyLC0xMjk4
+MzQyMjU3XX0=
 -->
