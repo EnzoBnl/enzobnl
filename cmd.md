@@ -487,7 +487,7 @@ git reflog
 #show last commit log:
 git log -1 --pretty=fuller
 # show commits history graph
-git log --graph
+git log --graph --oneline
 //update change in .gitignore
 git rm -r --cached .
 AND:
@@ -599,11 +599,11 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NjQ2ODAxMzMsMTQzMTE0MzYxNCwxMz
-k3OTgwNDc0LDE4NDAyNjQ3NDIsNTU5NTQ0NDYzLDEwODA0ODA3
-OTQsLTg3NTM4NDg3MSw0MTM3NDc2NzAsLTIwMTIyMjYyMDQsLT
-ExNzE5Nzg4ODMsLTc3MjYxMzgyNCwzMzQyODI4MiwtOTE1NzMw
-MTU5LC0yMjU1OTM4ODksNzIzMDkzNTgyLC0xODE3MzcyMzY5LD
-MxMTQzODIyOSwtMTAxMTY1Njk1MSwxNDI3Mjc5NDMyLC0xMjk4
-MzQyMjU3XX0=
+eyJoaXN0b3J5IjpbLTEzODk3NDMxMzUsLTE1NjQ2ODAxMzMsMT
+QzMTE0MzYxNCwxMzk3OTgwNDc0LDE4NDAyNjQ3NDIsNTU5NTQ0
+NDYzLDEwODA0ODA3OTQsLTg3NTM4NDg3MSw0MTM3NDc2NzAsLT
+IwMTIyMjYyMDQsLTExNzE5Nzg4ODMsLTc3MjYxMzgyNCwzMzQy
+ODI4MiwtOTE1NzMwMTU5LC0yMjU1OTM4ODksNzIzMDkzNTgyLC
+0xODE3MzcyMzY5LDMxMTQzODIyOSwtMTAxMTY1Njk1MSwxNDI3
+Mjc5NDMyXX0=
 -->
