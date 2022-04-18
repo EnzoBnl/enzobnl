@@ -488,6 +488,8 @@ git show-ref (to know if heads/... or sm is needed)
 git reflog
 #show last commit log:
 git log -1 --pretty=fuller
+# show commit in branch b that are not in a:
+git log a..b
 # show commits history graph
 git log --graph --oneline
 //update change in .gitignore
@@ -601,11 +603,11 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk1MDk0OTIxMSwtMTM4OTc0MzEzNSwtMT
-U2NDY4MDEzMywxNDMxMTQzNjE0LDEzOTc5ODA0NzQsMTg0MDI2
-NDc0Miw1NTk1NDQ0NjMsMTA4MDQ4MDc5NCwtODc1Mzg0ODcxLD
-QxMzc0NzY3MCwtMjAxMjIyNjIwNCwtMTE3MTk3ODg4MywtNzcy
-NjEzODI0LDMzNDI4MjgyLC05MTU3MzAxNTksLTIyNTU5Mzg4OS
-w3MjMwOTM1ODIsLTE4MTczNzIzNjksMzExNDM4MjI5LC0xMDEx
-NjU2OTUxXX0=
+eyJoaXN0b3J5IjpbLTQ3NDI3NDg1NCwtOTUwOTQ5MjExLC0xMz
+g5NzQzMTM1LC0xNTY0NjgwMTMzLDE0MzExNDM2MTQsMTM5Nzk4
+MDQ3NCwxODQwMjY0NzQyLDU1OTU0NDQ2MywxMDgwNDgwNzk0LC
+04NzUzODQ4NzEsNDEzNzQ3NjcwLC0yMDEyMjI2MjA0LC0xMTcx
+OTc4ODgzLC03NzI2MTM4MjQsMzM0MjgyODIsLTkxNTczMDE1OS
+wtMjI1NTkzODg5LDcyMzA5MzU4MiwtMTgxNzM3MjM2OSwzMTE0
+MzgyMjldfQ==
 -->
