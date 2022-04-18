@@ -490,6 +490,8 @@ git reflog
 git log -1 --pretty=fuller
 # show commit in branch b that are not in a:
 git log a..b
+# list branches containing commit foo123
+git branch --contains foo123
 # show commits history graph
 git log --graph --oneline
 //update change in .gitignore
@@ -603,11 +605,11 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ3NDI3NDg1NCwtOTUwOTQ5MjExLC0xMz
-g5NzQzMTM1LC0xNTY0NjgwMTMzLDE0MzExNDM2MTQsMTM5Nzk4
-MDQ3NCwxODQwMjY0NzQyLDU1OTU0NDQ2MywxMDgwNDgwNzk0LC
-04NzUzODQ4NzEsNDEzNzQ3NjcwLC0yMDEyMjI2MjA0LC0xMTcx
-OTc4ODgzLC03NzI2MTM4MjQsMzM0MjgyODIsLTkxNTczMDE1OS
-wtMjI1NTkzODg5LDcyMzA5MzU4MiwtMTgxNzM3MjM2OSwzMTE0
-MzgyMjldfQ==
+eyJoaXN0b3J5IjpbLTEyNDM2NDI3NDMsLTk1MDk0OTIxMSwtMT
+M4OTc0MzEzNSwtMTU2NDY4MDEzMywxNDMxMTQzNjE0LDEzOTc5
+ODA0NzQsMTg0MDI2NDc0Miw1NTk1NDQ0NjMsMTA4MDQ4MDc5NC
+wtODc1Mzg0ODcxLDQxMzc0NzY3MCwtMjAxMjIyNjIwNCwtMTE3
+MTk3ODg4MywtNzcyNjEzODI0LDMzNDI4MjgyLC05MTU3MzAxNT
+ksLTIyNTU5Mzg4OSw3MjMwOTM1ODIsLTE4MTczNzIzNjksMzEx
+NDM4MjI5XX0=
 -->
