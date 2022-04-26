@@ -526,6 +526,9 @@ $ sudo git reset --hard origin/master
 # Pull unitary commits onto current branch
 git cherry-pick <commit-hash>
 
+# git list files impacted by previous commit
+git diff --name-only HEAD HEAD~1
+
 # find a pattern of path in folder
 find <path_to_folder> -type <d or t> -name '*middleisthis*'
 
@@ -605,11 +608,11 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNDM2NDI3NDMsLTk1MDk0OTIxMSwtMT
-M4OTc0MzEzNSwtMTU2NDY4MDEzMywxNDMxMTQzNjE0LDEzOTc5
-ODA0NzQsMTg0MDI2NDc0Miw1NTk1NDQ0NjMsMTA4MDQ4MDc5NC
-wtODc1Mzg0ODcxLDQxMzc0NzY3MCwtMjAxMjIyNjIwNCwtMTE3
-MTk3ODg4MywtNzcyNjEzODI0LDMzNDI4MjgyLC05MTU3MzAxNT
-ksLTIyNTU5Mzg4OSw3MjMwOTM1ODIsLTE4MTczNzIzNjksMzEx
-NDM4MjI5XX0=
+eyJoaXN0b3J5IjpbNTM5NDU1NDEsLTEyNDM2NDI3NDMsLTk1MD
+k0OTIxMSwtMTM4OTc0MzEzNSwtMTU2NDY4MDEzMywxNDMxMTQz
+NjE0LDEzOTc5ODA0NzQsMTg0MDI2NDc0Miw1NTk1NDQ0NjMsMT
+A4MDQ4MDc5NCwtODc1Mzg0ODcxLDQxMzc0NzY3MCwtMjAxMjIy
+NjIwNCwtMTE3MTk3ODg4MywtNzcyNjEzODI0LDMzNDI4MjgyLC
+05MTU3MzAxNTksLTIyNTU5Mzg4OSw3MjMwOTM1ODIsLTE4MTcz
+NzIzNjldfQ==
 -->
