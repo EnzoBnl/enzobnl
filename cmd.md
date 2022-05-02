@@ -592,7 +592,9 @@ kubectl port-forward svc/airflow-webserver 8080:8080 --namespace airflow
 kubectl create deployment --image eu.gcr.io/playground-314008/example:0.0.1 example
 kubectl expose deploy example --port=5000 --target-port=8080 --name=example-http-ext --type=LoadBalancer
 # get logs from a pod (streamed real-time with -f)
-kubectl --context ... --namespace ... logs <pod_name> -f
+kubectl --context ... --namespace ... logs -f <pod_name>
+# get logs from all pods of a deployment
+kubectl --context ... --namespace ... logs deployment/<pod_name>
 # scale to 0 pods: noOp deployment
 kubectl scale --replicas=0 deployment <deployment_name>
 # edit and redeploy a deployment (vim-like edition)
@@ -608,11 +610,11 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTM5NDU1NDEsLTEyNDM2NDI3NDMsLTk1MD
-k0OTIxMSwtMTM4OTc0MzEzNSwtMTU2NDY4MDEzMywxNDMxMTQz
-NjE0LDEzOTc5ODA0NzQsMTg0MDI2NDc0Miw1NTk1NDQ0NjMsMT
-A4MDQ4MDc5NCwtODc1Mzg0ODcxLDQxMzc0NzY3MCwtMjAxMjIy
-NjIwNCwtMTE3MTk3ODg4MywtNzcyNjEzODI0LDMzNDI4MjgyLC
-05MTU3MzAxNTksLTIyNTU5Mzg4OSw3MjMwOTM1ODIsLTE4MTcz
-NzIzNjldfQ==
+eyJoaXN0b3J5IjpbLTE5OTY4NTM2NzEsNTM5NDU1NDEsLTEyND
+M2NDI3NDMsLTk1MDk0OTIxMSwtMTM4OTc0MzEzNSwtMTU2NDY4
+MDEzMywxNDMxMTQzNjE0LDEzOTc5ODA0NzQsMTg0MDI2NDc0Mi
+w1NTk1NDQ0NjMsMTA4MDQ4MDc5NCwtODc1Mzg0ODcxLDQxMzc0
+NzY3MCwtMjAxMjIyNjIwNCwtMTE3MTk3ODg4MywtNzcyNjEzOD
+I0LDMzNDI4MjgyLC05MTU3MzAxNTksLTIyNTU5Mzg4OSw3MjMw
+OTM1ODJdfQ==
 -->
