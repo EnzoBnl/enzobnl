@@ -501,8 +501,10 @@ git add .
 git commit ...etc
 //rename last commit
 git commit --amend -m "New commit message"
-//merge stashed changes with pulled (or just current) state
+# merge stashed changes with pulled (or just current) state
 git stash apply
+# git stash a specific path or filename
+git stash push <path>
 # co author commit
 git commit -m "Refactor usability tests.
 >
@@ -610,11 +612,11 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5OTY4NTM2NzEsNTM5NDU1NDEsLTEyND
-M2NDI3NDMsLTk1MDk0OTIxMSwtMTM4OTc0MzEzNSwtMTU2NDY4
-MDEzMywxNDMxMTQzNjE0LDEzOTc5ODA0NzQsMTg0MDI2NDc0Mi
-w1NTk1NDQ0NjMsMTA4MDQ4MDc5NCwtODc1Mzg0ODcxLDQxMzc0
-NzY3MCwtMjAxMjIyNjIwNCwtMTE3MTk3ODg4MywtNzcyNjEzOD
-I0LDMzNDI4MjgyLC05MTU3MzAxNTksLTIyNTU5Mzg4OSw3MjMw
-OTM1ODJdfQ==
+eyJoaXN0b3J5IjpbLTE5ODMwMzE3NDYsLTE5OTY4NTM2NzEsNT
+M5NDU1NDEsLTEyNDM2NDI3NDMsLTk1MDk0OTIxMSwtMTM4OTc0
+MzEzNSwtMTU2NDY4MDEzMywxNDMxMTQzNjE0LDEzOTc5ODA0Nz
+QsMTg0MDI2NDc0Miw1NTk1NDQ0NjMsMTA4MDQ4MDc5NCwtODc1
+Mzg0ODcxLDQxMzc0NzY3MCwtMjAxMjIyNjIwNCwtMTE3MTk3OD
+g4MywtNzcyNjEzODI0LDMzNDI4MjgyLC05MTU3MzAxNTksLTIy
+NTU5Mzg4OV19
 -->
