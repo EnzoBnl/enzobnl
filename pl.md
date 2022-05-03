@@ -741,8 +741,40 @@ p[5] = a;
 trash[1][2] = a;
 
 ```
+
+# SQL
+## SELECT struct replacing only one field in it
+```sql
+SELECT
+  ...
+  , SELECT AS STRUCT struct_name.* REPLACE(new_value as struct_field)
+FROM ...
+```
+
+## Get a sample of 10 values from a group
+```sql
+SELECT ARRAY_AGG(field LIMIT 10) FROM ...
+```
+
+Only distinct values:
+```sql
+SELECT ARRAY_AGG(DISTINCT field LIMIT 10) FROM ...
+```
+
+
+## LEFT SEMI JOIN
+The result table of `A LEFT SEMI JOIN B` is a subset of `A`'s records (only `A`'s fields) whose key is matching at least 1 record in `B`.
+
+## Recursive CTE
+```sql
+WITH RECURSIVE cte AS (
+	SELECT /* Anchor */
+	UNION ALL
+	SELECT /* Recursive s
+)
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEwNjE1NDE1Nyw3NTEwNzY0MTgsMTEwMT
+eyJoaXN0b3J5IjpbLTQyMDI0MTgzOSw3NTEwNzY0MTgsMTEwMT
 Q5MjUwMCwxNTkyMDk4MTUyLC01NzcwNzk1MjAsOTYzNTE0NjQ1
 LC0xNTYwOTYyNDk0LDIwNTI3NzI1MzcsOTk5MzQyMTE2LDIxMT
 QzMTIzNTIsLTE4NjQ1MzAwNjAsLTQ5ODA1MjE0MywtMzY3OTY5
