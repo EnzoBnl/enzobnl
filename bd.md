@@ -116,6 +116,11 @@ chromium-browser --user-data-dir --proxy-server="socks5://127.0.0.1:1080"
 See:
 Google's [*BigQuery Under the Hood* podcast](https://www.youtube.com/watch?v=2jDGAl4Ef-Y) and [blog article](https://cloud.google.com/blog/products/bigquery/bigquery-under-the-hood)
 
+### Run query from cmd
+```bash
+
+```
+
 ### Get and Update table schema
 
 - retrieve it: `bq show --schema --format=prettyjson project_id:dataset.table > schema_file.json`
@@ -234,11 +239,11 @@ Known as [Incremental encoding](https://en.wikipedia.org/wiki/Incremental_encodi
 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ1NTcxMTIwNSwtMTY3OTE3Nzg0MCwtMj
-AwNDUwNTc4NCwxOTIzNzMzNzUyLDE0OTYyMjUwOSwyOTAwNDkw
-NzUsNDI0NDIzMjczLC0xNzExMDUzMDAsLTE3NjgyMTI4MDcsLT
-EwOTM3OTE1MzUsMTE5OTA0Nzk5NSwtMTM0MjEzNjY5LDIwODMz
-Mjk2OTAsMTEwMzMyMTY2LC0yMTMyNTQ0NDI1LDU0Mjc2NzU1OC
-wtMTk0NTcyMTExNiwtMjAyMDUyMzY1OSw5MjI3MzE0MDcsMTM0
-NDk0MTE3MV19
+eyJoaXN0b3J5IjpbMTIyMzc4ODU2MSwxNDU1NzExMjA1LC0xNj
+c5MTc3ODQwLC0yMDA0NTA1Nzg0LDE5MjM3MzM3NTIsMTQ5NjIy
+NTA5LDI5MDA0OTA3NSw0MjQ0MjMyNzMsLTE3MTEwNTMwMCwtMT
+c2ODIxMjgwNywtMTA5Mzc5MTUzNSwxMTk5MDQ3OTk1LC0xMzQy
+MTM2NjksMjA4MzMyOTY5MCwxMTAzMzIxNjYsLTIxMzI1NDQ0Mj
+UsNTQyNzY3NTU4LC0xOTQ1NzIxMTE2LC0yMDIwNTIzNjU5LDky
+MjczMTQwN119
 -->
