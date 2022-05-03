@@ -777,6 +777,18 @@ WITH RECURSIVE cte AS (
 	WHERE /*...*/
 )
 ```
+
+Let's call
+```
+  SELECT
+		/*...*/
+	FROM cte
+		/*...*/
+	WHERE /*...*/
+```
+the recursive statement.
+
+What the en
 1. Engine will first evaluate `SELECT /*...*/ -- anchor statement` -> `cte0`
 2. Then 
 ```
@@ -786,23 +798,16 @@ WITH RECURSIVE cte AS (
 		/*...*/
 	WHERE /*...*/
 ```
-is evaluated with `cte = cte0`
-3. Then 
-```
-  SELECT
-		/*...*/
-	FROM cte
-		/*...*/
-	WHERE /*...*/
-```
-is evaluated with `cte = cte1` as ct
+is evaluated with `cte = cte0` -> `cte1`
+3. Then the recursive statement
+is evaluated with `cte = cte1` -> `cte2` 
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM4MTMzNDM0Myw3NTEwNzY0MTgsMTEwMT
-Q5MjUwMCwxNTkyMDk4MTUyLC01NzcwNzk1MjAsOTYzNTE0NjQ1
-LC0xNTYwOTYyNDk0LDIwNTI3NzI1MzcsOTk5MzQyMTE2LDIxMT
-QzMTIzNTIsLTE4NjQ1MzAwNjAsLTQ5ODA1MjE0MywtMzY3OTY5
-MTI1LDYxMDY0MTU0Nyw2Mjg2ODcwNzEsMTYyNDM4ODU3MywtMT
-YzNjQ3MjAyMSw2MTA5MDI0NzUsLTI2NzM5OTc1LDE5Nzk5MzQz
-MTNdfQ==
+eyJoaXN0b3J5IjpbLTEzOTY5NjM5MzgsNzUxMDc2NDE4LDExMD
+E0OTI1MDAsMTU5MjA5ODE1MiwtNTc3MDc5NTIwLDk2MzUxNDY0
+NSwtMTU2MDk2MjQ5NCwyMDUyNzcyNTM3LDk5OTM0MjExNiwyMT
+E0MzEyMzUyLC0xODY0NTMwMDYwLC00OTgwNTIxNDMsLTM2Nzk2
+OTEyNSw2MTA2NDE1NDcsNjI4Njg3MDcxLDE2MjQzODg1NzMsLT
+E2MzY0NzIwMjEsNjEwOTAyNDc1LC0yNjczOTk3NSwxOTc5OTM0
+MzEzXX0=
 -->
