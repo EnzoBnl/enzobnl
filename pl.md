@@ -768,13 +768,19 @@ The result table of `A LEFT SEMI JOIN B` is a subset of `A`'s records (only `A`'
 ## Recursive CTE
 ```sql
 WITH RECURSIVE cte AS (
-	SELECT /* Anchor */
+	SELECT /*...*/ -- anchor s
 	UNION ALL
-	SELECT /* Recursive s
+	SELECT
+		/*...*/
+	FROM cte
+		/*...*/
+	WHERE /*...*/
 )
 ```
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQyMDI0MTgzOSw3NTEwNzY0MTgsMTEwMT
+eyJoaXN0b3J5IjpbMTY5NDU5MzM3Nyw3NTEwNzY0MTgsMTEwMT
 Q5MjUwMCwxNTkyMDk4MTUyLC01NzcwNzk1MjAsOTYzNTE0NjQ1
 LC0xNTYwOTYyNDk0LDIwNTI3NzI1MzcsOTk5MzQyMTE2LDIxMT
 QzMTIzNTIsLTE4NjQ1MzAwNjAsLTQ5ODA1MjE0MywtMzY3OTY5
