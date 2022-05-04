@@ -433,6 +433,8 @@ p
 [How to write good commit messages](https://chris.beams.io/posts/git-commit/#imperative)
 
 ```bash 
+# show common ancestor commit between branch A and B
+git merge-base A B
 # git merge B in A, without merge commit (if ff not possible then error):
 git switch A
 git merge B --ff-only
@@ -615,11 +617,11 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTA3MTEyNzk3LC0xOTgzMDMxNzQ2LC0xOT
-k2ODUzNjcxLDUzOTQ1NTQxLC0xMjQzNjQyNzQzLC05NTA5NDky
-MTEsLTEzODk3NDMxMzUsLTE1NjQ2ODAxMzMsMTQzMTE0MzYxNC
-wxMzk3OTgwNDc0LDE4NDAyNjQ3NDIsNTU5NTQ0NDYzLDEwODA0
-ODA3OTQsLTg3NTM4NDg3MSw0MTM3NDc2NzAsLTIwMTIyMjYyMD
-QsLTExNzE5Nzg4ODMsLTc3MjYxMzgyNCwzMzQyODI4MiwtOTE1
-NzMwMTU5XX0=
+eyJoaXN0b3J5IjpbMTMzODQ4OTM2NywtMTk4MzAzMTc0NiwtMT
+k5Njg1MzY3MSw1Mzk0NTU0MSwtMTI0MzY0Mjc0MywtOTUwOTQ5
+MjExLC0xMzg5NzQzMTM1LC0xNTY0NjgwMTMzLDE0MzExNDM2MT
+QsMTM5Nzk4MDQ3NCwxODQwMjY0NzQyLDU1OTU0NDQ2MywxMDgw
+NDgwNzk0LC04NzUzODQ4NzEsNDEzNzQ3NjcwLC0yMDEyMjI2Mj
+A0LC0xMTcxOTc4ODgzLC03NzI2MTM4MjQsMzM0MjgyODIsLTkx
+NTczMDE1OV19
 -->
