@@ -790,9 +790,9 @@ the recursive statement.
 
 What the engine does:
 1. It will first evaluate `SELECT /*...*/ -- anchor statement` -> `cte0`
-2. Then the recursive statement is evaluated with `cte = cte0` -> `cte1`
+2. Then the recursive statement is evaluated with `cte0` as `cte` and produce `cte1`
 3. Then the recursive statement
-is evaluated with `cte = cte1` -> `cte2` 
+is evaluated with `cte1` as `cte` and produce `cte2`
 ...
 
 continues as long as a recursive statement evaluation returns empty result.
@@ -800,11 +800,11 @@ continues as long as a recursive statement evaluation returns empty result.
 In the end, `cte` contains the union of the anchor statement and all the recursive statement evaluations.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MzY0NTIzNTAsNzUxMDc2NDE4LDExMD
-E0OTI1MDAsMTU5MjA5ODE1MiwtNTc3MDc5NTIwLDk2MzUxNDY0
-NSwtMTU2MDk2MjQ5NCwyMDUyNzcyNTM3LDk5OTM0MjExNiwyMT
-E0MzEyMzUyLC0xODY0NTMwMDYwLC00OTgwNTIxNDMsLTM2Nzk2
-OTEyNSw2MTA2NDE1NDcsNjI4Njg3MDcxLDE2MjQzODg1NzMsLT
-E2MzY0NzIwMjEsNjEwOTAyNDc1LC0yNjczOTk3NSwxOTc5OTM0
-MzEzXX0=
+eyJoaXN0b3J5IjpbMTM5MDE5NzQ0MiwtMTczNjQ1MjM1MCw3NT
+EwNzY0MTgsMTEwMTQ5MjUwMCwxNTkyMDk4MTUyLC01NzcwNzk1
+MjAsOTYzNTE0NjQ1LC0xNTYwOTYyNDk0LDIwNTI3NzI1MzcsOT
+k5MzQyMTE2LDIxMTQzMTIzNTIsLTE4NjQ1MzAwNjAsLTQ5ODA1
+MjE0MywtMzY3OTY5MTI1LDYxMDY0MTU0Nyw2Mjg2ODcwNzEsMT
+YyNDM4ODU3MywtMTYzNjQ3MjAyMSw2MTA5MDI0NzUsLTI2NzM5
+OTc1XX0=
 -->
