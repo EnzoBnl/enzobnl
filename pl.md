@@ -797,14 +797,14 @@ is evaluated with `cte = cte1` -> `cte2`
 
 continues as long as a recursive statement evaluation returns empty result.
 
-At the end the cte contains the union of all the 
+In the end, `cte` contains the union of the anchor statement and all the recursive statement evaluations.
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODA3NjM5OTEzLDc1MTA3NjQxOCwxMTAxND
-kyNTAwLDE1OTIwOTgxNTIsLTU3NzA3OTUyMCw5NjM1MTQ2NDUs
-LTE1NjA5NjI0OTQsMjA1Mjc3MjUzNyw5OTkzNDIxMTYsMjExND
-MxMjM1MiwtMTg2NDUzMDA2MCwtNDk4MDUyMTQzLC0zNjc5Njkx
-MjUsNjEwNjQxNTQ3LDYyODY4NzA3MSwxNjI0Mzg4NTczLC0xNj
-M2NDcyMDIxLDYxMDkwMjQ3NSwtMjY3Mzk5NzUsMTk3OTkzNDMx
-M119
+eyJoaXN0b3J5IjpbLTE3MzY0NTIzNTAsNzUxMDc2NDE4LDExMD
+E0OTI1MDAsMTU5MjA5ODE1MiwtNTc3MDc5NTIwLDk2MzUxNDY0
+NSwtMTU2MDk2MjQ5NCwyMDUyNzcyNTM3LDk5OTM0MjExNiwyMT
+E0MzEyMzUyLC0xODY0NTMwMDYwLC00OTgwNTIxNDMsLTM2Nzk2
+OTEyNSw2MTA2NDE1NDcsNjI4Njg3MDcxLDE2MjQzODg1NzMsLT
+E2MzY0NzIwMjEsNjEwOTAyNDc1LC0yNjczOTk3NSwxOTc5OTM0
+MzEzXX0=
 -->
