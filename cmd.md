@@ -434,7 +434,10 @@ p
 
 ```bash 
 # show common ancestor commit between branch A and B
-git merge-base A B # result ->
+git merge-base A B # result -> C
+# with previous example, these two 3-dots diff are equivalent:
+git diff A...B
+git diff C...B
 
 # git merge B in A, without merge commit (if ff not possible then error):
 git switch A
@@ -618,11 +621,11 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM1NDk1OTM5MiwtMTk4MzAzMTc0NiwtMT
-k5Njg1MzY3MSw1Mzk0NTU0MSwtMTI0MzY0Mjc0MywtOTUwOTQ5
-MjExLC0xMzg5NzQzMTM1LC0xNTY0NjgwMTMzLDE0MzExNDM2MT
-QsMTM5Nzk4MDQ3NCwxODQwMjY0NzQyLDU1OTU0NDQ2MywxMDgw
-NDgwNzk0LC04NzUzODQ4NzEsNDEzNzQ3NjcwLC0yMDEyMjI2Mj
-A0LC0xMTcxOTc4ODgzLC03NzI2MTM4MjQsMzM0MjgyODIsLTkx
-NTczMDE1OV19
+eyJoaXN0b3J5IjpbLTExNzM0NDM3MzEsLTE5ODMwMzE3NDYsLT
+E5OTY4NTM2NzEsNTM5NDU1NDEsLTEyNDM2NDI3NDMsLTk1MDk0
+OTIxMSwtMTM4OTc0MzEzNSwtMTU2NDY4MDEzMywxNDMxMTQzNj
+E0LDEzOTc5ODA0NzQsMTg0MDI2NDc0Miw1NTk1NDQ0NjMsMTA4
+MDQ4MDc5NCwtODc1Mzg0ODcxLDQxMzc0NzY3MCwtMjAxMjIyNj
+IwNCwtMTE3MTk3ODg4MywtNzcyNjEzODI0LDMzNDI4MjgyLC05
+MTU3MzAxNTldfQ==
 -->
