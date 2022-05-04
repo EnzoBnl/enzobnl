@@ -438,7 +438,8 @@ git merge-base A B # result -> C
 # with previous example, these two 3-dots diff are equivalent:
 git diff A...B
 git diff C...B
-# true branch to branch diff us
+# true branch to branch diff uses 2-dots
+git diff A..B
 
 # git merge B in A, without merge commit (if ff not possible then error):
 git switch A
@@ -622,7 +623,7 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA4Mzk5OTQ1NCwtMTk4MzAzMTc0NiwtMT
+eyJoaXN0b3J5IjpbLTIwMjM1OTE2NSwtMTk4MzAzMTc0NiwtMT
 k5Njg1MzY3MSw1Mzk0NTU0MSwtMTI0MzY0Mjc0MywtOTUwOTQ5
 MjExLC0xMzg5NzQzMTM1LC0xNTY0NjgwMTMzLDE0MzExNDM2MT
 QsMTM5Nzk4MDQ3NCwxODQwMjY0NzQyLDU1OTU0NDQ2MywxMDgw
