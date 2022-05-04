@@ -433,6 +433,7 @@ p
 [How to write good commit messages](https://chris.beams.io/posts/git-commit/#imperative)
 
 ```bash 
+# git merge without merge committing
 # Instruct git to always access remote repositories using ssh instead of https (useful for vscode golang)
 git config --global url.git@github.com:.insteadOf https://github.com/
 # cherry pick a commit's changes
@@ -612,11 +613,11 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5ODMwMzE3NDYsLTE5OTY4NTM2NzEsNT
-M5NDU1NDEsLTEyNDM2NDI3NDMsLTk1MDk0OTIxMSwtMTM4OTc0
-MzEzNSwtMTU2NDY4MDEzMywxNDMxMTQzNjE0LDEzOTc5ODA0Nz
-QsMTg0MDI2NDc0Miw1NTk1NDQ0NjMsMTA4MDQ4MDc5NCwtODc1
-Mzg0ODcxLDQxMzc0NzY3MCwtMjAxMjIyNjIwNCwtMTE3MTk3OD
-g4MywtNzcyNjEzODI0LDMzNDI4MjgyLC05MTU3MzAxNTksLTIy
-NTU5Mzg4OV19
+eyJoaXN0b3J5IjpbNTMwNTI3NTYwLC0xOTgzMDMxNzQ2LC0xOT
+k2ODUzNjcxLDUzOTQ1NTQxLC0xMjQzNjQyNzQzLC05NTA5NDky
+MTEsLTEzODk3NDMxMzUsLTE1NjQ2ODAxMzMsMTQzMTE0MzYxNC
+wxMzk3OTgwNDc0LDE4NDAyNjQ3NDIsNTU5NTQ0NDYzLDEwODA0
+ODA3OTQsLTg3NTM4NDg3MSw0MTM3NDc2NzAsLTIwMTIyMjYyMD
+QsLTExNzE5Nzg4ODMsLTc3MjYxMzgyNCwzMzQyODI4MiwtOTE1
+NzMwMTU5XX0=
 -->
