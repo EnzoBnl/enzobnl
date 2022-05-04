@@ -436,8 +436,8 @@ p
 # show common ancestor commit between branch A and B
 git merge-base A B # result -> C
 # with previous example, these two 3-dots diff are equivalent:
-git diff A...B
-git diff C...B
+git diff A...B # diff between common ancestor of A and B (=C) and B
+git diff C...B # diff between common ancestor of C and B (=C) and B
 # true branch to branch diff uses 2-dots
 git diff A..B
 
@@ -623,11 +623,11 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMjM1OTE2NSwtMTk4MzAzMTc0NiwtMT
-k5Njg1MzY3MSw1Mzk0NTU0MSwtMTI0MzY0Mjc0MywtOTUwOTQ5
-MjExLC0xMzg5NzQzMTM1LC0xNTY0NjgwMTMzLDE0MzExNDM2MT
-QsMTM5Nzk4MDQ3NCwxODQwMjY0NzQyLDU1OTU0NDQ2MywxMDgw
-NDgwNzk0LC04NzUzODQ4NzEsNDEzNzQ3NjcwLC0yMDEyMjI2Mj
-A0LC0xMTcxOTc4ODgzLC03NzI2MTM4MjQsMzM0MjgyODIsLTkx
-NTczMDE1OV19
+eyJoaXN0b3J5IjpbOTU3NTU4MzAxLC0xOTgzMDMxNzQ2LC0xOT
+k2ODUzNjcxLDUzOTQ1NTQxLC0xMjQzNjQyNzQzLC05NTA5NDky
+MTEsLTEzODk3NDMxMzUsLTE1NjQ2ODAxMzMsMTQzMTE0MzYxNC
+wxMzk3OTgwNDc0LDE4NDAyNjQ3NDIsNTU5NTQ0NDYzLDEwODA0
+ODA3OTQsLTg3NTM4NDg3MSw0MTM3NDc2NzAsLTIwMTIyMjYyMD
+QsLTExNzE5Nzg4ODMsLTc3MjYxMzgyNCwzMzQyODI4MiwtOTE1
+NzMwMTU5XX0=
 -->
