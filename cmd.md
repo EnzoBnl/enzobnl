@@ -433,8 +433,9 @@ p
 [How to write good commit messages](https://chris.beams.io/posts/git-commit/#imperative)
 
 ```bash 
-# git merge B in A, without merge commit (if ff not possible then error), on branch A
-git merge --ff-only
+# git merge B in A, without merge commit (if ff not possible then error):
+git switch A
+git merge B --ff-only
 # Instruct git to always access remote repositories using ssh instead of https (useful for vscode golang)
 git config --global url.git@github.com:.insteadOf https://github.com/
 # cherry pick a commit's changes
@@ -614,7 +615,7 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODQ2MjcxNjQyLC0xOTgzMDMxNzQ2LC0xOT
+eyJoaXN0b3J5IjpbNTA3MTEyNzk3LC0xOTgzMDMxNzQ2LC0xOT
 k2ODUzNjcxLDUzOTQ1NTQxLC0xMjQzNjQyNzQzLC05NTA5NDky
 MTEsLTEzODk3NDMxMzUsLTE1NjQ2ODAxMzMsMTQzMTE0MzYxNC
 wxMzk3OTgwNDc0LDE4NDAyNjQ3NDIsNTU5NTQ0NDYzLDEwODA0
