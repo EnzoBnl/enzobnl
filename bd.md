@@ -242,12 +242,12 @@ Known as [Incremental encoding](https://en.wikipedia.org/wiki/Incremental_encodi
 |--|--|--|--|
 |targeted workload|OLTP|OLAP|OLTP|
 |main feature|performant random access using indexes|decouples scaling of storage and processing resources|in memory distributed storage for super fast and scalable key retrieval|
-|||||
+|support relational model|yes|yes|no|
 |typical data model|3NF|Dimensional model|key-value pairs|
 |data format|row-based|columnar|hashmap-like|
 |examples|MySQL, Postgres, Oracle|BigQuery, Snowflake, Redshift|Aerospike, Redis, Ignite|
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyODUwNTMyNzYsLTIwMjM5Mjc4OTEsMT
+eyJoaXN0b3J5IjpbLTExMzU1ODAxNDYsLTIwMjM5Mjc4OTEsMT
 IyMzc4ODU2MSwxNDU1NzExMjA1LC0xNjc5MTc3ODQwLC0yMDA0
 NTA1Nzg0LDE5MjM3MzM3NTIsMTQ5NjIyNTA5LDI5MDA0OTA3NS
 w0MjQ0MjMyNzMsLTE3MTEwNTMwMCwtMTc2ODIxMjgwNywtMTA5
