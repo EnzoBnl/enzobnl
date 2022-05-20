@@ -237,20 +237,20 @@ Suppoted type is `BYTE_ARRAY`.
 Known as [Incremental encoding](https://en.wikipedia.org/wiki/Incremental_encoding), it is another delta encoding that elude the writing of common prefix and suffix between: may lead to nice compression for close HTML pages.
 
 
-# Data warehouse vs traditional RDBMS
+# Data warehouse vs traditional RDBMS vs
 ||trad RDBMS|Data warehouse|
 |--|--|--|
-|excels at|OLTP|OLAP|
+|targeted workload|OLTP|OLAP|
 |main feature|performant random access using indexes|decouples scaling of storage and processing resources|
 |typical data model|3NF|Dimensional model|
 |data storage format|row-based|columnar|
 |examples|MySQL, Postgres, Oracle|BigQuery, Snowflake, Redshift|
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMTQ1MDQ3MzIsLTIwMjM5Mjc4OTEsMT
-IyMzc4ODU2MSwxNDU1NzExMjA1LC0xNjc5MTc3ODQwLC0yMDA0
-NTA1Nzg0LDE5MjM3MzM3NTIsMTQ5NjIyNTA5LDI5MDA0OTA3NS
-w0MjQ0MjMyNzMsLTE3MTEwNTMwMCwtMTc2ODIxMjgwNywtMTA5
-Mzc5MTUzNSwxMTk5MDQ3OTk1LC0xMzQyMTM2NjksMjA4MzMyOT
-Y5MCwxMTAzMzIxNjYsLTIxMzI1NDQ0MjUsNTQyNzY3NTU4LC0x
-OTQ1NzIxMTE2XX0=
+eyJoaXN0b3J5IjpbLTE5MTIzMjM4MSwtMjAyMzkyNzg5MSwxMj
+IzNzg4NTYxLDE0NTU3MTEyMDUsLTE2NzkxNzc4NDAsLTIwMDQ1
+MDU3ODQsMTkyMzczMzc1MiwxNDk2MjI1MDksMjkwMDQ5MDc1LD
+QyNDQyMzI3MywtMTcxMTA1MzAwLC0xNzY4MjEyODA3LC0xMDkz
+NzkxNTM1LDExOTkwNDc5OTUsLTEzNDIxMzY2OSwyMDgzMzI5Nj
+kwLDExMDMzMjE2NiwtMjEzMjU0NDQyNSw1NDI3Njc1NTgsLTE5
+NDU3MjExMTZdfQ==
 -->
