@@ -242,15 +242,16 @@ Known as [Incremental encoding](https://en.wikipedia.org/wiki/Incremental_encodi
 |--|--|--|
 |excels at|OLTP|OLAP|
 |main feature|extensively uses indexes for random access|decouples storage and processing resources|
+|scalability|scale storage along processing using sharding||
 |typical data model|3NF|Dimensional model|
 |data storage format|row-based|columnar|
 |examples|MySQL, Postgres, Oracle|BigQuery, Snowflake, Redshift|
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMjM5Mjc4OTEsMTIyMzc4ODU2MSwxND
-U1NzExMjA1LC0xNjc5MTc3ODQwLC0yMDA0NTA1Nzg0LDE5MjM3
-MzM3NTIsMTQ5NjIyNTA5LDI5MDA0OTA3NSw0MjQ0MjMyNzMsLT
-E3MTEwNTMwMCwtMTc2ODIxMjgwNywtMTA5Mzc5MTUzNSwxMTk5
-MDQ3OTk1LC0xMzQyMTM2NjksMjA4MzMyOTY5MCwxMTAzMzIxNj
-YsLTIxMzI1NDQ0MjUsNTQyNzY3NTU4LC0xOTQ1NzIxMTE2LC0y
-MDIwNTIzNjU5XX0=
+eyJoaXN0b3J5IjpbLTMyMjQ3NDQ0MywtMjAyMzkyNzg5MSwxMj
+IzNzg4NTYxLDE0NTU3MTEyMDUsLTE2NzkxNzc4NDAsLTIwMDQ1
+MDU3ODQsMTkyMzczMzc1MiwxNDk2MjI1MDksMjkwMDQ5MDc1LD
+QyNDQyMzI3MywtMTcxMTA1MzAwLC0xNzY4MjEyODA3LC0xMDkz
+NzkxNTM1LDExOTkwNDc5OTUsLTEzNDIxMzY2OSwyMDgzMzI5Nj
+kwLDExMDMzMjE2NiwtMjEzMjU0NDQyNSw1NDI3Njc1NTgsLTE5
+NDU3MjExMTZdfQ==
 -->
