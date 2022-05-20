@@ -240,16 +240,16 @@ Known as [Incremental encoding](https://en.wikipedia.org/wiki/Incremental_encodi
 # Data warehouse vs traditional RDBMS
 ||trad RDBMS|Data warehouse|
 |--|--|--|
-||||
-||||
-||||
+|excels at|OLTP|OLAP|
+|main feature|indexes for random access|Storage and |
+|typical data model|3NF|Dimensional model|
 ||||
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzkzNTI2NDQ2LDEyMjM3ODg1NjEsMTQ1NT
-cxMTIwNSwtMTY3OTE3Nzg0MCwtMjAwNDUwNTc4NCwxOTIzNzMz
-NzUyLDE0OTYyMjUwOSwyOTAwNDkwNzUsNDI0NDIzMjczLC0xNz
-ExMDUzMDAsLTE3NjgyMTI4MDcsLTEwOTM3OTE1MzUsMTE5OTA0
-Nzk5NSwtMTM0MjEzNjY5LDIwODMzMjk2OTAsMTEwMzMyMTY2LC
-0yMTMyNTQ0NDI1LDU0Mjc2NzU1OCwtMTk0NTcyMTExNiwtMjAy
-MDUyMzY1OV19
+eyJoaXN0b3J5IjpbLTE5NjY1NDQ1MzksMTIyMzc4ODU2MSwxND
+U1NzExMjA1LC0xNjc5MTc3ODQwLC0yMDA0NTA1Nzg0LDE5MjM3
+MzM3NTIsMTQ5NjIyNTA5LDI5MDA0OTA3NSw0MjQ0MjMyNzMsLT
+E3MTEwNTMwMCwtMTc2ODIxMjgwNywtMTA5Mzc5MTUzNSwxMTk5
+MDQ3OTk1LC0xMzQyMTM2NjksMjA4MzMyOTY5MCwxMTAzMzIxNj
+YsLTIxMzI1NDQ0MjUsNTQyNzY3NTU4LC0xOTQ1NzIxMTE2LC0y
+MDIwNTIzNjU5XX0=
 -->
