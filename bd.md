@@ -241,12 +241,12 @@ Known as [Incremental encoding](https://en.wikipedia.org/wiki/Incremental_encodi
 ||trad RDBMS|Data warehouse|Key-Value Store|
 |--|--|--|--|
 |targeted workload|OLTP|OLAP|OLTP|
-|main feature|performant random access using indexes|decouples scaling of storage and processing resources|in memory distributed storage for super fast retrieval|
+|main feature|performant random access using indexes|decouples scaling of storage and processing resources|in memory distributed storage for super fast key retrieval|
 |typical data model|3NF|Dimensional model|key-value pairs|
-|data storage format|row-based|columnar||
-|examples|MySQL, Postgres, Oracle|BigQuery, Snowflake, Redshift|
+|data format|row-based|columnar|hashmap-like|
+|examples|MySQL, Postgres, Oracle|BigQuery, Snowflake, Redshift|Aerospike, Redis, Ignite|
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTI3NzEwODIsLTIwMjM5Mjc4OTEsMTIyMz
+eyJoaXN0b3J5IjpbMjE2MjYzMDAsLTIwMjM5Mjc4OTEsMTIyMz
 c4ODU2MSwxNDU1NzExMjA1LC0xNjc5MTc3ODQwLC0yMDA0NTA1
 Nzg0LDE5MjM3MzM3NTIsMTQ5NjIyNTA5LDI5MDA0OTA3NSw0Mj
 Q0MjMyNzMsLTE3MTEwNTMwMCwtMTc2ODIxMjgwNywtMTA5Mzc5
