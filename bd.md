@@ -241,13 +241,12 @@ Known as [Incremental encoding](https://en.wikipedia.org/wiki/Incremental_encodi
 ||trad RDBMS|Data warehouse|
 |--|--|--|
 |excels at|OLTP|OLAP|
-|main feature|extensively uses indexes for random access|decouples storage and processing resources|
-|scalability|scale storage along processing using sharding||
+|main feature|extensively uses indexes for random access|decouples scaling of storage and processing resources|
 |typical data model|3NF|Dimensional model|
 |data storage format|row-based|columnar|
 |examples|MySQL, Postgres, Oracle|BigQuery, Snowflake, Redshift|
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMyMjQ3NDQ0MywtMjAyMzkyNzg5MSwxMj
+eyJoaXN0b3J5IjpbMTQ0MjU3NjU5NSwtMjAyMzkyNzg5MSwxMj
 IzNzg4NTYxLDE0NTU3MTEyMDUsLTE2NzkxNzc4NDAsLTIwMDQ1
 MDU3ODQsMTkyMzczMzc1MiwxNDk2MjI1MDksMjkwMDQ5MDc1LD
 QyNDQyMzI3MywtMTcxMTA1MzAwLC0xNzY4MjEyODA3LC0xMDkz
