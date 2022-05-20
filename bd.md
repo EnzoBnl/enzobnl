@@ -244,14 +244,14 @@ Known as [Incremental encoding](https://en.wikipedia.org/wiki/Incremental_encodi
 |main feature|performant random access using indexes|decouples scaling of storage and processing resources|in memory distributed storage for super fast and scalable key retrieval|
 |support relational model|yes|yes|no|
 |typical data model|3NF|Dimensional model|key-value pairs|
-|data format|row-based|columnar|hashmap-like|
+|data format|row-based|columnar|hashmap|
 |examples|MySQL, Postgres, Oracle|BigQuery, Snowflake, Redshift|Aerospike, Redis, Ignite|
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMzU1ODAxNDYsLTIwMjM5Mjc4OTEsMT
-IyMzc4ODU2MSwxNDU1NzExMjA1LC0xNjc5MTc3ODQwLC0yMDA0
-NTA1Nzg0LDE5MjM3MzM3NTIsMTQ5NjIyNTA5LDI5MDA0OTA3NS
-w0MjQ0MjMyNzMsLTE3MTEwNTMwMCwtMTc2ODIxMjgwNywtMTA5
-Mzc5MTUzNSwxMTk5MDQ3OTk1LC0xMzQyMTM2NjksMjA4MzMyOT
-Y5MCwxMTAzMzIxNjYsLTIxMzI1NDQ0MjUsNTQyNzY3NTU4LC0x
-OTQ1NzIxMTE2XX0=
+eyJoaXN0b3J5IjpbOTA0NTUwNzY0LC0yMDIzOTI3ODkxLDEyMj
+M3ODg1NjEsMTQ1NTcxMTIwNSwtMTY3OTE3Nzg0MCwtMjAwNDUw
+NTc4NCwxOTIzNzMzNzUyLDE0OTYyMjUwOSwyOTAwNDkwNzUsND
+I0NDIzMjczLC0xNzExMDUzMDAsLTE3NjgyMTI4MDcsLTEwOTM3
+OTE1MzUsMTE5OTA0Nzk5NSwtMTM0MjEzNjY5LDIwODMzMjk2OT
+AsMTEwMzMyMTY2LC0yMTMyNTQ0NDI1LDU0Mjc2NzU1OCwtMTk0
+NTcyMTExNl19
 -->
