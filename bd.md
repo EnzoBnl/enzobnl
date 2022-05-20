@@ -244,12 +244,13 @@ Known as [Incremental encoding](https://en.wikipedia.org/wiki/Incremental_encodi
 |main feature|extensively uses indexes for random access|decouples storage and processing resources|
 |typical data model|3NF|Dimensional model|
 |data storage format|row-based|columnar|
+|examples|MySQL, Postgres, Oracle|BigQuery, Snowflake, Redshift|
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUwOTI3NTczMCwxMjIzNzg4NTYxLDE0NT
-U3MTEyMDUsLTE2NzkxNzc4NDAsLTIwMDQ1MDU3ODQsMTkyMzcz
-Mzc1MiwxNDk2MjI1MDksMjkwMDQ5MDc1LDQyNDQyMzI3MywtMT
-cxMTA1MzAwLC0xNzY4MjEyODA3LC0xMDkzNzkxNTM1LDExOTkw
-NDc5OTUsLTEzNDIxMzY2OSwyMDgzMzI5NjkwLDExMDMzMjE2Ni
-wtMjEzMjU0NDQyNSw1NDI3Njc1NTgsLTE5NDU3MjExMTYsLTIw
-MjA1MjM2NTldfQ==
+eyJoaXN0b3J5IjpbLTIwMjM5Mjc4OTEsMTIyMzc4ODU2MSwxND
+U1NzExMjA1LC0xNjc5MTc3ODQwLC0yMDA0NTA1Nzg0LDE5MjM3
+MzM3NTIsMTQ5NjIyNTA5LDI5MDA0OTA3NSw0MjQ0MjMyNzMsLT
+E3MTEwNTMwMCwtMTc2ODIxMjgwNywtMTA5Mzc5MTUzNSwxMTk5
+MDQ3OTk1LC0xMzQyMTM2NjksMjA4MzMyOTY5MCwxMTAzMzIxNj
+YsLTIxMzI1NDQ0MjUsNTQyNzY3NTU4LC0xOTQ1NzIxMTE2LC0y
+MDIwNTIzNjU5XX0=
 -->
