@@ -141,8 +141,8 @@ LIMIT 10
 ```
 ### Set partition expiration
 to 7 days
-```
-bashbq update --time_partitioning_expiration 604800 --time_partitioning_type DAY project:dataset.table
+```bash
+bq update --time_partitioning_expiration 604800 --time_partitioning_type DAY project:dataset.table
 ```
 
 ## Delta Lake
@@ -247,11 +247,11 @@ Known as [Incremental encoding](https://en.wikipedia.org/wiki/Incremental_encodi
 |data format|row-based|columnar|hashmap|
 |examples|MySQL, Postgres, Oracle|BigQuery, Snowflake, Redshift|Aerospike, Redis, Ignite|
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1OTc3NjMyMzAsLTIwMjM5Mjc4OTEsMT
-IyMzc4ODU2MSwxNDU1NzExMjA1LC0xNjc5MTc3ODQwLC0yMDA0
-NTA1Nzg0LDE5MjM3MzM3NTIsMTQ5NjIyNTA5LDI5MDA0OTA3NS
-w0MjQ0MjMyNzMsLTE3MTEwNTMwMCwtMTc2ODIxMjgwNywtMTA5
-Mzc5MTUzNSwxMTk5MDQ3OTk1LC0xMzQyMTM2NjksMjA4MzMyOT
-Y5MCwxMTAzMzIxNjYsLTIxMzI1NDQ0MjUsNTQyNzY3NTU4LC0x
-OTQ1NzIxMTE2XX0=
+eyJoaXN0b3J5IjpbLTE4Mjc0MjA4MzAsLTE1OTc3NjMyMzAsLT
+IwMjM5Mjc4OTEsMTIyMzc4ODU2MSwxNDU1NzExMjA1LC0xNjc5
+MTc3ODQwLC0yMDA0NTA1Nzg0LDE5MjM3MzM3NTIsMTQ5NjIyNT
+A5LDI5MDA0OTA3NSw0MjQ0MjMyNzMsLTE3MTEwNTMwMCwtMTc2
+ODIxMjgwNywtMTA5Mzc5MTUzNSwxMTk5MDQ3OTk1LC0xMzQyMT
+M2NjksMjA4MzMyOTY5MCwxMTAzMzIxNjYsLTIxMzI1NDQ0MjUs
+NTQyNzY3NTU4XX0=
 -->
