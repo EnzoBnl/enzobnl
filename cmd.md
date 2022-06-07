@@ -174,7 +174,7 @@ echo '{"root": {"a": "foo", "b": ["foo","foo","bar"]}}' | gron | grep --color fo
 # get unique whitespace separated words (using sed to Substitute spaces by newlines Globally)
 echo foo bar foo | sed 's/ /\n/g' | sort | uniq
 # skip first 10 lines of a stream, using tail
-... | tail +10
+... | tail -n +11
 # grep example
 grep 'alias' /home/foo/.bashrc
 # find/xargs/cat/grep/wc to count the number of lines containing 'abc' in all python files contained in cwd
@@ -625,11 +625,11 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNDIxNDczNTYsLTU0ODkwMjMyNCw5NT
-c1NTgzMDEsLTE5ODMwMzE3NDYsLTE5OTY4NTM2NzEsNTM5NDU1
-NDEsLTEyNDM2NDI3NDMsLTk1MDk0OTIxMSwtMTM4OTc0MzEzNS
-wtMTU2NDY4MDEzMywxNDMxMTQzNjE0LDEzOTc5ODA0NzQsMTg0
-MDI2NDc0Miw1NTk1NDQ0NjMsMTA4MDQ4MDc5NCwtODc1Mzg0OD
-cxLDQxMzc0NzY3MCwtMjAxMjIyNjIwNCwtMTE3MTk3ODg4Mywt
-NzcyNjEzODI0XX0=
+eyJoaXN0b3J5IjpbNzA5NTU2NDE2LC0xMjQyMTQ3MzU2LC01ND
+g5MDIzMjQsOTU3NTU4MzAxLC0xOTgzMDMxNzQ2LC0xOTk2ODUz
+NjcxLDUzOTQ1NTQxLC0xMjQzNjQyNzQzLC05NTA5NDkyMTEsLT
+EzODk3NDMxMzUsLTE1NjQ2ODAxMzMsMTQzMTE0MzYxNCwxMzk3
+OTgwNDc0LDE4NDAyNjQ3NDIsNTU5NTQ0NDYzLDEwODA0ODA3OT
+QsLTg3NTM4NDg3MSw0MTM3NDc2NzAsLTIwMTIyMjYyMDQsLTEx
+NzE5Nzg4ODNdfQ==
 -->
