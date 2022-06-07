@@ -173,7 +173,7 @@ echo '{"foo":{"bar": 0}}' | jq '.,.foo'
 echo '{"root": {"a": "foo", "b": ["foo","foo","bar"]}}' | gron | grep --color foo
 # get unique whitespace separated words (using sed to Substitute spaces by newlines Globally)
 echo foo bar foo | sed 's/ /\n/g' | sort | uniq
-# skip first 10 lines of a stream with tail
+# skip first 10 lines of a stream, using tail
 ... | tail +10
 # grep example
 grep 'alias' /home/foo/.bashrc
@@ -625,11 +625,11 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDE2ODkzNjkwLC01NDg5MDIzMjQsOTU3NT
-U4MzAxLC0xOTgzMDMxNzQ2LC0xOTk2ODUzNjcxLDUzOTQ1NTQx
-LC0xMjQzNjQyNzQzLC05NTA5NDkyMTEsLTEzODk3NDMxMzUsLT
-E1NjQ2ODAxMzMsMTQzMTE0MzYxNCwxMzk3OTgwNDc0LDE4NDAy
-NjQ3NDIsNTU5NTQ0NDYzLDEwODA0ODA3OTQsLTg3NTM4NDg3MS
-w0MTM3NDc2NzAsLTIwMTIyMjYyMDQsLTExNzE5Nzg4ODMsLTc3
-MjYxMzgyNF19
+eyJoaXN0b3J5IjpbLTEyNDIxNDczNTYsLTU0ODkwMjMyNCw5NT
+c1NTgzMDEsLTE5ODMwMzE3NDYsLTE5OTY4NTM2NzEsNTM5NDU1
+NDEsLTEyNDM2NDI3NDMsLTk1MDk0OTIxMSwtMTM4OTc0MzEzNS
+wtMTU2NDY4MDEzMywxNDMxMTQzNjE0LDEzOTc5ODA0NzQsMTg0
+MDI2NDc0Miw1NTk1NDQ0NjMsMTA4MDQ4MDc5NCwtODc1Mzg0OD
+cxLDQxMzc0NzY3MCwtMjAxMjIyNjIwNCwtMTE3MTk3ODg4Mywt
+NzcyNjEzODI0XX0=
 -->
