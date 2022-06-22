@@ -275,11 +275,17 @@ Toggle:
 bar
 </details>
 ```
+
+## DE interview
+- technology knowledge
+- system design (data platform)
+- data modeling
+- dev vscode liveshare in real repo
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc2MjgwMTE2NywtMTQzNzM4MDY1MSwxOD
-kyMDgzMzYyLDcyODE1MjQ3NywtMTYzMTY5MTc5OSwxMTIyNzQ5
-MDAxLC0xNTMyMTQwNDU5LC0xNDQxODE1NDM5LDE0NzM5NTg0ND
-EsMTQ3Mzk1ODQ0MSwtMTY1MDY0MTA4OCwtMjA4ODU0NTUwNiwx
-MjY1Mjc2NzEsMTYxMzEzNjcxMSwtMjAzNzkwOTg3OSwtMTk4MT
-YyMjc3MywyNzE2MTc4MjZdfQ==
+eyJoaXN0b3J5IjpbLTE2ODI1NjQ3MCwtNzYyODAxMTY3LC0xND
+M3MzgwNjUxLDE4OTIwODMzNjIsNzI4MTUyNDc3LC0xNjMxNjkx
+Nzk5LDExMjI3NDkwMDEsLTE1MzIxNDA0NTksLTE0NDE4MTU0Mz
+ksMTQ3Mzk1ODQ0MSwxNDczOTU4NDQxLC0xNjUwNjQxMDg4LC0y
+MDg4NTQ1NTA2LDEyNjUyNzY3MSwxNjEzMTM2NzExLC0yMDM3OT
+A5ODc5LC0xOTgxNjIyNzczLDI3MTYxNzgyNl19
 -->
