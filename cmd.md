@@ -177,6 +177,8 @@ echo foo bar foo | sed 's/ /\n/g' | sort | uniq
 ... | tail -n +11
 # grep example
 grep 'alias' /home/foo/.bashrc
+# inverted grep: -v or --invert-match option
+grep -v <except_word>
 # find/xargs/cat/grep/wc to count the number of lines containing 'abc' in all python files contained in cwd
 find . -type f -name '*.py' | xargs cat | grep 'abc' | wc -l
 # or using `subcommand` (that executes subcommand and replaces new lines by spaces in its stddout before inlining it in wrapping command)
@@ -625,11 +627,11 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzA5NTU2NDE2LC0xMjQyMTQ3MzU2LC01ND
-g5MDIzMjQsOTU3NTU4MzAxLC0xOTgzMDMxNzQ2LC0xOTk2ODUz
-NjcxLDUzOTQ1NTQxLC0xMjQzNjQyNzQzLC05NTA5NDkyMTEsLT
-EzODk3NDMxMzUsLTE1NjQ2ODAxMzMsMTQzMTE0MzYxNCwxMzk3
-OTgwNDc0LDE4NDAyNjQ3NDIsNTU5NTQ0NDYzLDEwODA0ODA3OT
-QsLTg3NTM4NDg3MSw0MTM3NDc2NzAsLTIwMTIyMjYyMDQsLTEx
-NzE5Nzg4ODNdfQ==
+eyJoaXN0b3J5IjpbLTEzNzkxNDQzNjQsNzA5NTU2NDE2LC0xMj
+QyMTQ3MzU2LC01NDg5MDIzMjQsOTU3NTU4MzAxLC0xOTgzMDMx
+NzQ2LC0xOTk2ODUzNjcxLDUzOTQ1NTQxLC0xMjQzNjQyNzQzLC
+05NTA5NDkyMTEsLTEzODk3NDMxMzUsLTE1NjQ2ODAxMzMsMTQz
+MTE0MzYxNCwxMzk3OTgwNDc0LDE4NDAyNjQ3NDIsNTU5NTQ0ND
+YzLDEwODA0ODA3OTQsLTg3NTM4NDg3MSw0MTM3NDc2NzAsLTIw
+MTIyMjYyMDRdfQ==
 -->
