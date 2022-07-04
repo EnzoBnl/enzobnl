@@ -250,13 +250,16 @@ Known as [Incremental encoding](https://en.wikipedia.org/wiki/Incremental_encodi
 
 # Cloud Data Warehous
 Type Snowflake, BigQuery
-## bricks
+## basic bricks
 - infinite cloud file storage capabilities
-- a columnar PAX file format (like parquet)
-- table format (like Iceberg/Delta)
-- Scalable query execution ca
+- a columnar PAX file format
+- table format
+- Scalable query execution capabilities
+- A user-friendly webapp on top of that
+
+if you have an open table-format of file format, then 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE3MzE5MDI1NCwyMjE3MTYwMjksLTE4Mj
+eyJoaXN0b3J5IjpbMjA5MTQ3MDIxOCwyMjE3MTYwMjksLTE4Mj
 c0MjA4MzAsLTE1OTc3NjMyMzAsLTIwMjM5Mjc4OTEsMTIyMzc4
 ODU2MSwxNDU1NzExMjA1LC0xNjc5MTc3ODQwLC0yMDA0NTA1Nz
 g0LDE5MjM3MzM3NTIsMTQ5NjIyNTA5LDI5MDA0OTA3NSw0MjQ0
