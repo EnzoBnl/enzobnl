@@ -257,13 +257,20 @@ Type Snowflake, BigQuery
 - Scalable query execution capabilities
 - A user-friendly webapp on top of that
 
-if you have an open table-format of file format, then 
+if you have all of this but you have an open table-format of file format, then this is called a lakehouse -> ML applications can target raw files directly.
+
+Databricks lakehouse offer is built with bricks:
+- Cloud storage from provider
+- parquet
+- delta lake
+- spark
+- notebooks
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA5MTQ3MDIxOCwyMjE3MTYwMjksLTE4Mj
-c0MjA4MzAsLTE1OTc3NjMyMzAsLTIwMjM5Mjc4OTEsMTIyMzc4
-ODU2MSwxNDU1NzExMjA1LC0xNjc5MTc3ODQwLC0yMDA0NTA1Nz
-g0LDE5MjM3MzM3NTIsMTQ5NjIyNTA5LDI5MDA0OTA3NSw0MjQ0
-MjMyNzMsLTE3MTEwNTMwMCwtMTc2ODIxMjgwNywtMTA5Mzc5MT
-UzNSwxMTk5MDQ3OTk1LC0xMzQyMTM2NjksMjA4MzMyOTY5MCwx
-MTAzMzIxNjZdfQ==
+eyJoaXN0b3J5IjpbLTE2NjIyMzI0MzEsMjIxNzE2MDI5LC0xOD
+I3NDIwODMwLC0xNTk3NzYzMjMwLC0yMDIzOTI3ODkxLDEyMjM3
+ODg1NjEsMTQ1NTcxMTIwNSwtMTY3OTE3Nzg0MCwtMjAwNDUwNT
+c4NCwxOTIzNzMzNzUyLDE0OTYyMjUwOSwyOTAwNDkwNzUsNDI0
+NDIzMjczLC0xNzExMDUzMDAsLTE3NjgyMTI4MDcsLTEwOTM3OT
+E1MzUsMTE5OTA0Nzk5NSwtMTM0MjEzNjY5LDIwODMzMjk2OTAs
+MTEwMzMyMTY2XX0=
 -->
