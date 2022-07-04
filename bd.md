@@ -248,16 +248,17 @@ Known as [Incremental encoding](https://en.wikipedia.org/wiki/Incremental_encodi
 |examples|MySQL, Postgres, Oracle|BigQuery, Snowflake, Redshift|Aerospike, Redis, Ignite|
 
 
-# Cloud Data Warehous
+# Cloud Data Warehouses
 Type Snowflake, BigQuery
 ## basic bricks
 - infinite cloud file storage capabilities
-- a columnar PAX file format
+- a columnar PAX file format providing good space efficiency and query performance
 - table format providing ACID transactions
 - Scalable query execution capabilities
 - A user-friendly webapp on top of that
-
-if you have all of this and you use an open table format or file format, then this is called a lakehouse architecture -> ML applications can target raw files directly.
+- 
+### lakehouse
+If you have all of this and you use an open table format or file format, then this is called a lakehouse architecture -> ML applications can work with raw files directly without going through the analytics stack.
 
 Databricks lakehouse offer is built with bricks:
 - Cloud storage from provider
@@ -266,11 +267,11 @@ Databricks lakehouse offer is built with bricks:
 - spark
 - notebooks
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzUxMDI2MDU2LDIyMTcxNjAyOSwtMTgyNz
-QyMDgzMCwtMTU5Nzc2MzIzMCwtMjAyMzkyNzg5MSwxMjIzNzg4
-NTYxLDE0NTU3MTEyMDUsLTE2NzkxNzc4NDAsLTIwMDQ1MDU3OD
-QsMTkyMzczMzc1MiwxNDk2MjI1MDksMjkwMDQ5MDc1LDQyNDQy
-MzI3MywtMTcxMTA1MzAwLC0xNzY4MjEyODA3LC0xMDkzNzkxNT
-M1LDExOTkwNDc5OTUsLTEzNDIxMzY2OSwyMDgzMzI5NjkwLDEx
-MDMzMjE2Nl19
+eyJoaXN0b3J5IjpbLTE3MTg2OTE3ODIsMjIxNzE2MDI5LC0xOD
+I3NDIwODMwLC0xNTk3NzYzMjMwLC0yMDIzOTI3ODkxLDEyMjM3
+ODg1NjEsMTQ1NTcxMTIwNSwtMTY3OTE3Nzg0MCwtMjAwNDUwNT
+c4NCwxOTIzNzMzNzUyLDE0OTYyMjUwOSwyOTAwNDkwNzUsNDI0
+NDIzMjczLC0xNzExMDUzMDAsLTE3NjgyMTI4MDcsLTEwOTM3OT
+E1MzUsMTE5OTA0Nzk5NSwtMTM0MjEzNjY5LDIwODMzMjk2OTAs
+MTEwMzMyMTY2XX0=
 -->
