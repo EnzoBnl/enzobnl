@@ -248,14 +248,18 @@ Known as [Incremental encoding](https://en.wikipedia.org/wiki/Incremental_encodi
 |examples|MySQL, Postgres, Oracle|BigQuery, Snowflake, Redshift|Aerospike, Redis, Ignite|
 
 
-# Cloud data warehouse
+# Cloud Data Warehous
+Type Snowflake, BigQuery
 ## bricks
+- infinite cloud file storage capabilities
+- a columnar file format
+- a table file format
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjIxNzE2MDI5LC0xODI3NDIwODMwLC0xNT
-k3NzYzMjMwLC0yMDIzOTI3ODkxLDEyMjM3ODg1NjEsMTQ1NTcx
-MTIwNSwtMTY3OTE3Nzg0MCwtMjAwNDUwNTc4NCwxOTIzNzMzNz
-UyLDE0OTYyMjUwOSwyOTAwNDkwNzUsNDI0NDIzMjczLC0xNzEx
-MDUzMDAsLTE3NjgyMTI4MDcsLTEwOTM3OTE1MzUsMTE5OTA0Nz
-k5NSwtMTM0MjEzNjY5LDIwODMzMjk2OTAsMTEwMzMyMTY2LC0y
-MTMyNTQ0NDI1XX0=
+eyJoaXN0b3J5IjpbLTgxNzU1MzA3NiwyMjE3MTYwMjksLTE4Mj
+c0MjA4MzAsLTE1OTc3NjMyMzAsLTIwMjM5Mjc4OTEsMTIyMzc4
+ODU2MSwxNDU1NzExMjA1LC0xNjc5MTc3ODQwLC0yMDA0NTA1Nz
+g0LDE5MjM3MzM3NTIsMTQ5NjIyNTA5LDI5MDA0OTA3NSw0MjQ0
+MjMyNzMsLTE3MTEwNTMwMCwtMTc2ODIxMjgwNywtMTA5Mzc5MT
+UzNSwxMTk5MDQ3OTk1LC0xMzQyMTM2NjksMjA4MzMyOTY5MCwx
+MTAzMzIxNjZdfQ==
 -->
