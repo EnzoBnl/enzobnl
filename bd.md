@@ -258,7 +258,7 @@ Type Snowflake, BigQuery
 - Scalable query execution capabilities (Athena/ Redshift Spectrum, Spark, Hive, Presto, ...)
 - A user-friendly webapp on top of that
 - 
-### lakehouse
+### Lakehouse
 If you have all of this and you use an open table format or file format, then this is called a lakehouse architecture -> ML applications can work with raw files directly without going through the analytics stack.
 
 Databricks lakehouse offer is built with bricks:
@@ -268,11 +268,11 @@ Databricks lakehouse offer is built with bricks:
 - spark
 - notebooks
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQyMTMyNTgyNiwxMDIzNDk2OTM0LC05Mz
-A4ODkwMDQsLTE3MTg2OTE3ODIsMjIxNzE2MDI5LC0xODI3NDIw
-ODMwLC0xNTk3NzYzMjMwLC0yMDIzOTI3ODkxLDEyMjM3ODg1Nj
-EsMTQ1NTcxMTIwNSwtMTY3OTE3Nzg0MCwtMjAwNDUwNTc4NCwx
-OTIzNzMzNzUyLDE0OTYyMjUwOSwyOTAwNDkwNzUsNDI0NDIzMj
-czLC0xNzExMDUzMDAsLTE3NjgyMTI4MDcsLTEwOTM3OTE1MzUs
-MTE5OTA0Nzk5NV19
+eyJoaXN0b3J5IjpbLTE3NzQzMDUyNTAsMTAyMzQ5NjkzNCwtOT
+MwODg5MDA0LC0xNzE4NjkxNzgyLDIyMTcxNjAyOSwtMTgyNzQy
+MDgzMCwtMTU5Nzc2MzIzMCwtMjAyMzkyNzg5MSwxMjIzNzg4NT
+YxLDE0NTU3MTEyMDUsLTE2NzkxNzc4NDAsLTIwMDQ1MDU3ODQs
+MTkyMzczMzc1MiwxNDk2MjI1MDksMjkwMDQ5MDc1LDQyNDQyMz
+I3MywtMTcxMTA1MzAwLC0xNzY4MjEyODA3LC0xMDkzNzkxNTM1
+LDExOTkwNDc5OTVdfQ==
 -->
