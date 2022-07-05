@@ -252,8 +252,8 @@ Known as [Incremental encoding](https://en.wikipedia.org/wiki/Incremental_encodi
 Type Snowflake, BigQuery
 ## basic bricks
 
-- infinite cloud file storage capabilities (S3, GCS, ...)
-- a columnar PAX file format providing good space efficiency and query performance (parquet, ...)
+- infinite cloud file storage capabilities (S3, GCS, Collossus...)
+- a columnar PAX file format providing good space efficiency and query performance (parquet, Capacitor...)
 - table format providing ACID transactions (Iceberg, Delta, ...)
 - Scalable query execution capabilities (Athena/ Redshift Spectrum, Spark, Hive, Presto, ...)
 - A user-friendly webapp on top of that
@@ -268,11 +268,11 @@ Databricks lakehouse offer is built with bricks:
 - spark
 - notebooks
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NzQzMDUyNTAsMTAyMzQ5NjkzNCwtOT
-MwODg5MDA0LC0xNzE4NjkxNzgyLDIyMTcxNjAyOSwtMTgyNzQy
-MDgzMCwtMTU5Nzc2MzIzMCwtMjAyMzkyNzg5MSwxMjIzNzg4NT
-YxLDE0NTU3MTEyMDUsLTE2NzkxNzc4NDAsLTIwMDQ1MDU3ODQs
-MTkyMzczMzc1MiwxNDk2MjI1MDksMjkwMDQ5MDc1LDQyNDQyMz
-I3MywtMTcxMTA1MzAwLC0xNzY4MjEyODA3LC0xMDkzNzkxNTM1
-LDExOTkwNDc5OTVdfQ==
+eyJoaXN0b3J5IjpbLTY0MzM0MDI5NywtMTc3NDMwNTI1MCwxMD
+IzNDk2OTM0LC05MzA4ODkwMDQsLTE3MTg2OTE3ODIsMjIxNzE2
+MDI5LC0xODI3NDIwODMwLC0xNTk3NzYzMjMwLC0yMDIzOTI3OD
+kxLDEyMjM3ODg1NjEsMTQ1NTcxMTIwNSwtMTY3OTE3Nzg0MCwt
+MjAwNDUwNTc4NCwxOTIzNzMzNzUyLDE0OTYyMjUwOSwyOTAwND
+kwNzUsNDI0NDIzMjczLC0xNzExMDUzMDAsLTE3NjgyMTI4MDcs
+LTEwOTM3OTE1MzVdfQ==
 -->
