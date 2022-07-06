@@ -254,7 +254,7 @@ chmod 755 <script or binary name>
 [shortcut] Ctrl + r
 # output last 100 commands run in current terminal
 history 100
-// create a symlinl (symbolic link)
+// create a symlink (symbolic link)
 sudo ln -s origin target
 // generate ssh pub/private keys
 // 1. generate the keys
@@ -627,11 +627,11 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNzkxNDQzNjQsNzA5NTU2NDE2LC0xMj
-QyMTQ3MzU2LC01NDg5MDIzMjQsOTU3NTU4MzAxLC0xOTgzMDMx
-NzQ2LC0xOTk2ODUzNjcxLDUzOTQ1NTQxLC0xMjQzNjQyNzQzLC
-05NTA5NDkyMTEsLTEzODk3NDMxMzUsLTE1NjQ2ODAxMzMsMTQz
-MTE0MzYxNCwxMzk3OTgwNDc0LDE4NDAyNjQ3NDIsNTU5NTQ0ND
-YzLDEwODA0ODA3OTQsLTg3NTM4NDg3MSw0MTM3NDc2NzAsLTIw
-MTIyMjYyMDRdfQ==
+eyJoaXN0b3J5IjpbLTc3NjA0Mjk1NSwtMTM3OTE0NDM2NCw3MD
+k1NTY0MTYsLTEyNDIxNDczNTYsLTU0ODkwMjMyNCw5NTc1NTgz
+MDEsLTE5ODMwMzE3NDYsLTE5OTY4NTM2NzEsNTM5NDU1NDEsLT
+EyNDM2NDI3NDMsLTk1MDk0OTIxMSwtMTM4OTc0MzEzNSwtMTU2
+NDY4MDEzMywxNDMxMTQzNjE0LDEzOTc5ODA0NzQsMTg0MDI2ND
+c0Miw1NTk1NDQ0NjMsMTA4MDQ4MDc5NCwtODc1Mzg0ODcxLDQx
+Mzc0NzY3MF19
 -->
