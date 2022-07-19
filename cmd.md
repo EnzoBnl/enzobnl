@@ -193,6 +193,8 @@ sudo baobab
 # du: list folder sizes with a given depth, at bytes level
 du -h --max-depth=1 --block-size=1
 
+# pipe stderr also
+some_command |& grep in_stdout_or_stderr
 # show running processes
 ps -A
 //NEBOJSA PIPE EXAMPLE : LISTE toute la 1ere colonne
@@ -629,11 +631,11 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMTE2MzI0OTIsLTc3NjA0Mjk1NSwtMT
-M3OTE0NDM2NCw3MDk1NTY0MTYsLTEyNDIxNDczNTYsLTU0ODkw
-MjMyNCw5NTc1NTgzMDEsLTE5ODMwMzE3NDYsLTE5OTY4NTM2Nz
-EsNTM5NDU1NDEsLTEyNDM2NDI3NDMsLTk1MDk0OTIxMSwtMTM4
-OTc0MzEzNSwtMTU2NDY4MDEzMywxNDMxMTQzNjE0LDEzOTc5OD
-A0NzQsMTg0MDI2NDc0Miw1NTk1NDQ0NjMsMTA4MDQ4MDc5NCwt
-ODc1Mzg0ODcxXX0=
+eyJoaXN0b3J5IjpbMTc0OTExNTQ3MiwtNzc2MDQyOTU1LC0xMz
+c5MTQ0MzY0LDcwOTU1NjQxNiwtMTI0MjE0NzM1NiwtNTQ4OTAy
+MzI0LDk1NzU1ODMwMSwtMTk4MzAzMTc0NiwtMTk5Njg1MzY3MS
+w1Mzk0NTU0MSwtMTI0MzY0Mjc0MywtOTUwOTQ5MjExLC0xMzg5
+NzQzMTM1LC0xNTY0NjgwMTMzLDE0MzExNDM2MTQsMTM5Nzk4MD
+Q3NCwxODQwMjY0NzQyLDU1OTU0NDQ2MywxMDgwNDgwNzk0LC04
+NzUzODQ4NzFdfQ==
 -->
