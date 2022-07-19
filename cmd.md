@@ -197,7 +197,7 @@ du -h --max-depth=1 --block-size=1
 some_command |& grep in_stdout_or_stderr
 # show running processes
 ps -A
-//NEBOJSA PIPE EXAMPLE : LISTE tfoute la 1ere colonne
+//NEBOJSA PIPE EXAMPLE : LISTE toute la 1ere colonne
  cat OS_IU_sample | cut -f1 |more 
  hadoop dfs -cat /Data/O19593/SECURE/RAW/TXT/OS_IU_1/2017/05/16/2017_05_16_OSO_3G_37.csv | head -1000 > OS_IU_sample
 //SELECT 1000 1eres lignes
@@ -434,6 +434,10 @@ esc
 yy
 *go to the line below which you want to paste*
 p
+
+# delete a line
+esc
+dd
 ```
 ### git
 [How to write good commit messages](https://chris.beams.io/posts/git-commit/#imperative)
@@ -631,11 +635,11 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTE3MjYyOTgsMTc0OTExNTQ3MiwtNzc2MD
-QyOTU1LC0xMzc5MTQ0MzY0LDcwOTU1NjQxNiwtMTI0MjE0NzM1
-NiwtNTQ4OTAyMzI0LDk1NzU1ODMwMSwtMTk4MzAzMTc0NiwtMT
-k5Njg1MzY3MSw1Mzk0NTU0MSwtMTI0MzY0Mjc0MywtOTUwOTQ5
-MjExLC0xMzg5NzQzMTM1LC0xNTY0NjgwMTMzLDE0MzExNDM2MT
-QsMTM5Nzk4MDQ3NCwxODQwMjY0NzQyLDU1OTU0NDQ2MywxMDgw
-NDgwNzk0XX0=
+eyJoaXN0b3J5IjpbLTE2NjEwNzAzMzQsMTc0OTExNTQ3MiwtNz
+c2MDQyOTU1LC0xMzc5MTQ0MzY0LDcwOTU1NjQxNiwtMTI0MjE0
+NzM1NiwtNTQ4OTAyMzI0LDk1NzU1ODMwMSwtMTk4MzAzMTc0Ni
+wtMTk5Njg1MzY3MSw1Mzk0NTU0MSwtMTI0MzY0Mjc0MywtOTUw
+OTQ5MjExLC0xMzg5NzQzMTM1LC0xNTY0NjgwMTMzLDE0MzExND
+M2MTQsMTM5Nzk4MDQ3NCwxODQwMjY0NzQyLDU1OTU0NDQ2Mywx
+MDgwNDgwNzk0XX0=
 -->
