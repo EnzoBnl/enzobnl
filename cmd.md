@@ -612,6 +612,8 @@ kubectl expose deploy example --port=5000 --target-port=8080 --name=example-http
 kubectl --context ... --namespace ... logs -f <pod_name>
 # get logs from all pods sharing a foo=bar label
 kubectl --context ... -n ... logs -l foo=bar --tail 10000
+# get all logs from deployment's pods
+kubectl --context ... -n ... logs deployment/<deploy name>
 # scale to 0 pods: noOp deployment
 kubectl scale --replicas=0 deployment <deployment_name>
 # edit and redeploy a deployment (vim-like edition)
@@ -627,11 +629,11 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc3NjA0Mjk1NSwtMTM3OTE0NDM2NCw3MD
-k1NTY0MTYsLTEyNDIxNDczNTYsLTU0ODkwMjMyNCw5NTc1NTgz
-MDEsLTE5ODMwMzE3NDYsLTE5OTY4NTM2NzEsNTM5NDU1NDEsLT
-EyNDM2NDI3NDMsLTk1MDk0OTIxMSwtMTM4OTc0MzEzNSwtMTU2
-NDY4MDEzMywxNDMxMTQzNjE0LDEzOTc5ODA0NzQsMTg0MDI2ND
-c0Miw1NTk1NDQ0NjMsMTA4MDQ4MDc5NCwtODc1Mzg0ODcxLDQx
-Mzc0NzY3MF19
+eyJoaXN0b3J5IjpbLTIwMTE2MzI0OTIsLTc3NjA0Mjk1NSwtMT
+M3OTE0NDM2NCw3MDk1NTY0MTYsLTEyNDIxNDczNTYsLTU0ODkw
+MjMyNCw5NTc1NTgzMDEsLTE5ODMwMzE3NDYsLTE5OTY4NTM2Nz
+EsNTM5NDU1NDEsLTEyNDM2NDI3NDMsLTk1MDk0OTIxMSwtMTM4
+OTc0MzEzNSwtMTU2NDY4MDEzMywxNDMxMTQzNjE0LDEzOTc5OD
+A0NzQsMTg0MDI2NDc0Miw1NTk1NDQ0NjMsMTA4MDQ4MDc5NCwt
+ODc1Mzg0ODcxXX0=
 -->
