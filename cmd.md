@@ -130,10 +130,10 @@ saved_model_cli show --dir /path/to/model --all
 ```bash
 # print gpu info
 sudo lshw -C display
-# find location of a symlink:
+# (find location of a symlink:
 ls -al <symlink>
 # extended ls
-ls -lL
+ls -alL .
 # count lines
 wc -l filename
 # split large file in files of X lines, smallfileaa, smallfileaa, smallfileab
@@ -643,7 +643,7 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYzMDU5NjYyOCwtMTc0Njc0MzQzNSwtMT
+eyJoaXN0b3J5IjpbMTE2MTQyMjEzNSwtMTc0Njc0MzQzNSwtMT
 Y2MTA3MDMzNCwxNzQ5MTE1NDcyLC03NzYwNDI5NTUsLTEzNzkx
 NDQzNjQsNzA5NTU2NDE2LC0xMjQyMTQ3MzU2LC01NDg5MDIzMj
 QsOTU3NTU4MzAxLC0xOTgzMDMxNzQ2LC0xOTk2ODUzNjcxLDUz
