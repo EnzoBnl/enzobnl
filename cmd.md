@@ -269,10 +269,8 @@ sudo ln -s origin target
 // generate ssh pub/private keys
 // 1. generate the keys
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
-// 2. run ssh agent in background
-eval "$(ssh-agent -s)"
-// 3. add it to the agent
-ssh-add ~/.ssh/id_rsa
+// 2. run ssh agent in background and 3. add it to the agent
+eval "$(ssh-agent -s)" && ssh-add ~/.ssh/id_rsa
 // -> public key is in ~/.ssh/id_rsa.pub
 
 // ssh bridge: maps port 9000 of 10.240.0.44 accessed through <host_url> to localhost:9000
@@ -643,11 +641,11 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE2MTQyMjEzNSwtMTc0Njc0MzQzNSwtMT
-Y2MTA3MDMzNCwxNzQ5MTE1NDcyLC03NzYwNDI5NTUsLTEzNzkx
-NDQzNjQsNzA5NTU2NDE2LC0xMjQyMTQ3MzU2LC01NDg5MDIzMj
-QsOTU3NTU4MzAxLC0xOTgzMDMxNzQ2LC0xOTk2ODUzNjcxLDUz
-OTQ1NTQxLC0xMjQzNjQyNzQzLC05NTA5NDkyMTEsLTEzODk3ND
-MxMzUsLTE1NjQ2ODAxMzMsMTQzMTE0MzYxNCwxMzk3OTgwNDc0
-LDE4NDAyNjQ3NDJdfQ==
+eyJoaXN0b3J5IjpbMjEwNjA0MTE0NiwxMTYxNDIyMTM1LC0xNz
+Q2NzQzNDM1LC0xNjYxMDcwMzM0LDE3NDkxMTU0NzIsLTc3NjA0
+Mjk1NSwtMTM3OTE0NDM2NCw3MDk1NTY0MTYsLTEyNDIxNDczNT
+YsLTU0ODkwMjMyNCw5NTc1NTgzMDEsLTE5ODMwMzE3NDYsLTE5
+OTY4NTM2NzEsNTM5NDU1NDEsLTEyNDM2NDI3NDMsLTk1MDk0OT
+IxMSwtMTM4OTc0MzEzNSwtMTU2NDY4MDEzMywxNDMxMTQzNjE0
+LDEzOTc5ODA0NzRdfQ==
 -->
