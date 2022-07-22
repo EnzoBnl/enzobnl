@@ -132,6 +132,8 @@ saved_model_cli show --dir /path/to/model --all
 sudo lshw -C display
 # find location of a symlink:
 ls -al <symlink>
+# extended ls
+ls -lL
 # count lines
 wc -l filename
 # split large file in files of X lines, smallfileaa, smallfileaa, smallfileab
@@ -641,11 +643,11 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NDY3NDM0MzUsLTE2NjEwNzAzMzQsMT
-c0OTExNTQ3MiwtNzc2MDQyOTU1LC0xMzc5MTQ0MzY0LDcwOTU1
-NjQxNiwtMTI0MjE0NzM1NiwtNTQ4OTAyMzI0LDk1NzU1ODMwMS
-wtMTk4MzAzMTc0NiwtMTk5Njg1MzY3MSw1Mzk0NTU0MSwtMTI0
-MzY0Mjc0MywtOTUwOTQ5MjExLC0xMzg5NzQzMTM1LC0xNTY0Nj
-gwMTMzLDE0MzExNDM2MTQsMTM5Nzk4MDQ3NCwxODQwMjY0NzQy
-LDU1OTU0NDQ2M119
+eyJoaXN0b3J5IjpbLTYzMDU5NjYyOCwtMTc0Njc0MzQzNSwtMT
+Y2MTA3MDMzNCwxNzQ5MTE1NDcyLC03NzYwNDI5NTUsLTEzNzkx
+NDQzNjQsNzA5NTU2NDE2LC0xMjQyMTQ3MzU2LC01NDg5MDIzMj
+QsOTU3NTU4MzAxLC0xOTgzMDMxNzQ2LC0xOTk2ODUzNjcxLDUz
+OTQ1NTQxLC0xMjQzNjQyNzQzLC05NTA5NDkyMTEsLTEzODk3ND
+MxMzUsLTE1NjQ2ODAxMzMsMTQzMTE0MzYxNCwxMzk3OTgwNDc0
+LDE4NDAyNjQ3NDJdfQ==
 -->
