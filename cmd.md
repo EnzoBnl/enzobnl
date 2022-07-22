@@ -112,7 +112,13 @@ docker rmi $(docker images -f "dangling=true" -q) --force
 # docker delete all images
 docker rmi $(docker images -a -q) # -f
 ```
+### Elastic search
+Je pose là les urls qui peuvent servir:  
 
+-   lister les indices  es  dispos:  [https://esweb-01.adm.dc3.dailymotion.com:9200/_cat/indices](https://esweb-01.adm.dc3.dailymotion.com:9200/_cat/indices)
+-   get le document d’une video avec son id entier en clé  [https://esweb-01.adm.dc3.dailymotion.com:9200/video_v4_idx/_doc/492342220](https://esweb-01.adm.dc3.dailymotion.com:9200/video_v4_idx/_doc/492342220)
+-   Le ticket  [https://jira.dailymotion.com/browse/GLUE-1147](https://jira.dailymotion.com/browse/GLUE-1147) (la question stackoverflow date du 28 sept  [@Achille Lacoin](https://dailymotion.slack.com/team/UK0SVEF3P))
+-   [https://developer.dailymotion.com/tools/](https://developer.dailymotion.com/tools/)
 ### Tensorflow
 ```bash
 pip3 install tensorflow
@@ -635,11 +641,11 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NjEwNzAzMzQsMTc0OTExNTQ3MiwtNz
-c2MDQyOTU1LC0xMzc5MTQ0MzY0LDcwOTU1NjQxNiwtMTI0MjE0
-NzM1NiwtNTQ4OTAyMzI0LDk1NzU1ODMwMSwtMTk4MzAzMTc0Ni
-wtMTk5Njg1MzY3MSw1Mzk0NTU0MSwtMTI0MzY0Mjc0MywtOTUw
-OTQ5MjExLC0xMzg5NzQzMTM1LC0xNTY0NjgwMTMzLDE0MzExND
-M2MTQsMTM5Nzk4MDQ3NCwxODQwMjY0NzQyLDU1OTU0NDQ2Mywx
-MDgwNDgwNzk0XX0=
+eyJoaXN0b3J5IjpbLTE3NDY3NDM0MzUsLTE2NjEwNzAzMzQsMT
+c0OTExNTQ3MiwtNzc2MDQyOTU1LC0xMzc5MTQ0MzY0LDcwOTU1
+NjQxNiwtMTI0MjE0NzM1NiwtNTQ4OTAyMzI0LDk1NzU1ODMwMS
+wtMTk4MzAzMTc0NiwtMTk5Njg1MzY3MSw1Mzk0NTU0MSwtMTI0
+MzY0Mjc0MywtOTUwOTQ5MjExLC0xMzg5NzQzMTM1LC0xNTY0Nj
+gwMTMzLDE0MzExNDM2MTQsMTM5Nzk4MDQ3NCwxODQwMjY0NzQy
+LDU1OTU0NDQ2M119
 -->
