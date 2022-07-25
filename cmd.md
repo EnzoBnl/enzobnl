@@ -634,6 +634,8 @@ kubectl scale --replicas=0 deployment <deployment_name>
 kubectl edit deployment <deployment_name>
 # redeploy a deployment without any change
 kubectl rollout restart deployment <deployment_name>
+# get the image of each pod of a deployment
+kubectl get pods -o name | grep recommender-db | xargs -I% kubectl describe % | grep Image
 ```
 
 ### macos
@@ -643,11 +645,11 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMzODI1Mzg5LDIxMDYwNDExNDYsMTE2MT
-QyMjEzNSwtMTc0Njc0MzQzNSwtMTY2MTA3MDMzNCwxNzQ5MTE1
-NDcyLC03NzYwNDI5NTUsLTEzNzkxNDQzNjQsNzA5NTU2NDE2LC
-0xMjQyMTQ3MzU2LC01NDg5MDIzMjQsOTU3NTU4MzAxLC0xOTgz
-MDMxNzQ2LC0xOTk2ODUzNjcxLDUzOTQ1NTQxLC0xMjQzNjQyNz
-QzLC05NTA5NDkyMTEsLTEzODk3NDMxMzUsLTE1NjQ2ODAxMzMs
-MTQzMTE0MzYxNF19
+eyJoaXN0b3J5IjpbLTgzNzU2MzQ5NiwtMzM4MjUzODksMjEwNj
+A0MTE0NiwxMTYxNDIyMTM1LC0xNzQ2NzQzNDM1LC0xNjYxMDcw
+MzM0LDE3NDkxMTU0NzIsLTc3NjA0Mjk1NSwtMTM3OTE0NDM2NC
+w3MDk1NTY0MTYsLTEyNDIxNDczNTYsLTU0ODkwMjMyNCw5NTc1
+NTgzMDEsLTE5ODMwMzE3NDYsLTE5OTY4NTM2NzEsNTM5NDU1ND
+EsLTEyNDM2NDI3NDMsLTk1MDk0OTIxMSwtMTM4OTc0MzEzNSwt
+MTU2NDY4MDEzM119
 -->
