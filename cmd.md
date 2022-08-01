@@ -478,8 +478,6 @@ git push origin --force localbranch:remotebranch
 - copy entire content (including algo name and email)
 - paste it as a new ssh key in section Setting -> SSH/GPG
 - git remote set-url origin git@github.com:ORGA_OR_USER/REPO.git
-// rename commit message
-git commit --amend -m"new message"
 // rename branch
 git branch -m <oldname> <newname>
 //tag
@@ -645,11 +643,11 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ1ODQyNDkwNiw0MDY2MzQzMzYsLTMzOD
-I1Mzg5LDIxMDYwNDExNDYsMTE2MTQyMjEzNSwtMTc0Njc0MzQz
-NSwtMTY2MTA3MDMzNCwxNzQ5MTE1NDcyLC03NzYwNDI5NTUsLT
-EzNzkxNDQzNjQsNzA5NTU2NDE2LC0xMjQyMTQ3MzU2LC01NDg5
-MDIzMjQsOTU3NTU4MzAxLC0xOTgzMDMxNzQ2LC0xOTk2ODUzNj
-cxLDUzOTQ1NTQxLC0xMjQzNjQyNzQzLC05NTA5NDkyMTEsLTEz
-ODk3NDMxMzVdfQ==
+eyJoaXN0b3J5IjpbLTcwNzQwNjksMTQ1ODQyNDkwNiw0MDY2Mz
+QzMzYsLTMzODI1Mzg5LDIxMDYwNDExNDYsMTE2MTQyMjEzNSwt
+MTc0Njc0MzQzNSwtMTY2MTA3MDMzNCwxNzQ5MTE1NDcyLC03Nz
+YwNDI5NTUsLTEzNzkxNDQzNjQsNzA5NTU2NDE2LC0xMjQyMTQ3
+MzU2LC01NDg5MDIzMjQsOTU3NTU4MzAxLC0xOTgzMDMxNzQ2LC
+0xOTk2ODUzNjcxLDUzOTQ1NTQxLC0xMjQzNjQyNzQzLC05NTA5
+NDkyMTFdfQ==
 -->
