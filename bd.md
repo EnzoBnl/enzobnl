@@ -270,13 +270,13 @@ Databricks lakehouse offer is built with bricks:
 - notebooks
 
 # Fun 
-If somebody has X billion $, he can pay for X zettabyte of data on cloud archive storage
+If somebody has X billion $, he can pay for the archive storage X zettabyte of data for one month
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUzMjUxMTQ5LDE4NDc4NDIxMjUsLTE4Mz
-Y0NTAyNDUsLTE3NzQzMDUyNTAsMTAyMzQ5NjkzNCwtOTMwODg5
-MDA0LC0xNzE4NjkxNzgyLDIyMTcxNjAyOSwtMTgyNzQyMDgzMC
-wtMTU5Nzc2MzIzMCwtMjAyMzkyNzg5MSwxMjIzNzg4NTYxLDE0
-NTU3MTEyMDUsLTE2NzkxNzc4NDAsLTIwMDQ1MDU3ODQsMTkyMz
-czMzc1MiwxNDk2MjI1MDksMjkwMDQ5MDc1LDQyNDQyMzI3Mywt
-MTcxMTA1MzAwXX0=
+eyJoaXN0b3J5IjpbMTQwMjIzOTAyNywxODQ3ODQyMTI1LC0xOD
+M2NDUwMjQ1LC0xNzc0MzA1MjUwLDEwMjM0OTY5MzQsLTkzMDg4
+OTAwNCwtMTcxODY5MTc4MiwyMjE3MTYwMjksLTE4Mjc0MjA4Mz
+AsLTE1OTc3NjMyMzAsLTIwMjM5Mjc4OTEsMTIyMzc4ODU2MSwx
+NDU1NzExMjA1LC0xNjc5MTc3ODQwLC0yMDA0NTA1Nzg0LDE5Mj
+M3MzM3NTIsMTQ5NjIyNTA5LDI5MDA0OTA3NSw0MjQ0MjMyNzMs
+LTE3MTEwNTMwMF19
 -->
