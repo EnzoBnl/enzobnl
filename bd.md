@@ -270,9 +270,9 @@ Databricks lakehouse offer is built with bricks:
 - notebooks
 
 # Fun 
-If somebody has X billion $, he can pay for the archive storage X zettabyte of data for one month
+One zettabyte of data for one month in archive storage cost 1 billion dollar
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQwMjIzOTAyNywxODQ3ODQyMTI1LC0xOD
+eyJoaXN0b3J5IjpbMTU3NDg1NDE0NCwxODQ3ODQyMTI1LC0xOD
 M2NDUwMjQ1LC0xNzc0MzA1MjUwLDEwMjM0OTY5MzQsLTkzMDg4
 OTAwNCwtMTcxODY5MTc4MiwyMjE3MTYwMjksLTE4Mjc0MjA4Mz
 AsLTE1OTc3NjMyMzAsLTIwMjM5Mjc4OTEsMTIyMzc4ODU2MSwx
