@@ -270,13 +270,13 @@ Databricks lakehouse offer is built with bricks:
 - notebooks
 
 # Fun 
-One ZB (ZettaByte, 10**21 bytes, 1 billion of GB) of data for one month in archive storage cost 1 billion dollar
+One ZB (ZettaByte, 10**21 bytes, 1 billion of GB) of data for one month in archive cloud storage cost 1 billion dollar
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNzY5ODE1MTYsMTg0Nzg0MjEyNSwtMT
-gzNjQ1MDI0NSwtMTc3NDMwNTI1MCwxMDIzNDk2OTM0LC05MzA4
-ODkwMDQsLTE3MTg2OTE3ODIsMjIxNzE2MDI5LC0xODI3NDIwOD
-MwLC0xNTk3NzYzMjMwLC0yMDIzOTI3ODkxLDEyMjM3ODg1NjEs
-MTQ1NTcxMTIwNSwtMTY3OTE3Nzg0MCwtMjAwNDUwNTc4NCwxOT
-IzNzMzNzUyLDE0OTYyMjUwOSwyOTAwNDkwNzUsNDI0NDIzMjcz
-LC0xNzExMDUzMDBdfQ==
+eyJoaXN0b3J5IjpbLTExNzM5MTU1MywxODQ3ODQyMTI1LC0xOD
+M2NDUwMjQ1LC0xNzc0MzA1MjUwLDEwMjM0OTY5MzQsLTkzMDg4
+OTAwNCwtMTcxODY5MTc4MiwyMjE3MTYwMjksLTE4Mjc0MjA4Mz
+AsLTE1OTc3NjMyMzAsLTIwMjM5Mjc4OTEsMTIyMzc4ODU2MSwx
+NDU1NzExMjA1LC0xNjc5MTc3ODQwLC0yMDA0NTA1Nzg0LDE5Mj
+M3MzM3NTIsMTQ5NjIyNTA5LDI5MDA0OTA3NSw0MjQ0MjMyNzMs
+LTE3MTEwNTMwMF19
 -->
