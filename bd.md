@@ -238,6 +238,7 @@ Known as [Incremental encoding](https://en.wikipedia.org/wiki/Incremental_encodi
 
 
 # Data warehouse vs RDBMS vs Key-value store
+
 ||RDBMS|Data warehouse|Key-Value Store|
 |--|--|--|--|
 |targeted workload|OLTP|OLAP|OLTP|
@@ -268,11 +269,11 @@ Databricks lakehouse offer is built with bricks:
 - spark
 - notebooks
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MzY0NTAyNDUsLTE3NzQzMDUyNTAsMT
-AyMzQ5NjkzNCwtOTMwODg5MDA0LC0xNzE4NjkxNzgyLDIyMTcx
-NjAyOSwtMTgyNzQyMDgzMCwtMTU5Nzc2MzIzMCwtMjAyMzkyNz
-g5MSwxMjIzNzg4NTYxLDE0NTU3MTEyMDUsLTE2NzkxNzc4NDAs
-LTIwMDQ1MDU3ODQsMTkyMzczMzc1MiwxNDk2MjI1MDksMjkwMD
-Q5MDc1LDQyNDQyMzI3MywtMTcxMTA1MzAwLC0xNzY4MjEyODA3
-LC0xMDkzNzkxNTM1XX0=
+eyJoaXN0b3J5IjpbMTg0Nzg0MjEyNSwtMTgzNjQ1MDI0NSwtMT
+c3NDMwNTI1MCwxMDIzNDk2OTM0LC05MzA4ODkwMDQsLTE3MTg2
+OTE3ODIsMjIxNzE2MDI5LC0xODI3NDIwODMwLC0xNTk3NzYzMj
+MwLC0yMDIzOTI3ODkxLDEyMjM3ODg1NjEsMTQ1NTcxMTIwNSwt
+MTY3OTE3Nzg0MCwtMjAwNDUwNTc4NCwxOTIzNzMzNzUyLDE0OT
+YyMjUwOSwyOTAwNDkwNzUsNDI0NDIzMjczLC0xNzExMDUzMDAs
+LTE3NjgyMTI4MDddfQ==
 -->
