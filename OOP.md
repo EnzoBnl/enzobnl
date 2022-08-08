@@ -72,12 +72,12 @@ Expose behavior in a public API that do calls to private behaviors implementatio
 #### Inversion of Control
 It's making a framework lead the execution of a program, the application code just filling the blank to customize the framework's behavior.
 
-Application outputing in stdout the first 5 characters of the lines of a file passed as argument:
+Application outputing in stdout the first 5 characters of the lines of a file passed as argument, during 1 seconds maximum:
 - Without IoC
 ```python
 import time
 start = time.time()
-execution_timeout_sec 
+execution_timeout_sec = 1
 with open(args[1], 'r') as fh:
     for line in fh.read().split("\n"):
 	    print(line[:5])
@@ -90,7 +90,7 @@ from some_file_processing_framework as LinesPrinter
 def take_first_5_chars(line: str) -> str:
     return line[:5]
     
-LinesPrinter(file=args[1]).transformed_by(take_first_5_chars).execution_timeout_sec(10)
+LinesPrinter(file=args[1]).transformed_by(take_first_5_chars).execution_timeout_sec(1)
 ```
 
 ### Best practices
@@ -158,8 +158,8 @@ M[Man<br/>____________<br/>]--extends-->H
 |**[Structural]** *Delegation Pattern*|*"Allows object composition to achieve the same code reuse as inheritance."*|When a method delegates its work to an underlying attribute. For example a `Body` can delegate walking to its `Legs`: its `.walk()` method simply call `this.legs.walk()`.|Useful to match **OCP** when we can't achieve behavior reuse through inheritance for some reason|
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY1ODk1MTk4NywtOTk5NDQ3NzUwLDE4NT
-Q3MTM2NzAsLTMyMjE5NDM0MCwtMTczMDgwNDM2LC05MDcwNDIz
-NjAsODYzMzQ5NzA5LDE2MzcxOTkyNDYsOTI5ODc2MDc4LC0xNz
-cxODE5NDYzLC0xMDE1NDk2ODQxXX0=
+eyJoaXN0b3J5IjpbLTE2Mzg1NjU5MjYsLTk5OTQ0Nzc1MCwxOD
+U0NzEzNjcwLC0zMjIxOTQzNDAsLTE3MzA4MDQzNiwtOTA3MDQy
+MzYwLDg2MzM0OTcwOSwxNjM3MTk5MjQ2LDkyOTg3NjA3OCwtMT
+c3MTgxOTQ2MywtMTAxNTQ5Njg0MV19
 -->
