@@ -72,18 +72,20 @@ Expose behavior in a public API that do calls to private behaviors implementatio
 #### Inversion of Control
 It's making a framework lead the execution of a program, the application code just filling the blank to customize the framework's behavior.
 
-Without:
+Application printing the lines ithout IoC:
 ```python
-with open('foo.csv', 'r') as fh:
+with open(args[1], 'r') as fh:
     for line in fh.read().split("\n"):
 	    print(line[:5])
 ```
 
 ```python
-import some_file_processing_framework as framework
+from some_file_processing_framework as LinesPrinter
+
 def take_first_5_chars(line: str) -> str:
     return line[:5]
-framework.print_file_lines('foo.csv').transformed_by(take_first_5_chars)
+    
+LinesPrinter(file=args[1]).transformed_by(take_first_5_chars)
 ```
 
 ### Best practices
@@ -151,8 +153,8 @@ M[Man<br/>____________<br/>]--extends-->H
 |**[Structural]** *Delegation Pattern*|*"Allows object composition to achieve the same code reuse as inheritance."*|When a method delegates its work to an underlying attribute. For example a `Body` can delegate walking to its `Legs`: its `.walk()` method simply call `this.legs.walk()`.|Useful to match **OCP** when we can't achieve behavior reuse through inheritance for some reason|
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1OTgyMjUxNjksMTg1NDcxMzY3MCwtMz
-IyMTk0MzQwLC0xNzMwODA0MzYsLTkwNzA0MjM2MCw4NjMzNDk3
-MDksMTYzNzE5OTI0Niw5Mjk4NzYwNzgsLTE3NzE4MTk0NjMsLT
-EwMTU0OTY4NDFdfQ==
+eyJoaXN0b3J5IjpbLTk5OTQ0Nzc1MCwxODU0NzEzNjcwLC0zMj
+IxOTQzNDAsLTE3MzA4MDQzNiwtOTA3MDQyMzYwLDg2MzM0OTcw
+OSwxNjM3MTk5MjQ2LDkyOTg3NjA3OCwtMTc3MTgxOTQ2MywtMT
+AxNTQ5Njg0MV19
 -->
