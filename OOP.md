@@ -90,7 +90,10 @@ from some_file_processing_framework as LinesPrinter
 def take_first_5_chars(line: str) -> str:
     return line[:5]
     
-LinesPrinter(file=args[1]).transformed_by(take_first_5_chars).execution_timeout_sec(1)
+LinesPrinter(file=args[1])\
+    .transformed_by(take_first_5_chars)\
+    .execution_timeout_sec(1)\
+    .run()
 ```
 
 ### Best practices
@@ -158,8 +161,8 @@ M[Man<br/>____________<br/>]--extends-->H
 |**[Structural]** *Delegation Pattern*|*"Allows object composition to achieve the same code reuse as inheritance."*|When a method delegates its work to an underlying attribute. For example a `Body` can delegate walking to its `Legs`: its `.walk()` method simply call `this.legs.walk()`.|Useful to match **OCP** when we can't achieve behavior reuse through inheritance for some reason|
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2Mzg1NjU5MjYsLTk5OTQ0Nzc1MCwxOD
-U0NzEzNjcwLC0zMjIxOTQzNDAsLTE3MzA4MDQzNiwtOTA3MDQy
-MzYwLDg2MzM0OTcwOSwxNjM3MTk5MjQ2LDkyOTg3NjA3OCwtMT
-c3MTgxOTQ2MywtMTAxNTQ5Njg0MV19
+eyJoaXN0b3J5IjpbNjEyNTI3NTYyLC05OTk0NDc3NTAsMTg1ND
+cxMzY3MCwtMzIyMTk0MzQwLC0xNzMwODA0MzYsLTkwNzA0MjM2
+MCw4NjMzNDk3MDksMTYzNzE5OTI0Niw5Mjk4NzYwNzgsLTE3Nz
+E4MTk0NjMsLTEwMTU0OTY4NDFdfQ==
 -->
