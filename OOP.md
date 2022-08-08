@@ -70,6 +70,8 @@ Expose behavior in a public API that do calls to private behaviors implementatio
 
 ### OOP principles
 #### Inversion of Control
+It's making a framework lead the execution of a program, the application code just filling the blank to customize the framework's behavior.
+
 Without:
 ```python
 with open('foo.csv', 'r') as fh:
@@ -149,8 +151,8 @@ M[Man<br/>____________<br/>]--extends-->H
 |**[Structural]** *Delegation Pattern*|*"Allows object composition to achieve the same code reuse as inheritance."*|When a method delegates its work to an underlying attribute. For example a `Body` can delegate walking to its `Legs`: its `.walk()` method simply call `this.legs.walk()`.|Useful to match **OCP** when we can't achieve behavior reuse through inheritance for some reason|
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzUzMDcyNjQ4LDE4NTQ3MTM2NzAsLTMyMj
-E5NDM0MCwtMTczMDgwNDM2LC05MDcwNDIzNjAsODYzMzQ5NzA5
-LDE2MzcxOTkyNDYsOTI5ODc2MDc4LC0xNzcxODE5NDYzLC0xMD
-E1NDk2ODQxXX0=
+eyJoaXN0b3J5IjpbLTE1OTgyMjUxNjksMTg1NDcxMzY3MCwtMz
+IyMTk0MzQwLC0xNzMwODA0MzYsLTkwNzA0MjM2MCw4NjMzNDk3
+MDksMTYzNzE5OTI0Niw5Mjk4NzYwNzgsLTE3NzE4MTk0NjMsLT
+EwMTU0OTY4NDFdfQ==
 -->
