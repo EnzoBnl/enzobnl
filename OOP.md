@@ -81,7 +81,8 @@ execution_timeout_sec = 1
 with open(args[1], 'r') as fh:
     for line in fh.read().split("\n"):
 	    print(line[:5])
-	    if time.time() - start > execution_timeout_sec
+	    if time.time() - start > execution_timeout_sec:
+	        break
 ```
 - With IoC
 ```python
@@ -161,8 +162,8 @@ M[Man<br/>____________<br/>]--extends-->H
 |**[Structural]** *Delegation Pattern*|*"Allows object composition to achieve the same code reuse as inheritance."*|When a method delegates its work to an underlying attribute. For example a `Body` can delegate walking to its `Legs`: its `.walk()` method simply call `this.legs.walk()`.|Useful to match **OCP** when we can't achieve behavior reuse through inheritance for some reason|
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjEyNTI3NTYyLC05OTk0NDc3NTAsMTg1ND
-cxMzY3MCwtMzIyMTk0MzQwLC0xNzMwODA0MzYsLTkwNzA0MjM2
-MCw4NjMzNDk3MDksMTYzNzE5OTI0Niw5Mjk4NzYwNzgsLTE3Nz
-E4MTk0NjMsLTEwMTU0OTY4NDFdfQ==
+eyJoaXN0b3J5IjpbLTE0MzM4MjE5MywtOTk5NDQ3NzUwLDE4NT
+Q3MTM2NzAsLTMyMjE5NDM0MCwtMTczMDgwNDM2LC05MDcwNDIz
+NjAsODYzMzQ5NzA5LDE2MzcxOTkyNDYsOTI5ODc2MDc4LC0xNz
+cxODE5NDYzLC0xMDE1NDk2ODQxXX0=
 -->
