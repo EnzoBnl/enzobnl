@@ -81,7 +81,7 @@ with open('foo.csv', 'r') as fh:
 import some_file_processing_framework as framework
 def take_first_5_chars(line: str) -> str:
     return line[:5]
-framework.printFileLines().transformedWithFunction(take_first_5_chars)
+framework.print_file_lines('foo.csv').transformed_by(take_first_5_chars)
 ```
 
 ### Best practices
@@ -149,7 +149,7 @@ M[Man<br/>____________<br/>]--extends-->H
 |**[Structural]** *Delegation Pattern*|*"Allows object composition to achieve the same code reuse as inheritance."*|When a method delegates its work to an underlying attribute. For example a `Body` can delegate walking to its `Legs`: its `.walk()` method simply call `this.legs.walk()`.|Useful to match **OCP** when we can't achieve behavior reuse through inheritance for some reason|
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNTYwMzk2LDE4NTQ3MTM2NzAsLTMyMj
+eyJoaXN0b3J5IjpbNzUzMDcyNjQ4LDE4NTQ3MTM2NzAsLTMyMj
 E5NDM0MCwtMTczMDgwNDM2LC05MDcwNDIzNjAsODYzMzQ5NzA5
 LDE2MzcxOTkyNDYsOTI5ODc2MDc4LC0xNzcxODE5NDYzLC0xMD
 E1NDk2ODQxXX0=
