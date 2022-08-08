@@ -58,7 +58,7 @@ Based on this idea, Robert C. Martin’s definition of the Dependency Inversion 
 1.  High-level modules should not depend on low-level modules. Both should depend on abstractions.
 2.  Abstractions should not depend on details. Details should depend on abstractions.
 
-### OOP basics
+### OOP principles
 
 #### Encapsulation
 Expose behavior in a public API that do calls to private behaviors implementations & attributes
@@ -133,8 +133,8 @@ M[Man<br/>____________<br/>]--extends-->H
 |**[Structural]** *Delegation Pattern*|*"Allows object composition to achieve the same code reuse as inheritance."*|When a method delegates its work to an underlying attribute. For example a `Body` can delegate walking to its `Legs`: its `.walk()` method simply call `this.legs.walk()`.|Useful to match **OCP** when we can't achieve behavior reuse through inheritance for some reason|
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg1NDcxMzY3MCwtMzIyMTk0MzQwLC0xNz
-MwODA0MzYsLTkwNzA0MjM2MCw4NjMzNDk3MDksMTYzNzE5OTI0
-Niw5Mjk4NzYwNzgsLTE3NzE4MTk0NjMsLTEwMTU0OTY4NDFdfQ
-==
+eyJoaXN0b3J5IjpbLTcxMTgyNzc4NCwxODU0NzEzNjcwLC0zMj
+IxOTQzNDAsLTE3MzA4MDQzNiwtOTA3MDQyMzYwLDg2MzM0OTcw
+OSwxNjM3MTk5MjQ2LDkyOTg3NjA3OCwtMTc3MTgxOTQ2MywtMT
+AxNTQ5Njg0MV19
 -->
