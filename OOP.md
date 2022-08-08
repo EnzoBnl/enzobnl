@@ -99,6 +99,8 @@ LinesPrinter(file=args[1])\
     .run()
 ```
 
+Example of IoC frameworks: webserver frameworks (falsk, fastapi), data processing frameworks (spark)
+
 ### Best practices
 #### Avoid fields direct use
 *"You should not need to know if you are manipulating a field or a method"*
@@ -164,8 +166,8 @@ M[Man<br/>____________<br/>]--extends-->H
 |**[Structural]** *Delegation Pattern*|*"Allows object composition to achieve the same code reuse as inheritance."*|When a method delegates its work to an underlying attribute. For example a `Body` can delegate walking to its `Legs`: its `.walk()` method simply call `this.legs.walk()`.|Useful to match **OCP** when we can't achieve behavior reuse through inheritance for some reason|
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc3Njc1NzI5MSwtOTk5NDQ3NzUwLDE4NT
-Q3MTM2NzAsLTMyMjE5NDM0MCwtMTczMDgwNDM2LC05MDcwNDIz
-NjAsODYzMzQ5NzA5LDE2MzcxOTkyNDYsOTI5ODc2MDc4LC0xNz
-cxODE5NDYzLC0xMDE1NDk2ODQxXX0=
+eyJoaXN0b3J5IjpbLTEzOTg0NjU5ODIsLTk5OTQ0Nzc1MCwxOD
+U0NzEzNjcwLC0zMjIxOTQzNDAsLTE3MzA4MDQzNiwtOTA3MDQy
+MzYwLDg2MzM0OTcwOSwxNjM3MTk5MjQ2LDkyOTg3NjA3OCwtMT
+c3MTgxOTQ2MywtMTAxNTQ5Njg0MV19
 -->
