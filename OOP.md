@@ -71,12 +71,15 @@ Expose behavior in a public API that do calls to private behaviors implementatio
 ### OOP principles
 #### Inversion of Control
 Without:
+```python
+with open('foo.csv', 'r') as fh:
+    for line in fh.read().split("\n"):
+	    print(
 ```
-import request
 
 ```
-
-```
+import some_file_processing_framework as framework
+framework.processFile().withFunc
 ```
 
 ### Best practices
@@ -144,7 +147,7 @@ M[Man<br/>____________<br/>]--extends-->H
 |**[Structural]** *Delegation Pattern*|*"Allows object composition to achieve the same code reuse as inheritance."*|When a method delegates its work to an underlying attribute. For example a `Body` can delegate walking to its `Legs`: its `.walk()` method simply call `this.legs.walk()`.|Useful to match **OCP** when we can't achieve behavior reuse through inheritance for some reason|
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzI0NTc3OTg4LDE4NTQ3MTM2NzAsLTMyMj
+eyJoaXN0b3J5IjpbMzI2NDc3MjgxLDE4NTQ3MTM2NzAsLTMyMj
 E5NDM0MCwtMTczMDgwNDM2LC05MDcwNDIzNjAsODYzMzQ5NzA5
 LDE2MzcxOTkyNDYsOTI5ODc2MDc4LC0xNzcxODE5NDYzLC0xMD
 E1NDk2ODQxXX0=
