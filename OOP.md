@@ -88,7 +88,7 @@ with open(args[1], 'r') as fh:
 ```
 - With IoC
 ```python
-from some_file_processing_framework as LinesPrinter
+from some_file_processing_framework import LinesPrinter
 
 def take_first_5_chars(line: str) -> str:
     return line[:5]
@@ -166,7 +166,7 @@ M[Man<br/>____________<br/>]--extends-->H
 |**[Structural]** *Delegation Pattern*|*"Allows object composition to achieve the same code reuse as inheritance."*|When a method delegates its work to an underlying attribute. For example a `Body` can delegate walking to its `Legs`: its `.walk()` method simply call `this.legs.walk()`.|Useful to match **OCP** when we can't achieve behavior reuse through inheritance for some reason|
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzOTg0NjU5ODIsLTk5OTQ0Nzc1MCwxOD
+eyJoaXN0b3J5IjpbLTIwODQ1MTgzNTMsLTk5OTQ0Nzc1MCwxOD
 U0NzEzNjcwLC0zMjIxOTQzNDAsLTE3MzA4MDQzNiwtOTA3MDQy
 MzYwLDg2MzM0OTcwOSwxNjM3MTk5MjQ2LDkyOTg3NjA3OCwtMT
 c3MTgxOTQ2MywtMTAxNTQ5Njg0MV19
