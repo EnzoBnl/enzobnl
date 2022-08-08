@@ -58,7 +58,7 @@ Based on this idea, Robert C. Martin’s definition of the Dependency Inversion 
 1.  High-level modules should not depend on low-level modules. Both should depend on abstractions.
 2.  Abstractions should not depend on details. Details should depend on abstractions.
 
-### OOP principles
+### OOP base features
 
 #### Encapsulation
 Expose behavior in a public API that do calls to private behaviors implementations & attributes
@@ -67,6 +67,17 @@ Expose behavior in a public API that do calls to private behaviors implementatio
 - *Ad hoc Polymorphism*: via Overloading.
 - *Parametric Polymorphism*: allowed by "Generics"
 - *Subtyping Polymorphism*: allows Liskov Substitution Principle
+
+### OOP principles
+#### Inversion of Control
+Without:
+```
+import request
+
+```
+
+```
+```
 
 ### Best practices
 #### Avoid fields direct use
@@ -133,8 +144,8 @@ M[Man<br/>____________<br/>]--extends-->H
 |**[Structural]** *Delegation Pattern*|*"Allows object composition to achieve the same code reuse as inheritance."*|When a method delegates its work to an underlying attribute. For example a `Body` can delegate walking to its `Legs`: its `.walk()` method simply call `this.legs.walk()`.|Useful to match **OCP** when we can't achieve behavior reuse through inheritance for some reason|
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcxMTgyNzc4NCwxODU0NzEzNjcwLC0zMj
-IxOTQzNDAsLTE3MzA4MDQzNiwtOTA3MDQyMzYwLDg2MzM0OTcw
-OSwxNjM3MTk5MjQ2LDkyOTg3NjA3OCwtMTc3MTgxOTQ2MywtMT
-AxNTQ5Njg0MV19
+eyJoaXN0b3J5IjpbNzI0NTc3OTg4LDE4NTQ3MTM2NzAsLTMyMj
+E5NDM0MCwtMTczMDgwNDM2LC05MDcwNDIzNjAsODYzMzQ5NzA5
+LDE2MzcxOTkyNDYsOTI5ODc2MDc4LC0xNzcxODE5NDYzLC0xMD
+E1NDk2ODQxXX0=
 -->
