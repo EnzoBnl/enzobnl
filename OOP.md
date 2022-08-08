@@ -76,8 +76,10 @@ Application outputing in stdout the first 5 characters of the lines of a file pa
 - Without IoC
 ```python
 import time
+
 start = time.time()
 execution_timeout_sec = 1
+
 with open(args[1], 'r') as fh:
     for line in fh.read().split("\n"):
 	    print(line[:5])
@@ -162,7 +164,7 @@ M[Man<br/>____________<br/>]--extends-->H
 |**[Structural]** *Delegation Pattern*|*"Allows object composition to achieve the same code reuse as inheritance."*|When a method delegates its work to an underlying attribute. For example a `Body` can delegate walking to its `Legs`: its `.walk()` method simply call `this.legs.walk()`.|Useful to match **OCP** when we can't achieve behavior reuse through inheritance for some reason|
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MzM4MjE5MywtOTk5NDQ3NzUwLDE4NT
+eyJoaXN0b3J5IjpbMTc3Njc1NzI5MSwtOTk5NDQ3NzUwLDE4NT
 Q3MTM2NzAsLTMyMjE5NDM0MCwtMTczMDgwNDM2LC05MDcwNDIz
 NjAsODYzMzQ5NzA5LDE2MzcxOTkyNDYsOTI5ODc2MDc4LC0xNz
 cxODE5NDYzLC0xMDE1NDk2ODQxXX0=
