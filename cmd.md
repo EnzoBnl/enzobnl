@@ -458,7 +458,8 @@ git diff A...B # diff between common ancestor of A and B (=C) and B
 git diff C...B # diff between common ancestor of C and B (=C) and B
 # true branch to branch diff uses 2-dots
 git diff A..B
-
+# git diff name of changed files only
+git diff A..B --name-only
 # git merge B in A, without merge commit (if ff not possible then error):
 git switch A
 git merge B --ff-only
@@ -643,11 +644,11 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcwNzQwNjksMTQ1ODQyNDkwNiw0MDY2Mz
-QzMzYsLTMzODI1Mzg5LDIxMDYwNDExNDYsMTE2MTQyMjEzNSwt
-MTc0Njc0MzQzNSwtMTY2MTA3MDMzNCwxNzQ5MTE1NDcyLC03Nz
-YwNDI5NTUsLTEzNzkxNDQzNjQsNzA5NTU2NDE2LC0xMjQyMTQ3
-MzU2LC01NDg5MDIzMjQsOTU3NTU4MzAxLC0xOTgzMDMxNzQ2LC
-0xOTk2ODUzNjcxLDUzOTQ1NTQxLC0xMjQzNjQyNzQzLC05NTA5
-NDkyMTFdfQ==
+eyJoaXN0b3J5IjpbLTczNzkwMzQ3MiwtNzA3NDA2OSwxNDU4ND
+I0OTA2LDQwNjYzNDMzNiwtMzM4MjUzODksMjEwNjA0MTE0Niwx
+MTYxNDIyMTM1LC0xNzQ2NzQzNDM1LC0xNjYxMDcwMzM0LDE3ND
+kxMTU0NzIsLTc3NjA0Mjk1NSwtMTM3OTE0NDM2NCw3MDk1NTY0
+MTYsLTEyNDIxNDczNTYsLTU0ODkwMjMyNCw5NTc1NTgzMDEsLT
+E5ODMwMzE3NDYsLTE5OTY4NTM2NzEsNTM5NDU1NDEsLTEyNDM2
+NDI3NDNdfQ==
 -->
