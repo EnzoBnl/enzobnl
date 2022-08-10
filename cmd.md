@@ -128,6 +128,9 @@ saved_model_cli show --dir /path/to/model --all
 ### unix
 
 ```bash
+# for loops
+for json_file_name in foo bar; do touch /tmp/$json_file_name.json; done;
+for i in `seq 1 10`; do echo $i; done;
 # print gpu info
 sudo lshw -C display
 # (find location of a symlink:
@@ -644,11 +647,11 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTczNzkwMzQ3MiwtNzA3NDA2OSwxNDU4ND
-I0OTA2LDQwNjYzNDMzNiwtMzM4MjUzODksMjEwNjA0MTE0Niwx
-MTYxNDIyMTM1LC0xNzQ2NzQzNDM1LC0xNjYxMDcwMzM0LDE3ND
-kxMTU0NzIsLTc3NjA0Mjk1NSwtMTM3OTE0NDM2NCw3MDk1NTY0
-MTYsLTEyNDIxNDczNTYsLTU0ODkwMjMyNCw5NTc1NTgzMDEsLT
-E5ODMwMzE3NDYsLTE5OTY4NTM2NzEsNTM5NDU1NDEsLTEyNDM2
-NDI3NDNdfQ==
+eyJoaXN0b3J5IjpbLTE1MDQxNzU5NjYsLTczNzkwMzQ3MiwtNz
+A3NDA2OSwxNDU4NDI0OTA2LDQwNjYzNDMzNiwtMzM4MjUzODks
+MjEwNjA0MTE0NiwxMTYxNDIyMTM1LC0xNzQ2NzQzNDM1LC0xNj
+YxMDcwMzM0LDE3NDkxMTU0NzIsLTc3NjA0Mjk1NSwtMTM3OTE0
+NDM2NCw3MDk1NTY0MTYsLTEyNDIxNDczNTYsLTU0ODkwMjMyNC
+w5NTc1NTgzMDEsLTE5ODMwMzE3NDYsLTE5OTY4NTM2NzEsNTM5
+NDU1NDFdfQ==
 -->
