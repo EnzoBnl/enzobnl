@@ -455,7 +455,7 @@ ddine
 
 ```bash 
 # restore a bar file's state as it was in commit foo
-git restore -s foo -- bar
+git restore -s foo -- ./bar
 # show common ancestor commit between branch A and B
 git merge-base A B # result -> C
 # with previous example, these two 3-dots diff are equivalent:
@@ -649,7 +649,7 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMDk0NDU1OTksLTE1MDQxNzU5NjYsLT
+eyJoaXN0b3J5IjpbLTE1Mzc1MzUwMDYsLTE1MDQxNzU5NjYsLT
 czNzkwMzQ3MiwtNzA3NDA2OSwxNDU4NDI0OTA2LDQwNjYzNDMz
 NiwtMzM4MjUzODksMjEwNjA0MTE0NiwxMTYxNDIyMTM1LC0xNz
 Q2NzQzNDM1LC0xNjYxMDcwMzM0LDE3NDkxMTU0NzIsLTc3NjA0
