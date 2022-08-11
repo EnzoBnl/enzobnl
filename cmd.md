@@ -454,6 +454,8 @@ ddine
 [How to write good commit messages](https://chris.beams.io/posts/git-commit/#imperative)
 
 ```bash 
+# restore a bar file's state as it was in commit foo
+git restore -s foo -- bar
 # show common ancestor commit between branch A and B
 git merge-base A B # result -> C
 # with previous example, these two 3-dots diff are equivalent:
@@ -647,11 +649,11 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MDQxNzU5NjYsLTczNzkwMzQ3MiwtNz
-A3NDA2OSwxNDU4NDI0OTA2LDQwNjYzNDMzNiwtMzM4MjUzODks
-MjEwNjA0MTE0NiwxMTYxNDIyMTM1LC0xNzQ2NzQzNDM1LC0xNj
-YxMDcwMzM0LDE3NDkxMTU0NzIsLTc3NjA0Mjk1NSwtMTM3OTE0
-NDM2NCw3MDk1NTY0MTYsLTEyNDIxNDczNTYsLTU0ODkwMjMyNC
-w5NTc1NTgzMDEsLTE5ODMwMzE3NDYsLTE5OTY4NTM2NzEsNTM5
-NDU1NDFdfQ==
+eyJoaXN0b3J5IjpbLTEwMDk0NDU1OTksLTE1MDQxNzU5NjYsLT
+czNzkwMzQ3MiwtNzA3NDA2OSwxNDU4NDI0OTA2LDQwNjYzNDMz
+NiwtMzM4MjUzODksMjEwNjA0MTE0NiwxMTYxNDIyMTM1LC0xNz
+Q2NzQzNDM1LC0xNjYxMDcwMzM0LDE3NDkxMTU0NzIsLTc3NjA0
+Mjk1NSwtMTM3OTE0NDM2NCw3MDk1NTY0MTYsLTEyNDIxNDczNT
+YsLTU0ODkwMjMyNCw5NTc1NTgzMDEsLTE5ODMwMzE3NDYsLTE5
+OTY4NTM2NzFdfQ==
 -->
