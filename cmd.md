@@ -483,7 +483,7 @@ git push origin --force localbranch:remotebranch
 git checkout master
 git reset --hard origin/master@{1} # reset to the previous state of origin/master, as recorded by reflog
 git push -f origin master
-```
+
 # use ssh auth o github
 - generate ssh pairs and add them to agent
 - copy entire content (including algo name and email)
@@ -654,11 +654,11 @@ Shortcuts
 cmd + ctl + F
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNjc3NjM0OTgsLTE1Mzc1MzUwMDYsLT
-E1MDQxNzU5NjYsLTczNzkwMzQ3MiwtNzA3NDA2OSwxNDU4NDI0
-OTA2LDQwNjYzNDMzNiwtMzM4MjUzODksMjEwNjA0MTE0NiwxMT
-YxNDIyMTM1LC0xNzQ2NzQzNDM1LC0xNjYxMDcwMzM0LDE3NDkx
-MTU0NzIsLTc3NjA0Mjk1NSwtMTM3OTE0NDM2NCw3MDk1NTY0MT
-YsLTEyNDIxNDczNTYsLTU0ODkwMjMyNCw5NTc1NTgzMDEsLTE5
-ODMwMzE3NDZdfQ==
+eyJoaXN0b3J5IjpbNzc0NzY1OTQsLTE1Mzc1MzUwMDYsLTE1MD
+QxNzU5NjYsLTczNzkwMzQ3MiwtNzA3NDA2OSwxNDU4NDI0OTA2
+LDQwNjYzNDMzNiwtMzM4MjUzODksMjEwNjA0MTE0NiwxMTYxND
+IyMTM1LC0xNzQ2NzQzNDM1LC0xNjYxMDcwMzM0LDE3NDkxMTU0
+NzIsLTc3NjA0Mjk1NSwtMTM3OTE0NDM2NCw3MDk1NTY0MTYsLT
+EyNDIxNDczNTYsLTU0ODkwMjMyNCw5NTc1NTgzMDEsLTE5ODMw
+MzE3NDZdfQ==
 -->
