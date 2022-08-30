@@ -658,18 +658,18 @@ cmd + ctl + F
 
 ```bash
 # list helm release 
-helm ls -n recommender
-# get values from an helmrelease
-helm get values data-recommender-home-native.recommender -n recommender
+helm -n <namespace> ls
+# get values from a helm release
+helm -n <namespace> get values re.lease
 # get manifest 
-helm get manifest data-recommender-home-native.recommender -n recommender
+helm -n <namespace> get manifest re.lease
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI1MzU5OTc0OSw3NzQ3NjU5NCwtMTUzNz
-UzNTAwNiwtMTUwNDE3NTk2NiwtNzM3OTAzNDcyLC03MDc0MDY5
-LDE0NTg0MjQ5MDYsNDA2NjM0MzM2LC0zMzgyNTM4OSwyMTA2MD
-QxMTQ2LDExNjE0MjIxMzUsLTE3NDY3NDM0MzUsLTE2NjEwNzAz
-MzQsMTc0OTExNTQ3MiwtNzc2MDQyOTU1LC0xMzc5MTQ0MzY0LD
-cwOTU1NjQxNiwtMTI0MjE0NzM1NiwtNTQ4OTAyMzI0LDk1NzU1
-ODMwMV19
+eyJoaXN0b3J5IjpbOTI5NjUzNTYzLDc3NDc2NTk0LC0xNTM3NT
+M1MDA2LC0xNTA0MTc1OTY2LC03Mzc5MDM0NzIsLTcwNzQwNjks
+MTQ1ODQyNDkwNiw0MDY2MzQzMzYsLTMzODI1Mzg5LDIxMDYwND
+ExNDYsMTE2MTQyMjEzNSwtMTc0Njc0MzQzNSwtMTY2MTA3MDMz
+NCwxNzQ5MTE1NDcyLC03NzYwNDI5NTUsLTEzNzkxNDQzNjQsNz
+A5NTU2NDE2LC0xMjQyMTQ3MzU2LC01NDg5MDIzMjQsOTU3NTU4
+MzAxXX0=
 -->
