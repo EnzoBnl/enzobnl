@@ -82,6 +82,8 @@ gsutil mv gs://old_name gs://new_name
 gcloud config set project <project-id>
 # get disk usage of a folder in human readable unit
 gsutil du -sh gs://bucket/some/folder
+# verbose listing (with generation) while listing
+gsutil ls -L <path>
 ```
 
 
@@ -665,11 +667,11 @@ helm -n <namespace> get values re.lease
 helm -n <namespace> get manifest re.lease
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTI5NjUzNTYzLDc3NDc2NTk0LC0xNTM3NT
-M1MDA2LC0xNTA0MTc1OTY2LC03Mzc5MDM0NzIsLTcwNzQwNjks
-MTQ1ODQyNDkwNiw0MDY2MzQzMzYsLTMzODI1Mzg5LDIxMDYwND
-ExNDYsMTE2MTQyMjEzNSwtMTc0Njc0MzQzNSwtMTY2MTA3MDMz
-NCwxNzQ5MTE1NDcyLC03NzYwNDI5NTUsLTEzNzkxNDQzNjQsNz
-A5NTU2NDE2LC0xMjQyMTQ3MzU2LC01NDg5MDIzMjQsOTU3NTU4
-MzAxXX0=
+eyJoaXN0b3J5IjpbMjczMjA1NDYxLDkyOTY1MzU2Myw3NzQ3Nj
+U5NCwtMTUzNzUzNTAwNiwtMTUwNDE3NTk2NiwtNzM3OTAzNDcy
+LC03MDc0MDY5LDE0NTg0MjQ5MDYsNDA2NjM0MzM2LC0zMzgyNT
+M4OSwyMTA2MDQxMTQ2LDExNjE0MjIxMzUsLTE3NDY3NDM0MzUs
+LTE2NjEwNzAzMzQsMTc0OTExNTQ3MiwtNzc2MDQyOTU1LC0xMz
+c5MTQ0MzY0LDcwOTU1NjQxNiwtMTI0MjE0NzM1NiwtNTQ4OTAy
+MzI0XX0=
 -->
