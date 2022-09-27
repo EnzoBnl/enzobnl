@@ -497,6 +497,8 @@ git branch -m <oldname> <newname>
 $ git tag -a v1.4 -m "my version 1.4"
 //Fusionner i last commits from current branch
 git rebase -i <onto-this-commit>
+# rebase from begining
+git rebase -i --root
 //lines in repo:
 git ls-files | wc -l
 //reset to origin branch state
