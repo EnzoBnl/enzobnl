@@ -668,12 +668,9 @@ helm -n <namespace> get values re.lease
 # get manifest 
 helm -n <namespace> get manifest re.lease
 ```
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbMjczMjA1NDYxLDkyOTY1MzU2Myw3NzQ3Nj
-U5NCwtMTUzNzUzNTAwNiwtMTUwNDE3NTk2NiwtNzM3OTAzNDcy
-LC03MDc0MDY5LDE0NTg0MjQ5MDYsNDA2NjM0MzM2LC0zMzgyNT
-M4OSwyMTA2MDQxMTQ2LDExNjE0MjIxMzUsLTE3NDY3NDM0MzUs
-LTE2NjEwNzAzMzQsMTc0OTExNTQ3MiwtNzc2MDQyOTU1LC0xMz
-c5MTQ0MzY0LDcwOTU1NjQxNiwtMTI0MjE0NzM1NiwtNTQ4OTAy
-MzI0XX0=
--->
+
+## macos
+```
+# edit mouse sensitivity
+defaults write -g com.apple.mouse.scaling 20
+```
