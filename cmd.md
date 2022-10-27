@@ -269,8 +269,8 @@ chmod 755 <script or binary name>
 [shortcut] Ctrl + l
 // search terminal history, same shortcut to navigate matching lines
 [shortcut] Ctrl + r
-# output last 100 commands run in current terminal
-history 100
+# output last 100 commands run in current terminal, with execution timestamp
+history -E 100
 // create a symlink (symbolic link)
 sudo ln -s origin target
 // generate ssh pub/private keys
