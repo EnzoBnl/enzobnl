@@ -123,7 +123,7 @@ cat /path/to/query.sql | bq query --format json > path/to/output
 
 ### Get and Update table schema
 
-- retrieve it: `bq show --schema --format=prettyjson project_id:dataset.table > schema_file.json`
+- retrieve it: `bq show --format prettyjson project_id:dataset.table | jq ".schema.fields"`
 - edit `schema_file.json`
 - update table: `bq update project_id:dataset.table schema.json`
 
