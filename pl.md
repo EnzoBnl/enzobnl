@@ -791,8 +791,7 @@ the recursive statement.
 What the engine does:
 1. It will first evaluate `SELECT /*...*/ -- anchor statement` -> `cte0`
 2. Then the recursive statement is evaluated with `cte0` as `cte` and produce `cte1`
-3. Then the recursive statement
-is evaluated with `cte1` as `cte` and produce `cte2`
+3. Then the recursive statement is evaluated with `cte1` as `cte` and produce `cte2`
 ...
 
 continues as long as a recursive statement evaluation returns empty result.
