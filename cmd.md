@@ -618,6 +618,8 @@ airflow webserver --port 8080 -D --pid
 airflow scheduler
 airflow dags trigger hello_world
 airflow dags pause hello_world
+
+AIRFLOW_HOME=~/airflow python -m airflow dags report -v 
 ```
 
 ## Kubernetes
