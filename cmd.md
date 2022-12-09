@@ -102,6 +102,12 @@ gsutil ls -L <path>
 |cut|`dd`|
 |paste|`p`|
 
+### Terraform
+```
+terraform import google_bigquery_table.dataset_name_table_name project_name/dataset_name/table_name
+terraform apply
+```
+
 ### Container technos
 
 ```bash
