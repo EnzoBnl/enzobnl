@@ -201,6 +201,8 @@ grep 'alias' /home/foo/.bashrc
 echo 'valid_pattern' | grep -E 'valid_.*'
 # inverted grep: -v or --invert-match option
 grep -v <except_word>
+# find all __pycache__ folders and rm them
+find . | grep -E "(__pycache__|\.pyc|\.pyo$)" | xargs rm -rf
 # find/xargs/cat/grep/wc to count the number of lines containing 'abc' in all python files contained in cwd
 find . -type f -name '*.py' | xargs cat | grep 'abc' | wc -l
 # or using `subcommand` (that executes subcommand and replaces new lines by spaces in its stddout before inlining it in wrapping command)
