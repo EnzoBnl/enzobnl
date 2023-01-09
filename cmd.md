@@ -247,6 +247,8 @@ tar -xvzf /path/to/yourfile.tgz
 tar -cz filename -f filename.tar.gz
 // unzip
 unzip file.zip -d destination_folder
+# decompressed .gz file
+gunzip file.gz
 // env var tmp
 export ABC=/bla/blouche
 // env var perm for all users
