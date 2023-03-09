@@ -527,6 +527,8 @@ git push origin master
 # get short commit hash
 git rev-parse --short <my_long_commit_hash>
 //branch
+# set upstream remote branch
+git branch --set-upstream-to=origin/<branch>
 git checkout (-b for creation only) <name>
 git push --set-upstream origin <name>
 # checkout a remote branch
