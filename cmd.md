@@ -554,7 +554,7 @@ git rm -r --cached .
 AND:
 git add .
 git commit ...etc
-//rename last commit
+//rename last commit and add current changes to it (--no-edit to skip message edition)
 git commit --amend -m "New commit message"
 # merge stashed changes with pulled (or just current) state
 git stash apply
