@@ -121,6 +121,13 @@ Google's [*BigQuery Under the Hood* podcast](https://www.youtube.com/watch?v=2jD
 cat /path/to/query.sql | bq query --format json > path/to/output
 ```
 
+### Find and cancel job
+
+```bash
+bq ls -j -a --max_results=1000
+bq cancel --location=europe-west1 "{JOB_ID}"
+```
+
 ### Get and Update table schema
 
 - retrieve it: `bq show --format prettyjson project_id:dataset.table | jq ".schema.fields"`
