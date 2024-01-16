@@ -265,7 +265,7 @@ val df = spark.read
       .filter("sub LIKE 'a%' ")
 ```
 
-[SEE SQL DAG](https://raw.githubusercontent.com/bonnal-enzo/bonnal-enzo.github.io/master/figs/DFSQLdiag.png)
+[SEE SQL DAG](https://raw.githubusercontent.com/ebonnal/ebonnal.github.io/master/figs/DFSQLdiag.png)
 
 Steps (~80 lines of generated code):
 - Get input `Iterator` during init: `public void init(int index, scala.collection.Iterator[] inputs)`. An `UnsafeRowWriter` is also instanciated with 4 fields:
@@ -348,7 +348,7 @@ val ds = spark.read
       .filter((extendedUser: (Int, String, String, String)) => extendedUser._4.startsWith("a"))
 ```
 
-[SEE SQL DAG](https://raw.githubusercontent.com/bonnal-enzo/bonnal-enzo.github.io/master/figs/DSSQLdiag.png)
+[SEE SQL DAG](https://raw.githubusercontent.com/ebonnal/ebonnal.github.io/master/figs/DSSQLdiag.png)
 
 Steps (~300 lines of generated code):
 - Get input `Iterator` during init: `public void init(int index, scala.collection.Iterator[] inputs)`. An `UnsafeRowWriter` is also instanciated with 4 fields:
@@ -431,7 +431,7 @@ if (serializefromobject_isNull_12) {
 append((project_mutableStateArray_0[7].getRow()));
 ```
 
-[Full code available here](https://gist.github.com/bonnal-enzo/37e07e9cf7bce440734c7d33304257f0)
+[Full code available here](https://gist.github.com/ebonnal/37e07e9cf7bce440734c7d33304257f0)
 
 ### 3) Additionnal notes
 If the only references manipulated using strongly typed `Dataset`s are instances of `AnyVal`, then it will be as GC friendly as "DataFrame" operations and may only imply a few more method calls. You may want to run these code snippets to verify this:
